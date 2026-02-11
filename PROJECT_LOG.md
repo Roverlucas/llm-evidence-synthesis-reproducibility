@@ -29,7 +29,8 @@
 | **Fase 1: Scoping & Lacuna** | DONE | — | 2026-02-11 |
 | **Fase 2: Desenho Metodológico** | DONE | — | 2026-02-11 |
 | **Fase 3a: Corpus** | DONE | — | 2026-02-11 |
-| Fase 3b: Pipeline + Execução | PENDING | — | — |
+| **Fase 3b: Pipeline** | DONE | — | 2026-02-11 |
+| Fase 3c: Execução (30 runs × 3 modelos) | IN PROGRESS | — | 2026-02-11 |
 | Fase 4: Escrita | PENDING | — | — |
 | Fase 5: Submissão | PENDING | — | — |
 
@@ -88,6 +89,26 @@
    - Corpus stats: 500 abstracts, 148 journals, years 1994-2026, mean abstract ~1873 chars
    - PubMed results: 636 (broad) + 222 (design) + 475 (exclude) = 1,021 unique → 500 selected
 
+### Sessão 3 — 2026-02-11
+
+**Agentes ativados:** @technical-executor
+
+**Entregáveis produzidos:**
+
+5. **Fase 3b — Pipeline de Screening & Extração (COMPLETO)**
+   - `src/models/ollama_runner.py` — Runner LLaMA 3 8B via Ollama (urllib)
+   - `src/models/claude_runner.py` — Runner Claude Sonnet 4.5 via Anthropic API
+   - `src/models/gemini_runner.py` — Runner Gemini 2.5 Pro via Google AI API
+   - `src/provenance/hasher.py` — SHA-256 hashing + run cards + provenance records
+   - `src/screening/runner.py` — Pipeline de triagem (Stage A, 500 abstracts)
+   - `src/extraction/runner.py` — Pipeline de extração (Stage B, 100 incluídos)
+   - `src/utils/env_loader.py` — Loader de .env para API keys
+   - `run_experiment.py` — Orquestrador completo (30 runs × 3 modelos × 2 stages)
+   - `tests/test_pipeline.py` — 25 testes de pipeline (43/43 total passando)
+   - Dry-run validado: Claude screening 3/3 successful + extraction 2/2 successful
+   - Run 1 do Claude screening em execução (dados experimentais reais)
+   - API keys configuradas: Anthropic + OpenAI + DeepSeek + Perplexity (Gemini pendente)
+
 ---
 
 ## Decisões-Chave (Resumo)
@@ -137,8 +158,8 @@
 
 1. ~~Finalizar Fase 2 — Methods Specification~~ DONE
 2. ~~Construir corpus de 500 abstracts~~ DONE (573 broad + 222 design + 475 exclude → 500 selecionados)
-3. **[NEXT] Implementar pipeline** — Runners de screening e extração (reutilizar JAIR runners)
-4. **Executar experimentos** — 30 runs × 3 modelos × 2 stages (~58,500 LLM calls)
+3. ~~Implementar pipeline~~ DONE (3 runners + screening + extraction + provenance + orchestrator)
+4. **[NEXT] Executar experimentos** — 30 runs × 3 modelos × 2 stages (~58,500 LLM calls)
 5. **Meta-análise** — DerSimonian-Laird random effects por run, variação do efeito combinado
 6. **Mitigation comparison** — Baseline vs guardrails vs dual-pass vs HITL
 7. **Escrever manuscrito** — Methods → Results → Discussion (target: Research Synthesis Methods)

@@ -18,7 +18,7 @@
     "sample_size": { "type": ["integer", "null"] },
     "estimates": {
       "type": "array",
-      "minItems": 1,
+      "minItems": 0,
       "items": {
         "type": "object",
         "required": ["effect_measure", "effect_estimate", "ci_lower", "ci_upper"],
