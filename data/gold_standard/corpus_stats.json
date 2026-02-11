@@ -1,0 +1,73 @@
+{
+  "total": 500,
+  "by_category": {
+    "include": 100,
+    "exclude": 100,
+    "ambiguous": 300
+  },
+  "by_year": {
+    "1994": 1,
+    "1996": 2,
+    "1999": 2,
+    "2000": 5,
+    "2002": 2,
+    "2004": 1,
+    "2005": 4,
+    "2006": 5,
+    "2007": 4,
+    "2008": 3,
+    "2009": 8,
+    "2010": 4,
+    "2011": 8,
+    "2012": 11,
+    "2013": 12,
+    "2014": 25,
+    "2015": 16,
+    "2016": 31,
+    "2017": 25,
+    "2018": 26,
+    "2019": 36,
+    "2020": 35,
+    "2021": 42,
+    "2022": 60,
+    "2023": 47,
+    "2024": 43,
+    "2025": 40,
+    "2026": 2
+  },
+  "by_journal": {
+    "Environmental research": 39,
+    "International journal of environmental research and public health": 34,
+    "Environmental health perspectives": 26,
+    "Environmental health : a global access science source": 23,
+    "Environmental science and pollution research international": 20,
+    "The Science of the total environment": 16,
+    "Environment international": 16,
+    "Environmental pollution (Barking, Essex : 1987)": 15,
+    "Journal of exposure science & environmental epidemiology": 11,
+    "PloS one": 10,
+    "BMC public health": 10,
+    "Epidemiology (Cambridge, Mass.)": 9,
+    "Revista de saude publica": 8,
+    "Annals of the American Thoracic Society": 7,
+    "International journal of hygiene and environmental health": 7,
+    "American journal of epidemiology": 7,
+    "International journal of environmental health research": 7,
+    "Frontiers in public health": 6,
+    "Ecotoxicology and environmental safety": 6,
+    "Scientific reports": 5
+  },
+  "abstract_length": {
+    "mean": 1873.306,
+    "min": 689,
+    "max": 9899
+  },
+  "inclusion_score_distribution": {
+    "5": 360,
+    "3": 74,
+    "4": 56,
+    "2": 9,
+    "1": 1
+  },
+  "generated": "2026-02-11T17:11:38.304670+00:00"
+}

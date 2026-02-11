@@ -28,7 +28,8 @@
 | **Fase 0: Intake & Kickoff** | DONE | 85/100 | 2026-02-11 |
 | **Fase 1: Scoping & Lacuna** | DONE | — | 2026-02-11 |
 | **Fase 2: Desenho Metodológico** | DONE | — | 2026-02-11 |
-| Fase 3: Execução Técnica | PENDING | — | — |
+| **Fase 3a: Corpus** | DONE | — | 2026-02-11 |
+| Fase 3b: Pipeline + Execução | PENDING | — | — |
 | Fase 4: Escrita | PENDING | — | — |
 | Fase 5: Submissão | PENDING | — | — |
 
@@ -63,6 +64,29 @@
    - `data/methods/paper-2026-002/methods-spec.md` — Spec completa (11 seções)
    - `data/methods/paper-2026-002/validity-assessment.md` — 10 ameaças mapeadas, 4 tipos de validade
    - Decisões 10-13 registradas no decision log
+
+### Sessão 2 — 2026-02-11
+
+**Agentes ativados:** @technical-executor
+
+**Entregáveis produzidos:**
+
+4. **Fase 3a — Corpus (COMPLETO)**
+   - `src/utils/pubmed_fetch.py` — Script PubMed E-utilities (esearch + efetch via urllib)
+   - `src/utils/pubmed_fetch_exclude.py` — Busca de candidatos a exclusão (PM10, mortality, reviews, cardiovascular)
+   - `src/utils/corpus_builder.py` — Classificador heurístico + seleção de 500 abstracts
+   - `src/utils/gold_standard.py` — Infraestrutura de labeling (dual-human protocol)
+   - `data/corpus/raw/pubmed_broad.json` — 573 artigos (broad query)
+   - `data/corpus/raw/pubmed_design.json` — 222 artigos (design-filtered)
+   - `data/corpus/raw/pubmed_exclude_candidates.json` — 475 candidatos a exclusão
+   - `data/corpus/corpus_500.json` — **CORPUS FINAL: 500 abstracts (100/100/300)**
+   - `data/gold_standard/screening_labels.json` — Labels de triagem (200 auto + 300 para revisão)
+   - `data/gold_standard/extraction_labels.json` — Templates de extração (100 includes)
+   - `data/gold_standard/labeling_guide.md` — Guia para anotadores humanos
+   - `data/gold_standard/corpus_stats.json` — Estatísticas do corpus
+   - `tests/test_corpus.py` — 18 testes de integridade (18/18 passing)
+   - Corpus stats: 500 abstracts, 148 journals, years 1994-2026, mean abstract ~1873 chars
+   - PubMed results: 636 (broad) + 222 (design) + 475 (exclude) = 1,021 unique → 500 selected
 
 ---
 
@@ -112,8 +136,8 @@
 ## Próximos Passos (em ordem)
 
 1. ~~Finalizar Fase 2 — Methods Specification~~ DONE
-2. **[NEXT] Construir corpus de 500 abstracts** — Query PubMed API, exportar ~600, labeling humano, selecionar 500 (100/100/300)
-3. **Implementar pipeline** — Runners de screening e extração (reutilizar JAIR runners)
+2. ~~Construir corpus de 500 abstracts~~ DONE (573 broad + 222 design + 475 exclude → 500 selecionados)
+3. **[NEXT] Implementar pipeline** — Runners de screening e extração (reutilizar JAIR runners)
 4. **Executar experimentos** — 30 runs × 3 modelos × 2 stages (~58,500 LLM calls)
 5. **Meta-análise** — DerSimonian-Laird random effects por run, variação do efeito combinado
 6. **Mitigation comparison** — Baseline vs guardrails vs dual-pass vs HITL
@@ -147,9 +171,28 @@ configs/prompts/screening.txt           ← Prompt de triagem
 configs/prompts/extraction.txt          ← Prompt de extração
 data/literature/paper-2026-002/         ← Literature review completa
 data/methods/paper-2026-002/            ← Desenho metodológico
+data/corpus/corpus_500.json             ← CORPUS FINAL (500 abstracts)
+data/gold_standard/                     ← Labels + templates + guia
+src/utils/pubmed_fetch.py               ← Fetcher PubMed E-utilities
+src/utils/corpus_builder.py             ← Classificador + seleção
+tests/test_corpus.py                    ← 18 testes de integridade
 PROJECT_LOG.md                          ← ESTE ARQUIVO
 ```
 
 ---
 
-*Última atualização: 2026-02-11 — Sessão 1*
+## Números do Corpus
+
+- **1,021 artigos únicos** recuperados do PubMed (3 queries)
+- **573** broad query (PM2.5 + respiratory + hospitalization + time-series)
+- **222** design-filtered query (mais restrita)
+- **475** exclude candidates (PM10-only, mortality, reviews, cardiovascular)
+- **500 selecionados**: 100 include (score 5/5) + 100 exclude (razões claras) + 300 ambiguous
+- **148 journals** representados
+- **Years**: 1994–2026
+- **Mean abstract length**: ~1,873 chars
+- **18/18 testes** de integridade passando
+
+---
+
+*Última atualização: 2026-02-11 — Sessão 2 (Corpus Construction)*
