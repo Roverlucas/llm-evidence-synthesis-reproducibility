@@ -1,0 +1,32 @@
+{
+  "run_card_version": "1.0",
+  "run_id": 1,
+  "stage": "screening",
+  "model_id": "llama3-8b",
+  "provider": "ollama",
+  "model_info": {
+    "model_id": "llama3:8b",
+    "provider": "ollama",
+    "weights_hash": "365c0bd3c000a25d28ddbf732fe1c6add414de7275464c4e4d1c3b5fcb5d8ad1",
+    "size": 4661224676,
+    "modified_at": "2026-02-07T18:51:30.606959987-03:00"
+  },
+  "config": {
+    "temperature": 0.0,
+    "seed": 42,
+    "max_tokens": 2048
+  },
+  "execution": {
+    "start_time": "2026-02-11T17:45:18.947230+00:00",
+    "end_time": "2026-02-11T19:38:52.748628+00:00",
+    "total_calls": 500,
+    "successful_calls": 480,
+    "failed_calls": 20,
+    "total_duration_ms": 6347852.4,
+    "mean_duration_ms": 12695.7
+  },
+  "provenance": {
+    "aggregate_output_hash": "aff0b042894c0b900665469361591273677cbf0154069d8f4939ad0072b3ce78",
+    "hash_algorithm": "sha256"
+  }
+}
