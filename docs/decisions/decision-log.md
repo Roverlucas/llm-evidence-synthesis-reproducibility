@@ -11,3 +11,7 @@
 | 7 | 2026-02-11 | Corpus increased to 500 abstracts (100/100/300) | 200 (50/50/100) | Greater statistical robustness; larger ambiguous pool for meaningful variation detection | Study Conductor + PI |
 | 8 | 2026-02-11 | Primary journal: Research Synthesis Methods | J Clin Epidemiol, npj Dig Med, Environ Int | Best scope fit for evidence synthesis methodology; already publishing LLM+SR papers; hybrid (no APC for subscription) | Literature Specialist + Journal Strategy |
 | 9 | 2026-02-11 | 28 references mapped across 6 domains, 3 primary gaps identified | — | Evidence matrix complete for Phase 1; 3 P0 gaps justify all 4 RQs | Literature Specialist |
+| 10 | 2026-02-11 | Study design: Repeated-measures computational experiment | Single-run accuracy, multi-prompt comparison, simulation | Only repeated-measures isolates non-determinism as sole source of variation | Methodology Specialist |
+| 11 | 2026-02-11 | Reporting guideline: Hybrid STROBE-Computational + PRISMA-S | Pure STROBE, pure PRISMA, custom-only | No single guideline fits computational reproducibility experiment; hybrid captures all aspects | Methodology Specialist |
+| 12 | 2026-02-11 | Meta-analysis estimator: DerSimonian-Laird random-effects | REML, Hartung-Knapp | Comparability with existing PM2.5 meta-analyses (Atkinson 2014, Zheng 2015) | Methodology Specialist |
+| 13 | 2026-02-11 | Total ~58,500 LLM calls (45K screening + 13.5K extraction) | Fewer runs, fewer abstracts | 30 runs × 500 abstracts provides sufficient power for bootstrap CIs and kappa estimation | Methodology Specialist |

@@ -80,6 +80,10 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+## Project Log
+
+See [PROJECT_LOG.md](PROJECT_LOG.md) for session history, decisions, and next steps.
+
 ## License
 
 MIT
