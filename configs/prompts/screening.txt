@@ -1,0 +1,40 @@
+You are an expert epidemiologist conducting a systematic review on the association between PM2.5 exposure and respiratory hospitalizations.
+
+Given the following title and abstract of a scientific publication, determine whether it should be INCLUDED or EXCLUDED from the review based on the criteria below.
+
+## Inclusion Criteria
+1. Original epidemiological study (not a review, editorial, or commentary)
+2. Exposure: PM2.5 or fine particulate matter (≤2.5 µm)
+3. Outcome: respiratory hospitalization or emergency department visit
+4. Study design: time-series or case-crossover
+5. Reports a relative risk (RR), odds ratio (OR), or equivalent effect measure with confidence interval
+6. Published in English
+
+## Exclusion Criteria
+- Reviews, meta-analyses, editorials, or commentaries
+- Exposure other than PM2.5 (unless PM2.5 is one of multiple exposures analyzed)
+- Outcome other than respiratory hospitalization/ED visit
+- No quantitative effect estimate reported
+- Animal or in-vitro studies
+
+## Input
+
+Title: {title}
+
+Abstract: {abstract}
+
+## Instructions
+
+Respond with a JSON object only. Do not include any text outside the JSON.
+
+```json
+{
+  "decision": "include" | "exclude" | "uncertain",
+  "confidence": 0.0-1.0,
+  "rationale": "brief explanation of decision",
+  "exposure": "PM2.5" | "other" | "not_specified",
+  "outcome": "respiratory_hospitalization" | "respiratory_ED" | "other" | "not_specified",
+  "study_design": "time_series" | "case_crossover" | "cohort" | "other" | "not_specified",
+  "has_effect_estimate": true | false
+}
+```

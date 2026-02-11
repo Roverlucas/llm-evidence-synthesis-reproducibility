@@ -1,0 +1,39 @@
+You are an expert epidemiologist extracting quantitative data from a scientific publication on PM2.5 and respiratory hospitalizations for a systematic review and meta-analysis.
+
+Given the following title and abstract, extract the structured data below. If a field is not reported in the abstract, use null.
+
+## Input
+
+Title: {title}
+
+Abstract: {abstract}
+
+## Instructions
+
+Extract ALL reported effect estimates. If multiple estimates are reported (e.g., different lags, subgroups), extract each as a separate entry in the "estimates" array.
+
+Respond with a JSON object only. Do not include any text outside the JSON.
+
+```json
+{
+  "study_id": "first_author_year",
+  "study_location": "city, country",
+  "study_period": "YYYY-YYYY",
+  "study_design": "time_series" | "case_crossover" | "other",
+  "population": "general" | "elderly" | "children" | "other",
+  "sample_size": null | integer,
+  "estimates": [
+    {
+      "effect_measure": "RR" | "OR" | "HR" | "IRR" | "other",
+      "effect_estimate": float,
+      "ci_lower": float,
+      "ci_upper": float,
+      "ci_level": 95,
+      "exposure_increment": "per 10 µg/m³" | "per IQR" | "other",
+      "lag": "lag0" | "lag1" | "lag0-1" | "other",
+      "outcome_specific": "all_respiratory" | "pneumonia" | "COPD" | "asthma" | "other",
+      "covariates": ["temperature", "humidity", "trend", "seasonality", "..."]
+    }
+  ]
+}
+```

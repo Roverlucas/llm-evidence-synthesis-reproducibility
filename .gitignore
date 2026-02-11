@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Data (large files tracked separately)
+data/raw_outputs/
+data/corpus/*.csv
+data/corpus/*.json
+!data/corpus/README.md
+
+# LaTeX
+article/*.aux
+article/*.log
+article/*.bbl
+article/*.blg
+article/*.out
+article/*.synctex.gz
+article/*.fdb_latexmk
+article/*.fls
+
+# Analysis outputs (regenerable)
+analysis/figures/*.pdf
+analysis/figures/*.png
+analysis/tables/*.tex
+analysis/bootstrap/*.json
+!analysis/figures/.gitkeep
+!analysis/tables/.gitkeep
+!analysis/bootstrap/.gitkeep

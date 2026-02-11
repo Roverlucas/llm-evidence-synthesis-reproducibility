@@ -1,0 +1,178 @@
+# ============================================================
+# PROJECT CHARTER v1 — Paper Factory / Gate 0
+# ============================================================
+
+project:
+  name: "LLM Evidence Synthesis Reproducibility"
+  id: "paper-2026-002"
+  created_date: "2026-02-11"
+  target_submission_date: null  # TBD after Phase 1
+
+# ── Science ──
+
+science:
+  title_working: >
+    Reproducibility of Pollution-Health Evidence Synthesis
+    using LLM-Assisted Screening and Extraction
+
+  research_questions:
+    RQ1: >
+      Does abstract screening (include/exclude) vary across repeated
+      runs with identical LLM configurations?
+    RQ2: >
+      Does structured data extraction (RR, CI95%) vary materially
+      across runs?
+    RQ3: >
+      Does this variation alter the pooled effect estimate in
+      random-effects meta-analysis?
+    RQ4: >
+      Can a provenance + verification protocol reduce variation
+      and improve auditability?
+
+  hypothesis_h0: >
+    LLM-assisted screening and extraction produce identical outputs
+    across repeated runs with fixed configurations, resulting in
+    no variation in pooled meta-analytic estimates.
+
+  hypothesis_h1: >
+    LLM non-determinism introduces measurable variation in screening
+    decisions and extracted data, propagating to materially different
+    pooled effect estimates (e.g., confidence intervals crossing 1).
+
+  thesis_statement: >
+    Despite growing adoption of LLMs in environmental health evidence
+    synthesis, no study has quantified how API-level non-determinism
+    propagates through the full pipeline — from abstract screening to
+    data extraction to meta-analytic pooling. This study demonstrates
+    that identical LLM configurations produce variable screening
+    decisions and extracted effect sizes, leading to materially
+    different meta-analytic conclusions in a subset of runs, and
+    proposes a lightweight provenance framework to detect and
+    mitigate this instability.
+
+  study_type: "empirical, computational reproducibility"
+  domain: "Environmental Health + AI/NLP + Meta-science"
+
+  methodology_overview: >
+    Repeated-measures experimental design: 30 runs per model (3 models)
+    across 200 abstracts for screening (Stage A), followed by structured
+    extraction of RR/CI95% (Stage B), random-effects meta-analysis per
+    run (Stage C), and comparison of mitigation strategies (Stage D).
+
+# ── Experimental Design ──
+
+experiment:
+  topic: "PM2.5 and respiratory hospitalizations (time-series studies)"
+  corpus_size: 200
+  corpus_composition:
+    clearly_include: 50
+    clearly_exclude: 50
+    ambiguous: 100
+  corpus_source: ["PubMed", "Scopus"]
+  gold_standard: "dual-human labeling with discordance resolution"
+
+  models:
+    - id: "llama-3-8b"
+      type: "local"
+      provider: "Ollama"
+    - id: "claude-sonnet-4-5"
+      type: "api"
+      provider: "Anthropic"
+    - id: "gemini-2.5-pro"
+      type: "api"
+      provider: "Google"
+
+  repetitions_per_model: 30
+  temperature: 0
+  seed: "fixed per model (where supported)"
+
+  stages:
+    A_screening:
+      input: "title + abstract + inclusion criteria"
+      output: "JSON {decision, rationale, key_fields}"
+      metrics: ["flip_rate", "cohens_kappa_run_to_run", "F1_vs_gold"]
+    B_extraction:
+      input: "included abstracts"
+      output: "JSON {RR, CI_lower, CI_upper, lag, exposure_unit, population, covariates}"
+      metrics: ["EMR", "absolute_error_RR", "absolute_error_CI"]
+    C_meta_analysis:
+      input: "extracted data per run"
+      output: "pooled_effect, I2, CI_pooled"
+      metrics: ["effect_variation", "CI_crossing_null", "I2_variation"]
+    D_mitigation:
+      levels:
+        - "baseline: raw LLM output"
+        - "guardrails: JSON validation + numeric checks"
+        - "dual_pass: two runs + consensus"
+        - "human_in_loop: review high-divergence cases only"
+      metrics: ["cost_vs_stability", "stability_vs_accuracy"]
+
+# ── Editorial ──
+
+editorial:
+  language: "en"
+  target_journals:
+    A:
+      name: null  # TBD by @journal-strategy
+      rationale: null
+    B:
+      name: null
+      rationale: null
+    C:
+      name: null
+      rationale: null
+
+# ── Team ──
+
+team:
+  principal_investigator: "Lucas Rover"
+  co_authors: []  # TBD
+  corresponding_author: "Lucas Rover"
+
+# ── Related Work ──
+
+related:
+  predecessor: "genai-reproducibility-protocol (JAIR 2026)"
+  reuse:
+    - "Provenance protocol (hashing + run cards)"
+    - "Model runners (Ollama, Claude, Gemini)"
+    - "Bootstrap CI methodology"
+    - "EMR metric"
+
+# ── Risks ──
+
+risks:
+  - risk: "Gold standard labor-intensive (2 humans × 200 abstracts)"
+    probability: "high"
+    impact: "high"
+    mitigation: "Start with 200 (not 500); recruit domain expert co-author"
+
+  - risk: "API costs for 30 runs × 200 abstracts × 2 API models"
+    probability: "medium"
+    impact: "medium"
+    mitigation: "Batch runs; reuse JAIR API budget patterns; local model reduces cost"
+
+  - risk: "Meta-analysis may not show sufficient variation"
+    probability: "low"
+    impact: "high"
+    mitigation: "Stability is also a valid finding; focus on ambiguous subset"
+
+  - risk: "Scope creep (4 RQs + GRADE variants + policy implications)"
+    probability: "high"
+    impact: "medium"
+    mitigation: "v1 = PM2.5 respiratory only; variants → follow-up paper"
+
+  - risk: "No domain expert co-author in environmental epidemiology"
+    probability: "medium"
+    impact: "medium"
+    mitigation: "Seek collaboration; ground methods in established guidelines"
+
+# ── Status ──
+
+status: "kickoff-complete"
+gate_0_passed: true
+gate_0_score: 85
+gate_0_notes: >
+  Strong proposal with clear RQs, executable pipeline, and direct
+  connection to JAIR paper. Journal targets pending (Phase 1 task).
+  Gold standard creation is the main bottleneck.

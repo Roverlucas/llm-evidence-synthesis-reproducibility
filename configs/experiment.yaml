@@ -1,0 +1,108 @@
+# Experiment Configuration
+# ========================
+
+experiment:
+  name: "pm25-respiratory-reproducibility"
+  version: "1.0"
+
+corpus:
+  topic: "PM2.5 and respiratory hospitalizations"
+  study_design: "time-series"
+  size: 200
+  composition:
+    include: 50
+    exclude: 50
+    ambiguous: 100
+  sources:
+    - "PubMed"
+    - "Scopus"
+  search_query: >
+    ("PM2.5" OR "particulate matter" OR "fine particulate")
+    AND ("respiratory" OR "hospitalization" OR "hospital admission")
+    AND ("time-series" OR "time series")
+
+models:
+  - id: "llama3-8b"
+    provider: "ollama"
+    endpoint: "http://localhost:11434"
+    temperature: 0
+    seed: 42
+    num_predict: 2048
+
+  - id: "claude-sonnet-4-5"
+    provider: "anthropic"
+    temperature: 0
+    max_tokens: 2048
+
+  - id: "gemini-2.5-pro"
+    provider: "google"
+    temperature: 0
+    max_output_tokens: 8192
+    seed: 42
+
+runs:
+  repetitions: 30
+  batch_size: 50  # abstracts per batch
+
+screening:
+  prompt_template: "configs/prompts/screening.txt"
+  output_schema: "configs/schemas/screening_output.json"
+  inclusion_criteria:
+    - "Original epidemiological study (not review/editorial)"
+    - "Exposure: PM2.5 or fine particulate matter"
+    - "Outcome: respiratory hospitalization or emergency visit"
+    - "Design: time-series or case-crossover"
+    - "Reports relative risk (RR), odds ratio (OR), or equivalent"
+    - "Published in English"
+
+extraction:
+  prompt_template: "configs/prompts/extraction.txt"
+  output_schema: "configs/schemas/extraction_output.json"
+  fields:
+    - "effect_measure"       # RR, OR, HR
+    - "effect_estimate"      # numeric value
+    - "ci_lower"             # 95% CI lower bound
+    - "ci_upper"             # 95% CI upper bound
+    - "lag"                  # exposure lag (days)
+    - "exposure_increment"   # e.g., per 10 µg/m³
+    - "population"           # general, elderly, children
+    - "covariates"           # adjustment variables
+    - "study_location"       # city/country
+
+meta_analysis:
+  method: "random_effects"
+  estimator: "DerSimonian-Laird"
+  metrics:
+    - "pooled_effect"
+    - "I2"
+    - "tau2"
+    - "Q_statistic"
+    - "pooled_CI"
+
+mitigation:
+  levels:
+    baseline:
+      description: "Raw LLM output, no post-processing"
+    guardrails:
+      description: "JSON schema validation + numeric range checks"
+      checks:
+        - "valid JSON"
+        - "RR in [0.5, 5.0]"
+        - "CI_lower < RR < CI_upper"
+        - "lag in [0, 30]"
+    dual_pass:
+      description: "Two independent runs + majority/consensus"
+      consensus: "majority of 2 runs; flag if disagree"
+    human_in_loop:
+      description: "Human review only for high-divergence cases"
+      threshold: "divergence > 2 SD from mean"
+
+provenance:
+  hash_algorithm: "sha256"
+  fields_to_hash:
+    - "prompt"
+    - "model_id"
+    - "temperature"
+    - "seed"
+    - "input_text"
+  run_card: true
