@@ -24,6 +24,7 @@ Usage:
 
 import argparse
 import json
+import subprocess
 import sys
 import time
 from datetime import datetime, timezone
@@ -63,6 +64,7 @@ MODEL_CONFIGS = {
         "temperature": 0.0,
         "max_output_tokens": 8192,
         "seed": 42,
+        "call_delay": 2,  # Gemini free tier rate limit
     },
 }
 
@@ -118,6 +120,30 @@ def progress_bar(current: int, total: int, model: str = "", stage: str = ""):
     pct = current / total * 100
     bar = "█" * int(pct / 2) + "░" * (50 - int(pct / 2))
     print(f"\r  [{bar}] {current}/{total} ({pct:.0f}%) ", end="", flush=True)
+
+
+def _auto_commit(model_id: str, run_id: int, stage: str, stats: dict):
+    """Git add + commit + push after each completed run."""
+    ok = stats.get("successful", 0)
+    total = stats.get("total", 0)
+    msg = f"data: {model_id} {stage} run {run_id} ({ok}/{total})"
+    try:
+        subprocess.run(
+            ["git", "add", "data/raw_outputs/"],
+            capture_output=True, timeout=30,
+        )
+        result = subprocess.run(
+            ["git", "commit", "-m", msg],
+            capture_output=True, timeout=30,
+        )
+        if result.returncode == 0:
+            subprocess.run(
+                ["git", "push"],
+                capture_output=True, timeout=60,
+            )
+            print(f"  [git] {msg}")
+    except Exception:
+        pass  # Don't break the experiment if git fails
 
 
 def run_single_experiment(
@@ -273,6 +299,8 @@ def run_full_experiment(
                         extraction_schema=extraction_schema,
                     )
                     all_stats.append(stats)
+                    # Auto-commit after each completed run
+                    _auto_commit(model_id, run_id, stage, stats)
                 except Exception as e:
                     print(f"\n  ERROR: {e}")
                     all_stats.append({

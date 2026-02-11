@@ -1,0 +1,39 @@
+{
+  "experiment": "pm25-respiratory-reproducibility",
+  "completed": "2026-02-11T18:03:11.323875+00:00",
+  "elapsed_seconds": 2408.8,
+  "models": [
+    "claude-sonnet-4-5"
+  ],
+  "runs": [
+    1
+  ],
+  "stages": [
+    "screening",
+    "extraction"
+  ],
+  "stats": [
+    {
+      "run_id": 1,
+      "model_id": "claude-sonnet-4-5",
+      "stage": "screening",
+      "total": 500,
+      "successful": 393,
+      "failed": 107,
+      "valid": 393,
+      "start_time": "2026-02-11T17:23:02.499060+00:00",
+      "end_time": "2026-02-11T17:56:53.768070+00:00"
+    },
+    {
+      "run_id": 1,
+      "model_id": "claude-sonnet-4-5",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 0,
+      "failed": 100,
+      "valid": 0,
+      "start_time": "2026-02-11T17:56:53.815146+00:00",
+      "end_time": "2026-02-11T18:03:11.307154+00:00"
+    }
+  ]
+}

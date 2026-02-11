@@ -19,8 +19,7 @@ Thumbs.db
 .idea/
 *.swp
 
-# Data (large files tracked separately)
-data/raw_outputs/
+# Data — raw_outputs are tracked for reproducibility
 
 # Corpus raw downloads are large — track only the curated corpus
 data/corpus/raw/

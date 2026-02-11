@@ -121,10 +121,17 @@ def _run_single_extraction(
             return parsed, result, valid
 
         except Exception as e:
+            err_msg = str(e)
+            # Don't retry on billing/auth errors — abort immediately
+            if "credit balance" in err_msg or "billing" in err_msg.lower():
+                return {"error": err_msg, "fatal": True}, {}, False
             if attempt < max_retries:
-                time.sleep(2 ** attempt)
+                wait = 2 ** (attempt + 1)
+                if "429" in err_msg:
+                    wait = max(wait, 5)
+                time.sleep(wait)
                 continue
-            return {"error": str(e)}, {}, False
+            return {"error": err_msg}, {}, False
 
     return {"error": "max_retries_exceeded"}, {}, False
 
@@ -163,7 +170,12 @@ def run_extraction(
 
     start_time = datetime.now(timezone.utc).isoformat()
 
+    # Per-call delay for rate-limited APIs (e.g., Gemini free tier)
+    call_delay = model_config.get("call_delay", 0)
+
     for i, article in enumerate(articles):
+        if call_delay > 0 and i > 0:
+            time.sleep(call_delay)
         prompt = prompt_template.replace("{title}", article["title"])
         prompt = prompt.replace("{abstract}", article["abstract"])
 
@@ -214,6 +226,10 @@ def run_extraction(
                 valid_count += 1
         else:
             failed += 1
+            # Abort early on fatal errors (billing, auth)
+            if parsed.get("fatal"):
+                print(f"\n  FATAL: {parsed['error'][:80]}... aborting run.")
+                break
 
         if progress_callback:
             progress_callback(i + 1, len(articles))
