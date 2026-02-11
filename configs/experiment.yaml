@@ -8,11 +8,11 @@ experiment:
 corpus:
   topic: "PM2.5 and respiratory hospitalizations"
   study_design: "time-series"
-  size: 200
+  size: 500
   composition:
-    include: 50
-    exclude: 50
-    ambiguous: 100
+    include: 100
+    exclude: 100
+    ambiguous: 300
   sources:
     - "PubMed"
     - "Scopus"

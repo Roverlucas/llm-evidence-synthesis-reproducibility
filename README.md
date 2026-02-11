@@ -22,7 +22,7 @@ and propose a provenance-based mitigation framework.
 ## Study Design
 
 - **Domain**: PM2.5 and respiratory hospitalizations (time-series studies)
-- **Corpus**: 200 abstracts (50 include / 50 exclude / 100 ambiguous)
+- **Corpus**: 500 abstracts (100 include / 100 exclude / 300 ambiguous)
 - **Source**: PubMed / Scopus
 - **Models**: 3 (1 local via Ollama + Claude API + Gemini API)
 - **Repetitions**: 30 per model per stage

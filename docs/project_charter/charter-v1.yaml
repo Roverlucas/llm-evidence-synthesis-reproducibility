@@ -63,11 +63,11 @@ science:
 
 experiment:
   topic: "PM2.5 and respiratory hospitalizations (time-series studies)"
-  corpus_size: 200
+  corpus_size: 500
   corpus_composition:
-    clearly_include: 50
-    clearly_exclude: 50
-    ambiguous: 100
+    clearly_include: 100
+    clearly_exclude: 100
+    ambiguous: 300
   corpus_source: ["PubMed", "Scopus"]
   gold_standard: "dual-human labeling with discordance resolution"
 
@@ -113,14 +113,14 @@ editorial:
   language: "en"
   target_journals:
     A:
-      name: null  # TBD by @journal-strategy
-      rationale: null
+      name: "Research Synthesis Methods"
+      rationale: "Premier journal for evidence synthesis methodology; already published LLM+SR papers; IF=6.1; hybrid (free subscription-access)"
     B:
-      name: null
-      rationale: null
+      name: "Journal of Clinical Epidemiology"
+      rationale: "Published scoping review flagging LLM reproducibility; SJR=3.149; systematic review/guideline audience"
     C:
-      name: null
-      rationale: null
+      name: "npj Digital Medicine"
+      rationale: "IF=15.1; high-impact Nature partner; needs broader framing; fully OA $3,790"
 
 # ── Team ──
 
