@@ -2,8 +2,8 @@
 """
 Experiment Orchestrator — PM2.5 Evidence Synthesis Reproducibility Study.
 
-Runs 30 repetitions × 3 models × 2 stages (screening + extraction).
-Total: ~58,500 LLM calls.
+Runs 10 repetitions × 3 models × 2 stages (screening + extraction).
+Total: ~12,000 LLM calls.
 
 Usage:
     # Full experiment (all models, all runs)
@@ -146,6 +146,20 @@ def _auto_commit(model_id: str, run_id: int, stage: str, stats: dict):
         pass  # Don't break the experiment if git fails
 
 
+def _run_already_done(model_id: str, run_id: int, stage: str) -> bool:
+    """Check if a run already completed successfully (has run_card with successful_calls > 0)."""
+    run_dir = Path(OUTPUT_DIR) / model_id / stage / f"run_{run_id:03d}"
+    card_path = run_dir / "run_card.json"
+    if not card_path.exists():
+        return False
+    try:
+        with open(card_path) as f:
+            card = json.load(f)
+        return card["execution"]["successful_calls"] > 0
+    except Exception:
+        return False
+
+
 def run_single_experiment(
     model_id: str,
     run_id: int,
@@ -158,6 +172,11 @@ def run_single_experiment(
     extraction_schema: dict,
 ) -> dict:
     """Run a single experiment (one model, one run, one stage)."""
+    # Skip if already completed successfully
+    if _run_already_done(model_id, run_id, stage):
+        print(f"\n  SKIP: {model_id}/{stage}/run_{run_id:03d} (already done)")
+        return {"skipped": True, "run_id": run_id, "model_id": model_id, "stage": stage}
+
     config = MODEL_CONFIGS[model_id]
     model_info = get_model_info(config)
 
@@ -348,7 +367,7 @@ def main():
     )
     parser.add_argument(
         "--runs", "-r",
-        default="1-30",
+        default="1-10",
         help="Run range (e.g., '1-30', '1-5', '10')",
     )
     parser.add_argument(
