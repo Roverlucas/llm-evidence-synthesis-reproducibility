@@ -1,27 +1,186 @@
 {
   "experiment": "pm25-respiratory-reproducibility",
-  "completed": "2026-02-11T19:38:52.772952+00:00",
-  "elapsed_seconds": 6813.9,
+  "completed": "2026-02-12T21:15:17.320386+00:00",
+  "elapsed_seconds": 7092.9,
   "models": [
-    "llama3-8b"
+    "claude-sonnet-4-5"
   ],
   "runs": [
-    1
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
   ],
   "stages": [
-    "screening"
+    "screening",
+    "extraction"
   ],
   "stats": [
     {
+      "skipped": true,
       "run_id": 1,
-      "model_id": "llama3-8b",
-      "stage": "screening",
-      "total": 500,
-      "successful": 480,
-      "failed": 20,
-      "valid": 435,
-      "start_time": "2026-02-11T17:45:18.947230+00:00",
-      "end_time": "2026-02-11T19:38:52.748628+00:00"
+      "model_id": "claude-sonnet-4-5",
+      "stage": "screening"
+    },
+    {
+      "skipped": true,
+      "run_id": 2,
+      "model_id": "claude-sonnet-4-5",
+      "stage": "screening"
+    },
+    {
+      "skipped": true,
+      "run_id": 3,
+      "model_id": "claude-sonnet-4-5",
+      "stage": "screening"
+    },
+    {
+      "skipped": true,
+      "run_id": 4,
+      "model_id": "claude-sonnet-4-5",
+      "stage": "screening"
+    },
+    {
+      "skipped": true,
+      "run_id": 5,
+      "model_id": "claude-sonnet-4-5",
+      "stage": "screening"
+    },
+    {
+      "skipped": true,
+      "run_id": 6,
+      "model_id": "claude-sonnet-4-5",
+      "stage": "screening"
+    },
+    {
+      "skipped": true,
+      "run_id": 7,
+      "model_id": "claude-sonnet-4-5",
+      "stage": "screening"
+    },
+    {
+      "skipped": true,
+      "run_id": 8,
+      "model_id": "claude-sonnet-4-5",
+      "stage": "screening"
+    },
+    {
+      "skipped": true,
+      "run_id": 9,
+      "model_id": "claude-sonnet-4-5",
+      "stage": "screening"
+    },
+    {
+      "skipped": true,
+      "run_id": 10,
+      "model_id": "claude-sonnet-4-5",
+      "stage": "screening"
+    },
+    {
+      "skipped": true,
+      "run_id": 1,
+      "model_id": "claude-sonnet-4-5",
+      "stage": "extraction"
+    },
+    {
+      "skipped": true,
+      "run_id": 2,
+      "model_id": "claude-sonnet-4-5",
+      "stage": "extraction"
+    },
+    {
+      "run_id": 3,
+      "model_id": "claude-sonnet-4-5",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 100,
+      "failed": 0,
+      "valid": 74,
+      "start_time": "2026-02-12T19:17:05.917599+00:00",
+      "end_time": "2026-02-12T19:27:15.984846+00:00"
+    },
+    {
+      "run_id": 4,
+      "model_id": "claude-sonnet-4-5",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 100,
+      "failed": 0,
+      "valid": 68,
+      "start_time": "2026-02-12T19:27:17.113401+00:00",
+      "end_time": "2026-02-12T19:37:31.285983+00:00"
+    },
+    {
+      "run_id": 5,
+      "model_id": "claude-sonnet-4-5",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 100,
+      "failed": 0,
+      "valid": 72,
+      "start_time": "2026-02-12T19:37:32.348069+00:00",
+      "end_time": "2026-02-12T19:47:05.572476+00:00"
+    },
+    {
+      "run_id": 6,
+      "model_id": "claude-sonnet-4-5",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 100,
+      "failed": 0,
+      "valid": 69,
+      "start_time": "2026-02-12T19:47:06.628244+00:00",
+      "end_time": "2026-02-12T19:56:57.144782+00:00"
+    },
+    {
+      "run_id": 7,
+      "model_id": "claude-sonnet-4-5",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 100,
+      "failed": 0,
+      "valid": 68,
+      "start_time": "2026-02-12T19:56:58.273190+00:00",
+      "end_time": "2026-02-12T20:07:17.719379+00:00"
+    },
+    {
+      "run_id": 8,
+      "model_id": "claude-sonnet-4-5",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 22,
+      "failed": 78,
+      "valid": 17,
+      "start_time": "2026-02-12T20:07:18.707281+00:00",
+      "end_time": "2026-02-12T20:18:13.524142+00:00"
+    },
+    {
+      "run_id": 9,
+      "model_id": "claude-sonnet-4-5",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 0,
+      "failed": 100,
+      "valid": 0,
+      "start_time": "2026-02-12T20:18:14.573292+00:00",
+      "end_time": "2026-02-12T21:04:06.188788+00:00"
+    },
+    {
+      "run_id": 10,
+      "model_id": "claude-sonnet-4-5",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 0,
+      "failed": 100,
+      "valid": 0,
+      "start_time": "2026-02-12T21:04:07.135853+00:00",
+      "end_time": "2026-02-12T21:15:16.211964+00:00"
     }
   ]
 }
