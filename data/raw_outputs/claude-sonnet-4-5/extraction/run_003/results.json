@@ -1,0 +1,1102 @@
+[
+  {
+    "corpus_id": "ABS-0001",
+    "pmid": "38698010",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0002",
+    "pmid": "29259031",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0003",
+    "pmid": "35073244",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0004",
+    "pmid": "35394903",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0005",
+    "pmid": "35104259",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0006",
+    "pmid": "35384572",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0007",
+    "pmid": "35989078",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0008",
+    "pmid": "37792321",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0009",
+    "pmid": "30917578",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0010",
+    "pmid": "28787174",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0011",
+    "pmid": "35802828",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0012",
+    "pmid": "36197352",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0013",
+    "pmid": "37011135",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0014",
+    "pmid": "36376253",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0015",
+    "pmid": "36243957",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0016",
+    "pmid": "35692312",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0017",
+    "pmid": "40433992",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0018",
+    "pmid": "30781785",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0019",
+    "pmid": "35307034",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0020",
+    "pmid": "40305019",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0021",
+    "pmid": "29643111",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0022",
+    "pmid": "37972204",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0023",
+    "pmid": "34981381",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0024",
+    "pmid": "31787180",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0025",
+    "pmid": "37980997",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0026",
+    "pmid": "35583542",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0027",
+    "pmid": "26452298",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0028",
+    "pmid": "39038774",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0029",
+    "pmid": "37772521",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0030",
+    "pmid": "35142610",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0031",
+    "pmid": "39048614",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0032",
+    "pmid": "35627536",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0033",
+    "pmid": "31755707",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0034",
+    "pmid": "34989991",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0035",
+    "pmid": "36777770",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0036",
+    "pmid": "31254082",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0037",
+    "pmid": "39520750",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0038",
+    "pmid": "36580986",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0039",
+    "pmid": "37968236",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0040",
+    "pmid": "37159523",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0041",
+    "pmid": "27581332",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0042",
+    "pmid": "32554254",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0043",
+    "pmid": "29459308",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0044",
+    "pmid": "34184226",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0045",
+    "pmid": "32760064",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0046",
+    "pmid": "32729038",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0047",
+    "pmid": "35027064",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0048",
+    "pmid": "32193561",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0049",
+    "pmid": "24240657",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0050",
+    "pmid": "30502738",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0051",
+    "pmid": "20502338",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0052",
+    "pmid": "36863162",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0053",
+    "pmid": "33980121",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0054",
+    "pmid": "35921071",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0055",
+    "pmid": "36641448",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0056",
+    "pmid": "36107568",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0057",
+    "pmid": "27224452",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0058",
+    "pmid": "33678143",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0059",
+    "pmid": "37137261",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0060",
+    "pmid": "33910560",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0061",
+    "pmid": "27350257",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0062",
+    "pmid": "25776011",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0063",
+    "pmid": "34574538",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0064",
+    "pmid": "39013602",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0065",
+    "pmid": "35661917",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0066",
+    "pmid": "38622704",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0067",
+    "pmid": "39633418",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0068",
+    "pmid": "38164931",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0069",
+    "pmid": "37830139",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0070",
+    "pmid": "38858655",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0071",
+    "pmid": "32854703",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0072",
+    "pmid": "39505076",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0073",
+    "pmid": "34545525",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0074",
+    "pmid": "24528997",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0075",
+    "pmid": "25244038",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0076",
+    "pmid": "33590391",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0077",
+    "pmid": "29870428",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0078",
+    "pmid": "32184587",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0079",
+    "pmid": "24555678",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0080",
+    "pmid": "23729683",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0081",
+    "pmid": "38347929",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0082",
+    "pmid": "33640663",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0083",
+    "pmid": "30277796",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0084",
+    "pmid": "27605585",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0085",
+    "pmid": "31200718",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0086",
+    "pmid": "35202623",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0087",
+    "pmid": "35396614",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0088",
+    "pmid": "26350981",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0089",
+    "pmid": "39879475",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0090",
+    "pmid": "22998927",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0091",
+    "pmid": "38383039",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0092",
+    "pmid": "36856604",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0093",
+    "pmid": "21172759",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0094",
+    "pmid": "32822929",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0095",
+    "pmid": "35627528",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0096",
+    "pmid": "37626307",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0097",
+    "pmid": "30875246",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0098",
+    "pmid": "27492006",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0099",
+    "pmid": "39068973",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0100",
+    "pmid": "25324558",
+    "run_id": 3,
+    "model_id": "claude-sonnet-4-5",
+    "output": {
+      "error": "HTTP Error 400: Bad Request"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]
