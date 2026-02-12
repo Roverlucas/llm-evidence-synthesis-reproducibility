@@ -6,12 +6,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "1f22b06e31aebc7589ebe14e8fd0ae537e2892b4b154104be926b860035fda11",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:56:57.630551+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "6bd174223299fb5f2ce747c072d41620a219d52b6a87ea69fda7c53aa978c09c",
+    "timestamp": "2026-02-12T17:52:58.825881+00:00",
+    "inference_duration_ms": 2892.6,
+    "input_tokens": 1128,
+    "output_tokens": 88,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0002",
@@ -20,12 +20,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "86b0da95aef43592ca5f40313a826f46dd06afc97261e572b0134a110882c803",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:57:01.337970+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "b7da26f8c63c5fe41046c17ab8d6208b4a5afe8aa060617a02c943580a47412b",
+    "timestamp": "2026-02-12T17:53:01.536786+00:00",
+    "inference_duration_ms": 2709.0,
+    "input_tokens": 1230,
+    "output_tokens": 90,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0003",
@@ -34,12 +34,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "a5b9dcaa383d808fa7b3f111022aa05d04c7124f84bd167b103482c94307d739",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:57:05.129531+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "ad2ead91583aeb9ad007be77d1a5f1e7ba8703e1cddd404ce6c2e723b5690ff8",
+    "timestamp": "2026-02-12T17:53:10.322010+00:00",
+    "inference_duration_ms": 8780.7,
+    "input_tokens": 1466,
+    "output_tokens": 419,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0004",
@@ -48,12 +48,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "d0706ac1a5e7c46eb49b849198b0d41694b288824bd3c3e8b31028b719856781",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:57:08.850579+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "de7a016a8d6141ce157e2e830cf38c7f70d8aad61f801bc145da31cd992d40be",
+    "timestamp": "2026-02-12T17:53:19.444640+00:00",
+    "inference_duration_ms": 9118.1,
+    "input_tokens": 1532,
+    "output_tokens": 321,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0005",
@@ -62,12 +62,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "009d1f7a984af8a7bdd9be79309de8739e6726aa503ce274c050c4c52c5983b8",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:57:12.809506+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "f06ff1eb4e2c09244d4176fd061f565bf673cfa1a1a2f4080f9f3dd7acb88b71",
+    "timestamp": "2026-02-12T17:53:24.652353+00:00",
+    "inference_duration_ms": 5203.6,
+    "input_tokens": 1314,
+    "output_tokens": 87,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0006",
@@ -76,12 +76,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "ba95cd0acdbde57357565a2647dddc2917b6fe8709940b8d284b4571853c889b",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:57:16.553422+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "8fe9c982d204b6778d83b286eb0ad415fcea00fbddb5e53df52fdaa856e47114",
+    "timestamp": "2026-02-12T17:53:33.768225+00:00",
+    "inference_duration_ms": 9111.0,
+    "input_tokens": 1510,
+    "output_tokens": 552,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0007",
@@ -90,12 +90,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "6969204c525ab0c6ac4e58cdcc96ce3b7aff3915c4776aa5b1d4388d763a2923",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:57:20.359197+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "29624d6892e273aea2fa087d982efbdb5adbb11138912de53c9f366b5ffb7d4b",
+    "timestamp": "2026-02-12T17:53:46.055407+00:00",
+    "inference_duration_ms": 12281.7,
+    "input_tokens": 1224,
+    "output_tokens": 431,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0008",
@@ -104,12 +104,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "d137154333a4e5291d24fdee4fc9574e4bd80a4285b2728c5f9fe314c1e7f95f",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:57:24.045963+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "668ba7e5e63bdff1217e2270e56b8bedfe16155a32bbb3efcde08c67de88d50a",
+    "timestamp": "2026-02-12T17:53:53.834272+00:00",
+    "inference_duration_ms": 7776.7,
+    "input_tokens": 1280,
+    "output_tokens": 552,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0009",
@@ -118,12 +118,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "66de0381be184eaf578806e64c94ffd147aa90a02bccc5ece0487c55a0fd4dfa",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:57:27.780351+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "73e92cbe2ce01546504924cdf996a5dc5118c8b3a877b8bc0ba5634466671549",
+    "timestamp": "2026-02-12T17:54:00.084113+00:00",
+    "inference_duration_ms": 6246.2,
+    "input_tokens": 1336,
+    "output_tokens": 535,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0010",
@@ -132,12 +132,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "7a8662b7a949c9377c5bd1e08820429f14fa647bf845c93da1b2309d83d8346e",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:57:31.418844+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "ded4ba5130ca7908593eb03a0ad54b5154be4b471670553e09f59547b251d705",
+    "timestamp": "2026-02-12T17:54:16.266621+00:00",
+    "inference_duration_ms": 16179.6,
+    "input_tokens": 1660,
+    "output_tokens": 1472,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0011",
@@ -146,12 +146,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "6fa5b8c7dd951633f6bba6bfede6810612d791d6827c3170adad1752718ee018",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:57:35.222323+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "c7766e35d9b4cdb5791b1b1c9b1b53c5f879e08b6e505372b74490327118a534",
+    "timestamp": "2026-02-12T17:54:21.346847+00:00",
+    "inference_duration_ms": 5075.7,
+    "input_tokens": 1310,
+    "output_tokens": 415,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0012",
@@ -160,12 +160,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "18957ba497136353749377768f0b1f852a7a90242d65f060226b4bc0068966ae",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:57:39.016791+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "184e8d0cd83292c4bf2a7b26f9fb889bc215d9327293b14fc8162500c6b3f550",
+    "timestamp": "2026-02-12T17:54:26.288479+00:00",
+    "inference_duration_ms": 4938.4,
+    "input_tokens": 1428,
+    "output_tokens": 334,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0013",
@@ -174,12 +174,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "38620892a1b3ba2be86d5588a64146c453e77b469f4560216bc61716958918e0",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:57:42.812763+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "45d8ba98b29aa9adedf738decdb17b6c01e8eab1020ce72df37d18db8e64ee83",
+    "timestamp": "2026-02-12T17:54:33.301213+00:00",
+    "inference_duration_ms": 7008.9,
+    "input_tokens": 1674,
+    "output_tokens": 595,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0014",
@@ -188,12 +188,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "6c4c336e0ac45b35604ea9bfdcd39430eabd4e4d990b497b98b60aee9e994384",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:57:46.533462+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "4b61faad0d49f6b830074717c526185b52f2294f7c8774cf6355842005e2c346",
+    "timestamp": "2026-02-12T17:54:41.452669+00:00",
+    "inference_duration_ms": 8147.3,
+    "input_tokens": 1468,
+    "output_tokens": 339,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0015",
@@ -202,12 +202,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "f2da36c892a67f75f033fe76e7c60b9555594393ab289190084303094bea160c",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:57:50.315820+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "0a815c61bb312bd9274914f16b43fbbb8f4d19fa2e8d789de3348812dceb6a19",
+    "timestamp": "2026-02-12T17:54:53.741483+00:00",
+    "inference_duration_ms": 12283.9,
+    "input_tokens": 1290,
+    "output_tokens": 350,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0016",
@@ -216,12 +216,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "0483848ec0229940ec38bcd36ab6eea0fa6cd62f6e31049e2722fd953a037c5c",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:57:53.997383+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "1ad8e1408f2e2ae3ce74eb1c099790ccdd5898ecc280553e54b92a7f2c620670",
+    "timestamp": "2026-02-12T17:54:57.976469+00:00",
+    "inference_duration_ms": 4232.0,
+    "input_tokens": 1286,
+    "output_tokens": 90,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0017",
@@ -230,12 +230,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "a9165124161767e342381f95b8bf0a2e69b32b2189ed9179af26537deb57a3e3",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:57:57.750332+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "89361ccb6b377ad005d5b22b961e64336326357a29209c0988f7a2804d174ad7",
+    "timestamp": "2026-02-12T17:55:01.388046+00:00",
+    "inference_duration_ms": 3407.4,
+    "input_tokens": 1416,
+    "output_tokens": 213,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0018",
@@ -244,12 +244,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "80eed6a3a62564ffda2a2441ce3b16512fbb3591eaba588fa683175c9a11c720",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:58:01.529618+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "f4805f5c26733116ce470aee15221f64d3d7dca4efbdd430cef2e27e97f10b6c",
+    "timestamp": "2026-02-12T17:55:05.112198+00:00",
+    "inference_duration_ms": 3720.0,
+    "input_tokens": 1120,
+    "output_tokens": 200,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0019",
@@ -258,12 +258,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "522df1ea0551a8019ca5085854a953c026eb103381e968d1d2fc563a7043e9b5",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:58:05.713525+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "28b817ee7eff25d8732503a7a11dda60a9730b5cd0db47ebcb1990dda6c8ad18",
+    "timestamp": "2026-02-12T17:55:15.031188+00:00",
+    "inference_duration_ms": 9913.7,
+    "input_tokens": 1438,
+    "output_tokens": 971,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0020",
@@ -272,12 +272,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "1161161928307dcca11fe94ee77e2f7b0bffaaa7bc2b5a075d0730d19103af33",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:58:09.410589+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "f7acfb63eb849a55a1988519c7f996b51e3d2bb8da181afd9fedc6176102f2e1",
+    "timestamp": "2026-02-12T17:55:37.361506+00:00",
+    "inference_duration_ms": 22327.5,
+    "input_tokens": 1860,
+    "output_tokens": 352,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0021",
@@ -286,12 +286,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "ecddc71d81a50e2cb429b21ffc4edf98baf534abe82bf2a10463b3b577a26329",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:58:13.236770+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "6ea732485b6f40ceb5dcac16a9b45289ff7d38dd7388e860987a3f8ba759d016",
+    "timestamp": "2026-02-12T17:55:42.651794+00:00",
+    "inference_duration_ms": 5287.3,
+    "input_tokens": 1376,
+    "output_tokens": 465,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0022",
@@ -300,12 +300,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "af6b5848ef2174e64c8a2aa14058a798dac8a2526d1d9f1f95e4a7a7c93b1907",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:58:17.011153+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "cfb9544a0dcf586741e2e6525006eaad498e798acab71c1c571a2bb2a0886b40",
+    "timestamp": "2026-02-12T17:55:50.533987+00:00",
+    "inference_duration_ms": 7878.9,
+    "input_tokens": 1770,
+    "output_tokens": 677,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0023",
@@ -314,12 +314,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "d6a9efe16acb12386215e3acbc1a8abb157512fd104e6ff63ff3c058a7b36bfa",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:58:20.793905+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "9d49535c50f4d0906269f8bbd4dc535bd3b8d1b6da27fea66eab5ce2bdd170e8",
+    "timestamp": "2026-02-12T17:55:53.820369+00:00",
+    "inference_duration_ms": 3283.3,
+    "input_tokens": 1184,
+    "output_tokens": 203,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0024",
@@ -328,12 +328,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "e391423292cb604e39a707a2b98228c8f868106242f937fd9d6b0d692ad61855",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:58:24.530845+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "3d1555f55005974fc2fc1b563533e39e19fbce6dc780b4c829688efdb63d91a2",
+    "timestamp": "2026-02-12T17:55:59.378859+00:00",
+    "inference_duration_ms": 5554.4,
+    "input_tokens": 1484,
+    "output_tokens": 496,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0025",
@@ -342,12 +342,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "e37605915f3ab7c45da0039191aeb967228275eac910e377639bb149f5cab6f8",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:58:28.218196+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "a8ef859eab3477bd2c531e955508a53a28f7b3fd81656d107d67f3d549e124a9",
+    "timestamp": "2026-02-12T17:56:07.950365+00:00",
+    "inference_duration_ms": 8568.5,
+    "input_tokens": 1472,
+    "output_tokens": 828,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0026",
@@ -356,12 +356,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "3d495f631609162458d1d636d434d24345565667b5694fc23e310e970d62b88e",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:58:32.029537+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "0d1facfe53e13ee098c59b0e3e8a09ee8d4fae625e49f06592deff33ad40b771",
+    "timestamp": "2026-02-12T17:56:16.838977+00:00",
+    "inference_duration_ms": 8886.3,
+    "input_tokens": 1394,
+    "output_tokens": 554,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0027",
@@ -370,12 +370,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "6416299948db99fb0859e04a04798aba3065724fefba1084090b7c04b7375634",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:58:35.776915+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "5dc05bdf92abd4a326679136d8a8c42cb936960dbae128e8f67567a85c5cdad2",
+    "timestamp": "2026-02-12T17:56:21.496999+00:00",
+    "inference_duration_ms": 4654.2,
+    "input_tokens": 1714,
+    "output_tokens": 329,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0028",
@@ -384,12 +384,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "4cfff2843f5e7164cbdadd5285a204bb55d89ec3e748eb43494f3a62a3854bc9",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:58:39.552730+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "1f938f282e50366037d67f00eb66b13a61ad6a3eed86019720b99bbdada37b65",
+    "timestamp": "2026-02-12T17:56:26.097083+00:00",
+    "inference_duration_ms": 4595.7,
+    "input_tokens": 1568,
+    "output_tokens": 205,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0029",
@@ -398,12 +398,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "15cbd7b04c243d1ccfbf5f1125dc862f760c8b53fe80d7c9c387507beacb008b",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:58:43.246507+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "4ed2be243c351f06d0be91cc96935a80cf0cb3b00e64469febc2475b6dceaf8b",
+    "timestamp": "2026-02-12T17:56:30.081915+00:00",
+    "inference_duration_ms": 3980.6,
+    "input_tokens": 1240,
+    "output_tokens": 195,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0030",
@@ -412,12 +412,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "3d8f916b90a1d4b4da0866bf500d794ba89a497a1b855510981438147c13e3a3",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:58:46.951229+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "010a3f2bd6688d61aedf5c79f0be3a6dd6f5d94b9b74c8282a1c27164f660070",
+    "timestamp": "2026-02-12T17:56:37.105445+00:00",
+    "inference_duration_ms": 7020.5,
+    "input_tokens": 1670,
+    "output_tokens": 658,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0031",
@@ -426,12 +426,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "be0b3b851521bd6dd2cdb94d98b5e8f0f06e27edb0f7b5b60f6f622c49df59c3",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:58:50.725270+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "df2694574ebace83667c3553183999009ac0d8c605dee973a7212bb75022b335",
+    "timestamp": "2026-02-12T17:56:45.662192+00:00",
+    "inference_duration_ms": 8553.7,
+    "input_tokens": 1244,
+    "output_tokens": 543,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0032",
@@ -440,12 +440,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "e428f627dc59e182a36543b6f8f8f76e7e5a30c9d3c72b71702ced517a2c6815",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:58:54.460190+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "1af086ca29c40150f93f834fc3408dc904045a346e12e8cc754dc924fccd21b6",
+    "timestamp": "2026-02-12T17:56:49.055403+00:00",
+    "inference_duration_ms": 3389.0,
+    "input_tokens": 1320,
+    "output_tokens": 203,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0033",
@@ -454,12 +454,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "b0a946fa4fdc7761c772804cb15994a43a21977ae9181e1881f4e1a87286a236",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:58:58.242348+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "40ae469c290f17901022df980174fa7129779e6207d0d4c66e6a33711cabfb13",
+    "timestamp": "2026-02-12T17:56:53.604562+00:00",
+    "inference_duration_ms": 4545.7,
+    "input_tokens": 1282,
+    "output_tokens": 304,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0034",
@@ -468,12 +468,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "a1bb04a21d1c118b44651d1a74a65b1e6af406e795fd53cc08f7bc780b5b6359",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:59:01.951990+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "50fa8266fff65c30cfdffc127dcfcae2759f7c0077976c688faddcb7e7b7fee0",
+    "timestamp": "2026-02-12T17:57:01.741817+00:00",
+    "inference_duration_ms": 8131.8,
+    "input_tokens": 1600,
+    "output_tokens": 697,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0035",
@@ -482,12 +482,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "cafebf6ae5d906b019e08cbea3b7a0f53e5053648449c4ca1968d4b44b209dd7",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:59:05.755612+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "f7e7d64fc7321788b5f462c5537790d06b4315ae9a9c2921014fe52b17358785",
+    "timestamp": "2026-02-12T17:57:08.188667+00:00",
+    "inference_duration_ms": 6442.6,
+    "input_tokens": 1392,
+    "output_tokens": 565,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0036",
@@ -496,12 +496,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "395817f8b1d5eab1a3f1b2a232aa3eb22563040d1cdacf5ac60dfe673d02bae4",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:59:09.501091+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "faf7b33ea02a426a19753967f299e8a41395db1dd2b4b7139158bf2ffaf8cb7b",
+    "timestamp": "2026-02-12T17:57:14.028077+00:00",
+    "inference_duration_ms": 5835.5,
+    "input_tokens": 1102,
+    "output_tokens": 212,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0037",
@@ -510,12 +510,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "62329cccd09bb36f5b0793feabbd6124bb32993b2e3a8527680c8c48ac8418f4",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:59:13.203738+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "936e22ffdef7a42994e64252e525b31f156e517795b95062ad6796c59548ac39",
+    "timestamp": "2026-02-12T17:57:19.045505+00:00",
+    "inference_duration_ms": 5013.9,
+    "input_tokens": 1308,
+    "output_tokens": 321,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0038",
@@ -524,12 +524,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "f9b1a3ea0bfdbf379ea4c7ca41a1bfec0ec7904448821b991f977dfc4a604d07",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:59:16.864972+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "283b1b9f10c8125aa2f9033c97818e46266a2f7cacd9642abbbc845d480ffc1f",
+    "timestamp": "2026-02-12T17:57:26.008809+00:00",
+    "inference_duration_ms": 6959.7,
+    "input_tokens": 1618,
+    "output_tokens": 591,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0039",
@@ -538,12 +538,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "51f6ebb164664437c983878304df4ec6c2abdf6f76c34e4cfe1686b19e8b9088",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:59:20.662597+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "d04c47cf8475b4911f7d8659f8b1152060fd391029d1bfce27086892e11953d7",
+    "timestamp": "2026-02-12T17:57:30.598255+00:00",
+    "inference_duration_ms": 4586.4,
+    "input_tokens": 1002,
+    "output_tokens": 292,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0040",
@@ -552,12 +552,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "e052f6a6761d7a4397308227966a65b66da42df38930bb8150094dec6ea41c31",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:59:24.467467+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "c8e77ce68ae042b8dd8a8cd605e410c23fcaa29ecc22c68c6bdc73bd03a581c0",
+    "timestamp": "2026-02-12T17:57:37.772417+00:00",
+    "inference_duration_ms": 7170.8,
+    "input_tokens": 1526,
+    "output_tokens": 307,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0041",
@@ -566,12 +566,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "fde2ce386599a3a04f9a909d97be5a6fc7fce1d05013e79bab96ce175edfd882",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:59:28.303123+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "ca4f18944f6d1b4ffb9f3604b35b72e84618abe21cf90be56b280ac0057b3607",
+    "timestamp": "2026-02-12T17:57:43.852172+00:00",
+    "inference_duration_ms": 6077.4,
+    "input_tokens": 2372,
+    "output_tokens": 491,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0042",
@@ -580,12 +580,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "be645167b73d8f62071e31e2c18eabe07dc4c6a1da0627ea08e34c1a142ec54d",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:59:32.381976+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "de6ad8472a96238c7b43a1075bda043cd041a38b274f9aadbc3ee4b663c725df",
+    "timestamp": "2026-02-12T17:57:50.277280+00:00",
+    "inference_duration_ms": 6422.0,
+    "input_tokens": 1396,
+    "output_tokens": 557,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0043",
@@ -594,12 +594,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "9f9f1d1ea81b14fe35759a64fbb1d8992636ada9df7d96d771e849f9d49fe798",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:59:36.196977+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "c33618d7553f928ac455d82660e4b5e581235b850ca4d75e9dfc1fa5f1696354",
+    "timestamp": "2026-02-12T17:57:52.735506+00:00",
+    "inference_duration_ms": 2455.8,
+    "input_tokens": 1270,
+    "output_tokens": 85,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0044",
@@ -608,12 +608,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "4a826943499e3ceab6c0b529bf9649ba346221258b419bae75baf44c932fe48d",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:59:39.966450+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "f06e5157c523bba2ac5cf15161db09f74e67aa2f2b334c2115daec8803c1ce10",
+    "timestamp": "2026-02-12T17:57:59.791627+00:00",
+    "inference_duration_ms": 7051.5,
+    "input_tokens": 1560,
+    "output_tokens": 549,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0045",
@@ -622,12 +622,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "ea04ceb938b31d59053d0ec34a7dafb78977698ddc5789013c304376b70688d0",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:59:43.894229+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "16ba8e54eb6b9a22f86b82a67a40fba75cfa9e5bb9dad0e1ab142511c24b2507",
+    "timestamp": "2026-02-12T17:58:03.795213+00:00",
+    "inference_duration_ms": 3999.2,
+    "input_tokens": 1970,
+    "output_tokens": 218,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0046",
@@ -636,12 +636,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "0b171e9990f3b281e8170a16c4a19aa89b2c2aafec9ac0472f0ed1ea793127dc",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:59:47.772189+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "cf3709d700971d7fd02c586847d1ab644bbdc097dac22f221a7745aa1c2cc959",
+    "timestamp": "2026-02-12T17:58:11.372137+00:00",
+    "inference_duration_ms": 7572.7,
+    "input_tokens": 1486,
+    "output_tokens": 729,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0047",
@@ -650,12 +650,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "a70a0d227e0ae480fbfb47c977060da2bc771d4ecfa135c199f9fc7209b776e2",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:59:51.495485+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "ca119fc154a600ba90a45a619efb7204a60a512ab78d9594c5acf85df0b15220",
+    "timestamp": "2026-02-12T17:58:17.572130+00:00",
+    "inference_duration_ms": 6195.5,
+    "input_tokens": 1444,
+    "output_tokens": 345,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0048",
@@ -664,12 +664,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "5387efc05dd3b0e865bdb2d23b9fd59ddc927ddd078b82b2fa2368536dee9648",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:59:55.264149+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "5cf788133730912ae59eb2bc61121a8a0061e199dea403b97cb9e9f62a84077c",
+    "timestamp": "2026-02-12T17:58:23.867065+00:00",
+    "inference_duration_ms": 6291.0,
+    "input_tokens": 1114,
+    "output_tokens": 529,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0049",
@@ -678,12 +678,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "a63294d04fbd503d1973e80a78c564aea9e41af9bfe7e7ce05a72091d9053595",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T17:59:59.249324+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "072693434a5cf452d2c4fe37bb061bcd58d426db89b83f2ee7d1b4cb2217c8d8",
+    "timestamp": "2026-02-12T17:58:28.337579+00:00",
+    "inference_duration_ms": 4467.6,
+    "input_tokens": 1284,
+    "output_tokens": 82,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0050",
@@ -692,12 +692,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "6de6a993824e0ddf8765ebc9d42eb2f523d2e57ce2a63501ddcef9472548204e",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:00:03.042942+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "246fa913c335255aa7d8668f91a95c0a76654d89df34e887c82f7b7fec1eb43c",
+    "timestamp": "2026-02-12T17:58:39.531472+00:00",
+    "inference_duration_ms": 11190.5,
+    "input_tokens": 1670,
+    "output_tokens": 602,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0051",
@@ -706,12 +706,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "d76151c1915500d56ab8e4750161b166d23a935f1a41d89b8e7b1a6ae3b5cc26",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:00:06.802965+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "83114396329e09a6974c81ff47222186bb71a558e27410955b132d47035efbcf",
+    "timestamp": "2026-02-12T17:58:44.036232+00:00",
+    "inference_duration_ms": 4502.1,
+    "input_tokens": 1290,
+    "output_tokens": 313,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0052",
@@ -720,12 +720,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "c09b69a4615b51d4c0d09e983db1431006079dfa5b0c6520e25b8022d253dab7",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:00:10.524815+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "9d6f22805b7ab227cb0db3726fe2efea458ae7e153fb352d1ce7c8cf5d943ca3",
+    "timestamp": "2026-02-12T17:58:48.888228+00:00",
+    "inference_duration_ms": 4848.6,
+    "input_tokens": 1464,
+    "output_tokens": 421,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0053",
@@ -734,12 +734,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "657e826c309d91d7b2450a8d280ce060e577c49483775c6a592ba0f7108cc0d1",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:00:14.220869+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "f0555dc15b3c58d017ede21842134e418bce512f25e1f81c94b07e4211499029",
+    "timestamp": "2026-02-12T17:58:53.869007+00:00",
+    "inference_duration_ms": 4976.0,
+    "input_tokens": 1496,
+    "output_tokens": 410,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0054",
@@ -748,12 +748,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "5a57067b078ad952095b0c6ae38e5e4933f731d34d611c7cc35de001c869aab2",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:00:18.111746+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "695147ca095040a05545695a10f3b78839ea43e5784beb172112a2702c9fdb4f",
+    "timestamp": "2026-02-12T17:58:59.500019+00:00",
+    "inference_duration_ms": 5627.6,
+    "input_tokens": 1558,
+    "output_tokens": 379,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0055",
@@ -762,12 +762,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "b799b9be072d07f6f0efb31a73419cc0b8b8992cc9d09244f5319c546e44a992",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:00:21.847729+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "41e229f7b926c6be2bb0f842abe8bcb50fe7893cc14deb131d29cf2e9c6bbe66",
+    "timestamp": "2026-02-12T17:59:10.149982+00:00",
+    "inference_duration_ms": 10645.3,
+    "input_tokens": 1894,
+    "output_tokens": 1166,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0056",
@@ -776,12 +776,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "7ec5d0c5c37e168984a09b961c0a4a0cf9edcaa598c6b37b223bf5762b75e931",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:00:25.659479+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "500afb6ff213aec617818a030061f80b5cf289de8310b2d05116b227bf4c2448",
+    "timestamp": "2026-02-12T17:59:20.290669+00:00",
+    "inference_duration_ms": 10136.5,
+    "input_tokens": 1430,
+    "output_tokens": 979,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0057",
@@ -790,12 +790,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "f5cf8d82bfa3e1c413d1ba0704cb84494b284f3aeb176c7fbb5546d025828a3f",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:00:29.332819+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "9734bba7b61ea49d2cfebaeb860edbe13e4827159413636c9f04f04049eca11c",
+    "timestamp": "2026-02-12T17:59:27.557046+00:00",
+    "inference_duration_ms": 7263.4,
+    "input_tokens": 1454,
+    "output_tokens": 491,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0058",
@@ -804,12 +804,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "e976de7d190e4c957f005d6956d865f1157e874b7f5a5facbb85c1d458564264",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:00:33.016201+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "1762a2be7d32d8a9f4336c67857be70a1516c27dc4f49b3d95f338d76c2b202a",
+    "timestamp": "2026-02-12T17:59:33.701842+00:00",
+    "inference_duration_ms": 6141.2,
+    "input_tokens": 1336,
+    "output_tokens": 429,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0059",
@@ -818,12 +818,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "aa7433f961c40f8898901ef0d2f669a1e253dca9944eb1e46d7ac4216e08048f",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:00:36.684374+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "3378629f26c004f8bfce3d75295e10be8702d4bf8d543b3a19570e53d9f3061c",
+    "timestamp": "2026-02-12T17:59:38.515141+00:00",
+    "inference_duration_ms": 4808.9,
+    "input_tokens": 1294,
+    "output_tokens": 329,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0060",
@@ -832,12 +832,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "73079379560f809a7636f562b3b9ad964e0c1718bebf48f0ea3b6a8ced2d83d7",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:00:40.763711+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "91506c6475caa555ac0b438cc91c781e8cfd4ff08d5fb4cd7e0bdbe4c75e79c9",
+    "timestamp": "2026-02-12T17:59:49.473895+00:00",
+    "inference_duration_ms": 10954.5,
+    "input_tokens": 1416,
+    "output_tokens": 204,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0061",
@@ -846,12 +846,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "bfded8ccca6da0a053666b4c4af36ca2af0d5664fe0e2abe25d0b41a210423e7",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:00:44.550197+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "7949cd983889d2654ee9c508a5c4191ecf47948029b2db233e2c0e626d795de6",
+    "timestamp": "2026-02-12T17:59:52.747147+00:00",
+    "inference_duration_ms": 3270.5,
+    "input_tokens": 1478,
+    "output_tokens": 88,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0062",
@@ -860,12 +860,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "1a098f0110193d083dfcce562663a2d29762d56e2da3d6d75c3a9f21d348e0ef",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:00:48.366660+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "7c35ae3b0caae585de0450fc09041cfefc1c1277dbc398871ad69ef39e4224d2",
+    "timestamp": "2026-02-12T17:59:57.970223+00:00",
+    "inference_duration_ms": 5219.6,
+    "input_tokens": 1100,
+    "output_tokens": 297,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0063",
@@ -874,12 +874,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "e4f287e4a2af23a9b38356a77fad1f1b9ce74da97c437df0b0783a99d4e29ca3",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:00:52.133935+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "9542d5ed8bc597c40942f1ec7a3be254f3c30d0a822684013761590bb2290835",
+    "timestamp": "2026-02-12T18:00:05.629140+00:00",
+    "inference_duration_ms": 7655.0,
+    "input_tokens": 1148,
+    "output_tokens": 735,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0064",
@@ -888,12 +888,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "79eb95a04ad0bf4f34ca9380b361f416358586e0d14c58d388ac22f44c59cbde",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:00:55.983053+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "a2d9af4ed3de01c866c0d35d5394c3ee23e0017290a960445af9cb7ee0d35831",
+    "timestamp": "2026-02-12T18:00:19.271151+00:00",
+    "inference_duration_ms": 13637.0,
+    "input_tokens": 1370,
+    "output_tokens": 1024,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0065",
@@ -902,12 +902,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "90e3ad1c94ac9972511fcd3883a1b1734fdb4a6a50aa495518c902d16ed13017",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:00:59.680110+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "21498c0837afea286d0d2fcad3d0b57b933aa9298e3b546785996bc8cc3af1ce",
+    "timestamp": "2026-02-12T18:00:28.177946+00:00",
+    "inference_duration_ms": 8902.8,
+    "input_tokens": 1498,
+    "output_tokens": 767,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0066",
@@ -916,12 +916,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "7a09b7f5ca217d862d58f0cb8e912cef794549ba30ab70c7e8b2f3da35f423f7",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:01:03.374011+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "60ec6ff614e5ec7666adae01b352136693e23743a4f847b5f19e062eccb81023",
+    "timestamp": "2026-02-12T18:00:34.014037+00:00",
+    "inference_duration_ms": 5832.0,
+    "input_tokens": 1536,
+    "output_tokens": 436,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0067",
@@ -930,12 +930,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "4bf642c489d1ae770b4d26d6b36acbb6604258c89218020522e8348377e6e099",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:01:07.124060+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "5696a30561586586c21072ad530a66a2893965b9b1f43e40f02a5b980b265785",
+    "timestamp": "2026-02-12T18:00:46.720342+00:00",
+    "inference_duration_ms": 12701.4,
+    "input_tokens": 1670,
+    "output_tokens": 648,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0068",
@@ -944,12 +944,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "40f261f4784a5decaa288c328d3d06236fe80ed8095569360fdfc29e3d0a3edb",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:01:10.844494+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "793cd81b12f1330702454bf332858b32e2ba71f4ee8ba73cabfb7634cf8c982c",
+    "timestamp": "2026-02-12T18:00:51.855348+00:00",
+    "inference_duration_ms": 5130.4,
+    "input_tokens": 1066,
+    "output_tokens": 404,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0069",
@@ -958,12 +958,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "ca4b3e87382f0f09fba7d5fba301f73d72a6621bc7902ee917f25b605974af10",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:01:14.714244+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "5c858ff8db7fee0e6196d7390072346887a150a44946f3b30a10415deb529846",
+    "timestamp": "2026-02-12T18:00:59.308707+00:00",
+    "inference_duration_ms": 7448.8,
+    "input_tokens": 1756,
+    "output_tokens": 724,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0070",
@@ -972,12 +972,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "860eaf83af92c19afab94a61dcd1995e09c413914fb9bd0fadbfdeade246109b",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:01:18.520199+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "75aa55726c9dcf24211ebd42a0934e409bfe9f007b197efcdb4c67b96b742fc2",
+    "timestamp": "2026-02-12T18:01:04.311580+00:00",
+    "inference_duration_ms": 4998.4,
+    "input_tokens": 1424,
+    "output_tokens": 390,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0071",
@@ -986,12 +986,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "d5c4e89f034c85ee5b8583cd675d61befbd95c92ed67a89b555d29c85384fd2d",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:01:22.278134+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "a02baed3fb0627aa32a09346436d24dddd6ab20e4dc869dc195b19e18ffa4036",
+    "timestamp": "2026-02-12T18:01:11.127890+00:00",
+    "inference_duration_ms": 6812.3,
+    "input_tokens": 1568,
+    "output_tokens": 535,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0072",
@@ -1000,12 +1000,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "9a35b47a55ce6f3a5e7c804501c9f6ec5eef275987057248d84bd20e875a86d2",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:01:26.019691+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "0b9a1dee8271780082acfc7c807b7a150ffca9aa90a36a202979a278b2f8dff1",
+    "timestamp": "2026-02-12T18:01:15.323792+00:00",
+    "inference_duration_ms": 4192.4,
+    "input_tokens": 1346,
+    "output_tokens": 303,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0073",
@@ -1014,12 +1014,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "b120e18669937c0a92911d09a026a5cdc745918d2e03ff126d4a8bd114109265",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:01:29.813241+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "453a338b5f4810b80bbe51e29f611cbdf8ecf36b3d17642a3957196c2f1da910",
+    "timestamp": "2026-02-12T18:01:20.165809+00:00",
+    "inference_duration_ms": 4839.7,
+    "input_tokens": 1148,
+    "output_tokens": 209,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0074",
@@ -1028,12 +1028,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "c3dd49ddd56d7c100e60a1fe924af89144c0ee58f33fb095461869c525f1f2e7",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:01:33.650526+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "d0110c13fbd186ddd6e3ca618e0af7ef7e479dbb66dd6fdb68d29140375ada3a",
+    "timestamp": "2026-02-12T18:01:27.774315+00:00",
+    "inference_duration_ms": 7605.3,
+    "input_tokens": 1752,
+    "output_tokens": 320,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0075",
@@ -1042,12 +1042,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "4fd1d7e57ec676f9292cf0b3fe0da5430697fc5de14788685fc3a2cda86c7193",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:01:37.558349+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "87ebc50b231626a90ea8ede0607ea19f8008bc8ca7870a3d0558d8fd48b19156",
+    "timestamp": "2026-02-12T18:01:30.497032+00:00",
+    "inference_duration_ms": 2718.8,
+    "input_tokens": 1398,
+    "output_tokens": 88,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0076",
@@ -1056,12 +1056,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "e016e590fedaa9c6ab7119205e238ad9f63ecd4d763183e47d1bf65701f98d1d",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:01:41.476518+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "bce510793540ba6c7428d8fb1307c6473bc79f1412821e2d81ad63f700045a19",
+    "timestamp": "2026-02-12T18:01:37.657413+00:00",
+    "inference_duration_ms": 7158.0,
+    "input_tokens": 1348,
+    "output_tokens": 455,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0077",
@@ -1070,12 +1070,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "f19f1be3731f1ff411063c2be4683e3cb1f2d731167490f815589270b38c9ccf",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:01:45.234251+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "561542e1858533093094a5595252cbd5982b8a75ae7f50232386a34984f6914b",
+    "timestamp": "2026-02-12T18:01:47.843374+00:00",
+    "inference_duration_ms": 10182.1,
+    "input_tokens": 1486,
+    "output_tokens": 961,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0078",
@@ -1084,12 +1084,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "27753c8869c5c6c04c3e8e7788588a334d2e02db83238cb0f613fb90c0d7c5c7",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:01:48.929514+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "128d030fc5ddfae8b8796b365761bf6c072ef15fe4cf237dddac80013f741c40",
+    "timestamp": "2026-02-12T18:01:59.418664+00:00",
+    "inference_duration_ms": 11570.0,
+    "input_tokens": 1588,
+    "output_tokens": 1247,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0079",
@@ -1098,12 +1098,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "b379209df767efda1cb63ba5ae45d5ca590f47b097ae15914fcdc9bee6ec2ad3",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:01:52.601822+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "1c69ccaa103d795ca96ea9a7554ea661dabf738196200c92bf89ec50a159be1c",
+    "timestamp": "2026-02-12T18:02:05.150242+00:00",
+    "inference_duration_ms": 5728.5,
+    "input_tokens": 1038,
+    "output_tokens": 386,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0080",
@@ -1112,12 +1112,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "af478ea19ba2fc871877e08a6f0fecc3314b36f2116981f190920886441822b1",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:01:56.377153+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "2d80ab3b870785d6172793604496245a9979d7cb30560c38adc83f11e76ba930",
+    "timestamp": "2026-02-12T18:02:09.119913+00:00",
+    "inference_duration_ms": 3966.4,
+    "input_tokens": 1150,
+    "output_tokens": 225,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0081",
@@ -1126,12 +1126,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "3bde040c9b03c104ea761ba7f4eb7b3a3270f8bb41b85749128b73ca0b33c2a1",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:02:00.124483+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "37f7d01c6dc92a96925c669d07e6a5273a6b0def2cdd32ca7756906c0a2bd0aa",
+    "timestamp": "2026-02-12T18:02:16.928732+00:00",
+    "inference_duration_ms": 7803.7,
+    "input_tokens": 1630,
+    "output_tokens": 738,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0082",
@@ -1140,12 +1140,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "1e6b2b244513d22287041157b9af19642498c4f92d2146418b04d98dfcec21ea",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:02:03.892037+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "1cb19cd84cd2116a20771a388090672db59cce74ad805f43787a10004d8baf98",
+    "timestamp": "2026-02-12T18:02:28.675700+00:00",
+    "inference_duration_ms": 11741.1,
+    "input_tokens": 1516,
+    "output_tokens": 938,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0083",
@@ -1154,12 +1154,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "59ea95d195e72005fd105b5c19b9eb4a8f9f47ff36f134f72ec7e49b8410ab97",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:02:07.602305+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "249f774bf9ec916701b7657405c7edff651c78dab589b83419342a3800eb8e56",
+    "timestamp": "2026-02-12T18:02:38.405017+00:00",
+    "inference_duration_ms": 9726.2,
+    "input_tokens": 1422,
+    "output_tokens": 904,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0084",
@@ -1168,12 +1168,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "43ed24e867a172f3ab5e7114895b729d5fe8729f084d9da803517ff8a8e8ce12",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:02:11.335909+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "d29410f1b1bdc2740a7df25d63c07f1b6f54172497fe920af37a4a23c8a0f498",
+    "timestamp": "2026-02-12T18:02:43.161541+00:00",
+    "inference_duration_ms": 4753.8,
+    "input_tokens": 1174,
+    "output_tokens": 295,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0085",
@@ -1182,12 +1182,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "27b704b59e610871b5b60228de0cbcee591f1849bc7136b75e83d5a5dc01d0f5",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:02:15.057455+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "49b174e77e55dd83f30fe7dbf860f785ff96ae46b4a38bd54762c26411ffdc52",
+    "timestamp": "2026-02-12T18:02:48.378501+00:00",
+    "inference_duration_ms": 5215.2,
+    "input_tokens": 1648,
+    "output_tokens": 204,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0086",
@@ -1196,12 +1196,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "42439570a1e020156a2ff59159b03ebcf5eb6717417d306b46587688aaa66820",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:02:18.817314+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "3571f357351a2b4a5444b6490aee6f5a84a5f7fbc201c79c98863e330f4d552d",
+    "timestamp": "2026-02-12T18:02:52.906710+00:00",
+    "inference_duration_ms": 4525.8,
+    "input_tokens": 1392,
+    "output_tokens": 315,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0087",
@@ -1210,12 +1210,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "06db6a7d739930bfca20ed1dc41c8e1ccd1175f2101bf89d141ae801ae59d7d2",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:02:22.569147+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "70d8408539ea9c5da7899a4aca3d58581d152c6fd333142449d9aef2e331c238",
+    "timestamp": "2026-02-12T18:02:59.934628+00:00",
+    "inference_duration_ms": 7024.9,
+    "input_tokens": 1424,
+    "output_tokens": 589,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0088",
@@ -1224,12 +1224,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "28371683d317120f22c93c0423a866c742b35e3cdc8f4fe53cbde67047e1105b",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:02:26.367429+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "0267c29a859fac1e0f047e91f9e9b56f8640f574688671d318bc94cc99cb55bd",
+    "timestamp": "2026-02-12T18:03:02.597966+00:00",
+    "inference_duration_ms": 2659.3,
+    "input_tokens": 1142,
+    "output_tokens": 99,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0089",
@@ -1238,12 +1238,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "c49d7d8997574ec3e497625070ca58ca4abd73bc9cb659e87a036dab220e1112",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:02:30.125842+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "2c24b25d12968eb35ecd2eca31a48094cc7a7061c022855794e931a7ef4afa96",
+    "timestamp": "2026-02-12T18:03:06.976725+00:00",
+    "inference_duration_ms": 4375.5,
+    "input_tokens": 2588,
+    "output_tokens": 219,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0090",
@@ -1252,12 +1252,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "ec03493321ceeed78d6146fb45defb71ac5e0fb6d97ca56064089a6e452c7466",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:02:33.868130+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "96da0082658270e71e6726132a7a0f4cd94451bee3a9578b78b49999fdec8671",
+    "timestamp": "2026-02-12T18:03:13.657513+00:00",
+    "inference_duration_ms": 6678.3,
+    "input_tokens": 1464,
+    "output_tokens": 465,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0091",
@@ -1266,12 +1266,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "44dc5b07c265068e52341adb0f9bb80a606239431ad2d3b384e5e91d95e44a94",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:02:37.560244+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "a1525f4727704e4bff478c4bc18dea98d195ab4f07525713c2a61e153763977c",
+    "timestamp": "2026-02-12T18:03:19.074988+00:00",
+    "inference_duration_ms": 5414.7,
+    "input_tokens": 1804,
+    "output_tokens": 330,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0092",
@@ -1280,12 +1280,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "65d6ac76ca3dcca379cd4612b61bf5aa8d434a7291a542db796b355e6aa31895",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:02:41.452812+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "0c90b617f117686fea49d2773ee8d015d57c1e1e08d86b1cd287166be964ef5b",
+    "timestamp": "2026-02-12T18:03:26.741926+00:00",
+    "inference_duration_ms": 7664.4,
+    "input_tokens": 1580,
+    "output_tokens": 326,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0093",
@@ -1294,12 +1294,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "b8829abf6fcde9d3d1b7df3cc6183a68adbf0aa3cddbbbc66025bef446edad94",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:02:45.150102+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "93d696ba5440d3aa792b78b3f984b3718ce7f63051f50e54c2195460f4c1177e",
+    "timestamp": "2026-02-12T18:03:34.774857+00:00",
+    "inference_duration_ms": 8031.1,
+    "input_tokens": 1392,
+    "output_tokens": 85,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0094",
@@ -1308,12 +1308,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "ead3d975f60e892b0338f8c3467e8cfa5b96d0c83e95b57572ea18ebda058bd2",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:02:48.876346+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "d74764127e7230086a71cac209695ece050bb0e4285f2c868dff772f84fc716b",
+    "timestamp": "2026-02-12T18:03:41.431628+00:00",
+    "inference_duration_ms": 6653.5,
+    "input_tokens": 1392,
+    "output_tokens": 575,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0095",
@@ -1322,12 +1322,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "c6c4663565e2e7dacc24763dbb502144db890889ec431b2ae16b018fbdffe88d",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:02:52.668426+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "db84b5baac4589c9edc7e35b3365a8d9bbe31f26d7b709938119a321bd5febc2",
+    "timestamp": "2026-02-12T18:03:47.627730+00:00",
+    "inference_duration_ms": 6191.6,
+    "input_tokens": 1324,
+    "output_tokens": 551,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0096",
@@ -1336,12 +1336,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "efa12e2b2293026073ee14ecc3da829ccd5f85ec571698ee518b378d9d1b66cf",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:02:56.394903+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "f01b47d8c86acb952de237ffa44c47e081ee8cc9c2e8bf2a6ec196c2f27f8bde",
+    "timestamp": "2026-02-12T18:03:53.798398+00:00",
+    "inference_duration_ms": 6166.8,
+    "input_tokens": 1330,
+    "output_tokens": 541,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0097",
@@ -1350,12 +1350,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "1866f6102497438879063273c5b921fba6bb8e28f5749ac858a67e4614ffdf8f",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:03:00.150716+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "32b68bdaff7fdaa6029ebc9067eccf9d59b347a0e6cf304c759198b8ef214a47",
+    "timestamp": "2026-02-12T18:04:03.310340+00:00",
+    "inference_duration_ms": 9508.9,
+    "input_tokens": 1618,
+    "output_tokens": 889,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0098",
@@ -1364,12 +1364,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "b9f897ce84814da5ec7174dc9e6305933ce93c06d4f75dc334b946ad9d5799c8",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:03:03.912876+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "92e81c21691451ded6e29487a577fda6118068b00f7148958f273642819adf39",
+    "timestamp": "2026-02-12T18:04:08.520841+00:00",
+    "inference_duration_ms": 5207.1,
+    "input_tokens": 1502,
+    "output_tokens": 328,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0099",
@@ -1378,12 +1378,12 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "4b6d044542421fff6e3efb1c1e627f10c2680c3ee113acc6311b320bda3821c1",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:03:07.616527+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "d71d4bae3f94d62397a71c5add25381792bba2785224ff6e16916d3bae866f36",
+    "timestamp": "2026-02-12T18:04:11.205273+00:00",
+    "inference_duration_ms": 2681.2,
+    "input_tokens": 1178,
+    "output_tokens": 87,
+    "stop_reason": "end_turn"
   },
   {
     "corpus_id": "ABS-0100",
@@ -1392,11 +1392,11 @@
     "model_id": "claude-sonnet-4-5",
     "provider": "anthropic",
     "call_hash": "83793c0ef131cc3fa69347d5faae28c600a4b5e3d125d14a76922a597a1e42fe",
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "timestamp": "2026-02-11T18:03:11.307063+00:00",
-    "inference_duration_ms": null,
-    "input_tokens": null,
-    "output_tokens": null,
-    "stop_reason": null
+    "output_hash": "e4a2494a8a91cbfe67c9d7fc824311cc56861fc05008e5e319f27d6239023724",
+    "timestamp": "2026-02-12T18:04:15.858826+00:00",
+    "inference_duration_ms": 4651.5,
+    "input_tokens": 1268,
+    "output_tokens": 305,
+    "stop_reason": "end_turn"
   }
 ]
