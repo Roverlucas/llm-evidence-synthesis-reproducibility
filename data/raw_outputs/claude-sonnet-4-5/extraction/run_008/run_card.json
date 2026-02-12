@@ -1,0 +1,31 @@
+{
+  "run_card_version": "1.0",
+  "run_id": 8,
+  "stage": "extraction",
+  "model_id": "claude-sonnet-4-5",
+  "provider": "anthropic",
+  "model_info": {
+    "model_id": "claude-sonnet-4-5-20250929",
+    "provider": "anthropic",
+    "weights_hash": "proprietary-not-available",
+    "model_source": "anthropic-api"
+  },
+  "config": {
+    "temperature": 0.0,
+    "seed": null,
+    "max_tokens": 2048
+  },
+  "execution": {
+    "start_time": "2026-02-12T21:30:01.603904+00:00",
+    "end_time": "2026-02-12T21:38:51.376843+00:00",
+    "total_calls": 100,
+    "successful_calls": 100,
+    "failed_calls": 0,
+    "total_duration_ms": 529432.8,
+    "mean_duration_ms": 5294.3
+  },
+  "provenance": {
+    "aggregate_output_hash": "ebb5cf379a6cf33ab2755f4b63a025159862e942cb858f785db91409049bf66b",
+    "hash_algorithm": "sha256"
+  }
+}
