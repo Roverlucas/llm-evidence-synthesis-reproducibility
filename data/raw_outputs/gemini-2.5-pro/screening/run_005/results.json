@@ -1,0 +1,5508 @@
+[
+  {
+    "corpus_id": "ABS-0001",
+    "pmid": "38698010",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0002",
+    "pmid": "29259031",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0003",
+    "pmid": "35073244",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0004",
+    "pmid": "35394903",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0005",
+    "pmid": "35104259",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0006",
+    "pmid": "35384572",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0007",
+    "pmid": "35989078",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0008",
+    "pmid": "37792321",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0009",
+    "pmid": "30917578",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0010",
+    "pmid": "28787174",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0011",
+    "pmid": "35802828",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0012",
+    "pmid": "36197352",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0013",
+    "pmid": "37011135",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0014",
+    "pmid": "36376253",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0015",
+    "pmid": "36243957",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0016",
+    "pmid": "35692312",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0017",
+    "pmid": "40433992",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0018",
+    "pmid": "30781785",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0019",
+    "pmid": "35307034",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0020",
+    "pmid": "40305019",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0021",
+    "pmid": "29643111",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0022",
+    "pmid": "37972204",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0023",
+    "pmid": "34981381",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0024",
+    "pmid": "31787180",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0025",
+    "pmid": "37980997",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0026",
+    "pmid": "35583542",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0027",
+    "pmid": "26452298",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0028",
+    "pmid": "39038774",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0029",
+    "pmid": "37772521",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0030",
+    "pmid": "35142610",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0031",
+    "pmid": "39048614",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0032",
+    "pmid": "35627536",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0033",
+    "pmid": "31755707",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0034",
+    "pmid": "34989991",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0035",
+    "pmid": "36777770",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0036",
+    "pmid": "31254082",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0037",
+    "pmid": "39520750",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0038",
+    "pmid": "36580986",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0039",
+    "pmid": "37968236",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0040",
+    "pmid": "37159523",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0041",
+    "pmid": "27581332",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0042",
+    "pmid": "32554254",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0043",
+    "pmid": "29459308",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0044",
+    "pmid": "34184226",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0045",
+    "pmid": "32760064",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0046",
+    "pmid": "32729038",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0047",
+    "pmid": "35027064",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0048",
+    "pmid": "32193561",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0049",
+    "pmid": "24240657",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0050",
+    "pmid": "30502738",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0051",
+    "pmid": "20502338",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0052",
+    "pmid": "36863162",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0053",
+    "pmid": "33980121",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0054",
+    "pmid": "35921071",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0055",
+    "pmid": "36641448",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0056",
+    "pmid": "36107568",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0057",
+    "pmid": "27224452",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0058",
+    "pmid": "33678143",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0059",
+    "pmid": "37137261",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0060",
+    "pmid": "33910560",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0061",
+    "pmid": "27350257",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0062",
+    "pmid": "25776011",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0063",
+    "pmid": "34574538",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0064",
+    "pmid": "39013602",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0065",
+    "pmid": "35661917",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0066",
+    "pmid": "38622704",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0067",
+    "pmid": "39633418",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0068",
+    "pmid": "38164931",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0069",
+    "pmid": "37830139",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0070",
+    "pmid": "38858655",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0071",
+    "pmid": "32854703",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0072",
+    "pmid": "39505076",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0073",
+    "pmid": "34545525",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0074",
+    "pmid": "24528997",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0075",
+    "pmid": "25244038",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0076",
+    "pmid": "33590391",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0077",
+    "pmid": "29870428",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0078",
+    "pmid": "32184587",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0079",
+    "pmid": "24555678",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0080",
+    "pmid": "23729683",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0081",
+    "pmid": "38347929",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0082",
+    "pmid": "33640663",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0083",
+    "pmid": "30277796",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0084",
+    "pmid": "27605585",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0085",
+    "pmid": "31200718",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0086",
+    "pmid": "35202623",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0087",
+    "pmid": "35396614",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0088",
+    "pmid": "26350981",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0089",
+    "pmid": "39879475",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0090",
+    "pmid": "22998927",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0091",
+    "pmid": "38383039",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0092",
+    "pmid": "36856604",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0093",
+    "pmid": "21172759",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0094",
+    "pmid": "32822929",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0095",
+    "pmid": "35627528",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0096",
+    "pmid": "37626307",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0097",
+    "pmid": "30875246",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0098",
+    "pmid": "27492006",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0099",
+    "pmid": "39068973",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0100",
+    "pmid": "25324558",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0101",
+    "pmid": "34702659",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0102",
+    "pmid": "38169380",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0103",
+    "pmid": "8777372",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0104",
+    "pmid": "16893917",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0105",
+    "pmid": "12002192",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0106",
+    "pmid": "32301991",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0107",
+    "pmid": "36115280",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0108",
+    "pmid": "26834745",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0109",
+    "pmid": "38385199",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0110",
+    "pmid": "22510275",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0111",
+    "pmid": "26219103",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0112",
+    "pmid": "23314899",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0113",
+    "pmid": "29211200",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0114",
+    "pmid": "31993912",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0115",
+    "pmid": "24075310",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0116",
+    "pmid": "31962264",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0117",
+    "pmid": "31766396",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0118",
+    "pmid": "29546882",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0119",
+    "pmid": "32590284",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0120",
+    "pmid": "29177960",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0121",
+    "pmid": "33478650",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0122",
+    "pmid": "36965278",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0123",
+    "pmid": "35457613",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0124",
+    "pmid": "35134940",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0125",
+    "pmid": "30841819",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0126",
+    "pmid": "36328229",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0127",
+    "pmid": "30680618",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0128",
+    "pmid": "41640321",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0129",
+    "pmid": "26039390",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0130",
+    "pmid": "28525859",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0131",
+    "pmid": "36375501",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0132",
+    "pmid": "26969808",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0133",
+    "pmid": "36795640",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0134",
+    "pmid": "28292780",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0135",
+    "pmid": "30665519",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0136",
+    "pmid": "30702928",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0137",
+    "pmid": "38639298",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0138",
+    "pmid": "11028649",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0139",
+    "pmid": "29467106",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0140",
+    "pmid": "38617429",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0141",
+    "pmid": "24733279",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0142",
+    "pmid": "36612404",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0143",
+    "pmid": "37030285",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0144",
+    "pmid": "35671471",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0145",
+    "pmid": "29889687",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0146",
+    "pmid": "28988023",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0147",
+    "pmid": "35192816",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0148",
+    "pmid": "17006435",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0149",
+    "pmid": "19842328",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0150",
+    "pmid": "41325566",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0151",
+    "pmid": "30369511",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0152",
+    "pmid": "23434817",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0153",
+    "pmid": "19590680",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0154",
+    "pmid": "39889591",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0155",
+    "pmid": "39195680",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0156",
+    "pmid": "26340298",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0157",
+    "pmid": "24377209",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0158",
+    "pmid": "26036738",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0159",
+    "pmid": "23604788",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0160",
+    "pmid": "24293487",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0161",
+    "pmid": "37399145",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0162",
+    "pmid": "35742761",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0163",
+    "pmid": "34253165",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0164",
+    "pmid": "36384657",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0165",
+    "pmid": "36521994",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0166",
+    "pmid": "33456360",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0167",
+    "pmid": "32164596",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0168",
+    "pmid": "25460637",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0169",
+    "pmid": "40383471",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0170",
+    "pmid": "37250231",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0171",
+    "pmid": "34529145",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0172",
+    "pmid": "28255648",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0173",
+    "pmid": "30731313",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0174",
+    "pmid": "36780425",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0175",
+    "pmid": "34998464",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0176",
+    "pmid": "40436385",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0177",
+    "pmid": "33496025",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0178",
+    "pmid": "32526820",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0179",
+    "pmid": "24965327",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0180",
+    "pmid": "36261990",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0181",
+    "pmid": "34634399",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0182",
+    "pmid": "26846245",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0183",
+    "pmid": "35853756",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0184",
+    "pmid": "36451289",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0185",
+    "pmid": "38537965",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0186",
+    "pmid": "39534282",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0187",
+    "pmid": "29966381",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0188",
+    "pmid": "37987510",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0189",
+    "pmid": "24558178",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0190",
+    "pmid": "37734693",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0191",
+    "pmid": "37357089",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0192",
+    "pmid": "35259180",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0193",
+    "pmid": "36360958",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0194",
+    "pmid": "34343988",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0195",
+    "pmid": "24935943",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0196",
+    "pmid": "25071915",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0197",
+    "pmid": "40300246",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0198",
+    "pmid": "31090042",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0199",
+    "pmid": "27367707",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0200",
+    "pmid": "39578775",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0201",
+    "pmid": "33631593",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0202",
+    "pmid": "33508951",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0203",
+    "pmid": "25323244",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0204",
+    "pmid": "21463414",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0205",
+    "pmid": "22446713",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0206",
+    "pmid": "15692817",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0207",
+    "pmid": "8896385",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0208",
+    "pmid": "26216315",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0209",
+    "pmid": "27338189",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0210",
+    "pmid": "37209338",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0211",
+    "pmid": "40971567",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0212",
+    "pmid": "27814549",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0213",
+    "pmid": "28732014",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0214",
+    "pmid": "28076967",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0215",
+    "pmid": "34879071",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0216",
+    "pmid": "39363981",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0217",
+    "pmid": "16522832",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0218",
+    "pmid": "27315241",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0219",
+    "pmid": "27887621",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0220",
+    "pmid": "33157415",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0221",
+    "pmid": "36705825",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0222",
+    "pmid": "33957138",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0223",
+    "pmid": "35772504",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0224",
+    "pmid": "34968974",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0225",
+    "pmid": "28099552",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0226",
+    "pmid": "34583244",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0227",
+    "pmid": "23981468",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0228",
+    "pmid": "35703601",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0229",
+    "pmid": "25947314",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0230",
+    "pmid": "39862954",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0231",
+    "pmid": "31520956",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0232",
+    "pmid": "27649448",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0233",
+    "pmid": "34976938",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0234",
+    "pmid": "34763018",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0235",
+    "pmid": "32361457",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0236",
+    "pmid": "30196203",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0237",
+    "pmid": "26346113",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0238",
+    "pmid": "30275384",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0239",
+    "pmid": "40274412",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0240",
+    "pmid": "40360060",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0241",
+    "pmid": "36717420",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0242",
+    "pmid": "31991627",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0243",
+    "pmid": "37384843",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0244",
+    "pmid": "28420157",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0245",
+    "pmid": "37390950",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0246",
+    "pmid": "32847589",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0247",
+    "pmid": "35817164",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0248",
+    "pmid": "28432994",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0249",
+    "pmid": "25575028",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0250",
+    "pmid": "37386433",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0251",
+    "pmid": "31672367",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0252",
+    "pmid": "30970047",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0253",
+    "pmid": "33919089",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0254",
+    "pmid": "34715823",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0255",
+    "pmid": "29380201",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0256",
+    "pmid": "32278916",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0257",
+    "pmid": "20708875",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0258",
+    "pmid": "29990362",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0259",
+    "pmid": "30398895",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0260",
+    "pmid": "31059876",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0261",
+    "pmid": "36011773",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0262",
+    "pmid": "31753527",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0263",
+    "pmid": "24213019",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0264",
+    "pmid": "31776122",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0265",
+    "pmid": "27507084",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0266",
+    "pmid": "34390671",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0267",
+    "pmid": "19515235",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0268",
+    "pmid": "26517197",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0269",
+    "pmid": "19337525",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0270",
+    "pmid": "31927244",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0271",
+    "pmid": "26501308",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0272",
+    "pmid": "24858282",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0273",
+    "pmid": "27259511",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0274",
+    "pmid": "24569869",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0275",
+    "pmid": "41426702",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0276",
+    "pmid": "27023589",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0277",
+    "pmid": "24037350",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0278",
+    "pmid": "31848968",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0279",
+    "pmid": "26522821",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0280",
+    "pmid": "34682345",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0281",
+    "pmid": "32356054",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0282",
+    "pmid": "27513706",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0283",
+    "pmid": "27437680",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0284",
+    "pmid": "40753101",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0285",
+    "pmid": "23544440",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0286",
+    "pmid": "32640508",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0287",
+    "pmid": "31538430",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0288",
+    "pmid": "26211997",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0289",
+    "pmid": "39642739",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0290",
+    "pmid": "22156960",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0291",
+    "pmid": "24037362",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0292",
+    "pmid": "38867184",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0293",
+    "pmid": "30680626",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0294",
+    "pmid": "25365267",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0295",
+    "pmid": "38829734",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0296",
+    "pmid": "30929168",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0297",
+    "pmid": "35074347",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0298",
+    "pmid": "20060145",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0299",
+    "pmid": "27669280",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0300",
+    "pmid": "39447918",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0301",
+    "pmid": "22609899",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0302",
+    "pmid": "33233547",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0303",
+    "pmid": "40659757",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0304",
+    "pmid": "31634664",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0305",
+    "pmid": "29538512",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0306",
+    "pmid": "22266709",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0307",
+    "pmid": "32007283",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0308",
+    "pmid": "27525668",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0309",
+    "pmid": "40483781",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0310",
+    "pmid": "41325786",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0311",
+    "pmid": "25072894",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0312",
+    "pmid": "20386174",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0313",
+    "pmid": "34710436",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0314",
+    "pmid": "33396113",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0315",
+    "pmid": "39746628",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0316",
+    "pmid": "20512215",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0317",
+    "pmid": "26338689",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0318",
+    "pmid": "36868451",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0319",
+    "pmid": "31446603",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0320",
+    "pmid": "40651278",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0321",
+    "pmid": "40328061",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0322",
+    "pmid": "29317583",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0323",
+    "pmid": "29673181",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0324",
+    "pmid": "24603899",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0325",
+    "pmid": "27756407",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0326",
+    "pmid": "38262660",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0327",
+    "pmid": "12055048",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0328",
+    "pmid": "40887914",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0329",
+    "pmid": "28347336",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0330",
+    "pmid": "41337816",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0331",
+    "pmid": "16599010",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0332",
+    "pmid": "41225162",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0333",
+    "pmid": "19756042",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0334",
+    "pmid": "40586883",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0335",
+    "pmid": "25319352",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0336",
+    "pmid": "20066914",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0337",
+    "pmid": "17182644",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0338",
+    "pmid": "33166757",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0339",
+    "pmid": "40570205",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0340",
+    "pmid": "30544078",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0341",
+    "pmid": "31845265",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0342",
+    "pmid": "9888276",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0343",
+    "pmid": "28628139",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0344",
+    "pmid": "38609898",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0345",
+    "pmid": "25491235",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0346",
+    "pmid": "34019894",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0347",
+    "pmid": "26855129",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0348",
+    "pmid": "23695491",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0349",
+    "pmid": "24720177",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0350",
+    "pmid": "16087571",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0351",
+    "pmid": "40480103",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0352",
+    "pmid": "32609172",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0353",
+    "pmid": "27707554",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0354",
+    "pmid": "16507479",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0355",
+    "pmid": "21895725",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0356",
+    "pmid": "16079066",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0357",
+    "pmid": "41370291",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0358",
+    "pmid": "21569371",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0359",
+    "pmid": "17096045",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0360",
+    "pmid": "29962121",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0361",
+    "pmid": "29466982",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0362",
+    "pmid": "28832531",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0363",
+    "pmid": "24625053",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0364",
+    "pmid": "29043427",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0365",
+    "pmid": "41402958",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0366",
+    "pmid": "31462279",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0367",
+    "pmid": "16451867",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0368",
+    "pmid": "29929325",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0369",
+    "pmid": "37806428",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0370",
+    "pmid": "12881887",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0371",
+    "pmid": "34283949",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0372",
+    "pmid": "16061576",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0373",
+    "pmid": "30061515",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0374",
+    "pmid": "38735375",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0375",
+    "pmid": "38768882",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0376",
+    "pmid": "35334045",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0377",
+    "pmid": "37940200",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0378",
+    "pmid": "27884187",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0379",
+    "pmid": "27110987",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0380",
+    "pmid": "17352124",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0381",
+    "pmid": "33525695",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0382",
+    "pmid": "34065982",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0383",
+    "pmid": "35595966",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0384",
+    "pmid": "37080281",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0385",
+    "pmid": "39002627",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0386",
+    "pmid": "36293917",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0387",
+    "pmid": "27007384",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0388",
+    "pmid": "35618005",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0389",
+    "pmid": "30622072",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0390",
+    "pmid": "31860802",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0391",
+    "pmid": "30412999",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0392",
+    "pmid": "22035655",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "decision": "include",
+      "confidence": 0.9,
+      "rationale": "The study is an original time-series analysis that meets all inclusion criteria. It examines PM2.5 as an exposure, asthma hospitalization as the outcome, and reports relative risks with confidence intervals. Although the primary analysis focuses on effect modification by PM2.5, it is directly relevant to the review question about the association between PM2.5 and respiratory hospitalizations.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "aff971a70bd8578a117e3d07dfc95bd0cd283738d8deb2b5a8448dc036a357b5"
+  },
+  {
+    "corpus_id": "ABS-0393",
+    "pmid": "41242364",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0394",
+    "pmid": "41468575",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0395",
+    "pmid": "37352580",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0396",
+    "pmid": "11051535",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0397",
+    "pmid": "21430578",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0398",
+    "pmid": "25192402",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0399",
+    "pmid": "11051536",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0400",
+    "pmid": "34761317",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0401",
+    "pmid": "40914101",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0402",
+    "pmid": "10339450",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0403",
+    "pmid": "11246487",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0404",
+    "pmid": "37243735",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0405",
+    "pmid": "18079764",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0406",
+    "pmid": "40699147",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0407",
+    "pmid": "18560541",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0408",
+    "pmid": "37886498",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0409",
+    "pmid": "28917169",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0410",
+    "pmid": "18849779",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0411",
+    "pmid": "22509360",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0412",
+    "pmid": "33542035",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0413",
+    "pmid": "34428652",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0414",
+    "pmid": "33981453",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0415",
+    "pmid": "20084840",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0416",
+    "pmid": "27422981",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0417",
+    "pmid": "7925192",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0418",
+    "pmid": "39670153",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0419",
+    "pmid": "34036208",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0420",
+    "pmid": "25621447",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0421",
+    "pmid": "41105438",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0422",
+    "pmid": "35853664",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0423",
+    "pmid": "33778357",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0424",
+    "pmid": "34528013",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0425",
+    "pmid": "36003277",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0426",
+    "pmid": "37666316",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0427",
+    "pmid": "26495360",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0428",
+    "pmid": "38560560",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0429",
+    "pmid": "34445977",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0430",
+    "pmid": "38993972",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0431",
+    "pmid": "40064519",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0432",
+    "pmid": "38653569",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0433",
+    "pmid": "21764049",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0434",
+    "pmid": "26232212",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0435",
+    "pmid": "40158673",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0436",
+    "pmid": "31812526",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0437",
+    "pmid": "25849769",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0438",
+    "pmid": "32051501",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0439",
+    "pmid": "32094459",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0440",
+    "pmid": "32491083",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0441",
+    "pmid": "25072896",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0442",
+    "pmid": "27342649",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0443",
+    "pmid": "40630285",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0444",
+    "pmid": "30273725",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0445",
+    "pmid": "31819749",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0446",
+    "pmid": "39990055",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0447",
+    "pmid": "18854492",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0448",
+    "pmid": "30698228",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0449",
+    "pmid": "26982960",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0450",
+    "pmid": "24284359",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0451",
+    "pmid": "39398546",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0452",
+    "pmid": "31883240",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0453",
+    "pmid": "31452658",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0454",
+    "pmid": "30774327",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0455",
+    "pmid": "23982122",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0456",
+    "pmid": "30906916",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0457",
+    "pmid": "20098503",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0458",
+    "pmid": "32620124",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0459",
+    "pmid": "35786346",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0460",
+    "pmid": "37628320",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0461",
+    "pmid": "35128294",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0462",
+    "pmid": "29653570",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0463",
+    "pmid": "37338586",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0464",
+    "pmid": "35346202",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0465",
+    "pmid": "29614737",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0466",
+    "pmid": "28653196",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0467",
+    "pmid": "38505689",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0468",
+    "pmid": "33309823",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0469",
+    "pmid": "34657126",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0470",
+    "pmid": "33413265",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0471",
+    "pmid": "35281479",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0472",
+    "pmid": "32844984",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0473",
+    "pmid": "39251631",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0474",
+    "pmid": "38445971",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0475",
+    "pmid": "31553231",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0476",
+    "pmid": "28041838",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0477",
+    "pmid": "35382829",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0478",
+    "pmid": "29084634",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0479",
+    "pmid": "34566522",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0480",
+    "pmid": "38514998",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0481",
+    "pmid": "28532658",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0482",
+    "pmid": "25480818",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0483",
+    "pmid": "35361687",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0484",
+    "pmid": "37310769",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0485",
+    "pmid": "36878971",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0486",
+    "pmid": "33033020",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0487",
+    "pmid": "38880973",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0488",
+    "pmid": "34748777",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0489",
+    "pmid": "31770406",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0490",
+    "pmid": "29283681",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0491",
+    "pmid": "22529923",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0492",
+    "pmid": "39937479",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0493",
+    "pmid": "34849952",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0494",
+    "pmid": "35805772",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0495",
+    "pmid": "19864216",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0496",
+    "pmid": "38374709",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0497",
+    "pmid": "22735221",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0498",
+    "pmid": "34015667",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0499",
+    "pmid": "22092966",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0500",
+    "pmid": "34242247",
+    "run_id": 5,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]
