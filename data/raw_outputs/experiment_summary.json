@@ -1,9 +1,9 @@
 {
   "experiment": "pm25-respiratory-reproducibility",
-  "completed": "2026-02-12T21:56:30.493350+00:00",
-  "elapsed_seconds": 2121.1,
+  "completed": "2026-02-14T13:02:53.615300+00:00",
+  "elapsed_seconds": 191010.6,
   "models": [
-    "claude-sonnet-4-5"
+    "llama3-8b"
   ],
   "runs": [
     1,
@@ -18,88 +18,214 @@
     10
   ],
   "stages": [
+    "screening",
     "extraction"
   ],
   "stats": [
     {
       "skipped": true,
       "run_id": 1,
-      "model_id": "claude-sonnet-4-5",
-      "stage": "extraction"
+      "model_id": "llama3-8b",
+      "stage": "screening"
     },
     {
+      "skipped": true,
       "run_id": 2,
-      "model_id": "claude-sonnet-4-5",
-      "stage": "extraction",
-      "total": 100,
-      "successful": 100,
-      "failed": 0,
-      "valid": 71,
-      "start_time": "2026-02-12T21:21:10.353320+00:00",
-      "end_time": "2026-02-12T21:30:00.278863+00:00"
+      "model_id": "llama3-8b",
+      "stage": "screening"
     },
     {
       "skipped": true,
       "run_id": 3,
-      "model_id": "claude-sonnet-4-5",
-      "stage": "extraction"
+      "model_id": "llama3-8b",
+      "stage": "screening"
     },
     {
-      "skipped": true,
       "run_id": 4,
-      "model_id": "claude-sonnet-4-5",
-      "stage": "extraction"
+      "model_id": "llama3-8b",
+      "stage": "screening",
+      "total": 500,
+      "successful": 480,
+      "failed": 20,
+      "valid": 435,
+      "start_time": "2026-02-12T07:59:23.102338+00:00",
+      "end_time": "2026-02-12T15:54:13.698200+00:00"
     },
     {
-      "skipped": true,
       "run_id": 5,
-      "model_id": "claude-sonnet-4-5",
-      "stage": "extraction"
+      "model_id": "llama3-8b",
+      "stage": "screening",
+      "total": 500,
+      "successful": 480,
+      "failed": 20,
+      "valid": 435,
+      "start_time": "2026-02-12T15:54:14.921184+00:00",
+      "end_time": "2026-02-12T17:43:14.144604+00:00"
     },
     {
-      "skipped": true,
       "run_id": 6,
-      "model_id": "claude-sonnet-4-5",
-      "stage": "extraction"
+      "model_id": "llama3-8b",
+      "stage": "screening",
+      "total": 500,
+      "successful": 480,
+      "failed": 20,
+      "valid": 435,
+      "start_time": "2026-02-12T17:43:15.316547+00:00",
+      "end_time": "2026-02-12T19:28:24.523966+00:00"
     },
     {
-      "skipped": true,
       "run_id": 7,
-      "model_id": "claude-sonnet-4-5",
-      "stage": "extraction"
+      "model_id": "llama3-8b",
+      "stage": "screening",
+      "total": 500,
+      "successful": 480,
+      "failed": 20,
+      "valid": 435,
+      "start_time": "2026-02-12T19:28:27.676920+00:00",
+      "end_time": "2026-02-12T21:44:01.638595+00:00"
     },
     {
       "run_id": 8,
-      "model_id": "claude-sonnet-4-5",
-      "stage": "extraction",
-      "total": 100,
-      "successful": 100,
-      "failed": 0,
-      "valid": 73,
-      "start_time": "2026-02-12T21:30:01.603904+00:00",
-      "end_time": "2026-02-12T21:38:51.376843+00:00"
+      "model_id": "llama3-8b",
+      "stage": "screening",
+      "total": 500,
+      "successful": 480,
+      "failed": 20,
+      "valid": 435,
+      "start_time": "2026-02-12T21:44:02.801492+00:00",
+      "end_time": "2026-02-13T03:13:17.909393+00:00"
     },
     {
       "run_id": 9,
-      "model_id": "claude-sonnet-4-5",
-      "stage": "extraction",
-      "total": 100,
-      "successful": 100,
-      "failed": 0,
-      "valid": 72,
-      "start_time": "2026-02-12T21:38:52.492437+00:00",
-      "end_time": "2026-02-12T21:47:42.926450+00:00"
+      "model_id": "llama3-8b",
+      "stage": "screening",
+      "total": 500,
+      "successful": 480,
+      "failed": 20,
+      "valid": 435,
+      "start_time": "2026-02-13T03:13:18.976045+00:00",
+      "end_time": "2026-02-13T13:28:12.796941+00:00"
     },
     {
       "run_id": 10,
-      "model_id": "claude-sonnet-4-5",
+      "model_id": "llama3-8b",
+      "stage": "screening",
+      "total": 500,
+      "successful": 480,
+      "failed": 20,
+      "valid": 435,
+      "start_time": "2026-02-13T13:28:14.103247+00:00",
+      "end_time": "2026-02-13T15:11:03.223358+00:00"
+    },
+    {
+      "run_id": 1,
+      "model_id": "llama3-8b",
       "stage": "extraction",
       "total": 100,
-      "successful": 100,
-      "failed": 0,
-      "valid": 68,
-      "start_time": "2026-02-12T21:47:43.987589+00:00",
-      "end_time": "2026-02-12T21:56:29.446895+00:00"
+      "successful": 96,
+      "failed": 4,
+      "valid": 38,
+      "start_time": "2026-02-13T15:11:04.465265+00:00",
+      "end_time": "2026-02-13T16:12:56.390687+00:00"
+    },
+    {
+      "run_id": 2,
+      "model_id": "llama3-8b",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 96,
+      "failed": 4,
+      "valid": 38,
+      "start_time": "2026-02-13T16:12:57.496227+00:00",
+      "end_time": "2026-02-13T17:31:25.178318+00:00"
+    },
+    {
+      "run_id": 3,
+      "model_id": "llama3-8b",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 96,
+      "failed": 4,
+      "valid": 38,
+      "start_time": "2026-02-13T17:31:26.453870+00:00",
+      "end_time": "2026-02-13T18:35:03.056954+00:00"
+    },
+    {
+      "run_id": 4,
+      "model_id": "llama3-8b",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 96,
+      "failed": 4,
+      "valid": 38,
+      "start_time": "2026-02-13T18:35:04.298196+00:00",
+      "end_time": "2026-02-13T19:50:21.187159+00:00"
+    },
+    {
+      "run_id": 5,
+      "model_id": "llama3-8b",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 96,
+      "failed": 4,
+      "valid": 38,
+      "start_time": "2026-02-13T19:50:22.530327+00:00",
+      "end_time": "2026-02-13T20:48:22.956940+00:00"
+    },
+    {
+      "run_id": 6,
+      "model_id": "llama3-8b",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 96,
+      "failed": 4,
+      "valid": 38,
+      "start_time": "2026-02-13T20:48:24.322573+00:00",
+      "end_time": "2026-02-13T21:45:22.663563+00:00"
+    },
+    {
+      "run_id": 7,
+      "model_id": "llama3-8b",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 96,
+      "failed": 4,
+      "valid": 38,
+      "start_time": "2026-02-13T21:45:23.768702+00:00",
+      "end_time": "2026-02-13T22:41:46.987140+00:00"
+    },
+    {
+      "run_id": 8,
+      "model_id": "llama3-8b",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 96,
+      "failed": 4,
+      "valid": 38,
+      "start_time": "2026-02-13T22:41:48.096905+00:00",
+      "end_time": "2026-02-14T00:07:27.939677+00:00"
+    },
+    {
+      "run_id": 9,
+      "model_id": "llama3-8b",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 96,
+      "failed": 4,
+      "valid": 38,
+      "start_time": "2026-02-14T00:07:29.116477+00:00",
+      "end_time": "2026-02-14T03:02:31.251419+00:00"
+    },
+    {
+      "run_id": 10,
+      "model_id": "llama3-8b",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 96,
+      "failed": 4,
+      "valid": 38,
+      "start_time": "2026-02-14T03:02:32.337877+00:00",
+      "end_time": "2026-02-14T13:02:52.285772+00:00"
     }
   ]
 }
