@@ -1,0 +1,140 @@
+[
+  {
+    "corpus_id": "ABS-0001",
+    "pmid": "38698010",
+    "run_id": 8,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0002",
+    "pmid": "29259031",
+    "run_id": 8,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "The study is an original epidemiological investigation that meets all inclusion criteria. It assesses the association between PM2.5 exposure and respiratory emergency department visits (for asthma) using a time-series design (implied by daily data collection and quasi-Poisson regression). Although a specific RR or OR is not stated in the abstract, the methods used are designed to produce such an estimate, and a quantitative association is reported, so it is expected to be in the full text.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_ED",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "dc8036cdff3e82c729fa5134c712396146babdebaeb4d121e6a02ecfe740a570"
+  },
+  {
+    "corpus_id": "ABS-0003",
+    "pmid": "35073244",
+    "run_id": 8,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0004",
+    "pmid": "35394903",
+    "run_id": 8,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0005",
+    "pmid": "35104259",
+    "run_id": 8,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0006",
+    "pmid": "35384572",
+    "run_id": 8,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0007",
+    "pmid": "35989078",
+    "run_id": 8,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0008",
+    "pmid": "37792321",
+    "run_id": 8,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0009",
+    "pmid": "30917578",
+    "run_id": 8,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0010",
+    "pmid": "28787174",
+    "run_id": 8,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0011",
+    "pmid": "35802828",
+    "run_id": 8,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0012",
+    "pmid": "36197352",
+    "run_id": 8,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]
