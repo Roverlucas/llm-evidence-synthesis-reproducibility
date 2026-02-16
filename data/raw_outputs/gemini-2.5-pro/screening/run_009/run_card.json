@@ -1,0 +1,31 @@
+{
+  "run_card_version": "1.0",
+  "run_id": 9,
+  "stage": "screening",
+  "model_id": "gemini-2.5-pro",
+  "provider": "google",
+  "model_info": {
+    "model_id": "gemini-2.5-pro",
+    "provider": "google",
+    "weights_hash": "proprietary-not-available",
+    "model_source": "google-ai-studio"
+  },
+  "config": {
+    "temperature": 0.0,
+    "seed": 42,
+    "max_tokens": 8192
+  },
+  "execution": {
+    "start_time": "2026-02-16T18:17:05.953965+00:00",
+    "end_time": "2026-02-16T18:21:37.948757+00:00",
+    "total_calls": 500,
+    "successful_calls": 2,
+    "failed_calls": 14,
+    "total_duration_ms": 17598.6,
+    "mean_duration_ms": 8799.3
+  },
+  "provenance": {
+    "aggregate_output_hash": "afc38e176309e3d5ac8a540673f93575d3f77a200dee37e6a28787d6196ac8ec",
+    "hash_algorithm": "sha256"
+  }
+}
