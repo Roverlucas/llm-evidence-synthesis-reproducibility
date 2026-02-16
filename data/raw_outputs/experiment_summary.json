@@ -1,9 +1,9 @@
 {
   "experiment": "pm25-respiratory-reproducibility",
-  "completed": "2026-02-14T13:02:53.615300+00:00",
-  "elapsed_seconds": 191010.6,
+  "completed": "2026-02-15T16:24:29.329884+00:00",
+  "elapsed_seconds": 152107.9,
   "models": [
-    "llama3-8b"
+    "gemini-2.5-pro"
   ],
   "runs": [
     1,
@@ -25,207 +25,202 @@
     {
       "skipped": true,
       "run_id": 1,
-      "model_id": "llama3-8b",
+      "model_id": "gemini-2.5-pro",
       "stage": "screening"
     },
     {
       "skipped": true,
       "run_id": 2,
-      "model_id": "llama3-8b",
+      "model_id": "gemini-2.5-pro",
       "stage": "screening"
     },
     {
       "skipped": true,
       "run_id": 3,
-      "model_id": "llama3-8b",
+      "model_id": "gemini-2.5-pro",
       "stage": "screening"
     },
     {
       "run_id": 4,
-      "model_id": "llama3-8b",
+      "model_id": "gemini-2.5-pro",
       "stage": "screening",
       "total": 500,
-      "successful": 480,
-      "failed": 20,
-      "valid": 435,
-      "start_time": "2026-02-12T07:59:23.102338+00:00",
-      "end_time": "2026-02-12T15:54:13.698200+00:00"
+      "successful": 0,
+      "failed": 500,
+      "valid": 0,
+      "start_time": "2026-02-13T22:09:22.417668+00:00",
+      "end_time": "2026-02-14T02:35:48.039493+00:00"
     },
     {
       "run_id": 5,
-      "model_id": "llama3-8b",
+      "model_id": "gemini-2.5-pro",
       "stage": "screening",
       "total": 500,
-      "successful": 480,
-      "failed": 20,
-      "valid": 435,
-      "start_time": "2026-02-12T15:54:14.921184+00:00",
-      "end_time": "2026-02-12T17:43:14.144604+00:00"
+      "successful": 321,
+      "failed": 179,
+      "valid": 321,
+      "start_time": "2026-02-14T02:35:49.164188+00:00",
+      "end_time": "2026-02-14T16:31:21.019748+00:00"
     },
     {
       "run_id": 6,
-      "model_id": "llama3-8b",
+      "model_id": "gemini-2.5-pro",
       "stage": "screening",
       "total": 500,
-      "successful": 480,
-      "failed": 20,
-      "valid": 435,
-      "start_time": "2026-02-12T17:43:15.316547+00:00",
-      "end_time": "2026-02-12T19:28:24.523966+00:00"
+      "successful": 500,
+      "failed": 0,
+      "valid": 500,
+      "start_time": "2026-02-14T16:31:22.565349+00:00",
+      "end_time": "2026-02-14T21:28:42.454310+00:00"
     },
     {
+      "skipped": true,
       "run_id": 7,
-      "model_id": "llama3-8b",
-      "stage": "screening",
-      "total": 500,
-      "successful": 480,
-      "failed": 20,
-      "valid": 435,
-      "start_time": "2026-02-12T19:28:27.676920+00:00",
-      "end_time": "2026-02-12T21:44:01.638595+00:00"
+      "model_id": "gemini-2.5-pro",
+      "stage": "screening"
     },
     {
       "run_id": 8,
-      "model_id": "llama3-8b",
+      "model_id": "gemini-2.5-pro",
       "stage": "screening",
       "total": 500,
-      "successful": 480,
-      "failed": 20,
-      "valid": 435,
-      "start_time": "2026-02-12T21:44:02.801492+00:00",
-      "end_time": "2026-02-13T03:13:17.909393+00:00"
+      "successful": 165,
+      "failed": 335,
+      "valid": 165,
+      "start_time": "2026-02-14T21:28:43.830431+00:00",
+      "end_time": "2026-02-14T23:52:12.918429+00:00"
     },
     {
       "run_id": 9,
-      "model_id": "llama3-8b",
+      "model_id": "gemini-2.5-pro",
       "stage": "screening",
       "total": 500,
-      "successful": 480,
-      "failed": 20,
-      "valid": 435,
-      "start_time": "2026-02-13T03:13:18.976045+00:00",
-      "end_time": "2026-02-13T13:28:12.796941+00:00"
+      "successful": 0,
+      "failed": 500,
+      "valid": 0,
+      "start_time": "2026-02-14T23:52:14.163812+00:00",
+      "end_time": "2026-02-15T04:16:37.357845+00:00"
     },
     {
       "run_id": 10,
-      "model_id": "llama3-8b",
+      "model_id": "gemini-2.5-pro",
       "stage": "screening",
       "total": 500,
-      "successful": 480,
-      "failed": 20,
-      "valid": 435,
-      "start_time": "2026-02-13T13:28:14.103247+00:00",
-      "end_time": "2026-02-13T15:11:03.223358+00:00"
+      "successful": 0,
+      "failed": 500,
+      "valid": 0,
+      "start_time": "2026-02-15T04:16:38.734772+00:00",
+      "end_time": "2026-02-15T06:50:52.904464+00:00"
     },
     {
       "run_id": 1,
-      "model_id": "llama3-8b",
+      "model_id": "gemini-2.5-pro",
       "stage": "extraction",
       "total": 100,
-      "successful": 96,
-      "failed": 4,
-      "valid": 38,
-      "start_time": "2026-02-13T15:11:04.465265+00:00",
-      "end_time": "2026-02-13T16:12:56.390687+00:00"
+      "successful": 0,
+      "failed": 100,
+      "valid": 0,
+      "start_time": "2026-02-15T06:50:54.276218+00:00",
+      "end_time": "2026-02-15T07:29:14.711441+00:00"
     },
     {
       "run_id": 2,
-      "model_id": "llama3-8b",
+      "model_id": "gemini-2.5-pro",
       "stage": "extraction",
       "total": 100,
-      "successful": 96,
-      "failed": 4,
-      "valid": 38,
-      "start_time": "2026-02-13T16:12:57.496227+00:00",
-      "end_time": "2026-02-13T17:31:25.178318+00:00"
+      "successful": 0,
+      "failed": 100,
+      "valid": 0,
+      "start_time": "2026-02-15T07:29:15.880267+00:00",
+      "end_time": "2026-02-15T07:57:17.457580+00:00"
     },
     {
       "run_id": 3,
-      "model_id": "llama3-8b",
+      "model_id": "gemini-2.5-pro",
       "stage": "extraction",
       "total": 100,
-      "successful": 96,
-      "failed": 4,
-      "valid": 38,
-      "start_time": "2026-02-13T17:31:26.453870+00:00",
-      "end_time": "2026-02-13T18:35:03.056954+00:00"
+      "successful": 89,
+      "failed": 11,
+      "valid": 2,
+      "start_time": "2026-02-15T07:57:18.699334+00:00",
+      "end_time": "2026-02-15T08:47:54.252919+00:00"
     },
     {
       "run_id": 4,
-      "model_id": "llama3-8b",
+      "model_id": "gemini-2.5-pro",
       "stage": "extraction",
       "total": 100,
-      "successful": 96,
-      "failed": 4,
-      "valid": 38,
-      "start_time": "2026-02-13T18:35:04.298196+00:00",
-      "end_time": "2026-02-13T19:50:21.187159+00:00"
+      "successful": 99,
+      "failed": 1,
+      "valid": 3,
+      "start_time": "2026-02-15T08:47:55.596627+00:00",
+      "end_time": "2026-02-15T10:19:42.472585+00:00"
     },
     {
       "run_id": 5,
-      "model_id": "llama3-8b",
+      "model_id": "gemini-2.5-pro",
       "stage": "extraction",
       "total": 100,
-      "successful": 96,
-      "failed": 4,
-      "valid": 38,
-      "start_time": "2026-02-13T19:50:22.530327+00:00",
-      "end_time": "2026-02-13T20:48:22.956940+00:00"
+      "successful": 100,
+      "failed": 0,
+      "valid": 2,
+      "start_time": "2026-02-15T10:19:43.814363+00:00",
+      "end_time": "2026-02-15T11:29:20.073658+00:00"
     },
     {
       "run_id": 6,
-      "model_id": "llama3-8b",
+      "model_id": "gemini-2.5-pro",
       "stage": "extraction",
       "total": 100,
-      "successful": 96,
-      "failed": 4,
-      "valid": 38,
-      "start_time": "2026-02-13T20:48:24.322573+00:00",
-      "end_time": "2026-02-13T21:45:22.663563+00:00"
+      "successful": 100,
+      "failed": 0,
+      "valid": 4,
+      "start_time": "2026-02-15T11:29:21.517083+00:00",
+      "end_time": "2026-02-15T12:31:22.495811+00:00"
     },
     {
       "run_id": 7,
-      "model_id": "llama3-8b",
+      "model_id": "gemini-2.5-pro",
       "stage": "extraction",
       "total": 100,
-      "successful": 96,
-      "failed": 4,
-      "valid": 38,
-      "start_time": "2026-02-13T21:45:23.768702+00:00",
-      "end_time": "2026-02-13T22:41:46.987140+00:00"
+      "successful": 100,
+      "failed": 0,
+      "valid": 2,
+      "start_time": "2026-02-15T12:31:23.847599+00:00",
+      "end_time": "2026-02-15T13:19:25.883841+00:00"
     },
     {
       "run_id": 8,
-      "model_id": "llama3-8b",
+      "model_id": "gemini-2.5-pro",
       "stage": "extraction",
       "total": 100,
-      "successful": 96,
-      "failed": 4,
-      "valid": 38,
-      "start_time": "2026-02-13T22:41:48.096905+00:00",
-      "end_time": "2026-02-14T00:07:27.939677+00:00"
+      "successful": 100,
+      "failed": 0,
+      "valid": 2,
+      "start_time": "2026-02-15T13:19:27.215190+00:00",
+      "end_time": "2026-02-15T14:15:19.400517+00:00"
     },
     {
       "run_id": 9,
-      "model_id": "llama3-8b",
+      "model_id": "gemini-2.5-pro",
       "stage": "extraction",
       "total": 100,
-      "successful": 96,
-      "failed": 4,
-      "valid": 38,
-      "start_time": "2026-02-14T00:07:29.116477+00:00",
-      "end_time": "2026-02-14T03:02:31.251419+00:00"
+      "successful": 100,
+      "failed": 0,
+      "valid": 2,
+      "start_time": "2026-02-15T14:15:20.740110+00:00",
+      "end_time": "2026-02-15T15:08:14.607965+00:00"
     },
     {
       "run_id": 10,
-      "model_id": "llama3-8b",
+      "model_id": "gemini-2.5-pro",
       "stage": "extraction",
       "total": 100,
-      "successful": 96,
-      "failed": 4,
-      "valid": 38,
-      "start_time": "2026-02-14T03:02:32.337877+00:00",
-      "end_time": "2026-02-14T13:02:52.285772+00:00"
+      "successful": 98,
+      "failed": 2,
+      "valid": 3,
+      "start_time": "2026-02-15T15:09:14.711687+00:00",
+      "end_time": "2026-02-15T16:24:28.088280+00:00"
     }
   ]
 }
