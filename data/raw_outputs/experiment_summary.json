@@ -1,7 +1,7 @@
 {
   "experiment": "pm25-respiratory-reproducibility",
-  "completed": "2026-02-15T16:24:29.329884+00:00",
-  "elapsed_seconds": 152107.9,
+  "completed": "2026-02-16T01:54:55.027017+00:00",
+  "elapsed_seconds": 5167.1,
   "models": [
     "gemini-2.5-pro"
   ],
@@ -45,33 +45,28 @@
       "model_id": "gemini-2.5-pro",
       "stage": "screening",
       "total": 500,
-      "successful": 0,
-      "failed": 500,
-      "valid": 0,
-      "start_time": "2026-02-13T22:09:22.417668+00:00",
-      "end_time": "2026-02-14T02:35:48.039493+00:00"
+      "successful": 176,
+      "failed": 11,
+      "valid": 176,
+      "start_time": "2026-02-16T00:28:48.995250+00:00",
+      "end_time": "2026-02-16T01:34:17.376843+00:00"
     },
     {
       "run_id": 5,
       "model_id": "gemini-2.5-pro",
       "stage": "screening",
       "total": 500,
-      "successful": 321,
-      "failed": 179,
-      "valid": 321,
-      "start_time": "2026-02-14T02:35:49.164188+00:00",
-      "end_time": "2026-02-14T16:31:21.019748+00:00"
+      "successful": 0,
+      "failed": 10,
+      "valid": 0,
+      "start_time": "2026-02-16T01:34:18.927977+00:00",
+      "end_time": "2026-02-16T01:37:14.990708+00:00"
     },
     {
+      "skipped": true,
       "run_id": 6,
       "model_id": "gemini-2.5-pro",
-      "stage": "screening",
-      "total": 500,
-      "successful": 500,
-      "failed": 0,
-      "valid": 500,
-      "start_time": "2026-02-14T16:31:22.565349+00:00",
-      "end_time": "2026-02-14T21:28:42.454310+00:00"
+      "stage": "screening"
     },
     {
       "skipped": true,
@@ -84,11 +79,11 @@
       "model_id": "gemini-2.5-pro",
       "stage": "screening",
       "total": 500,
-      "successful": 165,
-      "failed": 335,
-      "valid": 165,
-      "start_time": "2026-02-14T21:28:43.830431+00:00",
-      "end_time": "2026-02-14T23:52:12.918429+00:00"
+      "successful": 0,
+      "failed": 10,
+      "valid": 0,
+      "start_time": "2026-02-16T01:37:16.061365+00:00",
+      "end_time": "2026-02-16T01:40:12.475874+00:00"
     },
     {
       "run_id": 9,
@@ -96,10 +91,10 @@
       "stage": "screening",
       "total": 500,
       "successful": 0,
-      "failed": 500,
+      "failed": 10,
       "valid": 0,
-      "start_time": "2026-02-14T23:52:14.163812+00:00",
-      "end_time": "2026-02-15T04:16:37.357845+00:00"
+      "start_time": "2026-02-16T01:40:13.430979+00:00",
+      "end_time": "2026-02-16T01:43:08.261993+00:00"
     },
     {
       "run_id": 10,
@@ -107,10 +102,10 @@
       "stage": "screening",
       "total": 500,
       "successful": 0,
-      "failed": 500,
+      "failed": 10,
       "valid": 0,
-      "start_time": "2026-02-15T04:16:38.734772+00:00",
-      "end_time": "2026-02-15T06:50:52.904464+00:00"
+      "start_time": "2026-02-16T01:43:09.366984+00:00",
+      "end_time": "2026-02-16T01:46:07.632950+00:00"
     },
     {
       "run_id": 1,
@@ -118,10 +113,10 @@
       "stage": "extraction",
       "total": 100,
       "successful": 0,
-      "failed": 100,
+      "failed": 10,
       "valid": 0,
-      "start_time": "2026-02-15T06:50:54.276218+00:00",
-      "end_time": "2026-02-15T07:29:14.711441+00:00"
+      "start_time": "2026-02-16T01:46:08.669906+00:00",
+      "end_time": "2026-02-16T01:49:06.120457+00:00"
     },
     {
       "run_id": 2,
@@ -129,98 +124,63 @@
       "stage": "extraction",
       "total": 100,
       "successful": 0,
-      "failed": 100,
+      "failed": 10,
       "valid": 0,
-      "start_time": "2026-02-15T07:29:15.880267+00:00",
-      "end_time": "2026-02-15T07:57:17.457580+00:00"
+      "start_time": "2026-02-16T01:49:07.157045+00:00",
+      "end_time": "2026-02-16T01:52:00.406109+00:00"
     },
     {
       "run_id": 3,
       "model_id": "gemini-2.5-pro",
       "stage": "extraction",
       "total": 100,
-      "successful": 89,
-      "failed": 11,
-      "valid": 2,
-      "start_time": "2026-02-15T07:57:18.699334+00:00",
-      "end_time": "2026-02-15T08:47:54.252919+00:00"
+      "successful": 0,
+      "failed": 10,
+      "valid": 0,
+      "start_time": "2026-02-16T01:52:01.444192+00:00",
+      "end_time": "2026-02-16T01:54:53.653346+00:00"
     },
     {
+      "skipped": true,
       "run_id": 4,
       "model_id": "gemini-2.5-pro",
-      "stage": "extraction",
-      "total": 100,
-      "successful": 99,
-      "failed": 1,
-      "valid": 3,
-      "start_time": "2026-02-15T08:47:55.596627+00:00",
-      "end_time": "2026-02-15T10:19:42.472585+00:00"
+      "stage": "extraction"
     },
     {
+      "skipped": true,
       "run_id": 5,
       "model_id": "gemini-2.5-pro",
-      "stage": "extraction",
-      "total": 100,
-      "successful": 100,
-      "failed": 0,
-      "valid": 2,
-      "start_time": "2026-02-15T10:19:43.814363+00:00",
-      "end_time": "2026-02-15T11:29:20.073658+00:00"
+      "stage": "extraction"
     },
     {
+      "skipped": true,
       "run_id": 6,
       "model_id": "gemini-2.5-pro",
-      "stage": "extraction",
-      "total": 100,
-      "successful": 100,
-      "failed": 0,
-      "valid": 4,
-      "start_time": "2026-02-15T11:29:21.517083+00:00",
-      "end_time": "2026-02-15T12:31:22.495811+00:00"
+      "stage": "extraction"
     },
     {
+      "skipped": true,
       "run_id": 7,
       "model_id": "gemini-2.5-pro",
-      "stage": "extraction",
-      "total": 100,
-      "successful": 100,
-      "failed": 0,
-      "valid": 2,
-      "start_time": "2026-02-15T12:31:23.847599+00:00",
-      "end_time": "2026-02-15T13:19:25.883841+00:00"
+      "stage": "extraction"
     },
     {
+      "skipped": true,
       "run_id": 8,
       "model_id": "gemini-2.5-pro",
-      "stage": "extraction",
-      "total": 100,
-      "successful": 100,
-      "failed": 0,
-      "valid": 2,
-      "start_time": "2026-02-15T13:19:27.215190+00:00",
-      "end_time": "2026-02-15T14:15:19.400517+00:00"
+      "stage": "extraction"
     },
     {
+      "skipped": true,
       "run_id": 9,
       "model_id": "gemini-2.5-pro",
-      "stage": "extraction",
-      "total": 100,
-      "successful": 100,
-      "failed": 0,
-      "valid": 2,
-      "start_time": "2026-02-15T14:15:20.740110+00:00",
-      "end_time": "2026-02-15T15:08:14.607965+00:00"
+      "stage": "extraction"
     },
     {
+      "skipped": true,
       "run_id": 10,
       "model_id": "gemini-2.5-pro",
-      "stage": "extraction",
-      "total": 100,
-      "successful": 98,
-      "failed": 2,
-      "valid": 3,
-      "start_time": "2026-02-15T15:09:14.711687+00:00",
-      "end_time": "2026-02-15T16:24:28.088280+00:00"
+      "stage": "extraction"
     }
   ]
 }

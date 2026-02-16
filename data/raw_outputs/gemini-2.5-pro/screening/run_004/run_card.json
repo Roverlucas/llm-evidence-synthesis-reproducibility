@@ -16,16 +16,16 @@
     "max_tokens": 8192
   },
   "execution": {
-    "start_time": "2026-02-16T00:28:48.995250+00:00",
-    "end_time": "2026-02-16T01:34:17.376843+00:00",
+    "start_time": "2026-02-16T13:34:31.715638+00:00",
+    "end_time": "2026-02-16T15:47:21.809193+00:00",
     "total_calls": 500,
-    "successful_calls": 176,
-    "failed_calls": 11,
-    "total_duration_ms": 1568122.1,
-    "mean_duration_ms": 8909.8
+    "successful_calls": 500,
+    "failed_calls": 0,
+    "total_duration_ms": 4973378.0,
+    "mean_duration_ms": 9946.8
   },
   "provenance": {
-    "aggregate_output_hash": "f8499b092a331f650b91810a8af99bffdd561fe23e6dc4fa171cbb0667ea733e",
+    "aggregate_output_hash": "ab5cf04a9cf9e231beba698bd431f20fdefc605df406cff2188c006f657edf33",
     "hash_algorithm": "sha256"
   }
 }
