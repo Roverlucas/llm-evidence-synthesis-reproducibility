@@ -5,10 +5,16 @@
     "run_id": 8,
     "model_id": "gemini-2.5-pro",
     "output": {
-      "error": "HTTP Error 429: Too Many Requests"
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "The study is an original epidemiological investigation that meets all inclusion criteria. It assesses the association between PM2.5 exposure and hospital admissions for respiratory diseases (asthma, COPD). The use of 'distributed lag non-linear models' indicates a time-series study design. The abstract discusses 'admission risk' and statistical significance, implying that quantitative effect estimates are reported in the full paper.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "time_series",
+      "has_effect_estimate": true
     },
-    "valid": false,
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "valid": true,
+    "output_hash": "a09c8d04e1b4bb9e1915d9d8fc5b84fb6a0747955cb0722ab79f8ee756c64b5a"
   },
   {
     "corpus_id": "ABS-0002",
@@ -17,15 +23,15 @@
     "model_id": "gemini-2.5-pro",
     "output": {
       "decision": "include",
-      "confidence": 1.0,
-      "rationale": "The study is an original epidemiological investigation that meets all inclusion criteria. It assesses the association between PM2.5 exposure and respiratory emergency department visits (for asthma) using a time-series design (implied by daily data collection and quasi-Poisson regression). Although a specific RR or OR is not stated in the abstract, the methods used are designed to produce such an estimate, and a quantitative association is reported, so it is expected to be in the full text.",
+      "confidence": 0.9,
+      "rationale": "The study is an original epidemiological investigation of the association between PM2.5 exposure and respiratory emergency department visits (asthma exacerbations). The study design appears to be a time-series analysis. Although the abstract does not explicitly state a relative risk or odds ratio, the methods (quasi-Poisson regression) and results (p-value and dose-response characterization) strongly suggest a quantitative effect estimate is present in the full paper, thus meeting all inclusion criteria.",
       "exposure": "PM2.5",
       "outcome": "respiratory_ED",
       "study_design": "time_series",
       "has_effect_estimate": true
     },
     "valid": true,
-    "output_hash": "dc8036cdff3e82c729fa5134c712396146babdebaeb4d121e6a02ecfe740a570"
+    "output_hash": "6b41ed0fa2442f2c69fc1547d5d1e270e29643f686a5719cb18ff533b7b76a87"
   },
   {
     "corpus_id": "ABS-0003",
@@ -33,10 +39,16 @@
     "run_id": 8,
     "model_id": "gemini-2.5-pro",
     "output": {
-      "error": "HTTP Error 429: Too Many Requests"
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "The study is an original epidemiological investigation using a case-crossover design to assess the association between PM2.5 exposure and asthma hospitalizations. It reports a quantitative effect estimate with a confidence interval, meeting all inclusion criteria.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "case_crossover",
+      "has_effect_estimate": true
     },
-    "valid": false,
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "valid": true,
+    "output_hash": "2b5eddc8780c2dd7089f58c79eba60053a1479f2c1edcdd3313a796ecce1a51e"
   },
   {
     "corpus_id": "ABS-0004",
@@ -44,10 +56,16 @@
     "run_id": 8,
     "model_id": "gemini-2.5-pro",
     "output": {
-      "error": "HTTP Error 429: Too Many Requests"
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "The study meets all inclusion criteria. It is a case-crossover study (Inclusion #4) examining the association between an exposure explicitly driven by PM2.5 (Inclusion #2) and respiratory outcomes (asthma ED visits/hospitalizations) (Inclusion #3). It reports a quantitative effect estimate (OR with 95% CI) (Inclusion #5) and is an original study in English (Inclusion #1, #6).",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "case_crossover",
+      "has_effect_estimate": true
     },
-    "valid": false,
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "valid": true,
+    "output_hash": "15de69e9798ed0e6ee0be2713721fd45d55af3f5f54b82a2fae532befa859cb2"
   },
   {
     "corpus_id": "ABS-0005",
@@ -129,6 +147,28 @@
   {
     "corpus_id": "ABS-0012",
     "pmid": "36197352",
+    "run_id": 8,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0013",
+    "pmid": "37011135",
+    "run_id": 8,
+    "model_id": "gemini-2.5-pro",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0014",
+    "pmid": "36376253",
     "run_id": 8,
     "model_id": "gemini-2.5-pro",
     "output": {
