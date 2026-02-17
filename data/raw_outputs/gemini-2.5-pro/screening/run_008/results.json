@@ -7,14 +7,14 @@
     "output": {
       "decision": "include",
       "confidence": 1.0,
-      "rationale": "The study is an original epidemiological investigation that meets all inclusion criteria. It assesses the association between PM2.5 exposure and hospital admissions for respiratory diseases (asthma, COPD). The use of 'distributed lag non-linear models' indicates a time-series study design. The abstract discusses 'admission risk' and statistical significance, implying that quantitative effect estimates are reported in the full paper.",
+      "rationale": "The study meets all inclusion criteria. It is an original epidemiological study using distributed lag non-linear models, which is a time-series analysis method. It explicitly assesses PM2.5 as an exposure and respiratory hospital admissions as an outcome. The abstract's discussion of 'admission risk' and statistical significance implies that quantitative effect estimates are reported in the full paper.",
       "exposure": "PM2.5",
       "outcome": "respiratory_hospitalization",
       "study_design": "time_series",
       "has_effect_estimate": true
     },
     "valid": true,
-    "output_hash": "a09c8d04e1b4bb9e1915d9d8fc5b84fb6a0747955cb0722ab79f8ee756c64b5a"
+    "output_hash": "d2c643db44d6180b89fcd0ecb6a9e2db2d6d4231cad88e6df037979cd762d26c"
   },
   {
     "corpus_id": "ABS-0002",
@@ -22,16 +22,10 @@
     "run_id": 8,
     "model_id": "gemini-2.5-pro",
     "output": {
-      "decision": "include",
-      "confidence": 0.9,
-      "rationale": "The study is an original epidemiological investigation of the association between PM2.5 exposure and respiratory emergency department visits (asthma exacerbations). The study design appears to be a time-series analysis. Although the abstract does not explicitly state a relative risk or odds ratio, the methods (quasi-Poisson regression) and results (p-value and dose-response characterization) strongly suggest a quantitative effect estimate is present in the full paper, thus meeting all inclusion criteria.",
-      "exposure": "PM2.5",
-      "outcome": "respiratory_ED",
-      "study_design": "time_series",
-      "has_effect_estimate": true
+      "error": "HTTP Error 429: Too Many Requests"
     },
-    "valid": true,
-    "output_hash": "6b41ed0fa2442f2c69fc1547d5d1e270e29643f686a5719cb18ff533b7b76a87"
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "corpus_id": "ABS-0003",
@@ -58,14 +52,14 @@
     "output": {
       "decision": "include",
       "confidence": 1.0,
-      "rationale": "The study meets all inclusion criteria. It is a case-crossover study (Inclusion #4) examining the association between an exposure explicitly driven by PM2.5 (Inclusion #2) and respiratory outcomes (asthma ED visits/hospitalizations) (Inclusion #3). It reports a quantitative effect estimate (OR with 95% CI) (Inclusion #5) and is an original study in English (Inclusion #1, #6).",
+      "rationale": "The study is a case-crossover design that examines the association between PM2.5 (as the primary driver of the Air Quality Index) and respiratory outcomes (asthma emergency department visits and hospitalizations). It reports a quantitative effect estimate (odds ratio with a confidence interval), thereby meeting all inclusion criteria.",
       "exposure": "PM2.5",
       "outcome": "respiratory_hospitalization",
       "study_design": "case_crossover",
       "has_effect_estimate": true
     },
     "valid": true,
-    "output_hash": "15de69e9798ed0e6ee0be2713721fd45d55af3f5f54b82a2fae532befa859cb2"
+    "output_hash": "8d1ae2033a0460aa8863268422c87ce37f75efa3e270ee963dfcd8bb14a02c86"
   },
   {
     "corpus_id": "ABS-0005",
