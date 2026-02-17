@@ -1,7 +1,7 @@
 {
   "experiment": "pm25-respiratory-reproducibility",
-  "completed": "2026-02-16T21:15:32.763667+00:00",
-  "elapsed_seconds": 247.2,
+  "completed": "2026-02-17T02:09:00.096529+00:00",
+  "elapsed_seconds": 2832.4,
   "models": [
     "gemini-2.5-pro"
   ],
@@ -17,11 +17,11 @@
       "model_id": "gemini-2.5-pro",
       "stage": "screening",
       "total": 500,
-      "successful": 4,
-      "failed": 10,
-      "valid": 4,
-      "start_time": "2026-02-16T21:11:25.574171+00:00",
-      "end_time": "2026-02-16T21:15:31.725259+00:00"
+      "successful": 3,
+      "failed": 11,
+      "valid": 3,
+      "start_time": "2026-02-17T01:21:47.735561+00:00",
+      "end_time": "2026-02-17T02:08:58.508534+00:00"
     }
   ]
 }

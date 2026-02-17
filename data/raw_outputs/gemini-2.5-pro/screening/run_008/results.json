@@ -5,16 +5,10 @@
     "run_id": 8,
     "model_id": "gemini-2.5-pro",
     "output": {
-      "decision": "include",
-      "confidence": 1.0,
-      "rationale": "The study meets all inclusion criteria. It is an original epidemiological study using distributed lag non-linear models, which is a time-series analysis method. It explicitly assesses PM2.5 as an exposure and respiratory hospital admissions as an outcome. The abstract's discussion of 'admission risk' and statistical significance implies that quantitative effect estimates are reported in the full paper.",
-      "exposure": "PM2.5",
-      "outcome": "respiratory_hospitalization",
-      "study_design": "time_series",
-      "has_effect_estimate": true
+      "error": "HTTP Error 429: Too Many Requests"
     },
-    "valid": true,
-    "output_hash": "d2c643db44d6180b89fcd0ecb6a9e2db2d6d4231cad88e6df037979cd762d26c"
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "corpus_id": "ABS-0002",
@@ -33,16 +27,10 @@
     "run_id": 8,
     "model_id": "gemini-2.5-pro",
     "output": {
-      "decision": "include",
-      "confidence": 1.0,
-      "rationale": "The study is an original epidemiological investigation using a case-crossover design to assess the association between PM2.5 exposure and asthma hospitalizations. It reports a quantitative effect estimate with a confidence interval, meeting all inclusion criteria.",
-      "exposure": "PM2.5",
-      "outcome": "respiratory_hospitalization",
-      "study_design": "case_crossover",
-      "has_effect_estimate": true
+      "error": "HTTP Error 429: Too Many Requests"
     },
-    "valid": true,
-    "output_hash": "2b5eddc8780c2dd7089f58c79eba60053a1479f2c1edcdd3313a796ecce1a51e"
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "corpus_id": "ABS-0004",
@@ -50,16 +38,10 @@
     "run_id": 8,
     "model_id": "gemini-2.5-pro",
     "output": {
-      "decision": "include",
-      "confidence": 1.0,
-      "rationale": "The study is a case-crossover design that examines the association between PM2.5 (as the primary driver of the Air Quality Index) and respiratory outcomes (asthma emergency department visits and hospitalizations). It reports a quantitative effect estimate (odds ratio with a confidence interval), thereby meeting all inclusion criteria.",
-      "exposure": "PM2.5",
-      "outcome": "respiratory_hospitalization",
-      "study_design": "case_crossover",
-      "has_effect_estimate": true
+      "error": "HTTP Error 429: Too Many Requests"
     },
-    "valid": true,
-    "output_hash": "8d1ae2033a0460aa8863268422c87ce37f75efa3e270ee963dfcd8bb14a02c86"
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
     "corpus_id": "ABS-0005",
@@ -119,50 +101,6 @@
   {
     "corpus_id": "ABS-0010",
     "pmid": "28787174",
-    "run_id": 8,
-    "model_id": "gemini-2.5-pro",
-    "output": {
-      "error": "HTTP Error 429: Too Many Requests"
-    },
-    "valid": false,
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-  },
-  {
-    "corpus_id": "ABS-0011",
-    "pmid": "35802828",
-    "run_id": 8,
-    "model_id": "gemini-2.5-pro",
-    "output": {
-      "error": "HTTP Error 429: Too Many Requests"
-    },
-    "valid": false,
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-  },
-  {
-    "corpus_id": "ABS-0012",
-    "pmid": "36197352",
-    "run_id": 8,
-    "model_id": "gemini-2.5-pro",
-    "output": {
-      "error": "HTTP Error 429: Too Many Requests"
-    },
-    "valid": false,
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-  },
-  {
-    "corpus_id": "ABS-0013",
-    "pmid": "37011135",
-    "run_id": 8,
-    "model_id": "gemini-2.5-pro",
-    "output": {
-      "error": "HTTP Error 429: Too Many Requests"
-    },
-    "valid": false,
-    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-  },
-  {
-    "corpus_id": "ABS-0014",
-    "pmid": "36376253",
     "run_id": 8,
     "model_id": "gemini-2.5-pro",
     "output": {
