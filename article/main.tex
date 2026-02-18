@@ -477,20 +477,20 @@ To disentangle variation in the five metadata fields from variation in numeric e
   \item \textbf{Exact match}: character-identical outputs (equivalent to SHA-256 hash comparison).
   \item \textbf{Normalized match}: after lowercasing, whitespace normalization, punctuation stripping, and abbreviation expansion (e.g., ``U.S.'' $\to$ ``United States'').
   \item \textbf{Fuzzy match}: Levenshtein similarity ratio $\geq\!0.90$ between all normalized pairwise comparisons across runs.
-  \item \textbf{BERTScore}: Embedding-based semantic similarity using \texttt{roberta-large}, computing the F1 score between run~1 (reference) and each subsequent run for every article (900~pairs per model).
+  \item \textbf{BERTScore}: Embedding-based semantic similarity using \texttt{roberta-large}, computing the F1 score across all $\binom{10}{2}{=}45$ unique run pairs per article (4,500~pairs per model).
 \end{enumerate}
 
 \begin{table}[H]
 \centering
-\caption{Semantic equivalence under progressively relaxed criteria ($n\!=\!100$ articles, 10~runs). Columns 2--4 report whole-output EMR over the five metadata fields (study design, location, period, population, sample size) plus estimate count stability. BERTScore F1 (\texttt{roberta-large}) reports the mean pairwise similarity between run~1 and runs~2--10 (900~pairs per model). Hash-based EMR (from Table~\ref{tab:extraction}) additionally requires identical numeric estimates. The gap between high BERTScore (${\geq}0.997$) and low hash-based EMR (${\leq}0.200$) demonstrates that even near-identical metadata co-occurs with divergent numeric extractions.}
+\caption{Semantic equivalence under progressively relaxed criteria ($n\!=\!100$ articles, 10~runs). Columns 2--4 report whole-output EMR over the five metadata fields plus estimate count stability. BERTScore F1 (\texttt{roberta-large}) reports the mean $\pm$ SD across all $\binom{10}{2}{=}45$ unique run pairs per article (4,500~pairs per model). Hash-based EMR (from Table~\ref{tab:extraction}) additionally requires identical numeric estimates. The gap between high BERTScore (${\geq}0.997$) and low hash-based EMR (${\leq}0.200$) demonstrates that even near-identical metadata co-occurs with divergent numeric extractions.}
 \label{tab:semantic}
-\begin{tabular}{lccccc}
+\begin{tabular}{lccclc}
 \toprule
-\textbf{Model} & \textbf{Exact} & \textbf{Normalized} & \textbf{Fuzzy} & \textbf{BERTScore F1} & \textbf{Hash}$^{*}$ \\
+\textbf{Model} & \textbf{Exact} & \textbf{Norm.} & \textbf{Fuzzy} & \textbf{BERTScore F1} & \textbf{Hash}$^{*}$ \\
 \midrule
-LLaMA 3 8B       & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 \\
-Claude Sonnet 4.5 & 0.640 & 0.680 & 0.690 & 0.997 & 0.050 \\
-Gemini 2.5 Pro    & 0.620 & 0.620 & 0.630 & 0.997 & 0.200 \\
+LLaMA 3 8B       & 1.000 & 1.000 & 1.000 & $1.000 \pm 0.000$ & 1.000 \\
+Claude Sonnet 4.5 & 0.640 & 0.680 & 0.690 & $0.997 \pm 0.009$ & 0.050 \\
+Gemini 2.5 Pro    & 0.620 & 0.620 & 0.630 & $0.997 \pm 0.022$ & 0.200 \\
 \bottomrule
 \multicolumn{6}{l}{\footnotesize $^{*}$From Table~\ref{tab:extraction}; includes all fields and numeric estimates.}
 \end{tabular}
@@ -504,11 +504,11 @@ For Claude, 64\% of articles had identical metadata across all runs, but only 5\
 \textbf{Second}, within the metadata fields, normalization and fuzzy matching improved EMR by only 1--5~percentage points (Claude: 0.640~$\to$~0.690; Gemini: 0.620~$\to$~0.630), confirming that the variation is predominantly semantic, not cosmetic.
 Study location---the most variable field---improved modestly under fuzzy matching (Claude: 0.780~$\to$~0.830; Gemini: 0.860~$\to$~0.870), while categorical fields remained unchanged at $\geq$0.960.
 
-\textbf{Third}, BERTScore embedding similarity was near-perfect for API models (mean~$F_1{=}0.997$ for both Claude and Gemini), with 99.0\% and 98.8\% of pairs exceeding $F_1{\geq}0.95$, respectively.
+\textbf{Third}, BERTScore embedding similarity computed across all $\binom{10}{2}{=}45$ unique run pairs per article (4,500~pairs per model) was near-perfect for API models: Claude averaged $F_1{=}0.997 \pm 0.009$ and Gemini $F_1{=}0.997 \pm 0.022$, with 99.7\% and 98.5\% of pairs exceeding $F_1{\geq}0.95$, respectively.
 This creates an apparent paradox: the models produce \emph{semantically near-identical} metadata text, yet 95\% of Claude's and 80\% of Gemini's complete extraction outputs are non-identical.
 The resolution lies in the numeric estimates---the effect sizes, confidence intervals, and variable-length estimate arrays that drive the hash-based EMR to 0.050 and 0.200.
 Even when a model describes a study in nearly the same words, it may extract a different number of effect estimates or parse ``RR$\,{=}\,$1.05 (95\% CI: 1.01--1.09)'' with subtly different numeric precision.
-Notably, Gemini's minimum BERTScore ($F_1{=}0.759$) indicates that some articles receive genuinely divergent interpretations across runs---not merely numeric rounding differences.
+Notably, Gemini's higher standard deviation (0.022 vs.\ 0.009 for Claude) and lower minimum BERTScore ($F_1{=}0.754$) indicate that some articles receive genuinely divergent interpretations across runs---not merely numeric rounding differences.
 
 \subsection{Meta-Analytic Propagation}
 \label{sec:metaprop}
@@ -585,7 +585,7 @@ We note, however, that this determinism guarantee is configuration-specific: the
 Claude's EMR dropped from 0.974 (screening) to 0.050 (extraction); Gemini's from 0.936 to 0.200.
 Screening requires a binary decision (a single token effectively determines the output), while extraction generates complex structured JSON with multiple fields.
 Our four-tier semantic equivalence analysis (Section~\ref{sec:semantic}) confirms that this gap is not an artifact of strict string matching.
-BERTScore embedding similarity between runs averaged $F_1{=}0.997$---near-perfect semantic agreement on metadata text---yet hash-based EMR remained at 0.050 (Claude) and 0.200 (Gemini).
+BERTScore embedding similarity across all 4,500~pairwise comparisons per model averaged $F_1{=}0.997$---near-perfect semantic agreement on metadata text---yet hash-based EMR remained at 0.050 (Claude) and 0.200 (Gemini).
 This paradox reveals that the variation concentrates in the numeric extraction layer: the models describe studies in nearly the same words but extract different numbers of effect estimates and parse numeric values with different precision.
 Even the residual metadata variation is genuinely semantic (fuzzy matching recovers only 1--5~percentage points), not cosmetic.
 

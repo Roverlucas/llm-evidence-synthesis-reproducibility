@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
-"""Compute BERTScore F1 between run 1 (reference) and runs 2-10 for extraction outputs."""
+"""Compute BERTScore F1 for extraction outputs using all-pairs comparison (10 choose 2 = 45 pairs per article)."""
 
 import json
+import math
 import os
+from itertools import combinations
 
 import torch
 from bert_score import score as bert_score
@@ -45,6 +47,8 @@ def load_runs(model: str) -> dict:
 
 def main():
     results = {}
+    run_pairs = list(combinations(range(1, NUM_RUNS + 1), 2))  # 45 pairs
+    print(f"All-pairs comparison: {len(run_pairs)} run pairs per article (10 choose 2)")
 
     for model in MODELS:
         sep = "=" * 60
@@ -67,33 +71,30 @@ def main():
                 all_ids &= ids_with_output
 
         corpus_ids = sorted(all_ids)
-        print(f"  Articles present in all 10 runs with output: {len(corpus_ids)}")
+        print(f"  Articles present in all 10 runs: {len(corpus_ids)}")
 
-        # Build reference texts (run 1) and candidate texts (runs 2-10)
+        # Build all-pairs: refs and cands
         refs = []
         cands = []
-        pair_labels = []  # (corpus_id, run_id) for debugging
+        pair_labels = []  # (corpus_id, run_a, run_b)
 
         for cid in corpus_ids:
-            ref_text = item_to_text(runs[1][cid])
-            for r in range(2, NUM_RUNS + 1):
-                cand_text = item_to_text(runs[r][cid])
-                refs.append(ref_text)
-                cands.append(cand_text)
-                pair_labels.append((cid, r))
+            for ra, rb in run_pairs:
+                text_a = item_to_text(runs[ra][cid])
+                text_b = item_to_text(runs[rb][cid])
+                refs.append(text_a)
+                cands.append(text_b)
+                pair_labels.append((cid, ra, rb))
 
         total_pairs = len(refs)
-        print(f"  Total (article x run) pairs: {total_pairs}")
+        print(f"  Total all-pairs: {total_pairs} ({len(corpus_ids)} articles x {len(run_pairs)} pairs)")
 
         if total_pairs == 0:
-            print("  WARNING: No pairs to compute. Skipping.")
             results[model] = {
                 "n_articles": len(corpus_ids),
                 "n_pairs": 0,
-                "mean_f1": None,
-                "min_f1": None,
-                "prop_ge_0.95": None,
-                "prop_ge_0.99": None,
+                "mean_f1": None, "std_f1": None, "min_f1": None,
+                "prop_ge_0.95": None, "prop_ge_0.99": None,
             }
             continue
 
@@ -113,38 +114,43 @@ def main():
         )
 
         f1_list = F1.tolist()
-
-        mean_f1 = sum(f1_list) / len(f1_list)
+        n = len(f1_list)
+        mean_f1 = sum(f1_list) / n
+        var_f1 = sum((x - mean_f1) ** 2 for x in f1_list) / n
+        std_f1 = math.sqrt(var_f1)
         min_f1 = min(f1_list)
-        prop_95 = sum(1 for v in f1_list if v >= 0.95) / len(f1_list)
-        prop_99 = sum(1 for v in f1_list if v >= 0.99) / len(f1_list)
-
+        max_f1 = max(f1_list)
         n_95 = sum(1 for v in f1_list if v >= 0.95)
         n_99 = sum(1 for v in f1_list if v >= 0.99)
-        n_total = len(f1_list)
 
-        print(f"\n  Results for {model}:")
-        print(f"    Mean BERTScore F1:   {mean_f1:.4f}")
+        print(f"\n  Results for {model} (all-pairs):")
+        print(f"    Mean BERTScore F1:   {mean_f1:.4f} +/- {std_f1:.4f}")
         print(f"    Min  BERTScore F1:   {min_f1:.4f}")
-        print(f"    Prop F1 >= 0.95:     {prop_95:.4f} ({n_95}/{n_total})")
-        print(f"    Prop F1 >= 0.99:     {prop_99:.4f} ({n_99}/{n_total})")
+        print(f"    Max  BERTScore F1:   {max_f1:.4f}")
+        print(f"    Prop F1 >= 0.95:     {n_95/n:.4f} ({n_95}/{n})")
+        print(f"    Prop F1 >= 0.99:     {n_99/n:.4f} ({n_99}/{n})")
 
-        # Find lowest-scoring pairs for inspection
-        indexed = sorted(enumerate(f1_list), key=lambda x: x[1])
-        print("\n  Lowest 5 pairs:")
-        for idx, val in indexed[:5]:
-            cid, run = pair_labels[idx]
-            print(f"    {cid} run_{run:03d}: F1={val:.4f}")
-            print(f"      ref:  {refs[idx][:120]}")
-            print(f"      cand: {cands[idx][:120]}")
+        # Per-article mean F1
+        article_means = {}
+        for i, (cid, ra, rb) in enumerate(pair_labels):
+            article_means.setdefault(cid, []).append(f1_list[i])
+        per_article = {cid: sum(vs)/len(vs) for cid, vs in article_means.items()}
+        lowest_articles = sorted(per_article.items(), key=lambda x: x[1])[:5]
+
+        print(f"\n  Lowest 5 articles (by mean F1 across all pairs):")
+        for cid, amean in lowest_articles:
+            scores = article_means[cid]
+            print(f"    {cid}: mean={amean:.4f}, min={min(scores):.4f}, max={max(scores):.4f}")
 
         results[model] = {
             "n_articles": len(corpus_ids),
             "n_pairs": total_pairs,
             "mean_f1": round(mean_f1, 6),
+            "std_f1": round(std_f1, 6),
             "min_f1": round(min_f1, 6),
-            "prop_ge_0.95": round(prop_95, 6),
-            "prop_ge_0.99": round(prop_99, 6),
+            "max_f1": round(max_f1, 6),
+            "prop_ge_0.95": round(n_95 / n, 6),
+            "prop_ge_0.99": round(n_99 / n, 6),
         }
 
     # Save results
@@ -155,21 +161,16 @@ def main():
     # Print summary table
     sep80 = "=" * 80
     dash80 = "-" * 80
-    header = f"{'Model':<25} {'N_pairs':>8} {'Mean F1':>10} {'Min F1':>10} {'>=0.95':>10} {'>=0.99':>10}"
+    header = f"{'Model':<25} {'Pairs':>7} {'Mean F1':>10} {'SD':>8} {'Min':>8} {'>=0.95':>8} {'>=0.99':>8}"
     print(f"\n{sep80}")
     print(header)
     print(dash80)
     for model in MODELS:
         r = results[model]
         if r["n_pairs"] == 0:
-            print(f"{model:<25} {'0':>8} {'N/A':>10} {'N/A':>10} {'N/A':>10} {'N/A':>10}")
+            print(f"{model:<25} {'0':>7}")
         else:
-            np_ = r["n_pairs"]
-            mf = r["mean_f1"]
-            mnf = r["min_f1"]
-            p95 = r["prop_ge_0.95"]
-            p99 = r["prop_ge_0.99"]
-            print(f"{model:<25} {np_:>8} {mf:>10.4f} {mnf:>10.4f} {p95:>10.4f} {p99:>10.4f}")
+            print(f"{model:<25} {r['n_pairs']:>7} {r['mean_f1']:>10.4f} {r['std_f1']:>8.4f} {r['min_f1']:>8.4f} {r['prop_ge_0.95']:>8.4f} {r['prop_ge_0.99']:>8.4f}")
     print(sep80)
 
 

@@ -1,25 +1,31 @@
 {
   "claude-sonnet-4-5": {
     "n_articles": 100,
-    "n_pairs": 900,
-    "mean_f1": 0.996646,
-    "min_f1": 0.942814,
-    "prop_ge_0.95": 0.99,
-    "prop_ge_0.99": 0.886667
+    "n_pairs": 4500,
+    "mean_f1": 0.99711,
+    "std_f1": 0.008931,
+    "min_f1": 0.931469,
+    "max_f1": 1.0,
+    "prop_ge_0.95": 0.996667,
+    "prop_ge_0.99": 0.900222
   },
   "gemini-2.5-pro": {
     "n_articles": 100,
-    "n_pairs": 900,
-    "mean_f1": 0.997278,
-    "min_f1": 0.758657,
-    "prop_ge_0.95": 0.987778,
+    "n_pairs": 4500,
+    "mean_f1": 0.996528,
+    "std_f1": 0.021634,
+    "min_f1": 0.753955,
+    "max_f1": 1.0,
+    "prop_ge_0.95": 0.985111,
     "prop_ge_0.99": 0.938889
   },
   "llama3-8b": {
     "n_articles": 100,
-    "n_pairs": 900,
+    "n_pairs": 4500,
     "mean_f1": 1.0,
+    "std_f1": 0.0,
     "min_f1": 1.0,
+    "max_f1": 1.0,
     "prop_ge_0.95": 1.0,
     "prop_ge_0.99": 1.0
   }
