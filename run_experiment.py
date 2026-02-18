@@ -64,7 +64,7 @@ MODEL_CONFIGS = {
         "temperature": 0.0,
         "max_output_tokens": 8192,
         "seed": 42,
-        "call_delay": 2,  # Gemini free tier rate limit
+        "call_delay": 15,  # Gemini free tier rate limit (2-5 RPM)
     },
 }
 
@@ -147,7 +147,7 @@ def _auto_commit(model_id: str, run_id: int, stage: str, stats: dict):
 
 
 def _run_already_done(model_id: str, run_id: int, stage: str) -> bool:
-    """Check if a run already completed successfully (has run_card with successful_calls > 0)."""
+    """Check if a run completed with >= 90% success rate."""
     run_dir = Path(OUTPUT_DIR) / model_id / stage / f"run_{run_id:03d}"
     card_path = run_dir / "run_card.json"
     if not card_path.exists():
@@ -155,7 +155,9 @@ def _run_already_done(model_id: str, run_id: int, stage: str) -> bool:
     try:
         with open(card_path) as f:
             card = json.load(f)
-        return card["execution"]["successful_calls"] > 0
+        ok = card["execution"]["successful_calls"]
+        total = card["execution"]["total_calls"]
+        return ok >= total * 0.9
     except Exception:
         return False
 

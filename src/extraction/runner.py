@@ -167,6 +167,7 @@ def run_extraction(
     successful = 0
     failed = 0
     valid_count = 0
+    consecutive_failures = 0
 
     start_time = datetime.now(timezone.utc).isoformat()
 
@@ -222,13 +223,19 @@ def run_extraction(
 
         if "error" not in parsed:
             successful += 1
+            consecutive_failures = 0
             if valid:
                 valid_count += 1
         else:
             failed += 1
+            consecutive_failures += 1
             # Abort early on fatal errors (billing, auth)
             if parsed.get("fatal"):
                 print(f"\n  FATAL: {parsed['error'][:80]}... aborting run.")
+                break
+            # Abort on 10 consecutive failures (rate limit, network, etc.)
+            if consecutive_failures >= 10:
+                print(f"\n  ABORT: {consecutive_failures} consecutive failures. Aborting run.")
                 break
 
         if progress_callback:

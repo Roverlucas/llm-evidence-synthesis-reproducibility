@@ -1,0 +1,50 @@
+{
+  "claude-sonnet-4-5": {
+    "screening": {
+      "emr": 0.974,
+      "ci_lower": 0.96,
+      "ci_upper": 0.986,
+      "n_items": 500,
+      "n_bootstrap": 10000
+    },
+    "extraction": {
+      "emr": 0.05,
+      "ci_lower": 0.01,
+      "ci_upper": 0.09,
+      "n_items": 100,
+      "n_bootstrap": 10000
+    }
+  },
+  "llama3-8b": {
+    "screening": {
+      "emr": 1.0,
+      "ci_lower": 1.0,
+      "ci_upper": 1.0,
+      "n_items": 500,
+      "n_bootstrap": 10000
+    },
+    "extraction": {
+      "emr": 1.0,
+      "ci_lower": 1.0,
+      "ci_upper": 1.0,
+      "n_items": 100,
+      "n_bootstrap": 10000
+    }
+  },
+  "gemini-2.5-pro": {
+    "screening": {
+      "emr": 0.936,
+      "ci_lower": 0.914,
+      "ci_upper": 0.956,
+      "n_items": 500,
+      "n_bootstrap": 10000
+    },
+    "extraction": {
+      "emr": 0.2,
+      "ci_lower": 0.12,
+      "ci_upper": 0.28,
+      "n_items": 100,
+      "n_bootstrap": 10000
+    }
+  }
+}
