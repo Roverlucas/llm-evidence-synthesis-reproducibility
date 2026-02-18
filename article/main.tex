@@ -16,6 +16,7 @@
 \usepackage{natbib}
 \usepackage{setspace}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{float}
 \usepackage{caption}
 
@@ -125,9 +126,13 @@ When LLM-assisted reviews cannot be independently reproduced because the API ret
 
 Despite the rapid adoption of LLMs in evidence synthesis, \textbf{no study has systematically measured how API-level non-determinism propagates through a complete synthesis pipeline}---from abstract screening through data extraction---in a real health domain.
 
-Prior work has measured LLM \emph{accuracy} (how well they match human judgments) but not \emph{stability} (whether they match themselves across runs).
-Studies that examine non-determinism~\citep{atil2024nondeterminism, klishevich2025codereview} do so on general NLP benchmarks, not on the structured, domain-specific tasks characteristic of evidence synthesis.
-And studies that evaluate LLMs for systematic reviews~\citep{oami2024screening, khraisha2024gpt4, gartlehner2024extraction} typically report results from a single run, implicitly assuming that a repeat would yield the same result.
+This gap is not a minor omission; it represents a fundamental blind spot.
+Consider: \citet{jensen2025chatgpt} report 94.1\% inter-session reproducibility for ChatGPT-4o extraction---an encouraging number.
+But this was measured with only 2~repetitions and evaluated per-field, not per-output.
+When we apply a stricter whole-output metric across 10~repetitions, we find extraction EMR as low as 5.0\%---nearly twenty times worse than what per-field metrics suggest.
+Similarly, \citet{gartlehner2024extraction} report 95--97\% test-retest reliability, but with only 2--3~repetitions and no examination of how variation compounds across pipeline stages.
+Studies measuring non-determinism~\citep{atil2024nondeterminism, klishevich2025codereview} do so on general NLP benchmarks, where the structured, multi-field outputs characteristic of evidence synthesis are absent.
+And the most influential screening evaluations~\citep{oami2024screening, khraisha2024gpt4, matsui2024screening} report results from a single run, implicitly assuming that a repeat would yield the same result.
 
 We bridge this gap by:
 \begin{enumerate}
@@ -195,6 +200,38 @@ Technical solutions for provenance include the Workflow Run RO-Crate~\citep{leo2
 
 Our provenance approach builds on the lightweight protocol proposed in~\citet{rover2026jair}, using SHA-256 hashing of inputs, outputs, and configurations to create an auditable trail without requiring infrastructure beyond standard file storage.
 
+\subsection{Positioning: What Existing Studies Do Not Address}
+
+Table~\ref{tab:comparison} synthesizes the landscape of prior work and highlights the methodological gaps that motivate our study.
+Three critical gaps emerge.
+\textbf{First}, studies that evaluate LLMs for evidence synthesis~\citep{oami2024screening, gartlehner2024extraction, jensen2025chatgpt, matsui2024screening} measure accuracy against human judgments but do not measure self-consistency across repeated runs---or do so with only 2--3~repetitions and per-field metrics that can mask whole-output variation.
+\textbf{Second}, studies that measure LLM non-determinism~\citep{atil2024nondeterminism, klishevich2025codereview, fu2026beyond} do so on general-purpose benchmarks (classification, code review), not on the structured, domain-specific tasks characteristic of evidence synthesis.
+\textbf{Third}, no prior study examines how non-determinism \emph{propagates} across a multi-stage pipeline---from screening through extraction---or compares local versus cloud deployment as a reproducibility strategy.
+Our study is the first to address all three gaps simultaneously.
+
+\begin{table}[H]
+\centering
+\caption{Comparison of our study with prior work. ``Runs'' indicates the number of repeated executions under identical conditions. ``Full pipeline'' indicates whether both screening and extraction were evaluated in the same study. Shading highlights our study's distinguishing features.}
+\label{tab:comparison}
+\small
+\begin{tabular}{p{3.0cm}p{2.0cm}p{2.0cm}cp{1.8cm}ccc}
+\toprule
+\textbf{Study} & \textbf{Domain} & \textbf{Task} & \textbf{Runs} & \textbf{Metric} & \textbf{Local} & \textbf{Cloud} & \textbf{Pipeline} \\
+\midrule
+Oami (2024)       & Health    & Screening   & 1   & Accuracy      & ---  & \checkmark & --- \\
+Khraisha (2024)   & Health    & Scr.\ + Extr.\ & 1   & Accuracy      & ---  & \checkmark & --- \\
+Gartlehner (2024) & Health    & Extraction  & 2--3 & Field acc.    & ---  & \checkmark & --- \\
+Jensen (2025)     & Health    & Extraction  & 2   & Field acc.    & ---  & \checkmark & --- \\
+Matsui (2024)     & Health    & Screening   & 1   & Accuracy      & ---  & \checkmark & --- \\
+Atil (2024)       & General   & NLP bench.  & 10+ & Accuracy var. & ---  & \checkmark & --- \\
+Klishevich (2025) & Software  & Code review & 5+  & Determinism   & \checkmark & \checkmark & --- \\
+Fu (2026)         & General   & Token dist. & ---  & Distributional & ---  & \checkmark & --- \\
+\midrule
+\textbf{This study} & \textbf{Health} & \textbf{Scr.\ + Extr.} & \textbf{10} & \textbf{EMR + CI} & \textbf{\checkmark} & \textbf{\checkmark} & \textbf{\checkmark} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
 
 % ============================================================
 %  3. METHODS
@@ -206,6 +243,15 @@ Our provenance approach builds on the lightweight protocol proposed in~\citet{ro
 We designed a repeated-measures experiment to isolate LLM non-determinism as the sole source of variation.
 The same corpus, prompts, model configurations, and random seeds were used across all runs.
 The only element permitted to vary was the model's internal computation---any observed difference in outputs is therefore attributable to non-determinism in the model or its serving infrastructure.
+
+Figure~\ref{fig:pipeline} provides an overview of the experimental pipeline.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{../analysis/figures/pipeline_diagram.pdf}
+\caption{Experimental pipeline. A 500-abstract PubMed corpus is processed by three LLMs (one local, two cloud-based APIs), each run 10~times under identical configurations. Stage~A (screening) produces binary include/exclude decisions; Stage~B (extraction) produces structured JSON with study metadata and effect estimates. All outputs are hashed (SHA-256) for provenance tracking. Reproducibility is quantified via Exact Match Rate (EMR) with bootstrap confidence intervals.}
+\label{fig:pipeline}
+\end{figure}
 
 \subsection{Corpus Construction}
 
@@ -480,11 +526,21 @@ Where cloud APIs must be used (e.g., for larger models), majority voting across 
 
 \subsection{Relationship to Prior Work}
 
-Our screening flip rates (2.6\% for Claude, 6.4\% for Gemini) are consistent with the accuracy variations reported by \citet{atil2024nondeterminism} on general benchmarks.
-However, we show for the first time that \textbf{structured extraction amplifies non-determinism dramatically}---a finding not apparent from benchmark-level analyses.
+Our results both corroborate and significantly extend prior findings (see Table~\ref{tab:comparison} for a systematic comparison).
 
-The 94.1\% inter-session reproducibility reported by \citet{jensen2025chatgpt} for ChatGPT-4o extraction aligns with our Claude screening EMR (97.4\%) but masks the much lower extraction EMR (5.0\%) that emerges when full output identity (rather than per-field accuracy) is measured.
-This highlights the importance of metric choice: reproducibility measured at the field level appears much higher than when measured at the output level.
+Our screening flip rates (2.6\% for Claude, 6.4\% for Gemini) are consistent with the accuracy variations reported by \citet{atil2024nondeterminism} on general benchmarks, confirming that the phenomenon documented in controlled settings translates directly to real-world evidence synthesis tasks.
+However, we reveal for the first time that \textbf{structured extraction amplifies non-determinism by an order of magnitude}---a finding invisible to benchmark-level analyses.
+Claude's EMR dropped from 0.974 (screening) to 0.050 (extraction)---a 19.5$\times$ amplification that has no precedent in the literature.
+
+The comparison with \citet{jensen2025chatgpt} is particularly instructive.
+Their reported 94.1\% inter-session reproducibility for ChatGPT-4o extraction appears to align with our Claude screening EMR (97.4\%), creating the impression that API-based extraction is reasonably stable.
+However, their metric measures per-field agreement across 2~sessions, while our EMR measures whole-output identity across 10~runs.
+When we apply our stricter metric, extraction reproducibility drops to 5.0\%---\textbf{nearly twenty times lower than what per-field metrics suggest}.
+This discrepancy is not an artifact; it reflects a genuine measurement gap.
+Per-field metrics miss the combinatorial explosion of variation: when 5~fields each have 97\% individual reproducibility, the probability that \emph{all} fields match simultaneously is only $0.97^5 = 0.859$---and this is before accounting for the variable-length effect estimate lists that drive most of our observed non-matches.
+
+Similarly, \citet{gartlehner2024extraction}'s 95--97\% test-retest reliability with Claude~2 was measured over 2--3~repetitions.
+Our 10-run design with output hashing reveals instability that shorter test-retest windows cannot detect, because some items change in only 1--2 of 10~runs---a frequency that 2-run comparisons would miss entirely.
 
 \subsection{Limitations}
 
@@ -541,8 +597,14 @@ Based on our findings, we propose the following recommendations for LLM-assisted
 \section{Conclusion}
 
 We have shown that LLM non-determinism is not a theoretical concern but a measurable, quantifiable phenomenon that directly threatens the reproducibility of evidence synthesis.
-Local deployment achieves perfect reproducibility; cloud-based APIs, even with ``deterministic'' settings, produce variable outputs---especially in structured extraction tasks.
-As LLMs become standard tools in systematic reviews and meta-analyses, the research community must move beyond single-run evaluations and adopt reproducibility-aware practices: multiple repetitions, provenance tracking, and transparent reporting of variation.
+Through 18,000~API calls across 60~experiment runs---the most comprehensive reproducibility evaluation of LLMs for evidence synthesis to date---we demonstrate three findings with immediate practical implications.
+
+First, local deployment achieves perfect reproducibility, proving that deterministic LLM inference is technically achievable.
+Second, cloud-based APIs produce variable outputs even under ``deterministic'' settings, with extraction tasks amplifying this instability by an order of magnitude: while prior work reports 94--97\% reproducibility using per-field metrics and 2--3~runs, our whole-output analysis across 10~runs reveals that only 5--20\% of extraction outputs are truly identical.
+Third, accuracy and reproducibility are independent properties---a finding that invalidates the common practice of evaluating LLM pipelines with a single run.
+
+These results carry a clear message: the current standard of reporting LLM-assisted evidence synthesis results from a single, undocumented run is scientifically insufficient.
+As LLMs become embedded in systematic reviews and meta-analyses, the research community must adopt reproducibility-aware practices---multiple repetitions, provenance tracking, and transparent reporting of variation---or risk building an evidence base on foundations that shift each time the analysis is re-run.
 
 
 % ============================================================
