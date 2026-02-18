@@ -10,7 +10,7 @@
 \usepackage[margin=2.5cm]{geometry}
 \usepackage{graphicx}
 \usepackage{booktabs}
-\usepackage{multirow}
+% \usepackage{multirow}  % not used in this manuscript
 \usepackage{xcolor}
 \usepackage{hyperref}
 \usepackage{natbib}
@@ -60,7 +60,7 @@ Reproducibility was measured using the Exact Match Rate (EMR)---the proportion o
 
 \noindent\textbf{Results.}
 The locally deployed LLaMA~3 achieved perfect reproducibility across all successfully processed items ($\emr{=}1.000$) in both screening and extraction.
-Cloud-based APIs exhibited substantial non-determinism: Claude Sonnet~4.5 achieved screening $\emr{=}0.974$~$\ci{0.960}{0.986}$ but extraction $\emr{=}0.050$~$\ci{0.01}{0.09}$; Gemini~2.5 Pro achieved screening $\emr{=}0.936$~$\ci{0.914}{0.956}$ and extraction $\emr{=}0.200$~$\ci{0.12}{0.28}$.
+Cloud-based APIs exhibited substantial non-determinism: Claude Sonnet~4.5 achieved screening $\emr{=}0.974$~$\ci{0.960}{0.986}$ but extraction $\emr{=}0.050$~$\ci{0.010}{0.090}$; Gemini~2.5 Pro achieved screening $\emr{=}0.936$~$\ci{0.914}{0.956}$ and extraction $\emr{=}0.200$~$\ci{0.120}{0.280}$.
 Despite requesting deterministic behavior, 95\% of Claude's and 80\% of Gemini's extraction outputs varied across runs.
 Field-level analysis revealed that free-text fields (study location, $\emr{=}0.780$--$0.896$) were most unstable, while categorical fields (study design, $\emr{\geq}0.990$) remained consistent.
 
@@ -304,7 +304,7 @@ For each bootstrap sample, we drew $N$ items with replacement and computed the E
 \begin{itemize}
   \item \textbf{Flip rate}: $1 - \emr$ (proportion of items with any variation across runs)
   \item \textbf{Mean agreement}: Average proportion of runs agreeing with the majority decision per item
-  \item \textbf{Accuracy vs.\ gold standard}: Per-run sensitivity, specificity, and accuracy against human labels (reported for the 200 manually labeled abstracts)
+  \item \textbf{Accuracy vs.\ gold standard}: Per-run sensitivity, specificity, and accuracy against gold standard labels (noting that 300 of the 500 labels are heuristic-based; see Limitations)
   \item \textbf{Field-level EMR}: For extraction, the proportion of articles with identical values for each individual field across all runs
   \item \textbf{Estimate count stability}: The proportion of articles for which all 10~runs extracted the same number of effect estimates---a measure of structural consistency independent of the specific values extracted
 \end{itemize}
@@ -378,8 +378,8 @@ The extraction results reveal a dramatically larger reproducibility gap (Table~\
 \textbf{Model} & \textbf{EMR} & \textbf{95\% CI} & \textbf{Estimate Stability} \\
 \midrule
 LLaMA 3 8B       & 1.000 & $\ci{1.000}{1.000}$ & 1.000 \\
-Claude Sonnet 4.5 & 0.050 & $\ci{0.01}{0.09}$ & 0.880 \\
-Gemini 2.5 Pro    & 0.200 & $\ci{0.12}{0.28}$ & 0.735 \\
+Claude Sonnet 4.5 & 0.050 & $\ci{0.010}{0.090}$ & 0.880 \\
+Gemini 2.5 Pro    & 0.200 & $\ci{0.120}{0.280}$ & 0.735 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -424,14 +424,14 @@ Figure~\ref{fig:emr} visualizes the EMR comparison across models and stages, and
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.85\textwidth]{../analysis/figures/emr_comparison.png}
+\includegraphics[width=0.85\textwidth]{../analysis/figures/emr_comparison.pdf}
 \caption{Exact Match Rate (EMR) by model and pipeline stage. Error bars represent 95\% bootstrap confidence intervals. The dashed line indicates perfect reproducibility ($\emr{=}1.0$).}
 \label{fig:emr}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.85\textwidth]{../analysis/figures/field_emr_heatmap.png}
+\includegraphics[width=0.85\textwidth]{../analysis/figures/field_emr_heatmap.pdf}
 \caption{Field-level EMR heatmap for extraction outputs. Darker cells indicate lower reproducibility. Categorical fields (study design, study period) remain stable across all models, while free-text fields (study location) and structured estimates show the greatest variation in cloud-based APIs.}
 \label{fig:heatmap}
 \end{figure}
@@ -505,6 +505,11 @@ Other domains with different reporting conventions may exhibit different variati
 \textbf{Gold standard quality.}
 The heuristic labels for the 300~ambiguous abstracts may not perfectly reflect expert judgment.
 Since our primary metric (EMR) measures self-consistency rather than accuracy, this affects only the secondary accuracy analysis reported in Table~\ref{tab:screening}.
+
+\textbf{Screening EMR scope.}
+Our screening EMR considers only the binary include/exclude decision.
+The screening output also contains a confidence score, rationale, and sub-classifications, which may vary across runs even when the binary decision is stable.
+This means our screening EMR may understate the true extent of non-determinism.
 
 \textbf{EMR strictness.}
 Our extraction EMR requires character-level identity across all 10~runs.
@@ -616,7 +621,7 @@ Desai, S., et~al. (2025).
 
 \bibitem[Dubey et~al.(2024)]{dubey2024llama3}
 Dubey, A., Jauhri, A., Pandey, A., Kadian, A., Al-Dahle, A., et~al. (2024).
-\newblock The {L}la{M}a~3 herd of models.
+\newblock The {LLaMA}~3 herd of models.
 \newblock \emph{arXiv preprint}, arXiv:2407.21783.
 
 \bibitem[Fu et~al.(2026)]{fu2026beyond}
@@ -629,10 +634,10 @@ Gartlehner, G., Kahwati, L., Hilscher, R., et~al. (2024).
 \newblock Data extraction for evidence synthesis using a large language model: A proof-of-concept study.
 \newblock \emph{Research Synthesis Methods}, 15(4), 576--589.
 
-\bibitem[{Gemini Team}(2024)]{geminiteam2024gemini}
-{Gemini Team}, Anil, R., Borgeaud, S., Alayrac, J.-B., Yu, J., Soricut, R., et~al. (2024).
-\newblock {Gemini}: A family of highly capable multimodal models.
-\newblock \emph{arXiv preprint}, arXiv:2312.11805.
+\bibitem[Comanici et~al.(2025)]{geminiteam2024gemini}
+Comanici, G., Bieber, E., Schaekermann, M., Pasupat, I., Sachdeva, N., et~al. (2025).
+\newblock {Gemini}~2.5: Pushing the frontier with advanced reasoning, multimodality, long context, and agentic capabilities.
+\newblock \emph{arXiv preprint}, arXiv:2507.06261.
 
 \bibitem[Haibe-Kains et~al.(2020)]{haibe2020nature}
 Haibe-Kains, B., Adam, G.A., Hosny, A., et~al. (2020).
