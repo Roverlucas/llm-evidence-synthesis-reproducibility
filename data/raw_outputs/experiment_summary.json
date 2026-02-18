@@ -1,12 +1,14 @@
 {
   "experiment": "pm25-respiratory-reproducibility",
-  "completed": "2026-02-17T02:51:24.393673+00:00",
-  "elapsed_seconds": 2494.4,
+  "completed": "2026-02-18T16:16:51.172536+00:00",
+  "elapsed_seconds": 66674.1,
   "models": [
     "gemini-2.5-pro"
   ],
   "runs": [
-    8
+    8,
+    9,
+    10
   ],
   "stages": [
     "screening"
@@ -17,11 +19,33 @@
       "model_id": "gemini-2.5-pro",
       "stage": "screening",
       "total": 500,
-      "successful": 0,
-      "failed": 10,
-      "valid": 0,
-      "start_time": "2026-02-17T02:09:50.044314+00:00",
-      "end_time": "2026-02-17T02:51:23.157066+00:00"
+      "successful": 500,
+      "failed": 0,
+      "valid": 500,
+      "start_time": "2026-02-17T21:45:37.118029+00:00",
+      "end_time": "2026-02-18T04:37:53.292038+00:00"
+    },
+    {
+      "run_id": 9,
+      "model_id": "gemini-2.5-pro",
+      "stage": "screening",
+      "total": 500,
+      "successful": 500,
+      "failed": 0,
+      "valid": 500,
+      "start_time": "2026-02-18T04:37:54.940840+00:00",
+      "end_time": "2026-02-18T10:38:52.456116+00:00"
+    },
+    {
+      "run_id": 10,
+      "model_id": "gemini-2.5-pro",
+      "stage": "screening",
+      "total": 500,
+      "successful": 500,
+      "failed": 0,
+      "valid": 500,
+      "start_time": "2026-02-18T10:38:53.941673+00:00",
+      "end_time": "2026-02-18T16:16:49.767126+00:00"
     }
   ]
 }
