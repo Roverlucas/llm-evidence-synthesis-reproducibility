@@ -63,10 +63,11 @@ Reproducibility was measured using the Exact Match Rate (EMR)---the proportion o
 The locally deployed LLaMA~3 achieved perfect reproducibility across all successfully processed items ($\emr{=}1.000$) in both screening and extraction.
 Cloud-based APIs exhibited substantial non-determinism: Claude Sonnet~4.5 achieved screening $\emr{=}0.974$~$\ci{0.960}{0.986}$ but extraction $\emr{=}0.050$~$\ci{0.010}{0.090}$; Gemini~2.5 Pro achieved screening $\emr{=}0.936$~$\ci{0.914}{0.956}$ and extraction $\emr{=}0.200$~$\ci{0.120}{0.280}$.
 Despite requesting deterministic behavior, 95\% of Claude's and 80\% of Gemini's extraction outputs varied across runs.
-Field-level analysis revealed that free-text fields (study location, $\emr{=}0.780$--$0.896$) were most unstable, while categorical fields (study design, $\emr{\geq}0.990$) remained consistent.
+Semantic equivalence analysis---including BERTScore embedding similarity ($F_1{=}0.997$), Levenshtein fuzzy matching, and text normalization---confirmed that metadata text is near-identical across runs, yet the numeric extraction layer (effect sizes, confidence intervals) drives the low hash-based EMR.
+Meta-analytic propagation analysis revealed that 21\% of articles yielded a different number of effect estimates across runs, causing the composition of a downstream meta-analysis to depend on which LLM run generated its inputs.
 
 \noindent\textbf{Conclusions.}
-LLM non-determinism poses a concrete threat to the reproducibility of evidence synthesis.
+LLM non-determinism poses a concrete threat to the reproducibility of evidence synthesis, from individual study extraction through to pooled meta-analytic conclusions.
 Researchers using cloud-based LLMs should expect meaningful output variation even under ``deterministic'' settings and adopt provenance-tracking protocols to document and mitigate this instability.
 
 \vspace{6pt}
@@ -464,6 +465,80 @@ Study location  & 1.000 & 0.780 & 0.896 \\
 
 The estimate count stability metric reveals that 26.5\% of Gemini's articles and 12.0\% of Claude's articles received a different number of effect estimates across runs---a structural difference that would directly affect any downstream meta-analysis.
 
+\subsection{Semantic Equivalence Analysis}
+\label{sec:semantic}
+
+The hash-based EMR reported in Table~\ref{tab:extraction} (0.050 for Claude, 0.200 for Gemini) treats any character-level difference in the \emph{full JSON output}---including all numeric effect estimates, confidence intervals, and variable-length estimate arrays---as a mismatch.
+To disentangle variation in the five metadata fields from variation in numeric estimates, and to assess whether metadata variation is merely cosmetic (formatting, abbreviation) or genuinely semantic, we applied three progressively relaxed equivalence criteria to the metadata fields only (Table~\ref{tab:semantic}).
+
+\begin{enumerate}
+  \item \textbf{Exact match}: character-identical outputs (equivalent to SHA-256 hash comparison).
+  \item \textbf{Normalized match}: after lowercasing, whitespace normalization, punctuation stripping, and abbreviation expansion (e.g., ``U.S.'' $\to$ ``United States'').
+  \item \textbf{Fuzzy match}: Levenshtein similarity ratio $\geq\!0.90$ between all normalized pairwise comparisons across runs.
+  \item \textbf{BERTScore}: Embedding-based semantic similarity using \texttt{roberta-large}, computing the F1 score between run~1 (reference) and each subsequent run for every article (900~pairs per model).
+\end{enumerate}
+
+\begin{table}[H]
+\centering
+\caption{Semantic equivalence under progressively relaxed criteria ($n\!=\!100$ articles, 10~runs). Columns 2--4 report whole-output EMR over the five metadata fields (study design, location, period, population, sample size) plus estimate count stability. BERTScore F1 (\texttt{roberta-large}) reports the mean pairwise similarity between run~1 and runs~2--10 (900~pairs per model). Hash-based EMR (from Table~\ref{tab:extraction}) additionally requires identical numeric estimates. The gap between high BERTScore (${\geq}0.997$) and low hash-based EMR (${\leq}0.200$) demonstrates that even near-identical metadata co-occurs with divergent numeric extractions.}
+\label{tab:semantic}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Model} & \textbf{Exact} & \textbf{Normalized} & \textbf{Fuzzy} & \textbf{BERTScore F1} & \textbf{Hash}$^{*}$ \\
+\midrule
+LLaMA 3 8B       & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 \\
+Claude Sonnet 4.5 & 0.640 & 0.680 & 0.690 & 0.997 & 0.050 \\
+Gemini 2.5 Pro    & 0.620 & 0.620 & 0.630 & 0.997 & 0.200 \\
+\bottomrule
+\multicolumn{6}{l}{\footnotesize $^{*}$From Table~\ref{tab:extraction}; includes all fields and numeric estimates.}
+\end{tabular}
+\end{table}
+
+\noindent Three findings emerge from this multi-level analysis.
+
+\textbf{First}, the gap between metadata-field EMR (0.640 for Claude) and hash-based EMR (0.050) quantifies how much variation resides in the numeric estimate arrays versus the text metadata.
+For Claude, 64\% of articles had identical metadata across all runs, but only 5\% had identical \emph{complete} outputs---meaning that the variable-length estimate arrays (effect sizes, confidence intervals) are the primary source of non-reproducibility.
+
+\textbf{Second}, within the metadata fields, normalization and fuzzy matching improved EMR by only 1--5~percentage points (Claude: 0.640~$\to$~0.690; Gemini: 0.620~$\to$~0.630), confirming that the variation is predominantly semantic, not cosmetic.
+Study location---the most variable field---improved modestly under fuzzy matching (Claude: 0.780~$\to$~0.830; Gemini: 0.860~$\to$~0.870), while categorical fields remained unchanged at $\geq$0.960.
+
+\textbf{Third}, BERTScore embedding similarity was near-perfect for API models (mean~$F_1{=}0.997$ for both Claude and Gemini), with 99.0\% and 98.8\% of pairs exceeding $F_1{\geq}0.95$, respectively.
+This creates an apparent paradox: the models produce \emph{semantically near-identical} metadata text, yet 95\% of Claude's and 80\% of Gemini's complete extraction outputs are non-identical.
+The resolution lies in the numeric estimates---the effect sizes, confidence intervals, and variable-length estimate arrays that drive the hash-based EMR to 0.050 and 0.200.
+Even when a model describes a study in nearly the same words, it may extract a different number of effect estimates or parse ``RR$\,{=}\,$1.05 (95\% CI: 1.01--1.09)'' with subtly different numeric precision.
+Notably, Gemini's minimum BERTScore ($F_1{=}0.759$) indicates that some articles receive genuinely divergent interpretations across runs---not merely numeric rounding differences.
+
+\subsection{Meta-Analytic Propagation}
+\label{sec:metaprop}
+
+To illustrate how extraction non-determinism propagates into downstream analysis, we performed a fixed-effect inverse-variance meta-analysis on the extracted risk ratios (RR/OR/HR) from each run independently (Table~\ref{tab:meta}).
+
+\begin{table}[H]
+\centering
+\caption{Meta-analytic inputs across 10 runs. ``$k$'' is the number of usable effect estimates per run; ``$k_{\text{sig}}$'' is the number of those estimates whose confidence interval excludes the null. $\Delta k$ and $\Delta k_{\text{sig}}$ report the range across runs. The ``Varying'' column reports the proportion of articles for which the number of extracted estimates changed across runs.}
+\label{tab:meta}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Model} & \textbf{$k$ range} & \textbf{$\Delta k$} & \textbf{$k_{\text{sig}}$ range} & \textbf{$\Delta k_{\text{sig}}$} & \textbf{Varying} \\
+\midrule
+LLaMA 3 8B       & 246--246 & 0  & 188--188 & 0  & 0/100 (0\%) \\
+Claude Sonnet 4.5 & 186--209 & 23 & 152--175 & 23 & 21/100 (21\%) \\
+Gemini 2.5 Pro    & 154--171 & 17 & 133--150 & 17 & 20/100 (20\%) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent Two findings emerge.
+\textbf{First}, one in five articles produced a different number of effect estimates across runs for both API models.
+Claude's per-run estimate count varied from 186 to 209 (a 12.4\% swing), while Gemini's varied from 154 to 171 (11.0\%).
+LLaMA produced identical sets of 246~estimates in every run.
+
+\textbf{Second}, the variation in estimate counts directly mirrors the variation in significant estimates---every estimate gained or lost between runs is one that crosses or retreats from the significance threshold.
+For Claude, the number of significant estimates ranged from 152 to 175 (a swing of 23), meaning that \textbf{up to 23~study-level effect estimates---each representing a distinct epidemiological finding---appear or disappear from the evidence base depending solely on which run of the LLM was used}.
+
+While the overall pooled effect in our corpus remained stable across runs (because the aggregate signal is strong and $k$ is large), the instability of the underlying evidence composition is alarming.
+In domains with smaller literatures or marginal effects, this level of input instability could plausibly shift pooled conclusions across the significance threshold---a hypothesis that merits direct testing in future work.
+
 \subsection{Summary Comparison}
 
 Figure~\ref{fig:emr} visualizes the EMR comparison across models and stages, and Figure~\ref{fig:heatmap} displays the field-level variation as a heatmap.
@@ -498,14 +573,19 @@ Three key findings emerge.
 \textbf{Finding 1: Local deployment achieves deterministic inference; cloud APIs do not.}
 LLaMA~3 8B, deployed locally via Ollama on a single device, produced identical outputs across all 10~runs in both screening and extraction.
 Both cloud-based APIs (Claude, Gemini) exhibited measurable non-determinism despite requesting temperature$\,{=}\,$0 and fixed seeds.
-This gap likely reflects implementation differences in distributed inference: cloud APIs serve requests across GPU clusters where floating-point operations may be parallelized differently across runs, introducing numerical variation that propagates through the autoregressive generation process~\citep{karelin2024indeterminism}.
-Local deployment on a single device avoids this source of variation, though we note that different hardware, driver versions, or Ollama versions might produce different baseline outputs.
+This gap has a precise technical explanation rooted in floating-point arithmetic.
+Cloud APIs serve requests across multi-GPU clusters where matrix multiplications are partitioned and reduced in non-deterministic order.
+Because floating-point addition is not associative---$(a + b) + c \neq a + (b + c)$ in general due to rounding---different partitioning strategies produce subtly different intermediate sums, which propagate through the autoregressive generation process and can eventually cause different token selections~\citep{karelin2024indeterminism}.
+Local deployment on a single device with a single execution thread avoids this source of variation entirely: the same computation graph executes in the same order every time, producing bit-identical results.
+We note, however, that this determinism guarantee is configuration-specific: the same model on different hardware (e.g., different GPU architectures with different floating-point unit implementations), different driver versions, different Ollama versions, or with parallelized inference (e.g., tensor parallelism across multiple GPUs) would likely produce different baseline outputs---deterministic within each configuration, but not identical across configurations.
 
-\textbf{Finding 2: Extraction amplifies non-determinism dramatically.}
+\textbf{Finding 2: Extraction amplifies non-determinism dramatically, and the variation is semantic.}
 Claude's EMR dropped from 0.974 (screening) to 0.050 (extraction); Gemini's from 0.936 to 0.200.
 Screening requires a binary decision (a single token effectively determines the output), while extraction generates complex structured JSON with multiple fields.
-However, part of this gap reflects our strict EMR metric: the field-level analysis shows that categorical fields remain highly reproducible ($\emr{\geq}0.960$), with most variation concentrated in free-text fields and estimate counts.
-Future work should assess how much of the observed extraction variation is semantically meaningful versus mere formatting differences.
+Our four-tier semantic equivalence analysis (Section~\ref{sec:semantic}) confirms that this gap is not an artifact of strict string matching.
+BERTScore embedding similarity between runs averaged $F_1{=}0.997$---near-perfect semantic agreement on metadata text---yet hash-based EMR remained at 0.050 (Claude) and 0.200 (Gemini).
+This paradox reveals that the variation concentrates in the numeric extraction layer: the models describe studies in nearly the same words but extract different numbers of effect estimates and parse numeric values with different precision.
+Even the residual metadata variation is genuinely semantic (fuzzy matching recovers only 1--5~percentage points), not cosmetic.
 
 \textbf{Finding 3: Accuracy and reproducibility are independent properties.}
 Gemini achieved the highest screening accuracy (0.964) but the lowest screening reproducibility (0.936).
@@ -542,40 +622,44 @@ Per-field metrics miss the combinatorial explosion of variation: when 5~fields e
 Similarly, \citet{gartlehner2024extraction}'s 95--97\% test-retest reliability with Claude~2 was measured over 2--3~repetitions.
 Our 10-run design with output hashing reveals instability that shorter test-retest windows cannot detect, because some items change in only 1--2 of 10~runs---a frequency that 2-run comparisons would miss entirely.
 
-\subsection{Limitations}
+\textbf{The meta-analytic propagation experiment} (Section~\ref{sec:metaprop}) provides the most direct evidence of downstream impact.
+For Claude, the number of usable effect estimates varied from 186 to 209 across runs---a 12.4\% swing in the evidence base feeding the pooled result.
+For Gemini, the swing was 11.0\% (154--171 estimates).
+One in five articles produced a different number of effect estimates depending on the run, meaning that \textbf{the composition of a meta-analysis is not fixed when an LLM extracts the data}.
+While the overall pooled conclusion was stable in our corpus (because the aggregate effect was strong and $k$ was large), this level of compositional instability raises serious concerns for systematic reviews in domains with smaller literatures or marginal effects, where even a few added or dropped estimates could shift a confidence interval across the null.
 
-Several limitations should be noted.
+\subsection{Limitations and Future Directions}
 
-\textbf{Model selection.}
-We tested three models; results may differ for other models (e.g., GPT-4, Mistral, Command-R).
-However, our local-vs-cloud comparison captures the primary architectural distinction.
+We frame each limitation as a foundation for future research.
 
-\textbf{Run count.}
-Ten repetitions provide adequate statistical power for EMR estimation with bootstrap CIs, but may not capture rare variation patterns.
-Our prior work~\citep{rover2026jair} used up to 100~repetitions per model; the current design balances thoroughness with API cost constraints.
+\textbf{Model coverage.}
+We tested three models representing two deployment paradigms (local vs.\ cloud).
+A natural extension is to benchmark additional models (GPT-4o, Mistral, Command-R, open-weight models of varying sizes) to map the reproducibility landscape more comprehensively and identify whether non-determinism scales with model size or architecture.
 
-\textbf{Single domain.}
-Our corpus focuses on PM\textsubscript{2.5} and respiratory health.
-Other domains with different reporting conventions may exhibit different variation patterns.
+\textbf{Run count and rare events.}
+Ten repetitions provide adequate statistical power for EMR estimation with bootstrap CIs, but may not capture rare variation patterns that appear in $<$10\% of runs.
+Our prior work~\citep{rover2026jair} used up to 100~repetitions; scaling to 50--100~runs with cost-efficient models would enable detection of tail-event instability.
 
-\textbf{Gold standard quality.}
-The heuristic labels for the 300~ambiguous abstracts may not perfectly reflect expert judgment.
-Since our primary metric (EMR) measures self-consistency rather than accuracy, this affects only the secondary accuracy analysis reported in Table~\ref{tab:screening}.
+\textbf{Domain generalization.}
+Our corpus focuses on PM\textsubscript{2.5} and respiratory health, a domain with standardized reporting conventions.
+Cross-domain studies---particularly in behavioral health, pharmacology, or nutritional epidemiology where reporting is more heterogeneous---would test whether the amplification patterns we observed are domain-specific or universal.
+
+\textbf{Semantic equivalence thresholds.}
+Our four-tier semantic analysis (Section~\ref{sec:semantic}), including BERTScore embedding similarity, demonstrated that metadata variation is predominantly semantic rather than cosmetic.
+Future work should establish \emph{clinically meaningful} equivalence thresholds---e.g., what BERTScore difference in an extraction output corresponds to a materially different meta-analytic conclusion?---and validate these thresholds across multiple health domains.
+
+\textbf{Meta-analytic significance flipping.}
+Our meta-analytic propagation experiment (Section~\ref{sec:metaprop}) showed that up to 23~study-level estimates appear or disappear between runs.
+While the pooled conclusion was stable in our large-$k$ corpus, directly testing whether significance flips occur in smaller literatures (e.g., $k{<}20$) with marginal effects is an important next step for understanding real-world impact.
 
 \textbf{Screening EMR scope.}
-Our screening EMR considers only the binary include/exclude decision.
-The screening output also contains a confidence score, rationale, and sub-classifications, which may vary across runs even when the binary decision is stable.
-This means our screening EMR may understate the true extent of non-determinism.
+Our screening EMR considers only the binary include/exclude decision, yet the output also contains confidence scores, rationales, and sub-classifications that may vary even when the binary decision is stable.
+Full-output screening EMR would provide a more complete picture of screening-stage non-determinism.
 
-\textbf{EMR strictness.}
-Our extraction EMR requires character-level identity across all 10~runs.
-Semantically equivalent outputs that differ only in formatting (e.g., ``Beijing, China'' vs.\ ``Beijing'') count as mismatches.
-The field-level analysis partially addresses this, but a dedicated semantic equivalence metric would provide a more nuanced view of practical impact.
-
-\textbf{API versioning.}
-Cloud API models can be silently updated by providers during multi-day experiments.
+\textbf{API versioning and temporal stability.}
+Cloud API models can be silently updated during multi-day experiments.
 While we pinned Claude to a dated version (\texttt{claude-sonnet-4-5-20250929}), Gemini's version identifier does not include a date suffix.
-Some of the observed Gemini variation could theoretically reflect model updates rather than inference-level non-determinism.
+Longitudinal studies tracking EMR over weeks or months would distinguish inference-level non-determinism from model update effects---a distinction critical for establishing stable benchmarks.
 
 \subsection{Recommendations}
 
@@ -597,11 +681,12 @@ Based on our findings, we propose the following recommendations for LLM-assisted
 \section{Conclusion}
 
 We have shown that LLM non-determinism is not a theoretical concern but a measurable, quantifiable phenomenon that directly threatens the reproducibility of evidence synthesis.
-Through 18,000~API calls across 60~experiment runs---the most comprehensive reproducibility evaluation of LLMs for evidence synthesis to date---we demonstrate three findings with immediate practical implications.
+Through 18,000~API calls across 60~experiment runs---the most comprehensive reproducibility evaluation of LLMs for evidence synthesis to date---we demonstrate four findings with immediate practical implications.
 
 First, local deployment achieves perfect reproducibility, proving that deterministic LLM inference is technically achievable.
 Second, cloud-based APIs produce variable outputs even under ``deterministic'' settings, with extraction tasks amplifying this instability by an order of magnitude: while prior work reports 94--97\% reproducibility using per-field metrics and 2--3~runs, our whole-output analysis across 10~runs reveals that only 5--20\% of extraction outputs are truly identical.
-Third, accuracy and reproducibility are independent properties---a finding that invalidates the common practice of evaluating LLM pipelines with a single run.
+Third, semantic equivalence analysis---including BERTScore embedding similarity ($F_1{=}0.997$)---reveals a paradox: models produce near-identical metadata text across runs, yet extract different numeric values and different numbers of effect estimates, driving hash-based EMR to 5--20\%.
+Fourth, meta-analytic propagation analysis reveals that one in five articles produces a different number of effect estimates across runs, causing the composition of a meta-analysis to depend on which LLM run generated its inputs.
 
 These results carry a clear message: the current standard of reporting LLM-assisted evidence synthesis results from a single, undocumented run is scientifically insufficient.
 As LLMs become embedded in systematic reviews and meta-analyses, the research community must adopt reproducibility-aware practices---multiple repetitions, provenance tracking, and transparent reporting of variation---or risk building an evidence base on foundations that shift each time the analysis is re-run.
