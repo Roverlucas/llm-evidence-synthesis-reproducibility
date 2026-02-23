@@ -1,0 +1,72 @@
+[
+  {
+    "corpus_id": "ABS-0001",
+    "stage": "extraction",
+    "run_id": 1,
+    "model_id": "mistral-7b",
+    "provider": "ollama",
+    "call_hash": "e6df0af46f208cafbeefd08cb66863d35517c5d8d9bd64b610699c568b53fe8b",
+    "output_hash": "9d04042b7490ec5ab5e2b1e332542e7d8f2e370b0455b33fe668b46e55ecfa54",
+    "timestamp": "2026-02-23T01:24:11.880664+00:00",
+    "inference_duration_ms": 88850.3,
+    "input_tokens": 1220,
+    "output_tokens": 822,
+    "stop_reason": "stop"
+  },
+  {
+    "corpus_id": "ABS-0002",
+    "stage": "extraction",
+    "run_id": 1,
+    "model_id": "mistral-7b",
+    "provider": "ollama",
+    "call_hash": "5a89f144d497e99e9201dec008df2de954311279f71c2ad5d737f7f4dc2cdd01",
+    "output_hash": "c03cf604af16ca49eb5a3d4944d4b5eec82b1f5899a67ca1ac7c648544520452",
+    "timestamp": "2026-02-23T01:24:40.068369+00:00",
+    "inference_duration_ms": 28185.1,
+    "input_tokens": 1330,
+    "output_tokens": 230,
+    "stop_reason": "stop"
+  },
+  {
+    "corpus_id": "ABS-0003",
+    "stage": "extraction",
+    "run_id": 1,
+    "model_id": "mistral-7b",
+    "provider": "ollama",
+    "call_hash": "1c7cacb767d27230177630fda366756e60ca2090389d690bfc237e5fc7edae11",
+    "output_hash": "3c4d9de18c87d38dbc628cdbe509658a11b20a6f9c5106fa872f1447be72254a",
+    "timestamp": "2026-02-23T01:25:47.697285+00:00",
+    "inference_duration_ms": 67626.6,
+    "input_tokens": 1570,
+    "output_tokens": 507,
+    "stop_reason": "stop"
+  },
+  {
+    "corpus_id": "ABS-0004",
+    "stage": "extraction",
+    "run_id": 1,
+    "model_id": "mistral-7b",
+    "provider": "ollama",
+    "call_hash": "d6e08c28703bfca96a0d028288e4a2dc87b6aa725716bd40d7e58f58def164e7",
+    "output_hash": "b56f9c75f5801d259308077f0abd37366eeb9a472abd024cabaf06e71005e321",
+    "timestamp": "2026-02-23T01:28:04.033037+00:00",
+    "inference_duration_ms": 43076.5,
+    "input_tokens": 1634,
+    "output_tokens": 438,
+    "stop_reason": "stop"
+  },
+  {
+    "corpus_id": "ABS-0005",
+    "stage": "extraction",
+    "run_id": 1,
+    "model_id": "mistral-7b",
+    "provider": "ollama",
+    "call_hash": "3dc52fe4f7464c0cf96930de80c5e536cb05f53cab714f210701450578c546b1",
+    "output_hash": "612592df0b964dd26fcf95eaeea2f2ee04dec64e600d5d3a266d486fa52db149",
+    "timestamp": "2026-02-23T01:31:16.096263+00:00",
+    "inference_duration_ms": 58817.3,
+    "input_tokens": 1450,
+    "output_tokens": 728,
+    "stop_reason": "stop"
+  }
+]

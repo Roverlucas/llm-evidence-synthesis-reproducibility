@@ -1,27 +1,39 @@
 {
   "experiment": "pm25-respiratory-reproducibility",
-  "completed": "2026-02-23T01:26:26.817558+00:00",
-  "elapsed_seconds": 19.1,
+  "completed": "2026-02-23T01:29:16.642826+00:00",
+  "elapsed_seconds": 464.2,
   "models": [
-    "gpt-4.1"
+    "gemma2-9b"
   ],
   "runs": [
     1
   ],
   "stages": [
-    "screening"
+    "screening",
+    "extraction"
   ],
   "stats": [
     {
       "run_id": 1,
-      "model_id": "gpt-4.1",
+      "model_id": "gemma2-9b",
       "stage": "screening",
       "total": 5,
       "successful": 5,
       "failed": 0,
       "valid": 5,
-      "start_time": "2026-02-23T01:26:07.699984+00:00",
-      "end_time": "2026-02-23T01:26:25.840156+00:00"
+      "start_time": "2026-02-23T01:21:32.451332+00:00",
+      "end_time": "2026-02-23T01:23:43.365172+00:00"
+    },
+    {
+      "run_id": 1,
+      "model_id": "gemma2-9b",
+      "stage": "extraction",
+      "total": 5,
+      "successful": 5,
+      "failed": 0,
+      "valid": 1,
+      "start_time": "2026-02-23T01:23:44.339092+00:00",
+      "end_time": "2026-02-23T01:29:15.507704+00:00"
     }
   ]
 }

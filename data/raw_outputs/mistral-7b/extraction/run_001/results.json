@@ -1,0 +1,140 @@
+[
+  {
+    "corpus_id": "ABS-0001",
+    "pmid": "38698010",
+    "run_id": 1,
+    "model_id": "mistral-7b",
+    "output": {
+      "error": "json_parse_failed",
+      "raw": " ```json\n{\n  \"study_id\": \"first_author_year\",\n  \"study_location\": \"six metropolitan cities, South Korea\",\n  \"study_period\": \"2016-2019, 2020\",\n  \"study_design\": \"time_series\",\n  \"population\": \"general\",\n  \"sample_size\": null,\n  \"estimates\": [\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not explicitly stated in the abstract for Pre-COVID-19 period\n      \"ci_lower\": null, // Not explicitly stated in the abstract for Pre-COVID-19 period\n      \"ci_upper\": null, // Not explicitly stated in the abstract for Pre-COVID-19 period\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"Not specified (inferred as lag0 from context)\",\n      \"outcome_specific\": \"asthma, COPD\",\n      \"covariates\": [\"Not specified\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not explicitly stated in the abstract for Pre-COVID-19 period for PM2.5 and COPD\n      \"ci_lower\": null, // Not explicitly stated in the abstract for Pre-COVID-19 period for PM2.5 and COPD\n      \"ci_upper\": null, // Not explicitly stated in the abstract for Pre-COVID-19 period for PM2.5 and COPD\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"Not specified (inferred as lag0 from context)\",\n      \"outcome_specific\": \"COPD\",\n      \"covariates\": [\"Not specified\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not explicitly stated in the abstract for Post-COVID-19 period\n      \"ci_lower\": null, // Not explicitly stated in the abstract for Post-COVID-19 period\n      \"ci_upper\": null, // Not explicitly stated in the abstract for Post-COVID-19 period\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"Not specified (inferred as overall cumulative from context)\",\n      \"outcome_specific\": \"all_respiratory\",\n      \"covariates\": [\"temperature\", \"humidity\", \"trend\", \"seasonality\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not explicitly stated in the abstract for Post-COVID-19 period for PM2.5 and non-respiratory diseases\n      \"ci_lower\": null, // Not explicitly stated in the abstract for Post-COVID-19 period for PM2.5 and non-respiratory diseases\n      \"ci_upper\": null, // Not explicitly stated in the abstract for Post-COVID-19 period for PM2.5 and non-respiratory diseases\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"Not specified (inferred as overall cumulative from context)\",\n      \"outcome_specific\": \"non-respiratory diseases\",\n      \"covariates\": [\"temperature\", \"humidity\", \"trend\", \"seasonality\"]\n    }\n  ]\n}\n```"
+    },
+    "valid": false,
+    "output_hash": "9d04042b7490ec5ab5e2b1e332542e7d8f2e370b0455b33fe668b46e55ecfa54"
+  },
+  {
+    "corpus_id": "ABS-0002",
+    "pmid": "29259031",
+    "run_id": 1,
+    "model_id": "mistral-7b",
+    "output": {
+      "study_id": "first_author_year",
+      "study_location": "Paris, France",
+      "study_period": "2010-2015",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": 47107,
+      "estimates": [
+        {
+          "effect_measure": "association",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": null,
+          "exposure_increment": "per 13.5 µg/m³ (half maximum effect)",
+          "lag": null,
+          "outcome_specific": "asthma",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality"
+          ]
+        }
+      ],
+      "_validation_error": "'association' is not one of ['RR', 'OR', 'HR', 'IRR', 'other']"
+    },
+    "valid": false,
+    "output_hash": "c03cf604af16ca49eb5a3d4944d4b5eec82b1f5899a67ca1ac7c648544520452"
+  },
+  {
+    "corpus_id": "ABS-0003",
+    "pmid": "35073244",
+    "run_id": 1,
+    "model_id": "mistral-7b",
+    "output": {
+      "study_id": "first_author_year",
+      "study_location": "United States",
+      "study_period": "2000-2012",
+      "study_design": "case_crossover",
+      "population": "Medicaid beneficiaries",
+      "sample_size": 1627002,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 0.31,
+          "ci_lower": 0.24,
+          "ci_upper": 0.37,
+          "ci_level": 95,
+          "exposure_increment": "per 1-μg/m³",
+          "lag": "not specified",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 0.1,
+          "ci_lower": 0.05,
+          "ci_upper": 0.15,
+          "ci_level": 95,
+          "exposure_increment": "per 1-ppb",
+          "lag": "not specified",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 0.28,
+          "ci_lower": 0.24,
+          "ci_upper": 0.32,
+          "ci_level": 95,
+          "exposure_increment": "per 1-ppb",
+          "lag": "not specified",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality"
+          ]
+        }
+      ],
+      "_validation_error": "'Medicaid beneficiaries' is not one of ['general', 'elderly', 'children', 'other']"
+    },
+    "valid": false,
+    "output_hash": "3c4d9de18c87d38dbc628cdbe509658a11b20a6f9c5106fa872f1447be72254a"
+  },
+  {
+    "corpus_id": "ABS-0004",
+    "pmid": "35394903",
+    "run_id": 1,
+    "model_id": "mistral-7b",
+    "output": {
+      "error": "json_parse_failed",
+      "raw": " ```json\n{\n  \"study_id\": \"first_author_year\",\n  \"study_location\": \"Pittsburgh, United States\",\n  \"study_period\": \"2010-2018\",\n  \"study_design\": \"case_crossover\",\n  \"population\": \"children\",\n  \"sample_size\": null,\n  \"estimates\": [\n    {\n      \"effect_measure\": \"OR\",\n      \"effect_estimate\": 1.014,\n      \"ci_lower\": 1.003,\n      \"ci_upper\": 1.025,\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per 10-unit increase\",\n      \"lag\": \"Lag Day 2\",\n      \"outcome_specific\": \"asthma\"\n    },\n    {\n      \"effect_measure\": \"OR\",\n      \"effect_estimate\": 1.012,\n      \"ci_lower\": 1.001,\n      \"ci_upper\": 1.023,\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per 10-unit increase\",\n      \"lag\": \"Lag Day 3\",\n      \"outcome_specific\": \"asthma\"\n    ],\n    {\n      \"effect_measure\": \"OR\",\n      \"effect_estimate\": null,\n      \"ci_lower\": null,\n      \"ci_upper\": null,\n      \"ci_level\": null,\n      \"exposure_increment\": \"per 10-unit increase\",\n      \"lag\": \"Lag Day 4\",\n      \"outcome_specific\": \"asthma\",\n      \"covariates\": [\"race\"]\n    ]\n}\n```"
+    },
+    "valid": false,
+    "output_hash": "b56f9c75f5801d259308077f0abd37366eeb9a472abd024cabaf06e71005e321"
+  },
+  {
+    "corpus_id": "ABS-0005",
+    "pmid": "35104259",
+    "run_id": 1,
+    "model_id": "mistral-7b",
+    "output": {
+      "error": "json_parse_failed",
+      "raw": " ```json\n{\n  \"study_id\": \"first_author_year\",\n  \"study_location\": \"United States\",\n  \"study_period\": \"2000-2014\",\n  \"study_design\": \"case_crossover\",\n  \"population\": \"elderly\",\n  \"sample_size\": null,\n  \"estimates\": [\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not provided in the abstract\n      \"ci_lower\": null, // Not provided in the abstract\n      \"ci_upper\": null, // Not provided in the abstract\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"not specified\",\n      \"outcome_specific\": \"all_cardiovascular\",\n      \"covariates\": [\"temperature\", \"humidity\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not provided in the abstract\n      \"ci_lower\": null, // Not provided in the abstract\n      \"ci_upper\": null, // Not provided in the abstract\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"not specified\",\n      \"outcome_specific\": \"all_respiratory\",\n      \"covariates\": [\"temperature\", \"humidity\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not provided in the abstract\n      \"ci_lower\": null, // Not provided in the abstract\n      \"ci_upper\": null, // Not provided in the abstract\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"not specified\",\n      \"outcome_specific\": \"heart_failure\",\n      \"covariates\": [\"temperature\", \"humidity\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not provided in the abstract\n      \"ci_lower\": null, // Not provided in the abstract\n      \"ci_upper\": null, // Not provided in the abstract\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"not specified\",\n      \"outcome_specific\": \"other_aneurysm_and_intracranial_hemorrhage\",\n      \"covariates\": [\"temperature\", \"humidity\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not provided in the abstract\n      \"ci_lower\": null, // Not provided in the abstract\n      \"ci_upper\": null, // Not provided in the abstract\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"not specified\",\n      \"outcome_specific\": \"influenza\",\n      \"covariates\": [\"temperature\", \"humidity\"]\n    }\n  ]\n}\n```"
+    },
+    "valid": false,
+    "output_hash": "612592df0b964dd26fcf95eaeea2f2ee04dec64e600d5d3a266d486fa52db149"
+  }
+]
