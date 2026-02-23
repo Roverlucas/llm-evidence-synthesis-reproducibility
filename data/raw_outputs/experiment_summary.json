@@ -1,7 +1,7 @@
 {
   "experiment": "pm25-respiratory-reproducibility",
-  "completed": "2026-02-23T01:31:17.085408+00:00",
-  "elapsed_seconds": 712.4,
+  "completed": "2026-02-23T13:12:39.681901+00:00",
+  "elapsed_seconds": 433.7,
   "models": [
     "mistral-7b"
   ],
@@ -21,8 +21,8 @@
       "successful": 5,
       "failed": 0,
       "valid": 5,
-      "start_time": "2026-02-23T01:19:24.758029+00:00",
-      "end_time": "2026-02-23T01:20:34.359960+00:00"
+      "start_time": "2026-02-23T13:05:26.039062+00:00",
+      "end_time": "2026-02-23T13:06:27.169560+00:00"
     },
     {
       "run_id": 1,
@@ -32,8 +32,8 @@
       "successful": 2,
       "failed": 3,
       "valid": 0,
-      "start_time": "2026-02-23T01:20:35.277826+00:00",
-      "end_time": "2026-02-23T01:31:16.096663+00:00"
+      "start_time": "2026-02-23T13:06:28.202230+00:00",
+      "end_time": "2026-02-23T13:12:38.722110+00:00"
     }
   ]
 }
