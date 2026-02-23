@@ -1,7 +1,7 @@
 {
   "run_card_version": "1.0",
   "run_id": 1,
-  "stage": "extraction",
+  "stage": "screening",
   "model_id": "mistral-7b",
   "provider": "ollama",
   "model_info": {
@@ -17,16 +17,16 @@
     "max_tokens": 2048
   },
   "execution": {
-    "start_time": "2026-02-23T01:20:35.277826+00:00",
-    "end_time": "2026-02-23T01:31:16.096663+00:00",
+    "start_time": "2026-02-23T13:05:26.039062+00:00",
+    "end_time": "2026-02-23T13:06:27.169560+00:00",
     "total_calls": 5,
-    "successful_calls": 2,
-    "failed_calls": 3,
-    "total_duration_ms": 286555.8,
-    "mean_duration_ms": 57311.2
+    "successful_calls": 5,
+    "failed_calls": 0,
+    "total_duration_ms": 61123.2,
+    "mean_duration_ms": 12224.6
   },
   "provenance": {
-    "aggregate_output_hash": "adf2a53064aa4e0fa52d265278ec6455fe8e36bc3a4088468c9b71198628682a",
+    "aggregate_output_hash": "cfae26327373efec71838adfcb52bbd6d25f98f2f94a9d9783320bd6d469f0e1",
     "hash_algorithm": "sha256"
   }
 }
