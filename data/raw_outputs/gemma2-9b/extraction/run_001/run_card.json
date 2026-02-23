@@ -1,7 +1,7 @@
 {
   "run_card_version": "1.0",
   "run_id": 1,
-  "stage": "screening",
+  "stage": "extraction",
   "model_id": "gemma2-9b",
   "provider": "ollama",
   "model_info": {
@@ -17,16 +17,16 @@
     "max_tokens": 2048
   },
   "execution": {
-    "start_time": "2026-02-23T01:21:32.451332+00:00",
-    "end_time": "2026-02-23T01:23:43.365172+00:00",
+    "start_time": "2026-02-23T01:23:44.339092+00:00",
+    "end_time": "2026-02-23T01:29:15.507704+00:00",
     "total_calls": 5,
     "successful_calls": 5,
     "failed_calls": 0,
-    "total_duration_ms": 130889.1,
-    "mean_duration_ms": 26177.8
+    "total_duration_ms": 331157.1,
+    "mean_duration_ms": 66231.4
   },
   "provenance": {
-    "aggregate_output_hash": "70ef7fb8e869d12552b82a63bb5a064baa9606795316902a54d613aa85db65d9",
+    "aggregate_output_hash": "41e25ee267b7a8ca81d8ba7e60fceab735cc007adc2a7988e1603f21a38178ec",
     "hash_algorithm": "sha256"
   }
 }

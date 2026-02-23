@@ -1,0 +1,72 @@
+[
+  {
+    "corpus_id": "ABS-0001",
+    "stage": "extraction",
+    "run_id": 1,
+    "model_id": "gemma2-9b",
+    "provider": "ollama",
+    "call_hash": "f6f09c440299aa06458b9760bd112fe1d3c622299c26c594f8a5544da4e68065",
+    "output_hash": "47a68e6d6ffc5bbc1d7434e84c7f01baf6d91461effcb7928f4ebbce154c6e38",
+    "timestamp": "2026-02-23T01:24:42.634514+00:00",
+    "inference_duration_ms": 58293.4,
+    "input_tokens": 1068,
+    "output_tokens": 300,
+    "stop_reason": "stop"
+  },
+  {
+    "corpus_id": "ABS-0002",
+    "stage": "extraction",
+    "run_id": 1,
+    "model_id": "gemma2-9b",
+    "provider": "ollama",
+    "call_hash": "c489a597070f4b8ed756ef0fdb389ed183196b7908d811cd04908ef4313ed4c3",
+    "output_hash": "a7ec72a96b1577f43bb3b9a951d292571626d20b01cfe7cd2f8c5a1d0aa0f9f0",
+    "timestamp": "2026-02-23T01:25:36.959017+00:00",
+    "inference_duration_ms": 54321.2,
+    "input_tokens": 1102,
+    "output_tokens": 294,
+    "stop_reason": "stop"
+  },
+  {
+    "corpus_id": "ABS-0003",
+    "stage": "extraction",
+    "run_id": 1,
+    "model_id": "gemma2-9b",
+    "provider": "ollama",
+    "call_hash": "9feeae275a28a4400a2d3c03cf7b4d19e17a0d1de582c7123aa1f67aa476dc92",
+    "output_hash": "b8eb6676fdb4ea8aae57d0dad0274161c477000c80e97540b1a7ed6d81e1c789",
+    "timestamp": "2026-02-23T01:26:50.476310+00:00",
+    "inference_duration_ms": 73515.5,
+    "input_tokens": 1316,
+    "output_tokens": 413,
+    "stop_reason": "stop"
+  },
+  {
+    "corpus_id": "ABS-0004",
+    "stage": "extraction",
+    "run_id": 1,
+    "model_id": "gemma2-9b",
+    "provider": "ollama",
+    "call_hash": "e1380506a83a721c77822b7864e28ede16f427d0c4ea7bb7fb3d50c3195ccb81",
+    "output_hash": "30827ae51ffb8904847fe42b0676d8d1f02cefac88c3f0439683dc5d79758089",
+    "timestamp": "2026-02-23T01:27:44.462728+00:00",
+    "inference_duration_ms": 53985.2,
+    "input_tokens": 1396,
+    "output_tokens": 323,
+    "stop_reason": "stop"
+  },
+  {
+    "corpus_id": "ABS-0005",
+    "stage": "extraction",
+    "run_id": 1,
+    "model_id": "gemma2-9b",
+    "provider": "ollama",
+    "call_hash": "a4a34e27efe6be010208ae9bc3dc88361ce562cf878bed726602aba9bc43deb7",
+    "output_hash": "24079258c53ee94531ef3b7bd35a3dde14fc7d770d06506d55e51f6b34bb634d",
+    "timestamp": "2026-02-23T01:29:15.507329+00:00",
+    "inference_duration_ms": 91041.8,
+    "input_tokens": 1222,
+    "output_tokens": 523,
+    "stop_reason": "stop"
+  }
+]
