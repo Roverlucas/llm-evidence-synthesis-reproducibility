@@ -304,7 +304,12 @@ if __name__ == "__main__":
     print("PART 1: SEMANTIC EQUIVALENCE ANALYSIS")
     print("=" * 60)
 
-    for model in ["claude-sonnet-4-5", "gemini-2.5-pro", "llama3-8b"]:
+    ALL_MODELS = [
+        "llama3-8b", "mistral-7b", "gemma2-9b",
+        "claude-sonnet-4-5", "gemini-2.5-pro", "gpt-4.1",
+    ]
+
+    for model in ALL_MODELS:
         print(f"\n── {model} ──")
         sem = compute_semantic_emr(model)
         results[f"{model}_semantic"] = sem
@@ -324,7 +329,7 @@ if __name__ == "__main__":
     print("PART 2: META-ANALYTIC PROPAGATION EXPERIMENT")
     print("=" * 60)
 
-    for model in ["claude-sonnet-4-5", "gemini-2.5-pro", "llama3-8b"]:
+    for model in ALL_MODELS:
         print(f"\n── {model} ──")
         meta = run_meta_analysis_experiment(model)
         results[f"{model}_meta"] = meta
@@ -353,7 +358,7 @@ if __name__ == "__main__":
     print("PART 3: PER-ARTICLE SIGNIFICANCE FLIPS")
     print("=" * 60)
 
-    for model in ["claude-sonnet-4-5", "gemini-2.5-pro", "llama3-8b"]:
+    for model in ALL_MODELS:
         print(f"\n── {model} ──")
 
         # For each article, per run: take the PRIMARY estimate (first RR/OR/HR)

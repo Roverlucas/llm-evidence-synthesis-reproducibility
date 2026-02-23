@@ -346,6 +346,11 @@ class TestModelRunnerImports:
         assert hasattr(gemini_runner, "run_inference")
         assert hasattr(gemini_runner, "get_model_info")
 
+    def test_import_openai_runner(self):
+        from src.models import openai_runner
+        assert hasattr(openai_runner, "run_inference")
+        assert hasattr(openai_runner, "get_model_info")
+
     def test_claude_model_info(self):
         from src.models.claude_runner import get_model_info
         info = get_model_info()
@@ -356,6 +361,12 @@ class TestModelRunnerImports:
         from src.models.gemini_runner import get_model_info
         info = get_model_info()
         assert info["provider"] == "google"
+
+    def test_openai_model_info(self):
+        from src.models.openai_runner import get_model_info
+        info = get_model_info()
+        assert info["provider"] == "openai"
+        assert info["weights_hash"] == "proprietary-not-available"
 
 
 # ── Integration-style Tests ─────────────────────────────────

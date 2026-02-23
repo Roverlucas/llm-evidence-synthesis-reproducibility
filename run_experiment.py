@@ -2,8 +2,8 @@
 """
 Experiment Orchestrator — PM2.5 Evidence Synthesis Reproducibility Study.
 
-Runs 10 repetitions × 3 models × 2 stages (screening + extraction).
-Total: ~12,000 LLM calls.
+Runs 10 repetitions × 6 models × 2 stages (screening + extraction).
+Total: ~36,000 LLM calls.
 
 Usage:
     # Full experiment (all models, all runs)
@@ -50,6 +50,24 @@ MODEL_CONFIGS = {
         "seed": 42,
         "num_predict": 2048,
     },
+    "mistral-7b": {
+        "id": "mistral-7b",
+        "provider": "ollama",
+        "model": "mistral:7b",
+        "endpoint": "http://localhost:11434",
+        "temperature": 0.0,
+        "seed": 42,
+        "num_predict": 2048,
+    },
+    "gemma2-9b": {
+        "id": "gemma2-9b",
+        "provider": "ollama",
+        "model": "gemma2:9b",
+        "endpoint": "http://localhost:11434",
+        "temperature": 0.0,
+        "seed": 42,
+        "num_predict": 2048,
+    },
     "claude-sonnet-4-5": {
         "id": "claude-sonnet-4-5",
         "provider": "anthropic",
@@ -65,6 +83,15 @@ MODEL_CONFIGS = {
         "max_output_tokens": 8192,
         "seed": 42,
         "call_delay": 15,  # Gemini free tier rate limit (2-5 RPM)
+    },
+    "gpt-4.1": {
+        "id": "gpt-4.1",
+        "provider": "openai",
+        "model": "gpt-4.1",
+        "temperature": 0.0,
+        "max_tokens": 2048,
+        "seed": 42,
+        "call_delay": 2,  # OpenAI rate limit buffer
     },
 }
 
@@ -111,6 +138,9 @@ def get_model_info(model_config: dict) -> dict:
         return get_model_info(model_config["model"])
     elif provider == "google":
         from src.models.gemini_runner import get_model_info
+        return get_model_info(model_config["model"])
+    elif provider == "openai":
+        from src.models.openai_runner import get_model_info
         return get_model_info(model_config["model"])
     return {}
 

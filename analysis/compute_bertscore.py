@@ -15,7 +15,10 @@ from bert_score import score as bert_score
 BASE_DIR = "/Users/lucasrover/llm-evidence-synthesis-reproducibility"
 RAW_DIR = os.path.join(BASE_DIR, "data", "raw_outputs")
 OUT_PATH = os.path.join(BASE_DIR, "analysis", "bertscore_results.json")
-MODELS = ["claude-sonnet-4-5", "gemini-2.5-pro", "llama3-8b"]
+MODELS = [
+    "llama3-8b", "mistral-7b", "gemma2-9b",
+    "claude-sonnet-4-5", "gemini-2.5-pro", "gpt-4.1",
+]
 NUM_RUNS = 10
 TEXT_FIELDS = ["study_design", "study_location", "study_period", "population", "sample_size"]
 

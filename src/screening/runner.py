@@ -35,6 +35,9 @@ def _get_runner(provider: str):
     elif provider == "google":
         from src.models import gemini_runner
         return gemini_runner
+    elif provider == "openai":
+        from src.models import openai_runner
+        return openai_runner
     else:
         raise ValueError(f"Unknown provider: {provider}")
 
@@ -101,6 +104,11 @@ def _run_single_screening(
         kwargs["temperature"] = model_config.get("temperature", 0.0)
         kwargs["max_output_tokens"] = model_config.get("max_output_tokens", 8192)
         kwargs["seed"] = model_config.get("seed", 42)
+    elif provider == "openai":
+        kwargs["model"] = model_config.get("model", "gpt-4.1")
+        kwargs["temperature"] = model_config.get("temperature", 0.0)
+        kwargs["max_tokens"] = model_config.get("max_tokens", 2048)
+        kwargs["seed"] = model_config.get("seed", 42)
 
     for attempt in range(max_retries + 1):
         try:
@@ -132,7 +140,7 @@ def _run_single_screening(
             if attempt < max_retries:
                 wait = 2 ** (attempt + 1)
                 if "429" in err_msg:
-                    wait = max(wait, 5)  # longer wait for rate limits
+                    wait = max(wait, 15)  # longer wait for rate limits
                 time.sleep(wait)
                 continue
             return {"error": err_msg}, {}, False

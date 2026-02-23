@@ -28,7 +28,10 @@ TABLES_DIR = OUT_DIR / "tables"
 FIGURES_DIR = OUT_DIR / "figures"
 BOOTSTRAP_DIR = OUT_DIR / "bootstrap"
 
-MODELS = ["claude-sonnet-4-5", "llama3-8b", "gemini-2.5-pro"]
+MODELS = [
+    "llama3-8b", "mistral-7b", "gemma2-9b",       # Local (Ollama)
+    "claude-sonnet-4-5", "gemini-2.5-pro", "gpt-4.1",  # API
+]
 STAGES = ["screening", "extraction"]
 N_RUNS = 10
 N_BOOTSTRAP = 10_000
@@ -402,11 +405,14 @@ def generate_figures(all_results: dict):
     import matplotlib.pyplot as plt
 
     # ── Figure 1: EMR Comparison Bar Chart ───────────────────────
-    fig, ax = plt.subplots(figsize=(10, 6))
+    fig, ax = plt.subplots(figsize=(12, 6))
 
-    models_short = ["Claude\nSonnet 4.5", "LLaMA 3\n8B", "Gemini 2.5\nPro"]
+    models_short = [
+        "LLaMA 3\n8B", "Mistral\n7B", "Gemma 2\n9B",
+        "Claude\nSonnet 4.5", "Gemini 2.5\nPro", "GPT-4.1",
+    ]
     x = np.arange(len(MODELS))
-    width = 0.35
+    width = 0.30
 
     scr_emrs = []
     ext_emrs = []
@@ -435,9 +441,9 @@ def generate_figures(all_results: dict):
     ext_err_high = [e[1] for e in ext_errs]
 
     bars1 = ax.bar(x - width / 2, scr_emrs, width, label="Screening",
-                   color="#2196F3", yerr=[scr_err_low, scr_err_high], capsize=5)
+                   color="#2196F3", yerr=[scr_err_low, scr_err_high], capsize=4)
     bars2 = ax.bar(x + width / 2, ext_emrs, width, label="Extraction",
-                   color="#FF9800", yerr=[ext_err_low, ext_err_high], capsize=5)
+                   color="#FF9800", yerr=[ext_err_low, ext_err_high], capsize=4)
 
     ax.set_ylabel("Exact Match Rate (EMR)", fontsize=12)
     ax.set_title("Reproducibility: Exact Match Rate by Model and Stage", fontsize=14)
@@ -452,11 +458,11 @@ def generate_figures(all_results: dict):
     for bar in bars1:
         h = bar.get_height()
         ax.text(bar.get_x() + bar.get_width() / 2., h + 0.03, f"{h:.3f}",
-                ha="center", va="bottom", fontsize=10)
+                ha="center", va="bottom", fontsize=8)
     for bar in bars2:
         h = bar.get_height()
         ax.text(bar.get_x() + bar.get_width() / 2., h + 0.03, f"{h:.3f}",
-                ha="center", va="bottom", fontsize=10)
+                ha="center", va="bottom", fontsize=8)
 
     plt.tight_layout()
     fig.savefig(FIGURES_DIR / "emr_comparison.pdf", dpi=300)
@@ -475,7 +481,7 @@ def generate_figures(all_results: dict):
         else:
             field_data.append([0] * len(fields))
 
-    fig, ax = plt.subplots(figsize=(10, 4))
+    fig, ax = plt.subplots(figsize=(12, 5))
     data = np.array(field_data)
     im = ax.imshow(data, cmap="RdYlGn", vmin=0, vmax=1, aspect="auto")
 

@@ -10,12 +10,14 @@ the maxOutputTokens budget. Set maxOutputTokens=8192 to leave room.
 
 import json
 import os
+import signal
 import time
 import urllib.request
 from typing import Optional
 
 API_BASE = "https://generativelanguage.googleapis.com/v1beta/models"
 DEFAULT_MODEL = "gemini-2.5-pro"
+TOTAL_TIMEOUT_MULTIPLIER = 3
 
 
 def run_inference(
@@ -56,9 +58,21 @@ def run_inference(
         method="POST",
     )
 
+    total_timeout = timeout * TOTAL_TIMEOUT_MULTIPLIER
+    old_handler = signal.getsignal(signal.SIGALRM)
+
+    def _alarm_handler(signum, frame):
+        raise TimeoutError(f"Total request timeout ({total_timeout}s) exceeded")
+
     t0 = time.time()
-    with urllib.request.urlopen(req, timeout=timeout) as resp:
-        result = json.loads(resp.read().decode())
+    signal.signal(signal.SIGALRM, _alarm_handler)
+    signal.alarm(total_timeout)
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            result = json.loads(resp.read().decode())
+    finally:
+        signal.alarm(0)
+        signal.signal(signal.SIGALRM, old_handler)
     duration_ms = (time.time() - t0) * 1000
 
     # Extract text from candidates

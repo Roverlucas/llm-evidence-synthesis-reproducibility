@@ -1,8 +1,8 @@
 """
-Claude Sonnet runner (Anthropic API).
+OpenAI GPT-4.1 runner (OpenAI API).
 
 Uses urllib-based HTTPS POST — no SDK dependency.
-Adapted from JAIR paper infrastructure.
+Follows the same pattern as claude_runner.py and gemini_runner.py.
 """
 
 import json
@@ -12,9 +12,8 @@ import time
 import urllib.request
 from typing import Optional
 
-API_URL = "https://api.anthropic.com/v1/messages"
-DEFAULT_MODEL = "claude-sonnet-4-5-20250929"
-API_VERSION = "2023-06-01"
+API_URL = "https://api.openai.com/v1/chat/completions"
+DEFAULT_MODEL = "gpt-4.1"
 TOTAL_TIMEOUT_MULTIPLIER = 3
 
 
@@ -24,29 +23,30 @@ def run_inference(
     model: str = DEFAULT_MODEL,
     temperature: float = 0.0,
     max_tokens: int = 2048,
+    seed: Optional[int] = 42,
     api_key: Optional[str] = None,
-    timeout: int = 60,
+    timeout: int = 90,
 ) -> dict:
-    """Run single inference via Anthropic Messages API."""
+    """Run single inference via OpenAI Chat Completions API."""
     if api_key is None:
-        api_key = os.environ.get("ANTHROPIC_API_KEY")
+        api_key = os.environ.get("OPENAI_API_KEY")
     if not api_key:
-        raise ValueError("ANTHROPIC_API_KEY not set")
+        raise ValueError("OPENAI_API_KEY not set")
 
     full_prompt = f"{prompt}\n\n{input_text}"
 
     payload = {
         "model": model,
         "max_tokens": max_tokens,
+        "temperature": temperature,
         "messages": [{"role": "user", "content": full_prompt}],
     }
-    if temperature > 0.0:
-        payload["temperature"] = temperature
+    if seed is not None:
+        payload["seed"] = seed
 
     headers = {
         "Content-Type": "application/json",
-        "x-api-key": api_key,
-        "anthropic-version": API_VERSION,
+        "Authorization": f"Bearer {api_key}",
     }
 
     req = urllib.request.Request(
@@ -73,22 +73,25 @@ def run_inference(
         signal.signal(signal.SIGALRM, old_handler)
     duration_ms = (time.time() - t0) * 1000
 
-    # Extract text from content blocks
+    # Extract text from choices
     output_text = ""
-    for block in result.get("content", []):
-        if block.get("type") == "text":
-            output_text += block.get("text", "")
+    choices = result.get("choices", [])
+    if choices:
+        output_text = choices[0].get("message", {}).get("content", "")
 
     usage = result.get("usage", {})
+    finish_reason = choices[0].get("finish_reason") if choices else None
+    system_fingerprint = result.get("system_fingerprint")
 
     return {
         "output_text": output_text,
         "model_id": result.get("model", model),
-        "provider": "anthropic",
+        "provider": "openai",
         "inference_duration_ms": round(duration_ms, 1),
-        "input_tokens": usage.get("input_tokens"),
-        "output_tokens": usage.get("output_tokens"),
-        "stop_reason": result.get("stop_reason"),
+        "input_tokens": usage.get("prompt_tokens"),
+        "output_tokens": usage.get("completion_tokens"),
+        "finish_reason": finish_reason,
+        "system_fingerprint": system_fingerprint,
         "response_id": result.get("id"),
     }
 
@@ -97,7 +100,7 @@ def get_model_info(model: str = DEFAULT_MODEL) -> dict:
     """Return model metadata (no weights hash available for API models)."""
     return {
         "model_id": model,
-        "provider": "anthropic",
+        "provider": "openai",
         "weights_hash": "proprietary-not-available",
-        "model_source": "anthropic-api",
+        "model_source": "openai-api",
     }

@@ -6,6 +6,7 @@ Adapted from JAIR paper infrastructure.
 """
 
 import json
+import signal
 import time
 import urllib.request
 import urllib.parse
@@ -15,6 +16,7 @@ from typing import Optional
 DEFAULT_ENDPOINT = "http://localhost:11434"
 DEFAULT_MODEL = "llama3:8b"
 DEFAULT_TIMEOUT = 180
+TOTAL_TIMEOUT_MULTIPLIER = 3  # hard kill after timeout * 3
 
 
 def run_inference(
@@ -52,9 +54,21 @@ def run_inference(
         method="POST",
     )
 
+    total_timeout = timeout * TOTAL_TIMEOUT_MULTIPLIER
+    old_handler = signal.getsignal(signal.SIGALRM)
+
+    def _alarm_handler(signum, frame):
+        raise TimeoutError(f"Total request timeout ({total_timeout}s) exceeded")
+
     t0 = time.time()
-    with urllib.request.urlopen(req, timeout=timeout) as resp:
-        result = json.loads(resp.read().decode())
+    signal.signal(signal.SIGALRM, _alarm_handler)
+    signal.alarm(total_timeout)
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            result = json.loads(resp.read().decode())
+    finally:
+        signal.alarm(0)
+        signal.signal(signal.SIGALRM, old_handler)
     duration_ms = (time.time() - t0) * 1000
 
     return {

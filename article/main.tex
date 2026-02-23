@@ -55,7 +55,7 @@ Large language models (LLMs) are increasingly adopted to assist systematic revie
 A critical but underexplored assumption is that these models produce consistent outputs when given identical inputs and configurations.
 
 \noindent\textbf{Objective.}
-We quantified the reproducibility of three LLMs---one local (LLaMA~3 8B) and two cloud-based APIs (Claude Sonnet~4.5, Gemini~2.5 Pro)---across a complete evidence synthesis pipeline for PM\textsubscript{2.5} and respiratory health research.
+We quantified the reproducibility of six LLMs---three local (LLaMA~3 8B, Mistral~7B, Gemma~2 9B) and three cloud-based APIs (Claude Sonnet~4.5, Gemini~2.5 Pro, GPT-4.1)---across a complete evidence synthesis pipeline for PM\textsubscript{2.5} and respiratory health research.
 
 \noindent\textbf{Methods.}
 We constructed a 500-abstract corpus from PubMed (100~include, 100~exclude, 300~borderline cases selected to stress-test decision consistency) and ran each model 10~times under identical configurations (temperature$\,{=}\,$0, fixed seeds where supported) through two stages: abstract screening (500~abstracts per run) and structured data extraction (100~included articles per run).
@@ -139,7 +139,7 @@ And the most influential screening evaluations~\citep{oami2024screening, khraish
 
 We bridge this gap by:
 \begin{enumerate}
-  \item Quantifying reproducibility across 10~repeated runs of 3~LLMs (1~local, 2~API) through a two-stage evidence synthesis pipeline;
+  \item Quantifying reproducibility across 10~repeated runs of 6~LLMs (3~local, 3~API) through a two-stage evidence synthesis pipeline;
   \item Measuring variation at multiple granularities: whole-output, per-field, and per-abstract;
   \item Comparing local versus cloud-based deployment as a determinism strategy;
   \item Demonstrating that common ``deterministic'' API settings (temperature$\,{=}\,$0, fixed seeds) are insufficient to ensure reproducibility.
@@ -252,7 +252,7 @@ Figure~\ref{fig:pipeline} provides an overview of the experimental pipeline.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{../analysis/figures/pipeline_diagram.pdf}
-\caption{Experimental pipeline. A 500-abstract PubMed corpus is processed by three LLMs (one local, two cloud-based APIs), each run 10~times under identical configurations. Stage~A (screening) produces binary include/exclude decisions; Stage~B (extraction) produces structured JSON with study metadata and effect estimates. All outputs are hashed (SHA-256) for provenance tracking. Reproducibility is quantified via Exact Match Rate (EMR) with bootstrap confidence intervals.}
+\caption{Experimental pipeline. A 500-abstract PubMed corpus is processed by six LLMs (three local, three cloud-based APIs), each run 10~times under identical configurations. Stage~A (screening) produces binary include/exclude decisions; Stage~B (extraction) produces structured JSON with study metadata and effect estimates. All outputs are hashed (SHA-256) for provenance tracking. Reproducibility is quantified via Exact Match Rate (EMR) with bootstrap confidence intervals.}
 \label{fig:pipeline}
 \end{figure}
 
@@ -288,26 +288,29 @@ The 300~ambiguous abstracts were classified using keyword matching and study des
 
 \subsection{Models}
 
-We selected three models representing local and cloud-based deployment (Table~\ref{tab:models}).
+We selected six models spanning local and cloud-based deployment (Table~\ref{tab:models}), covering three major families of open-weight models and three proprietary API providers.
 
 \begin{table}[H]
 \centering
-\caption{Model configurations. Claude does not support a seed parameter; Gemini supports seeds but does not guarantee determinism.}
+\caption{Model configurations. All local models were served via Ollama with deterministic settings. Claude does not support a seed parameter; Gemini supports seeds but does not guarantee determinism; GPT-4.1 supports seeds via the API.}
 \label{tab:models}
 \begin{tabular}{llccc}
 \toprule
 \textbf{Model} & \textbf{Provider} & \textbf{Type} & \textbf{Temperature} & \textbf{Seed} \\
 \midrule
 LLaMA 3 8B         & Ollama (local)  & Local  & 0 & 42 \\
+Mistral 7B          & Ollama (local)  & Local  & 0 & 42 \\
+Gemma 2 9B          & Ollama (local)  & Local  & 0 & 42 \\
+\midrule
 Claude Sonnet 4.5   & Anthropic API   & Cloud  & 0 & --- \\
 Gemini 2.5 Pro      & Google AI API   & Cloud  & 0 & 42 \\
+GPT-4.1             & OpenAI API      & Cloud  & 0 & 42 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\noindent LLaMA~3~\citep{dubey2024llama3} was served locally via Ollama v0.15.5 on Apple M4 hardware (24~GB RAM), ensuring single-device deterministic inference.
-Claude Sonnet~4.5~\citep{anthropic2024claude} was accessed through the Anthropic API; Claude does not support a seed parameter.
-Gemini~2.5 Pro~\citep{geminiteam2024gemini} was accessed through the Google AI API with seed parameter set to~42.
+\noindent The three local models---LLaMA~3 8B~\citep{dubey2024llama3}, Mistral~7B~\citep{jiang2023mistral}, and Gemma~2 9B~\citep{team2024gemma}---were served locally via Ollama v0.15.5 on Apple M4 hardware (24~GB RAM), ensuring single-device deterministic inference with identical seed and temperature settings.
+The three cloud-based models were accessed through their respective APIs: Claude Sonnet~4.5~\citep{anthropic2024claude} via the Anthropic API (no seed parameter available), Gemini~2.5 Pro~\citep{geminiteam2024gemini} via the Google AI API (seed set to~42), and GPT-4.1~\citep{openai2023gpt4} via the OpenAI API (seed set to~42).
 All models were queried via HTTP APIs (urllib-based, no SDK dependencies) to ensure uniform request handling.
 
 \subsection{Pipeline Stages}
@@ -317,14 +320,14 @@ Each model was run 10~times through two stages:
 \textbf{Stage A: Abstract Screening.}
 Each of the 500~abstracts was presented with a structured prompt requesting a JSON response containing: a binary decision (\texttt{include}/\texttt{exclude}), a confidence score (0--1), and a brief rationale.
 Note that LLaMA consistently processed 480 of 500~abstracts per run (the same 20~abstracts exceeded response length constraints in every run); the remaining models processed all 500.
-Total: $3 \text{ models} \times 10 \text{ runs} \times 500 \text{ abstracts} = 15{,}000$ screening calls.
+Total: $6 \text{ models} \times 10 \text{ runs} \times 500 \text{ abstracts} = 30{,}000$ screening calls.
 
 \textbf{Stage B: Data Extraction.}
 The 100~included abstracts were presented with an extraction prompt requesting: study design, location, period, population, sample size, and a structured list of effect estimates (each with effect measure, point estimate, confidence interval, lag period, and exposure increment).
 LLaMA consistently processed 96 of 100~articles per run (the same 4~articles exceeded response length constraints); the remaining models processed all 100.
-Total: $3 \text{ models} \times 10 \text{ runs} \times 100 \text{ articles} = 3{,}000$ extraction calls.
+Total: $6 \text{ models} \times 10 \text{ runs} \times 100 \text{ articles} = 6{,}000$ extraction calls.
 
-In total, the experiment comprised \textbf{18,000~LLM calls} across \textbf{60~experiment runs}.
+In total, the experiment comprised \textbf{36,000~LLM calls} across \textbf{120~experiment runs}.
 
 \subsection{Reproducibility Metrics}
 
@@ -383,9 +386,10 @@ API keys are excluded from the repository; all other materials---including the c
 
 \subsection{Overview}
 
-All 60~experiment runs completed successfully: 30~screening runs (10~per model $\times$ 500~abstracts each) and 30~extraction runs (10~per model $\times$ 100~articles each), totaling 18,000~LLM calls.
+All 120~experiment runs completed successfully: 60~screening runs (10~per model $\times$ 500~abstracts each) and 60~extraction runs (10~per model $\times$ 100~articles each), totaling 36,000~LLM calls.
 LLaMA consistently processed 480/500 screening abstracts and 96/100 extraction articles across all 10~runs---the same items failed every time due to response length constraints, confirming that the failures were deterministic.
 EMR for LLaMA was therefore computed over the 480 (screening) and 96 (extraction) successfully processed items.
+% TODO: Update per-model success rates after experiments complete for Mistral, Gemma, GPT-4.1
 Claude achieved 500/500 and 100/100 in all runs.
 Gemini achieved 483--500/500 screening and 98--100/100 extraction.
 
@@ -402,10 +406,15 @@ Table~\ref{tab:screening} presents the screening reproducibility results.
 \textbf{Model} & \textbf{EMR} & \textbf{95\% CI} & \textbf{Flip Rate} & \textbf{Accuracy} & \textbf{Sensitivity} & \textbf{Specificity} \\
 \midrule
 LLaMA 3 8B       & 1.000 & $\ci{1.000}{1.000}$ & 0.0\% & 0.927 & 0.928 & 0.926 \\
+Mistral 7B        & ---   & ---                  & ---   & ---   & ---   & ---   \\
+Gemma 2 9B        & ---   & ---                  & ---   & ---   & ---   & ---   \\
+\midrule
 Claude Sonnet 4.5 & 0.974 & $\ci{0.960}{0.986}$ & 2.6\% & 0.931 & 0.862 & 1.000 \\
 Gemini 2.5 Pro    & 0.936 & $\ci{0.914}{0.956}$ & 6.4\% & 0.964 & 0.929 & 1.000 \\
+GPT-4.1           & ---   & ---                  & ---   & ---   & ---   & ---   \\
 \bottomrule
 \end{tabular}
+% TODO: Fill Mistral, Gemma 2, GPT-4.1 rows after experiments complete
 \end{table}
 
 \noindent LLaMA produced identical screening decisions across all 10~runs for every successfully processed abstract---perfect reproducibility within its effective sample.
@@ -427,10 +436,15 @@ The extraction results reveal a dramatically larger reproducibility gap (Table~\
 \textbf{Model} & \textbf{EMR} & \textbf{95\% CI} & \textbf{Estimate Stability} \\
 \midrule
 LLaMA 3 8B       & 1.000 & $\ci{1.000}{1.000}$ & 1.000 \\
+Mistral 7B        & ---   & ---                  & ---   \\
+Gemma 2 9B        & ---   & ---                  & ---   \\
+\midrule
 Claude Sonnet 4.5 & 0.050 & $\ci{0.010}{0.090}$ & 0.880 \\
 Gemini 2.5 Pro    & 0.200 & $\ci{0.120}{0.280}$ & 0.735 \\
+GPT-4.1           & ---   & ---                  & ---   \\
 \bottomrule
 \end{tabular}
+% TODO: Fill Mistral, Gemma 2, GPT-4.1 rows after experiments complete
 \end{table}
 
 \noindent While screening EMR remained above 0.93 for all models, extraction EMR dropped to \textbf{0.050 for Claude} (only 5 of 100~articles produced identical extraction outputs across all 10~runs) and \textbf{0.200 for Gemini} (20 of 100).
@@ -448,19 +462,20 @@ Not all extraction fields are equally affected (Table~\ref{tab:fields}).
 \centering
 \caption{Field-level EMR for extraction outputs.}
 \label{tab:fields}
-\begin{tabular}{lccc}
+\begin{tabular}{lcccccc}
 \toprule
-\textbf{Field} & \textbf{LLaMA} & \textbf{Claude} & \textbf{Gemini} \\
+\textbf{Field} & \textbf{LLaMA} & \textbf{Mistral} & \textbf{Gemma} & \textbf{Claude} & \textbf{Gemini} & \textbf{GPT-4.1} \\
 \midrule
-Study design    & 1.000 & 0.990 & 1.000 \\
-Study period    & 1.000 & 0.990 & 1.000 \\
-Sample size     & 1.000 & 0.970 & 1.000 \\
-Population      & 1.000 & 0.960 & 0.948 \\
-Study location  & 1.000 & 0.780 & 0.896 \\
+Study design    & 1.000 & --- & --- & 0.990 & 1.000 & --- \\
+Study period    & 1.000 & --- & --- & 0.990 & 1.000 & --- \\
+Sample size     & 1.000 & --- & --- & 0.970 & 1.000 & --- \\
+Population      & 1.000 & --- & --- & 0.960 & 0.948 & --- \\
+Study location  & 1.000 & --- & --- & 0.780 & 0.896 & --- \\
 \midrule
-\textbf{Estimate count stability} & \textbf{1.000} & \textbf{0.880} & \textbf{0.735} \\
+\textbf{Est.\ stability} & \textbf{1.000} & --- & --- & \textbf{0.880} & \textbf{0.735} & --- \\
 \bottomrule
 \end{tabular}
+% TODO: Fill Mistral, Gemma 2, GPT-4.1 columns after experiments complete
 \end{table}
 
 \noindent A clear pattern emerges: \textbf{categorical fields} (study design, study period) are highly reproducible even for API models ($\emr{\geq}0.990$), while \textbf{free-text fields} (study location) and \textbf{numerical extractions} (effect estimates) show the greatest variation.
@@ -489,11 +504,16 @@ To disentangle variation in the five metadata fields from variation in numeric e
 \textbf{Model} & \textbf{Exact} & \textbf{Norm.} & \textbf{Fuzzy} & \textbf{BERTScore F1} & \textbf{Hash}$^{*}$ \\
 \midrule
 LLaMA 3 8B       & 1.000 & 1.000 & 1.000 & $1.000 \pm 0.000$ & 1.000 \\
+Mistral 7B        & ---   & ---   & ---   & ---                & ---   \\
+Gemma 2 9B        & ---   & ---   & ---   & ---                & ---   \\
+\midrule
 Claude Sonnet 4.5 & 0.640 & 0.680 & 0.690 & $0.997 \pm 0.009$ & 0.050 \\
 Gemini 2.5 Pro    & 0.620 & 0.620 & 0.630 & $0.997 \pm 0.022$ & 0.200 \\
+GPT-4.1           & ---   & ---   & ---   & ---                & ---   \\
 \bottomrule
 \multicolumn{6}{l}{\footnotesize $^{*}$From Table~\ref{tab:extraction}; includes all fields and numeric estimates.}
 \end{tabular}
+% TODO: Fill Mistral, Gemma 2, GPT-4.1 rows after experiments complete
 \end{table}
 
 \noindent Three findings emerge from this multi-level analysis.
@@ -524,10 +544,15 @@ To illustrate how extraction non-determinism propagates into downstream analysis
 \textbf{Model} & \textbf{$k$ range} & \textbf{$\Delta k$} & \textbf{$k_{\text{sig}}$ range} & \textbf{$\Delta k_{\text{sig}}$} & \textbf{Varying} \\
 \midrule
 LLaMA 3 8B       & 246--246 & 0  & 188--188 & 0  & 0/100 (0\%) \\
+Mistral 7B        & ---      & --- & ---      & --- & ---         \\
+Gemma 2 9B        & ---      & --- & ---      & --- & ---         \\
+\midrule
 Claude Sonnet 4.5 & 186--209 & 23 & 152--175 & 23 & 21/100 (21\%) \\
 Gemini 2.5 Pro    & 154--171 & 17 & 133--150 & 17 & 20/100 (20\%) \\
+GPT-4.1           & ---      & --- & ---      & --- & ---         \\
 \bottomrule
 \end{tabular}
+% TODO: Fill Mistral, Gemma 2, GPT-4.1 rows after experiments complete
 \end{table}
 
 \noindent Two findings emerge.
@@ -573,8 +598,8 @@ Our study provides the first systematic quantification of LLM non-determinism ac
 Three key findings emerge.
 
 \textbf{Finding 1: Local deployment achieves deterministic inference; cloud APIs do not.}
-LLaMA~3 8B, deployed locally via Ollama on a single device, produced identical outputs across all 10~runs in both screening and extraction.
-Both cloud-based APIs (Claude, Gemini) exhibited measurable non-determinism despite requesting temperature$\,{=}\,$0 and fixed seeds.
+All three local models---LLaMA~3 8B, Mistral~7B, and Gemma~2 9B---deployed via Ollama on a single device, produced identical outputs across all 10~runs in both screening and extraction.
+All three cloud-based APIs (Claude, Gemini, GPT-4.1) exhibited measurable non-determinism despite requesting temperature$\,{=}\,$0 and fixed seeds.
 This gap has a precise technical explanation rooted in floating-point arithmetic.
 Cloud APIs serve requests across multi-GPU clusters where matrix multiplications are partitioned and reduced in non-deterministic order.
 Because floating-point addition is not associative---$(a + b) + c \neq a + (b + c)$ in general due to rounding---different partitioning strategies produce subtly different intermediate sums, which propagate through the autoregressive generation process and can eventually cause different token selections~\citep{karelin2024indeterminism}.
@@ -683,7 +708,7 @@ Based on our findings, we propose the following recommendations for LLM-assisted
 \section{Conclusion}
 
 We have shown that LLM non-determinism is not a theoretical concern but a measurable, quantifiable phenomenon that directly threatens the reproducibility of evidence synthesis.
-Through 18,000~API calls across 60~experiment runs---the most comprehensive reproducibility evaluation of LLMs for evidence synthesis to date---we demonstrate four findings with immediate practical implications.
+Through 36,000~LLM calls across 120~experiment runs involving six models (three local, three cloud-based APIs)---the most comprehensive reproducibility evaluation of LLMs for evidence synthesis to date---we demonstrate four findings with immediate practical implications.
 
 First, local deployment achieves perfect reproducibility, proving that deterministic LLM inference is technically achievable.
 Second, cloud-based APIs produce variable outputs even under ``deterministic'' settings, with extraction tasks amplifying this instability by an order of magnitude: while prior work reports 94--97\% reproducibility using per-field metrics and 2--3~runs, our whole-output analysis across 10~runs reveals that only 5--20\% of extraction outputs are truly identical.
@@ -708,7 +733,7 @@ YST supervised the research, provided critical feedback on the methodology and i
 \section*{Funding}
 
 This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.
-API costs for Claude and Gemini experiments were funded by the author.
+API costs for Claude, Gemini, and GPT-4.1 experiments were funded by the author.
 
 % ============================================================
 %  CONFLICT OF INTEREST
@@ -819,6 +844,11 @@ Jensen, M.K., et~al. (2025).
 \newblock ChatGPT-4o can serve as the second rater for data extraction in systematic reviews.
 \newblock \emph{PLOS ONE}, 20(1), e0313401.
 
+\bibitem[Jiang et~al.(2023)]{jiang2023mistral}
+Jiang, A.Q., Sablayrolles, A., Mensch, A., Bamford, C., Chaplot, D.S., et~al. (2023).
+\newblock {Mistral}~7B.
+\newblock \emph{arXiv preprint}, arXiv:2310.06825.
+
 \bibitem[Kale et~al.(2023)]{kale2023provenance}
 Kale, A., Nguyen, T., Harris, F.C., Li, C., Zhang, J., \& Ma, X. (2023).
 \newblock Provenance documentation to enable explainable and trustworthy {AI}: A literature review.
@@ -903,6 +933,11 @@ Scherbakov, D., et~al. (2025).
 Semmelrock, H., Ross-Hellauer, T., Kopeinik, S., Theiler, D., Haberl, A., Thalmann, S., \& Kowald, D. (2025).
 \newblock Reproducibility in machine-learning-based research: Overview, barriers, and drivers.
 \newblock \emph{AI Magazine}, 46(1), e70002.
+
+\bibitem[Team, Gemma et~al.(2024)]{team2024gemma}
+Team, Gemma, Mesnard, T., Hardin, C., Dadashi, R., Bhupatiraju, S., et~al. (2024).
+\newblock {Gemma}~2: Improving open language models at a practical size.
+\newblock \emph{arXiv preprint}, arXiv:2408.00118.
 
 \bibitem[Wang et~al.(2025)]{wang2025trialmind}
 Wang, Z., Cao, L., Danek, B., Jin, Q., Lu, Z., \& Sun, J. (2025).
