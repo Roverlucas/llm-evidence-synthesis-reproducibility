@@ -1,0 +1,72 @@
+[
+  {
+    "corpus_id": "ABS-0001",
+    "stage": "screening",
+    "run_id": 1,
+    "model_id": "gpt-4.1",
+    "provider": "openai",
+    "call_hash": "43c06d77037ee6ed2a98da04591311b238e2c7d73748470a5f7078990bfad337",
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "timestamp": "2026-02-23T01:23:51.959881+00:00",
+    "inference_duration_ms": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "stop_reason": null
+  },
+  {
+    "corpus_id": "ABS-0002",
+    "stage": "screening",
+    "run_id": 1,
+    "model_id": "gpt-4.1",
+    "provider": "openai",
+    "call_hash": "4f82becd884164fa54e3a4abb3d4c3b9a60d2a7bb998bea0129e4e04d3fb2ddb",
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "timestamp": "2026-02-23T01:24:02.777506+00:00",
+    "inference_duration_ms": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "stop_reason": null
+  },
+  {
+    "corpus_id": "ABS-0003",
+    "stage": "screening",
+    "run_id": 1,
+    "model_id": "gpt-4.1",
+    "provider": "openai",
+    "call_hash": "3916d50e126858899df3f28fef479b6ab0a3bf783a6f7e8ef335bad4ae704fb9",
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "timestamp": "2026-02-23T01:24:15.161722+00:00",
+    "inference_duration_ms": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "stop_reason": null
+  },
+  {
+    "corpus_id": "ABS-0004",
+    "stage": "screening",
+    "run_id": 1,
+    "model_id": "gpt-4.1",
+    "provider": "openai",
+    "call_hash": "3de58412efb4528bf5d8ac219dc556e7f22a7cb8c93fb535bccd22ce55e475fb",
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "timestamp": "2026-02-23T01:24:27.501120+00:00",
+    "inference_duration_ms": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "stop_reason": null
+  },
+  {
+    "corpus_id": "ABS-0005",
+    "stage": "screening",
+    "run_id": 1,
+    "model_id": "gpt-4.1",
+    "provider": "openai",
+    "call_hash": "5915d849c4ceec5dd9fb778d36afd3a6c57e2a12c5512ec6d5a204091d4482a9",
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "timestamp": "2026-02-23T01:24:39.132921+00:00",
+    "inference_duration_ms": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "stop_reason": null
+  }
+]
