@@ -1,12 +1,21 @@
 {
   "experiment": "pm25-respiratory-reproducibility",
-  "completed": "2026-02-23T13:12:39.681901+00:00",
-  "elapsed_seconds": 433.7,
+  "completed": "2026-02-24T09:03:28.163967+00:00",
+  "elapsed_seconds": 71371.9,
   "models": [
-    "mistral-7b"
+    "gpt-4.1"
   ],
   "runs": [
-    1
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
   ],
   "stages": [
     "screening",
@@ -14,26 +23,214 @@
   ],
   "stats": [
     {
+      "skipped": true,
       "run_id": 1,
-      "model_id": "mistral-7b",
+      "model_id": "gpt-4.1",
+      "stage": "screening"
+    },
+    {
+      "skipped": true,
+      "run_id": 2,
+      "model_id": "gpt-4.1",
+      "stage": "screening"
+    },
+    {
+      "run_id": 3,
+      "model_id": "gpt-4.1",
       "stage": "screening",
-      "total": 5,
-      "successful": 5,
+      "total": 500,
+      "successful": 500,
       "failed": 0,
-      "valid": 5,
-      "start_time": "2026-02-23T13:05:26.039062+00:00",
-      "end_time": "2026-02-23T13:06:27.169560+00:00"
+      "valid": 500,
+      "start_time": "2026-02-23T13:13:57.448056+00:00",
+      "end_time": "2026-02-23T13:54:51.284456+00:00"
+    },
+    {
+      "run_id": 4,
+      "model_id": "gpt-4.1",
+      "stage": "screening",
+      "total": 500,
+      "successful": 500,
+      "failed": 0,
+      "valid": 500,
+      "start_time": "2026-02-23T13:54:52.603801+00:00",
+      "end_time": "2026-02-23T14:44:58.699026+00:00"
+    },
+    {
+      "run_id": 5,
+      "model_id": "gpt-4.1",
+      "stage": "screening",
+      "total": 500,
+      "successful": 500,
+      "failed": 0,
+      "valid": 500,
+      "start_time": "2026-02-23T14:45:00.249716+00:00",
+      "end_time": "2026-02-23T15:18:42.209143+00:00"
+    },
+    {
+      "run_id": 6,
+      "model_id": "gpt-4.1",
+      "stage": "screening",
+      "total": 500,
+      "successful": 500,
+      "failed": 0,
+      "valid": 500,
+      "start_time": "2026-02-23T15:18:43.717190+00:00",
+      "end_time": "2026-02-23T15:59:36.674404+00:00"
+    },
+    {
+      "run_id": 7,
+      "model_id": "gpt-4.1",
+      "stage": "screening",
+      "total": 500,
+      "successful": 500,
+      "failed": 0,
+      "valid": 500,
+      "start_time": "2026-02-23T15:59:38.011554+00:00",
+      "end_time": "2026-02-23T16:35:16.146358+00:00"
+    },
+    {
+      "run_id": 8,
+      "model_id": "gpt-4.1",
+      "stage": "screening",
+      "total": 500,
+      "successful": 500,
+      "failed": 0,
+      "valid": 500,
+      "start_time": "2026-02-23T16:35:17.895813+00:00",
+      "end_time": "2026-02-23T21:29:35.588914+00:00"
+    },
+    {
+      "run_id": 9,
+      "model_id": "gpt-4.1",
+      "stage": "screening",
+      "total": 500,
+      "successful": 500,
+      "failed": 0,
+      "valid": 500,
+      "start_time": "2026-02-23T21:29:36.822373+00:00",
+      "end_time": "2026-02-23T22:04:47.087581+00:00"
+    },
+    {
+      "run_id": 10,
+      "model_id": "gpt-4.1",
+      "stage": "screening",
+      "total": 500,
+      "successful": 500,
+      "failed": 0,
+      "valid": 500,
+      "start_time": "2026-02-23T22:04:48.217884+00:00",
+      "end_time": "2026-02-23T23:43:47.947832+00:00"
     },
     {
       "run_id": 1,
-      "model_id": "mistral-7b",
+      "model_id": "gpt-4.1",
       "stage": "extraction",
-      "total": 5,
-      "successful": 2,
-      "failed": 3,
+      "total": 100,
+      "successful": 100,
+      "failed": 0,
+      "valid": 62,
+      "start_time": "2026-02-23T23:43:49.245491+00:00",
+      "end_time": "2026-02-23T23:54:22.054232+00:00"
+    },
+    {
+      "run_id": 2,
+      "model_id": "gpt-4.1",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 49,
+      "failed": 28,
+      "valid": 30,
+      "start_time": "2026-02-23T23:54:23.390209+00:00",
+      "end_time": "2026-02-24T00:15:56.155448+00:00"
+    },
+    {
+      "run_id": 3,
+      "model_id": "gpt-4.1",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 0,
+      "failed": 10,
       "valid": 0,
-      "start_time": "2026-02-23T13:06:28.202230+00:00",
-      "end_time": "2026-02-23T13:12:38.722110+00:00"
+      "start_time": "2026-02-24T00:15:57.308250+00:00",
+      "end_time": "2026-02-24T00:21:24.264329+00:00"
+    },
+    {
+      "run_id": 4,
+      "model_id": "gpt-4.1",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 0,
+      "failed": 10,
+      "valid": 0,
+      "start_time": "2026-02-24T00:21:26.367818+00:00",
+      "end_time": "2026-02-24T00:26:53.257077+00:00"
+    },
+    {
+      "run_id": 5,
+      "model_id": "gpt-4.1",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 0,
+      "failed": 10,
+      "valid": 0,
+      "start_time": "2026-02-24T00:26:54.395337+00:00",
+      "end_time": "2026-02-24T01:02:20.783678+00:00"
+    },
+    {
+      "run_id": 6,
+      "model_id": "gpt-4.1",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 0,
+      "failed": 10,
+      "valid": 0,
+      "start_time": "2026-02-24T01:02:21.926084+00:00",
+      "end_time": "2026-02-24T03:00:44.924890+00:00"
+    },
+    {
+      "run_id": 7,
+      "model_id": "gpt-4.1",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 0,
+      "failed": 10,
+      "valid": 0,
+      "start_time": "2026-02-24T03:00:46.163960+00:00",
+      "end_time": "2026-02-24T04:20:26.533381+00:00"
+    },
+    {
+      "run_id": 8,
+      "model_id": "gpt-4.1",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 0,
+      "failed": 10,
+      "valid": 0,
+      "start_time": "2026-02-24T04:20:28.201967+00:00",
+      "end_time": "2026-02-24T06:00:13.192551+00:00"
+    },
+    {
+      "run_id": 9,
+      "model_id": "gpt-4.1",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 0,
+      "failed": 10,
+      "valid": 0,
+      "start_time": "2026-02-24T06:00:14.430403+00:00",
+      "end_time": "2026-02-24T07:22:17.709574+00:00"
+    },
+    {
+      "run_id": 10,
+      "model_id": "gpt-4.1",
+      "stage": "extraction",
+      "total": 100,
+      "successful": 0,
+      "failed": 10,
+      "valid": 0,
+      "start_time": "2026-02-24T07:22:18.947205+00:00",
+      "end_time": "2026-02-24T09:03:26.927988+00:00"
     }
   ]
 }
