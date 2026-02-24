@@ -7,7 +7,7 @@ Follows the same pattern as claude_runner.py and gemini_runner.py.
 
 import json
 import os
-import signal
+import threading
 import time
 import urllib.request
 from typing import Optional
@@ -15,6 +15,29 @@ from typing import Optional
 API_URL = "https://api.openai.com/v1/chat/completions"
 DEFAULT_MODEL = "gpt-4.1"
 TOTAL_TIMEOUT_MULTIPLIER = 3
+
+
+def _urlopen_with_hard_timeout(req, socket_timeout, total_timeout):
+    """HTTP request with thread-based total timeout (reliable on macOS)."""
+    result_box = [None]
+    error_box = [None]
+
+    def _worker():
+        try:
+            with urllib.request.urlopen(req, timeout=socket_timeout) as resp:
+                result_box[0] = json.loads(resp.read().decode())
+        except Exception as e:
+            error_box[0] = e
+
+    t = threading.Thread(target=_worker, daemon=True)
+    t.start()
+    t.join(timeout=total_timeout)
+
+    if t.is_alive():
+        raise TimeoutError(f"Total request timeout ({total_timeout}s) exceeded")
+    if error_box[0] is not None:
+        raise error_box[0]
+    return result_box[0]
 
 
 def run_inference(
@@ -57,20 +80,8 @@ def run_inference(
     )
 
     total_timeout = timeout * TOTAL_TIMEOUT_MULTIPLIER
-    old_handler = signal.getsignal(signal.SIGALRM)
-
-    def _alarm_handler(signum, frame):
-        raise TimeoutError(f"Total request timeout ({total_timeout}s) exceeded")
-
     t0 = time.time()
-    signal.signal(signal.SIGALRM, _alarm_handler)
-    signal.alarm(total_timeout)
-    try:
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
-            result = json.loads(resp.read().decode())
-    finally:
-        signal.alarm(0)
-        signal.signal(signal.SIGALRM, old_handler)
+    result = _urlopen_with_hard_timeout(req, timeout, total_timeout)
     duration_ms = (time.time() - t0) * 1000
 
     # Extract text from choices
