@@ -1,12 +1,12 @@
 """
 Ollama runner for LLaMA 3 8B (local inference).
 
-Uses Ollama /api/generate endpoint via urllib.
-Adapted from JAIR paper infrastructure.
+Uses Ollama /api/generate endpoint with streaming via urllib.
+Streaming reads token-by-token with per-read socket timeout,
+preventing permanent hangs that occur with non-streaming mode.
 """
 
 import json
-import threading
 import time
 import urllib.request
 import urllib.parse
@@ -15,31 +15,7 @@ from typing import Optional
 
 DEFAULT_ENDPOINT = "http://localhost:11434"
 DEFAULT_MODEL = "llama3:8b"
-DEFAULT_TIMEOUT = 180
-TOTAL_TIMEOUT_MULTIPLIER = 3  # hard kill after timeout * 3
-
-
-def _urlopen_with_hard_timeout(req, socket_timeout, total_timeout):
-    """HTTP request with thread-based total timeout (reliable on macOS)."""
-    result_box = [None]
-    error_box = [None]
-
-    def _worker():
-        try:
-            with urllib.request.urlopen(req, timeout=socket_timeout) as resp:
-                result_box[0] = json.loads(resp.read().decode())
-        except Exception as e:
-            error_box[0] = e
-
-    t = threading.Thread(target=_worker, daemon=True)
-    t.start()
-    t.join(timeout=total_timeout)
-
-    if t.is_alive():
-        raise TimeoutError(f"Total request timeout ({total_timeout}s) exceeded")
-    if error_box[0] is not None:
-        raise error_box[0]
-    return result_box[0]
+DEFAULT_TIMEOUT = 120  # per-chunk read timeout (seconds)
 
 
 def run_inference(
@@ -52,7 +28,7 @@ def run_inference(
     num_predict: int = 2048,
     timeout: int = DEFAULT_TIMEOUT,
 ) -> dict:
-    """Run single inference via Ollama /api/generate."""
+    """Run single inference via Ollama /api/generate with streaming."""
     full_prompt = f"{prompt}\n\n{input_text}"
 
     options = {
@@ -65,7 +41,7 @@ def run_inference(
     payload = {
         "model": model,
         "prompt": full_prompt,
-        "stream": False,
+        "stream": True,
         "options": options,
     }
 
@@ -77,20 +53,29 @@ def run_inference(
         method="POST",
     )
 
-    total_timeout = timeout * TOTAL_TIMEOUT_MULTIPLIER
     t0 = time.time()
-    result = _urlopen_with_hard_timeout(req, timeout, total_timeout)
+    response_text = ""
+    final_chunk = {}
+
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        for raw_line in resp:
+            chunk = json.loads(raw_line.decode())
+            response_text += chunk.get("response", "")
+            if chunk.get("done"):
+                final_chunk = chunk
+                break
+
     duration_ms = (time.time() - t0) * 1000
 
     return {
-        "output_text": result.get("response", ""),
+        "output_text": response_text,
         "model_id": model,
         "provider": "ollama",
         "inference_duration_ms": round(duration_ms, 1),
-        "model_duration_ns": result.get("total_duration"),
-        "prompt_eval_count": result.get("prompt_eval_count"),
-        "eval_count": result.get("eval_count"),
-        "done_reason": result.get("done_reason"),
+        "model_duration_ns": final_chunk.get("total_duration"),
+        "prompt_eval_count": final_chunk.get("prompt_eval_count"),
+        "eval_count": final_chunk.get("eval_count"),
+        "done_reason": final_chunk.get("done_reason"),
     }
 
 
