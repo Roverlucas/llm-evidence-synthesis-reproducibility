@@ -1,0 +1,112 @@
+[
+  {
+    "corpus_id": "ABS-0001",
+    "pmid": "38698010",
+    "run_id": 9,
+    "model_id": "gpt-4.1",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0002",
+    "pmid": "29259031",
+    "run_id": 9,
+    "model_id": "gpt-4.1",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0003",
+    "pmid": "35073244",
+    "run_id": 9,
+    "model_id": "gpt-4.1",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0004",
+    "pmid": "35394903",
+    "run_id": 9,
+    "model_id": "gpt-4.1",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0005",
+    "pmid": "35104259",
+    "run_id": 9,
+    "model_id": "gpt-4.1",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0006",
+    "pmid": "35384572",
+    "run_id": 9,
+    "model_id": "gpt-4.1",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0007",
+    "pmid": "35989078",
+    "run_id": 9,
+    "model_id": "gpt-4.1",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0008",
+    "pmid": "37792321",
+    "run_id": 9,
+    "model_id": "gpt-4.1",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0009",
+    "pmid": "30917578",
+    "run_id": 9,
+    "model_id": "gpt-4.1",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "corpus_id": "ABS-0010",
+    "pmid": "28787174",
+    "run_id": 9,
+    "model_id": "gpt-4.1",
+    "output": {
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    "valid": false,
+    "output_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]
