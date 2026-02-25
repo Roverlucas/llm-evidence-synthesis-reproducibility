@@ -1,21 +1,36 @@
 """
-Ollama runner for LLaMA 3 8B (local inference).
+Ollama runner for LLaMA 3 8B / Mistral 7B / Gemma 2 9B (local inference).
 
-Uses Ollama /api/generate endpoint with streaming via urllib.
-Streaming reads token-by-token with per-read socket timeout,
-preventing permanent hangs that occur with non-streaming mode.
+Uses subprocess with OS-level timeout for each inference call.
+This is the only reliable approach on macOS + Python 3.14, where
+socket timeouts, signal.alarm, and Thread.join(timeout) all fail
+to interrupt hung connections to Ollama.
 """
 
 import json
+import subprocess
+import sys
 import time
 import urllib.request
-import urllib.parse
 from typing import Optional
 
 
 DEFAULT_ENDPOINT = "http://localhost:11434"
 DEFAULT_MODEL = "llama3:8b"
-DEFAULT_TIMEOUT = 120  # per-chunk read timeout (seconds)
+DEFAULT_TIMEOUT = 300  # seconds per inference call
+
+# Script executed in subprocess — reads payload from stdin, writes result to stdout
+_INFERENCE_SCRIPT = r"""
+import json, sys, urllib.request
+payload = json.load(sys.stdin)
+url = payload.pop("_url")
+req = urllib.request.Request(
+    url, data=json.dumps(payload).encode("utf-8"),
+    headers={"Content-Type": "application/json"}, method="POST",
+)
+with urllib.request.urlopen(req) as resp:
+    sys.stdout.write(resp.read().decode())
+"""
 
 
 def run_inference(
@@ -28,7 +43,7 @@ def run_inference(
     num_predict: int = 2048,
     timeout: int = DEFAULT_TIMEOUT,
 ) -> dict:
-    """Run single inference via Ollama /api/generate with streaming."""
+    """Run single inference via Ollama in a subprocess with hard timeout."""
     full_prompt = f"{prompt}\n\n{input_text}"
 
     options = {
@@ -39,43 +54,37 @@ def run_inference(
         options["seed"] = seed
 
     payload = {
+        "_url": f"{endpoint}/api/generate",
         "model": model,
         "prompt": full_prompt,
-        "stream": True,
+        "stream": False,
         "options": options,
     }
 
-    url = f"{endpoint}/api/generate"
-    req = urllib.request.Request(
-        url,
-        data=json.dumps(payload).encode("utf-8"),
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
-
     t0 = time.time()
-    response_text = ""
-    final_chunk = {}
-
-    with urllib.request.urlopen(req, timeout=timeout) as resp:
-        for raw_line in resp:
-            chunk = json.loads(raw_line.decode())
-            response_text += chunk.get("response", "")
-            if chunk.get("done"):
-                final_chunk = chunk
-                break
-
+    proc = subprocess.run(
+        [sys.executable, "-c", _INFERENCE_SCRIPT],
+        input=json.dumps(payload),
+        capture_output=True,
+        text=True,
+        timeout=timeout,
+    )
     duration_ms = (time.time() - t0) * 1000
 
+    if proc.returncode != 0:
+        raise RuntimeError(f"Ollama subprocess failed: {proc.stderr[:500]}")
+
+    result = json.loads(proc.stdout)
+
     return {
-        "output_text": response_text,
+        "output_text": result.get("response", ""),
         "model_id": model,
         "provider": "ollama",
         "inference_duration_ms": round(duration_ms, 1),
-        "model_duration_ns": final_chunk.get("total_duration"),
-        "prompt_eval_count": final_chunk.get("prompt_eval_count"),
-        "eval_count": final_chunk.get("eval_count"),
-        "done_reason": final_chunk.get("done_reason"),
+        "model_duration_ns": result.get("total_duration"),
+        "prompt_eval_count": result.get("prompt_eval_count"),
+        "eval_count": result.get("eval_count"),
+        "done_reason": result.get("done_reason"),
     }
 
 
