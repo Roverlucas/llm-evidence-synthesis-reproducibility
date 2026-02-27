@@ -17,7 +17,7 @@ from typing import Optional
 
 DEFAULT_ENDPOINT = "http://localhost:11434"
 DEFAULT_MODEL = "llama3:8b"
-DEFAULT_TIMEOUT = 300  # seconds per inference call
+DEFAULT_TIMEOUT = 600  # seconds per inference call (extraction needs 300-500s)
 
 # Script executed in subprocess — reads payload from stdin, writes result to stdout
 _INFERENCE_SCRIPT = r"""
