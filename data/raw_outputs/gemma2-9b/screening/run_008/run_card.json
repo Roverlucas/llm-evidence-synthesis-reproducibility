@@ -1,0 +1,32 @@
+{
+  "run_card_version": "1.0",
+  "run_id": 8,
+  "stage": "screening",
+  "model_id": "gemma2-9b",
+  "provider": "ollama",
+  "model_info": {
+    "model_id": "gemma2:9b",
+    "provider": "ollama",
+    "weights_hash": "ff02c3702f322b9e075e9568332d96c0a7028002f1a5a056e0a6784320a4db0b",
+    "size": 5443152417,
+    "modified_at": "2026-02-09T16:36:25.5168077-03:00"
+  },
+  "config": {
+    "temperature": 0.0,
+    "seed": 42,
+    "max_tokens": 2048
+  },
+  "execution": {
+    "start_time": "2026-03-01T11:09:18.241255+00:00",
+    "end_time": "2026-03-01T13:09:11.689321+00:00",
+    "total_calls": 500,
+    "successful_calls": 493,
+    "failed_calls": 7,
+    "total_duration_ms": 7004389.0,
+    "mean_duration_ms": 14008.8
+  },
+  "provenance": {
+    "aggregate_output_hash": "b2c8a6edc3b5f0d039722944721ec3c74e25e62d3c4f1e8c816552cf4b5652cd",
+    "hash_algorithm": "sha256"
+  }
+}
