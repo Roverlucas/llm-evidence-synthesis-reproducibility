@@ -1,0 +1,2478 @@
+{
+  "metadata": {
+    "generated_at": "2026-03-02T16:03:11.497241Z",
+    "project": "LLM Evidence Synthesis Reproducibility",
+    "base_dir": "/Users/lucasrover/llm-evidence-synthesis-reproducibility",
+    "models": [
+      "llama3-8b",
+      "mistral-7b",
+      "gemma2-9b",
+      "claude-sonnet-4-5",
+      "gemini-2.5-pro",
+      "gpt-4.1"
+    ],
+    "stages": [
+      "screening",
+      "extraction"
+    ],
+    "runs_per_condition": 10,
+    "calls_per_run": 500,
+    "design": "6 models x 2 stages x 10 runs x 500 calls = 60,000 LLM calls",
+    "cost_assumptions": {
+      "gpt-4.1": "$2.00/1M input, $8.00/1M output",
+      "claude-sonnet-4-5": "$3.00/1M input, $15.00/1M output",
+      "gemini-2.5-pro": "Free tier (rate-limited)",
+      "local_models": "Electricity only: M4 ~15W, $0.10/kWh"
+    }
+  },
+  "models": {
+    "llama3-8b": {
+      "stages": {
+        "screening": {
+          "n_runs": 10,
+          "total_calls": 5000,
+          "successful_calls": 4800,
+          "failed_calls": 200,
+          "timing": {
+            "total_inference_duration_ms": 120538594.7,
+            "total_inference_duration_min": 2008.98,
+            "total_inference_duration_hr": 33.4829,
+            "mean_duration_per_call_ms": 25112.21,
+            "mean_duration_per_run_ms": 12053859.47,
+            "mean_duration_per_run_min": 200.9,
+            "aggregate_call_stats": {
+              "total_calls_with_duration": 5000,
+              "global_mean_ms": 24107.72,
+              "min_across_runs_ms": 4240.7,
+              "max_across_runs_ms": 1074509.3
+            }
+          },
+          "tokens": {
+            "total_input_tokens": 6396340,
+            "total_output_tokens": 511500,
+            "total_tokens": 6907840,
+            "mean_input_per_call": 1332.6,
+            "mean_output_per_call": 106.6
+          },
+          "wall_clock": {
+            "total_seconds": 130576.71,
+            "total_minutes": 2176.28,
+            "total_hours": 36.2713,
+            "mean_per_run_seconds": 13057.67,
+            "mean_per_run_minutes": 217.63
+          },
+          "time_window": {
+            "first_run_start": "2026-02-11T17:45:18.947230+00:00",
+            "last_run_end": "2026-02-13T15:11:03.223358+00:00"
+          }
+        },
+        "extraction": {
+          "n_runs": 10,
+          "total_calls": 1000,
+          "successful_calls": 960,
+          "failed_calls": 40,
+          "timing": {
+            "total_inference_duration_ms": 66934700.7,
+            "total_inference_duration_min": 1115.58,
+            "total_inference_duration_hr": 18.593,
+            "mean_duration_per_call_ms": 69723.65,
+            "mean_duration_per_run_ms": 6693470.07,
+            "mean_duration_per_run_min": 111.56,
+            "aggregate_call_stats": {
+              "total_calls_with_duration": 1000,
+              "global_mean_ms": 66934.7,
+              "min_across_runs_ms": 12381.4,
+              "max_across_runs_ms": 1911430.4
+            }
+          },
+          "tokens": {
+            "total_input_tokens": 1285960,
+            "total_output_tokens": 481940,
+            "total_tokens": 1767900,
+            "mean_input_per_call": 1339.5,
+            "mean_output_per_call": 502.0
+          },
+          "wall_clock": {
+            "total_seconds": 78697.01,
+            "total_minutes": 1311.62,
+            "total_hours": 21.8603,
+            "mean_per_run_seconds": 7869.7,
+            "mean_per_run_minutes": 131.16
+          },
+          "time_window": {
+            "first_run_start": "2026-02-13T15:11:04.465265+00:00",
+            "last_run_end": "2026-02-14T13:02:52.285772+00:00"
+          }
+        }
+      },
+      "cross_stage_totals": {
+        "total_calls": 6000,
+        "successful_calls": 5760,
+        "failed_calls": 240,
+        "total_inference_duration_ms": 187473295.4,
+        "total_input_tokens": 7682300,
+        "total_output_tokens": 993440,
+        "total_wall_clock_seconds": 209273.72,
+        "total_tokens": 8675740,
+        "total_inference_duration_min": 3124.55,
+        "total_inference_duration_hr": 52.0759,
+        "total_wall_clock_minutes": 3487.9,
+        "total_wall_clock_hours": 58.1316,
+        "mean_duration_per_call_ms": 32547.45,
+        "mean_input_tokens_per_call": 1333.7,
+        "mean_output_tokens_per_call": 172.5,
+        "throughput_tokens_per_second": 46.28
+      },
+      "costs": {
+        "provider": "ollama",
+        "total_input_tokens": 7682300,
+        "total_output_tokens": 993440,
+        "total_tokens": 8675740,
+        "api_cost_usd": {
+          "input_cost": 0.0,
+          "output_cost": 0.0,
+          "total_cost": 0.0,
+          "pricing": {
+            "input_per_1m_tokens": 0.0,
+            "output_per_1m_tokens": 0.0
+          }
+        },
+        "electricity_cost_usd": {
+          "total_cost": 0.078114,
+          "assumptions": {
+            "power_watts": 15,
+            "cost_per_kwh_usd": 0.1,
+            "total_inference_hours": 52.0759
+          }
+        },
+        "total_estimated_cost_usd": 0.0781,
+        "note": "Local inference"
+      },
+      "per_run_summary": {
+        "screening": [
+          {
+            "run_id": 1,
+            "exists": true,
+            "total_duration_ms": 6347852.4,
+            "mean_duration_ms": 12695.7,
+            "successful_calls": 480,
+            "failed_calls": 20,
+            "wall_clock_seconds": 6813.801398,
+            "input_tokens": 639634,
+            "output_tokens": 51150,
+            "call_duration_p25_ms": 10427.9,
+            "call_duration_median_ms": 11708.9,
+            "call_duration_p75_ms": 13089.3
+          },
+          {
+            "run_id": 2,
+            "exists": true,
+            "total_duration_ms": 5298923.3,
+            "mean_duration_ms": 10597.8,
+            "successful_calls": 480,
+            "failed_calls": 20,
+            "wall_clock_seconds": 5678.611932,
+            "input_tokens": 639634,
+            "output_tokens": 51150,
+            "call_duration_p25_ms": 9624.9,
+            "call_duration_median_ms": 10496.6,
+            "call_duration_p75_ms": 11452.9
+          },
+          {
+            "run_id": 3,
+            "exists": true,
+            "total_duration_ms": 5398312.3,
+            "mean_duration_ms": 10796.6,
+            "successful_calls": 480,
+            "failed_calls": 20,
+            "wall_clock_seconds": 5793.263778,
+            "input_tokens": 639634,
+            "output_tokens": 51150,
+            "call_duration_p25_ms": 9369.4,
+            "call_duration_median_ms": 10264.8,
+            "call_duration_p75_ms": 11177.4
+          },
+          {
+            "run_id": 4,
+            "exists": true,
+            "total_duration_ms": 26996050.1,
+            "mean_duration_ms": 53992.1,
+            "successful_calls": 480,
+            "failed_calls": 20,
+            "wall_clock_seconds": 28490.595862,
+            "input_tokens": 639634,
+            "output_tokens": 51150,
+            "call_duration_p25_ms": 9006.5,
+            "call_duration_median_ms": 10088.4,
+            "call_duration_p75_ms": 11054.7
+          },
+          {
+            "run_id": 5,
+            "exists": true,
+            "total_duration_ms": 6117272.2,
+            "mean_duration_ms": 12234.5,
+            "successful_calls": 480,
+            "failed_calls": 20,
+            "wall_clock_seconds": 6539.22342,
+            "input_tokens": 639634,
+            "output_tokens": 51150,
+            "call_duration_p25_ms": 9898.2,
+            "call_duration_median_ms": 10956.5,
+            "call_duration_p75_ms": 12225.3
+          },
+          {
+            "run_id": 6,
+            "exists": true,
+            "total_duration_ms": 5897983.5,
+            "mean_duration_ms": 11796.0,
+            "successful_calls": 480,
+            "failed_calls": 20,
+            "wall_clock_seconds": 6309.207419,
+            "input_tokens": 639634,
+            "output_tokens": 51150,
+            "call_duration_p25_ms": 10634.7,
+            "call_duration_median_ms": 11704.3,
+            "call_duration_p75_ms": 12776.2
+          },
+          {
+            "run_id": 7,
+            "exists": true,
+            "total_duration_ms": 6687894.7,
+            "mean_duration_ms": 13375.8,
+            "successful_calls": 480,
+            "failed_calls": 20,
+            "wall_clock_seconds": 8133.961675,
+            "input_tokens": 639634,
+            "output_tokens": 51150,
+            "call_duration_p25_ms": 10059.9,
+            "call_duration_median_ms": 11257.0,
+            "call_duration_p75_ms": 12370.7
+          },
+          {
+            "run_id": 8,
+            "exists": true,
+            "total_duration_ms": 18434763.2,
+            "mean_duration_ms": 36869.5,
+            "successful_calls": 480,
+            "failed_calls": 20,
+            "wall_clock_seconds": 19755.107901,
+            "input_tokens": 639634,
+            "output_tokens": 51150,
+            "call_duration_p25_ms": 9342.3,
+            "call_duration_median_ms": 10340.7,
+            "call_duration_p75_ms": 11205.8
+          },
+          {
+            "run_id": 9,
+            "exists": true,
+            "total_duration_ms": 33590506.7,
+            "mean_duration_ms": 67181.0,
+            "successful_calls": 480,
+            "failed_calls": 20,
+            "wall_clock_seconds": 36893.820896,
+            "input_tokens": 639634,
+            "output_tokens": 51150,
+            "call_duration_p25_ms": 8950.1,
+            "call_duration_median_ms": 9875.4,
+            "call_duration_p75_ms": 11036.6
+          },
+          {
+            "run_id": 10,
+            "exists": true,
+            "total_duration_ms": 5769036.3,
+            "mean_duration_ms": 11538.1,
+            "successful_calls": 480,
+            "failed_calls": 20,
+            "wall_clock_seconds": 6169.120111,
+            "input_tokens": 639634,
+            "output_tokens": 51150,
+            "call_duration_p25_ms": 10073.6,
+            "call_duration_median_ms": 11283.9,
+            "call_duration_p75_ms": 12853.5
+          }
+        ],
+        "extraction": [
+          {
+            "run_id": 1,
+            "exists": true,
+            "total_duration_ms": 3212039.3,
+            "mean_duration_ms": 32120.4,
+            "successful_calls": 96,
+            "failed_calls": 4,
+            "wall_clock_seconds": 3711.925422,
+            "input_tokens": 128596,
+            "output_tokens": 48194,
+            "call_duration_p25_ms": 23297.5,
+            "call_duration_median_ms": 29810.9,
+            "call_duration_p75_ms": 37436.2
+          },
+          {
+            "run_id": 2,
+            "exists": true,
+            "total_duration_ms": 4230389.1,
+            "mean_duration_ms": 42303.9,
+            "successful_calls": 96,
+            "failed_calls": 4,
+            "wall_clock_seconds": 4707.682091,
+            "input_tokens": 128596,
+            "output_tokens": 48194,
+            "call_duration_p25_ms": 22462.6,
+            "call_duration_median_ms": 28748.7,
+            "call_duration_p75_ms": 38783.0
+          },
+          {
+            "run_id": 3,
+            "exists": true,
+            "total_duration_ms": 3293023.5,
+            "mean_duration_ms": 32930.2,
+            "successful_calls": 96,
+            "failed_calls": 4,
+            "wall_clock_seconds": 3816.603084,
+            "input_tokens": 128596,
+            "output_tokens": 48194,
+            "call_duration_p25_ms": 23129.7,
+            "call_duration_median_ms": 29198.2,
+            "call_duration_p75_ms": 39638.8
+          },
+          {
+            "run_id": 4,
+            "exists": true,
+            "total_duration_ms": 3897424.2,
+            "mean_duration_ms": 38974.2,
+            "successful_calls": 96,
+            "failed_calls": 4,
+            "wall_clock_seconds": 4516.888963,
+            "input_tokens": 128596,
+            "output_tokens": 48194,
+            "call_duration_p25_ms": 26705.3,
+            "call_duration_median_ms": 36190.7,
+            "call_duration_p75_ms": 47562.8
+          },
+          {
+            "run_id": 5,
+            "exists": true,
+            "total_duration_ms": 3011619.9,
+            "mean_duration_ms": 30116.2,
+            "successful_calls": 96,
+            "failed_calls": 4,
+            "wall_clock_seconds": 3480.426613,
+            "input_tokens": 128596,
+            "output_tokens": 48194,
+            "call_duration_p25_ms": 21027.7,
+            "call_duration_median_ms": 27738.4,
+            "call_duration_p75_ms": 36543.8
+          },
+          {
+            "run_id": 6,
+            "exists": true,
+            "total_duration_ms": 2961755.4,
+            "mean_duration_ms": 29617.6,
+            "successful_calls": 96,
+            "failed_calls": 4,
+            "wall_clock_seconds": 3418.34099,
+            "input_tokens": 128596,
+            "output_tokens": 48194,
+            "call_duration_p25_ms": 21339.4,
+            "call_duration_median_ms": 26866.7,
+            "call_duration_p75_ms": 35563.3
+          },
+          {
+            "run_id": 7,
+            "exists": true,
+            "total_duration_ms": 2934324.1,
+            "mean_duration_ms": 29343.2,
+            "successful_calls": 96,
+            "failed_calls": 4,
+            "wall_clock_seconds": 3383.218438,
+            "input_tokens": 128596,
+            "output_tokens": 48194,
+            "call_duration_p25_ms": 20609.8,
+            "call_duration_median_ms": 27605.8,
+            "call_duration_p75_ms": 35582.6
+          },
+          {
+            "run_id": 8,
+            "exists": true,
+            "total_duration_ms": 4401504.4,
+            "mean_duration_ms": 44015.0,
+            "successful_calls": 96,
+            "failed_calls": 4,
+            "wall_clock_seconds": 5139.842772,
+            "input_tokens": 128596,
+            "output_tokens": 48194,
+            "call_duration_p25_ms": 21464.9,
+            "call_duration_median_ms": 28057.7,
+            "call_duration_p75_ms": 38601.1
+          },
+          {
+            "run_id": 9,
+            "exists": true,
+            "total_duration_ms": 8395565.2,
+            "mean_duration_ms": 83955.7,
+            "successful_calls": 96,
+            "failed_calls": 4,
+            "wall_clock_seconds": 10502.134942,
+            "input_tokens": 128596,
+            "output_tokens": 48194,
+            "call_duration_p25_ms": 20485.4,
+            "call_duration_median_ms": 27844.6,
+            "call_duration_p75_ms": 36863.2
+          },
+          {
+            "run_id": 10,
+            "exists": true,
+            "total_duration_ms": 30597055.6,
+            "mean_duration_ms": 305970.6,
+            "successful_calls": 96,
+            "failed_calls": 4,
+            "wall_clock_seconds": 36019.947895,
+            "input_tokens": 128596,
+            "output_tokens": 48194,
+            "call_duration_p25_ms": 22671.6,
+            "call_duration_median_ms": 30727.8,
+            "call_duration_p75_ms": 716704.5
+          }
+        ]
+      }
+    },
+    "mistral-7b": {
+      "stages": {
+        "screening": {
+          "n_runs": 10,
+          "total_calls": 5000,
+          "successful_calls": 4970,
+          "failed_calls": 30,
+          "timing": {
+            "total_inference_duration_ms": 183370571.7,
+            "total_inference_duration_min": 3056.18,
+            "total_inference_duration_hr": 50.9363,
+            "mean_duration_per_call_ms": 36895.49,
+            "mean_duration_per_run_ms": 18337057.17,
+            "mean_duration_per_run_min": 305.62,
+            "aggregate_call_stats": {
+              "total_calls_with_duration": 5000,
+              "global_mean_ms": 36674.11,
+              "min_across_runs_ms": 5573.2,
+              "max_across_runs_ms": 1091818.8
+            }
+          },
+          "tokens": {
+            "total_input_tokens": 7676110,
+            "total_output_tokens": 700420,
+            "total_tokens": 8376530,
+            "mean_input_per_call": 1544.5,
+            "mean_output_per_call": 140.9
+          },
+          "wall_clock": {
+            "total_seconds": 184508.07,
+            "total_minutes": 3075.13,
+            "total_hours": 51.2522,
+            "mean_per_run_seconds": 18450.81,
+            "mean_per_run_minutes": 307.51
+          },
+          "time_window": {
+            "first_run_start": "2026-02-23T13:13:54.768813+00:00",
+            "last_run_end": "2026-02-27T02:09:37.047916+00:00"
+          }
+        },
+        "extraction": {
+          "n_runs": 10,
+          "total_calls": 1000,
+          "successful_calls": 1000,
+          "failed_calls": 0,
+          "timing": {
+            "total_inference_duration_ms": 91667267.4,
+            "total_inference_duration_min": 1527.79,
+            "total_inference_duration_hr": 25.4631,
+            "mean_duration_per_call_ms": 91667.27,
+            "mean_duration_per_run_ms": 9166726.74,
+            "mean_duration_per_run_min": 152.78,
+            "aggregate_call_stats": {
+              "total_calls_with_duration": 1000,
+              "global_mean_ms": 91667.27,
+              "min_across_runs_ms": 17798.8,
+              "max_across_runs_ms": 2330984.0
+            }
+          },
+          "tokens": {
+            "total_input_tokens": 1569040,
+            "total_output_tokens": 681160,
+            "total_tokens": 2250200,
+            "mean_input_per_call": 1569.0,
+            "mean_output_per_call": 681.2
+          },
+          "wall_clock": {
+            "total_seconds": 123006.58,
+            "total_minutes": 2050.11,
+            "total_hours": 34.1685,
+            "mean_per_run_seconds": 12300.66,
+            "mean_per_run_minutes": 205.01
+          },
+          "time_window": {
+            "first_run_start": "2026-02-27T14:03:10.006408+00:00",
+            "last_run_end": "2026-03-01T00:13:27.086833+00:00"
+          }
+        }
+      },
+      "cross_stage_totals": {
+        "total_calls": 6000,
+        "successful_calls": 5970,
+        "failed_calls": 30,
+        "total_inference_duration_ms": 275037839.1,
+        "total_input_tokens": 9245150,
+        "total_output_tokens": 1381580,
+        "total_wall_clock_seconds": 307514.65,
+        "total_tokens": 10626730,
+        "total_inference_duration_min": 4583.96,
+        "total_inference_duration_hr": 76.3994,
+        "total_wall_clock_minutes": 5125.24,
+        "total_wall_clock_hours": 85.4207,
+        "mean_duration_per_call_ms": 46069.99,
+        "mean_input_tokens_per_call": 1548.6,
+        "mean_output_tokens_per_call": 231.4,
+        "throughput_tokens_per_second": 38.64
+      },
+      "costs": {
+        "provider": "ollama",
+        "total_input_tokens": 9245150,
+        "total_output_tokens": 1381580,
+        "total_tokens": 10626730,
+        "api_cost_usd": {
+          "input_cost": 0.0,
+          "output_cost": 0.0,
+          "total_cost": 0.0,
+          "pricing": {
+            "input_per_1m_tokens": 0.0,
+            "output_per_1m_tokens": 0.0
+          }
+        },
+        "electricity_cost_usd": {
+          "total_cost": 0.114599,
+          "assumptions": {
+            "power_watts": 15,
+            "cost_per_kwh_usd": 0.1,
+            "total_inference_hours": 76.3994
+          }
+        },
+        "total_estimated_cost_usd": 0.1146,
+        "note": "Local inference"
+      },
+      "per_run_summary": {
+        "screening": [
+          {
+            "run_id": 1,
+            "exists": true,
+            "total_duration_ms": 7513905.0,
+            "mean_duration_ms": 15027.8,
+            "successful_calls": 497,
+            "failed_calls": 3,
+            "wall_clock_seconds": 7599.802835,
+            "input_tokens": 767611,
+            "output_tokens": 70042,
+            "call_duration_p25_ms": 12374.0,
+            "call_duration_median_ms": 13523.3,
+            "call_duration_p75_ms": 14899.4
+          },
+          {
+            "run_id": 2,
+            "exists": true,
+            "total_duration_ms": 21999003.5,
+            "mean_duration_ms": 43998.0,
+            "successful_calls": 497,
+            "failed_calls": 3,
+            "wall_clock_seconds": 22088.578342,
+            "input_tokens": 767611,
+            "output_tokens": 70042,
+            "call_duration_p25_ms": 12014.5,
+            "call_duration_median_ms": 13301.0,
+            "call_duration_p75_ms": 14529.1
+          },
+          {
+            "run_id": 3,
+            "exists": true,
+            "total_duration_ms": 19868553.3,
+            "mean_duration_ms": 39737.1,
+            "successful_calls": 497,
+            "failed_calls": 3,
+            "wall_clock_seconds": 19964.24998,
+            "input_tokens": 767611,
+            "output_tokens": 70042,
+            "call_duration_p25_ms": 12598.5,
+            "call_duration_median_ms": 13966.9,
+            "call_duration_p75_ms": 16099.2
+          },
+          {
+            "run_id": 4,
+            "exists": true,
+            "total_duration_ms": 7861908.9,
+            "mean_duration_ms": 15723.8,
+            "successful_calls": 497,
+            "failed_calls": 3,
+            "wall_clock_seconds": 7975.839642,
+            "input_tokens": 767611,
+            "output_tokens": 70042,
+            "call_duration_p25_ms": 12168.3,
+            "call_duration_median_ms": 13588.0,
+            "call_duration_p75_ms": 19037.1
+          },
+          {
+            "run_id": 5,
+            "exists": true,
+            "total_duration_ms": 13149509.5,
+            "mean_duration_ms": 26299.0,
+            "successful_calls": 497,
+            "failed_calls": 3,
+            "wall_clock_seconds": 13312.907168,
+            "input_tokens": 767611,
+            "output_tokens": 70042,
+            "call_duration_p25_ms": 21763.1,
+            "call_duration_median_ms": 24401.2,
+            "call_duration_p75_ms": 26987.9
+          },
+          {
+            "run_id": 6,
+            "exists": true,
+            "total_duration_ms": 12287237.7,
+            "mean_duration_ms": 24574.5,
+            "successful_calls": 497,
+            "failed_calls": 3,
+            "wall_clock_seconds": 12440.148143,
+            "input_tokens": 767611,
+            "output_tokens": 70042,
+            "call_duration_p25_ms": 21229.1,
+            "call_duration_median_ms": 24013.7,
+            "call_duration_p75_ms": 26274.1
+          },
+          {
+            "run_id": 7,
+            "exists": true,
+            "total_duration_ms": 63595209.8,
+            "mean_duration_ms": 127190.4,
+            "successful_calls": 497,
+            "failed_calls": 3,
+            "wall_clock_seconds": 63757.837984,
+            "input_tokens": 767611,
+            "output_tokens": 70042,
+            "call_duration_p25_ms": 20653.9,
+            "call_duration_median_ms": 23395.8,
+            "call_duration_p75_ms": 26443.3
+          },
+          {
+            "run_id": 8,
+            "exists": true,
+            "total_duration_ms": 8856776.2,
+            "mean_duration_ms": 17713.6,
+            "successful_calls": 497,
+            "failed_calls": 3,
+            "wall_clock_seconds": 8949.53356,
+            "input_tokens": 767611,
+            "output_tokens": 70042,
+            "call_duration_p25_ms": 12888.6,
+            "call_duration_median_ms": 14503.5,
+            "call_duration_p75_ms": 17376.2
+          },
+          {
+            "run_id": 9,
+            "exists": true,
+            "total_duration_ms": 7139672.9,
+            "mean_duration_ms": 14279.3,
+            "successful_calls": 497,
+            "failed_calls": 3,
+            "wall_clock_seconds": 7231.308542,
+            "input_tokens": 767611,
+            "output_tokens": 70042,
+            "call_duration_p25_ms": 12773.8,
+            "call_duration_median_ms": 14063.2,
+            "call_duration_p75_ms": 15307.3
+          },
+          {
+            "run_id": 10,
+            "exists": true,
+            "total_duration_ms": 21098794.9,
+            "mean_duration_ms": 42197.6,
+            "successful_calls": 497,
+            "failed_calls": 3,
+            "wall_clock_seconds": 21187.866152,
+            "input_tokens": 767611,
+            "output_tokens": 70042,
+            "call_duration_p25_ms": 12111.1,
+            "call_duration_median_ms": 13412.7,
+            "call_duration_p75_ms": 14720.7
+          }
+        ],
+        "extraction": [
+          {
+            "run_id": 1,
+            "exists": true,
+            "total_duration_ms": 4992819.3,
+            "mean_duration_ms": 49928.2,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 6627.464676,
+            "input_tokens": 156904,
+            "output_tokens": 68116,
+            "call_duration_p25_ms": 29532.7,
+            "call_duration_median_ms": 44659.0,
+            "call_duration_p75_ms": 64842.8
+          },
+          {
+            "run_id": 2,
+            "exists": true,
+            "total_duration_ms": 8495515.3,
+            "mean_duration_ms": 84955.2,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 10135.232201,
+            "input_tokens": 156904,
+            "output_tokens": 68116,
+            "call_duration_p25_ms": 33016.3,
+            "call_duration_median_ms": 46459.0,
+            "call_duration_p75_ms": 66445.2
+          },
+          {
+            "run_id": 3,
+            "exists": true,
+            "total_duration_ms": 5263303.3,
+            "mean_duration_ms": 52633.0,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 6953.143196,
+            "input_tokens": 156904,
+            "output_tokens": 68116,
+            "call_duration_p25_ms": 33637.5,
+            "call_duration_median_ms": 51120.6,
+            "call_duration_p75_ms": 66109.6
+          },
+          {
+            "run_id": 4,
+            "exists": true,
+            "total_duration_ms": 7100014.7,
+            "mean_duration_ms": 71000.1,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 8591.934522,
+            "input_tokens": 156904,
+            "output_tokens": 68116,
+            "call_duration_p25_ms": 29442.4,
+            "call_duration_median_ms": 43701.5,
+            "call_duration_p75_ms": 64120.1
+          },
+          {
+            "run_id": 5,
+            "exists": true,
+            "total_duration_ms": 28655349.4,
+            "mean_duration_ms": 286553.5,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 41222.877949,
+            "input_tokens": 156904,
+            "output_tokens": 68116,
+            "call_duration_p25_ms": 30903.4,
+            "call_duration_median_ms": 46533.3,
+            "call_duration_p75_ms": 103392.6
+          },
+          {
+            "run_id": 6,
+            "exists": true,
+            "total_duration_ms": 19574268.2,
+            "mean_duration_ms": 195742.7,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 26296.807471,
+            "input_tokens": 156904,
+            "output_tokens": 68116,
+            "call_duration_p25_ms": 30615.1,
+            "call_duration_median_ms": 45126.5,
+            "call_duration_p75_ms": 68195.6
+          },
+          {
+            "run_id": 7,
+            "exists": true,
+            "total_duration_ms": 4405096.1,
+            "mean_duration_ms": 44051.0,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 5805.051372,
+            "input_tokens": 156904,
+            "output_tokens": 68116,
+            "call_duration_p25_ms": 27689.7,
+            "call_duration_median_ms": 40341.2,
+            "call_duration_p75_ms": 56632.0
+          },
+          {
+            "run_id": 8,
+            "exists": true,
+            "total_duration_ms": 4399396.6,
+            "mean_duration_ms": 43994.0,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 5798.940087,
+            "input_tokens": 156904,
+            "output_tokens": 68116,
+            "call_duration_p25_ms": 27679.2,
+            "call_duration_median_ms": 40202.5,
+            "call_duration_p75_ms": 56540.4
+          },
+          {
+            "run_id": 9,
+            "exists": true,
+            "total_duration_ms": 4393081.3,
+            "mean_duration_ms": 43930.8,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 5790.751032,
+            "input_tokens": 156904,
+            "output_tokens": 68116,
+            "call_duration_p25_ms": 27543.0,
+            "call_duration_median_ms": 40194.8,
+            "call_duration_p75_ms": 56472.6
+          },
+          {
+            "run_id": 10,
+            "exists": true,
+            "total_duration_ms": 4388423.2,
+            "mean_duration_ms": 43884.2,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 5784.379299,
+            "input_tokens": 156904,
+            "output_tokens": 68116,
+            "call_duration_p25_ms": 27504.7,
+            "call_duration_median_ms": 40426.5,
+            "call_duration_p75_ms": 56391.0
+          }
+        ]
+      }
+    },
+    "gemma2-9b": {
+      "stages": {
+        "screening": {
+          "n_runs": 10,
+          "total_calls": 5000,
+          "successful_calls": 4930,
+          "failed_calls": 70,
+          "timing": {
+            "total_inference_duration_ms": 124197851.7,
+            "total_inference_duration_min": 2069.96,
+            "total_inference_duration_hr": 34.4994,
+            "mean_duration_per_call_ms": 25192.26,
+            "mean_duration_per_run_ms": 12419785.17,
+            "mean_duration_per_run_min": 207.0,
+            "aggregate_call_stats": {
+              "total_calls_with_duration": 5000,
+              "global_mean_ms": 24839.57,
+              "min_across_runs_ms": 7882.0,
+              "max_across_runs_ms": 2506231.8
+            }
+          },
+          "tokens": {
+            "total_input_tokens": 6588490,
+            "total_output_tokens": 566270,
+            "total_tokens": 7154760,
+            "mean_input_per_call": 1336.4,
+            "mean_output_per_call": 114.9
+          },
+          "wall_clock": {
+            "total_seconds": 127540.19,
+            "total_minutes": 2125.67,
+            "total_hours": 35.4278,
+            "mean_per_run_seconds": 12754.02,
+            "mean_per_run_minutes": 212.57
+          },
+          "time_window": {
+            "first_run_start": "2026-02-25T14:54:50.766132+00:00",
+            "last_run_end": "2026-03-01T17:00:34.000379+00:00"
+          }
+        },
+        "extraction": {
+          "n_runs": 10,
+          "total_calls": 1000,
+          "successful_calls": 1000,
+          "failed_calls": 0,
+          "timing": {
+            "total_inference_duration_ms": 39905214.1,
+            "total_inference_duration_min": 665.09,
+            "total_inference_duration_hr": 11.0848,
+            "mean_duration_per_call_ms": 39905.21,
+            "mean_duration_per_run_ms": 3990521.41,
+            "mean_duration_per_run_min": 66.51,
+            "aggregate_call_stats": {
+              "total_calls_with_duration": 1000,
+              "global_mean_ms": 39905.21,
+              "min_across_runs_ms": 18017.8,
+              "max_across_runs_ms": 104736.2
+            }
+          },
+          "tokens": {
+            "total_input_tokens": 1363600,
+            "total_output_tokens": 494340,
+            "total_tokens": 1857940,
+            "mean_input_per_call": 1363.6,
+            "mean_output_per_call": 494.3
+          },
+          "wall_clock": {
+            "total_seconds": 39908.16,
+            "total_minutes": 665.14,
+            "total_hours": 11.0856,
+            "mean_per_run_seconds": 3990.82,
+            "mean_per_run_minutes": 66.51
+          },
+          "time_window": {
+            "first_run_start": "2026-03-01T17:00:35.779058+00:00",
+            "last_run_end": "2026-03-02T04:05:53.613881+00:00"
+          }
+        }
+      },
+      "cross_stage_totals": {
+        "total_calls": 6000,
+        "successful_calls": 5930,
+        "failed_calls": 70,
+        "total_inference_duration_ms": 164103065.8,
+        "total_input_tokens": 7952090,
+        "total_output_tokens": 1060610,
+        "total_wall_clock_seconds": 167448.35,
+        "total_tokens": 9012700,
+        "total_inference_duration_min": 2735.05,
+        "total_inference_duration_hr": 45.5842,
+        "total_wall_clock_minutes": 2790.81,
+        "total_wall_clock_hours": 46.5134,
+        "mean_duration_per_call_ms": 27673.37,
+        "mean_input_tokens_per_call": 1341.0,
+        "mean_output_tokens_per_call": 178.9,
+        "throughput_tokens_per_second": 54.92
+      },
+      "costs": {
+        "provider": "ollama",
+        "total_input_tokens": 7952090,
+        "total_output_tokens": 1060610,
+        "total_tokens": 9012700,
+        "api_cost_usd": {
+          "input_cost": 0.0,
+          "output_cost": 0.0,
+          "total_cost": 0.0,
+          "pricing": {
+            "input_per_1m_tokens": 0.0,
+            "output_per_1m_tokens": 0.0
+          }
+        },
+        "electricity_cost_usd": {
+          "total_cost": 0.068376,
+          "assumptions": {
+            "power_watts": 15,
+            "cost_per_kwh_usd": 0.1,
+            "total_inference_hours": 45.5842
+          }
+        },
+        "total_estimated_cost_usd": 0.0684,
+        "note": "Local inference"
+      },
+      "per_run_summary": {
+        "screening": [
+          {
+            "run_id": 1,
+            "exists": true,
+            "total_duration_ms": 17389530.5,
+            "mean_duration_ms": 34779.1,
+            "successful_calls": 493,
+            "failed_calls": 7,
+            "wall_clock_seconds": 17875.007849,
+            "input_tokens": 658849,
+            "output_tokens": 56627,
+            "call_duration_p25_ms": 28928.3,
+            "call_duration_median_ms": 32205.9,
+            "call_duration_p75_ms": 36677.8
+          },
+          {
+            "run_id": 2,
+            "exists": true,
+            "total_duration_ms": 50162853.6,
+            "mean_duration_ms": 100325.7,
+            "successful_calls": 493,
+            "failed_calls": 7,
+            "wall_clock_seconds": 51506.350128,
+            "input_tokens": 658849,
+            "output_tokens": 56627,
+            "call_duration_p25_ms": 27679.1,
+            "call_duration_median_ms": 30973.8,
+            "call_duration_p75_ms": 36370.0
+          },
+          {
+            "run_id": 3,
+            "exists": true,
+            "total_duration_ms": 7249727.1,
+            "mean_duration_ms": 14499.5,
+            "successful_calls": 493,
+            "failed_calls": 7,
+            "wall_clock_seconds": 7442.77982,
+            "input_tokens": 658849,
+            "output_tokens": 56627,
+            "call_duration_p25_ms": 12925.8,
+            "call_duration_median_ms": 14348.8,
+            "call_duration_p75_ms": 15652.5
+          },
+          {
+            "run_id": 4,
+            "exists": true,
+            "total_duration_ms": 7196747.1,
+            "mean_duration_ms": 14393.5,
+            "successful_calls": 493,
+            "failed_calls": 7,
+            "wall_clock_seconds": 7388.850403,
+            "input_tokens": 658849,
+            "output_tokens": 56627,
+            "call_duration_p25_ms": 12904.2,
+            "call_duration_median_ms": 14255.1,
+            "call_duration_p75_ms": 15495.6
+          },
+          {
+            "run_id": 5,
+            "exists": true,
+            "total_duration_ms": 7208076.3,
+            "mean_duration_ms": 14416.2,
+            "successful_calls": 493,
+            "failed_calls": 7,
+            "wall_clock_seconds": 7400.245379,
+            "input_tokens": 658849,
+            "output_tokens": 56627,
+            "call_duration_p25_ms": 12942.6,
+            "call_duration_median_ms": 14278.6,
+            "call_duration_p75_ms": 15536.5
+          },
+          {
+            "run_id": 6,
+            "exists": true,
+            "total_duration_ms": 7209292.4,
+            "mean_duration_ms": 14418.6,
+            "successful_calls": 493,
+            "failed_calls": 7,
+            "wall_clock_seconds": 7401.545039,
+            "input_tokens": 658849,
+            "output_tokens": 56627,
+            "call_duration_p25_ms": 12929.5,
+            "call_duration_median_ms": 14285.7,
+            "call_duration_p75_ms": 15523.0
+          },
+          {
+            "run_id": 7,
+            "exists": true,
+            "total_duration_ms": 7258256.0,
+            "mean_duration_ms": 14516.5,
+            "successful_calls": 493,
+            "failed_calls": 7,
+            "wall_clock_seconds": 7452.115258,
+            "input_tokens": 658849,
+            "output_tokens": 56627,
+            "call_duration_p25_ms": 13025.6,
+            "call_duration_median_ms": 14376.9,
+            "call_duration_p75_ms": 15560.5
+          },
+          {
+            "run_id": 8,
+            "exists": true,
+            "total_duration_ms": 7004389.0,
+            "mean_duration_ms": 14008.8,
+            "successful_calls": 493,
+            "failed_calls": 7,
+            "wall_clock_seconds": 7193.448066,
+            "input_tokens": 658849,
+            "output_tokens": 56627,
+            "call_duration_p25_ms": 12494.1,
+            "call_duration_median_ms": 13874.2,
+            "call_duration_p75_ms": 15061.5
+          },
+          {
+            "run_id": 9,
+            "exists": true,
+            "total_duration_ms": 6763096.1,
+            "mean_duration_ms": 13526.2,
+            "successful_calls": 493,
+            "failed_calls": 7,
+            "wall_clock_seconds": 6943.549772,
+            "input_tokens": 658849,
+            "output_tokens": 56627,
+            "call_duration_p25_ms": 12128.8,
+            "call_duration_median_ms": 13392.9,
+            "call_duration_p75_ms": 14565.3
+          },
+          {
+            "run_id": 10,
+            "exists": true,
+            "total_duration_ms": 6755883.6,
+            "mean_duration_ms": 13511.8,
+            "successful_calls": 493,
+            "failed_calls": 7,
+            "wall_clock_seconds": 6936.294149,
+            "input_tokens": 658849,
+            "output_tokens": 56627,
+            "call_duration_p25_ms": 12093.7,
+            "call_duration_median_ms": 13378.3,
+            "call_duration_p75_ms": 14553.9
+          }
+        ],
+        "extraction": [
+          {
+            "run_id": 1,
+            "exists": true,
+            "total_duration_ms": 3988143.4,
+            "mean_duration_ms": 39881.4,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 3988.436107,
+            "input_tokens": 136360,
+            "output_tokens": 49434,
+            "call_duration_p25_ms": 26953.9,
+            "call_duration_median_ms": 34943.3,
+            "call_duration_p75_ms": 48691.6
+          },
+          {
+            "run_id": 2,
+            "exists": true,
+            "total_duration_ms": 3991884.3,
+            "mean_duration_ms": 39918.8,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 3992.179809,
+            "input_tokens": 136360,
+            "output_tokens": 49434,
+            "call_duration_p25_ms": 27163.6,
+            "call_duration_median_ms": 34969.1,
+            "call_duration_p75_ms": 48777.4
+          },
+          {
+            "run_id": 3,
+            "exists": true,
+            "total_duration_ms": 3985581.6,
+            "mean_duration_ms": 39855.8,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 3985.870431,
+            "input_tokens": 136360,
+            "output_tokens": 49434,
+            "call_duration_p25_ms": 27118.2,
+            "call_duration_median_ms": 34880.9,
+            "call_duration_p75_ms": 48587.0
+          },
+          {
+            "run_id": 4,
+            "exists": true,
+            "total_duration_ms": 3987147.3,
+            "mean_duration_ms": 39871.5,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 3987.438058,
+            "input_tokens": 136360,
+            "output_tokens": 49434,
+            "call_duration_p25_ms": 26964.0,
+            "call_duration_median_ms": 34948.7,
+            "call_duration_p75_ms": 48631.6
+          },
+          {
+            "run_id": 5,
+            "exists": true,
+            "total_duration_ms": 3985419.3,
+            "mean_duration_ms": 39854.2,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 3985.713763,
+            "input_tokens": 136360,
+            "output_tokens": 49434,
+            "call_duration_p25_ms": 27059.2,
+            "call_duration_median_ms": 34894.1,
+            "call_duration_p75_ms": 48645.4
+          },
+          {
+            "run_id": 6,
+            "exists": true,
+            "total_duration_ms": 3987175.6,
+            "mean_duration_ms": 39871.8,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 3987.47719,
+            "input_tokens": 136360,
+            "output_tokens": 49434,
+            "call_duration_p25_ms": 26975.5,
+            "call_duration_median_ms": 34900.6,
+            "call_duration_p75_ms": 48706.3
+          },
+          {
+            "run_id": 7,
+            "exists": true,
+            "total_duration_ms": 3990731.9,
+            "mean_duration_ms": 39907.3,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 3991.029585,
+            "input_tokens": 136360,
+            "output_tokens": 49434,
+            "call_duration_p25_ms": 26983.5,
+            "call_duration_median_ms": 35011.6,
+            "call_duration_p75_ms": 48768.8
+          },
+          {
+            "run_id": 8,
+            "exists": true,
+            "total_duration_ms": 3995744.0,
+            "mean_duration_ms": 39957.4,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 3996.039056,
+            "input_tokens": 136360,
+            "output_tokens": 49434,
+            "call_duration_p25_ms": 27028.6,
+            "call_duration_median_ms": 34976.4,
+            "call_duration_p75_ms": 48825.3
+          },
+          {
+            "run_id": 9,
+            "exists": true,
+            "total_duration_ms": 3993815.5,
+            "mean_duration_ms": 39938.2,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 3994.108932,
+            "input_tokens": 136360,
+            "output_tokens": 49434,
+            "call_duration_p25_ms": 27076.1,
+            "call_duration_median_ms": 34994.2,
+            "call_duration_p75_ms": 48816.6
+          },
+          {
+            "run_id": 10,
+            "exists": true,
+            "total_duration_ms": 3999571.2,
+            "mean_duration_ms": 39995.7,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 3999.86732,
+            "input_tokens": 136360,
+            "output_tokens": 49434,
+            "call_duration_p25_ms": 27109.2,
+            "call_duration_median_ms": 35024.6,
+            "call_duration_p75_ms": 48972.8
+          }
+        ]
+      }
+    },
+    "claude-sonnet-4-5": {
+      "stages": {
+        "screening": {
+          "n_runs": 10,
+          "total_calls": 5000,
+          "successful_calls": 5000,
+          "failed_calls": 0,
+          "timing": {
+            "total_inference_duration_ms": 22613077.9,
+            "total_inference_duration_min": 376.88,
+            "total_inference_duration_hr": 6.2814,
+            "mean_duration_per_call_ms": 4522.62,
+            "mean_duration_per_run_ms": 2261307.79,
+            "mean_duration_per_run_min": 37.69,
+            "aggregate_call_stats": {
+              "total_calls_with_duration": 5000,
+              "global_mean_ms": 4522.62,
+              "min_across_runs_ms": 2111.3,
+              "max_across_runs_ms": 22270.5
+            }
+          },
+          "tokens": {
+            "total_input_tokens": 7065460,
+            "total_output_tokens": 918261,
+            "total_tokens": 7983721,
+            "mean_input_per_call": 1413.1,
+            "mean_output_per_call": 183.7
+          },
+          "wall_clock": {
+            "total_seconds": 22912.72,
+            "total_minutes": 381.88,
+            "total_hours": 6.3646,
+            "mean_per_run_seconds": 2291.27,
+            "mean_per_run_minutes": 38.19
+          },
+          "time_window": {
+            "first_run_start": "2026-02-11T18:23:12.811918+00:00",
+            "last_run_end": "2026-02-12T17:52:54.781769+00:00"
+          }
+        },
+        "extraction": {
+          "n_runs": 10,
+          "total_calls": 1000,
+          "successful_calls": 1000,
+          "failed_calls": 0,
+          "timing": {
+            "total_inference_duration_ms": 5799398.1,
+            "total_inference_duration_min": 96.66,
+            "total_inference_duration_hr": 1.6109,
+            "mean_duration_per_call_ms": 5799.4,
+            "mean_duration_per_run_ms": 579939.81,
+            "mean_duration_per_run_min": 9.67,
+            "aggregate_call_stats": {
+              "total_calls_with_duration": 1000,
+              "global_mean_ms": 5799.4,
+              "min_across_runs_ms": 1781.2,
+              "max_across_runs_ms": 22327.5
+            }
+          },
+          "tokens": {
+            "total_input_tokens": 1440900,
+            "total_output_tokens": 454351,
+            "total_tokens": 1895251,
+            "mean_input_per_call": 1440.9,
+            "mean_output_per_call": 454.4
+          },
+          "wall_clock": {
+            "total_seconds": 5802.95,
+            "total_minutes": 96.72,
+            "total_hours": 1.6119,
+            "mean_per_run_seconds": 580.29,
+            "mean_per_run_minutes": 9.67
+          },
+          "time_window": {
+            "first_run_start": "2026-02-12T17:52:55.928673+00:00",
+            "last_run_end": "2026-02-12T21:56:29.446895+00:00"
+          }
+        }
+      },
+      "cross_stage_totals": {
+        "total_calls": 6000,
+        "successful_calls": 6000,
+        "failed_calls": 0,
+        "total_inference_duration_ms": 28412476.0,
+        "total_input_tokens": 8506360,
+        "total_output_tokens": 1372612,
+        "total_wall_clock_seconds": 28715.670000000002,
+        "total_tokens": 9878972,
+        "total_inference_duration_min": 473.54,
+        "total_inference_duration_hr": 7.8924,
+        "total_wall_clock_minutes": 478.59,
+        "total_wall_clock_hours": 7.9766,
+        "mean_duration_per_call_ms": 4735.41,
+        "mean_input_tokens_per_call": 1417.7,
+        "mean_output_tokens_per_call": 228.8,
+        "throughput_tokens_per_second": 347.7
+      },
+      "costs": {
+        "provider": "anthropic",
+        "total_input_tokens": 8506360,
+        "total_output_tokens": 1372612,
+        "total_tokens": 9878972,
+        "api_cost_usd": {
+          "input_cost": 25.5191,
+          "output_cost": 20.5892,
+          "total_cost": 46.1083,
+          "pricing": {
+            "input_per_1m_tokens": 3.0,
+            "output_per_1m_tokens": 15.0
+          }
+        },
+        "total_estimated_cost_usd": 46.1083
+      },
+      "per_run_summary": {
+        "screening": [
+          {
+            "run_id": 1,
+            "exists": true,
+            "total_duration_ms": 2135979.9,
+            "mean_duration_ms": 4272.0,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 2136.61314,
+            "input_tokens": 706546,
+            "output_tokens": 92111,
+            "call_duration_p25_ms": 3705.0,
+            "call_duration_median_ms": 4210.0,
+            "call_duration_p75_ms": 4769.4
+          },
+          {
+            "run_id": 2,
+            "exists": true,
+            "total_duration_ms": 2139902.7,
+            "mean_duration_ms": 4279.8,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 2140.70735,
+            "input_tokens": 706546,
+            "output_tokens": 92623,
+            "call_duration_p25_ms": 3712.8,
+            "call_duration_median_ms": 4232.1,
+            "call_duration_p75_ms": 4729.1
+          },
+          {
+            "run_id": 3,
+            "exists": true,
+            "total_duration_ms": 2071881.6,
+            "mean_duration_ms": 4143.8,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 2072.698834,
+            "input_tokens": 706546,
+            "output_tokens": 91183,
+            "call_duration_p25_ms": 3601.2,
+            "call_duration_median_ms": 4096.5,
+            "call_duration_p75_ms": 4620.3
+          },
+          {
+            "run_id": 4,
+            "exists": true,
+            "total_duration_ms": 2345915.6,
+            "mean_duration_ms": 4691.8,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 2346.750987,
+            "input_tokens": 706546,
+            "output_tokens": 91692,
+            "call_duration_p25_ms": 3928.1,
+            "call_duration_median_ms": 4464.3,
+            "call_duration_p75_ms": 5155.5
+          },
+          {
+            "run_id": 5,
+            "exists": true,
+            "total_duration_ms": 2133515.0,
+            "mean_duration_ms": 4267.0,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 2134.264763,
+            "input_tokens": 706546,
+            "output_tokens": 91810,
+            "call_duration_p25_ms": 3728.2,
+            "call_duration_median_ms": 4220.2,
+            "call_duration_p75_ms": 4728.0
+          },
+          {
+            "run_id": 6,
+            "exists": true,
+            "total_duration_ms": 2098028.5,
+            "mean_duration_ms": 4196.1,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 2098.753245,
+            "input_tokens": 706546,
+            "output_tokens": 91410,
+            "call_duration_p25_ms": 3700.1,
+            "call_duration_median_ms": 4196.5,
+            "call_duration_p75_ms": 4688.4
+          },
+          {
+            "run_id": 7,
+            "exists": true,
+            "total_duration_ms": 2036028.9,
+            "mean_duration_ms": 4072.1,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 2036.778601,
+            "input_tokens": 706546,
+            "output_tokens": 91011,
+            "call_duration_p25_ms": 3553.1,
+            "call_duration_median_ms": 4068.6,
+            "call_duration_p75_ms": 4539.7
+          },
+          {
+            "run_id": 8,
+            "exists": true,
+            "total_duration_ms": 2054839.7,
+            "mean_duration_ms": 4109.7,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 2055.612688,
+            "input_tokens": 706546,
+            "output_tokens": 92097,
+            "call_duration_p25_ms": 3610.2,
+            "call_duration_median_ms": 4101.3,
+            "call_duration_p75_ms": 4608.6
+          },
+          {
+            "run_id": 9,
+            "exists": true,
+            "total_duration_ms": 2785094.7,
+            "mean_duration_ms": 5570.2,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 2847.924448,
+            "input_tokens": 706546,
+            "output_tokens": 92196,
+            "call_duration_p25_ms": 4151.1,
+            "call_duration_median_ms": 5160.4,
+            "call_duration_p75_ms": 6491.0
+          },
+          {
+            "run_id": 10,
+            "exists": true,
+            "total_duration_ms": 2811891.3,
+            "mean_duration_ms": 5623.8,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 3042.618176,
+            "input_tokens": 706546,
+            "output_tokens": 92128,
+            "call_duration_p25_ms": 4420.1,
+            "call_duration_median_ms": 5123.8,
+            "call_duration_p75_ms": 6129.7
+          }
+        ],
+        "extraction": [
+          {
+            "run_id": 1,
+            "exists": true,
+            "total_duration_ms": 679564.1,
+            "mean_duration_ms": 6795.6,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 679.930228,
+            "input_tokens": 144090,
+            "output_tokens": 45384,
+            "call_duration_p25_ms": 4753.8,
+            "call_duration_median_ms": 6195.5,
+            "call_duration_p75_ms": 8131.8
+          },
+          {
+            "run_id": 2,
+            "exists": true,
+            "total_duration_ms": 529588.4,
+            "mean_duration_ms": 5295.9,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 529.925543,
+            "input_tokens": 144090,
+            "output_tokens": 44987,
+            "call_duration_p25_ms": 4094.5,
+            "call_duration_median_ms": 4950.3,
+            "call_duration_p75_ms": 6247.3
+          },
+          {
+            "run_id": 3,
+            "exists": true,
+            "total_duration_ms": 609719.1,
+            "mean_duration_ms": 6097.2,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 610.067247,
+            "input_tokens": 144090,
+            "output_tokens": 45395,
+            "call_duration_p25_ms": 4524.0,
+            "call_duration_median_ms": 5918.4,
+            "call_duration_p75_ms": 7574.6
+          },
+          {
+            "run_id": 4,
+            "exists": true,
+            "total_duration_ms": 613845.1,
+            "mean_duration_ms": 6138.5,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 614.172582,
+            "input_tokens": 144090,
+            "output_tokens": 46621,
+            "call_duration_p25_ms": 4453.8,
+            "call_duration_median_ms": 5707.2,
+            "call_duration_p75_ms": 7165.7
+          },
+          {
+            "run_id": 5,
+            "exists": true,
+            "total_duration_ms": 572907.7,
+            "mean_duration_ms": 5729.1,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 573.224407,
+            "input_tokens": 144090,
+            "output_tokens": 44822,
+            "call_duration_p25_ms": 4265.7,
+            "call_duration_median_ms": 5205.1,
+            "call_duration_p75_ms": 6999.2
+          },
+          {
+            "run_id": 6,
+            "exists": true,
+            "total_duration_ms": 590166.8,
+            "mean_duration_ms": 5901.7,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 590.516538,
+            "input_tokens": 144090,
+            "output_tokens": 45624,
+            "call_duration_p25_ms": 4454.8,
+            "call_duration_median_ms": 5814.9,
+            "call_duration_p75_ms": 6970.2
+          },
+          {
+            "run_id": 7,
+            "exists": true,
+            "total_duration_ms": 619122.3,
+            "mean_duration_ms": 6191.2,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 619.446189,
+            "input_tokens": 144090,
+            "output_tokens": 45165,
+            "call_duration_p25_ms": 4533.7,
+            "call_duration_median_ms": 5948.7,
+            "call_duration_p75_ms": 7506.4
+          },
+          {
+            "run_id": 8,
+            "exists": true,
+            "total_duration_ms": 529432.8,
+            "mean_duration_ms": 5294.3,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 529.772939,
+            "input_tokens": 144090,
+            "output_tokens": 45350,
+            "call_duration_p25_ms": 3861.3,
+            "call_duration_median_ms": 4792.5,
+            "call_duration_p75_ms": 6517.1
+          },
+          {
+            "run_id": 9,
+            "exists": true,
+            "total_duration_ms": 530050.0,
+            "mean_duration_ms": 5300.5,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 530.434013,
+            "input_tokens": 144090,
+            "output_tokens": 45524,
+            "call_duration_p25_ms": 3883.1,
+            "call_duration_median_ms": 4934.9,
+            "call_duration_p75_ms": 6289.6
+          },
+          {
+            "run_id": 10,
+            "exists": true,
+            "total_duration_ms": 525001.8,
+            "mean_duration_ms": 5250.0,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 525.459306,
+            "input_tokens": 144090,
+            "output_tokens": 45479,
+            "call_duration_p25_ms": 3962.9,
+            "call_duration_median_ms": 4821.0,
+            "call_duration_p75_ms": 6299.4
+          }
+        ]
+      }
+    },
+    "gemini-2.5-pro": {
+      "stages": {
+        "screening": {
+          "n_runs": 10,
+          "total_calls": 5000,
+          "successful_calls": 4983,
+          "failed_calls": 17,
+          "timing": {
+            "total_inference_duration_ms": 49858957.7,
+            "total_inference_duration_min": 830.98,
+            "total_inference_duration_hr": 13.8497,
+            "mean_duration_per_call_ms": 10005.81,
+            "mean_duration_per_run_ms": 4985895.77,
+            "mean_duration_per_run_min": 83.1,
+            "aggregate_call_stats": {
+              "total_calls_with_duration": 4983,
+              "global_mean_ms": 10005.81,
+              "min_across_runs_ms": 6165.5,
+              "max_across_runs_ms": 153066.7
+            }
+          },
+          "tokens": {
+            "total_input_tokens": 6568199,
+            "total_output_tokens": 647645,
+            "total_tokens": 7215844,
+            "mean_input_per_call": 1318.1,
+            "mean_output_per_call": 130.0
+          },
+          "wall_clock": {
+            "total_seconds": 150351.25,
+            "total_minutes": 2505.85,
+            "total_hours": 41.7642,
+            "mean_per_run_seconds": 15035.13,
+            "mean_per_run_minutes": 250.59
+          },
+          "time_window": {
+            "first_run_start": "2026-02-11T20:33:20.317515+00:00",
+            "last_run_end": "2026-02-18T16:16:49.767126+00:00"
+          }
+        },
+        "extraction": {
+          "n_runs": 10,
+          "total_calls": 1000,
+          "successful_calls": 995,
+          "failed_calls": 5,
+          "timing": {
+            "total_inference_duration_ms": 23075820.2,
+            "total_inference_duration_min": 384.6,
+            "total_inference_duration_hr": 6.41,
+            "mean_duration_per_call_ms": 23191.78,
+            "mean_duration_per_run_ms": 2307582.02,
+            "mean_duration_per_run_min": 38.46,
+            "aggregate_call_stats": {
+              "total_calls_with_duration": 997,
+              "global_mean_ms": 23145.26,
+              "min_across_runs_ms": 7382.5,
+              "max_across_runs_ms": 71585.8
+            }
+          },
+          "tokens": {
+            "total_input_tokens": 1365338,
+            "total_output_tokens": 450595,
+            "total_tokens": 1815933,
+            "mean_input_per_call": 1372.2,
+            "mean_output_per_call": 452.9
+          },
+          "wall_clock": {
+            "total_seconds": 45884.74,
+            "total_minutes": 764.75,
+            "total_hours": 12.7458,
+            "mean_per_run_seconds": 4588.47,
+            "mean_per_run_minutes": 76.47
+          },
+          "time_window": {
+            "first_run_start": "2026-02-15T08:47:55.596627+00:00",
+            "last_run_end": "2026-02-18T21:33:25.123280+00:00"
+          }
+        }
+      },
+      "cross_stage_totals": {
+        "total_calls": 6000,
+        "successful_calls": 5978,
+        "failed_calls": 22,
+        "total_inference_duration_ms": 72934777.9,
+        "total_input_tokens": 7933537,
+        "total_output_tokens": 1098240,
+        "total_wall_clock_seconds": 196235.99,
+        "total_tokens": 9031777,
+        "total_inference_duration_min": 1215.58,
+        "total_inference_duration_hr": 20.2597,
+        "total_wall_clock_minutes": 3270.6,
+        "total_wall_clock_hours": 54.51,
+        "mean_duration_per_call_ms": 12200.53,
+        "mean_input_tokens_per_call": 1327.1,
+        "mean_output_tokens_per_call": 183.7,
+        "throughput_tokens_per_second": 123.83
+      },
+      "costs": {
+        "provider": "google",
+        "total_input_tokens": 7933537,
+        "total_output_tokens": 1098240,
+        "total_tokens": 9031777,
+        "api_cost_usd": {
+          "input_cost": 0.0,
+          "output_cost": 0.0,
+          "total_cost": 0.0,
+          "pricing": {
+            "input_per_1m_tokens": 0.0,
+            "output_per_1m_tokens": 0.0
+          }
+        },
+        "total_estimated_cost_usd": 0.0,
+        "note": "Free tier used"
+      },
+      "per_run_summary": {
+        "screening": [
+          {
+            "run_id": 1,
+            "exists": true,
+            "total_duration_ms": 4851381.2,
+            "mean_duration_ms": 9702.8,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 5851.942327,
+            "input_tokens": 658864,
+            "output_tokens": 64738,
+            "call_duration_p25_ms": 8152.7,
+            "call_duration_median_ms": 8970.9,
+            "call_duration_p75_ms": 10535.1
+          },
+          {
+            "run_id": 2,
+            "exists": true,
+            "total_duration_ms": 5227136.7,
+            "mean_duration_ms": 10454.3,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 30487.557211,
+            "input_tokens": 658864,
+            "output_tokens": 65187,
+            "call_duration_p25_ms": 8442.4,
+            "call_duration_median_ms": 9285.2,
+            "call_duration_p75_ms": 11103.3
+          },
+          {
+            "run_id": 3,
+            "exists": true,
+            "total_duration_ms": 4869578.7,
+            "mean_duration_ms": 10081.9,
+            "successful_calls": 483,
+            "failed_calls": 17,
+            "wall_clock_seconds": 6329.513926,
+            "input_tokens": 638423,
+            "output_tokens": 62487,
+            "call_duration_p25_ms": 8315.7,
+            "call_duration_median_ms": 9254.9,
+            "call_duration_p75_ms": 11026.0
+          },
+          {
+            "run_id": 4,
+            "exists": true,
+            "total_duration_ms": 4973378.0,
+            "mean_duration_ms": 9946.8,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 7970.093555,
+            "input_tokens": 658864,
+            "output_tokens": 65113,
+            "call_duration_p25_ms": 8382.6,
+            "call_duration_median_ms": 9340.3,
+            "call_duration_p75_ms": 10788.5
+          },
+          {
+            "run_id": 5,
+            "exists": true,
+            "total_duration_ms": 4914820.2,
+            "mean_duration_ms": 9829.6,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 8757.115301,
+            "input_tokens": 658864,
+            "output_tokens": 64756,
+            "call_duration_p25_ms": 8237.9,
+            "call_duration_median_ms": 9049.5,
+            "call_duration_p75_ms": 10685.5
+          },
+          {
+            "run_id": 6,
+            "exists": true,
+            "total_duration_ms": 4924533.5,
+            "mean_duration_ms": 9849.1,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 17839.888961,
+            "input_tokens": 658864,
+            "output_tokens": 65053,
+            "call_duration_p25_ms": 8171.1,
+            "call_duration_median_ms": 9199.1,
+            "call_duration_p75_ms": 10634.4
+          },
+          {
+            "run_id": 7,
+            "exists": true,
+            "total_duration_ms": 5286194.7,
+            "mean_duration_ms": 10572.4,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 6445.624655,
+            "input_tokens": 658864,
+            "output_tokens": 64907,
+            "call_duration_p25_ms": 8709.5,
+            "call_duration_median_ms": 9724.2,
+            "call_duration_p75_ms": 11613.0
+          },
+          {
+            "run_id": 8,
+            "exists": true,
+            "total_duration_ms": 4852910.8,
+            "mean_duration_ms": 9705.8,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 24736.174009,
+            "input_tokens": 658864,
+            "output_tokens": 65139,
+            "call_duration_p25_ms": 8129.8,
+            "call_duration_median_ms": 8951.5,
+            "call_duration_p75_ms": 10448.5
+          },
+          {
+            "run_id": 9,
+            "exists": true,
+            "total_duration_ms": 4962082.9,
+            "mean_duration_ms": 9924.2,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 21657.515276,
+            "input_tokens": 658864,
+            "output_tokens": 65020,
+            "call_duration_p25_ms": 8437.3,
+            "call_duration_median_ms": 9263.4,
+            "call_duration_p75_ms": 11000.9
+          },
+          {
+            "run_id": 10,
+            "exists": true,
+            "total_duration_ms": 4996941.0,
+            "mean_duration_ms": 9993.9,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 20275.825453,
+            "input_tokens": 658864,
+            "output_tokens": 65245,
+            "call_duration_p25_ms": 8272.4,
+            "call_duration_median_ms": 9282.5,
+            "call_duration_p75_ms": 10991.4
+          }
+        ],
+        "extraction": [
+          {
+            "run_id": 1,
+            "exists": true,
+            "total_duration_ms": 2261806.9,
+            "mean_duration_ms": 22618.1,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 8211.081117,
+            "input_tokens": 136910,
+            "output_tokens": 45514,
+            "call_duration_p25_ms": 15837.1,
+            "call_duration_median_ms": 22139.8,
+            "call_duration_p75_ms": 27521.8
+          },
+          {
+            "run_id": 2,
+            "exists": true,
+            "total_duration_ms": 2270023.8,
+            "mean_duration_ms": 22700.2,
+            "successful_calls": 99,
+            "failed_calls": 1,
+            "wall_clock_seconds": 6281.532099,
+            "input_tokens": 136910,
+            "output_tokens": 43941,
+            "call_duration_p25_ms": 16853.0,
+            "call_duration_median_ms": 20888.0,
+            "call_duration_p75_ms": 26059.2
+          },
+          {
+            "run_id": 3,
+            "exists": true,
+            "total_duration_ms": 2307784.2,
+            "mean_duration_ms": 23077.8,
+            "successful_calls": 99,
+            "failed_calls": 1,
+            "wall_clock_seconds": 4066.545246,
+            "input_tokens": 136910,
+            "output_tokens": 44800,
+            "call_duration_p25_ms": 15958.9,
+            "call_duration_median_ms": 20142.2,
+            "call_duration_p75_ms": 28031.4
+          },
+          {
+            "run_id": 4,
+            "exists": true,
+            "total_duration_ms": 2232382.2,
+            "mean_duration_ms": 22549.3,
+            "successful_calls": 99,
+            "failed_calls": 1,
+            "wall_clock_seconds": 5506.875958,
+            "input_tokens": 135452,
+            "output_tokens": 45292,
+            "call_duration_p25_ms": 16061.1,
+            "call_duration_median_ms": 21067.4,
+            "call_duration_p75_ms": 26296.3
+          },
+          {
+            "run_id": 5,
+            "exists": true,
+            "total_duration_ms": 2460549.9,
+            "mean_duration_ms": 24605.5,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 4176.259295,
+            "input_tokens": 136910,
+            "output_tokens": 45555,
+            "call_duration_p25_ms": 16906.3,
+            "call_duration_median_ms": 21281.4,
+            "call_duration_p75_ms": 30086.8
+          },
+          {
+            "run_id": 6,
+            "exists": true,
+            "total_duration_ms": 2337114.9,
+            "mean_duration_ms": 23371.1,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 3720.978728,
+            "input_tokens": 136910,
+            "output_tokens": 45123,
+            "call_duration_p25_ms": 15858.3,
+            "call_duration_median_ms": 20822.5,
+            "call_duration_p75_ms": 28370.2
+          },
+          {
+            "run_id": 7,
+            "exists": true,
+            "total_duration_ms": 2356221.0,
+            "mean_duration_ms": 23562.2,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 2882.036242,
+            "input_tokens": 136910,
+            "output_tokens": 45648,
+            "call_duration_p25_ms": 15856.5,
+            "call_duration_median_ms": 22512.3,
+            "call_duration_p75_ms": 29405.6
+          },
+          {
+            "run_id": 8,
+            "exists": true,
+            "total_duration_ms": 2265186.6,
+            "mean_duration_ms": 22651.9,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 3352.185327,
+            "input_tokens": 136910,
+            "output_tokens": 45546,
+            "call_duration_p25_ms": 16669.2,
+            "call_duration_median_ms": 21891.9,
+            "call_duration_p75_ms": 27092.9
+          },
+          {
+            "run_id": 9,
+            "exists": true,
+            "total_duration_ms": 2367846.9,
+            "mean_duration_ms": 23678.5,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 3173.867855,
+            "input_tokens": 136910,
+            "output_tokens": 45793,
+            "call_duration_p25_ms": 16271.4,
+            "call_duration_median_ms": 21575.8,
+            "call_duration_p75_ms": 30699.4
+          },
+          {
+            "run_id": 10,
+            "exists": true,
+            "total_duration_ms": 2216903.8,
+            "mean_duration_ms": 22621.5,
+            "successful_calls": 98,
+            "failed_calls": 2,
+            "wall_clock_seconds": 4513.376593,
+            "input_tokens": 134606,
+            "output_tokens": 43383,
+            "call_duration_p25_ms": 15931.9,
+            "call_duration_median_ms": 21552.2,
+            "call_duration_p75_ms": 27729.4
+          }
+        ]
+      }
+    },
+    "gpt-4.1": {
+      "stages": {
+        "screening": {
+          "n_runs": 10,
+          "total_calls": 5000,
+          "successful_calls": 5000,
+          "failed_calls": 0,
+          "timing": {
+            "total_inference_duration_ms": 12396740.3,
+            "total_inference_duration_min": 206.61,
+            "total_inference_duration_hr": 3.4435,
+            "mean_duration_per_call_ms": 2479.35,
+            "mean_duration_per_run_ms": 1239674.03,
+            "mean_duration_per_run_min": 20.66,
+            "aggregate_call_stats": {
+              "total_calls_with_duration": 5000,
+              "global_mean_ms": 2479.35,
+              "min_across_runs_ms": 875.2,
+              "max_across_runs_ms": 916251.7
+            }
+          },
+          "tokens": {
+            "total_input_tokens": 6298090,
+            "total_output_tokens": 628301,
+            "total_tokens": 6926391,
+            "mean_input_per_call": 1259.6,
+            "mean_output_per_call": 125.7
+          },
+          "wall_clock": {
+            "total_seconds": 79077.06,
+            "total_minutes": 1317.95,
+            "total_hours": 21.9658,
+            "mean_per_run_seconds": 7907.71,
+            "mean_per_run_minutes": 131.8
+          },
+          "time_window": {
+            "first_run_start": "2026-02-23T01:29:37.078799+00:00",
+            "last_run_end": "2026-02-23T23:43:47.947832+00:00"
+          }
+        },
+        "extraction": {
+          "n_runs": 10,
+          "total_calls": 1000,
+          "successful_calls": 1000,
+          "failed_calls": 0,
+          "timing": {
+            "total_inference_duration_ms": 5420611.2,
+            "total_inference_duration_min": 90.34,
+            "total_inference_duration_hr": 1.5057,
+            "mean_duration_per_call_ms": 5420.61,
+            "mean_duration_per_run_ms": 542061.12,
+            "mean_duration_per_run_min": 9.03,
+            "aggregate_call_stats": {
+              "total_calls_with_duration": 1000,
+              "global_mean_ms": 5420.61,
+              "min_across_runs_ms": 889.6,
+              "max_across_runs_ms": 29515.2
+            }
+          },
+          "tokens": {
+            "total_input_tokens": 1272200,
+            "total_output_tokens": 390070,
+            "total_tokens": 1662270,
+            "mean_input_per_call": 1272.2,
+            "mean_output_per_call": 390.1
+          },
+          "wall_clock": {
+            "total_seconds": 7421.32,
+            "total_minutes": 123.69,
+            "total_hours": 2.0615,
+            "mean_per_run_seconds": 742.13,
+            "mean_per_run_minutes": 12.37
+          },
+          "time_window": {
+            "first_run_start": "2026-02-23T23:43:49.245491+00:00",
+            "last_run_end": "2026-03-02T17:41:23.101241+00:00"
+          }
+        }
+      },
+      "cross_stage_totals": {
+        "total_calls": 6000,
+        "successful_calls": 6000,
+        "failed_calls": 0,
+        "total_inference_duration_ms": 17817351.5,
+        "total_input_tokens": 7570290,
+        "total_output_tokens": 1018371,
+        "total_wall_clock_seconds": 86498.38,
+        "total_tokens": 8588661,
+        "total_inference_duration_min": 296.96,
+        "total_inference_duration_hr": 4.9493,
+        "total_wall_clock_minutes": 1441.64,
+        "total_wall_clock_hours": 24.0273,
+        "mean_duration_per_call_ms": 2969.56,
+        "mean_input_tokens_per_call": 1261.7,
+        "mean_output_tokens_per_call": 169.7,
+        "throughput_tokens_per_second": 482.04
+      },
+      "costs": {
+        "provider": "openai",
+        "total_input_tokens": 7570290,
+        "total_output_tokens": 1018371,
+        "total_tokens": 8588661,
+        "api_cost_usd": {
+          "input_cost": 15.1406,
+          "output_cost": 8.147,
+          "total_cost": 23.2875,
+          "pricing": {
+            "input_per_1m_tokens": 2.0,
+            "output_per_1m_tokens": 8.0
+          }
+        },
+        "total_estimated_cost_usd": 23.2875
+      },
+      "per_run_summary": {
+        "screening": [
+          {
+            "run_id": 1,
+            "exists": true,
+            "total_duration_ms": 1843512.5,
+            "mean_duration_ms": 3687.0,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 12260.226477,
+            "input_tokens": 629809,
+            "output_tokens": 62917,
+            "call_duration_p25_ms": 1573.5,
+            "call_duration_median_ms": 1781.7,
+            "call_duration_p75_ms": 2084.7
+          },
+          {
+            "run_id": 2,
+            "exists": true,
+            "total_duration_ms": 1193296.5,
+            "mean_duration_ms": 2386.6,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 29036.161573,
+            "input_tokens": 629809,
+            "output_tokens": 63049,
+            "call_duration_p25_ms": 1900.2,
+            "call_duration_median_ms": 2207.8,
+            "call_duration_p75_ms": 2622.4
+          },
+          {
+            "run_id": 3,
+            "exists": true,
+            "total_duration_ms": 1452388.8,
+            "mean_duration_ms": 2904.8,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 2453.8364,
+            "input_tokens": 629809,
+            "output_tokens": 62848,
+            "call_duration_p25_ms": 2145.0,
+            "call_duration_median_ms": 2508.5,
+            "call_duration_p75_ms": 3085.2
+          },
+          {
+            "run_id": 4,
+            "exists": true,
+            "total_duration_ms": 1306415.0,
+            "mean_duration_ms": 2612.8,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 3006.095225,
+            "input_tokens": 629809,
+            "output_tokens": 62997,
+            "call_duration_p25_ms": 2011.0,
+            "call_duration_median_ms": 2379.4,
+            "call_duration_p75_ms": 2907.2
+          },
+          {
+            "run_id": 5,
+            "exists": true,
+            "total_duration_ms": 1021068.1,
+            "mean_duration_ms": 2042.1,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 2021.959427,
+            "input_tokens": 629809,
+            "output_tokens": 62626,
+            "call_duration_p25_ms": 1619.3,
+            "call_duration_median_ms": 1935.1,
+            "call_duration_p75_ms": 2294.9
+          },
+          {
+            "run_id": 6,
+            "exists": true,
+            "total_duration_ms": 1163634.4,
+            "mean_duration_ms": 2327.3,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 2452.957214,
+            "input_tokens": 629809,
+            "output_tokens": 62863,
+            "call_duration_p25_ms": 1938.4,
+            "call_duration_median_ms": 2195.0,
+            "call_duration_p75_ms": 2569.5
+          },
+          {
+            "run_id": 7,
+            "exists": true,
+            "total_duration_ms": 1137144.7,
+            "mean_duration_ms": 2274.3,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 2138.134804,
+            "input_tokens": 629809,
+            "output_tokens": 62644,
+            "call_duration_p25_ms": 1860.3,
+            "call_duration_median_ms": 2114.1,
+            "call_duration_p75_ms": 2499.6
+          },
+          {
+            "run_id": 8,
+            "exists": true,
+            "total_duration_ms": 1126779.4,
+            "mean_duration_ms": 2253.6,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 17657.693101,
+            "input_tokens": 629809,
+            "output_tokens": 62813,
+            "call_duration_p25_ms": 1824.9,
+            "call_duration_median_ms": 2102.4,
+            "call_duration_p75_ms": 2545.6
+          },
+          {
+            "run_id": 9,
+            "exists": true,
+            "total_duration_ms": 1109408.3,
+            "mean_duration_ms": 2218.8,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 2110.265208,
+            "input_tokens": 629809,
+            "output_tokens": 62861,
+            "call_duration_p25_ms": 1796.0,
+            "call_duration_median_ms": 2119.0,
+            "call_duration_p75_ms": 2501.2
+          },
+          {
+            "run_id": 10,
+            "exists": true,
+            "total_duration_ms": 1043092.6,
+            "mean_duration_ms": 2086.2,
+            "successful_calls": 500,
+            "failed_calls": 0,
+            "wall_clock_seconds": 5939.729948,
+            "input_tokens": 629809,
+            "output_tokens": 62683,
+            "call_duration_p25_ms": 1734.2,
+            "call_duration_median_ms": 1997.2,
+            "call_duration_p75_ms": 2316.3
+          }
+        ],
+        "extraction": [
+          {
+            "run_id": 1,
+            "exists": true,
+            "total_duration_ms": 434126.2,
+            "mean_duration_ms": 4341.3,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 632.808741,
+            "input_tokens": 127220,
+            "output_tokens": 39801,
+            "call_duration_p25_ms": 2846.2,
+            "call_duration_median_ms": 4064.5,
+            "call_duration_p75_ms": 5294.6
+          },
+          {
+            "run_id": 2,
+            "exists": true,
+            "total_duration_ms": 520180.7,
+            "mean_duration_ms": 5201.8,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 718.942238,
+            "input_tokens": 127220,
+            "output_tokens": 38679,
+            "call_duration_p25_ms": 3203.4,
+            "call_duration_median_ms": 4774.9,
+            "call_duration_p75_ms": 6791.4
+          },
+          {
+            "run_id": 3,
+            "exists": true,
+            "total_duration_ms": 559752.9,
+            "mean_duration_ms": 5597.5,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 758.779587,
+            "input_tokens": 127220,
+            "output_tokens": 38760,
+            "call_duration_p25_ms": 3252.8,
+            "call_duration_median_ms": 5039.9,
+            "call_duration_p75_ms": 7319.3
+          },
+          {
+            "run_id": 4,
+            "exists": true,
+            "total_duration_ms": 556157.8,
+            "mean_duration_ms": 5561.6,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 755.206314,
+            "input_tokens": 127220,
+            "output_tokens": 39002,
+            "call_duration_p25_ms": 3454.1,
+            "call_duration_median_ms": 4957.7,
+            "call_duration_p75_ms": 6809.6
+          },
+          {
+            "run_id": 5,
+            "exists": true,
+            "total_duration_ms": 604487.8,
+            "mean_duration_ms": 6044.9,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 803.507415,
+            "input_tokens": 127220,
+            "output_tokens": 39480,
+            "call_duration_p25_ms": 3604.4,
+            "call_duration_median_ms": 5086.7,
+            "call_duration_p75_ms": 6935.9
+          },
+          {
+            "run_id": 6,
+            "exists": true,
+            "total_duration_ms": 547507.8,
+            "mean_duration_ms": 5475.1,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 746.575095,
+            "input_tokens": 127220,
+            "output_tokens": 39471,
+            "call_duration_p25_ms": 3019.0,
+            "call_duration_median_ms": 4831.1,
+            "call_duration_p75_ms": 7331.4
+          },
+          {
+            "run_id": 7,
+            "exists": true,
+            "total_duration_ms": 580156.3,
+            "mean_duration_ms": 5801.6,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 779.18399,
+            "input_tokens": 127220,
+            "output_tokens": 38671,
+            "call_duration_p25_ms": 3466.5,
+            "call_duration_median_ms": 5258.3,
+            "call_duration_p75_ms": 7100.3
+          },
+          {
+            "run_id": 8,
+            "exists": true,
+            "total_duration_ms": 583711.3,
+            "mean_duration_ms": 5837.1,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 782.749261,
+            "input_tokens": 127220,
+            "output_tokens": 38712,
+            "call_duration_p25_ms": 3318.4,
+            "call_duration_median_ms": 5365.5,
+            "call_duration_p75_ms": 7702.1
+          },
+          {
+            "run_id": 9,
+            "exists": true,
+            "total_duration_ms": 498327.2,
+            "mean_duration_ms": 4983.3,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 708.324273,
+            "input_tokens": 127220,
+            "output_tokens": 38705,
+            "call_duration_p25_ms": 3109.8,
+            "call_duration_median_ms": 4329.8,
+            "call_duration_p75_ms": 6570.9
+          },
+          {
+            "run_id": 10,
+            "exists": true,
+            "total_duration_ms": 536203.2,
+            "mean_duration_ms": 5362.0,
+            "successful_calls": 100,
+            "failed_calls": 0,
+            "wall_clock_seconds": 735.244552,
+            "input_tokens": 127220,
+            "output_tokens": 38789,
+            "call_duration_p25_ms": 3329.0,
+            "call_duration_median_ms": 4526.2,
+            "call_duration_p75_ms": 7001.1
+          }
+        ]
+      }
+    }
+  },
+  "grand_totals": {
+    "total_calls": 36000,
+    "successful_calls": 35638,
+    "failed_calls": 362,
+    "total_inference_duration_ms": 745778805.7,
+    "total_inference_duration_min": 12429.65,
+    "total_inference_duration_hr": 207.1608,
+    "total_wall_clock_seconds": 995686.76,
+    "total_wall_clock_minutes": 16594.78,
+    "total_wall_clock_hours": 276.5797,
+    "total_input_tokens": 48889727,
+    "total_output_tokens": 6924853,
+    "total_tokens": 55814580,
+    "total_estimated_cost_usd": 69.6569,
+    "cost_breakdown": {
+      "api_models_cost_usd": 69.3958,
+      "local_electricity_cost_usd": 0.2611
+    },
+    "mean_duration_per_call_ms": 20926.51
+  }
+}
