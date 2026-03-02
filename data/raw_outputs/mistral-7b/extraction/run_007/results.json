@@ -5,10 +5,70 @@
     "run_id": 7,
     "model_id": "mistral-7b",
     "output": {
-      "error": "json_parse_failed",
-      "raw": " ```json\n{\n  \"study_id\": \"first_author_year\",\n  \"study_location\": \"six metropolitan cities, South Korea\",\n  \"study_period\": \"2016-2019, 2020\",\n  \"study_design\": \"time_series\",\n  \"population\": \"general\",\n  \"sample_size\": null,\n  \"estimates\": [\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not explicitly stated in the abstract for Pre-COVID-19 period\n      \"ci_lower\": null, // Not explicitly stated in the abstract for Pre-COVID-19 period\n      \"ci_upper\": null, // Not explicitly stated in the abstract for Pre-COVID-19 period\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"Not specified (inferred as lag0 from context)\",\n      \"outcome_specific\": \"asthma, COPD\",\n      \"covariates\": [\"Not specified\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not explicitly stated in the abstract for Pre-COVID-19 period for PM2.5 and COPD\n      \"ci_lower\": null, // Not explicitly stated in the abstract for Pre-COVID-19 period for PM2.5 and COPD\n      \"ci_upper\": null, // Not explicitly stated in the abstract for Pre-COVID-19 period for PM2.5 and COPD\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"Not specified (inferred as lag0 from context)\",\n      \"outcome_specific\": \"COPD\",\n      \"covariates\": [\"Not specified\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not explicitly stated in the abstract for Post-COVID-19 period\n      \"ci_lower\": null, // Not explicitly stated in the abstract for Post-COVID-19 period\n      \"ci_upper\": null, // Not explicitly stated in the abstract for Post-COVID-19 period\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"Not specified (inferred as overall cumulative from context)\",\n      \"outcome_specific\": \"all_respiratory\",\n      \"covariates\": [\"temperature\", \"humidity\", \"trend\", \"seasonality\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not explicitly stated in the abstract for Post-COVID-19 period for PM2.5 and non-respiratory diseases\n      \"ci_lower\": null, // Not explicitly stated in the abstract for Post-COVID-19 period for PM2.5 and non-respiratory diseases\n      \"ci_upper\": null, // Not explicitly stated in the abstract for Post-COVID-19 period for PM2.5 and non-respiratory diseases\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"Not specified (inferred as overall cumulative from context)\",\n      \"outcome_specific\": \"non-respiratory diseases\",\n      \"covariates\": [\"temperature\", \"humidity\", \"trend\", \"seasonality\"]\n    }\n  ]\n}\n```"
+      "study_id": "first_author_year",
+      "study_location": "six metropolitan cities, South Korea",
+      "study_period": "2016-2019, 2020",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "Not specified (inferred as lag0 from context)",
+          "outcome_specific": "asthma, COPD",
+          "covariates": [
+            "Not specified"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "Not specified (inferred as lag0 from context)",
+          "outcome_specific": "COPD",
+          "covariates": [
+            "Not specified"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "Not specified (inferred as overall cumulative from context)",
+          "outcome_specific": "all_respiratory",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "Not specified (inferred as overall cumulative from context)",
+          "outcome_specific": "non-respiratory diseases",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality"
+          ]
+        }
+      ]
     },
-    "valid": false,
+    "valid": true,
     "output_hash": "9d04042b7490ec5ab5e2b1e332542e7d8f2e370b0455b33fe668b46e55ecfa54"
   },
   {
@@ -30,7 +90,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 13.5 µg/m³ (half maximum effect)",
+          "exposure_increment": "per 13.5 \u00b5g/m\u00b3 (half maximum effect)",
           "lag": null,
           "outcome_specific": "asthma",
           "covariates": [
@@ -65,7 +125,7 @@
           "ci_lower": 0.24,
           "ci_upper": 0.37,
           "ci_level": 95,
-          "exposure_increment": "per 1-μg/m³",
+          "exposure_increment": "per 1-\u03bcg/m\u00b3",
           "lag": "not specified",
           "outcome_specific": "asthma",
           "covariates": [
@@ -119,10 +179,49 @@
     "run_id": 7,
     "model_id": "mistral-7b",
     "output": {
-      "error": "json_parse_failed",
-      "raw": " ```json\n{\n  \"study_id\": \"first_author_year\",\n  \"study_location\": \"Pittsburgh, United States\",\n  \"study_period\": \"2010-2018\",\n  \"study_design\": \"case_crossover\",\n  \"population\": \"children\",\n  \"sample_size\": null,\n  \"estimates\": [\n    {\n      \"effect_measure\": \"OR\",\n      \"effect_estimate\": 1.014,\n      \"ci_lower\": 1.003,\n      \"ci_upper\": 1.025,\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per 10-unit increase\",\n      \"lag\": \"Lag Day 2\",\n      \"outcome_specific\": \"asthma\"\n    },\n    {\n      \"effect_measure\": \"OR\",\n      \"effect_estimate\": 1.012,\n      \"ci_lower\": 1.001,\n      \"ci_upper\": 1.023,\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per 10-unit increase\",\n      \"lag\": \"Lag Day 3\",\n      \"outcome_specific\": \"asthma\"\n    ],\n    {\n      \"effect_measure\": \"OR\",\n      \"effect_estimate\": null,\n      \"ci_lower\": null,\n      \"ci_upper\": null,\n      \"ci_level\": null,\n      \"exposure_increment\": \"per 10-unit increase\",\n      \"lag\": \"Lag Day 4\",\n      \"outcome_specific\": \"asthma\",\n      \"covariates\": [\"race\"]\n    ]\n}\n```"
+      "study_id": "first_author_year",
+      "study_location": "Pittsburgh, United States",
+      "study_period": "2010-2018",
+      "study_design": "case_crossover",
+      "population": "children",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.014,
+          "ci_lower": 1.003,
+          "ci_upper": 1.025,
+          "ci_level": 95,
+          "exposure_increment": "per 10-unit increase",
+          "lag": "Lag Day 2",
+          "outcome_specific": "asthma"
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.012,
+          "ci_lower": 1.001,
+          "ci_upper": 1.023,
+          "ci_level": 95,
+          "exposure_increment": "per 10-unit increase",
+          "lag": "Lag Day 3",
+          "outcome_specific": "asthma"
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": null,
+          "exposure_increment": "per 10-unit increase",
+          "lag": "Lag Day 4",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "race"
+          ]
+        }
+      ]
     },
-    "valid": false,
+    "valid": true,
     "output_hash": "b56f9c75f5801d259308077f0abd37366eeb9a472abd024cabaf06e71005e321"
   },
   {
@@ -131,10 +230,81 @@
     "run_id": 7,
     "model_id": "mistral-7b",
     "output": {
-      "error": "json_parse_failed",
-      "raw": " ```json\n{\n  \"study_id\": \"first_author_year\",\n  \"study_location\": \"United States\",\n  \"study_period\": \"2000-2014\",\n  \"study_design\": \"case_crossover\",\n  \"population\": \"elderly\",\n  \"sample_size\": null,\n  \"estimates\": [\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not provided in the abstract\n      \"ci_lower\": null, // Not provided in the abstract\n      \"ci_upper\": null, // Not provided in the abstract\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"not specified\",\n      \"outcome_specific\": \"all_cardiovascular\",\n      \"covariates\": [\"temperature\", \"humidity\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not provided in the abstract\n      \"ci_lower\": null, // Not provided in the abstract\n      \"ci_upper\": null, // Not provided in the abstract\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"not specified\",\n      \"outcome_specific\": \"all_respiratory\",\n      \"covariates\": [\"temperature\", \"humidity\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not provided in the abstract\n      \"ci_lower\": null, // Not provided in the abstract\n      \"ci_upper\": null, // Not provided in the abstract\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"not specified\",\n      \"outcome_specific\": \"heart_failure\",\n      \"covariates\": [\"temperature\", \"humidity\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not provided in the abstract\n      \"ci_lower\": null, // Not provided in the abstract\n      \"ci_upper\": null, // Not provided in the abstract\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"not specified\",\n      \"outcome_specific\": \"other_aneurysm_and_intracranial_hemorrhage\",\n      \"covariates\": [\"temperature\", \"humidity\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not provided in the abstract\n      \"ci_lower\": null, // Not provided in the abstract\n      \"ci_upper\": null, // Not provided in the abstract\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"not specified\",\n      \"outcome_specific\": \"influenza\",\n      \"covariates\": [\"temperature\", \"humidity\"]\n    }\n  ]\n}\n```"
+      "study_id": "first_author_year",
+      "study_location": "United States",
+      "study_period": "2000-2014",
+      "study_design": "case_crossover",
+      "population": "elderly",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "not specified",
+          "outcome_specific": "all_cardiovascular",
+          "covariates": [
+            "temperature",
+            "humidity"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "not specified",
+          "outcome_specific": "all_respiratory",
+          "covariates": [
+            "temperature",
+            "humidity"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "not specified",
+          "outcome_specific": "heart_failure",
+          "covariates": [
+            "temperature",
+            "humidity"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "not specified",
+          "outcome_specific": "other_aneurysm_and_intracranial_hemorrhage",
+          "covariates": [
+            "temperature",
+            "humidity"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "not specified",
+          "outcome_specific": "influenza",
+          "covariates": [
+            "temperature",
+            "humidity"
+          ]
+        }
+      ]
     },
-    "valid": false,
+    "valid": true,
     "output_hash": "612592df0b964dd26fcf95eaeea2f2ee04dec64e600d5d3a266d486fa52db149"
   },
   {
@@ -156,7 +326,7 @@
           "ci_lower": 1.012,
           "ci_upper": 1.049,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag07",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -170,7 +340,7 @@
           "ci_lower": 1.001,
           "ci_upper": 1.015,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag07",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -184,7 +354,7 @@
           "ci_lower": 1.024,
           "ci_upper": 1.071,
           "ci_level": 95,
-          "exposure_increment": "per 1 mg/m³",
+          "exposure_increment": "per 1\u00a0mg/m\u00b3",
           "lag": "lag07",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -198,7 +368,7 @@
           "ci_lower": 1.052,
           "ci_upper": 1.236,
           "ci_level": 95,
-          "exposure_increment": "per 1 mg/m³",
+          "exposure_increment": "per 1\u00a0mg/m\u00b3",
           "lag": "lag07",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -230,7 +400,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "5 days before presentation",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -246,7 +416,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "5 days before presentation",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -262,7 +432,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "2-12 days before presentation",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -312,7 +482,7 @@
           "effect_estimate": 1.0247,
           "ci_lower": 1.0092,
           "ci_upper": 1.0405,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-6",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -327,7 +497,7 @@
           "effect_estimate": 1.0928,
           "ci_lower": 1.0562,
           "ci_upper": 1.1308,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-6",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -342,7 +512,7 @@
           "effect_estimate": 1.0715,
           "ci_lower": 1.0495,
           "ci_upper": 1.094,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-6",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -357,7 +527,7 @@
           "effect_estimate": 1.0028,
           "ci_lower": 1.0,
           "ci_upper": 1.0056,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -391,7 +561,7 @@
           "ci_lower": 1.13,
           "ci_upper": 3.0,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "Not specified in the abstract",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -409,7 +579,7 @@
           "ci_lower": 1.06,
           "ci_upper": 4.14,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "Not specified in the abstract",
           "outcome_specific": "respiratory_infection",
           "covariates": [
@@ -427,7 +597,7 @@
           "ci_lower": 1.14,
           "ci_upper": 3.61,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "Not specified in the abstract",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -446,7 +616,7 @@
           "ci_lower": 0.57,
           "ci_upper": 1.25,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "Not specified in the abstract",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -628,7 +798,7 @@
           "ci_lower": 0.955,
           "ci_upper": 1.056,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag1",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -642,7 +812,7 @@
           "ci_lower": 1.007,
           "ci_upper": 1.167,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "Not specified",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -656,7 +826,7 @@
           "ci_lower": 0.929,
           "ci_upper": 1.014,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "Not specified",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -690,7 +860,7 @@
     "model_id": "mistral-7b",
     "output": {
       "study_id": "first_author_year",
-      "study_location": "Taubaté, Tremembé, Pindamonhangaba, Brazil",
+      "study_location": "Taubat\u00e9, Trememb\u00e9, Pindamonhangaba, Brazil",
       "study_period": "2020-2021",
       "study_design": "time_series",
       "population": "general",
@@ -702,7 +872,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag7",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -716,7 +886,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 5 µg/m³",
+          "exposure_increment": "per 5 \u00b5g/m\u00b3",
           "lag": "lag2",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -749,7 +919,7 @@
           "ci_lower": 1.008,
           "ci_upper": 1.025,
           "ci_level": 95,
-          "exposure_increment": "per 6.3-μg/m³ increase in PM2.5",
+          "exposure_increment": "per 6.3-\u03bcg/m\u00b3 increase in PM2.5",
           "lag": "8-day cumulative exposure",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -766,7 +936,7 @@
           "ci_lower": 1.007,
           "ci_upper": 1.02,
           "ci_level": 95,
-          "exposure_increment": "per 9.6-μg/m³ increase in PM10-2.5",
+          "exposure_increment": "per 9.6-\u03bcg/m\u00b3 increase in PM10-2.5",
           "lag": "8-day cumulative exposure",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -783,7 +953,7 @@
           "ci_lower": 1.009,
           "ci_upper": 1.024,
           "ci_level": 95,
-          "exposure_increment": "per 2.8-μg/m³ increase in organic carbon",
+          "exposure_increment": "per 2.8-\u03bcg/m\u00b3 increase in organic carbon",
           "lag": "8-day cumulative exposure",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -822,10 +992,44 @@
     "run_id": 7,
     "model_id": "mistral-7b",
     "output": {
-      "error": "json_parse_failed",
-      "raw": " ```json\n{\n  \"study_id\": \"first_author_year\",\n  \"study_location\": \"Melbourne, Australia\",\n  \"study_period\": \"2014-2019\",\n  \"study_design\": \"case_crossover\",\n  \"population\": \"general\",\n  \"sample_size\": null,\n  \"estimates\": [\n    {\n      \"effect_measure\": \"IRR\",\n      \"effect_estimate\": 1.043,\n      \"ci_lower\": 1.000,\n      \"ci_upper\": 1.089,\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"7-day average\",\n      \"outcome_specific\": \"all_respiratory\",\n      \"covariates\": [\"other pollutants\", \"weather conditions\"]\n    },\n    {\n      \"effect_measure\": \"IRR\",\n      \"effect_estimate\": 1.013,\n      \"ci_lower\": 0.971,\n      \"ci_upper\": 1.056,\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"not specified\",\n      \"outcome_specific\": \"all_respiratory\",\n      \"covariates\": [\"other pollutants\", \"weather conditions\"]\n    ]\n}\n```"
+      "study_id": "first_author_year",
+      "study_location": "Melbourne, Australia",
+      "study_period": "2014-2019",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "IRR",
+          "effect_estimate": 1.043,
+          "ci_lower": 1.0,
+          "ci_upper": 1.089,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "7-day average",
+          "outcome_specific": "all_respiratory",
+          "covariates": [
+            "other pollutants",
+            "weather conditions"
+          ]
+        },
+        {
+          "effect_measure": "IRR",
+          "effect_estimate": 1.013,
+          "ci_lower": 0.971,
+          "ci_upper": 1.056,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "not specified",
+          "outcome_specific": "all_respiratory",
+          "covariates": [
+            "other pollutants",
+            "weather conditions"
+          ]
+        }
+      ]
     },
-    "valid": false,
+    "valid": true,
     "output_hash": "c55589a7afd5de2cdb5a4ad3dacc42e01da8edc1b629cf53042c004b9ff249e7"
   },
   {
@@ -847,7 +1051,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per -18°C",
+          "exposure_increment": "per -18\u00b0C",
           "lag": "other",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -860,7 +1064,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 27°C",
+          "exposure_increment": "per 27\u00b0C",
           "lag": "other",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -873,7 +1077,7 @@
           "ci_lower": 0.923,
           "ci_upper": 1.045,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "other",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -886,7 +1090,7 @@
           "ci_lower": 0.923,
           "ci_upper": 1.045,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "other",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -899,7 +1103,7 @@
           "ci_lower": 0.923,
           "ci_upper": 1.045,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "other",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -912,7 +1116,7 @@
           "ci_lower": 0.923,
           "ci_upper": 1.045,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "other",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -925,7 +1129,7 @@
           "ci_lower": 0.923,
           "ci_upper": 1.045,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "other",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -938,7 +1142,7 @@
           "ci_lower": 0.923,
           "ci_upper": 1.045,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "other",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -951,7 +1155,7 @@
           "ci_lower": 0.923,
           "ci_upper": 1.045,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "other",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -964,7 +1168,7 @@
           "ci_lower": 0.923,
           "ci_upper": 1.045,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "other",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -977,7 +1181,7 @@
           "ci_lower": 0.923,
           "ci_upper": 1.045,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "other",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -990,7 +1194,7 @@
           "ci_lower": 0.923,
           "ci_upper": 1.045,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "other",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -1003,7 +1207,7 @@
           "ci_lower": 0.923,
           "ci_upper": 1.045,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "other",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -1016,7 +1220,7 @@
           "ci_lower": 0.923,
           "ci_upper": 1.045,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "other",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -1035,10 +1239,46 @@
     "run_id": 7,
     "model_id": "mistral-7b",
     "output": {
-      "error": "json_parse_failed",
-      "raw": " ```json\n{\n  \"study_id\": \"first_author_year\",\n  \"study_location\": \"Wuhan, China\",\n  \"study_period\": \"2015-2020\",\n  \"study_design\": \"time_series\",\n  \"population\": \"general\",\n  \"sample_size\": null,\n  \"estimates\": [\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not explicitly stated in the abstract\n      \"ci_lower\": null, // Not explicitly stated in the abstract\n      \"ci_upper\": null, // Not explicitly stated in the abstract\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"not specified\",\n      \"outcome_specific\": \"all_respiratory\",\n      \"covariates\": [\"temperature\", \"humidity\", \"trend\", \"seasonality\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not explicitly stated in the abstract\n      \"ci_lower\": null, // Not explicitly stated in the abstract\n      \"ci_upper\": null, // Not explicitly stated in the abstract\n      \"exposure_increment\": \"per 20 µg/m³\",\n      \"lag\": \"not specified\",\n      \"outcome_specific\": \"all_respiratory\",\n      \"covariates\": [\"temperature\", \"humidity\", \"trend\", \"seasonality\"]\n    }\n  ]\n}\n```"
+      "study_id": "first_author_year",
+      "study_location": "Wuhan, China",
+      "study_period": "2015-2020",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "not specified",
+          "outcome_specific": "all_respiratory",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "exposure_increment": "per 20 \u00b5g/m\u00b3",
+          "lag": "not specified",
+          "outcome_specific": "all_respiratory",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality"
+          ]
+        }
+      ]
     },
-    "valid": false,
+    "valid": true,
     "output_hash": "2570054bfa429d4c8f43174682bd98bac534104c6517ec94f6108281b94b95ca"
   },
   {
@@ -1060,7 +1300,7 @@
           "ci_lower": 1.0035,
           "ci_upper": 1.0067,
           "ci_level": 95,
-          "exposure_increment": "per 0.1 µg/m³",
+          "exposure_increment": "per 0.1 \u00b5g/m\u00b3",
           "lag": "3-month average",
           "outcome_specific": "hypertension",
           "covariates": [
@@ -1092,7 +1332,7 @@
           "ci_lower": 0.05,
           "ci_upper": 1.64,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-3",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -1127,7 +1367,7 @@
           "ci_lower": 1.013,
           "ci_upper": 1.195,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "asthma",
           "covariates": [
@@ -1143,7 +1383,7 @@
           "ci_lower": 1.081,
           "ci_upper": 1.168,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "COPD",
           "covariates": [
@@ -1159,7 +1399,7 @@
           "ci_lower": 0.904,
           "ci_upper": 1.02,
           "ci_level": 95,
-          "exposure_increment": "per µg/m³ (ozone)",
+          "exposure_increment": "per \u00b5g/m\u00b3 (ozone)",
           "lag": null,
           "outcome_specific": "asthma",
           "covariates": [
@@ -1175,7 +1415,7 @@
           "ci_lower": 0.99,
           "ci_upper": 1.127,
           "ci_level": 95,
-          "exposure_increment": "per µg/m³ (PM10)",
+          "exposure_increment": "per \u00b5g/m\u00b3 (PM10)",
           "lag": null,
           "outcome_specific": "asthma",
           "covariates": [
@@ -1191,7 +1431,7 @@
           "ci_lower": 0.981,
           "ci_upper": 1.148,
           "ci_level": 95,
-          "exposure_increment": "per µg/m³ (PM2.5)",
+          "exposure_increment": "per \u00b5g/m\u00b3 (PM2.5)",
           "lag": null,
           "outcome_specific": "asthma",
           "covariates": [
@@ -1207,7 +1447,7 @@
           "ci_lower": 0.981,
           "ci_upper": 1.033,
           "ci_level": 95,
-          "exposure_increment": "per µg/m³ (ozone)",
+          "exposure_increment": "per \u00b5g/m\u00b3 (ozone)",
           "lag": null,
           "outcome_specific": "COPD",
           "covariates": [
@@ -1223,7 +1463,7 @@
           "ci_lower": 0.988,
           "ci_upper": 1.032,
           "ci_level": 95,
-          "exposure_increment": "per µg/m³ (PM10)",
+          "exposure_increment": "per \u00b5g/m\u00b3 (PM10)",
           "lag": null,
           "outcome_specific": "COPD",
           "covariates": [
@@ -1239,7 +1479,7 @@
           "ci_lower": 0.966,
           "ci_upper": 1.019,
           "ci_level": 95,
-          "exposure_increment": "per µg/m³ (PM2.5)",
+          "exposure_increment": "per \u00b5g/m\u00b3 (PM2.5)",
           "lag": null,
           "outcome_specific": "COPD",
           "covariates": [
@@ -1274,7 +1514,7 @@
           "ci_lower": 0.17,
           "ci_upper": 4.63,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "same-day and preceding week",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -1290,7 +1530,7 @@
           "ci_lower": -0.09,
           "ci_upper": 5.3,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "same-day and preceding week",
           "outcome_specific": "cardiovascular",
           "covariates": [
@@ -1520,7 +1760,7 @@
           "ci_lower": 1.002,
           "ci_upper": 1.044,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag1",
           "outcome_specific": "ACS",
           "covariates": [
@@ -1536,7 +1776,7 @@
           "ci_lower": 1.005,
           "ci_upper": 1.047,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag2",
           "outcome_specific": "ACS",
           "covariates": [
@@ -1552,7 +1792,7 @@
           "ci_lower": 1.025,
           "ci_upper": 1.118,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "pneumonia",
           "covariates": [
@@ -1568,7 +1808,7 @@
           "ci_lower": 1.003,
           "ci_upper": 1.046,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag1",
           "outcome_specific": "pneumonia",
           "covariates": [
@@ -1618,7 +1858,7 @@
           "ci_lower": 1.06,
           "ci_upper": 4.13,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "4-week lag",
           "outcome_specific": "pneumonia",
           "covariates": [
@@ -1722,7 +1962,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "all_respiratory",
           "covariates": []
@@ -1733,7 +1973,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "all_respiratory",
           "covariates": []
@@ -1744,7 +1984,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "all_respiratory",
           "covariates": []
@@ -1755,7 +1995,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "all_respiratory",
           "covariates": []
@@ -1766,7 +2006,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "all_respiratory",
           "covariates": []
@@ -1788,7 +2028,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 1000 µg/m³",
+          "exposure_increment": "per 1000 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "all_respiratory",
           "covariates": []
@@ -1799,7 +2039,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-2",
           "outcome_specific": "all_respiratory",
           "covariates": []
@@ -1810,7 +2050,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-2",
           "outcome_specific": "pneumonia",
           "covariates": []
@@ -1821,7 +2061,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-2",
           "outcome_specific": "bronchitis",
           "covariates": []
@@ -1832,7 +2072,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-2",
           "outcome_specific": "asthma",
           "covariates": []
@@ -1843,7 +2083,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-2",
           "outcome_specific": "upper respiratory diseases",
           "covariates": []
@@ -1884,7 +2124,7 @@
           "ci_lower": 0.375,
           "ci_upper": 1.377,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -1900,7 +2140,7 @@
           "ci_lower": 0.148,
           "ci_upper": 0.949,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -1916,7 +2156,7 @@
           "ci_lower": 0.869,
           "ci_upper": 3.08,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -1932,7 +2172,7 @@
           "ci_lower": 0.305,
           "ci_upper": 2.778,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag2",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -1967,7 +2207,7 @@
           "ci_lower": 1.003,
           "ci_upper": 1.023,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "asthma_or_wheeze",
           "covariates": [
@@ -1983,7 +2223,7 @@
           "ci_lower": 1.008,
           "ci_upper": 1.022,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "upper_respiratory_infections",
           "covariates": [
@@ -2053,10 +2293,81 @@
     "run_id": 7,
     "model_id": "mistral-7b",
     "output": {
-      "error": "json_parse_failed",
-      "raw": " ```json\n{\n  \"study_id\": \"first_author_year\",\n  \"study_location\": \"Lanzhou City, China\",\n  \"study_period\": \"2013-2019\",\n  \"study_design\": \"time_series\",\n  \"population\": \"general\",\n  \"sample_size\": null,\n  \"estimates\": [\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // The abstract does not provide a specific effect estimate for the overall association between PM2.5 and upper respiratory tract infections\n      \"ci_lower\": null,\n      \"ci_upper\": null,\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"7 cumulative lag days\",\n      \"outcome_specific\": \"all_respiratory\",\n      \"covariates\": [\"temperature\", \"humidity\", \"trend\", \"seasonality\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": 1.03, // Estimated effect on outpatient visits for upper respiratory tract infections at cumulative lag days 1, 3, and 5 (not explicitly stated in the abstract but can be inferred from the text)\n      \"ci_lower\": null,\n      \"ci_upper\": null,\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"cumulative lag days 1, 3, and 5\",\n      \"outcome_specific\": \"all_respiratory\",\n      \"covariates\": [\"temperature\", \"humidity\", \"trend\", \"seasonality\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": 1.06, // Estimated effect on outpatient visits for upper respiratory tract infections at cumulative lag days not explicitly stated but can be inferred from the text (not provided in the abstract)\n      \"ci_lower\": null,\n      \"ci_upper\": null,\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"other\",\n      \"outcome_specific\": \"all_respiratory\",\n      \"covariates\": [\"temperature\", \"humidity\", \"trend\", \"seasonality\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": 1.09, // Estimated effect on outpatient visits for upper respiratory tract infections in men (not explicitly stated in the abstract but can be inferred from the text)\n      \"ci_lower\": null,\n      \"ci_upper\": null,\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"other\",\n      \"outcome_specific\": \"all_respiratory\",\n      \"covariates\": [\"temperature\", \"humidity\", \"trend\", \"seasonality\", \"gender\"]\n    }\n  ]\n}\n```"
+      "study_id": "first_author_year",
+      "study_location": "Lanzhou City, China",
+      "study_period": "2013-2019",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "7 cumulative lag days",
+          "outcome_specific": "all_respiratory",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.03,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "cumulative lag days 1, 3, and 5",
+          "outcome_specific": "all_respiratory",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.06,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "other",
+          "outcome_specific": "all_respiratory",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.09,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "other",
+          "outcome_specific": "all_respiratory",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality",
+            "gender"
+          ]
+        }
+      ]
     },
-    "valid": false,
+    "valid": true,
     "output_hash": "e30392b98a9b39264b51923fda45e2faef7ecc836ef448128b46f12c754966bb"
   },
   {
@@ -2078,7 +2389,7 @@
           "ci_lower": 1.21,
           "ci_upper": 1.3,
           "ci_level": 95,
-          "exposure_increment": "per 23.4 µg/m³",
+          "exposure_increment": "per 23.4 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "all_respiratory",
           "covariates": []
@@ -2089,7 +2400,7 @@
           "ci_lower": 1.1,
           "ci_upper": 1.27,
           "ci_level": 95,
-          "exposure_increment": "per 23.4 µg/m³",
+          "exposure_increment": "per 23.4 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "CLRD",
           "covariates": []
@@ -2100,7 +2411,7 @@
           "ci_lower": 1.03,
           "ci_upper": 1.25,
           "ci_level": 95,
-          "exposure_increment": "per 23.4 µg/m³",
+          "exposure_increment": "per 23.4 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "acute myocardial infarction",
           "covariates": []
@@ -2221,7 +2532,7 @@
           "ci_lower": 1.096,
           "ci_upper": 1.142,
           "ci_level": 95,
-          "exposure_increment": "> 33 μg/m³",
+          "exposure_increment": ">\u200933\u00a0\u03bcg/m\u00b3",
           "lag": "not specified",
           "outcome_specific": "AECOPD",
           "covariates": [
@@ -2254,7 +2565,7 @@
           "ci_lower": 1.0087,
           "ci_upper": 1.0235,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "cumulative lag over a 5-day period",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -2269,7 +2580,7 @@
           "effect_estimate": 391,
           "ci_lower": 211,
           "ci_upper": 571,
-          "exposure_increment": "per 10 µg/m³ reduction in average exposure",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3 reduction in average exposure",
           "lag": null,
           "outcome_specific": "all_respiratory",
           "covariates": []
@@ -2279,7 +2590,7 @@
           "effect_estimate": 265,
           "ci_lower": 139,
           "ci_upper": 393,
-          "exposure_increment": "per 10 µg/m³ reduction in average exposure",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3 reduction in average exposure",
           "lag": null,
           "outcome_specific": "all_respiratory",
           "covariates": []
@@ -2289,7 +2600,7 @@
           "effect_estimate": 262,
           "ci_lower": 125,
           "ci_upper": 399,
-          "exposure_increment": "per 10 µg/m³ reduction in average exposure",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3 reduction in average exposure",
           "lag": null,
           "outcome_specific": "all_respiratory",
           "covariates": []
@@ -2366,7 +2677,7 @@
           "ci_lower": 3.202,
           "ci_upper": 7.445,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag07",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -2382,7 +2693,7 @@
           "ci_lower": 0.291,
           "ci_upper": 1.328,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag07",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -2398,7 +2709,7 @@
           "ci_lower": 5.819,
           "ci_upper": 15.611,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag07",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -2414,7 +2725,7 @@
           "ci_lower": 2.379,
           "ci_upper": 8.357,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag07",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -2430,7 +2741,7 @@
           "ci_lower": 11.834,
           "ci_upper": 30.482,
           "ci_level": 95,
-          "exposure_increment": "per 1-mg/m³",
+          "exposure_increment": "per 1-mg/m\u00b3",
           "lag": "lag07",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -2465,7 +2776,7 @@
           "ci_lower": 0.64,
           "ci_upper": 3.82,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag03",
           "outcome_specific": "pneumonia",
           "covariates": [
@@ -2479,7 +2790,7 @@
           "ci_lower": 0.85,
           "ci_upper": 3.04,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag03",
           "outcome_specific": "asthma",
           "covariates": [
@@ -2493,7 +2804,7 @@
           "ci_lower": 4.7,
           "ci_upper": 18.1,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag03",
           "outcome_specific": "pneumonia",
           "covariates": [
@@ -2507,7 +2818,7 @@
           "ci_lower": 3.07,
           "ci_upper": 7.82,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag03",
           "outcome_specific": "asthma",
           "covariates": [
@@ -2540,7 +2851,7 @@
           "ci_lower": 0.017,
           "ci_upper": 0.131,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-1",
           "outcome_specific": "all_age_asthma_emergency_room_admissions",
           "covariates": [
@@ -2556,7 +2867,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "3-day_average",
           "outcome_specific": "asthma",
           "covariates": [
@@ -2572,7 +2883,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "3-day_average",
           "outcome_specific": "asthma",
           "covariates": [
@@ -2589,7 +2900,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "3-day_average",
           "outcome_specific": "asthma",
           "covariates": [
@@ -2625,7 +2936,7 @@
           "ci_lower": 1.0379,
           "ci_upper": 1.3003,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -2639,7 +2950,7 @@
           "ci_lower": 0.75,
           "ci_upper": 1.3749,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -2670,7 +2981,7 @@
           "effect_estimate": 1.007,
           "ci_lower": 1.004,
           "ci_upper": 1.011,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "natural causes",
           "covariates": [
@@ -2685,7 +2996,7 @@
           "effect_estimate": 1.012,
           "ci_lower": 1.005,
           "ci_upper": 1.019,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "respiratory causes",
           "covariates": [
@@ -2794,7 +3105,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "over four lag days",
           "outcome_specific": "COPD",
           "covariates": [
@@ -2810,7 +3121,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "over four lag days",
           "outcome_specific": "COPD",
           "covariates": [
@@ -2832,10 +3143,48 @@
     "run_id": 7,
     "model_id": "mistral-7b",
     "output": {
-      "error": "json_parse_failed",
-      "raw": " ```json\n{\n  \"study_id\": \"first_author_year\",\n  \"study_location\": \"China\",\n  \"study_period\": \"2013-20\",\n  \"study_design\": \"case_crossover\",\n  \"population\": \"general\",\n  \"sample_size\": null,\n  \"estimates\": [\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": 1.73,\n      \"ci_lower\": 1.34,\n      \"ci_upper\": 2.12,\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per IQR\",\n      \"lag\": \"lag0-4\",\n      \"outcome_specific\": \"all_respiratory\",\n      \"covariates\": [\"temperature\", \"humidity\", \"trend\", \"seasonality\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": 1.70,\n      \"ci_lower\": 1.31,\n      \"ci_upper\": 2.10,\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per IQR\",\n      \"lag\": \"lag0-4\",\n      \"outcome_specific\": \"all_respiratory\",\n      \"covariates\": [\"temperature\", \"humidity\", \"trend\", \"seasonality\"]\n    ]\n}\n```"
+      "study_id": "first_author_year",
+      "study_location": "China",
+      "study_period": "2013-20",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.73,
+          "ci_lower": 1.34,
+          "ci_upper": 2.12,
+          "ci_level": 95,
+          "exposure_increment": "per IQR",
+          "lag": "lag0-4",
+          "outcome_specific": "all_respiratory",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.7,
+          "ci_lower": 1.31,
+          "ci_upper": 2.1,
+          "ci_level": 95,
+          "exposure_increment": "per IQR",
+          "lag": "lag0-4",
+          "outcome_specific": "all_respiratory",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality"
+          ]
+        }
+      ]
     },
-    "valid": false,
+    "valid": true,
     "output_hash": "845ea01ff58a7dc1b50b9a04a344ad3a6b5af652a59ea19966a8cf7f767f516c"
   },
   {
@@ -2857,7 +3206,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag2",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -2873,7 +3222,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag5",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -2889,7 +3238,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag7",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -2924,7 +3273,7 @@
           "ci_lower": 1.028,
           "ci_upper": 1.069,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "acute upper respiratory infection",
           "covariates": [
@@ -2938,7 +3287,7 @@
           "ci_lower": 1.038,
           "ci_upper": 1.082,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "bronchitis or bronchiolitis",
           "covariates": [
@@ -2952,7 +3301,7 @@
           "ci_lower": 1.046,
           "ci_upper": 1.122,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "acute upper respiratory infection",
           "covariates": [
@@ -2966,7 +3315,7 @@
           "ci_lower": 1.054,
           "ci_upper": 1.136,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "bronchitis or bronchiolitis",
           "covariates": [
@@ -2985,10 +3334,186 @@
     "run_id": 7,
     "model_id": "mistral-7b",
     "output": {
-      "error": "json_parse_failed",
-      "raw": " ```json\n{\n  \"study_id\": \"first_author_year\",\n  \"study_location\": \"nine districts, Ontario, Canada\",\n  \"study_period\": \"2004-2011\",\n  \"study_design\": \"case_crossover\",\n  \"population\": \"general\",\n  \"sample_size\": null,\n  \"estimates\": [\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": 1.06, // For NO2 among males with lags of 3-6 days (assuming the RR is 1.06)\n      \"ci_lower\": 1.02,\n      \"ci_upper\": 1.11,\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per 10 µg/m³\", // Assuming the increment is per 10 µg/m³ for all pollutants\n      \"lag\": \"3-6 days\",\n      \"outcome_specific\": \"COPD\",\n      \"covariates\": [\"sex\", \"season\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": 1.06, // For PM2.5 among males with lags 1-8 days (assuming the RR is 1.06)\n      \"ci_lower\": 1.02,\n      \"ci_upper\": 1.11,\n      \"ci_level\": 95,\n      \"lag\": \"1-8 days\",\n      \"outcome_specific\": \"COPD\",\n      \"covariates\": [\"sex\", \"season\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": 1.06, // For SO2 among males with lags of 4-8 days (assuming the RR is 1.06)\n      \"ci_lower\": 1.02,\n      \"ci_upper\": 1.11,\n      \"ci_level\": 95,\n      \"lag\": \"4-8 days\",\n      \"outcome_specific\": \"COPD\",\n      \"covariates\": [\"sex\", \"season\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": 1.02, // For O3 among females with lags 2-4 days (assuming the RR is 1.02)\n      \"ci_lower\": 1.00,\n      \"ci_upper\": 1.04,\n      \"ci_level\": 95,\n      \"lag\": \"2-4 days\",\n      \"outcome_specific\": \"COPD\",\n      \"covariates\": [\"sex\", \"season\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": 1.06, // For SO2 among females with lags of 3-6 days (assuming the RR is 1.06)\n      \"ci_lower\": 1.02,\n      \"ci_upper\": 1.11,\n      \"ci_level\": 95,\n      \"lag\": \"3-6 days\",\n      \"outcome_specific\": \"COPD\",\n      \"covariates\": [\"sex\", \"season\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": 1.08, // For NO2 among females with lag 8 days (assuming the RR is 1.08)\n      \"ci_lower\": 1.04,\n      \"ci_upper\": 1.13,\n      \"ci_level\": 95,\n      \"lag\": \"8 days\",\n      \"outcome_specific\": \"COPD\",\n      \"covariates\": [\"sex\", \"season\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": 1.06, // For NO2 among males with lags 5-8 days (assuming the RR is 1.06)\n      \"ci_lower\": 1.02,\n      \"ci_upper\": 1.11,\n      \"ci_level\": 95,\n      \"lag\": \"5-8 days\",\n      \"outcome_specific\": \"upper respiratory disease emergencies\",\n      \"covariates\": [\"sex\", \"season\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": 1.06, // For O3 among males with lags 0-6 days (assuming the RR is 1.06)\n      \"ci_lower\": 1.02,\n      \"ci_upper\": 1.11,\n      \"ci_level\": 95,\n      \"lag\": \"0-6 days\",\n      \"outcome_specific\": \"upper respiratory disease emergencies\",\n      \"covariates\": [\"sex\", \"season\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": 1.06, // For PM2.5 among males with all lags (assuming the RR is 1.06)\n      \"ci_lower\": 1.02,\n      \"ci_upper\": 1.11,\n      \"ci_level\": 95,\n      \"lag\": \"all lags\",\n      \"outcome_specific\": \"upper respiratory disease emergencies\",\n      \"covariates\": [\"sex\", \"season\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": 1.08, // For SO2 among males with lag 8 (assuming the RR is 1.08)\n      \"ci_lower\": 1.04,\n      \"ci_upper\": 1.13,\n      \"ci_level\": 95,\n      \"lag\": \"8 days\",\n      \"outcome_specific\": \"upper respiratory disease emergencies\",\n      \"covariates\": [\"sex\", \"season\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": 1.06, // For NO2 among females with lag 8 days (assuming the RR is 1.06)\n      \"ci_lower\": 1.02,\n      \"ci_upper\": 1.11,\n      \"ci_level\": 95,\n      \"lag\": \"8 days\",\n      \"outcome_specific\": \"upper respiratory disease emergencies\",\n      \"covariates\": [\"sex\", \"season\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": 1.06, // For O3 among females with all lags (assuming the RR is 1.06)\n      \"ci_lower\": 1.02,\n      \"ci_upper\": 1.11,\n      \"ci_level\": 95,\n      \"lag\": \"all lags\",\n      \"outcome_specific\": \"upper respiratory disease emergencies\",\n      \"covariates\": [\"sex\", \"season\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": 1.06, // For PM2.5 among females with all lags (assuming the RR is 1.06)\n      \"ci_lower\": 1.02,\n      \"ci_upper\": 1.11,\n      \"ci_level\": 95,\n      \"lag\": \"all lags\",\n      \"outcome_specific\": \"upper respiratory disease emergencies\",\n      \"covariates\": [\"sex\", \"season\"]\n    }\n  ]\n}\n```"
+      "study_id": "first_author_year",
+      "study_location": "nine districts, Ontario, Canada",
+      "study_period": "2004-2011",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.06,
+          "ci_lower": 1.02,
+          "ci_upper": 1.11,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "3-6 days",
+          "outcome_specific": "COPD",
+          "covariates": [
+            "sex",
+            "season"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.06,
+          "ci_lower": 1.02,
+          "ci_upper": 1.11,
+          "ci_level": 95,
+          "lag": "1-8 days",
+          "outcome_specific": "COPD",
+          "covariates": [
+            "sex",
+            "season"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.06,
+          "ci_lower": 1.02,
+          "ci_upper": 1.11,
+          "ci_level": 95,
+          "lag": "4-8 days",
+          "outcome_specific": "COPD",
+          "covariates": [
+            "sex",
+            "season"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.02,
+          "ci_lower": 1.0,
+          "ci_upper": 1.04,
+          "ci_level": 95,
+          "lag": "2-4 days",
+          "outcome_specific": "COPD",
+          "covariates": [
+            "sex",
+            "season"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.06,
+          "ci_lower": 1.02,
+          "ci_upper": 1.11,
+          "ci_level": 95,
+          "lag": "3-6 days",
+          "outcome_specific": "COPD",
+          "covariates": [
+            "sex",
+            "season"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.08,
+          "ci_lower": 1.04,
+          "ci_upper": 1.13,
+          "ci_level": 95,
+          "lag": "8 days",
+          "outcome_specific": "COPD",
+          "covariates": [
+            "sex",
+            "season"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.06,
+          "ci_lower": 1.02,
+          "ci_upper": 1.11,
+          "ci_level": 95,
+          "lag": "5-8 days",
+          "outcome_specific": "upper respiratory disease emergencies",
+          "covariates": [
+            "sex",
+            "season"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.06,
+          "ci_lower": 1.02,
+          "ci_upper": 1.11,
+          "ci_level": 95,
+          "lag": "0-6 days",
+          "outcome_specific": "upper respiratory disease emergencies",
+          "covariates": [
+            "sex",
+            "season"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.06,
+          "ci_lower": 1.02,
+          "ci_upper": 1.11,
+          "ci_level": 95,
+          "lag": "all lags",
+          "outcome_specific": "upper respiratory disease emergencies",
+          "covariates": [
+            "sex",
+            "season"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.08,
+          "ci_lower": 1.04,
+          "ci_upper": 1.13,
+          "ci_level": 95,
+          "lag": "8 days",
+          "outcome_specific": "upper respiratory disease emergencies",
+          "covariates": [
+            "sex",
+            "season"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.06,
+          "ci_lower": 1.02,
+          "ci_upper": 1.11,
+          "ci_level": 95,
+          "lag": "8 days",
+          "outcome_specific": "upper respiratory disease emergencies",
+          "covariates": [
+            "sex",
+            "season"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.06,
+          "ci_lower": 1.02,
+          "ci_upper": 1.11,
+          "ci_level": 95,
+          "lag": "all lags",
+          "outcome_specific": "upper respiratory disease emergencies",
+          "covariates": [
+            "sex",
+            "season"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.06,
+          "ci_lower": 1.02,
+          "ci_upper": 1.11,
+          "ci_level": 95,
+          "lag": "all lags",
+          "outcome_specific": "upper respiratory disease emergencies",
+          "covariates": [
+            "sex",
+            "season"
+          ]
+        }
+      ]
     },
-    "valid": false,
+    "valid": true,
     "output_hash": "6d3578bc6962d78a9ae1662f248334c6f970555ee4ad091097fbdb8c1e93c2fb"
   },
   {
@@ -3010,7 +3535,7 @@
           "ci_lower": 0.4,
           "ci_upper": 1.06,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -3026,7 +3551,7 @@
           "ci_lower": 0.02,
           "ci_upper": 1.57,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "pneumonia",
           "covariates": [
@@ -3042,7 +3567,7 @@
           "ci_lower": 0.38,
           "ci_upper": 1.78,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "COPD",
           "covariates": [
@@ -3058,7 +3583,7 @@
           "ci_lower": 0.23,
           "ci_upper": 1.11,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "asthma",
           "covariates": [
@@ -3093,7 +3618,7 @@
           "ci_lower": 0.15,
           "ci_upper": 0.27,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "same day",
           "outcome_specific": "diseases of the digestive system",
           "covariates": [
@@ -3138,7 +3663,7 @@
           "ci_lower": 1.05,
           "ci_upper": 1.582,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag1",
           "outcome_specific": "asthma",
           "covariates": [
@@ -3151,7 +3676,7 @@
           "ci_lower": 1.039,
           "ci_upper": 1.485,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag2",
           "outcome_specific": "asthma",
           "covariates": [
@@ -3177,7 +3702,7 @@
           "ci_lower": 1.371,
           "ci_upper": 1.81,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag1",
           "outcome_specific": "asthma",
           "covariates": [
@@ -3190,7 +3715,7 @@
           "ci_lower": 1.265,
           "ci_upper": 1.607,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag2",
           "outcome_specific": "asthma",
           "covariates": [
@@ -3221,7 +3746,7 @@
           "ci_lower": 0.422,
           "ci_upper": 1.089,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -3237,7 +3762,7 @@
           "ci_lower": 0.042,
           "ci_upper": 0.459,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -3253,7 +3778,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "not specified",
           "outcome_specific": "COPD",
           "covariates": [
@@ -3269,7 +3794,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "not specified",
           "outcome_specific": "asthma",
           "covariates": [
@@ -3285,7 +3810,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "not specified",
           "outcome_specific": "pneumonia",
           "covariates": [
@@ -3320,7 +3845,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per inter-quartile range increase in SO2 (2.0 ppb)",
+          "exposure_increment": "per inter-quartile range increase in SO2 (2.0\u00a0ppb)",
           "lag": null,
           "outcome_specific": "asthma",
           "covariates": [
@@ -3336,7 +3861,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per inter-quartile range increase in PM2.5 (36 μg/m3)",
+          "exposure_increment": "per inter-quartile range increase in PM2.5 (36\u00a0\u03bcg/m3)",
           "lag": null,
           "outcome_specific": "asthma",
           "covariates": [
@@ -3352,7 +3877,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per inter-quartile range increase in NO2 (7.6 ppb)",
+          "exposure_increment": "per inter-quartile range increase in NO2 (7.6\u00a0ppb)",
           "lag": null,
           "outcome_specific": "asthma",
           "covariates": [
@@ -3368,7 +3893,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per inter-quartile range increase in PM10 (140 μg/m3)",
+          "exposure_increment": "per inter-quartile range increase in PM10 (140\u00a0\u03bcg/m3)",
           "lag": null,
           "outcome_specific": "asthma",
           "covariates": [
@@ -3390,10 +3915,68 @@
     "run_id": 7,
     "model_id": "mistral-7b",
     "output": {
-      "error": "json_parse_failed",
-      "raw": " ```json\n{\n  \"study_id\": \"first_author_year\",\n  \"study_location\": \"Orange County, California, USA\",\n  \"study_period\": \"Not specified in the abstract\",\n  \"study_design\": \"case_crossover\",\n  \"population\": \"children (0-18 years of age)\",\n  \"sample_size\": null,\n  \"estimates\": [\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not provided in the abstract\n      \"ci_lower\": null, // Not provided in the abstract\n      \"ci_upper\": null, // Not provided in the abstract\n      \"exposure_increment\": \"Not specified\",\n      \"lag\": \"daily\",\n      \"outcome_specific\": \"asthma\",\n      \"covariates\": [\"temperature\", \"humidity\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not provided in the abstract for warm seasons\n      \"ci_lower\": null, // Not provided in the abstract for warm seasons\n      \"ci_upper\": null, // Not provided in the abstract for warm seasons\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"Not specified\",\n      \"outcome_specific\": \"asthma\",\n      \"covariates\": [\"temperature\", \"humidity\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not provided in the abstract for cool seasons\n      \"ci_lower\": null, // Not provided in the abstract for cool seasons\n      \"ci_upper\": null, // Not provided in the abstract for cool seasons\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"Not specified\",\n      \"outcome_specific\": \"asthma\",\n      \"covariates\": [\"temperature\", \"humidity\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not provided in the abstract for subjects living at residences with above-median traffic-related exposures in cool seasons\n      \"ci_lower\": null, // Not provided in the abstract for subjects living at residences with above-median traffic-related exposures in cool seasons\n      \"ci_upper\": null, // Not provided in the abstract for subjects living at residences with above-median traffic-related exposures in cool seasons\n      \"exposure_increment\": \"Not specified\",\n      \"lag\": \"Not specified\",\n      \"outcome_specific\": \"asthma\",\n      \"covariates\": [\"temperature\", \"humidity\"]\n    }\n  ]\n}\n```"
+      "study_id": "first_author_year",
+      "study_location": "Orange County, California, USA",
+      "study_period": "Not specified in the abstract",
+      "study_design": "case_crossover",
+      "population": "children (0-18 years of age)",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "exposure_increment": "Not specified",
+          "lag": "daily",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "temperature",
+            "humidity"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "Not specified",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "temperature",
+            "humidity"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "Not specified",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "temperature",
+            "humidity"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "exposure_increment": "Not specified",
+          "lag": "Not specified",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "temperature",
+            "humidity"
+          ]
+        }
+      ]
     },
-    "valid": false,
+    "valid": true,
     "output_hash": "3c41dfdafca0faef9ac7db57a5e8dbfb5328773a8f69b1b21913b41f9b51c3e8"
   },
   {
@@ -3415,7 +3998,7 @@
           "ci_lower": 0.32,
           "ci_upper": 0.99,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag06",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -3431,7 +4014,7 @@
           "ci_lower": 0.04,
           "ci_upper": 0.95,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag06",
           "outcome_specific": "circulatory",
           "covariates": [
@@ -3447,7 +4030,7 @@
           "ci_lower": 0.15,
           "ci_upper": 1.69,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag06",
           "outcome_specific": "skin and subcutaneous tissue diseases"
         },
@@ -3457,7 +4040,7 @@
           "ci_lower": 0.5,
           "ci_upper": 1.56,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag06",
           "outcome_specific": "respiratory",
           "covariates": [
@@ -3517,7 +4100,7 @@
           "effect_estimate": 1.022,
           "ci_lower": 1.006,
           "ci_upper": 1.038,
-          "exposure_increment": "per 10,166 n/cm³",
+          "exposure_increment": "per 10,166 n/cm\u00b3",
           "lag": "lag1",
           "outcome_specific": "cardiovascular_mortality",
           "covariates": [
@@ -3532,7 +4115,7 @@
           "effect_estimate": 1.006,
           "ci_lower": -0.4,
           "ci_upper": 1.7,
-          "exposure_increment": "per 10,166 n/cm³",
+          "exposure_increment": "per 10,166 n/cm\u00b3",
           "lag": "lag1",
           "outcome_specific": "cardiovascular_admissions",
           "covariates": [
@@ -3567,7 +4150,7 @@
           "ci_lower": 0.96,
           "ci_upper": 4.73,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": null,
           "outcome_specific": "diseases of the eye and adnexa",
           "covariates": [
@@ -3583,7 +4166,7 @@
           "ci_lower": 0.88,
           "ci_upper": 3.47,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": null,
           "outcome_specific": "diseases of the musculoskeletal system and connective tissue",
           "covariates": [
@@ -3615,7 +4198,7 @@
           "ci_lower": 6239,
           "ci_upper": 20649,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": null,
           "outcome_specific": "all hospital admissions",
           "covariates": [
@@ -3631,7 +4214,7 @@
           "ci_lower": 57705,
           "ci_upper": 190983,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": null,
           "outcome_specific": "hospital admission days",
           "covariates": [
@@ -3647,7 +4230,7 @@
           "ci_lower": 77000000,
           "ci_upper": 255000000,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": null,
           "outcome_specific": "hospital admission expenses",
           "covariates": [
@@ -3682,7 +4265,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-1",
           "outcome_specific": "asthma",
           "covariates": [
@@ -3696,7 +4279,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-5",
           "outcome_specific": "asthma",
           "covariates": [
@@ -3710,7 +4293,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-1",
           "outcome_specific": "hospitalization",
           "covariates": [
@@ -3756,7 +4339,7 @@
           "ci_lower": 1.0,
           "ci_upper": 1.021,
           "ci_level": 95,
-          "exposure_increment": "per 1°C",
+          "exposure_increment": "per 1\u00b0C",
           "lag": "not specified",
           "outcome_specific": "asthma",
           "covariates": [
@@ -3786,7 +4369,7 @@
           "effect_estimate": 1.0064,
           "ci_lower": 1.0004,
           "ci_upper": 1.0124,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag4",
           "outcome_specific": "pneumonia",
           "covariates": [
@@ -3801,7 +4384,7 @@
           "effect_estimate": 1.0168,
           "ci_lower": 1.0089,
           "ci_upper": 1.0248,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag010",
           "outcome_specific": "pneumonia",
           "covariates": [
@@ -3816,7 +4399,7 @@
           "effect_estimate": 1.0278,
           "ci_lower": 1.0157,
           "ci_upper": 1.04,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag010",
           "outcome_specific": "pneumonia",
           "covariates": [
@@ -3831,7 +4414,7 @@
           "effect_estimate": 1.0378,
           "ci_lower": 1.0072,
           "ci_upper": 1.0692,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag07",
           "outcome_specific": "pneumonia",
           "covariates": [
@@ -3846,7 +4429,7 @@
           "effect_estimate": 1.0133,
           "ci_lower": 1.0025,
           "ci_upper": 1.0242,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag010",
           "outcome_specific": "bronchitis",
           "covariates": [
@@ -3861,7 +4444,7 @@
           "effect_estimate": 1.0161,
           "ci_lower": 1.0085,
           "ci_upper": 1.0238,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag010",
           "outcome_specific": "bronchitis",
           "covariates": [
@@ -3876,7 +4459,7 @@
           "effect_estimate": 1.0135,
           "ci_lower": 1.0025,
           "ci_upper": 1.0247,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag010",
           "outcome_specific": "bronchitis",
           "covariates": [
@@ -3891,7 +4474,7 @@
           "effect_estimate": 1.1133,
           "ci_lower": 1.0739,
           "ci_upper": 1.1541,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": null,
           "outcome_specific": "bronchitis",
           "covariates": [
@@ -3925,7 +4508,7 @@
           "ci_lower": 1.008,
           "ci_upper": 1.016,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "other",
           "outcome_specific": "COPD or asthma",
           "covariates": [
@@ -3939,7 +4522,7 @@
           "ci_lower": 1.006,
           "ci_upper": 1.015,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "other",
           "outcome_specific": "preschool asthma",
           "covariates": [
@@ -3953,7 +4536,7 @@
           "ci_lower": 1.009,
           "ci_upper": 1.024,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "other",
           "outcome_specific": "asthma",
           "covariates": [
@@ -3967,7 +4550,7 @@
           "ci_lower": 1.005,
           "ci_upper": 1.019,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "other",
           "outcome_specific": "COPD",
           "covariates": [
@@ -3981,7 +4564,7 @@
           "ci_lower": 1.008,
           "ci_upper": 1.024,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "other",
           "outcome_specific": "senior COPD",
           "covariates": [
@@ -3995,7 +4578,7 @@
           "ci_lower": 1.0,
           "ci_upper": 1.026,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "other",
           "outcome_specific": "COPD or asthma (male)",
           "covariates": [
@@ -4009,7 +4592,7 @@
           "ci_lower": 1.009,
           "ci_upper": 1.023,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "other",
           "outcome_specific": "asthma (male)",
           "covariates": [
@@ -4023,7 +4606,7 @@
           "ci_lower": 1.007,
           "ci_upper": 1.036,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "other",
           "outcome_specific": "COPD or asthma (senior)",
           "covariates": [
@@ -4055,7 +4638,7 @@
           "ci_lower": -1.7,
           "ci_upper": 8.8,
           "ci_level": 95,
-          "exposure_increment": "per 2,750 particles/cm³ (6-day average)",
+          "exposure_increment": "per 2,750 particles/cm\u00b3 (6-day average)",
           "lag": "null",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -4069,7 +4652,7 @@
           "ci_lower": 0.1,
           "ci_upper": 3.4,
           "ci_level": 95,
-          "exposure_increment": "per 12.4 μg/m³ (PM2.5, lag 2-5)",
+          "exposure_increment": "per 12.4 \u03bcg/m\u00b3 (PM2.5, lag 2-5)",
           "lag": "lag2-5",
           "outcome_specific": "cardiovascular",
           "covariates": [
@@ -4083,7 +4666,7 @@
           "ci_lower": 4.9,
           "ci_upper": 10.2,
           "ci_level": 95,
-          "exposure_increment": "per 12.4 μg/m³ (PM2.5, 6-d average)",
+          "exposure_increment": "per 12.4 \u03bcg/m\u00b3 (PM2.5, 6-d average)",
           "lag": "null",
           "outcome_specific": "respiratory",
           "covariates": [
@@ -4116,7 +4699,7 @@
           "ci_lower": 1.024,
           "ci_upper": 1.153,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -4132,7 +4715,7 @@
           "ci_lower": 1.013,
           "ci_upper": 1.115,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -4182,7 +4765,7 @@
           "effect_estimate": 0.0052,
           "ci_lower": 0.0013,
           "ci_upper": 0.0092,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "concurrent-day",
           "outcome_specific": "cardiovascular",
           "covariates": [
@@ -4197,7 +4780,7 @@
           "effect_estimate": 1.74,
           "ci_lower": 1.41,
           "ci_upper": 2.07,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "concurrent-day",
           "outcome_specific": "respiratory",
           "covariates": [
@@ -4232,7 +4815,7 @@
           "ci_lower": 1.01,
           "ci_upper": 1.45,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-2 days",
           "outcome_specific": "all_cardiovascular",
           "covariates": [
@@ -4248,7 +4831,7 @@
           "ci_lower": 1.63,
           "ci_upper": 2.27,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-2 days",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -4269,10 +4852,42 @@
     "run_id": 7,
     "model_id": "mistral-7b",
     "output": {
-      "error": "json_parse_failed",
-      "raw": " ```json\n{\n  \"study_id\": \"first_author_year\",\n  \"study_location\": \"London, UK\",\n  \"study_period\": \"2011-2012\",\n  \"study_design\": \"time_series\",\n  \"population\": \"general\",\n  \"sample_size\": null,\n  \"estimates\": [\n    {\n      \"effect_measure\": \"percentage change in risk\",\n      \"effect_estimate\": null, // Not explicitly stated in the abstract\n      \"ci_lower\": null, // Not explicitly stated in the abstract\n      \"ci_upper\": null, // Not explicitly stated in the abstract\n      \"ci_level\": 95,\n      \"exposure_increment\": \"interquartile increment in particle OP\",\n      \"lag\": null, // Not explicitly stated in the abstract\n      \"outcome_specific\": \"cardiovascular admissions\",\n      \"covariates\": [\"temperature\", \"humidity\", \"trend\", \"seasonality\"]\n    },\n    {\n      \"effect_measure\": \"percentage change in risk\",\n      \"effect_estimate\": null, // Not explicitly stated in the abstract\n      \"ci_lower\": null, // Not explicitly stated in the abstract\n      \"ci_upper\": null, // Not explicitly stated in the abstract\n      \"ci_level\": 95,\n      \"exposure_increment\": \"interquartile increment in particle OP\",\n      \"lag\": null, // Not explicitly stated in the abstract\n      \"outcome_specific\": \"respiratory admissions\"\n    }\n  ]\n}\n```"
+      "study_id": "first_author_year",
+      "study_location": "London, UK",
+      "study_period": "2011-2012",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "percentage change in risk",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "interquartile increment in particle OP",
+          "lag": null,
+          "outcome_specific": "cardiovascular admissions",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality"
+          ]
+        },
+        {
+          "effect_measure": "percentage change in risk",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "interquartile increment in particle OP",
+          "lag": null,
+          "outcome_specific": "respiratory admissions"
+        }
+      ]
     },
-    "valid": false,
+    "valid": true,
     "output_hash": "7ce8e6269a9a175914529c65235015469b31c90d894dcf46190c67e8e9ee1d63"
   },
   {
@@ -4294,7 +4909,7 @@
           "ci_lower": 1.01,
           "ci_upper": 1.1,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "8-day",
           "outcome_specific": "pediatric asthma",
           "covariates": [
@@ -4310,7 +4925,7 @@
           "ci_lower": 1.04,
           "ci_upper": 1.17,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "other",
           "outcome_specific": "pediatric asthma",
           "covariates": [
@@ -4344,7 +4959,7 @@
           "ci_lower": 0.25,
           "ci_upper": 3.67,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -4360,7 +4975,7 @@
           "ci_lower": 0.16,
           "ci_upper": 3.12,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -4376,7 +4991,7 @@
           "ci_lower": 1.23,
           "ci_upper": 8.23,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "asthma",
           "covariates": [
@@ -4392,7 +5007,7 @@
           "ci_lower": 1.06,
           "ci_upper": 7.11,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "asthma",
           "covariates": [
@@ -4408,7 +5023,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -4421,7 +5036,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -4453,7 +5068,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag1",
           "outcome_specific": "all_cause",
           "covariates": [
@@ -4468,7 +5083,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag1",
           "outcome_specific": "overall_cardiovascular",
           "covariates": [
@@ -4483,7 +5098,7 @@
           "ci_lower": 1.0,
           "ci_upper": 1.35,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "same_day",
           "outcome_specific": "asthma",
           "covariates": [
@@ -4498,7 +5113,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag1",
           "outcome_specific": "asthma",
           "covariates": [
@@ -4514,7 +5129,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag3",
           "outcome_specific": "asthma",
           "covariates": [
@@ -4530,7 +5145,7 @@
           "ci_lower": 1.02,
           "ci_upper": 1.24,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "same_day",
           "outcome_specific": "arrhythmias",
           "covariates": [
@@ -4545,7 +5160,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": null,
           "outcome_specific": "angina",
           "covariates": [
@@ -4561,7 +5176,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": null,
           "outcome_specific": "heart failure",
           "covariates": [
@@ -4596,7 +5211,7 @@
           "ci_lower": 0.55,
           "ci_upper": 3.74,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag07",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -4613,7 +5228,7 @@
           "ci_lower": 0.7,
           "ci_upper": 2.83,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -4630,7 +5245,7 @@
           "ci_lower": 0.92,
           "ci_upper": 16.09,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "other",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -4647,7 +5262,7 @@
           "ci_lower": 0.26,
           "ci_upper": 4.05,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "other",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -4664,7 +5279,7 @@
           "ci_lower": 0.26,
           "ci_upper": 2.12,
           "ci_level": 95,
-          "exposure_increment": "per 0.1 mg/m³",
+          "exposure_increment": "per 0.1 mg/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -4700,7 +5315,7 @@
           "ci_lower": 1.03,
           "ci_upper": 1.14,
           "ci_level": 95,
-          "exposure_increment": "per 1 µg/m³",
+          "exposure_increment": "per 1\u00a0\u00b5g/m\u00b3",
           "lag": "7-13 days prior",
           "outcome_specific": "asthma",
           "covariates": [
@@ -4714,7 +5329,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": 95,
-          "exposure_increment": "1 µg/m³",
+          "exposure_increment": "1\u00a0\u00b5g/m\u00b3",
           "lag": "12 days of cumulative PM2.5",
           "outcome_specific": "LRTIs",
           "covariates": [
@@ -4760,7 +5375,7 @@
           "ci_lower": 1.003,
           "ci_upper": 1.031,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-2",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -4773,7 +5388,7 @@
           "ci_lower": 1.004,
           "ci_upper": 1.026,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-2",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -4786,7 +5401,7 @@
           "ci_lower": 1.001,
           "ci_upper": 1.247,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-1",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -4799,7 +5414,7 @@
           "ci_lower": 1.009,
           "ci_upper": 1.064,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-7",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -4812,7 +5427,7 @@
           "ci_lower": 1.017,
           "ci_upper": 1.579,
           "ci_level": 95,
-          "exposure_increment": "per 1 mg/m³",
+          "exposure_increment": "per 1 mg/m\u00b3",
           "lag": "lag0-7",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -4908,7 +5523,7 @@
           "effect_estimate": 1.0725,
           "ci_lower": 1.0426,
           "ci_upper": 1.1033,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "not specified",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -4923,7 +5538,7 @@
           "effect_estimate": 1.0559,
           "ci_lower": 1.0379,
           "ci_upper": 1.0742,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "not specified",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -4938,7 +5553,7 @@
           "effect_estimate": 1.101,
           "ci_lower": 1.0729,
           "ci_upper": 1.1298,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "not specified",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -4953,7 +5568,7 @@
           "effect_estimate": 1.1233,
           "ci_lower": 1.0882,
           "ci_upper": 1.1595,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "not specified",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -4983,7 +5598,7 @@
           "effect_estimate": 1.2577,
           "ci_lower": 1.1788,
           "ci_upper": 1.3419,
-          "exposure_increment": "per 1 mg/m³",
+          "exposure_increment": "per 1 mg/m\u00b3",
           "lag": "not specified",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -4998,7 +5613,7 @@
           "effect_estimate": 0.3268,
           "ci_lower": 0.2512,
           "ci_upper": 0.3942,
-          "exposure_increment": "given 0 μg/m³ as the reference",
+          "exposure_increment": "given 0 \u03bcg/m\u00b3 as the reference",
           "lag": "not specified",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -5033,7 +5648,7 @@
           "ci_lower": 1.08,
           "ci_upper": 1.4,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag8",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -5049,7 +5664,7 @@
           "ci_lower": 1.0,
           "ci_upper": 1.06,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag13",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -5065,7 +5680,7 @@
           "ci_lower": 1.08,
           "ci_upper": 1.48,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag5",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -5100,7 +5715,7 @@
           "ci_lower": 0.021,
           "ci_upper": 0.103,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "daily",
           "outcome_specific": "asthma",
           "covariates": [
@@ -5116,7 +5731,7 @@
           "ci_lower": 0.012,
           "ci_upper": 0.127,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "three-day average",
           "outcome_specific": "asthma",
           "covariates": [
@@ -5132,7 +5747,7 @@
           "ci_lower": 0.025,
           "ci_upper": 0.086,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "daily",
           "outcome_specific": "asthma",
           "covariates": [
@@ -5148,7 +5763,7 @@
           "ci_lower": 0.026,
           "ci_upper": 0.12,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "three-day average",
           "outcome_specific": "asthma",
           "covariates": [
@@ -5183,7 +5798,7 @@
           "ci_lower": 0.84,
           "ci_upper": 1.04,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "not specified",
           "outcome_specific": "all_cardiovascular",
           "covariates": [
@@ -5196,7 +5811,7 @@
           "ci_lower": 1.34,
           "ci_upper": 1.52,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "not specified",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -5227,7 +5842,7 @@
           "ci_lower": 1.006,
           "ci_upper": 1.027,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "0-5 days",
           "outcome_specific": "COPD",
           "covariates": [
@@ -5241,7 +5856,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "not specified (significantly greater in males and patients admitted in summer)",
           "outcome_specific": "COPD",
           "covariates": [
@@ -5397,10 +6012,132 @@
     "run_id": 7,
     "model_id": "mistral-7b",
     "output": {
-      "error": "json_parse_failed",
-      "raw": " ```json\n{\n  \"study_id\": \"first_author_year\",\n  \"study_location\": \"Santiago de Chile, Chile\",\n  \"study_period\": \"2004-2007\",\n  \"study_design\": \"case_crossover\",\n  \"population\": \"general\",\n  \"sample_size\": null,\n  \"estimates\": [\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not explicitly stated in the abstract\n      \"ci_lower\": null, // Not explicitly stated in the abstract\n      \"ci_upper\": null, // Not explicitly stated in the abstract\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"lag0\",\n      \"outcome_specific\": \"all_respiratory\",\n      \"covariates\": [\"temporal variation\", \"meteorological conditions\", \"autocorrelation\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not explicitly stated in the abstract\n      \"ci_lower\": null, // Not explicitly stated in the abstract\n      \"ci_upper\": null, // Not explicitly stated in the abstract\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"lag1\",\n      \"outcome_specific\": \"all_respiratory\",\n      \"covariates\": [\"temporal variation\", \"meteorological conditions\", \"autocorrelation\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not explicitly stated in the abstract\n      \"ci_lower\": null, // Not explicitly stated in the abstract\n      \"ci_upper\": null, // Not explicitly stated in the abstract\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per IQR\",\n      \"lag\": \"lag0-1\",\n      \"outcome_specific\": \"all_respiratory\",\n      \"covariates\": [\"temporal variation\", \"meteorological conditions\", \"autocorrelation\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not explicitly stated in the abstract\n      \"ci_lower\": null, // Not explicitly stated in the abstract\n      \"ci_upper\": null, // Not explicitly stated in the abstract\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per IQR\",\n      \"lag\": \"other\",\n      \"outcome_specific\": \"all_respiratory\",\n      \"covariates\": [\"temporal variation\", \"meteorological conditions\", \"autocorrelation\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not explicitly stated in the abstract\n      \"ci_lower\": null, // Not explicitly stated in the abstract\n      \"ci_upper\": null, // Not explicitly stated in the abstract\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per IQR\",\n      \"lag\": \"other\",\n      \"outcome_specific\": \"pneumonia\",\n      \"covariates\": [\"temporal variation\", \"meteorological conditions\", \"autocorrelation\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not explicitly stated in the abstract\n      \"ci_lower\": null, // Not explicitly stated in the abstract\n      \"ci_upper\": null, // Not explicitly stated in the abstract\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per IQR\",\n      \"lag\": \"other\",\n      \"outcome_specific\": \"COPD\",\n      \"covariates\": [\"temporal variation\", \"meteorological conditions\", \"autocorrelation\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not explicitly stated in the abstract\n      \"ci_lower\": null, // Not explicitly stated in the abstract\n      \"ci_upper\": null, // Not explicitly stated in the abstract\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per IQR\",\n      \"lag\": \"other\",\n      \"outcome_specific\": \"asthma\",\n      \"covariates\": [\"temporal variation\", \"meteorological conditions\", \"autocorrelation\"]\n    },\n    {\n      \"effect_measure\": null, // Ozone not significantly associated with respiratory morbidity\n      \"effect_estimate\": null,\n      \"ci_lower\": null,\n      \"ci_upper\": null,\n      \"ci_level\": 95,\n      \"exposure_increment\": null,\n      \"lag\": null,\n      \"outcome_specific\": null,\n      \"covariates\": []\n    }\n  ]\n}\n```"
+      "study_id": "first_author_year",
+      "study_location": "Santiago de Chile, Chile",
+      "study_period": "2004-2007",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "all_respiratory",
+          "covariates": [
+            "temporal variation",
+            "meteorological conditions",
+            "autocorrelation"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag1",
+          "outcome_specific": "all_respiratory",
+          "covariates": [
+            "temporal variation",
+            "meteorological conditions",
+            "autocorrelation"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per IQR",
+          "lag": "lag0-1",
+          "outcome_specific": "all_respiratory",
+          "covariates": [
+            "temporal variation",
+            "meteorological conditions",
+            "autocorrelation"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per IQR",
+          "lag": "other",
+          "outcome_specific": "all_respiratory",
+          "covariates": [
+            "temporal variation",
+            "meteorological conditions",
+            "autocorrelation"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per IQR",
+          "lag": "other",
+          "outcome_specific": "pneumonia",
+          "covariates": [
+            "temporal variation",
+            "meteorological conditions",
+            "autocorrelation"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per IQR",
+          "lag": "other",
+          "outcome_specific": "COPD",
+          "covariates": [
+            "temporal variation",
+            "meteorological conditions",
+            "autocorrelation"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per IQR",
+          "lag": "other",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "temporal variation",
+            "meteorological conditions",
+            "autocorrelation"
+          ]
+        },
+        {
+          "effect_measure": null,
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": null,
+          "lag": null,
+          "outcome_specific": null,
+          "covariates": []
+        }
+      ]
     },
-    "valid": false,
+    "valid": true,
     "output_hash": "5682dcf95c631c27fc3f3cd8c98cfa798da00ae31ab24c32686c7b575a48b69f"
   },
   {
@@ -5442,7 +6179,7 @@
           "ci_lower": 1.05,
           "ci_upper": 1.46,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "Not specified in the abstract",
           "outcome_specific": "COPD",
           "covariates": [
@@ -5462,7 +6199,7 @@
           "ci_lower": 1.06,
           "ci_upper": 1.39,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "Not specified in the abstract",
           "outcome_specific": "COPD",
           "covariates": [
@@ -5500,7 +6237,7 @@
           "ci_lower": 0.18,
           "ci_upper": 0.2,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "all_cause"
         },
@@ -5510,7 +6247,7 @@
           "ci_lower": 0.2,
           "ci_upper": 0.26,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "cardiovascular"
         },
@@ -5520,7 +6257,7 @@
           "ci_lower": 0.22,
           "ci_upper": 0.31,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0",
           "outcome_specific": "respiratory"
         },
@@ -5530,7 +6267,7 @@
           "ci_lower": 0.11,
           "ci_upper": 0.13,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": null,
           "outcome_specific": "all_cause"
         },
@@ -5540,7 +6277,7 @@
           "ci_lower": 0.13,
           "ci_upper": 0.17,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": null,
           "outcome_specific": "cardiovascular"
         },
@@ -5550,7 +6287,7 @@
           "ci_lower": 0.17,
           "ci_upper": 0.24,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": null,
           "outcome_specific": "respiratory"
         },
@@ -5560,7 +6297,7 @@
           "ci_lower": 1.015,
           "ci_upper": 1.022,
           "ci_level": 95,
-          "exposure_increment": "from below 15 µg/m to above 15 µg/m",
+          "exposure_increment": "from below 15 \u00b5g/m to above 15 \u00b5g/m",
           "lag": null,
           "outcome_specific": "all_cause"
         },
@@ -5570,7 +6307,7 @@
           "ci_lower": 1.017,
           "ci_upper": 1.034,
           "ci_level": 95,
-          "exposure_increment": "from below 15 µg/m to above 15 µg/m",
+          "exposure_increment": "from below 15 \u00b5g/m to above 15 \u00b5g/m",
           "lag": null,
           "outcome_specific": "cardiovascular"
         }
@@ -5598,7 +6335,7 @@
           "effect_estimate": 1.004,
           "ci_lower": 1.002,
           "ci_upper": 1.007,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -5613,7 +6350,7 @@
           "effect_estimate": 1.003,
           "ci_lower": 1.001,
           "ci_upper": 1.005,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "COPD",
           "covariates": [
@@ -5628,7 +6365,7 @@
           "effect_estimate": 1.069,
           "ci_lower": 1.017,
           "ci_upper": 1.124,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "asthma",
           "covariates": [
@@ -5643,7 +6380,7 @@
           "effect_estimate": 1.003,
           "ci_lower": 1.001,
           "ci_upper": 1.006,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "bronchiectasis",
           "covariates": [
@@ -5658,7 +6395,7 @@
           "effect_estimate": 1.04,
           "ci_lower": 1.008,
           "ci_upper": 1.074,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "asthma",
           "covariates": [
@@ -5675,7 +6412,7 @@
           "effect_estimate": 1.049,
           "ci_lower": 1.01,
           "ci_upper": 1.09,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "COPD",
           "covariates": [
@@ -5692,7 +6429,7 @@
           "effect_estimate": 1.03,
           "ci_lower": 1.005,
           "ci_upper": 1.056,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "bronchiectasis",
           "covariates": [
@@ -5709,7 +6446,7 @@
           "effect_estimate": 1.542,
           "ci_lower": 1.035,
           "ci_upper": 2.298,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "bronchiectasis",
           "covariates": [
@@ -5724,7 +6461,7 @@
           "effect_estimate": 1.643,
           "ci_lower": 1.233,
           "ci_upper": 2.191,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "COPD",
           "covariates": [
@@ -5803,11 +6540,11 @@
           "ci_lower": 1.02,
           "ci_upper": 1.046,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "2-day lag",
           "outcome_specific": "asthma",
           "covariates": [
-            "particles <2.5 μm in diameter",
+            "particles <2.5 \u03bcm in diameter",
             "ozone",
             "nitrogen dioxide",
             "carbon monoxide",
@@ -5837,7 +6574,7 @@
           "effect_estimate": 1.327,
           "ci_lower": 1.116,
           "ci_upper": 1.577,
-          "exposure_increment": "per 1 mg/m³",
+          "exposure_increment": "per 1 mg/m\u00b3",
           "lag": "lag7",
           "outcome_specific": "asthma",
           "covariates": [
@@ -5849,7 +6586,7 @@
           "effect_estimate": 1.044,
           "ci_lower": 1.011,
           "ci_upper": 1.078,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": null,
           "outcome_specific": "asthma",
           "covariates": [
@@ -5861,7 +6598,7 @@
           "effect_estimate": 1.018,
           "ci_lower": 1.002,
           "ci_upper": 1.034,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": null,
           "outcome_specific": "asthma",
           "covariates": [
@@ -5873,7 +6610,7 @@
           "effect_estimate": 1.013,
           "ci_lower": 1.004,
           "ci_upper": 1.022,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": null,
           "outcome_specific": "asthma",
           "covariates": [
@@ -5885,7 +6622,7 @@
           "effect_estimate": 1.015,
           "ci_lower": 1.003,
           "ci_upper": 1.028,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": null,
           "outcome_specific": "asthma",
           "covariates": [
@@ -5897,7 +6634,7 @@
           "effect_estimate": 1.13,
           "ci_lower": 1.041,
           "ci_upper": 1.227,
-          "exposure_increment": "per 1 mg/m³",
+          "exposure_increment": "per 1 mg/m\u00b3",
           "lag": null,
           "outcome_specific": "asthma",
           "covariates": [
@@ -5928,7 +6665,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-1",
           "outcome_specific": "COPD exacerbation-related ED admissions",
           "covariates": []
@@ -5939,7 +6676,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-5",
           "outcome_specific": "COPD exacerbation-related ED admissions",
           "covariates": []
@@ -5950,7 +6687,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-1",
           "outcome_specific": "COPD exacerbation-related hospitalizations",
           "covariates": []
@@ -5961,7 +6698,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-5",
           "outcome_specific": "COPD exacerbation-related hospitalizations",
           "covariates": []
@@ -5972,7 +6709,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-1",
           "outcome_specific": "COPD exacerbation-related hospitalizations",
           "covariates": [
@@ -5988,7 +6725,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-5",
           "outcome_specific": "COPD exacerbation-related hospitalizations",
           "covariates": [
@@ -6004,7 +6741,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-5",
           "outcome_specific": "COPD exacerbation-related hospitalizations",
           "covariates": [
@@ -6039,7 +6776,7 @@
           "ci_lower": 1.018,
           "ci_upper": 1.029,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "Not specified in abstract",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -6055,7 +6792,7 @@
           "ci_lower": 1.004,
           "ci_upper": 1.012,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "Not specified in abstract",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -6071,7 +6808,7 @@
           "ci_lower": 0.996,
           "ci_upper": 1.007,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "Not specified in abstract",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -6154,7 +6891,7 @@
           "ci_lower": 0.9,
           "ci_upper": 2.4,
           "ci_level": 95,
-          "exposure_increment": "per IQR (2.8 µg/m(3))",
+          "exposure_increment": "per IQR (2.8 \u00b5g/m(3))",
           "lag": "not specified",
           "outcome_specific": "all_cardiovascular",
           "covariates": [
@@ -6192,10 +6929,54 @@
     "run_id": 7,
     "model_id": "mistral-7b",
     "output": {
-      "error": "json_parse_failed",
-      "raw": " ```json\n{\n  \"study_id\": \"first_author_2017\",\n  \"study_location\": \"Shijiazhuang, China\",\n  \"study_period\": \"2013-2016\",\n  \"study_design\": \"time_series\",\n  \"population\": \"adult\",\n  \"sample_size\": null,\n  \"estimates\": [\n    {\n      \"effect_measure\": \"impacts\",\n      \"effect_estimate\": null, // The abstract does not provide specific effect estimates. It mentions that all pollutants demonstrated positive and significant impacts on asthma hospitalizations both in heating season and non-heating season, except for O3 in heating season where a negative association was observed. However, the differences of the pollutant-specific effects between the two seasons were not significant.\n      \"ci_lower\": null, // The abstract does not provide specific confidence intervals.\n      \"ci_upper\": null, // The abstract does not provide specific confidence intervals.\n      \"ci_level\": 95,\n      \"exposure_increment\": \"not specified\",\n      \"lag\": null, // The abstract does not specify the lags used in the analysis.\n      \"outcome_specific\": \"asthma\",\n      \"covariates\": [\"temperature\", \"humidity\", \"trend\", \"seasonality\", \"day of week\", \"statutory holiday\", \"daily mean air pressure\"]\n    },\n    {\n      \"effect_measure\": \"burden\",\n      \"effect_estimate\": null, // The abstract mentions that SO2 and NO2 exposure were associated with the heaviest burden among all pollutants in heating season; meanwhile, PM10 and PM2.5 were associated with the heaviest burden in heating season. However, it does not provide specific effect estimates.\n      \"ci_lower\": null, // The abstract does not provide specific confidence intervals for the burden estimates.\n      \"ci_upper\": null, // The abstract does not provide specific confidence intervals for the burden estimates.\n      \"ci_level\": 95,\n      \"exposure_increment\": \"not specified\",\n      \"lag\": null, // The abstract does not specify the lags used in the analysis for the burden estimates.\n      \"outcome_specific\": \"asthma\",\n      \"covariates\": [\"temperature\", \"humidity\", \"trend\", \"seasonality\", \"day of week\", \"statutory holiday\", \"daily mean air pressure\"]\n    }\n  ]\n}\n```"
+      "study_id": "first_author_2017",
+      "study_location": "Shijiazhuang, China",
+      "study_period": "2013-2016",
+      "study_design": "time_series",
+      "population": "adult",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "impacts",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "not specified",
+          "lag": null,
+          "outcome_specific": "asthma",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality",
+            "day of week",
+            "statutory holiday",
+            "daily mean air pressure"
+          ]
+        },
+        {
+          "effect_measure": "burden",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "not specified",
+          "lag": null,
+          "outcome_specific": "asthma",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality",
+            "day of week",
+            "statutory holiday",
+            "daily mean air pressure"
+          ]
+        }
+      ]
     },
-    "valid": false,
+    "valid": true,
     "output_hash": "475f5abd5f34507adc62e3372bb52c7b27955f0e9d95668b9278c2d7b261ddc9"
   },
   {
@@ -6217,7 +6998,7 @@
           "ci_lower": 1.001,
           "ci_upper": 1.183,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "cumulative lag 0-2 days",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -6230,7 +7011,7 @@
           "ci_lower": 1.073,
           "ci_upper": 1.409,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "cumulative lag 0-6 days",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -6243,7 +7024,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "null",
           "covariates": [
@@ -6256,7 +7037,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "null",
           "covariates": [
@@ -6269,7 +7050,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "null",
           "covariates": [
@@ -6282,7 +7063,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "null",
           "covariates": [
@@ -6295,7 +7076,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "null",
           "covariates": [
@@ -6327,7 +7108,7 @@
           "ci_lower": 0.21,
           "ci_upper": 2.26,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag07",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -6343,7 +7124,7 @@
           "ci_lower": 0.62,
           "ci_upper": 2.05,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag07",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -6359,7 +7140,7 @@
           "ci_lower": 11.52,
           "ci_upper": 36.81,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag07",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -6375,7 +7156,7 @@
           "ci_lower": 8.46,
           "ci_upper": 16.64,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag07",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -6397,10 +7178,32 @@
     "run_id": 7,
     "model_id": "mistral-7b",
     "output": {
-      "error": "json_parse_failed",
-      "raw": " ```json\n{\n  \"study_id\": \"first_author_year\",\n  \"study_location\": \"Atlanta, USA, Atlanta, GA; Dallas, USA, Dallas, TX; St. Louis, USA, St. Louis, MO\",\n  \"study_period\": \"1993-2009, 2006-2009, 2001-2007\",\n  \"study_design\": \"time_series\",\n  \"population\": \"children\",\n  \"sample_size\": null,\n  \"estimates\": [\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": 1.07, // This is an example value as the abstract does not provide specific RR values for each pollutant and age group.\n      \"ci_lower\": 1.03, // This is an example value as the abstract does not provide specific CI values for each pollutant and age group.\n      \"ci_upper\": 1.12, // This is an example value as the abstract does not provide specific CI values for each pollutant and age group.\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"not specified\", // The abstract does not specify the lag for each pollutant and age group.\n      \"outcome_specific\": \"asthma\",\n      \"covariates\": [\"temperature\", \"humidity\", \"trend\", \"seasonality\"]\n    }\n  ]\n}\n```"
+      "study_id": "first_author_year",
+      "study_location": "Atlanta, USA, Atlanta, GA; Dallas, USA, Dallas, TX; St. Louis, USA, St. Louis, MO",
+      "study_period": "1993-2009, 2006-2009, 2001-2007",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.07,
+          "ci_lower": 1.03,
+          "ci_upper": 1.12,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "not specified",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality"
+          ]
+        }
+      ]
     },
-    "valid": false,
+    "valid": true,
     "output_hash": "a781601d86899495a75e26d48d859469095d140a021c0ba655882c4135f1b8f7"
   },
   {
@@ -6410,7 +7213,7 @@
     "model_id": "mistral-7b",
     "output": {
       "study_id": "first author year",
-      "study_location": "Cuiabá-MT, Brazil",
+      "study_location": "Cuiab\u00e1-MT, Brazil",
       "study_period": "2016-2018",
       "study_design": "time_series",
       "population": "children",
@@ -6422,7 +7225,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 4°C",
+          "exposure_increment": "per 4\u00b0C",
           "lag": "lag1-5",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -6455,7 +7258,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "not specified",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -6468,7 +7271,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "not specified",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -6481,7 +7284,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "not specified",
           "outcome_specific": "asthma_wheeze",
           "covariates": [
@@ -6494,7 +7297,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "not specified",
           "outcome_specific": "asthma_wheeze",
           "covariates": [
@@ -6517,7 +7320,7 @@
       "study_location": "US, country",
       "study_period": "2010-2016",
       "study_design": "time_series",
-      "population": "adults aged ≥18 years",
+      "population": "adults aged \u226518 years",
       "sample_size": null,
       "estimates": [
         {
@@ -6526,7 +7329,7 @@
           "ci_lower": 0.55,
           "ci_upper": 1.26,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "current and previous day",
           "outcome_specific": "all_natural_causes",
           "covariates": [
@@ -6542,7 +7345,7 @@
           "ci_lower": 1.14,
           "ci_upper": 2.59,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "current and previous day",
           "outcome_specific": "all_hospital_admissions",
           "covariates": [
@@ -6558,7 +7361,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "current and previous day",
           "outcome_specific": "all_cardiovascular_disease",
           "covariates": [
@@ -6574,7 +7377,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "current and previous day",
           "outcome_specific": "all_natural_causes_younger_adults",
           "covariates": [
@@ -6590,7 +7393,7 @@
           "ci_lower": 0.73,
           "ci_upper": 1.94,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "current and previous day",
           "outcome_specific": "all_respiratory_disease_emergency_department_visits",
           "covariates": [
@@ -6606,7 +7409,7 @@
           "ci_lower": 0.52,
           "ci_upper": 1.35,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "current and previous day",
           "outcome_specific": "all_respiratory_disease_emergency_department_visits_middle_aged_and_young_adults",
           "covariates": [
@@ -6617,7 +7420,7 @@
           ]
         }
       ],
-      "_validation_error": "'adults aged ≥18 years' is not one of ['general', 'elderly', 'children', 'other']"
+      "_validation_error": "'adults aged \u226518 years' is not one of ['general', 'elderly', 'children', 'other']"
     },
     "valid": false,
     "output_hash": "6ddcfe6fa87a6d6bb21f3099edda0ed771f9d31dc55a752d89862f7d92bb07db"
@@ -6629,7 +7432,7 @@
     "model_id": "mistral-7b",
     "output": {
       "study_id": "first_author_year",
-      "study_location": "Warsaw, Poland | Kraków, Poland | Tricity, Poland",
+      "study_location": "Warsaw, Poland | Krak\u00f3w, Poland | Tricity, Poland",
       "study_period": "2011-2018",
       "study_design": "case_crossover",
       "population": "general",
@@ -6641,7 +7444,7 @@
           "ci_lower": 1.008,
           "ci_upper": 1.049,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -6657,7 +7460,7 @@
           "ci_lower": 1.006,
           "ci_upper": 1.055,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -6673,7 +7476,7 @@
           "ci_lower": 0.988,
           "ci_upper": 1.078,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -6689,7 +7492,7 @@
           "ci_lower": 1.038,
           "ci_upper": 1.262,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -6705,7 +7508,7 @@
           "ci_lower": 1.008,
           "ci_upper": 1.049,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag10",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -6721,7 +7524,7 @@
           "ci_lower": 1.006,
           "ci_upper": 1.055,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag10",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -6737,7 +7540,7 @@
           "ci_lower": 0.988,
           "ci_upper": 1.078,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag10",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -6753,7 +7556,7 @@
           "ci_lower": 1.038,
           "ci_upper": 1.262,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag10",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -6774,10 +7577,61 @@
     "run_id": 7,
     "model_id": "mistral-7b",
     "output": {
-      "error": "json_parse_failed",
-      "raw": " ```json\n{\n  \"study_id\": \"first_author_year\",\n  \"study_location\": \"midtown Manhattan, USA\",\n  \"study_period\": \"2001-2002\",\n  \"study_design\": \"time_series\",\n  \"population\": \"elderly\",\n  \"sample_size\": null,\n  \"estimates\": [\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not provided in the abstract\n      \"ci_lower\": null, // Not provided in the abstract\n      \"ci_upper\": null, // Not provided in the abstract\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"multiple-lag days\",\n      \"outcome_specific\": \"respiratory admissions\",\n      \"covariates\": [\"temperature\", \"humidity\", \"trend\", \"seasonality\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not provided in the abstract\n      \"ci_lower\": null, // Not provided in the abstract\n      \"ci_upper\": null, // Not provided in the abstract\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"same-day\",\n      \"outcome_specific\": \"cardiovascular admissions\",\n      \"covariates\": [\"temperature\", \"humidity\", \"trend\", \"seasonality\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not provided in the abstract\n      \"ci_lower\": null, // Not provided in the abstract\n      \"ci_upper\": null, // Not provided in the abstract\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"cleanup efforts at the World Trade Center\",\n      \"outcome_specific\": \"respiratory admissions\",\n      \"covariates\": [\"temperature\", \"humidity\", \"trend\", \"seasonality\"]\n    }\n  ]\n}\n```"
+      "study_id": "first_author_year",
+      "study_location": "midtown Manhattan, USA",
+      "study_period": "2001-2002",
+      "study_design": "time_series",
+      "population": "elderly",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "multiple-lag days",
+          "outcome_specific": "respiratory admissions",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "same-day",
+          "outcome_specific": "cardiovascular admissions",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "cleanup efforts at the World Trade Center",
+          "outcome_specific": "respiratory admissions",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality"
+          ]
+        }
+      ]
     },
-    "valid": false,
+    "valid": true,
     "output_hash": "fc910db5a29aacabfd36409a9fbe31413050a38ea1161680cfee14a35ede1ea9"
   },
   {
@@ -6799,7 +7653,7 @@
           "ci_lower": 1.002,
           "ci_upper": 1.021,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "asthma",
           "covariates": [
@@ -6815,7 +7669,7 @@
           "ci_lower": 1.017,
           "ci_upper": 1.043,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "asthma",
           "covariates": [
@@ -6831,7 +7685,7 @@
           "ci_lower": 1.041,
           "ci_upper": 1.174,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "asthma",
           "covariates": [
@@ -6847,7 +7701,7 @@
           "ci_lower": 1.001,
           "ci_upper": 1.017,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "asthma",
           "covariates": [
@@ -6885,10 +7739,72 @@
     "run_id": 7,
     "model_id": "mistral-7b",
     "output": {
-      "error": "json_parse_failed",
-      "raw": " ```json\n{\n  \"study_id\": \"Ambient Air Pollution and Risk of Admission Due to Asthma - 20XX\",\n  \"study_location\": \"Three Largest Urban Agglomerations, Poland\",\n  \"study_period\": \"2010-2018\",\n  \"study_design\": \"case_crossover\",\n  \"population\": \"general\",\n  \"sample_size\": null,\n  \"estimates\": [\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": 1.013,\n      \"ci_lower\": 1.002,\n      \"ci_upper\": 1.024,\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"lag0\",\n      \"outcome_specific\": \"asthma\",\n      \"covariates\": [\"temperature\", \"humidity\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": 1.014,\n      \"ci_lower\": 1.000,\n      \"ci_upper\": 1.028,\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"lag0\",\n      \"outcome_specific\": \"asthma\",\n      \"covariates\": [\"temperature\", \"humidity\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": 1.054,\n      \"ci_lower\": 1.031,\n      \"ci_upper\": 1.078,\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"lag0\",\n      \"outcome_specific\": \"asthma\",\n      \"covariates\": [\"temperature\", \"humidity\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": 1.044,\n      \"ci_lower\": 0.986,\n      \"ci_upper\": 1.104,\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": null,\n      \"outcome_specific\": \"asthma\",\n      \"covariates\": [\"temperature\", \"humidity\"]\n    ]\n}\n```"
+      "study_id": "Ambient Air Pollution and Risk of Admission Due to Asthma - 20XX",
+      "study_location": "Three Largest Urban Agglomerations, Poland",
+      "study_period": "2010-2018",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.013,
+          "ci_lower": 1.002,
+          "ci_upper": 1.024,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "temperature",
+            "humidity"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.014,
+          "ci_lower": 1.0,
+          "ci_upper": 1.028,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "temperature",
+            "humidity"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.054,
+          "ci_lower": 1.031,
+          "ci_upper": 1.078,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "temperature",
+            "humidity"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.044,
+          "ci_lower": 0.986,
+          "ci_upper": 1.104,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": null,
+          "outcome_specific": "asthma",
+          "covariates": [
+            "temperature",
+            "humidity"
+          ]
+        }
+      ]
     },
-    "valid": false,
+    "valid": true,
     "output_hash": "6cae2cb66d43899ff010cc671ccc060e56aff92a79f18e429160304049a4ae6a"
   },
   {
@@ -6910,7 +7826,7 @@
           "ci_lower": 1.075,
           "ci_upper": 1.103,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-7",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -6926,7 +7842,7 @@
           "ci_lower": 1.014,
           "ci_upper": 1.021,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-7",
           "outcome_specific": "pneumonia",
           "covariates": [
@@ -6942,7 +7858,7 @@
           "ci_lower": 1.154,
           "ci_upper": 1.219,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-7",
           "outcome_specific": "bronchiolitis",
           "covariates": [
@@ -6958,7 +7874,7 @@
           "ci_lower": 1.13,
           "ci_upper": 1.168,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag0-7",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -6974,7 +7890,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -6990,7 +7906,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "pneumonia",
           "covariates": [
@@ -7006,7 +7922,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "bronchiolitis",
           "covariates": [
@@ -7022,7 +7938,7 @@
           "ci_lower": null,
           "ci_upper": null,
           "ci_level": null,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "null",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -7057,7 +7973,7 @@
           "ci_lower": 0.28,
           "ci_upper": 1.89,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "L0-6",
           "outcome_specific": "all_respiratory",
           "covariates": [
@@ -7073,7 +7989,7 @@
           "ci_lower": null,
           "ci_upper": 1.44,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "L0-6",
           "outcome_specific": "cardiovascular",
           "covariates": [
@@ -7089,7 +8005,7 @@
           "ci_lower": 0.09,
           "ci_upper": 1.14,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "L1",
           "outcome_specific": "cardiovascular",
           "covariates": [
@@ -7105,7 +8021,7 @@
           "ci_lower": 0.19,
           "ci_upper": 1.2,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "L1",
           "outcome_specific": "cardiovascular",
           "covariates": [
@@ -7121,7 +8037,7 @@
           "ci_lower": 3.71,
           "ci_upper": 10.11,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "L1",
           "outcome_specific": "asthma",
           "covariates": [
@@ -7137,7 +8053,7 @@
           "ci_lower": null,
           "ci_upper": 3.77,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "L1",
           "outcome_specific": "asthma",
           "covariates": [
@@ -7172,7 +8088,7 @@
           "ci_lower": 0.3,
           "ci_upper": 2.2,
           "ci_level": 95,
-          "exposure_increment": "per 10 µg/m³",
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
           "lag": "lag5",
           "outcome_specific": null,
           "covariates": [
@@ -7185,7 +8101,7 @@
           "ci_lower": 0.1,
           "ci_upper": 1.2,
           "ci_level": 95,
-          "exposure_increment": "per 10 grains/m³",
+          "exposure_increment": "per 10 grains/m\u00b3",
           "lag": "lag1",
           "outcome_specific": null,
           "covariates": [
@@ -7204,10 +8120,112 @@
     "run_id": 7,
     "model_id": "mistral-7b",
     "output": {
-      "error": "json_parse_failed",
-      "raw": " ```json\n{\n  \"study_id\": \"first_author_year\",\n  \"study_location\": \"Morwell, Australia\",\n  \"study_period\": \"2014-2022\",\n  \"study_design\": \"time_series\",\n  \"population\": \"general\",\n  \"sample_size\": null,\n  \"estimates\": [\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not provided in the abstract\n      \"ci_lower\": null, // Not provided in the abstract\n      \"ci_upper\": null, // Not provided in the abstract\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"overall\",\n      \"outcome_specific\": \"all_hospital_admissions\",\n      \"covariates\": [\"temperature\", \"humidity\", \"trend\", \"seasonality\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not provided in the abstract\n      \"ci_lower\": null, // Not provided in the abstract\n      \"ci_upper\": null, // Not provided in the abstract\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"overall\",\n      \"outcome_specific\": \"all_emergency_presentations\",\n      \"covariates\": [\"temperature\", \"humidity\", \"trend\", \"seasonality\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not provided in the abstract\n      \"ci_lower\": null, // Not provided in the abstract\n      \"ci_upper\": null, // Not provided in the abstract\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"overall\",\n      \"outcome_specific\": \"all_ambulance_attendances\",\n      \"covariates\": [\"temperature\", \"humidity\", \"trend\", \"seasonality\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not provided in the abstract\n      \"ci_lower\": null, // Not provided in the abstract\n      \"ci_upper\": null, // Not provided in the abstract\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"overall\",\n      \"outcome_specific\": \"mental_health_hospital_admissions\",\n      \"covariates\": [\"temperature\", \"humidity\", \"trend\", \"seasonality\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not provided in the abstract\n      \"ci_lower\": null, // Not provided in the abstract\n      \"ci_upper\": null, // Not provided in the abstract\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"overall\",\n      \"outcome_specific\": \"injury_hospital_admissions\",\n      \"covariates\": [\"temperature\", \"humidity\", \"trend\", \"seasonality\"]\n    },\n    {\n      \"effect_measure\": \"RR\",\n      \"effect_estimate\": null, // Not provided in the abstract\n      \"ci_lower\": null, // Not provided in the abstract\n      \"ci_upper\": null, // Not provided in the abstract\n      \"ci_level\": 95,\n      \"exposure_increment\": \"per 10 µg/m³\",\n      \"lag\": \"overall\",\n      \"outcome_specific\": \"cardiovascular_hospital_admissions\",\n      \"covariates\": [\"temperature\", \"humidity\", \"trend\", \"seasonality\"]\n    }\n  ]\n}\n```"
+      "study_id": "first_author_year",
+      "study_location": "Morwell, Australia",
+      "study_period": "2014-2022",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "overall",
+          "outcome_specific": "all_hospital_admissions",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "overall",
+          "outcome_specific": "all_emergency_presentations",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "overall",
+          "outcome_specific": "all_ambulance_attendances",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "overall",
+          "outcome_specific": "mental_health_hospital_admissions",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "overall",
+          "outcome_specific": "injury_hospital_admissions",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "overall",
+          "outcome_specific": "cardiovascular_hospital_admissions",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality"
+          ]
+        }
+      ]
     },
-    "valid": false,
+    "valid": true,
     "output_hash": "da19ea779135eb1dc66f70408397321f0d1aefed4a059060bf3c69b7dfe7e729"
   },
   {

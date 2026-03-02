@@ -20,8 +20,8 @@
     "start_time": "2026-02-27T20:38:29.690533+00:00",
     "end_time": "2026-02-27T23:01:41.625055+00:00",
     "total_calls": 100,
-    "successful_calls": 84,
-    "failed_calls": 16,
+    "successful_calls": 100,
+    "failed_calls": 0,
     "total_duration_ms": 7100014.7,
     "mean_duration_ms": 71000.1
   },
