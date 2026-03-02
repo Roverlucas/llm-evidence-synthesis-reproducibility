@@ -175,38 +175,38 @@
     }
   },
   "gpt-4.1_semantic": {
-    "n_items": 10,
+    "n_items": 100,
     "field_results": {
       "study_design": {
-        "exact_emr": 0.0,
-        "normalized_emr": 0.0,
-        "fuzzy_emr": 0.0
+        "exact_emr": 0.99,
+        "normalized_emr": 0.99,
+        "fuzzy_emr": 0.99
       },
       "study_location": {
-        "exact_emr": 0.0,
-        "normalized_emr": 0.0,
-        "fuzzy_emr": 0.0
+        "exact_emr": 1.0,
+        "normalized_emr": 1.0,
+        "fuzzy_emr": 1.0
       },
       "study_period": {
-        "exact_emr": 0.0,
-        "normalized_emr": 0.0,
-        "fuzzy_emr": 0.0
+        "exact_emr": 0.99,
+        "normalized_emr": 0.99,
+        "fuzzy_emr": 0.99
       },
       "population": {
-        "exact_emr": 0.0,
-        "normalized_emr": 0.0,
-        "fuzzy_emr": 0.0
+        "exact_emr": 0.99,
+        "normalized_emr": 0.99,
+        "fuzzy_emr": 0.99
       },
       "sample_size": {
-        "exact_emr": 0.0,
-        "normalized_emr": 0.0,
-        "fuzzy_emr": 0.0
+        "exact_emr": 0.98,
+        "normalized_emr": 0.98,
+        "fuzzy_emr": 0.98
       }
     },
     "whole_output": {
-      "exact_emr": 0.0,
-      "normalized_emr": 0.0,
-      "fuzzy_emr": 0.0
+      "exact_emr": 0.88,
+      "normalized_emr": 0.88,
+      "fuzzy_emr": 0.88
     }
   },
   "llama3-8b_meta": [
@@ -681,84 +681,84 @@
     },
     {
       "run": 2,
-      "n_estimates": 84,
-      "pooled_effect": 1.002585,
-      "pooled_se": 0.000201,
-      "z_score": 12.837,
+      "n_estimates": 176,
+      "pooled_effect": 1.004873,
+      "pooled_se": 0.000177,
+      "z_score": 27.4723,
       "p_value": 0.0,
       "significant_005": true
     },
     {
       "run": 3,
-      "n_estimates": 0,
-      "pooled_effect": null,
-      "pooled_se": null,
-      "z_score": null,
-      "p_value": null,
-      "significant_005": null
+      "n_estimates": 178,
+      "pooled_effect": 1.006433,
+      "pooled_se": 0.000157,
+      "z_score": 40.9207,
+      "p_value": 0.0,
+      "significant_005": true
     },
     {
       "run": 4,
-      "n_estimates": 0,
-      "pooled_effect": null,
-      "pooled_se": null,
-      "z_score": null,
-      "p_value": null,
-      "significant_005": null
+      "n_estimates": 180,
+      "pooled_effect": 1.004932,
+      "pooled_se": 0.000175,
+      "z_score": 28.1063,
+      "p_value": 0.0,
+      "significant_005": true
     },
     {
       "run": 5,
-      "n_estimates": 0,
-      "pooled_effect": null,
-      "pooled_se": null,
-      "z_score": null,
-      "p_value": null,
-      "significant_005": null
+      "n_estimates": 180,
+      "pooled_effect": 1.004932,
+      "pooled_se": 0.000175,
+      "z_score": 28.1063,
+      "p_value": 0.0,
+      "significant_005": true
     },
     {
       "run": 6,
-      "n_estimates": 0,
-      "pooled_effect": null,
-      "pooled_se": null,
-      "z_score": null,
-      "p_value": null,
-      "significant_005": null
+      "n_estimates": 180,
+      "pooled_effect": 1.004528,
+      "pooled_se": 0.00018,
+      "z_score": 25.0682,
+      "p_value": 0.0,
+      "significant_005": true
     },
     {
       "run": 7,
-      "n_estimates": 0,
-      "pooled_effect": null,
-      "pooled_se": null,
-      "z_score": null,
-      "p_value": null,
-      "significant_005": null
+      "n_estimates": 176,
+      "pooled_effect": 1.004873,
+      "pooled_se": 0.000177,
+      "z_score": 27.4723,
+      "p_value": 0.0,
+      "significant_005": true
     },
     {
       "run": 8,
-      "n_estimates": 0,
-      "pooled_effect": null,
-      "pooled_se": null,
-      "z_score": null,
-      "p_value": null,
-      "significant_005": null
+      "n_estimates": 180,
+      "pooled_effect": 1.004932,
+      "pooled_se": 0.000175,
+      "z_score": 28.1063,
+      "p_value": 0.0,
+      "significant_005": true
     },
     {
       "run": 9,
-      "n_estimates": 0,
-      "pooled_effect": null,
-      "pooled_se": null,
-      "z_score": null,
-      "p_value": null,
-      "significant_005": null
+      "n_estimates": 180,
+      "pooled_effect": 1.004932,
+      "pooled_se": 0.000175,
+      "z_score": 28.1063,
+      "p_value": 0.0,
+      "significant_005": true
     },
     {
       "run": 10,
-      "n_estimates": 0,
-      "pooled_effect": null,
-      "pooled_se": null,
-      "z_score": null,
-      "p_value": null,
-      "significant_005": null
+      "n_estimates": 178,
+      "pooled_effect": 1.004534,
+      "pooled_se": 0.00018,
+      "z_score": 25.1,
+      "p_value": 0.0,
+      "significant_005": true
     }
   ],
   "llama3-8b_flips": {
@@ -802,11 +802,11 @@
     "total_with_estimates": 100
   },
   "gpt-4.1_flips": {
-    "total_articles": 0,
+    "total_articles": 50,
     "flipped_articles": 0,
     "flip_pct": 0.0,
-    "varying_effects": 0,
-    "varying_n_estimates": 20,
+    "varying_effects": 1,
+    "varying_n_estimates": 5,
     "total_with_estimates": 100
   }
 }
