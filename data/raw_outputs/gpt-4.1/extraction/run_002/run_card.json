@@ -1,0 +1,31 @@
+{
+  "run_card_version": "1.0",
+  "run_id": 2,
+  "stage": "extraction",
+  "model_id": "gpt-4.1",
+  "provider": "openai",
+  "model_info": {
+    "model_id": "gpt-4.1",
+    "provider": "openai",
+    "weights_hash": "proprietary-not-available",
+    "model_source": "openai-api"
+  },
+  "config": {
+    "temperature": 0.0,
+    "seed": 42,
+    "max_tokens": 2048
+  },
+  "execution": {
+    "start_time": "2026-03-02T15:48:05.772335+00:00",
+    "end_time": "2026-03-02T16:00:04.714573+00:00",
+    "total_calls": 100,
+    "successful_calls": 100,
+    "failed_calls": 0,
+    "total_duration_ms": 520180.7,
+    "mean_duration_ms": 5201.8
+  },
+  "provenance": {
+    "aggregate_output_hash": "2cdefe6aeaec273d6af5c1263b1e3c55e5e75c2944084edf21296f195082c0fa",
+    "hash_algorithm": "sha256"
+  }
+}
