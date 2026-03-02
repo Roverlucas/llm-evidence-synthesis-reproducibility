@@ -1,4 +1,34 @@
 {
+  "llama3-8b": {
+    "n_articles": 100,
+    "n_pairs": 4500,
+    "mean_f1": 1.0,
+    "std_f1": 0.0,
+    "min_f1": 1.0,
+    "max_f1": 1.0,
+    "prop_ge_0.95": 1.0,
+    "prop_ge_0.99": 1.0
+  },
+  "mistral-7b": {
+    "n_articles": 100,
+    "n_pairs": 4500,
+    "mean_f1": 1.0,
+    "std_f1": 0.0,
+    "min_f1": 1.0,
+    "max_f1": 1.0,
+    "prop_ge_0.95": 1.0,
+    "prop_ge_0.99": 1.0
+  },
+  "gemma2-9b": {
+    "n_articles": 100,
+    "n_pairs": 4500,
+    "mean_f1": 1.0,
+    "std_f1": 0.0,
+    "min_f1": 1.0,
+    "max_f1": 1.0,
+    "prop_ge_0.95": 1.0,
+    "prop_ge_0.99": 1.0
+  },
   "claude-sonnet-4-5": {
     "n_articles": 100,
     "n_pairs": 4500,
@@ -19,14 +49,14 @@
     "prop_ge_0.95": 0.985111,
     "prop_ge_0.99": 0.938889
   },
-  "llama3-8b": {
-    "n_articles": 100,
-    "n_pairs": 4500,
-    "mean_f1": 1.0,
-    "std_f1": 0.0,
-    "min_f1": 1.0,
+  "gpt-4.1": {
+    "n_articles": 10,
+    "n_pairs": 450,
+    "mean_f1": 0.918874,
+    "std_f1": 0.110554,
+    "min_f1": 0.741483,
     "max_f1": 1.0,
-    "prop_ge_0.95": 1.0,
-    "prop_ge_0.99": 1.0
+    "prop_ge_0.95": 0.644444,
+    "prop_ge_0.99": 0.644444
   }
 }

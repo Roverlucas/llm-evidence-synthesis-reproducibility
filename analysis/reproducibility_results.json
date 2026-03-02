@@ -1,31 +1,4 @@
 {
-  "claude-sonnet-4-5": {
-    "screening": {
-      "emr": 0.974,
-      "ci_lower": 0.96,
-      "ci_upper": 0.986,
-      "n_abstracts": 500,
-      "flip_rate": 0.026000000000000023,
-      "mean_agreement": 0.9937999999999999,
-      "accuracy": 0.9313885996665375,
-      "sensitivity": 0.8615281789066767,
-      "specificity": 1.0
-    },
-    "extraction": {
-      "emr": 0.05,
-      "ci_lower": 0.01,
-      "ci_upper": 0.09,
-      "n_articles": 100,
-      "field_emr": {
-        "study_design": 0.99,
-        "study_location": 0.78,
-        "study_period": 0.99,
-        "population": 0.96,
-        "sample_size": 0.97
-      },
-      "estimate_count_stability": 0.8804347826086957
-    }
-  },
   "llama3-8b": {
     "screening": {
       "emr": 1.0,
@@ -53,6 +26,87 @@
       "estimate_count_stability": 1.0
     }
   },
+  "mistral-7b": {
+    "screening": {
+      "emr": 1.0,
+      "ci_lower": 1.0,
+      "ci_upper": 1.0,
+      "n_abstracts": 500,
+      "flip_rate": 0.0,
+      "mean_agreement": 1.0,
+      "accuracy": 0.6275510204081634,
+      "sensitivity": 1.0,
+      "specificity": 0.23958333333333334
+    },
+    "extraction": {
+      "emr": 1.0,
+      "ci_lower": 1.0,
+      "ci_upper": 1.0,
+      "n_articles": 100,
+      "field_emr": {
+        "study_design": 1.0,
+        "study_location": 1.0,
+        "study_period": 1.0,
+        "population": 1.0,
+        "sample_size": 1.0
+      },
+      "estimate_count_stability": 1.0
+    }
+  },
+  "gemma2-9b": {
+    "screening": {
+      "emr": 1.0,
+      "ci_lower": 1.0,
+      "ci_upper": 1.0,
+      "n_abstracts": 500,
+      "flip_rate": 0.0,
+      "mean_agreement": 1.0,
+      "accuracy": 0.9086294416243653,
+      "sensitivity": 0.9693877551020409,
+      "specificity": 0.8484848484848484
+    },
+    "extraction": {
+      "emr": 1.0,
+      "ci_lower": 1.0,
+      "ci_upper": 1.0,
+      "n_articles": 100,
+      "field_emr": {
+        "study_design": 1.0,
+        "study_location": 1.0,
+        "study_period": 1.0,
+        "population": 1.0,
+        "sample_size": 1.0
+      },
+      "estimate_count_stability": 1.0
+    }
+  },
+  "claude-sonnet-4-5": {
+    "screening": {
+      "emr": 0.974,
+      "ci_lower": 0.96,
+      "ci_upper": 0.986,
+      "n_abstracts": 500,
+      "flip_rate": 0.026000000000000023,
+      "mean_agreement": 0.9937999999999999,
+      "accuracy": 0.9313885996665375,
+      "sensitivity": 0.8615281789066767,
+      "specificity": 1.0
+    },
+    "extraction": {
+      "emr": 0.05,
+      "ci_lower": 0.01,
+      "ci_upper": 0.09,
+      "n_articles": 100,
+      "field_emr": {
+        "study_design": 0.99,
+        "study_location": 0.78,
+        "study_period": 0.99,
+        "population": 0.96,
+        "sample_size": 0.97
+      },
+      "estimate_count_stability": 0.8804347826086957
+    }
+  },
   "gemini-2.5-pro": {
     "screening": {
       "emr": 0.936,
@@ -78,6 +132,33 @@
         "sample_size": 1.0
       },
       "estimate_count_stability": 0.7349397590361446
+    }
+  },
+  "gpt-4.1": {
+    "screening": {
+      "emr": 0.97,
+      "ci_lower": 0.954,
+      "ci_upper": 0.984,
+      "n_abstracts": 500,
+      "flip_rate": 0.030000000000000027,
+      "mean_agreement": 0.9907999999999999,
+      "accuracy": 0.9411414064116407,
+      "sensitivity": 0.88155089289699,
+      "specificity": 1.0
+    },
+    "extraction": {
+      "emr": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "n_articles": 10,
+      "field_emr": {
+        "study_design": 0.0,
+        "study_location": 0.0,
+        "study_period": 0.0,
+        "population": 0.0,
+        "sample_size": 0.0
+      },
+      "estimate_count_stability": 0.0
     }
   }
 }
