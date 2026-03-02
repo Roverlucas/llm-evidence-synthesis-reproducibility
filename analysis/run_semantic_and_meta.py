@@ -261,6 +261,12 @@ def run_meta_analysis_experiment(model: str, n_runs: int = 10):
                     continue
                 if effect is None or ci_lo is None or ci_hi is None:
                     continue
+                try:
+                    effect = float(effect)
+                    ci_lo = float(ci_lo)
+                    ci_hi = float(ci_hi)
+                except (ValueError, TypeError):
+                    continue
                 if effect <= 0 or ci_lo <= 0 or ci_hi <= 0:
                     continue
                 if ci_lo >= ci_hi:
@@ -386,7 +392,13 @@ if __name__ == "__main__":
 
                     if measure not in ("RR", "OR", "HR", "IRR"):
                         continue
-                    if not all(v is not None and isinstance(v, (int, float)) and v > 0
+                    try:
+                        effect = float(effect) if effect is not None else None
+                        ci_lo = float(ci_lo) if ci_lo is not None else None
+                        ci_hi = float(ci_hi) if ci_hi is not None else None
+                    except (ValueError, TypeError):
+                        continue
+                    if not all(v is not None and v > 0
                               for v in [effect, ci_lo, ci_hi]):
                         continue
                     if ci_lo >= ci_hi:

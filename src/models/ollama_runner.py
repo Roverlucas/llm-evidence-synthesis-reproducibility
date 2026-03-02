@@ -49,6 +49,8 @@ def run_inference(
     options = {
         "temperature": temperature,
         "num_predict": num_predict,
+        "num_batch": 2048,
+        "num_gpu": 99,
     }
     if seed is not None:
         options["seed"] = seed
