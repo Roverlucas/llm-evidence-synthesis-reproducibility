@@ -63,7 +63,7 @@ models:
     seed: 42
 
 runs:
-  repetitions: 30
+  repetitions: 10  # Updated to match executed experiment (originally planned 30)
   batch_size: 50  # abstracts per batch
 
 screening:
@@ -92,8 +92,8 @@ extraction:
     - "study_location"       # city/country
 
 meta_analysis:
-  method: "random_effects"
-  estimator: "DerSimonian-Laird"
+  method: "fixed_effect"  # Updated to match executed experiment; random-effects sensitivity analysis discussed in manuscript
+  estimator: "inverse_variance"
   metrics:
     - "pooled_effect"
     - "I2"

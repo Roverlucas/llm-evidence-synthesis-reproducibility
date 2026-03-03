@@ -22,3 +22,7 @@ hashlib-additional>=1.0; python_version<"3.12"
 # Visualization
 matplotlib>=3.8
 seaborn>=0.13
+
+# Semantic analysis (BERTScore)
+bert-score>=0.3.13
+transformers>=4.36

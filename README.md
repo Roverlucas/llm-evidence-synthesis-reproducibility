@@ -24,17 +24,17 @@ and propose a provenance-based mitigation framework.
 - **Domain**: PM2.5 and respiratory hospitalizations (time-series studies)
 - **Corpus**: 500 abstracts (100 include / 100 exclude / 300 ambiguous)
 - **Source**: PubMed / Scopus
-- **Models**: 3 (1 local via Ollama + Claude API + Gemini API)
-- **Repetitions**: 30 per model per stage
+- **Models**: 6 (3 local via Ollama: LLaMA 3 8B, Mistral 7B, Gemma 2 9B + 3 cloud APIs: Claude Sonnet 4.5, Gemini 2.5 Pro, GPT-4.1)
+- **Repetitions**: 10 per model per stage
 - **Gold standard**: Dual-human labeling with discordance resolution
 
 ## Pipeline
 
 ```
-Stage A: Screening       --> include/exclude decisions (30 runs x 3 models)
-Stage B: Extraction      --> RR, CI95%, lag, exposure unit (30 runs x 3 models)
-Stage C: Meta-analysis   --> pooled effect, I², CI (per run)
-Stage D: Mitigation      --> baseline vs guardrails vs dual-pass vs human-in-loop
+Stage A: Screening       --> include/exclude decisions (10 runs x 6 models = 30,000 calls)
+Stage B: Extraction      --> structured JSON with effect estimates (10 runs x 6 models = 6,000 calls)
+Analysis: Meta-analytic propagation, semantic equivalence, BERTScore
+Total: 36,000 LLM calls across 120 experiment runs
 ```
 
 ## Project Structure

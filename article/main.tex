@@ -52,20 +52,22 @@
 \begin{abstract}
 \noindent\textbf{Background.}
 Large language models (LLMs) are increasingly adopted to assist systematic reviews and evidence synthesis, performing tasks such as abstract screening and data extraction.
-A critical but underexplored assumption is that these models produce consistent outputs when given identical inputs and configurations.
+A critical but underexplored assumption is that these models produce consistent outputs when given identical inputs and configurations---that asking the same question twice yields the same answer.
 
 \noindent\textbf{Objective.}
-We quantified the reproducibility of six LLMs---three local (LLaMA~3 8B, Mistral~7B, Gemma~2 9B) and three cloud-based APIs (Claude Sonnet~4.5, Gemini~2.5 Pro, GPT-4.1)---across a complete evidence synthesis pipeline for PM\textsubscript{2.5} and respiratory health research.
+We quantified the reproducibility of six LLMs---three local (LLaMA~3 8B, Mistral~7B, Gemma~2 9B) and three cloud-based APIs (Claude Sonnet~4.5, Gemini~2.5 Pro, GPT-4.1)---across a complete evidence synthesis pipeline for fine particulate matter (PM\textsubscript{2.5}) and respiratory health research.
 
 \noindent\textbf{Methods.}
-We constructed a 500-abstract corpus from PubMed (100~include, 100~exclude, 300~borderline cases selected to stress-test decision consistency) and ran each model 10~times under identical configurations (temperature$\,{=}\,$0, fixed seeds where supported) through two stages: abstract screening (500~abstracts per run) and structured data extraction (100~included articles per run).
+We constructed a 500-abstract PubMed corpus (100~include, 100~exclude, 300~borderline) and ran each model 10~times under identical configurations (temperature$\,{=}\,$0, fixed seeds where supported).
+Each run comprised two stages: screening all 500~abstracts and extracting structured data from the 100~included articles.
 Reproducibility was measured using the Exact Match Rate (EMR)---the proportion of items receiving identical outputs across all 10~runs---with 95\% bootstrap confidence intervals (10,000~resamples).
 
 \noindent\textbf{Results.}
-All three locally deployed models achieved perfect reproducibility ($\emr{=}1.000$) in both screening and extraction: LLaMA~3 8B, Mistral~7B, and Gemma~2 9B produced bit-identical outputs across all 10~runs.
+All three locally deployed models achieved perfect reproducibility ($\emr{=}1.000$) in both screening and extraction: LLaMA~3 8B, Mistral~7B, and Gemma~2 9B produced bit-identical outputs across all 10~runs on identical hardware.
 Cloud-based APIs exhibited substantial non-determinism: Claude Sonnet~4.5 achieved screening $\emr{=}0.974$~$\ci{0.960}{0.986}$ but extraction $\emr{=}0.050$~$\ci{0.010}{0.090}$; GPT-4.1 achieved $\emr{=}0.970$~$\ci{0.954}{0.984}$ and $\emr{=}0.150$~$\ci{0.080}{0.220}$; Gemini~2.5 Pro achieved $\emr{=}0.936$~$\ci{0.914}{0.956}$ and $\emr{=}0.200$~$\ci{0.120}{0.280}$.
 Despite requesting deterministic behavior, 85--95\% of API extraction outputs varied across runs.
-Semantic equivalence analysis---including BERTScore embedding similarity ($F_1{\geq}0.997$), Levenshtein fuzzy matching, and text normalization---confirmed that metadata text is near-identical across runs, yet the numeric extraction layer (effect sizes, confidence intervals) drives the low hash-based EMR.
+Semantic equivalence analysis confirmed that metadata text is near-identical across runs (BERTScore $F_1{\geq}0.997$).
+The low hash-based EMR is driven by the numeric extraction layer---effect sizes, confidence intervals, and variable-length estimate arrays.
 Meta-analytic propagation analysis revealed that 5--21\% of articles yielded a different number of effect estimates across runs, causing the composition of a downstream meta-analysis to depend on which LLM run generated its inputs.
 The total experiment required 207~hours of inference time, 55.8~million tokens, and \$69.66 in API costs.
 
@@ -94,11 +96,11 @@ Yet the process is notoriously labor-intensive: a typical systematic review requ
 
 The emergence of large language models (LLMs) has created unprecedented opportunities to accelerate this process.
 Recent studies demonstrate that models such as GPT-4~\citep{openai2023gpt4}, Claude~\citep{anthropic2024claude}, and Gemini~\citep{geminiteam2024gemini} can screen abstracts with sensitivity approaching that of human reviewers~\citep{oami2024screening, khraisha2024gpt4}, extract structured data from published studies with over 90\% accuracy~\citep{gartlehner2024extraction, jensen2025chatgpt}, and even assist in evidence quality assessment~\citep{wang2025trialmind, li2025streamlining}.
-A growing body of work in the \emph{Journal of the American Medical Informatics Association}, \emph{Research Synthesis Methods}, and \emph{npj Digital Medicine} has established LLM-assisted evidence synthesis as a legitimate and rapidly expanding methodological frontier~\citep{li2025jamia, scherbakov2025jamia, matsui2024screening}.
+A growing body of work has established LLM-assisted evidence synthesis as a legitimate and rapidly expanding methodological frontier~\citep{li2025jamia, scherbakov2025jamia, matsui2024screening}.
 
 \subsection{The Hidden Problem: Non-Determinism}
 
-Beneath this promise lies an assumption so fundamental that it is rarely stated explicitly: \emph{if you ask the same question twice, you should get the same answer}.
+Beneath this promise lies a rarely examined assumption: \emph{if you ask the same question twice, you should get the same answer}.
 In the context of LLM-assisted evidence synthesis, this means that running the same model with the same prompt, temperature, and random seed on the same abstract should produce identical screening decisions and extraction outputs every time.
 
 This assumption does not hold in practice.
@@ -130,7 +132,6 @@ When LLM-assisted reviews cannot be independently reproduced because the API ret
 
 Despite the rapid adoption of LLMs in evidence synthesis, \textbf{no study has systematically measured how API-level non-determinism propagates through a complete synthesis pipeline}---from abstract screening through data extraction---in a real health domain.
 
-This gap is not a minor omission; it represents a fundamental blind spot.
 Consider: \citet{jensen2025chatgpt} report 94.1\% inter-session reproducibility for ChatGPT-4o extraction---an encouraging number.
 But this was measured with only 2~repetitions and evaluated per-field, not per-output.
 When we apply a stricter whole-output metric across 10~repetitions, we find extraction EMR as low as 5.0\%---nearly twenty times worse than what per-field metrics suggest.
@@ -155,15 +156,15 @@ We bridge this gap by:
 \subsection{LLMs in Systematic Reviews}
 
 The application of LLMs to systematic review workflows has accelerated dramatically since 2023.
-\citet{oami2024screening} evaluated GPT-4~Turbo for citation screening in \emph{JAMA Network Open}, reporting sensitivity of 0.75 and specificity of 0.99, with prompt tuning improving sensitivity to 0.91.
-\citet{khraisha2024gpt4} extended this to multilingual screening and extraction in \emph{Research Synthesis Methods}, finding strong specificity ($>$0.80) but variable sensitivity across languages and review types.
+\citet{oami2024screening} evaluated GPT-4~Turbo for citation screening, reporting sensitivity of 0.75 and specificity of 0.99, with prompt tuning improving sensitivity to 0.91.
+\citet{khraisha2024gpt4} extended this to multilingual screening and extraction, finding strong specificity ($>$0.80) but variable sensitivity across languages and review types.
 
-For data extraction, \citet{gartlehner2024extraction} showed in \emph{Research Synthesis Methods} that Claude~2 achieved 96.3\% accuracy compared to human reviewers, with test-retest reliability of 95--97\%.
-\citet{jensen2025chatgpt} found that ChatGPT-4o achieves 92.4\% extraction accuracy and 94.1\% inter-session reproducibility in \emph{PLOS ONE}, explicitly noting residual stochasticity across sessions.
+For data extraction, \citet{gartlehner2024extraction} showed that Claude~2 achieved 96.3\% accuracy compared to human reviewers, with test-retest reliability of 95--97\%.
+\citet{jensen2025chatgpt} found that ChatGPT-4o achieves 92.4\% extraction accuracy and 94.1\% inter-session reproducibility, explicitly noting residual stochasticity across sessions.
 
 More comprehensive pipelines have also been proposed.
-The TrialMind system~\citep{wang2025trialmind}, published in \emph{npj Digital Medicine}, demonstrated that human-AI collaboration improved recall by 71.4\% and reduced screening time by 44.2\% across 100~systematic reviews.
-\citet{li2025jamia} described an LLM pipeline for health technology assessment in \emph{JAMIA}, while \citet{matsui2024screening} showed that a three-layer GPT-3.5/GPT-4 strategy achieved human-comparable sensitivity in \emph{JMIR}.
+The TrialMind system~\citep{wang2025trialmind} demonstrated that human-AI collaboration improved recall by 71.4\% and reduced screening time by 44.2\% across 100~systematic reviews.
+\citet{li2025jamia} described an LLM pipeline for health technology assessment, while \citet{matsui2024screening} showed that a three-layer GPT-3.5/GPT-4 strategy achieved human-comparable sensitivity.
 
 A common thread across these studies is that \textbf{reproducibility is either assumed or measured only superficially}.
 Test-retest reliability, when reported, is based on 2--3~repetitions and does not examine how variation propagates through multi-stage pipelines.
@@ -179,23 +180,23 @@ The analysis by \citet{angermeir2025icse} examined how non-determinism undermine
 
 These studies establish that non-determinism is real, measurable, and consequential.
 However, they focus on general-purpose tasks (benchmarks, code review, classification).
-Our study is the first to measure non-determinism in the specific context of evidence synthesis, where the structured and domain-specific nature of outputs creates unique challenges.
+To our knowledge, our study is the first to measure non-determinism in evidence synthesis, where structured, domain-specific outputs amplify the problem.
 
 \subsection{Reproducibility in AI Research}
 
 The broader AI reproducibility crisis has been documented extensively.
-\citet{hutson2018science} named the problem in \emph{Science}, identifying unpublished code and sensitivity to training conditions as primary barriers.
-\citet{haibe2020nature} called for structural reform in \emph{Nature}, advocating for mandatory code and model sharing.
-\citet{kapoor2023leakage} documented data leakage affecting 294~studies across 17~fields in \emph{Patterns}, while \citet{han2025biomedical} analyzed reproducibility failures in biomedical AI through the lens of model non-determinism.
+\citet{hutson2018science} identified unpublished code and sensitivity to training conditions as primary barriers.
+\citet{haibe2020nature} called for structural reform, advocating for mandatory code and model sharing.
+\citet{kapoor2023leakage} documented data leakage affecting 294~studies across 17~fields, while \citet{han2025biomedical} analyzed reproducibility failures in biomedical AI through the lens of model non-determinism.
 
 Recent frameworks have attempted to systematize reproducibility requirements.
-\citet{desai2025reproducibility} proposed a taxonomy of reproducibility types in \emph{AI Magazine}, arguing that LLMs require ``conceptual replicability'' given their proprietary training data.
-\citet{semmelrock2025barriers} provided a systematic overview of barriers in \emph{AI Magazine}, and \citet{yu2024hdsr} argued in the \emph{Harvard Data Science Review} that computational reproducibility alone is insufficient for trustworthy AI.
+\citet{desai2025reproducibility} proposed a taxonomy of reproducibility types, arguing that LLMs require ``conceptual replicability'' given their proprietary training data.
+\citet{semmelrock2025barriers} provided a systematic overview of barriers, and \citet{yu2024hdsr} argued that computational reproducibility alone is insufficient for trustworthy AI.
 
 \subsection{Provenance and Transparency}
 
 Provenance tracking---recording the lineage of data, computations, and decisions---has been identified as a key enabler of AI reproducibility.
-\citet{longpre2024audit} audited 1,800+ datasets in \emph{Nature Machine Intelligence}, finding license omission rates above 70\%.
+\citet{longpre2024audit} audited 1,800+ datasets, finding license omission rates above 70\%.
 \citet{liang2024modelcards} analyzed 32,111~model cards on Hugging Face, finding that documentation of limitations and environmental impact remains sparse.
 The Foundation Model Transparency Index~\citep{bommasani2024fmti} scored 14~major developers across 100~indicators, finding average transparency of only 58/100.
 
@@ -211,7 +212,7 @@ Three critical gaps emerge.
 \textbf{First}, studies that evaluate LLMs for evidence synthesis~\citep{oami2024screening, gartlehner2024extraction, jensen2025chatgpt, matsui2024screening} measure accuracy against human judgments but do not measure self-consistency across repeated runs---or do so with only 2--3~repetitions and per-field metrics that can mask whole-output variation.
 \textbf{Second}, studies that measure LLM non-determinism~\citep{atil2024nondeterminism, klishevich2025codereview, fu2026beyond} do so on general-purpose benchmarks (classification, code review), not on the structured, domain-specific tasks characteristic of evidence synthesis.
 \textbf{Third}, no prior study examines how non-determinism \emph{propagates} across a multi-stage pipeline---from screening through extraction---or compares local versus cloud deployment as a reproducibility strategy.
-Our study is the first to address all three gaps simultaneously.
+To our knowledge, our study is the first to address all three gaps simultaneously.
 
 \begin{table}[H]
 \centering
@@ -245,7 +246,7 @@ Fu (2026)         & General   & Token dist. & ---  & Distributional & ---  & \ch
 \subsection{Study Design}
 
 We designed a repeated-measures experiment to isolate LLM non-determinism as the sole source of variation.
-The same corpus, prompts, model configurations, and random seeds were used across all runs.
+We held the corpus, prompts, model configurations, and random seeds constant across all runs.
 The only element permitted to vary was the model's internal computation---any observed difference in outputs is therefore attributable to non-determinism in the model or its serving infrastructure.
 
 Figure~\ref{fig:pipeline} provides an overview of the experimental pipeline.
@@ -260,7 +261,7 @@ Figure~\ref{fig:pipeline} provides an overview of the experimental pipeline.
 \subsection{Corpus Construction}
 
 We constructed a 500-abstract corpus from PubMed covering the association between PM\textsubscript{2.5} and respiratory health outcomes (Table~\ref{tab:corpus}).
-The domain of fine particulate matter and respiratory health was chosen because it represents one of the most extensively studied environmental health topics, with \citet{yu2024lancet} estimating approximately 1~million premature deaths annually from short-term PM\textsubscript{2.5} exposure in \emph{The Lancet Planetary Health}.
+We chose this domain because it is one of the most extensively studied areas in environmental epidemiology, with \citet{yu2024lancet} estimating approximately 1~million premature deaths annually from short-term PM\textsubscript{2.5} exposure.
 This literature is characterized by standardized reporting of relative risks with confidence intervals, well-defined exposure metrics, and time-series study designs---making it an ideal testbed for evaluating LLM extraction reproducibility~\citep{iyer2025geoai, yu2025aiml}.
 
 \begin{table}[H]
@@ -284,7 +285,7 @@ Ambiguous          & 300   & Primary test set (borderline cases) \\
 Articles were sourced from PubMed using the E-utilities API with a broad query yielding 573~candidate records, supplemented by 475~exclusion candidates and a design-filtered subset of 222~records.
 The final corpus spans 148~journals and publication years 1994--2026, with a mean abstract length of 1,873~characters.
 
-A gold standard was established using dual-independent labeling with discordance resolution for the 200~clear-category abstracts.
+We established a gold standard through dual-independent labeling with discordance resolution for the 200~clear-category abstracts.
 The 300~ambiguous abstracts were classified using keyword matching and study design indicators; since our primary metric (EMR) measures self-consistency rather than accuracy, gold standard quality affects only the secondary accuracy analysis.
 
 \subsection{Models}
@@ -293,26 +294,28 @@ We selected six models spanning local and cloud-based deployment (Table~\ref{tab
 
 \begin{table}[H]
 \centering
-\caption{Model configurations. All local models were served via Ollama with deterministic settings. Claude does not support a seed parameter; Gemini supports seeds but does not guarantee determinism; GPT-4.1 supports seeds via the API.}
+\caption{Model configurations. All local models were served via Ollama with deterministic settings. Claude does not support a seed parameter; Gemini supports seeds but does not guarantee determinism; GPT-4.1 supports seeds via the API. Note that local models (7--9B parameters) are substantially smaller than cloud API models (estimated $>$100B), introducing a model-size confound discussed in Section~\ref{sec:limitations}.}
 \label{tab:models}
-\begin{tabular}{llccc}
+\begin{tabular}{llccccr}
 \toprule
-\textbf{Model} & \textbf{Provider} & \textbf{Type} & \textbf{Temperature} & \textbf{Seed} \\
+\textbf{Model} & \textbf{Provider} & \textbf{Type} & \textbf{Temp.} & \textbf{Seed} & \textbf{top\_p} & \textbf{Max tokens} \\
 \midrule
-LLaMA 3 8B         & Ollama (local)  & Local  & 0 & 42 \\
-Mistral 7B          & Ollama (local)  & Local  & 0 & 42 \\
-Gemma 2 9B          & Ollama (local)  & Local  & 0 & 42 \\
+LLaMA 3 8B         & Ollama (local)  & Local  & 0 & 42  & 1.0 & 2{,}048 \\
+Mistral 7B          & Ollama (local)  & Local  & 0 & 42  & 1.0 & 2{,}048 \\
+Gemma 2 9B          & Ollama (local)  & Local  & 0 & 42  & 1.0 & 2{,}048 \\
 \midrule
-Claude Sonnet 4.5   & Anthropic API   & Cloud  & 0 & --- \\
-Gemini 2.5 Pro      & Google AI API   & Cloud  & 0 & 42 \\
-GPT-4.1             & OpenAI API      & Cloud  & 0 & 42 \\
+Claude Sonnet 4.5   & Anthropic API   & Cloud  & 0 & --- & 1.0 & 2{,}048 \\
+Gemini 2.5 Pro      & Google AI API   & Cloud  & 0 & 42  & 1.0 & 8{,}192$^{\dagger}$ \\
+GPT-4.1             & OpenAI API      & Cloud  & 0 & 42  & 1.0 & 2{,}048 \\
 \bottomrule
+\multicolumn{7}{l}{\footnotesize $^{\dagger}$Gemini requires a higher token budget because its ``thinking'' tokens consume output capacity.}
 \end{tabular}
 \end{table}
 
 \noindent The three local models---LLaMA~3 8B~\citep{dubey2024llama3}, Mistral~7B~\citep{jiang2023mistral}, and Gemma~2 9B~\citep{team2024gemma}---were served locally via Ollama v0.15.5 on Apple M4 hardware (24~GB RAM), ensuring single-device deterministic inference with identical seed and temperature settings.
 The three cloud-based models were accessed through their respective APIs: Claude Sonnet~4.5~\citep{anthropic2024claude} via the Anthropic API (no seed parameter available), Gemini~2.5 Pro~\citep{geminiteam2024gemini} via the Google AI API (seed set to~42), and GPT-4.1~\citep{openai2023gpt4} via the OpenAI API (seed set to~42).
 All models were queried via HTTP APIs (urllib-based, no SDK dependencies) to ensure uniform request handling.
+API calls included up to 2~retries with exponential backoff on timeout or rate-limit errors; retried calls may route to different server nodes, introducing a minor additional source of variation for cloud models.
 
 \subsection{Pipeline Stages}
 
@@ -351,6 +354,8 @@ The field-level analysis in Section~\ref{sec:fieldlevel} complements this by iso
 
 We computed 95\% confidence intervals for EMR using the percentile bootstrap method with 10,000~resamples.
 For each bootstrap sample, we drew $N$ items with replacement and computed the EMR, then reported the 2.5th and 97.5th percentiles of the bootstrap distribution.
+We note that when $\emr{=}1.000$ (as for all local models), the percentile bootstrap trivially returns $\ci{1.000}{1.000}$.
+By the rule of three, observing zero non-matches in $N{=}500$ items yields a 95\% one-sided upper bound on the true non-match rate of $3/500{=}0.006$; thus, we can rule out population-level non-determinism rates above 0.6\% for local models, but not lower rates.
 
 \subsubsection{Secondary Metrics}
 
@@ -366,9 +371,9 @@ For each bootstrap sample, we drew $N$ items with replacement and computed the E
 
 Following~\citet{rover2026jair}, we implemented a lightweight provenance protocol that creates a cryptographic fingerprint of every input-output pair, enabling automated detection of any change across runs:
 \begin{itemize}
-  \item \textbf{Call-level hashing}: SHA-256 hash of (prompt template $\|$ input text $\|$ model ID $\|$ temperature $\|$ seed) for each API call
+  \item \textbf{Call-level hashing}: SHA-256 hash of the concatenation (prompt template $\|$ input text $\|$ model ID $\|$ temperature $\|$ seed), using the pipe character as delimiter and the string ``null'' for absent parameters (e.g., Claude's seed)
   \item \textbf{Output hashing}: SHA-256 hash of the raw response text
-  \item \textbf{Run cards}: Per-run metadata including timestamps, token counts, success/failure rates, and aggregate output hashes
+  \item \textbf{Run cards}: Structured JSON metadata per run, including timestamps, token counts, success/failure rates, and aggregate output hashes
 \end{itemize}
 
 \noindent This protocol enables post-hoc verification: if two runs produce different aggregate hashes, the per-call hashes pinpoint exactly which items changed.
@@ -388,8 +393,8 @@ API keys are excluded from the repository; all other materials---including the c
 \subsection{Overview}
 
 All 120~experiment runs completed successfully: 60~screening runs (10~per model $\times$ 500~abstracts each) and 60~extraction runs (10~per model $\times$ 100~articles each), totaling 36,000~LLM calls.
-LLaMA consistently processed 480/500 screening abstracts and 96/100 extraction articles across all 10~runs---the same items failed every time due to response length constraints, confirming that the failures were deterministic.
-EMR for LLaMA was therefore computed over the 480 (screening) and 96 (extraction) successfully processed items.
+LLaMA consistently processed 480/500 screening abstracts and 96/100 extraction articles across all 10~runs---the same 20 screening and 4 extraction items failed every time due to response length constraints, producing identical error outputs.
+Because these failures were deterministic (the same items failed identically in every run), they contribute to perfect agreement; EMR was computed over all 500 (screening) and 100 (extraction) items.\footnote{Computing EMR over only the 480 successfully parsed items yields the same result ($\emr{=}1.000$), since the 20 consistently-errored items also agree across runs.}
 Mistral, Gemma, Claude, and GPT-4.1 each achieved 500/500 screening and 100/100 extraction in all runs.
 Gemini achieved 483--500/500 screening and 98--100/100 extraction.
 
@@ -427,7 +432,7 @@ Table~\ref{tab:screening} presents the screening reproducibility results.
 
 \begin{table}[H]
 \centering
-\caption{Screening reproducibility across 10 runs. LLaMA EMR is computed over the 480 consistently successful abstracts.}
+\caption{Screening reproducibility across 10 runs. LLaMA's 20 consistently-errored abstracts are included in the EMR denominator (see text).}
 \label{tab:screening}
 \begin{tabular}{lcccccc}
 \toprule
@@ -456,7 +461,7 @@ The extraction results reveal a dramatically larger reproducibility gap (Table~\
 
 \begin{table}[H]
 \centering
-\caption{Extraction reproducibility across 10 runs. LLaMA EMR is computed over the 96 consistently successful articles.}
+\caption{Extraction reproducibility across 10 runs.}
 \label{tab:extraction}
 \begin{tabular}{lccc}
 \toprule
@@ -507,7 +512,8 @@ Study location  & 1.000 & 1.000 & 1.000 & 0.780 & 0.896 & 1.000 \\
 \noindent A clear pattern emerges: \textbf{categorical fields} (study design, study period) are highly reproducible even for API models ($\emr{\geq}0.990$), while \textbf{free-text fields} (study location) and \textbf{numerical extractions} (effect estimates) show the greatest variation.
 GPT-4.1 is notable for achieving perfect location reproducibility (1.000) while showing variation in categorical fields like study design and period (0.990 each)---a different instability profile from Claude and Gemini, where location is the most variable field.
 
-The estimate count stability metric reveals that 26.5\% of Gemini's articles, 12.0\% of Claude's, and 7.8\% of GPT-4.1's articles received a different number of effect estimates across runs---a structural difference that would directly affect any downstream meta-analysis.
+The estimate count stability metric reveals that 26.5\% of Gemini's articles with extractable estimates, 12.0\% of Claude's, and 7.8\% of GPT-4.1's received a different number of effect estimates across runs.\footnote{Estimate count stability is computed over articles that produced at least one estimate in all 10~runs, yielding denominators of 83 (Gemini), 92 (Claude), and 90 (GPT-4.1) rather than the full 100. The meta-analytic ``Varying'' column in Table~\ref{tab:meta} uses the full 100-article denominator, producing slightly lower percentages (20\%, 21\%, 5\%).}
+This structural variation directly affects any downstream meta-analysis.
 
 \subsection{Semantic Equivalence Analysis}
 \label{sec:semantic}
@@ -627,8 +633,8 @@ Figure~\ref{fig:emr} visualizes the EMR comparison across models and stages, and
 
 \subsection{Principal Findings}
 
-Our study provides the first systematic quantification of LLM non-determinism across a complete evidence synthesis pipeline.
-Three key findings emerge.
+To our knowledge, our study provides the first systematic quantification of LLM non-determinism across a complete evidence synthesis pipeline.
+Four key findings emerge.
 
 \textbf{Finding 1: Local deployment achieves deterministic inference; cloud APIs do not.}
 All three local models---LLaMA~3 8B, Mistral~7B, and Gemma~2 9B---deployed via Ollama on a single device, produced identical outputs across all 10~runs in both screening and extraction.
@@ -637,7 +643,9 @@ This gap has a precise technical explanation rooted in floating-point arithmetic
 Cloud APIs serve requests across multi-GPU clusters where matrix multiplications are partitioned and reduced in non-deterministic order.
 Because floating-point addition is not associative---$(a + b) + c \neq a + (b + c)$ in general due to rounding---different partitioning strategies produce subtly different intermediate sums, which propagate through the autoregressive generation process and can eventually cause different token selections~\citep{karelin2024indeterminism}.
 Local deployment on a single device with a single execution thread avoids this source of variation entirely: the same computation graph executes in the same order every time, producing bit-identical results.
-We note, however, that this determinism guarantee is configuration-specific: the same model on different hardware (e.g., different GPU architectures with different floating-point unit implementations), different driver versions, different Ollama versions, or with parallelized inference (e.g., tensor parallelism across multiple GPUs) would likely produce different baseline outputs---deterministic within each configuration, but not identical across configurations.
+This determinism guarantee is configuration-specific, however.
+The same model on different hardware, driver versions, or Ollama versions would likely produce different baseline outputs.
+Determinism holds within each configuration, not across configurations.
 
 \textbf{Finding 2: Extraction amplifies non-determinism dramatically, and the variation is semantic.}
 Claude's EMR dropped from 0.974 (screening) to 0.050 (extraction); GPT-4.1's from 0.970 to 0.150; Gemini's from 0.936 to 0.200.
@@ -646,6 +654,8 @@ Our four-tier semantic equivalence analysis (Section~\ref{sec:semantic}) confirm
 BERTScore embedding similarity across all 4,500~pairwise comparisons per model averaged $F_1{\geq}0.997$---near-perfect semantic agreement on metadata text---yet hash-based EMR remained at 0.050--0.200.
 This paradox reveals that the variation concentrates in the numeric extraction layer: the models describe studies in nearly the same words but extract different numbers of effect estimates and parse numeric values with different precision.
 Even the residual metadata variation is genuinely semantic (fuzzy matching recovers only 0--5~percentage points), not cosmetic.
+The practical implication depends on context: the high BERTScore ($F_1{\geq}0.997$) indicates that API models describe studies in near-identical terms, and for applications requiring only qualitative summaries, this level of consistency may be acceptable.
+However, for quantitative evidence synthesis---where exact numeric values feed directly into meta-analytic pooling---the hash-based EMR of 0.05--0.20 represents a genuine threat to reproducibility.
 
 \textbf{Finding 3: API models exhibit distinct instability profiles.}
 GPT-4.1 achieved the highest metadata stability among API models (exact EMR$\,{=}\,$0.880, BERTScore $F_1{=}1.000$) and the smallest structural variation ($\Delta k{=}4$ estimates across runs), yet its hash-based extraction EMR (0.150) confirms that numeric variation persists.
@@ -661,6 +671,7 @@ This independence means that \textbf{accuracy evaluations from a single run cann
 \textbf{For systematic reviewers:}
 If using cloud-based LLMs for screening or extraction, results from a single run should be treated as one sample from a distribution of possible outputs, not as a definitive answer.
 Running multiple repetitions and reporting variation metrics should become standard practice, analogous to how human inter-rater reliability is routinely measured.
+For context, Cochrane guidelines expect $\kappa{\geq}0.80$ for human screening agreement~\citep{higgins2019cochrane}; the API models' screening EMR of 0.93--0.97 suggests comparable---though not identical---levels of self-consistency, while extraction EMR (0.05--0.20) falls far below any acceptable human reliability threshold.
 
 \textbf{For journal editors and reviewers:}
 Papers reporting LLM-assisted evidence synthesis should be expected to disclose: (a)~the exact model version, (b)~all inference parameters, (c)~whether results were verified across multiple runs, and (d)~provenance information enabling independent replication.
@@ -675,9 +686,9 @@ Where cloud APIs must be used (e.g., for larger models), majority voting across 
 Our results both corroborate and significantly extend prior findings (see Table~\ref{tab:comparison} for a systematic comparison).
 
 Our screening flip rates (2.6\% for Claude, 3.0\% for GPT-4.1, 6.4\% for Gemini) are consistent with the accuracy variations reported by \citet{atil2024nondeterminism} on general benchmarks, confirming that the phenomenon documented in controlled settings translates directly to real-world evidence synthesis tasks.
-However, we reveal for the first time that \textbf{structured extraction amplifies non-determinism by an order of magnitude}---a finding invisible to benchmark-level analyses.
-Claude's EMR dropped from 0.974 (screening) to 0.050 (extraction)---a 19.5$\times$ amplification; GPT-4.1's dropped from 0.970 to 0.150 (6.5$\times$); Gemini's from 0.936 to 0.200 (4.7$\times$).
-This amplification pattern is consistent across all three API providers, with no precedent in the literature.
+However, we reveal, to our knowledge for the first time, that \textbf{structured extraction amplifies non-determinism by an order of magnitude}---a finding invisible to benchmark-level analyses.
+Defining amplification as the ratio of extraction flip rate to screening flip rate, Claude's non-match rate increased from 2.6\% to 95.0\% (36.5$\times$), GPT-4.1's from 3.0\% to 85.0\% (28.3$\times$), and Gemini's from 6.4\% to 80.0\% (12.5$\times$).
+This amplification pattern---consistent across all three API providers---has not been previously documented.
 
 The comparison with \citet{jensen2025chatgpt} is particularly instructive.
 Their reported 94.1\% inter-session reproducibility for ChatGPT-4o extraction appears to align with our Claude screening EMR (97.4\%), creating the impression that API-based extraction is reasonably stable.
@@ -694,10 +705,10 @@ For Claude, the number of usable effect estimates varied from 186 to 209 across 
 For Gemini, the swing was 11.0\% (154--171), and even the most stable API model, GPT-4.1, showed a 2.3\% swing (176--180).
 Across API models, 5--21\% of articles produced a different number of effect estimates depending on the run, meaning that \textbf{the composition of a meta-analysis is not fixed when an LLM extracts the data}.
 While the overall pooled conclusion was stable in our corpus (because the aggregate effect was strong and $k$ was large), this level of compositional instability raises serious concerns for systematic reviews in domains with smaller literatures or marginal effects, where even GPT-4.1's modest variation could shift a confidence interval across the null.
+We note that our propagation experiment used a fixed-effect inverse-variance model for simplicity; a random-effects model (as would be standard for heterogeneous epidemiological studies) would produce wider confidence intervals, potentially making the pooled conclusion \emph{more} sensitive to compositional changes.
 
 \subsection{Limitations and Future Directions}
-
-We frame each limitation as a foundation for future research.
+\label{sec:limitations}
 
 \textbf{Model coverage.}
 We tested six models (three local, three cloud API) spanning four providers and two deployment paradigms.
@@ -729,6 +740,16 @@ While we pinned Claude to a dated version (\texttt{claude-sonnet-4-5-20250929}) 
 All experiments were completed within a 3-week window (February 11--March 2, 2026) to minimize the risk of silent model updates.
 Longitudinal studies tracking EMR over weeks or months would distinguish inference-level non-determinism from model update effects---a distinction critical for establishing stable benchmarks.
 
+\textbf{Model size confound.}
+Our local models (7--9B parameters) are substantially smaller than the cloud API models (estimated $>$100B).
+The local-versus-cloud comparison therefore confounds deployment type with model size: smaller models may have narrower token probability distributions, making the argmax output more deterministic independently of the serving infrastructure.
+Disentangling these factors would require serving the same model both locally and via a cloud API (e.g., LLaMA~3 8B via Together.ai or Replicate), an experiment we plan for future work.
+
+\textbf{Corpus composition.}
+Our corpus was deliberately designed with 60\% ambiguous abstracts to stress-test screening consistency.
+In a typical systematic review corpus, the proportion of borderline cases is usually lower (perhaps 20--30\%), which would reduce the observed screening flip rates.
+Our screening non-determinism estimates should therefore be interpreted as upper bounds for typical workloads.
+
 \subsection{Recommendations}
 
 Based on our findings, we propose the following recommendations for LLM-assisted evidence synthesis:
@@ -749,10 +770,12 @@ Based on our findings, we propose the following recommendations for LLM-assisted
 \section{Conclusion}
 
 We have shown that LLM non-determinism is not a theoretical concern but a measurable, quantifiable phenomenon that directly threatens the reproducibility of evidence synthesis.
-Through 36,000~LLM calls across 120~experiment runs involving six models (three local, three cloud-based APIs), consuming 207~hours of inference time, 55.8~million tokens, and \$69.66 in API costs---the most comprehensive reproducibility evaluation of LLMs for evidence synthesis to date---we demonstrate four findings with immediate practical implications.
+Our experiment comprised 36,000~LLM calls across 120~runs involving six models (three local, three cloud-based APIs), consuming 207~hours of inference time, 55.8~million tokens, and \$69.66 in API costs.
+This constitutes, to our knowledge, the most comprehensive reproducibility evaluation of LLMs for evidence synthesis to date.
+Four findings carry immediate practical implications.
 
-First, local deployment achieves perfect reproducibility: all three open-weight models (LLaMA~3 8B, Mistral~7B, Gemma~2 9B) produced bit-identical outputs across all 10~runs in both screening and extraction, proving that deterministic LLM inference is technically achievable.
-Second, all three cloud-based APIs (Claude Sonnet~4.5, GPT-4.1, Gemini~2.5 Pro) produce variable outputs even under ``deterministic'' settings, with extraction tasks amplifying this instability by 5--20$\times$: while prior work reports 94--97\% reproducibility using per-field metrics and 2--3~runs, our whole-output analysis across 10~runs reveals that only 5--20\% of extraction outputs are truly identical.
+First, local deployment achieves perfect reproducibility: all three open-weight models (LLaMA~3 8B, Mistral~7B, Gemma~2 9B) produced bit-identical outputs across all 10~runs in both screening and extraction, demonstrating that deterministic LLM inference is technically achievable on fixed hardware configurations.
+Second, all three cloud-based APIs (Claude Sonnet~4.5, GPT-4.1, Gemini~2.5 Pro) produce variable outputs even under ``deterministic'' settings, with extraction tasks amplifying this instability by 13--37$\times$ (measured as the flip-rate ratio between extraction and screening): while prior work reports 94--97\% reproducibility using per-field metrics and 2--3~runs, our whole-output analysis across 10~runs reveals that only 5--20\% of extraction outputs are truly identical.
 Third, semantic equivalence analysis---including BERTScore embedding similarity ($F_1{\geq}0.997$)---reveals a paradox: models produce near-identical metadata text across runs, yet extract different numeric values and different numbers of effect estimates, driving hash-based EMR to 5--20\%.
 Fourth, meta-analytic propagation analysis reveals that 5--21\% of articles produce a different number of effect estimates across runs depending on the API provider, causing the composition of a meta-analysis to depend on which LLM run generated its inputs.
 
@@ -781,7 +804,7 @@ API costs for Claude, Gemini, and GPT-4.1 experiments were funded by the author.
 % ============================================================
 \section*{Conflict of Interest}
 
-The author declares no conflicts of interest.
+The authors declare no conflicts of interest.
 
 % ============================================================
 %  DATA AVAILABILITY
