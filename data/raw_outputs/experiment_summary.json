@@ -1,9 +1,9 @@
 {
   "experiment": "pm25-respiratory-reproducibility",
-  "completed": "2026-03-02T04:05:54.680969+00:00",
-  "elapsed_seconds": 98088.2,
+  "completed": "2026-03-02T17:41:24.231764+00:00",
+  "elapsed_seconds": 6800.0,
   "models": [
-    "gemma2-9b"
+    "gpt-4.1"
   ],
   "runs": [
     1,
@@ -25,212 +25,167 @@
     {
       "skipped": true,
       "run_id": 1,
-      "model_id": "gemma2-9b",
+      "model_id": "gpt-4.1",
       "stage": "screening"
     },
     {
       "skipped": true,
       "run_id": 2,
-      "model_id": "gemma2-9b",
+      "model_id": "gpt-4.1",
       "stage": "screening"
     },
     {
+      "skipped": true,
       "run_id": 3,
-      "model_id": "gemma2-9b",
-      "stage": "screening",
-      "total": 500,
-      "successful": 493,
-      "failed": 7,
-      "valid": 481,
-      "start_time": "2026-03-01T00:51:06.578005+00:00",
-      "end_time": "2026-03-01T02:55:09.357825+00:00"
+      "model_id": "gpt-4.1",
+      "stage": "screening"
     },
     {
+      "skipped": true,
       "run_id": 4,
-      "model_id": "gemma2-9b",
-      "stage": "screening",
-      "total": 500,
-      "successful": 493,
-      "failed": 7,
-      "valid": 481,
-      "start_time": "2026-03-01T02:55:10.579251+00:00",
-      "end_time": "2026-03-01T04:58:19.429654+00:00"
+      "model_id": "gpt-4.1",
+      "stage": "screening"
     },
     {
+      "skipped": true,
       "run_id": 5,
-      "model_id": "gemma2-9b",
-      "stage": "screening",
-      "total": 500,
-      "successful": 493,
-      "failed": 7,
-      "valid": 481,
-      "start_time": "2026-03-01T04:58:20.620033+00:00",
-      "end_time": "2026-03-01T07:01:40.865412+00:00"
+      "model_id": "gpt-4.1",
+      "stage": "screening"
     },
     {
+      "skipped": true,
       "run_id": 6,
-      "model_id": "gemma2-9b",
-      "stage": "screening",
-      "total": 500,
-      "successful": 493,
-      "failed": 7,
-      "valid": 481,
-      "start_time": "2026-03-01T07:01:42.096865+00:00",
-      "end_time": "2026-03-01T09:05:03.641904+00:00"
+      "model_id": "gpt-4.1",
+      "stage": "screening"
     },
     {
+      "skipped": true,
       "run_id": 7,
-      "model_id": "gemma2-9b",
-      "stage": "screening",
-      "total": 500,
-      "successful": 493,
-      "failed": 7,
-      "valid": 481,
-      "start_time": "2026-03-01T09:05:04.851606+00:00",
-      "end_time": "2026-03-01T11:09:16.966864+00:00"
+      "model_id": "gpt-4.1",
+      "stage": "screening"
     },
     {
+      "skipped": true,
       "run_id": 8,
-      "model_id": "gemma2-9b",
-      "stage": "screening",
-      "total": 500,
-      "successful": 493,
-      "failed": 7,
-      "valid": 481,
-      "start_time": "2026-03-01T11:09:18.241255+00:00",
-      "end_time": "2026-03-01T13:09:11.689321+00:00"
+      "model_id": "gpt-4.1",
+      "stage": "screening"
     },
     {
+      "skipped": true,
       "run_id": 9,
-      "model_id": "gemma2-9b",
-      "stage": "screening",
-      "total": 500,
-      "successful": 493,
-      "failed": 7,
-      "valid": 481,
-      "start_time": "2026-03-01T13:09:12.922775+00:00",
-      "end_time": "2026-03-01T15:04:56.472547+00:00"
+      "model_id": "gpt-4.1",
+      "stage": "screening"
     },
     {
+      "skipped": true,
       "run_id": 10,
-      "model_id": "gemma2-9b",
-      "stage": "screening",
-      "total": 500,
-      "successful": 493,
-      "failed": 7,
-      "valid": 481,
-      "start_time": "2026-03-01T15:04:57.706230+00:00",
-      "end_time": "2026-03-01T17:00:34.000379+00:00"
+      "model_id": "gpt-4.1",
+      "stage": "screening"
     },
     {
+      "skipped": true,
       "run_id": 1,
-      "model_id": "gemma2-9b",
-      "stage": "extraction",
-      "total": 100,
-      "successful": 100,
-      "failed": 0,
-      "valid": 40,
-      "start_time": "2026-03-01T17:00:35.779058+00:00",
-      "end_time": "2026-03-01T18:07:04.215165+00:00"
+      "model_id": "gpt-4.1",
+      "stage": "extraction"
     },
     {
       "run_id": 2,
-      "model_id": "gemma2-9b",
+      "model_id": "gpt-4.1",
       "stage": "extraction",
       "total": 100,
       "successful": 100,
       "failed": 0,
-      "valid": 40,
-      "start_time": "2026-03-01T18:07:05.387366+00:00",
-      "end_time": "2026-03-01T19:13:37.567175+00:00"
+      "valid": 67,
+      "start_time": "2026-03-02T15:48:05.772335+00:00",
+      "end_time": "2026-03-02T16:00:04.714573+00:00"
     },
     {
       "run_id": 3,
-      "model_id": "gemma2-9b",
+      "model_id": "gpt-4.1",
       "stage": "extraction",
       "total": 100,
       "successful": 100,
       "failed": 0,
-      "valid": 40,
-      "start_time": "2026-03-01T19:13:38.576331+00:00",
-      "end_time": "2026-03-01T20:20:04.446762+00:00"
+      "valid": 64,
+      "start_time": "2026-03-02T16:00:05.933814+00:00",
+      "end_time": "2026-03-02T16:12:44.713401+00:00"
     },
     {
       "run_id": 4,
-      "model_id": "gemma2-9b",
+      "model_id": "gpt-4.1",
       "stage": "extraction",
       "total": 100,
       "successful": 100,
       "failed": 0,
-      "valid": 40,
-      "start_time": "2026-03-01T20:20:05.524480+00:00",
-      "end_time": "2026-03-01T21:26:32.962538+00:00"
+      "valid": 62,
+      "start_time": "2026-03-02T16:12:45.842943+00:00",
+      "end_time": "2026-03-02T16:25:21.049257+00:00"
     },
     {
       "run_id": 5,
-      "model_id": "gemma2-9b",
+      "model_id": "gpt-4.1",
       "stage": "extraction",
       "total": 100,
       "successful": 100,
       "failed": 0,
-      "valid": 40,
-      "start_time": "2026-03-01T21:26:34.058834+00:00",
-      "end_time": "2026-03-01T22:32:59.772597+00:00"
+      "valid": 65,
+      "start_time": "2026-03-02T16:25:22.075529+00:00",
+      "end_time": "2026-03-02T16:38:45.582944+00:00"
     },
     {
       "run_id": 6,
-      "model_id": "gemma2-9b",
+      "model_id": "gpt-4.1",
       "stage": "extraction",
       "total": 100,
       "successful": 100,
       "failed": 0,
-      "valid": 40,
-      "start_time": "2026-03-01T22:33:00.797444+00:00",
-      "end_time": "2026-03-01T23:39:28.274634+00:00"
+      "valid": 68,
+      "start_time": "2026-03-02T16:38:46.684669+00:00",
+      "end_time": "2026-03-02T16:51:13.259764+00:00"
     },
     {
       "run_id": 7,
-      "model_id": "gemma2-9b",
+      "model_id": "gpt-4.1",
       "stage": "extraction",
       "total": 100,
       "successful": 100,
       "failed": 0,
-      "valid": 40,
-      "start_time": "2026-03-01T23:39:29.289136+00:00",
-      "end_time": "2026-03-02T00:46:00.318721+00:00"
+      "valid": 67,
+      "start_time": "2026-03-02T16:51:14.260017+00:00",
+      "end_time": "2026-03-02T17:04:13.444007+00:00"
     },
     {
       "run_id": 8,
-      "model_id": "gemma2-9b",
+      "model_id": "gpt-4.1",
       "stage": "extraction",
       "total": 100,
       "successful": 100,
       "failed": 0,
-      "valid": 40,
-      "start_time": "2026-03-02T00:46:01.352435+00:00",
-      "end_time": "2026-03-02T01:52:37.391491+00:00"
+      "valid": 65,
+      "start_time": "2026-03-02T17:04:14.554748+00:00",
+      "end_time": "2026-03-02T17:17:17.304009+00:00"
     },
     {
       "run_id": 9,
-      "model_id": "gemma2-9b",
+      "model_id": "gpt-4.1",
       "stage": "extraction",
       "total": 100,
       "successful": 100,
       "failed": 0,
-      "valid": 40,
-      "start_time": "2026-03-02T01:52:38.464229+00:00",
-      "end_time": "2026-03-02T02:59:12.573161+00:00"
+      "valid": 65,
+      "start_time": "2026-03-02T17:17:18.535058+00:00",
+      "end_time": "2026-03-02T17:29:06.859331+00:00"
     },
     {
       "run_id": 10,
-      "model_id": "gemma2-9b",
+      "model_id": "gpt-4.1",
       "stage": "extraction",
       "total": 100,
       "successful": 100,
       "failed": 0,
-      "valid": 40,
-      "start_time": "2026-03-02T02:59:13.746561+00:00",
-      "end_time": "2026-03-02T04:05:53.613881+00:00"
+      "valid": 64,
+      "start_time": "2026-03-02T17:29:07.856689+00:00",
+      "end_time": "2026-03-02T17:41:23.101241+00:00"
     }
   ]
 }

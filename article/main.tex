@@ -1,87 +1,50 @@
 % ============================================================
 %  Reproducibility of LLM-Assisted Evidence Synthesis
-%  Target: Research Synthesis Methods
+%  Target: Research Synthesis Methods (Cambridge University Press)
+%  Template: CUP-JNL-DTM
 % ============================================================
-\documentclass[12pt, a4paper]{article}
+\documentclass[journal=rsm]{CUP-JNL-DTM}
 
-\usepackage[utf8]{inputenc}
+\addbibresource{references.bib}
+
+%%%% Packages
 \usepackage[T1]{fontenc}
-\usepackage{mathpazo}          % Palatino font
-\usepackage[margin=2.5cm]{geometry}
+\usepackage{newtxtext}
+\usepackage[cmintegrals]{newtxmath}
+\usepackage{newtxtt}
 \usepackage{graphicx}
 \usepackage{booktabs}
-% \usepackage{multirow}  % not used in this manuscript
-\usepackage{xcolor}
-\usepackage{hyperref}
-\usepackage{natbib}
-\usepackage{setspace}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{float}
-\usepackage{caption}
 
-\hypersetup{colorlinks=true, linkcolor=blue!60!black, citecolor=blue!60!black, urlcolor=blue!60!black}
-\onehalfspacing
+% ── Layout fix ──────────────────────────────────────────
+\raggedbottom   % prevent vertical stretching that creates gaps
 
 % ── Custom commands ──────────────────────────────────────
 \newcommand{\emr}{\textrm{EMR}}
 \newcommand{\ci}[2]{[#1,\;#2]}
 
-\title{%
-  \textbf{When the Same Question Gets Different Answers:}\\[6pt]
-  \large Quantifying Non-Determinism in LLM-Assisted\\
-  Evidence Synthesis for Environmental Health Research%
-}
-
-\author{
-  Lucas Rover\textsuperscript{1,*} \and
-  Yara de Souza Tadano\textsuperscript{1}\\[6pt]
-  \small\textsuperscript{1}Programa de P\'os-Gradua\c{c}\~ao em Sustentabilidade Ambiental Urbana,\\
-  \small Universidade Tecnol\'ogica Federal do Paran\'a (UTFPR), Curitiba, PR, Brazil\\[4pt]
-  \small\textsuperscript{*}Corresponding author: \texttt{lucasrover@alunos.utfpr.edu.br}
-}
-
-\date{}
+% ── Journal metadata ────────────────────────────────────
+\jname{Research Synthesis Methods}
+\articletype{RESEARCH ARTICLE}
+\jyear{2026}
 
 \begin{document}
-\maketitle
 
-% ============================================================
-%  ABSTRACT
-% ============================================================
-\begin{abstract}
-\noindent\textbf{Background.}
-Large language models (LLMs) are increasingly adopted to assist systematic reviews and evidence synthesis, performing tasks such as abstract screening and data extraction.
-A critical but underexplored assumption is that these models produce consistent outputs when given identical inputs and configurations---that asking the same question twice yields the same answer.
+\begin{Frontmatter}
 
-\noindent\textbf{Objective.}
-We quantified the reproducibility of six LLMs---three local (LLaMA~3 8B, Mistral~7B, Gemma~2 9B) and three cloud-based APIs (Claude Sonnet~4.5, Gemini~2.5 Pro, GPT-4.1)---across a complete evidence synthesis pipeline for fine particulate matter (PM\textsubscript{2.5}) and respiratory health research.
+\title[Quantifying Non-Determinism in LLM-Assisted Evidence Synthesis]{When the Same Question Gets Different Answers: Quantifying Non-Determinism in LLM-Assisted Evidence Synthesis for Environmental Health Research}
 
-\noindent\textbf{Methods.}
-We constructed a 500-abstract PubMed corpus (100~include, 100~exclude, 300~borderline) and ran each model 10~times under identical configurations (temperature$\,{=}\,$0, fixed seeds where supported).
-Each run comprised two stages: screening all 500~abstracts and extracting structured data from the 100~included articles.
-Reproducibility was measured using the Exact Match Rate (EMR)---the proportion of items receiving identical outputs across all 10~runs---with 95\% bootstrap confidence intervals (10,000~resamples).
+\author[1]{Lucas Rover}
+\author[1]{Yara de Souza Tadano}
 
-\noindent\textbf{Results.}
-All three locally deployed models achieved perfect reproducibility ($\emr{=}1.000$) in both screening and extraction: LLaMA~3 8B, Mistral~7B, and Gemma~2 9B produced bit-identical outputs across all 10~runs on identical hardware.
-Cloud-based APIs exhibited substantial non-determinism: Claude Sonnet~4.5 achieved screening $\emr{=}0.974$~$\ci{0.960}{0.986}$ but extraction $\emr{=}0.050$~$\ci{0.010}{0.090}$; GPT-4.1 achieved $\emr{=}0.970$~$\ci{0.954}{0.984}$ and $\emr{=}0.150$~$\ci{0.080}{0.220}$; Gemini~2.5 Pro achieved $\emr{=}0.936$~$\ci{0.914}{0.956}$ and $\emr{=}0.200$~$\ci{0.120}{0.280}$.
-Despite requesting deterministic behavior, 85--95\% of API extraction outputs varied across runs.
-Semantic equivalence analysis confirmed that metadata text is near-identical across runs (BERTScore $F_1{\geq}0.997$).
-The low hash-based EMR is driven by the numeric extraction layer---effect sizes, confidence intervals, and variable-length estimate arrays.
-Meta-analytic propagation analysis revealed that 5--21\% of articles yielded a different number of effect estimates across runs, causing the composition of a downstream meta-analysis to depend on which LLM run generated its inputs.
-The total experiment required 207~hours of inference time, 55.8~million tokens, and \$69.66 in API costs.
+\authormark{Rover and Tadano}
 
-\noindent\textbf{Conclusions.}
-LLM non-determinism poses a concrete threat to the reproducibility of evidence synthesis, from individual study extraction through to pooled meta-analytic conclusions.
-Researchers using cloud-based LLMs should expect meaningful output variation even under ``deterministic'' settings and adopt provenance-tracking protocols to document and mitigate this instability.
+\address*[1]{\orgdiv{Programa de P\'os-Gradua\c{c}\~ao em Sustentabilidade Ambiental Urbana}, \orgname{Universidade Tecnol\'ogica Federal do Paran\'a (UTFPR)}, \orgaddress{\city{Curitiba}, \state{PR}, \country{Brazil}}. \email{lucasrover@alunos.utfpr.edu.br}}
 
-\vspace{6pt}
-\noindent\textbf{Keywords:} reproducibility, large language models, evidence synthesis, systematic review, non-determinism, PM\textsubscript{2.5}, screening, data extraction
-\end{abstract}
+\keywords{reproducibility, large language models, evidence synthesis, systematic review, non-determinism, data extraction}
 
-\clearpage
-\tableofcontents
-\clearpage
+\abstract{Large language models (LLMs) are increasingly used in evidence synthesis, yet a critical assumption---that identical inputs produce identical outputs---remains largely untested. We quantified the reproducibility of six LLMs (three local: LLaMA~3 8B, Mistral~7B, Gemma~2 9B; three cloud APIs: Claude Sonnet~4.5, Gemini~2.5 Pro, GPT-4.1) across a two-stage pipeline---screening and data extraction---applied to a 500-abstract PubMed corpus on fine particulate matter (PM$_{2.5}$) and respiratory health. Each model was run 10~times under identical configurations (temperature${=}$0, fixed seeds where supported). Reproducibility was measured via the Exact Match Rate (EMR) with 95\% bootstrap confidence intervals. All three local models achieved $\emr{=}1.000$ in both stages, producing bit-identical outputs across all runs on identical hardware. Cloud APIs exhibited substantial non-determinism: extraction EMR ranged from 0.050 (Claude) to 0.200 (Gemini), meaning 80--95\% of outputs varied despite deterministic settings. Semantic analysis (BERTScore $F_1{\geq}0.997$) confirmed that metadata text was near-identical; variation concentrated in numeric estimates and variable-length effect arrays. Meta-analytic propagation analysis showed that 5--21\% of articles yielded different numbers of effect estimates across runs, altering the composition of downstream meta-analyses. These findings demonstrate that LLM non-determinism poses a concrete, quantifiable threat to evidence synthesis reproducibility and that single-run results should not be treated as definitive.}
+
+\end{Frontmatter}
 
 % ============================================================
 %  1. INTRODUCTION
@@ -91,12 +54,12 @@ Researchers using cloud-based LLMs should expect meaningful output variation eve
 \subsection{The Promise of AI in Evidence Synthesis}
 
 Evidence synthesis---the systematic process of identifying, appraising, and combining research findings---forms the backbone of evidence-based medicine and public health policy.
-Systematic reviews and meta-analyses sit atop the hierarchy of evidence, informing clinical guidelines, regulatory decisions, and resource allocation worldwide~\citep{higgins2019cochrane, page2021prisma}.
-Yet the process is notoriously labor-intensive: a typical systematic review requires 6--18~months and hundreds of person-hours, with title and abstract screening alone consuming an estimated 25\% of total effort~\citep{borah2017analysis}.
+Systematic reviews and meta-analyses sit atop the hierarchy of evidence, informing clinical guidelines, regulatory decisions, and resource allocation worldwide.\autocite{higgins2019cochrane,page2021prisma}
+Yet the process is notoriously labor-intensive: a typical systematic review requires 6--18~months and hundreds of person-hours, with title and abstract screening alone consuming an estimated 25\% of total effort.\autocite{borah2017analysis}
 
 The emergence of large language models (LLMs) has created unprecedented opportunities to accelerate this process.
-Recent studies demonstrate that models such as GPT-4~\citep{openai2023gpt4}, Claude~\citep{anthropic2024claude}, and Gemini~\citep{geminiteam2024gemini} can screen abstracts with sensitivity approaching that of human reviewers~\citep{oami2024screening, khraisha2024gpt4}, extract structured data from published studies with over 90\% accuracy~\citep{gartlehner2024extraction, jensen2025chatgpt}, and even assist in evidence quality assessment~\citep{wang2025trialmind, li2025streamlining}.
-A growing body of work has established LLM-assisted evidence synthesis as a legitimate and rapidly expanding methodological frontier~\citep{li2025jamia, scherbakov2025jamia, matsui2024screening}.
+Recent studies demonstrate that models such as GPT-4,\autocite{openai2023gpt4} Claude,\autocite{anthropic2024claude} and Gemini\autocite{geminiteam2024gemini} can screen abstracts with sensitivity approaching that of human reviewers,\autocite{oami2024screening,khraisha2024gpt4} extract structured data from published studies with over 90\% accuracy,\autocite{gartlehner2024extraction,jensen2025chatgpt} and even assist in evidence quality assessment.\autocite{wang2025trialmind,li2025streamlining}
+A growing body of work has established LLM-assisted evidence synthesis as a legitimate and rapidly expanding methodological frontier.\autocite{li2025jamia,scherbakov2025jamia,matsui2024screening}
 
 \subsection{The Hidden Problem: Non-Determinism}
 
@@ -106,10 +69,10 @@ In the context of LLM-assisted evidence synthesis, this means that running the s
 This assumption does not hold in practice.
 
 Recent work has demonstrated that commercial LLM APIs exhibit non-deterministic behavior even when configured for maximum reproducibility.
-\citet{atil2024nondeterminism} showed accuracy variations of up to 15\% across repeated identical runs, with best-to-worst performance gaps reaching 70\%.
-\citet{klishevich2025codereview} confirmed that temperature$\,{=}\,$0 does not guarantee deterministic outputs across any of the major models tested (GPT-4o, Claude~3.5, LLaMA~3.2).
-At a deeper level, \citet{fu2026beyond} demonstrated that even when surface-level text appears identical, the underlying token probability distributions exhibit substantial instability, suggesting that apparent determinism may mask hidden variation.
-A philosophical analysis by \citet{karelin2024indeterminism} traced this non-determinism to three fundamental sources: numerical precision in floating-point operations, architectural choices in distributed inference, and sampling procedures inherent to the generation process.
+Atil et~al.\autocite{atil2024nondeterminism} showed accuracy variations of up to 15\% across repeated identical runs, with best-to-worst performance gaps reaching 70\%.
+Klishevich et~al.\autocite{klishevich2025codereview} confirmed that temperature${=}$0 does not guarantee deterministic outputs across any of the major models tested (GPT-4o, Claude~3.5, LLaMA~3.2).
+At a deeper level, Fu et~al.\autocite{fu2026beyond} demonstrated that even when surface-level text appears identical, the underlying token probability distributions exhibit substantial instability, suggesting that apparent determinism may mask hidden variation.
+A philosophical analysis by Karelin et~al.\autocite{karelin2024indeterminism} traced this non-determinism to three fundamental sources: numerical precision in floating-point operations, architectural choices in distributed inference, and sampling procedures inherent to the generation process.
 
 \subsection{Why This Matters for Evidence Synthesis}
 
@@ -117,34 +80,34 @@ The consequences of LLM non-determinism are particularly severe in evidence synt
 
 \textbf{First, decisions propagate.}
 A screening decision that flips from ``include'' to ``exclude'' in a repeated run does not merely change one data point---it removes an entire study from downstream analysis.
-In meta-analysis, where pooled effect estimates are sensitive to study composition, a single inclusion change can shift a confidence interval across the null, transforming a statistically significant finding into a non-significant one~\citep{rover2026jair}.
+In meta-analysis, where pooled effect estimates are sensitive to study composition, a single inclusion change can shift a confidence interval across the null, transforming a statistically significant finding into a non-significant one.\autocite{rover2026jair}
 
 \textbf{Second, extraction compounds variation.}
 Data extraction involves free-text parsing of complex scientific results---relative risks, confidence intervals, exposure definitions, population characteristics.
-Even small variations in how an LLM parses ``RR$\,{=}\,$1.05 (95\% CI: 1.01--1.09)'' can propagate through meta-analytic pooling.
-\citet{gartlehner2024extraction} reported 95--97\% test-retest reliability in LLM extraction, but this still implies 3--5\% of extracted values may change between runs---a rate that, across hundreds of data points, can materially alter pooled estimates.
+Even small variations in how an LLM parses ``RR${=}$1.05 (95\% CI: 1.01--1.09)'' can propagate through meta-analytic pooling.
+Gartlehner et~al.\autocite{gartlehner2024extraction} reported 95--97\% test-retest reliability in LLM extraction, but this still implies 3--5\% of extracted values may change between runs---a rate that, across hundreds of data points, can materially alter pooled estimates.
 
 \textbf{Third, reproducibility is the foundation of scientific credibility.}
-The broader reproducibility crisis in AI research~\citep{hutson2018science, haibe2020nature, kapoor2023leakage} has already eroded trust in computational findings.
-When LLM-assisted reviews cannot be independently reproduced because the API returns different outputs, the scientific value of those reviews is undermined~\citep{han2025biomedical, desai2025reproducibility, semmelrock2025barriers}.
+The broader reproducibility crisis in AI research\autocite{hutson2018science,haibe2020nature,kapoor2023leakage} has already eroded trust in computational findings.
+When LLM-assisted reviews cannot be independently reproduced because the API returns different outputs, the scientific value of those reviews is undermined.\autocite{han2025biomedical,desai2025reproducibility,semmelrock2025barriers}
 
 \subsection{The Gap We Address}
 
 Despite the rapid adoption of LLMs in evidence synthesis, \textbf{no study has systematically measured how API-level non-determinism propagates through a complete synthesis pipeline}---from abstract screening through data extraction---in a real health domain.
 
-Consider: \citet{jensen2025chatgpt} report 94.1\% inter-session reproducibility for ChatGPT-4o extraction---an encouraging number.
+Consider: Jensen et~al.\autocite{jensen2025chatgpt} report 94.1\% inter-session reproducibility for ChatGPT-4o extraction---an encouraging number.
 But this was measured with only 2~repetitions and evaluated per-field, not per-output.
 When we apply a stricter whole-output metric across 10~repetitions, we find extraction EMR as low as 5.0\%---nearly twenty times worse than what per-field metrics suggest.
-Similarly, \citet{gartlehner2024extraction} report 95--97\% test-retest reliability, but with only 2--3~repetitions and no examination of how variation compounds across pipeline stages.
-Studies measuring non-determinism~\citep{atil2024nondeterminism, klishevich2025codereview} do so on general NLP benchmarks, where the structured, multi-field outputs characteristic of evidence synthesis are absent.
-And the most influential screening evaluations~\citep{oami2024screening, khraisha2024gpt4, matsui2024screening} report results from a single run, implicitly assuming that a repeat would yield the same result.
+Similarly, Gartlehner et~al.\autocite{gartlehner2024extraction} report 95--97\% test-retest reliability, but with only 2--3~repetitions and no examination of how variation compounds across pipeline stages.
+Studies measuring non-determinism\autocite{atil2024nondeterminism,klishevich2025codereview} do so on general NLP benchmarks, where the structured, multi-field outputs characteristic of evidence synthesis are absent.
+And the most influential screening evaluations\autocite{oami2024screening,khraisha2024gpt4,matsui2024screening} report results from a single run, implicitly assuming that a repeat would yield the same result.
 
 We bridge this gap by:
 \begin{enumerate}
   \item Quantifying reproducibility across 10~repeated runs of 6~LLMs (3~local, 3~API) through a two-stage evidence synthesis pipeline;
   \item Measuring variation at multiple granularities: whole-output, per-field, and per-abstract;
   \item Comparing local versus cloud-based deployment as a determinism strategy;
-  \item Demonstrating that common ``deterministic'' API settings (temperature$\,{=}\,$0, fixed seeds) are insufficient to ensure reproducibility.
+  \item Demonstrating that common ``deterministic'' API settings (temperature${=}$0, fixed seeds) are insufficient to ensure reproducibility.
 \end{enumerate}
 
 
@@ -156,15 +119,15 @@ We bridge this gap by:
 \subsection{LLMs in Systematic Reviews}
 
 The application of LLMs to systematic review workflows has accelerated dramatically since 2023.
-\citet{oami2024screening} evaluated GPT-4~Turbo for citation screening, reporting sensitivity of 0.75 and specificity of 0.99, with prompt tuning improving sensitivity to 0.91.
-\citet{khraisha2024gpt4} extended this to multilingual screening and extraction, finding strong specificity ($>$0.80) but variable sensitivity across languages and review types.
+Oami et~al.\autocite{oami2024screening} evaluated GPT-4~Turbo for citation screening, reporting sensitivity of 0.75 and specificity of 0.99, with prompt tuning improving sensitivity to 0.91.
+Khraisha et~al.\autocite{khraisha2024gpt4} extended this to multilingual screening and extraction, finding strong specificity ($>$0.80) but variable sensitivity across languages and review types.
 
-For data extraction, \citet{gartlehner2024extraction} showed that Claude~2 achieved 96.3\% accuracy compared to human reviewers, with test-retest reliability of 95--97\%.
-\citet{jensen2025chatgpt} found that ChatGPT-4o achieves 92.4\% extraction accuracy and 94.1\% inter-session reproducibility, explicitly noting residual stochasticity across sessions.
+For data extraction, Gartlehner et~al.\autocite{gartlehner2024extraction} showed that Claude~2 achieved 96.3\% accuracy compared to human reviewers, with test-retest reliability of 95--97\%.
+Jensen et~al.\autocite{jensen2025chatgpt} found that ChatGPT-4o achieves 92.4\% extraction accuracy and 94.1\% inter-session reproducibility, explicitly noting residual stochasticity across sessions.
 
 More comprehensive pipelines have also been proposed.
-The TrialMind system~\citep{wang2025trialmind} demonstrated that human-AI collaboration improved recall by 71.4\% and reduced screening time by 44.2\% across 100~systematic reviews.
-\citet{li2025jamia} described an LLM pipeline for health technology assessment, while \citet{matsui2024screening} showed that a three-layer GPT-3.5/GPT-4 strategy achieved human-comparable sensitivity.
+The TrialMind system\autocite{wang2025trialmind} demonstrated that human-AI collaboration improved recall by 71.4\% and reduced screening time by 44.2\% across 100~systematic reviews.
+Li et~al.\autocite{li2025jamia} described an LLM pipeline for health technology assessment, while Matsui et~al.\autocite{matsui2024screening} showed that a three-layer GPT-3.5/GPT-4 strategy achieved human-comparable sensitivity.
 
 A common thread across these studies is that \textbf{reproducibility is either assumed or measured only superficially}.
 Test-retest reliability, when reported, is based on 2--3~repetitions and does not examine how variation propagates through multi-stage pipelines.
@@ -172,11 +135,11 @@ Test-retest reliability, when reported, is based on 2--3~repetitions and does no
 \subsection{The Non-Determinism Problem}
 
 The phenomenon of LLM non-determinism has received increasing attention.
-\citet{atil2024nondeterminism} provided the most comprehensive analysis to date, documenting accuracy swings of up to 15\% across repeated runs and introducing the TARr@N metric to quantify run-to-run stability.
-\citet{klishevich2025codereview} confirmed that temperature$\,{=}\,$0 fails to ensure determinism across GPT-4o, Claude~3.5, and LLaMA~3.2 on code review tasks.
+Atil et~al.\autocite{atil2024nondeterminism} provided the most comprehensive analysis to date, documenting accuracy swings of up to 15\% across repeated runs and introducing the TARr@N metric to quantify run-to-run stability.
+Klishevich et~al.\autocite{klishevich2025codereview} confirmed that temperature${=}$0 fails to ensure determinism across GPT-4o, Claude~3.5, and LLaMA~3.2 on code review tasks.
 
-At the token level, \citet{fu2026beyond} showed that apparent text-level agreement masks substantial distributional instability in token probabilities---a finding that suggests surface-level reproducibility metrics may underestimate true variation.
-The analysis by \citet{angermeir2025icse} examined how non-determinism undermines reproducibility in software engineering research, proposing documentation standards to mitigate this.
+At the token level, Fu et~al.\autocite{fu2026beyond} showed that apparent text-level agreement masks substantial distributional instability in token probabilities---a finding that suggests surface-level reproducibility metrics may underestimate true variation.
+Angermeir et~al.\autocite{angermeir2025icse} examined how non-determinism undermines reproducibility in software engineering research, proposing documentation standards to mitigate this.
 
 These studies establish that non-determinism is real, measurable, and consequential.
 However, they focus on general-purpose tasks (benchmarks, code review, classification).
@@ -185,54 +148,54 @@ To our knowledge, our study is the first to measure non-determinism in evidence 
 \subsection{Reproducibility in AI Research}
 
 The broader AI reproducibility crisis has been documented extensively.
-\citet{hutson2018science} identified unpublished code and sensitivity to training conditions as primary barriers.
-\citet{haibe2020nature} called for structural reform, advocating for mandatory code and model sharing.
-\citet{kapoor2023leakage} documented data leakage affecting 294~studies across 17~fields, while \citet{han2025biomedical} analyzed reproducibility failures in biomedical AI through the lens of model non-determinism.
+Hutson\autocite{hutson2018science} identified unpublished code and sensitivity to training conditions as primary barriers.
+Haibe-Kains et~al.\autocite{haibe2020nature} called for structural reform, advocating for mandatory code and model sharing.
+Kapoor and Narayanan\autocite{kapoor2023leakage} documented data leakage affecting 294~studies across 17~fields, while Han\autocite{han2025biomedical} analyzed reproducibility failures in biomedical AI through the lens of model non-determinism.
 
 Recent frameworks have attempted to systematize reproducibility requirements.
-\citet{desai2025reproducibility} proposed a taxonomy of reproducibility types, arguing that LLMs require ``conceptual replicability'' given their proprietary training data.
-\citet{semmelrock2025barriers} provided a systematic overview of barriers, and \citet{yu2024hdsr} argued that computational reproducibility alone is insufficient for trustworthy AI.
+Desai et~al.\autocite{desai2025reproducibility} proposed a taxonomy of reproducibility types, arguing that LLMs require ``conceptual replicability'' given their proprietary training data.
+Semmelrock et~al.\autocite{semmelrock2025barriers} provided a systematic overview of barriers, and Yu\autocite{yu2024hdsr} argued that computational reproducibility alone is insufficient for trustworthy AI.
 
 \subsection{Provenance and Transparency}
 
 Provenance tracking---recording the lineage of data, computations, and decisions---has been identified as a key enabler of AI reproducibility.
-\citet{longpre2024audit} audited 1,800+ datasets, finding license omission rates above 70\%.
-\citet{liang2024modelcards} analyzed 32,111~model cards on Hugging Face, finding that documentation of limitations and environmental impact remains sparse.
-The Foundation Model Transparency Index~\citep{bommasani2024fmti} scored 14~major developers across 100~indicators, finding average transparency of only 58/100.
+Longpre et~al.\autocite{longpre2024audit} audited 1,800+ datasets, finding license omission rates above 70\%.
+Liang et~al.\autocite{liang2024modelcards} analyzed 32,111~model cards on Hugging Face, finding that documentation of limitations and environmental impact remains sparse.
+The Foundation Model Transparency Index\autocite{bommasani2024fmti} scored 14~major developers across 100~indicators, finding average transparency of only 58/100.
 
-Technical solutions for provenance include the Workflow Run RO-Crate~\citep{leo2024rocrate} and the W3C PROV ontology~\citep{kale2023provenance}.
-\citet{longpre2024broken} argued at ICML~2024 that current practices for data authenticity and provenance are ``fundamentally broken,'' calling for comprehensive reform.
+Technical solutions for provenance include the Workflow Run RO-Crate\autocite{leo2024rocrate} and the W3C PROV ontology.\autocite{kale2023provenance}
+Longpre et~al.\autocite{longpre2024broken} argued at ICML~2024 that current practices for data authenticity and provenance are ``fundamentally broken,'' calling for comprehensive reform.
 
-Our provenance approach builds on the lightweight protocol proposed in~\citet{rover2026jair}, using SHA-256 hashing of inputs, outputs, and configurations to create an auditable trail without requiring infrastructure beyond standard file storage.
+Our provenance approach builds on the lightweight protocol proposed by Rover,\autocite{rover2026jair} using SHA-256 hashing of inputs, outputs, and configurations to create an auditable trail without requiring infrastructure beyond standard file storage.
 
 \subsection{Positioning: What Existing Studies Do Not Address}
 
 Table~\ref{tab:comparison} synthesizes the landscape of prior work and highlights the methodological gaps that motivate our study.
 Three critical gaps emerge.
-\textbf{First}, studies that evaluate LLMs for evidence synthesis~\citep{oami2024screening, gartlehner2024extraction, jensen2025chatgpt, matsui2024screening} measure accuracy against human judgments but do not measure self-consistency across repeated runs---or do so with only 2--3~repetitions and per-field metrics that can mask whole-output variation.
-\textbf{Second}, studies that measure LLM non-determinism~\citep{atil2024nondeterminism, klishevich2025codereview, fu2026beyond} do so on general-purpose benchmarks (classification, code review), not on the structured, domain-specific tasks characteristic of evidence synthesis.
+\textbf{First}, studies that evaluate LLMs for evidence synthesis\autocite{oami2024screening,gartlehner2024extraction,jensen2025chatgpt,matsui2024screening} measure accuracy against human judgments but do not measure self-consistency across repeated runs---or do so with only 2--3~repetitions and per-field metrics that can mask whole-output variation.
+\textbf{Second}, studies that measure LLM non-determinism\autocite{atil2024nondeterminism,klishevich2025codereview,fu2026beyond} do so on general-purpose benchmarks (classification, code review), not on the structured, domain-specific tasks characteristic of evidence synthesis.
 \textbf{Third}, no prior study examines how non-determinism \emph{propagates} across a multi-stage pipeline---from screening through extraction---or compares local versus cloud deployment as a reproducibility strategy.
 To our knowledge, our study is the first to address all three gaps simultaneously.
 
-\begin{table}[H]
+\begin{table}[htbp]
 \centering
 \caption{Comparison of our study with prior work. ``Runs'' indicates the number of repeated executions under identical conditions. ``Full pipeline'' indicates whether both screening and extraction were evaluated in the same study. Shading highlights our study's distinguishing features.}
 \label{tab:comparison}
-\small
-\begin{tabular}{p{3.0cm}p{2.0cm}p{2.0cm}cp{1.8cm}ccc}
+\footnotesize
+\begin{tabular}{p{2.5cm}lllllcc}
 \toprule
-\textbf{Study} & \textbf{Domain} & \textbf{Task} & \textbf{Runs} & \textbf{Metric} & \textbf{Local} & \textbf{Cloud} & \textbf{Pipeline} \\
+\textbf{Study} & \textbf{Domain} & \textbf{Task} & \textbf{Runs} & \textbf{Metric} & \textbf{Local} & \textbf{Cloud} & \textbf{Pipe.} \\
 \midrule
-Oami (2024)       & Health    & Screening   & 1   & Accuracy      & ---  & \checkmark & --- \\
-Khraisha (2024)   & Health    & Scr.\ + Extr.\ & 1   & Accuracy      & ---  & \checkmark & --- \\
-Gartlehner (2024) & Health    & Extraction  & 2--3 & Field acc.    & ---  & \checkmark & --- \\
-Jensen (2025)     & Health    & Extraction  & 2   & Field acc.    & ---  & \checkmark & --- \\
-Matsui (2024)     & Health    & Screening   & 1   & Accuracy      & ---  & \checkmark & --- \\
-Atil (2024)       & General   & NLP bench.  & 10+ & Accuracy var. & ---  & \checkmark & --- \\
-Klishevich (2025) & Software  & Code review & 5+  & Determinism   & \checkmark & \checkmark & --- \\
-Fu (2026)         & General   & Token dist. & ---  & Distributional & ---  & \checkmark & --- \\
+Oami (2024)       & Health  & Screening    & 1    & Accuracy    & ---  & \checkmark & --- \\
+Khraisha (2024)   & Health  & Scr.+Extr.   & 1    & Accuracy    & ---  & \checkmark & --- \\
+Gartlehner (2024) & Health  & Extraction   & 2--3 & Field acc.  & ---  & \checkmark & --- \\
+Jensen (2025)     & Health  & Extraction   & 2    & Field acc.  & ---  & \checkmark & --- \\
+Matsui (2024)     & Health  & Screening    & 1    & Accuracy    & ---  & \checkmark & --- \\
+Atil (2024)       & General & NLP bench.   & 10+  & Acc.\ var.  & ---  & \checkmark & --- \\
+Klishevich (2025) & Softw.  & Code review  & 5+   & Determinism & \checkmark & \checkmark & --- \\
+Fu (2026)         & General & Token dist.  & ---  & Distrib.    & ---  & \checkmark & --- \\
 \midrule
-\textbf{This study} & \textbf{Health} & \textbf{Scr.\ + Extr.} & \textbf{10} & \textbf{EMR + CI} & \textbf{\checkmark} & \textbf{\checkmark} & \textbf{\checkmark} \\
+\textbf{This study} & \textbf{Health} & \textbf{Scr.+Extr.} & \textbf{10} & \textbf{EMR+CI} & \textbf{\checkmark} & \textbf{\checkmark} & \textbf{\checkmark} \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -251,7 +214,7 @@ The only element permitted to vary was the model's internal computation---any ob
 
 Figure~\ref{fig:pipeline} provides an overview of the experimental pipeline.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../analysis/figures/pipeline_diagram.pdf}
 \caption{Experimental pipeline. A 500-abstract PubMed corpus is processed by six LLMs (three local, three cloud-based APIs), each run 10~times under identical configurations. Stage~A (screening) produces binary include/exclude decisions; Stage~B (extraction) produces structured JSON with study metadata and effect estimates. All outputs are hashed (SHA-256) for provenance tracking. Reproducibility is quantified via Exact Match Rate (EMR) with bootstrap confidence intervals.}
@@ -260,13 +223,13 @@ Figure~\ref{fig:pipeline} provides an overview of the experimental pipeline.
 
 \subsection{Corpus Construction}
 
-We constructed a 500-abstract corpus from PubMed covering the association between PM\textsubscript{2.5} and respiratory health outcomes (Table~\ref{tab:corpus}).
-We chose this domain because it is one of the most extensively studied areas in environmental epidemiology, with \citet{yu2024lancet} estimating approximately 1~million premature deaths annually from short-term PM\textsubscript{2.5} exposure.
-This literature is characterized by standardized reporting of relative risks with confidence intervals, well-defined exposure metrics, and time-series study designs---making it an ideal testbed for evaluating LLM extraction reproducibility~\citep{iyer2025geoai, yu2025aiml}.
+We constructed a 500-abstract corpus from PubMed covering the association between PM$_{2.5}$ and respiratory health outcomes (Table~\ref{tab:corpus}).
+We chose this domain because it is one of the most extensively studied areas in environmental epidemiology, with Yu et~al.\autocite{yu2024lancet} estimating approximately 1~million premature deaths annually from short-term PM$_{2.5}$ exposure.
+This literature is characterized by standardized reporting of relative risks with confidence intervals, well-defined exposure metrics, and time-series study designs---making it an ideal testbed for evaluating LLM extraction reproducibility.\autocite{iyer2025geoai,yu2025aiml}
 
-\begin{table}[H]
+\begin{table}[htbp]
 \centering
-\caption{Corpus composition for the PM\textsubscript{2.5} and respiratory health abstract screening task.}
+\caption{Corpus composition for the PM$_{2.5}$ and respiratory health abstract screening task.}
 \label{tab:corpus}
 \begin{tabular}{lrl}
 \toprule
@@ -281,7 +244,7 @@ Ambiguous          & 300   & Primary test set (borderline cases) \\
 \end{tabular}
 \end{table}
 
-\noindent Inclusion criteria required: (1)~original epidemiological study, (2)~PM\textsubscript{2.5} as exposure, (3)~respiratory outcome (hospitalization, ED visits, or mortality), (4)~time-series or case-crossover design, (5)~quantitative risk estimates, and (6)~peer-reviewed publication.
+\noindent Inclusion criteria required: (1)~original epidemiological study, (2)~PM$_{2.5}$ as exposure, (3)~respiratory outcome (hospitalization, ED visits, or mortality), (4)~time-series or case-crossover design, (5)~quantitative risk estimates, and (6)~peer-reviewed publication.
 Articles were sourced from PubMed using the E-utilities API with a broad query yielding 573~candidate records, supplemented by 475~exclusion candidates and a design-filtered subset of 222~records.
 The final corpus spans 148~journals and publication years 1994--2026, with a mean abstract length of 1,873~characters.
 
@@ -292,7 +255,7 @@ The 300~ambiguous abstracts were classified using keyword matching and study des
 
 We selected six models spanning local and cloud-based deployment (Table~\ref{tab:models}), covering three major families of open-weight models and three proprietary API providers.
 
-\begin{table}[H]
+\begin{table}[htbp]
 \centering
 \caption{Model configurations. All local models were served via Ollama with deterministic settings. Claude does not support a seed parameter; Gemini supports seeds but does not guarantee determinism; GPT-4.1 supports seeds via the API. Note that local models (7--9B parameters) are substantially smaller than cloud API models (estimated $>$100B), introducing a model-size confound discussed in Section~\ref{sec:limitations}.}
 \label{tab:models}
@@ -312,8 +275,8 @@ GPT-4.1             & OpenAI API      & Cloud  & 0 & 42  & 1.0 & 2{,}048 \\
 \end{tabular}
 \end{table}
 
-\noindent The three local models---LLaMA~3 8B~\citep{dubey2024llama3}, Mistral~7B~\citep{jiang2023mistral}, and Gemma~2 9B~\citep{team2024gemma}---were served locally via Ollama v0.15.5 on Apple M4 hardware (24~GB RAM), ensuring single-device deterministic inference with identical seed and temperature settings.
-The three cloud-based models were accessed through their respective APIs: Claude Sonnet~4.5~\citep{anthropic2024claude} via the Anthropic API (no seed parameter available), Gemini~2.5 Pro~\citep{geminiteam2024gemini} via the Google AI API (seed set to~42), and GPT-4.1~\citep{openai2023gpt4} via the OpenAI API (seed set to~42).
+\noindent The three local models---LLaMA~3 8B,\autocite{dubey2024llama3} Mistral~7B,\autocite{jiang2023mistral} and Gemma~2 9B\autocite{team2024gemma}---were served locally via Ollama v0.15.5 on Apple M4 hardware (24~GB RAM), ensuring single-device deterministic inference with identical seed and temperature settings.
+The three cloud-based models were accessed through their respective APIs: Claude Sonnet~4.5\autocite{anthropic2024claude} via the Anthropic API (no seed parameter available), Gemini~2.5 Pro\autocite{geminiteam2024gemini} via the Google AI API (seed set to~42), and GPT-4.1\autocite{openai2023gpt4} via the OpenAI API (seed set to~42).
 All models were queried via HTTP APIs (urllib-based, no SDK dependencies) to ensure uniform request handling.
 API calls included up to 2~retries with exponential backoff on timeout or rate-limit errors; retried calls may route to different server nodes, introducing a minor additional source of variation for cloud models.
 
@@ -369,7 +332,7 @@ By the rule of three, observing zero non-matches in $N{=}500$ items yields a 95\
 
 \subsection{Provenance Protocol}
 
-Following~\citet{rover2026jair}, we implemented a lightweight provenance protocol that creates a cryptographic fingerprint of every input-output pair, enabling automated detection of any change across runs:
+Following Rover,\autocite{rover2026jair} we implemented a lightweight provenance protocol that creates a cryptographic fingerprint of every input-output pair, enabling automated detection of any change across runs:
 \begin{itemize}
   \item \textbf{Call-level hashing}: SHA-256 hash of the concatenation (prompt template $\|$ input text $\|$ model ID $\|$ temperature $\|$ seed), using the pipe character as delimiter and the string ``null'' for absent parameters (e.g., Claude's seed)
   \item \textbf{Output hashing}: SHA-256 hash of the raw response text
@@ -403,7 +366,7 @@ The total experiment required 207~hours of inference time and processed 55.8~mil
 Local models were substantially slower per call (mean latency 28--92~seconds) than cloud APIs (3--12~seconds), reflecting the difference between single-device Apple~M4 inference and distributed GPU clusters.
 However, the total cost of local inference was negligible (\$0.26 electricity) compared to API costs (\$69.40), with Claude Sonnet~4.5 accounting for 66\% of the total budget.
 
-\begin{table}[H]
+\begin{table}[htbp]
 \centering
 \caption{Computational resources per model (both stages combined, 10~runs each). Latency is the mean per-call inference duration. Cost includes API pricing and estimated electricity for local models (Apple~M4, 15W, \$0.10/kWh).}
 \label{tab:resources}
@@ -430,7 +393,7 @@ GPT-4.1           & API   & 5.0   & 8.6  & 3.0   & 23.29 \\
 
 Table~\ref{tab:screening} presents the screening reproducibility results.
 
-\begin{table}[H]
+\begin{table}[htbp]
 \centering
 \caption{Screening reproducibility across 10 runs. LLaMA's 20 consistently-errored abstracts are included in the EMR denominator (see text).}
 \label{tab:screening}
@@ -452,14 +415,14 @@ GPT-4.1           & 0.970 & $\ci{0.954}{0.984}$ & 3.0\% & 0.941 & 0.882 & 1.000 
 \noindent All three local models---LLaMA, Mistral, and Gemma---produced identical screening decisions across all 10~runs for every successfully processed abstract ($\emr{=}1.000$), confirming that single-device deterministic inference eliminates run-to-run variation entirely.
 Among the cloud APIs, GPT-4.1 showed a 3.0\% flip rate (15~abstracts), Claude 2.6\% (13~abstracts), and Gemini 6.4\% (32~abstracts).
 
-Notably, accuracy and reproducibility behaved as independent properties: Gemini achieved the highest accuracy (0.964) but the lowest reproducibility ($\emr{=}0.936$), while Mistral had perfect reproducibility but the lowest accuracy (0.628) due to an include-biased strategy (sensitivity$\,{=}\,$1.000, specificity$\,{=}\,$0.240).
+Notably, accuracy and reproducibility behaved as independent properties: Gemini achieved the highest accuracy (0.964) but the lowest reproducibility ($\emr{=}0.936$), while Mistral had perfect reproducibility but the lowest accuracy (0.628) due to an include-biased strategy (sensitivity${=}$1.000, specificity${=}$0.240).
 This illustrates that a model can be accurate on average yet inconsistent across individual runs, and conversely, that perfect reproducibility does not imply high accuracy.
 
 \subsection{Extraction Reproducibility}
 
 The extraction results reveal a dramatically larger reproducibility gap (Table~\ref{tab:extraction}).
 
-\begin{table}[H]
+\begin{table}[htbp]
 \centering
 \caption{Extraction reproducibility across 10 runs.}
 \label{tab:extraction}
@@ -490,7 +453,7 @@ To assess practical significance, we examine field-level variation below.
 
 Not all extraction fields are equally affected (Table~\ref{tab:fields}).
 
-\begin{table}[H]
+\begin{table}[htbp]
 \centering
 \caption{Field-level EMR for extraction outputs.}
 \label{tab:fields}
@@ -528,7 +491,7 @@ To disentangle variation in the five metadata fields from variation in numeric e
   \item \textbf{BERTScore}: Embedding-based semantic similarity using \texttt{roberta-large}, computing the F1 score across all $\binom{10}{2}{=}45$ unique run pairs per article (4,500~pairs per model).
 \end{enumerate}
 
-\begin{table}[H]
+\begin{table}[htbp]
 \centering
 \caption{Semantic equivalence under progressively relaxed criteria ($n\!=\!100$ articles, 10~runs). Columns 2--4 report whole-output EMR over the five metadata fields plus estimate count stability. BERTScore F1 (\texttt{roberta-large}) reports the mean $\pm$ SD across all $\binom{10}{2}{=}45$ unique run pairs per article (4,500~pairs per model). Hash-based EMR (from Table~\ref{tab:extraction}) additionally requires identical numeric estimates. The gap between high BERTScore (${\geq}0.997$) and low hash-based EMR (${\leq}0.200$) demonstrates that even near-identical metadata co-occurs with divergent numeric extractions.}
 \label{tab:semantic}
@@ -560,10 +523,10 @@ GPT-4.1's metadata EMR remaining unchanged under normalization and fuzzy matchin
 \textbf{Third}, BERTScore embedding similarity computed across all $\binom{10}{2}{=}45$ unique run pairs per article (4,500~pairs per model) was near-perfect for all API models: GPT-4.1 averaged $F_1{=}1.000 \pm 0.004$, Claude $F_1{=}0.997 \pm 0.009$, and Gemini $F_1{=}0.997 \pm 0.022$, with 100\%, 99.7\%, and 98.5\% of pairs exceeding $F_1{\geq}0.95$, respectively.
 This creates an apparent paradox: the models produce \emph{semantically near-identical} metadata text, yet 85--95\% of their complete extraction outputs are non-identical.
 The resolution lies in the numeric estimates---the effect sizes, confidence intervals, and variable-length estimate arrays that drive hash-based EMR to 0.050--0.200.
-Even when a model describes a study in nearly the same words, it may extract a different number of effect estimates or parse ``RR$\,{=}\,$1.05 (95\% CI: 1.01--1.09)'' with subtly different numeric precision.
+Even when a model describes a study in nearly the same words, it may extract a different number of effect estimates or parse ``RR${=}$1.05 (95\% CI: 1.01--1.09)'' with subtly different numeric precision.
 
 \textbf{Fourth}, the three API models exhibit distinct instability profiles.
-GPT-4.1 shows the highest metadata stability (exact EMR$\,{=}\,$0.880) and the highest BERTScore ($F_1{=}1.000$), yet its hash-based EMR (0.150) confirms that numeric extraction drives the residual variation.
+GPT-4.1 shows the highest metadata stability (exact EMR${=}$0.880) and the highest BERTScore ($F_1{=}1.000$), yet its hash-based EMR (0.150) confirms that numeric extraction drives the residual variation.
 Gemini shows the lowest minimum BERTScore ($F_1{=}0.754$) and highest standard deviation (0.022), indicating that some articles receive genuinely divergent interpretations across runs---not merely numeric rounding differences.
 Claude occupies a middle ground in metadata stability but has the lowest hash-based EMR (0.050), suggesting the greatest instability in its numeric extraction layer.
 
@@ -572,7 +535,7 @@ Claude occupies a middle ground in metadata stability but has the lowest hash-ba
 
 To illustrate how extraction non-determinism propagates into downstream analysis, we performed a fixed-effect inverse-variance meta-analysis on the extracted risk ratios (RR/OR/HR) from each run independently (Table~\ref{tab:meta}).
 
-\begin{table}[H]
+\begin{table}[htbp]
 \centering
 \caption{Meta-analytic inputs across 10 runs. ``$k$'' is the number of usable effect estimates per run; ``$k_{\text{sig}}$'' is the number of those estimates whose confidence interval excludes the null. $\Delta k$ and $\Delta k_{\text{sig}}$ report the range across runs. The ``Varying'' column reports the proportion of articles for which the number of extracted estimates changed across runs.}
 \label{tab:meta}
@@ -609,14 +572,14 @@ In domains with smaller literatures or marginal effects, even GPT-4.1's relative
 
 Figure~\ref{fig:emr} visualizes the EMR comparison across models and stages, and Figure~\ref{fig:heatmap} displays the field-level variation as a heatmap.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.85\textwidth]{../analysis/figures/emr_comparison.pdf}
 \caption{Exact Match Rate (EMR) by model and pipeline stage. Error bars represent 95\% bootstrap confidence intervals. The dashed line indicates perfect reproducibility ($\emr{=}1.0$).}
 \label{fig:emr}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.85\textwidth]{../analysis/figures/field_emr_heatmap.pdf}
 \caption{Field-level EMR heatmap for extraction outputs. Darker cells indicate lower reproducibility. Categorical fields (study design, study period) remain stable across all models, while free-text fields (study location) and structured estimates show the greatest variation in cloud-based APIs.}
@@ -638,10 +601,10 @@ Four key findings emerge.
 
 \textbf{Finding 1: Local deployment achieves deterministic inference; cloud APIs do not.}
 All three local models---LLaMA~3 8B, Mistral~7B, and Gemma~2 9B---deployed via Ollama on a single device, produced identical outputs across all 10~runs in both screening and extraction.
-All three cloud-based APIs (Claude, Gemini, GPT-4.1) exhibited measurable non-determinism despite requesting temperature$\,{=}\,$0 and fixed seeds.
+All three cloud-based APIs (Claude, Gemini, GPT-4.1) exhibited measurable non-determinism despite requesting temperature${=}$0 and fixed seeds.
 This gap has a precise technical explanation rooted in floating-point arithmetic.
 Cloud APIs serve requests across multi-GPU clusters where matrix multiplications are partitioned and reduced in non-deterministic order.
-Because floating-point addition is not associative---$(a + b) + c \neq a + (b + c)$ in general due to rounding---different partitioning strategies produce subtly different intermediate sums, which propagate through the autoregressive generation process and can eventually cause different token selections~\citep{karelin2024indeterminism}.
+Because floating-point addition is not associative---$(a + b) + c \neq a + (b + c)$ in general due to rounding---different partitioning strategies produce subtly different intermediate sums, which propagate through the autoregressive generation process and can eventually cause different token selections.\autocite{karelin2024indeterminism}
 Local deployment on a single device with a single execution thread avoids this source of variation entirely: the same computation graph executes in the same order every time, producing bit-identical results.
 This determinism guarantee is configuration-specific, however.
 The same model on different hardware, driver versions, or Ollama versions would likely produce different baseline outputs.
@@ -658,7 +621,7 @@ The practical implication depends on context: the high BERTScore ($F_1{\geq}0.99
 However, for quantitative evidence synthesis---where exact numeric values feed directly into meta-analytic pooling---the hash-based EMR of 0.05--0.20 represents a genuine threat to reproducibility.
 
 \textbf{Finding 3: API models exhibit distinct instability profiles.}
-GPT-4.1 achieved the highest metadata stability among API models (exact EMR$\,{=}\,$0.880, BERTScore $F_1{=}1.000$) and the smallest structural variation ($\Delta k{=}4$ estimates across runs), yet its hash-based extraction EMR (0.150) confirms that numeric variation persists.
+GPT-4.1 achieved the highest metadata stability among API models (exact EMR${=}$0.880, BERTScore $F_1{=}1.000$) and the smallest structural variation ($\Delta k{=}4$ estimates across runs), yet its hash-based extraction EMR (0.150) confirms that numeric variation persists.
 Claude had the lowest hash-based EMR (0.050) and the widest structural swing ($\Delta k{=}23$), while Gemini showed the most extreme semantic divergence (minimum BERTScore $F_1{=}0.754$).
 These distinct profiles suggest that non-determinism manifests differently across API providers---some vary primarily in numeric precision, others in structural composition, and others in semantic interpretation.
 
@@ -671,7 +634,7 @@ This independence means that \textbf{accuracy evaluations from a single run cann
 \textbf{For systematic reviewers:}
 If using cloud-based LLMs for screening or extraction, results from a single run should be treated as one sample from a distribution of possible outputs, not as a definitive answer.
 Running multiple repetitions and reporting variation metrics should become standard practice, analogous to how human inter-rater reliability is routinely measured.
-For context, Cochrane guidelines expect $\kappa{\geq}0.80$ for human screening agreement~\citep{higgins2019cochrane}; the API models' screening EMR of 0.93--0.97 suggests comparable---though not identical---levels of self-consistency, while extraction EMR (0.05--0.20) falls far below any acceptable human reliability threshold.
+For context, Cochrane guidelines expect $\kappa{\geq}0.80$ for human screening agreement;\autocite{higgins2019cochrane} the API models' screening EMR of 0.93--0.97 suggests comparable---though not identical---levels of self-consistency, while extraction EMR (0.05--0.20) falls far below any acceptable human reliability threshold.
 
 \textbf{For journal editors and reviewers:}
 Papers reporting LLM-assisted evidence synthesis should be expected to disclose: (a)~the exact model version, (b)~all inference parameters, (c)~whether results were verified across multiple runs, and (d)~provenance information enabling independent replication.
@@ -685,19 +648,19 @@ Where cloud APIs must be used (e.g., for larger models), majority voting across 
 
 Our results both corroborate and significantly extend prior findings (see Table~\ref{tab:comparison} for a systematic comparison).
 
-Our screening flip rates (2.6\% for Claude, 3.0\% for GPT-4.1, 6.4\% for Gemini) are consistent with the accuracy variations reported by \citet{atil2024nondeterminism} on general benchmarks, confirming that the phenomenon documented in controlled settings translates directly to real-world evidence synthesis tasks.
+Our screening flip rates (2.6\% for Claude, 3.0\% for GPT-4.1, 6.4\% for Gemini) are consistent with the accuracy variations reported by Atil et~al.\autocite{atil2024nondeterminism} on general benchmarks, confirming that the phenomenon documented in controlled settings translates directly to real-world evidence synthesis tasks.
 However, we reveal, to our knowledge for the first time, that \textbf{structured extraction amplifies non-determinism by an order of magnitude}---a finding invisible to benchmark-level analyses.
 Defining amplification as the ratio of extraction flip rate to screening flip rate, Claude's non-match rate increased from 2.6\% to 95.0\% (36.5$\times$), GPT-4.1's from 3.0\% to 85.0\% (28.3$\times$), and Gemini's from 6.4\% to 80.0\% (12.5$\times$).
 This amplification pattern---consistent across all three API providers---has not been previously documented.
 
-The comparison with \citet{jensen2025chatgpt} is particularly instructive.
+The comparison with Jensen et~al.\autocite{jensen2025chatgpt} is particularly instructive.
 Their reported 94.1\% inter-session reproducibility for ChatGPT-4o extraction appears to align with our Claude screening EMR (97.4\%), creating the impression that API-based extraction is reasonably stable.
 However, their metric measures per-field agreement across 2~sessions, while our EMR measures whole-output identity across 10~runs.
 When we apply our stricter metric, extraction reproducibility drops to 5.0\%---\textbf{nearly twenty times lower than what per-field metrics suggest}.
 This discrepancy is not an artifact; it reflects a genuine measurement gap.
 Per-field metrics miss the combinatorial explosion of variation: when 5~fields each have 97\% individual reproducibility, the probability that \emph{all} fields match simultaneously is only $0.97^5 = 0.859$---and this is before accounting for the variable-length effect estimate lists that drive most of our observed non-matches.
 
-Similarly, \citet{gartlehner2024extraction}'s 95--97\% test-retest reliability with Claude~2 was measured over 2--3~repetitions.
+Similarly, Gartlehner et~al.'s\autocite{gartlehner2024extraction} 95--97\% test-retest reliability with Claude~2 was measured over 2--3~repetitions.
 Our 10-run design with output hashing reveals instability that shorter test-retest windows cannot detect, because some items change in only 1--2 of 10~runs---a frequency that 2-run comparisons would miss entirely.
 
 \textbf{The meta-analytic propagation experiment} (Section~\ref{sec:metaprop}) provides the most direct evidence of downstream impact.
@@ -716,10 +679,10 @@ While this is the most comprehensive reproducibility evaluation in evidence synt
 
 \textbf{Run count and rare events.}
 Ten repetitions provide adequate statistical power for EMR estimation with bootstrap CIs, but may not capture rare variation patterns that appear in $<$10\% of runs.
-Our prior work~\citep{rover2026jair} used up to 100~repetitions; scaling to 50--100~runs with cost-efficient models would enable detection of tail-event instability.
+Our prior work\autocite{rover2026jair} used up to 100~repetitions; scaling to 50--100~runs with cost-efficient models would enable detection of tail-event instability.
 
 \textbf{Domain generalization.}
-Our corpus focuses on PM\textsubscript{2.5} and respiratory health, a domain with standardized reporting conventions.
+Our corpus focuses on PM$_{2.5}$ and respiratory health, a domain with standardized reporting conventions.
 Cross-domain studies---particularly in behavioral health, pharmacology, or nutritional epidemiology where reporting is more heterogeneous---would test whether the amplification patterns we observed are domain-specific or universal.
 
 \textbf{Semantic equivalence thresholds.}
@@ -783,251 +746,29 @@ These results carry a clear message: the current standard of reporting LLM-assis
 As LLMs become embedded in systematic reviews and meta-analyses, the research community must adopt reproducibility-aware practices---multiple repetitions, provenance tracking, and transparent reporting of variation---or risk building an evidence base on foundations that shift each time the analysis is re-run.
 
 
-% ============================================================
-%  AUTHOR CONTRIBUTIONS
-% ============================================================
-\section*{Author Contributions}
+\begin{Backmatter}
 
-LR conceived and designed the study, developed the software pipeline, conducted all experiments, performed the statistical analysis, and wrote the manuscript.
-YST supervised the research, provided critical feedback on the methodology and interpretation of results, and reviewed the manuscript.
+\paragraph{Acknowledgments}
+The authors thank the PubMed/NCBI E-utilities service for programmatic access to the biomedical literature.
 
-% ============================================================
-%  FUNDING
-% ============================================================
-\section*{Funding}
-
+\paragraph{Funding Statement}
 This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.
-API costs for Claude, Gemini, and GPT-4.1 experiments were funded by the author.
+API costs for Claude, Gemini, and GPT-4.1 experiments were funded by the authors.
 
-% ============================================================
-%  CONFLICT OF INTEREST
-% ============================================================
-\section*{Conflict of Interest}
+\paragraph{Competing Interests}
+The authors declare no competing interests.
 
-The authors declare no conflicts of interest.
-
-% ============================================================
-%  DATA AVAILABILITY
-% ============================================================
-\section*{Data Availability Statement}
-
+\paragraph{Data Availability Statement}
 All code, data, prompts, schemas, raw outputs, and run provenance records are publicly available at \url{https://github.com/Roverlucas/llm-evidence-synthesis-reproducibility}.
 API keys are excluded from the repository.
 The 500 PubMed abstract identifiers, gold standard labels, and complete analysis scripts are included to enable full reproduction of the reported results.
 
+\paragraph{Author Contributions}
+L.R.\ conceived and designed the study, developed the software pipeline, conducted all experiments, performed the statistical analysis, and wrote the manuscript.
+Y.S.T.\ supervised the research, provided critical feedback on the methodology and interpretation of results, and reviewed the manuscript.
 
-% ============================================================
-%  REFERENCES
-% ============================================================
-\bibliographystyle{plainnat}
+\printbibliography
 
-\begin{thebibliography}{99}
-
-\bibitem[Achiam et~al.(2023)]{openai2023gpt4}
-Achiam, J., Adler, S., Agarwal, S., Ahmad, L., Akkaya, I., et~al. (2023).
-\newblock {GPT-4} technical report.
-\newblock \emph{arXiv preprint}, arXiv:2303.08774.
-
-\bibitem[Angermeir et~al.(2025)]{angermeir2025icse}
-Angermeir, F., Amougou, M., Kreitz, M., Bauer, A., Linhuber, M., Fucci, D., Moy\'on~C., F., Mendez, D., \& Gorschek, T. (2025).
-\newblock Reflections on the reproducibility of commercial {LLM} performance in empirical software engineering studies.
-\newblock \emph{arXiv preprint}, arXiv:2510.25506.
-
-\bibitem[{Anthropic}(2024)]{anthropic2024claude}
-{Anthropic}. (2024).
-\newblock The {Claude~3} model family: {Opus}, {Sonnet}, {Haiku}.
-\newblock Technical Report, Anthropic.
-
-\bibitem[Atil et~al.(2024)]{atil2024nondeterminism}
-Atil, B., Aykent, S., Chittams, A., et~al. (2024).
-\newblock Non-determinism of ``deterministic'' LLM settings.
-\newblock \emph{arXiv preprint}, arXiv:2408.04667.
-
-\bibitem[Bommasani et~al.(2024)]{bommasani2024fmti}
-Bommasani, R., Klyman, K., Longpre, S., et~al. (2024).
-\newblock The Foundation Model Transparency Index v1.1.
-\newblock \emph{Transactions on Machine Learning Research}.
-
-\bibitem[Borah et~al.(2017)]{borah2017analysis}
-Borah, R., Brown, A.W., Capers, P.L., \& Kaiser, K.A. (2017).
-\newblock Analysis of the time and workers needed to conduct systematic reviews.
-\newblock \emph{BMJ Open}, 7(4), e012545.
-
-\bibitem[Desai et~al.(2025)]{desai2025reproducibility}
-Desai, S., et~al. (2025).
-\newblock What is reproducibility in artificial intelligence and machine learning research?
-\newblock \emph{AI Magazine}, 46(1), e70004.
-
-\bibitem[Dubey et~al.(2024)]{dubey2024llama3}
-Dubey, A., Jauhri, A., Pandey, A., Kadian, A., Al-Dahle, A., et~al. (2024).
-\newblock The {LLaMA}~3 herd of models.
-\newblock \emph{arXiv preprint}, arXiv:2407.21783.
-
-\bibitem[Fu et~al.(2026)]{fu2026beyond}
-Fu, T., Mart\'inez, G., Conde, J., Arriaga, C., Reviriego, P., Qi, X., \& Liu, S. (2026).
-\newblock Beyond reproducibility: Token probabilities expose large language model nondeterminism.
-\newblock \emph{arXiv preprint}, arXiv:2601.06118.
-
-\bibitem[Gartlehner et~al.(2024)]{gartlehner2024extraction}
-Gartlehner, G., Kahwati, L., Hilscher, R., et~al. (2024).
-\newblock Data extraction for evidence synthesis using a large language model: A proof-of-concept study.
-\newblock \emph{Research Synthesis Methods}, 15(4), 576--589.
-
-\bibitem[Comanici et~al.(2025)]{geminiteam2024gemini}
-Comanici, G., Bieber, E., Schaekermann, M., Pasupat, I., Sachdeva, N., et~al. (2025).
-\newblock {Gemini}~2.5: Pushing the frontier with advanced reasoning, multimodality, long context, and agentic capabilities.
-\newblock \emph{arXiv preprint}, arXiv:2507.06261.
-
-\bibitem[Haibe-Kains et~al.(2020)]{haibe2020nature}
-Haibe-Kains, B., Adam, G.A., Hosny, A., et~al. (2020).
-\newblock Transparency and reproducibility in artificial intelligence.
-\newblock \emph{Nature}, 586, 14--16.
-
-\bibitem[Han(2025)]{han2025biomedical}
-Han, H. (2025).
-\newblock Challenges of reproducible AI in biomedical data science.
-\newblock \emph{BMC Medical Genomics}, 18, 2072.
-
-\bibitem[Higgins et~al.(2019)]{higgins2019cochrane}
-Higgins, J.P.T., Thomas, J., Chandler, J., et~al. (2019).
-\newblock \emph{Cochrane Handbook for Systematic Reviews of Interventions} (2nd ed.).
-\newblock Wiley.
-
-\bibitem[Hutson(2018)]{hutson2018science}
-Hutson, M. (2018).
-\newblock Artificial intelligence faces reproducibility crisis.
-\newblock \emph{Science}, 359(6377), 725--726.
-
-\bibitem[Iyer et~al.(2025)]{iyer2025geoai}
-Iyer, H.S., Karasaki, S., Yi, L., Hswen, Y., James, P., \& VoPham, T. (2025).
-\newblock Harnessing geospatial artificial intelligence ({GeoAI}) for environmental epidemiology: A narrative review.
-\newblock \emph{Current Environmental Health Reports}, 12, 497.
-
-\bibitem[Jensen et~al.(2025)]{jensen2025chatgpt}
-Jensen, M.K., et~al. (2025).
-\newblock ChatGPT-4o can serve as the second rater for data extraction in systematic reviews.
-\newblock \emph{PLOS ONE}, 20(1), e0313401.
-
-\bibitem[Jiang et~al.(2023)]{jiang2023mistral}
-Jiang, A.Q., Sablayrolles, A., Mensch, A., Bamford, C., Chaplot, D.S., et~al. (2023).
-\newblock {Mistral}~7B.
-\newblock \emph{arXiv preprint}, arXiv:2310.06825.
-
-\bibitem[Kale et~al.(2023)]{kale2023provenance}
-Kale, A., Nguyen, T., Harris, F.C., Li, C., Zhang, J., \& Ma, X. (2023).
-\newblock Provenance documentation to enable explainable and trustworthy {AI}: A literature review.
-\newblock \emph{Data Intelligence}, 5(1), 139--162.
-
-\bibitem[Kapoor \& Narayanan(2023)]{kapoor2023leakage}
-Kapoor, S. \& Narayanan, A. (2023).
-\newblock Leakage and the reproducibility crisis in machine-learning-based science.
-\newblock \emph{Patterns}, 4(9), 100804.
-
-\bibitem[Karelin et~al.(2024)]{karelin2024indeterminism}
-Karelin, G., Nakajima, K., Soto-Astorga, E.F., Carr, E., James, M., \& Froese, T. (2024).
-\newblock Indeterminism in large language models: An unintentional step toward open-ended intelligence.
-\newblock \emph{Preprint submitted to Artificial Life}. PhilSci Archive 26807.
-
-\bibitem[Khraisha et~al.(2024)]{khraisha2024gpt4}
-Khraisha, Q., et~al. (2024).
-\newblock Can large language models replace humans in systematic reviews?
-\newblock \emph{Research Synthesis Methods}, 15(5), 707--722.
-
-\bibitem[Klishevich et~al.(2025)]{klishevich2025codereview}
-Klishevich, E., Denisov-Blanch, Y., Obstbaum, S., Ciobanu, I., \& Kosinski, M. (2025).
-\newblock Measuring determinism in large language models for software code review.
-\newblock \emph{arXiv preprint}, arXiv:2502.20747.
-
-\bibitem[Leo et~al.(2024)]{leo2024rocrate}
-Leo, S., Crusoe, M.R., Rodr\'iguez-Navas, L., et~al. (2024).
-\newblock Recording provenance of workflow runs with RO-Crate.
-\newblock \emph{PLOS ONE}, 19(9), e0309210.
-
-\bibitem[Li et~al.(2025a)]{li2025jamia}
-Li, J., et~al. (2025a).
-\newblock Enhancing systematic literature reviews with generative AI.
-\newblock \emph{Journal of the American Medical Informatics Association}, 32(4), 789--801.
-
-\bibitem[Li et~al.(2025b)]{li2025streamlining}
-Li, D., Jiang, N., Huang, K., Tu, R., Ouyang, S., Yu, H., et~al. (2025b).
-\newblock Streamlining evidence-based clinical recommendations with large language models.
-\newblock \emph{npj Digital Medicine}, 8, 2273.
-
-\bibitem[Liang et~al.(2024)]{liang2024modelcards}
-Liang, P., Rajani, N., Yang, D., et~al. (2024).
-\newblock Systematic analysis of 32,111 AI model cards characterizes documentation practice.
-\newblock \emph{Nature Machine Intelligence}, 6, 857.
-
-\bibitem[Longpre et~al.(2024a)]{longpre2024audit}
-Longpre, S., Mahari, R., Chen, A., et~al. (2024a).
-\newblock A large-scale audit of dataset licensing and attribution in AI.
-\newblock \emph{Nature Machine Intelligence}, 6, 878.
-
-\bibitem[Longpre et~al.(2024b)]{longpre2024broken}
-Longpre, S., et~al. (2024b).
-\newblock Data authenticity, consent, and provenance for AI are all broken.
-\newblock \emph{Proceedings of ICML 2024 (Position Paper)}, arXiv:2404.12691.
-
-\bibitem[Matsui et~al.(2024)]{matsui2024screening}
-Matsui, K., Utsumi, T., Aoki, Y., Maruki, T., Takeshima, M., \& Takaesu, Y. (2024).
-\newblock Human-comparable sensitivity of large language models in identifying eligible studies through title and abstract screening.
-\newblock \emph{Journal of Medical Internet Research}, 26, e52758.
-
-\bibitem[Oami et~al.(2024)]{oami2024screening}
-Oami, T., Okada, Y., \& Nakada, T.-A. (2024).
-\newblock Performance of a large language model in screening citations.
-\newblock \emph{JAMA Network Open}, 7(6), e2420496.
-
-\bibitem[Page et~al.(2021)]{page2021prisma}
-Page, M.J., McKenzie, J.E., Bossuyt, P.M., Boutron, I., Hoffmann, T.C., Mulrow, C.D., et~al. (2021).
-\newblock The {PRISMA} 2020 statement: An updated guideline for reporting systematic reviews.
-\newblock \emph{BMJ}, 372, n71.
-
-\bibitem[Rover(2026)]{rover2026jair}
-Rover, L. (2026).
-\newblock Hidden non-determinism in large language model APIs: A lightweight provenance protocol for reproducible generative AI research.
-\newblock \emph{Journal of Artificial Intelligence Research} (submitted).
-
-\bibitem[Scherbakov et~al.(2025)]{scherbakov2025jamia}
-Scherbakov, D., et~al. (2025).
-\newblock The emergence of large language models as tools in literature reviews.
-\newblock \emph{Journal of the American Medical Informatics Association}, 32(5), ocaf063.
-
-\bibitem[Semmelrock et~al.(2025)]{semmelrock2025barriers}
-Semmelrock, H., Ross-Hellauer, T., Kopeinik, S., Theiler, D., Haberl, A., Thalmann, S., \& Kowald, D. (2025).
-\newblock Reproducibility in machine-learning-based research: Overview, barriers, and drivers.
-\newblock \emph{AI Magazine}, 46(1), e70002.
-
-\bibitem[Team, Gemma et~al.(2024)]{team2024gemma}
-Team, Gemma, Mesnard, T., Hardin, C., Dadashi, R., Bhupatiraju, S., et~al. (2024).
-\newblock {Gemma}~2: Improving open language models at a practical size.
-\newblock \emph{arXiv preprint}, arXiv:2408.00118.
-
-\bibitem[Wang et~al.(2025)]{wang2025trialmind}
-Wang, Z., Cao, L., Danek, B., Jin, Q., Lu, Z., \& Sun, J. (2025).
-\newblock Accelerating clinical evidence synthesis with large language models.
-\newblock \emph{npj Digital Medicine}, 8, 509.
-
-\bibitem[Wei et~al.(2023)]{wei2023natcomm}
-Wei, J., Li, Z., Lyapustin, A., et~al. (2023).
-\newblock First close insight into global daily gapless 1\,km PM\textsubscript{2.5} pollution.
-\newblock \emph{Nature Communications}, 14, 43862.
-
-\bibitem[Yu, B.(2024)]{yu2024hdsr}
-Yu, B. (2024).
-\newblock After computational reproducibility: Scientific reproducibility and trustworthy {AI}.
-\newblock \emph{Harvard Data Science Review}, 6(1).
-
-\bibitem[Yu, M. et~al.(2025)]{yu2025aiml}
-Yu, M., Fang, M., Tian, Z., Wang, B., \& Walker, D. (2025).
-\newblock Artificial intelligence and machine learning for environmental health study.
-\newblock \emph{Environment \& Health}, 3(10), 1115--1116.
-
-\bibitem[Yu, W. et~al.(2024)]{yu2024lancet}
-Yu, W., Xu, R., Ye, T., et~al. (2024).
-\newblock Estimates of global mortality burden associated with short-term PM\textsubscript{2.5} exposure.
-\newblock \emph{The Lancet Planetary Health}, 8(2), e146--e155.
-
-\end{thebibliography}
+\end{Backmatter}
 
 \end{document}

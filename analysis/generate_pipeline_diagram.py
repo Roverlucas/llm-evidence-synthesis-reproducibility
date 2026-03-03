@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
 
-fig, ax = plt.subplots(1, 1, figsize=(14, 6))
+fig, ax = plt.subplots(1, 1, figsize=(14, 7))
 ax.set_xlim(0, 14)
-ax.set_ylim(0, 6)
+ax.set_ylim(0, 7)
 ax.axis('off')
 
 # Colors
@@ -36,7 +36,7 @@ repeat_box = FancyBboxPatch((3.8, 0.3), 7.0, 5.4, boxstyle="round,pad=0.15",
                              facecolor=c_repeat, edgecolor='#B8976A', alpha=0.3,
                              linestyle='--', linewidth=2, zorder=1)
 ax.add_patch(repeat_box)
-ax.text(7.3, 5.5, '× 10 Repeated Runs per Model', ha='center', va='center',
+ax.text(7.3, 6.2, '× 10 Repeated Runs per Model', ha='center', va='bottom',
         fontsize=11, color='#6B4F2E', fontweight='bold', fontstyle='italic', zorder=3)
 
 # ── Column 1: Corpus ──
