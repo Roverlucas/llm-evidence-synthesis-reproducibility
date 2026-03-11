@@ -30,9 +30,20 @@ article/*.log
 article/*.bbl
 article/*.blg
 article/*.out
+article/*.bcf
+article/*.run.xml
+article/*.toc
 article/*.synctex.gz
 article/*.fdb_latexmk
 article/*.fls
+article/missfont.log
+
+# Experiment logs (root level)
+analysis_run.log
+gpt41_rerun.log
+monitor.log
+run_sequential.log
+texput.log
 
 # Analysis outputs (regenerable)
 analysis/figures/*.pdf

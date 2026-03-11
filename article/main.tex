@@ -59,7 +59,7 @@ Yet the process is notoriously labor-intensive: a typical systematic review requ
 
 The emergence of large language models (LLMs) has created unprecedented opportunities to accelerate this process.
 Recent studies demonstrate that models such as GPT-4,\autocite{openai2023gpt4} Claude,\autocite{anthropic2024claude} and Gemini\autocite{geminiteam2024gemini} can screen abstracts with sensitivity approaching that of human reviewers,\autocite{oami2024screening,khraisha2024gpt4} extract structured data from published studies with over 90\% accuracy,\autocite{gartlehner2024extraction,jensen2025chatgpt} and even assist in evidence quality assessment.\autocite{wang2025trialmind,li2025streamlining}
-A growing body of work has established LLM-assisted evidence synthesis as a legitimate and rapidly expanding methodological frontier.\autocite{li2025jamia,scherbakov2025jamia,matsui2024screening}
+A growing body of work has established LLM-assisted evidence synthesis as a legitimate and rapidly expanding methodological frontier.\autocite{li2025jamia,scherbakov2025jamia,matsui2024screening,oami2025optimal}
 
 \subsection{The Hidden Problem: Non-Determinism}
 
@@ -128,6 +128,7 @@ Jensen et~al.\autocite{jensen2025chatgpt} found that ChatGPT-4o achieves 92.4\% 
 More comprehensive pipelines have also been proposed.
 The TrialMind system\autocite{wang2025trialmind} demonstrated that human-AI collaboration improved recall by 71.4\% and reduced screening time by 44.2\% across 100~systematic reviews.
 Li et~al.\autocite{li2025jamia} described an LLM pipeline for health technology assessment, while Matsui et~al.\autocite{matsui2024screening} showed that a three-layer GPT-3.5/GPT-4 strategy achieved human-comparable sensitivity.
+A recent systematic review of automated meta-analysis\autocite{li2025transforming} found that 57\% of studies focus on data processing tasks, yet only 2\% have attempted full-process automation---underscoring that evidence synthesis remains a multi-stage pipeline where each step introduces potential variation.
 
 A common thread across these studies is that \textbf{reproducibility is either assumed or measured only superficially}.
 Test-retest reliability, when reported, is based on 2--3~repetitions and does not examine how variation propagates through multi-stage pipelines.
@@ -187,6 +188,7 @@ To our knowledge, our study is the first to address all three gaps simultaneousl
 \textbf{Study} & \textbf{Domain} & \textbf{Task} & \textbf{Runs} & \textbf{Metric} & \textbf{Local} & \textbf{Cloud} & \textbf{Pipe.} \\
 \midrule
 Oami (2024)       & Health  & Screening    & 1    & Accuracy    & ---  & \checkmark & --- \\
+Oami (2025)       & Health  & Screening    & 1    & Acc.+cost   & \checkmark & \checkmark & --- \\
 Khraisha (2024)   & Health  & Scr.+Extr.   & 1    & Accuracy    & ---  & \checkmark & --- \\
 Gartlehner (2024) & Health  & Extraction   & 2--3 & Field acc.  & ---  & \checkmark & --- \\
 Jensen (2025)     & Health  & Extraction   & 2    & Field acc.  & ---  & \checkmark & --- \\
@@ -194,6 +196,7 @@ Matsui (2024)     & Health  & Screening    & 1    & Accuracy    & ---  & \checkm
 Atil (2024)       & General & NLP bench.   & 10+  & Acc.\ var.  & ---  & \checkmark & --- \\
 Klishevich (2025) & Softw.  & Code review  & 5+   & Determinism & \checkmark & \checkmark & --- \\
 Fu (2026)         & General & Token dist.  & ---  & Distrib.    & ---  & \checkmark & --- \\
+Li (2025)         & Multi   & Meta-anal.   & ---  & Survey      & ---  & ---        & --- \\
 \midrule
 \textbf{This study} & \textbf{Health} & \textbf{Scr.+Extr.} & \textbf{10} & \textbf{EMR+CI} & \textbf{\checkmark} & \textbf{\checkmark} & \textbf{\checkmark} \\
 \bottomrule
@@ -226,6 +229,7 @@ Figure~\ref{fig:pipeline} provides an overview of the experimental pipeline.
 We constructed a 500-abstract corpus from PubMed covering the association between PM$_{2.5}$ and respiratory health outcomes (Table~\ref{tab:corpus}).
 We chose this domain because it is one of the most extensively studied areas in environmental epidemiology, with Yu et~al.\autocite{yu2024lancet} estimating approximately 1~million premature deaths annually from short-term PM$_{2.5}$ exposure.
 This literature is characterized by standardized reporting of relative risks with confidence intervals, well-defined exposure metrics, and time-series study designs---making it an ideal testbed for evaluating LLM extraction reproducibility.\autocite{iyer2025geoai,yu2025aiml}
+Prior work on particulate matter and respiratory morbidity has shown that machine learning models can capture the complex, lagged relationships between PM$_{10}$ concentration and hospital admissions,\autocite{tadano2021unorganized} further motivating a domain where both the epidemiological patterns and the computational methods are well established.
 
 \begin{table}[htbp]
 \centering
