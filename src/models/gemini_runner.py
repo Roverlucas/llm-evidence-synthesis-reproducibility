@@ -73,11 +73,14 @@ def run_inference(
         "generationConfig": generation_config,
     }
 
-    url = f"{API_BASE}/{model}:generateContent?key={api_key}"
+    url = f"{API_BASE}/{model}:generateContent"
     req = urllib.request.Request(
         url,
         data=json.dumps(payload).encode("utf-8"),
-        headers={"Content-Type": "application/json"},
+        headers={
+            "Content-Type": "application/json",
+            "x-goog-api-key": api_key,
+        },
         method="POST",
     )
 
