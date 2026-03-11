@@ -135,6 +135,8 @@ Jensen et~al.\autocite{jensen2025chatgpt} found that ChatGPT-4o achieves 92.4\% 
 More comprehensive pipelines have also been proposed.
 The TrialMind system\autocite{wang2025trialmind} demonstrated that human-AI collaboration improved recall by 71.4\% and reduced screening time by 44.2\% across 100~systematic reviews.
 Li et~al.\autocite{li2025jamia} described an LLM pipeline for health technology assessment, while Matsui et~al.\autocite{matsui2024screening} showed that a three-layer GPT-3.5/GPT-4 strategy achieved human-comparable sensitivity.
+Cao et~al.\autocite{cao2025ottosr} presented otto-SR, a system that automates the entire systematic review lifecycle with LLMs, demonstrating near-human performance across screening, extraction, and synthesis---yet without examining run-to-run reproducibility.
+Khan et~al.\autocite{khan2025collaborative} proposed a collaborative multi-LLM approach for automated data extraction in living systematic reviews, achieving high accuracy but reporting results from single executions.
 A recent systematic review of automated meta-analysis\autocite{li2025transforming} found that 57\% of studies focus on data processing tasks, yet only 2\% have attempted full-process automation---underscoring that evidence synthesis remains a multi-stage pipeline where each step introduces potential variation.
 
 A common thread across these studies is that \textbf{reproducibility is either assumed or measured only superficially}.
@@ -204,6 +206,8 @@ Atil (2024)       & General & NLP bench.   & 10+  & Acc.\ var.  & ---  & \checkm
 Klishevich (2025) & Softw.  & Code review  & 5+   & Determinism & \checkmark & \checkmark & --- \\
 Fu (2026)         & General & Token dist.  & ---  & Distrib.    & ---  & \checkmark & --- \\
 Li (2025)         & Multi   & Meta-anal.   & ---  & Survey      & ---  & ---        & --- \\
+Cao (2025)        & Health  & Full SR      & 1    & Accuracy    & ---  & \checkmark & \checkmark \\
+Khan (2025)       & Health  & Extraction   & 1    & Field acc.  & ---  & \checkmark & --- \\
 \midrule
 \textbf{This study} & \textbf{Health} & \textbf{Scr.+Extr.} & \textbf{10} & \textbf{EMR+CI} & \textbf{\checkmark} & \textbf{\checkmark} & \textbf{\checkmark} \\
 \bottomrule
