@@ -1,7 +1,7 @@
 #!/bin/bash
 # Full analysis pipeline — waits for experiments, then runs all analysis
 set -e
-cd /Users/lucasrover/llm-evidence-synthesis-reproducibility
+cd "$(dirname "$0")"
 source .venv/bin/activate
 
 LOGFILE="analysis_run.log"

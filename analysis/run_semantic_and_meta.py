@@ -11,7 +11,7 @@ import re
 from collections import defaultdict
 from pathlib import Path
 
-BASE = Path("/Users/lucasrover/llm-evidence-synthesis-reproducibility")
+BASE = Path(__file__).resolve().parent.parent
 RAW = BASE / "data" / "raw_outputs"
 OUT = BASE / "analysis"
 
@@ -105,8 +105,8 @@ def compute_semantic_emr(model: str, n_runs: int = 10):
         normalized_match = 0
         fuzzy_match = 0
 
-        for cid, run_outputs in complete.items():
-            values = [str(run_outputs.get(field, "")) for r, run_outputs in sorted(run_outputs.items())]
+        for cid, cid_runs in complete.items():
+            values = [str(cid_runs.get(field, "")) for _r, cid_runs in sorted(cid_runs.items())]
 
             # Exact match
             if len(set(values)) == 1:
@@ -137,13 +137,13 @@ def compute_semantic_emr(model: str, n_runs: int = 10):
     normalized_whole = 0
     fuzzy_whole = 0
 
-    for cid, run_outputs in complete.items():
+    for cid, cid_runs in complete.items():
         all_exact = True
         all_normalized = True
         all_fuzzy = True
 
         for field in fields:
-            values = [str(run_outputs.get(field, "")) for r, run_outputs in sorted(run_outputs.items())]
+            values = [str(cid_runs.get(field, "")) for _r, cid_runs in sorted(cid_runs.items())]
             if len(set(values)) != 1:
                 all_exact = False
                 norm_values = [normalize_text(v) for v in values]
@@ -155,7 +155,7 @@ def compute_semantic_emr(model: str, n_runs: int = 10):
 
         # Also check estimate count
         est_counts = []
-        for r, out in sorted(run_outputs.items()):
+        for r, out in sorted(cid_runs.items()):
             estimates = out.get("estimates", [])
             est_counts.append(len(estimates))
 

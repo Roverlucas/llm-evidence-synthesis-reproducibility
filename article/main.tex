@@ -747,7 +747,7 @@ Based on our findings, we propose the following recommendations for LLM-assisted
 % ============================================================
 \section{Conclusion}
 
-This study provides, to our knowledge, the most comprehensive and rigorous evaluation of LLM reproducibility in evidence synthesis to date: 36,000~LLM calls across 120~experimental runs involving six models from four providers, evaluated with whole-output hashing, four-tier semantic analysis, and meta-analytic propagation testing---a scale and depth that exceeds all prior work in this domain by an order of magnitude.
+This study provides, to our knowledge, the most comprehensive evaluation of LLM reproducibility in evidence synthesis to date: 36,000~LLM calls across 120~experimental runs involving six models from four providers, evaluated with whole-output hashing, four-tier semantic analysis, and meta-analytic propagation testing---a scale and depth that exceeds all prior work in this domain by an order of magnitude.
 
 \textbf{What we show that others have not.}
 Where prior studies report 94--97\% reproducibility using per-field metrics and 2--3~repetitions, our whole-output analysis across 10~runs reveals that only 5--20\% of extraction outputs are truly identical---exposing a measurement gap of nearly 20$\times$.
@@ -757,7 +757,8 @@ Where prior studies report either accuracy or reproducibility, we show these pro
 \textbf{What we prove is achievable.}
 Deterministic LLM inference is not aspirational---it is already achievable.
 All three open-weight models (LLaMA~3 8B, Mistral~7B, Gemma~2 9B) produced bit-identical outputs across all 10~runs in both stages on fixed local hardware, at a total cost of \$0.26.
-This demonstrates that the non-determinism problem is not inherent to LLMs but specific to cloud-based serving infrastructure.
+While our design confounds deployment type with model size (7--9B locally vs.\ $>$100B via API), the practical implication is clear: locally-served open-weight models \emph{are} deterministic under controlled conditions, whereas cloud-served models \emph{are not}.
+Disentangling the relative contributions of model size and serving infrastructure---e.g., by serving the same model both locally and via a cloud endpoint---is a natural and important next step.
 
 \textbf{What is at stake.}
 Our meta-analytic propagation analysis reveals that 5--21\% of articles produce different numbers of effect estimates across runs, meaning the very composition of a meta-analysis depends on which LLM run generated its inputs.
@@ -778,6 +779,11 @@ API costs for Claude, Gemini, and GPT-4.1 experiments were funded by the authors
 
 \paragraph{Competing Interests}
 The authors declare no competing interests.
+
+\paragraph{Use of AI Writing Tools}
+AI-based tools (Claude, Anthropic) were used for code development assistance and manuscript editing support.
+All scientific content, experimental design, data analysis, and interpretation of results were performed exclusively by the human authors.
+The AI tools used in manuscript preparation are the same models evaluated as experimental subjects in this study; this dual role was managed by ensuring that all reported results were computed deterministically from the raw experimental data, independently of any AI writing assistance.
 
 \paragraph{Data Availability Statement}
 All code, data, prompts, schemas, raw outputs, and run provenance records are publicly available at \url{https://github.com/Roverlucas/llm-evidence-synthesis-reproducibility}.

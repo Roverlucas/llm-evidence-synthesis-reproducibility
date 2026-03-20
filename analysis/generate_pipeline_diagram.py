@@ -1,4 +1,6 @@
 """Generate pipeline diagram for the article."""
+import os
+
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
@@ -45,12 +47,14 @@ add_box(ax, 0.3, 1.8, 2.8, 2.4, c_corpus,
         fontsize=9)
 
 # ── Column 2: Models ──
-add_box(ax, 4.2, 4.0, 2.4, 1.2, '#2D6A4F',
-        'LLaMA 3 8B\n(Local, Ollama)', fontsize=8.5)
-add_box(ax, 4.2, 2.4, 2.4, 1.2, '#7B2D8E',
-        'Claude Sonnet 4.5\n(Anthropic API)', fontsize=8.5)
-add_box(ax, 4.2, 0.8, 2.4, 1.2, '#1A6FC4',
-        'Gemini 2.5 Pro\n(Google AI API)', fontsize=8.5)
+add_box(ax, 4.2, 4.6, 2.4, 0.8, '#2D6A4F',
+        'Local: LLaMA 3 8B, Mistral 7B,\nGemma 2 9B (Ollama)', fontsize=7.5)
+add_box(ax, 4.2, 3.2, 2.4, 0.8, '#7B2D8E',
+        'Claude Sonnet 4.5\n(Anthropic API)', fontsize=8)
+add_box(ax, 4.2, 1.8, 2.4, 0.8, '#1A6FC4',
+        'Gemini 2.5 Pro\n(Google AI API)', fontsize=8)
+add_box(ax, 4.2, 0.5, 2.4, 0.8, '#C44D34',
+        'GPT-4.1\n(OpenAI API)', fontsize=8)
 
 # ── Column 3: Screening ──
 add_box(ax, 7.2, 2.2, 2.0, 1.8, c_screen,
@@ -69,14 +73,16 @@ add_box(ax, 11.2, 1.5, 2.4, 3.2, c_analysis,
 
 # ── Arrows ──
 # Corpus → Models
-add_arrow(ax, 3.1, 3.0, 4.2, 4.6)
-add_arrow(ax, 3.1, 3.0, 4.2, 3.0)
-add_arrow(ax, 3.1, 3.0, 4.2, 1.4)
+add_arrow(ax, 3.1, 3.0, 4.2, 5.0)
+add_arrow(ax, 3.1, 3.0, 4.2, 3.6)
+add_arrow(ax, 3.1, 3.0, 4.2, 2.2)
+add_arrow(ax, 3.1, 3.0, 4.2, 0.9)
 
 # Models → Screening
-add_arrow(ax, 6.6, 4.6, 7.2, 3.5)
-add_arrow(ax, 6.6, 3.0, 7.2, 3.1)
-add_arrow(ax, 6.6, 1.4, 7.2, 2.7)
+add_arrow(ax, 6.6, 5.0, 7.2, 3.5)
+add_arrow(ax, 6.6, 3.6, 7.2, 3.2)
+add_arrow(ax, 6.6, 2.2, 7.2, 2.9)
+add_arrow(ax, 6.6, 0.9, 7.2, 2.6)
 
 # Screening → Extraction (included articles)
 ax.annotate('', xy=(7.8, 4.3), xytext=(7.8, 4.0),
@@ -92,13 +98,15 @@ add_arrow(ax, 9.2, 3.1, 11.2, 3.1)
 add_arrow(ax, 9.2, 4.9, 11.2, 3.8)
 
 # ── Stats annotation ──
-ax.text(7.3, 0.55, '60 experiment runs  •  18,000 LLM calls  •  SHA-256 provenance hashing',
+ax.text(7.3, 0.55, '120 experiment runs  •  36,000 LLM calls  •  SHA-256 provenance hashing',
         ha='center', va='center', fontsize=9, color='#6B4F2E',
         fontstyle='italic', zorder=3)
 
 plt.tight_layout()
-plt.savefig('/Users/lucasrover/llm-evidence-synthesis-reproducibility/analysis/figures/pipeline_diagram.pdf',
+FIGURES_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "figures")
+os.makedirs(FIGURES_DIR, exist_ok=True)
+plt.savefig(os.path.join(FIGURES_DIR, 'pipeline_diagram.pdf'),
             bbox_inches='tight', dpi=300, facecolor='white')
-plt.savefig('/Users/lucasrover/llm-evidence-synthesis-reproducibility/analysis/figures/pipeline_diagram.png',
+plt.savefig(os.path.join(FIGURES_DIR, 'pipeline_diagram.png'),
             bbox_inches='tight', dpi=300, facecolor='white')
 print("Pipeline diagram saved.")

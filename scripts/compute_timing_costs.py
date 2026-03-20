@@ -10,10 +10,10 @@ Output: analysis/timing_and_costs.json
 import json
 import os
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
-BASE_DIR = Path("/Users/lucasrover/llm-evidence-synthesis-reproducibility")
+BASE_DIR = Path(__file__).resolve().parent.parent
 RAW_DIR = BASE_DIR / "data" / "raw_outputs"
 OUT_DIR = BASE_DIR / "analysis"
 
@@ -261,7 +261,7 @@ def main():
 
     summary = {
         "metadata": {
-            "generated_at": datetime.now(tz=None).isoformat() + "Z",
+            "generated_at": datetime.now(tz=timezone.utc).isoformat(),
             "project": "LLM Evidence Synthesis Reproducibility",
             "base_dir": str(BASE_DIR),
             "models": MODELS,

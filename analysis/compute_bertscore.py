@@ -12,7 +12,7 @@ from bert_score import score as bert_score
 # ---------------------------------------------------------------------------
 # Config
 # ---------------------------------------------------------------------------
-BASE_DIR = "/Users/lucasrover/llm-evidence-synthesis-reproducibility"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW_DIR = os.path.join(BASE_DIR, "data", "raw_outputs")
 OUT_PATH = os.path.join(BASE_DIR, "analysis", "bertscore_results.json")
 MODELS = [
