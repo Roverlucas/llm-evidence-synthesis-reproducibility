@@ -1,0 +1,15 @@
+{
+  "model_id": "deepseek-r1-silver",
+  "deepseek_model": "deepseek-reasoner",
+  "stage": "extraction",
+  "run_id": 4,
+  "n_items": 100,
+  "n_success": 95,
+  "n_fail": 5,
+  "started": "2026-04-25T16:45:55.612616+00:00",
+  "ended": "2026-04-26T17:03:05.092275+00:00",
+  "duration_seconds": 87429.479659,
+  "total_input_tokens": 79520,
+  "total_output_tokens": 167626,
+  "total_reasoning_tokens": 137517
+}

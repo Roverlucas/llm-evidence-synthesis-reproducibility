@@ -1,0 +1,13 @@
+{
+  "model_id": "gemini-2.5-pro-fixedslot",
+  "stage": "extraction",
+  "run_id": 2,
+  "n_items": 100,
+  "n_success": 96,
+  "n_fail": 4,
+  "started": "2026-04-26T17:41:56.883054+00:00",
+  "ended": "2026-04-26T18:15:13.414523+00:00",
+  "duration_seconds": 1996.531469,
+  "total_input_tokens": 111355,
+  "total_output_tokens": 15692
+}

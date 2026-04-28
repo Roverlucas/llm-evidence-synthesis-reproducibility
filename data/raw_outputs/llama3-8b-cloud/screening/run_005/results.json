@@ -1,0 +1,4864 @@
+[
+  {
+    "corpus_id": "ABS-0001",
+    "pmid": "38698010",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "exclude",
+      "confidence": 1.0,
+      "rationale": "The study does not report a relative risk (RR), odds ratio (OR), or equivalent effect measure with confidence interval, violating criterion 5.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_diseases",
+      "study_design": "other",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "e73d54bfa7a23d5b7634c02cbc3daec601ac63ffa05ef09f180f947cf9584dcd"
+  },
+  {
+    "corpus_id": "ABS-0002",
+    "pmid": "29259031",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "exclude",
+      "confidence": 1.0,
+      "rationale": "Outcome is asthma exacerbation, not respiratory hospitalization/ED visit",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_ED",
+      "study_design": "other",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "5343644d9b62f8a33047e754d41a93627c4ff703f1c65a8527b95844774ba59c"
+  },
+  {
+    "corpus_id": "ABS-0003",
+    "pmid": "35073244",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "Meets all inclusion criteria: original epidemiological study, PM2.5 exposure, respiratory hospitalization outcome, time-series study design, and reports relative risks with confidence intervals.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "cc77598935586a36ed373043964ea85f92cfed30269bfa19e88e29b72efd3279"
+  },
+  {
+    "corpus_id": "ABS-0004",
+    "pmid": "35394903",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "Meets all inclusion criteria: original epidemiological study, exposure to PM2.5, outcome is respiratory hospitalization/ED visit, study design is time-series, reports a relative risk (OR) with confidence interval, and published in English.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "5a9efafdde00e69474dd813cc4d1ee9e40b1d1a38b986d5a41a893a14db074ad"
+  },
+  {
+    "corpus_id": "ABS-0005",
+    "pmid": "35104259",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "exclude",
+      "confidence": 1.0,
+      "rationale": "Outcome is not respiratory hospitalization/ED visit, but rather cardiovascular and respiratory hospitalizations.",
+      "exposure": "PM2.5",
+      "outcome": "other",
+      "study_design": "case-crossover",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "53939a01c9997430f38a1c117c8fbe4ef861ce76541e1875fed514ab513d0f28"
+  },
+  {
+    "corpus_id": "ABS-0006",
+    "pmid": "35384572",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "Meets all inclusion criteria: original epidemiological study, exposure to PM2.5, outcome is respiratory hospitalization, study design is time-series, reports relative risk with confidence interval, and published in English.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "63a61a1a9817214dab6e5d35303982f64b8299670918072915d1b1d02dceb4ed"
+  },
+  {
+    "corpus_id": "ABS-0007",
+    "pmid": "35989078",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "exclude",
+      "confidence": 1.0,
+      "rationale": "Outcome is bronchiolitis, which is not a respiratory hospitalization or emergency department visit",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_ED",
+      "study_design": "case_crossover",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "514bc3124f354f2dd8f3e1fc1267b5634182f722768d2c580ed427af78557e57"
+  },
+  {
+    "corpus_id": "ABS-0008",
+    "pmid": "37792321",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "Meets all inclusion criteria: original epidemiological study, exposure to PM2.5, outcome is respiratory hospitalization, time-series study design, reports relative risk with confidence interval, and published in English.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "9492f8075b5390a7a20fceb8c072991b85aa0bfa87c9e3cffcb7452d10d30dee"
+  },
+  {
+    "corpus_id": "ABS-0009",
+    "pmid": "30917578",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "exclude",
+      "confidence": 1.0,
+      "rationale": "Outcome is not respiratory hospitalization/ED visit, but rather respiratory healthcare encounters",
+      "exposure": "PM2.5",
+      "outcome": "other",
+      "study_design": "case_crossover",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "febc26304fc434a6976132f74fe77a219a3233395d3a75bc6efc34a4a4b349a5"
+  },
+  {
+    "corpus_id": "ABS-0010",
+    "pmid": "28787174",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "exclude",
+      "confidence": 1.0,
+      "rationale": "Outcome is bronchiolitis, which is not a respiratory hospitalization or emergency department visit",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_ED",
+      "study_design": "case_crossover",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "514bc3124f354f2dd8f3e1fc1267b5634182f722768d2c580ed427af78557e57"
+  },
+  {
+    "corpus_id": "ABS-0011",
+    "pmid": "35802828",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "exclude",
+      "confidence": 1.0,
+      "rationale": "Outcome is respiratory hospitalizations, but it's not the primary outcome (pediatric respiratory hospitalizations).",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "case_crossover",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "1867242994056ac355ede5f1fdccd4bd1d7eeb1f3453e7ade09a64034a49018d"
+  },
+  {
+    "corpus_id": "ABS-0012",
+    "pmid": "36197352",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "exclude",
+      "confidence": 1.0,
+      "rationale": "The study is an ecological time-series study, which does not meet the inclusion criterion of study design (time-series or case-crossover).",
+      "exposure": "other",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "ecological_time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "c39b6720d5343cfb2f8079cf616247f8f94fb6cddab4fccf196f0807925ad6b0"
+  },
+  {
+    "corpus_id": "ABS-0013",
+    "pmid": "37011135",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "Meets all inclusion criteria: original epidemiological study, exposure is PM2.5, outcome is respiratory hospitalization (asthma ED visits), study design is time-series, reports a relative risk with confidence interval, and published in English.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_ED",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "7df6890ae2693e57e39131ea27966bdcd8c11a32d77c531f32e7dcd71861fd70"
+  },
+  {
+    "corpus_id": "ABS-0014",
+    "pmid": "36376253",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "Meets all inclusion criteria: original epidemiological study, PM2.5 exposure, respiratory hospitalization/ED visit outcome, time-series study design, and reports a relative risk with confidence interval.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "3a40a462324f091c78a3355873fc0ed07ff013205d88f508a31a1fa1bfe321be"
+  },
+  {
+    "corpus_id": "ABS-0015",
+    "pmid": "36243957",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "Meets all inclusion criteria: original epidemiological study, exposure to PM2.5, outcome is respiratory hospitalization, time-series study design, reports relative risk with confidence interval, and published in English.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "9492f8075b5390a7a20fceb8c072991b85aa0bfa87c9e3cffcb7452d10d30dee"
+  },
+  {
+    "corpus_id": "ABS-0016",
+    "pmid": "35692312",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "Meets all inclusion criteria: original epidemiological study, exposure to PM2.5, outcome is respiratory hospitalization, time-series study design, reports relative risk with confidence interval, and published in English.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "9492f8075b5390a7a20fceb8c072991b85aa0bfa87c9e3cffcb7452d10d30dee"
+  },
+  {
+    "corpus_id": "ABS-0017",
+    "pmid": "40433992",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "exclude",
+      "confidence": 1.0,
+      "rationale": "The study does not investigate the association between PM2.5 exposure and respiratory hospitalizations, but rather between PM2.5 exposure and cardiorespiratory hospitalizations.",
+      "exposure": "PM2.5",
+      "outcome": "cardiorespiratory_hospitalization",
+      "study_design": "case_crossover",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "33e3dce4fff34b61c5df3f03b99ceacb5c1888ceb66181d2f1d5a77f840b4fb1"
+  },
+  {
+    "corpus_id": "ABS-0018",
+    "pmid": "30781785",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "Meets all inclusion criteria: original epidemiological study, exposure to PM2.5, outcome is respiratory hospitalization, study design is time-series, reports a relative risk with confidence interval, and published in English.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "ee763ee1205f3686ca2992e2d523a2db5d9bf238413705d087b90443eb22a8aa"
+  },
+  {
+    "corpus_id": "ABS-0019",
+    "pmid": "35307034",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "exclude",
+      "confidence": 1.0,
+      "rationale": "Exposure is not PM2.5, but PM10 and PM2.5 are not the primary exposure of interest.",
+      "exposure": "other",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "802c4661e266429be096e3f0e35b810c2603fb0dacc639eae3c402a511e2569e"
+  },
+  {
+    "corpus_id": "ABS-0020",
+    "pmid": "40305019",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "exclude",
+      "confidence": 1.0,
+      "rationale": "The study is a retrospective cohort study, which does not meet the inclusion criteria of time-series or case-crossover study design.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "cohort",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "4b9aee18599b69897832c89aeefd3c60ec6969ad2a639908ea69c0f27b56ff24"
+  },
+  {
+    "corpus_id": "ABS-0021",
+    "pmid": "29643111",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "_raw_unparseable": "Here is the JSON object:\n\n```json\n{\n  \"decision\": \"exclude\",\n  \"confidence\": 1.0,\n  \"rationale\": \"The study does not investigate the association between PM2.5 exposure and respiratory hospitalizations, but rather between wildfire smoke exposure and cardiovascular and cerebrovascular emergency department visits.\",\n  \"exposure\": \"wildfire smoke\",\n  \"outcome\": \"cardiovascular_ED\", \"cerebrovascular_ED\", \"other\",\n  \"study_design\": \"time_series\",\n  \"has_effect_estimate\": true\n}\n```"
+    },
+    "valid": false,
+    "output_hash": "58abbcbefdf81459bb7ab58752e4efc079a758f7a3e5f944638f7d6f4dbb03a8"
+  },
+  {
+    "corpus_id": "ABS-0022",
+    "pmid": "37972204",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "exclude",
+      "confidence": 1.0,
+      "rationale": "The study does not focus on the association between PM2.5 exposure and respiratory hospitalizations, but rather on the association between air quality index and effects on emergency department visits for acute respiratory and cardiovascular diseases.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_ED",
+      "study_design": "retrospective",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "67af3ed174e602d6c9dbe3b60c6400b4f768de90209978b2f289a806e22c441f"
+  },
+  {
+    "corpus_id": "ABS-0023",
+    "pmid": "34981381",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "exclude",
+      "confidence": 1.0,
+      "rationale": "The study is a prospective cohort study, not a time-series or case-crossover study, which does not meet the inclusion criteria.",
+      "exposure": "other",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "cohort",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "b8ee4422f936f2a894e882d5065304fca7c6d154d6abc2256074d20dea8498cf"
+  },
+  {
+    "corpus_id": "ABS-0024",
+    "pmid": "31787180",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "exclude",
+      "confidence": 1.0,
+      "rationale": "Outcome is emergency room visits for respiratory diseases, not respiratory hospitalizations.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_ED",
+      "study_design": "not_specified",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "1307e025fa84dfe23dd6683aa50b754d720abb34a70b97bc63a4c20debc63b66"
+  },
+  {
+    "corpus_id": "ABS-0025",
+    "pmid": "37980997",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "Meets all inclusion criteria: original epidemiological study, exposure to PM2.5, outcome is respiratory hospitalization, study design is case-crossover, reports relative risk with confidence interval, and published in English.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "case_crossover",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "3aef612ceaa52cf6fc5219a17ed7b60f15eba18bc6034deadc95121ff5007a35"
+  },
+  {
+    "corpus_id": "ABS-0026",
+    "pmid": "35583542",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "exclude",
+      "confidence": 1.0,
+      "rationale": "The study does not report a relative risk (RR), odds ratio (OR), or equivalent effect measure with confidence interval, which is a required criterion for inclusion.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "68cd7f25363fee12a9fe850112d835042260121206f08993106130a36342c63a"
+  },
+  {
+    "corpus_id": "ABS-0027",
+    "pmid": "26452298",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "Meets all inclusion criteria: original epidemiological study, exposure is PM2.5, outcome is respiratory ED visit, study design is case-crossover, reports a relative risk with confidence interval, and is published in English.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_ED",
+      "study_design": "case_crossover",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "5e5b0fcc0a61cbf7e68bc8d886319f89a48ddb5f2f78503770403fe68fb2a86d"
+  },
+  {
+    "corpus_id": "ABS-0028",
+    "pmid": "39038774",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "Meets all inclusion criteria: original epidemiological study, exposure to PM2.5, outcome is respiratory hospitalization/ED visit, study design is time-series, reports relative rates with confidence intervals, and published in English.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "7aeff12612f867d11caad4a6830c84ab2c62bbcd9c47da1d29a2cb8748076604"
+  },
+  {
+    "corpus_id": "ABS-0029",
+    "pmid": "37772521",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "exclude",
+      "confidence": 1.0,
+      "rationale": "Outcome is upper respiratory tract infections, not respiratory hospitalization/ED visit",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_ED",
+      "study_design": "not_specified",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "5fa1945310c53fc3c90a0611deec7b81d89f2cef525313bb44e7181846828ce1"
+  },
+  {
+    "corpus_id": "ABS-0030",
+    "pmid": "35142610",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "Meets all inclusion criteria: original epidemiological study, exposure is PM2.5, outcome is respiratory hospitalization/ED visit, study design is time-series, reports relative risk with confidence interval, and published in English.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "d383741467f29145c64d775a951b6f0143abae3045a61c1606705f2ee26faf7a"
+  },
+  {
+    "corpus_id": "ABS-0031",
+    "pmid": "39048614",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "Meets all inclusion criteria: original epidemiological study, exposure is PM2.5, outcome is respiratory hospitalization, study design is time-series, reports relative risk with confidence interval, and published in English.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "81c0aa075f3be38e0ae80a7f48deb885ed4d9d79a0ff4f1759649fe0fb0c89f9"
+  },
+  {
+    "corpus_id": "ABS-0032",
+    "pmid": "35627536",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "Meets all inclusion criteria: original epidemiological study, PM2.5 exposure, respiratory hospitalization outcome, time-series study design, reports relative risk with confidence interval, and published in English.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "6543816749dff845aaba909bbcf0bdeaa91bd6f2e9cec42e9cfb07a7ce320ef3"
+  },
+  {
+    "corpus_id": "ABS-0033",
+    "pmid": "31755707",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "exclude",
+      "confidence": 1.0,
+      "rationale": "The study focuses on source-specific particulate matter, not PM2.5 specifically, and also examines outcomes other than respiratory hospitalization/ED visit.",
+      "exposure": "other",
+      "outcome": "respiratory_ED",
+      "study_design": "case_crossover",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "86976fc70c0c87893c35bed4286addecf1bf4518b832065f55de3a64044670ba"
+  },
+  {
+    "corpus_id": "ABS-0034",
+    "pmid": "34989991",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "exclude",
+      "confidence": 1.0,
+      "rationale": "Outcome is emergency department visits for upper respiratory tract infection, not respiratory hospitalization.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_ED",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "05c19e22e8ec7a923757481fa74587b43aa4dc601981aa2da43927d4e463352c"
+  },
+  {
+    "corpus_id": "ABS-0035",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "The read operation timed out",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0036",
+    "pmid": "31254082",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "Meets all inclusion criteria: original epidemiological study, exposure to PM2.5, outcome is respiratory hospitalization (asthma emergency room admissions), time-series study design, reports a relative risk with confidence interval, and published in English.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "bf7a12bb7275667989974afec732a88e7b62ef1cc234eee5f001bc24035494be"
+  },
+  {
+    "corpus_id": "ABS-0037",
+    "pmid": "39520750",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "exclude",
+      "confidence": 1.0,
+      "rationale": "Outcome is not respiratory hospitalization/ED visit, but rather hospital admission for interstitial lung diseases.",
+      "exposure": "PM2.5",
+      "outcome": "other",
+      "study_design": "case_crossover",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "bcc0024f42d44f401b5673def7bbeb776af1c48b55dbdb57d93a7ae0842850f6"
+  },
+  {
+    "corpus_id": "ABS-0038",
+    "pmid": "36580986",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "exclude",
+      "confidence": 1.0,
+      "rationale": "Outcome is not specifically respiratory hospitalization/ED visit, but rather emergency hospital admissions due to all causes, respiratory causes, and circulatory causes.",
+      "exposure": "PM2.5",
+      "outcome": "other",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "96ae4629dda9280f083115b9722fcd603f8f3f204368db2c58d553f5de72916a"
+  },
+  {
+    "corpus_id": "ABS-0039",
+    "pmid": "37968236",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "Meets all inclusion criteria: original epidemiological study, exposure to PM2.5, outcome is respiratory hospitalization, study design is time-series, reports a relative risk with confidence interval, and published in English.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "ee763ee1205f3686ca2992e2d523a2db5d9bf238413705d087b90443eb22a8aa"
+  },
+  {
+    "corpus_id": "ABS-0040",
+    "pmid": "37159523",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "Meets all inclusion criteria: original epidemiological study, exposure to PM2.5, outcome is respiratory hospitalization, study design is case-crossover, reports a relative risk with confidence interval, and published in English.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "case_crossover",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "829c3036c549f0adf92e38f01c4109174c4a9decf907f8b13258767721af8d22"
+  },
+  {
+    "corpus_id": "ABS-0041",
+    "pmid": "27581332",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "Meets all inclusion criteria: original epidemiological study, exposure to PM2.5, outcome is respiratory hospitalization, study design is ecological time series, reports relative risk with confidence interval, and published in English.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "5c9719227ace67b9acc68681485dd9280cc3d401f23a505e074ab7ebb7027bb3"
+  },
+  {
+    "corpus_id": "ABS-0042",
+    "pmid": "32554254",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "Meets all inclusion criteria: original epidemiological study, PM2.5 exposure, respiratory hospitalization/ED visit, time-series study design, reports relative risk with confidence interval, and published in English.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "814e1c46b6ed5c0d03cc1234d521790dcdfb6e08a2c9f222c9f46adb2a2dc3fe"
+  },
+  {
+    "corpus_id": "ABS-0043",
+    "pmid": "29459308",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "Meets all inclusion criteria: original epidemiological study, exposure to PM2.5, outcome is respiratory hospitalization/ED visit, study design is case-crossover, reports relative risks with confidence intervals, and published in English.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "case_crossover",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "fba073c86df476bb7016c17268acf4854e7d4820054e3f5089edc07dfad79778"
+  },
+  {
+    "corpus_id": "ABS-0044",
+    "pmid": "34184226",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "Meets all inclusion criteria: original epidemiological study, exposure to PM2.5, outcome is respiratory hospitalization, time-series study design, reports relative risk with confidence interval, and published in English.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "9492f8075b5390a7a20fceb8c072991b85aa0bfa87c9e3cffcb7452d10d30dee"
+  },
+  {
+    "corpus_id": "ABS-0045",
+    "pmid": "32760064",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "exclude",
+      "confidence": 1.0,
+      "rationale": "Outcome is not respiratory hospitalization/ED visit, but rather hospital admission for various disease categories.",
+      "exposure": "PM2.5",
+      "outcome": "other",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "c0f2ca1be0ba06c2be1fc0b6101d2de3446338455c3a46cd93e8a1bb47204f94"
+  },
+  {
+    "corpus_id": "ABS-0046",
+    "pmid": "32729038",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "exclude",
+      "confidence": 1.0,
+      "rationale": "Outcome is asthma acute exacerbation, not respiratory hospitalization/ED visit",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_ED",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "e61adde712bfde5cd407e9c322da0a0f697bf6998f71ae36d368599b3b5ae216"
+  },
+  {
+    "corpus_id": "ABS-0047",
+    "pmid": "35027064",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": {
+      "decision": "include",
+      "confidence": 1.0,
+      "rationale": "Meets all inclusion criteria: original epidemiological study, exposure is PM2.5, outcome is respiratory hospitalization, study design is time-series, reports a relative risk with confidence interval, and published in English.",
+      "exposure": "PM2.5",
+      "outcome": "respiratory_hospitalization",
+      "study_design": "time_series",
+      "has_effect_estimate": true
+    },
+    "valid": true,
+    "output_hash": "898ae443ec00f4b99cd9cef54230b97662b3984d20459261e6884421dae737ea"
+  },
+  {
+    "corpus_id": "ABS-0048",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 51] Network is unreachable>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0049",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0050",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0051",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0052",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0053",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0054",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0055",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0056",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0057",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0058",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0059",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0060",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0061",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0062",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0063",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0064",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0065",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0066",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0067",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0068",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0069",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0070",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0071",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0072",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0073",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0074",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0075",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0076",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0077",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0078",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0079",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0080",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0081",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0082",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0083",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0084",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0085",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0086",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0087",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0088",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0089",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0090",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0091",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0092",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0093",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0094",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0095",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0096",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0097",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0098",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0099",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0100",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0101",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0102",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0103",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0104",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0105",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0106",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0107",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0108",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0109",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0110",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0111",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0112",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0113",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0114",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0115",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0116",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0117",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0118",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0119",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0120",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0121",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0122",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0123",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0124",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0125",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0126",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0127",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0128",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0129",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0130",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0131",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0132",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0133",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0134",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0135",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0136",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0137",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0138",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0139",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0140",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0141",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0142",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0143",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0144",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0145",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0146",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0147",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0148",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0149",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0150",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0151",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0152",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0153",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0154",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0155",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0156",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0157",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0158",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0159",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0160",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0161",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0162",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0163",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0164",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0165",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0166",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0167",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0168",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0169",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0170",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0171",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0172",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0173",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0174",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0175",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0176",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0177",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0178",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0179",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0180",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0181",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0182",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0183",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0184",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0185",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0186",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0187",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0188",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0189",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0190",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0191",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0192",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0193",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0194",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0195",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0196",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0197",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0198",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0199",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0200",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0201",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0202",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0203",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0204",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0205",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0206",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0207",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0208",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0209",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0210",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0211",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0212",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0213",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0214",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0215",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0216",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0217",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0218",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0219",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0220",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0221",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0222",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0223",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0224",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0225",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0226",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0227",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0228",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0229",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0230",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0231",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0232",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0233",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0234",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0235",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0236",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0237",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0238",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0239",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0240",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0241",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0242",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0243",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0244",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0245",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0246",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0247",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0248",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0249",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0250",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0251",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0252",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0253",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0254",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0255",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0256",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0257",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0258",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0259",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0260",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0261",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0262",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0263",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0264",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0265",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0266",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0267",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0268",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0269",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0270",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0271",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0272",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0273",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0274",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0275",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0276",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0277",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0278",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0279",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0280",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0281",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0282",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0283",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0284",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0285",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0286",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0287",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0288",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0289",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0290",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0291",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0292",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0293",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0294",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0295",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0296",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0297",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0298",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0299",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0300",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0301",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0302",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0303",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0304",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0305",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0306",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0307",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0308",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0309",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0310",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0311",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0312",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0313",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0314",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0315",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0316",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0317",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0318",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0319",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0320",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0321",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0322",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0323",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0324",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0325",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0326",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0327",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0328",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0329",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0330",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0331",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0332",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0333",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0334",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0335",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0336",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0337",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0338",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0339",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0340",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0341",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0342",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0343",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0344",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0345",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0346",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0347",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0348",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0349",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0350",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0351",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0352",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0353",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0354",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0355",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0356",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0357",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0358",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0359",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0360",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0361",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0362",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0363",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0364",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0365",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0366",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0367",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0368",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0369",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0370",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0371",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0372",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0373",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0374",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0375",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0376",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0377",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0378",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0379",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0380",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0381",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0382",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0383",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0384",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0385",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0386",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0387",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0388",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0389",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0390",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0391",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0392",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0393",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0394",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0395",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0396",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0397",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0398",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0399",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0400",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0401",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0402",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0403",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0404",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0405",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0406",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0407",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0408",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0409",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0410",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0411",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0412",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0413",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0414",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0415",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0416",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0417",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0418",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0419",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0420",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0421",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0422",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0423",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0424",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0425",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0426",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0427",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0428",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0429",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0430",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0431",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0432",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0433",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0434",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0435",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0436",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0437",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0438",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0439",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0440",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0441",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0442",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0443",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0444",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0445",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0446",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0447",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0448",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0449",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0450",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0451",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0452",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0453",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0454",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0455",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0456",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0457",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0458",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0459",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0460",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0461",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0462",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0463",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0464",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0465",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0466",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0467",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0468",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0469",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0470",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0471",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0472",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0473",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0474",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0475",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0476",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0477",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0478",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0479",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0480",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0481",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0482",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0483",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0484",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0485",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0486",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0487",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0488",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0489",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0490",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0491",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0492",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0493",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0494",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0495",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0496",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0497",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0498",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0499",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  },
+  {
+    "corpus_id": "ABS-0500",
+    "run_id": 5,
+    "model_id": "llama3-8b-cloud",
+    "output": null,
+    "valid": false,
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>",
+    "output_hash": null
+  }
+]

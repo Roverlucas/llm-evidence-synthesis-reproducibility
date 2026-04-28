@@ -1,0 +1,4827 @@
+[
+  {
+    "corpus_id": "ABS-0001",
+    "pmid": "38698010",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "not_reported",
+      "study_location": "multiple cities, South Korea",
+      "study_period": "2016-2020",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "estimates": []
+    },
+    "valid": true,
+    "output_hash": "a3c44d3f73c7c43ff398148a80253e75db0efda604cb946dcb8ee8567a27ef1e"
+  },
+  {
+    "corpus_id": "ABS-0002",
+    "pmid": "29259031",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "none_2015",
+      "study_location": "Paris, France",
+      "study_period": "2010-2015",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": null,
+      "estimates": []
+    },
+    "valid": true,
+    "output_hash": "41a77cf299f0564e1072608cc34c025320b24edb16a0054c2f52f8fd21d2ff20"
+  },
+  {
+    "corpus_id": "ABS-0003",
+    "pmid": "35073244",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown_2000_2012",
+      "study_location": "United States",
+      "study_period": "2000-2012",
+      "study_design": "case_crossover",
+      "population": "other",
+      "sample_size": 1627002,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0031,
+          "ci_lower": 1.0024,
+          "ci_upper": 1.0037,
+          "ci_level": 95,
+          "exposure_increment": "per 1 \u03bcg/m\u00b3",
+          "lag": null,
+          "outcome_specific": "asthma",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.001,
+          "ci_lower": 1.0005,
+          "ci_upper": 1.0015,
+          "ci_level": 95,
+          "exposure_increment": "per 1 ppb",
+          "lag": null,
+          "outcome_specific": "asthma",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0028,
+          "ci_lower": 1.0024,
+          "ci_upper": 1.0032,
+          "ci_level": 95,
+          "exposure_increment": "per 1 ppb",
+          "lag": null,
+          "outcome_specific": "asthma",
+          "covariates": null
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "668bb468e74086b9e5595255c62b8bed4a3d45a2999a7bf4e6e42ccbbb140475"
+  },
+  {
+    "corpus_id": "ABS-0004",
+    "pmid": "35394903",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Pittsburgh, United States",
+      "study_period": "2010-2018",
+      "study_design": "case_crossover",
+      "population": "children",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.014,
+          "ci_lower": 1.003,
+          "ci_upper": 1.025,
+          "ci_level": 95,
+          "exposure_increment": "per 10-unit increase in AQI",
+          "lag": "lag2",
+          "outcome_specific": "asthma",
+          "covariates": null
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.012,
+          "ci_lower": 1.001,
+          "ci_upper": 1.023,
+          "ci_level": 95,
+          "exposure_increment": "per 10-unit increase in AQI",
+          "lag": "lag3",
+          "outcome_specific": "asthma",
+          "covariates": null
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "c48a4a989fe8da6b507afdeaf40bfd56d79070d929aefba79fb640c8dbed2269"
+  },
+  {
+    "corpus_id": "ABS-0005",
+    "pmid": "35104259",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "not_reported",
+      "study_location": "United States",
+      "study_period": "2000-2014",
+      "study_design": "case_crossover",
+      "population": "elderly",
+      "sample_size": 8690837,
+      "estimates": []
+    },
+    "valid": true,
+    "output_hash": "b294e879c8209dba441c6bd1c63c3f3a00d777502ca102885a6ca26ae0310f13"
+  },
+  {
+    "corpus_id": "ABS-0006",
+    "pmid": "35384572",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "Lanzhou_2019",
+      "study_location": "Lanzhou, China",
+      "study_period": "2014-2019",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": 90942,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.03,
+          "ci_lower": 1.012,
+          "ci_upper": 1.049,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-7",
+          "outcome_specific": "all_respiratory",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.009,
+          "ci_lower": 1.001,
+          "ci_upper": 1.015,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-7",
+          "outcome_specific": "all_respiratory",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.047,
+          "ci_lower": 1.024,
+          "ci_upper": 1.071,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-7",
+          "outcome_specific": "all_respiratory",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.14,
+          "ci_lower": 1.052,
+          "ci_upper": 1.236,
+          "ci_level": 95,
+          "exposure_increment": "per 1 mg/m\u00b3",
+          "lag": "lag0-7",
+          "outcome_specific": "all_respiratory",
+          "covariates": null
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "eb23c1a26d07365c7a4fd12fd7d8f99bb32bb2075536bd2b81da34c472cc1aee"
+  },
+  {
+    "corpus_id": "ABS-0007",
+    "pmid": "35989078",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Padova, Italy",
+      "study_period": "2007-2018",
+      "study_design": "case_crossover",
+      "population": "children",
+      "sample_size": 2251,
+      "estimates": []
+    },
+    "valid": true,
+    "output_hash": "99194ac61599661cf2e83792cc40581a9bed3f1e0bcaabc6a9346c4d9800050e"
+  },
+  {
+    "corpus_id": "ABS-0008",
+    "pmid": "37792321",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Lanzhou, China",
+      "study_period": "2014-2019",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": 15881,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0247,
+          "ci_lower": 1.0092,
+          "ci_upper": 1.0405,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-6",
+          "outcome_specific": "other",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0928,
+          "ci_lower": 1.0562,
+          "ci_upper": 1.1308,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-6",
+          "outcome_specific": "other",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0715,
+          "ci_lower": 1.0495,
+          "ci_upper": 1.094,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-6",
+          "outcome_specific": "other",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0028,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0056,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "other",
+          "covariates": null
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "d608143b4f7a7d0bc2f2240ea0f689b67cc99863af96e309d11c917478505201"
+  },
+  {
+    "corpus_id": "ABS-0009",
+    "pmid": "30917578",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Utah, USA",
+      "study_period": null,
+      "study_design": "case_crossover",
+      "population": "other",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.84,
+          "ci_lower": 1.13,
+          "ci_upper": 3.0,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "3-day average",
+          "outcome_specific": "respiratory hospitalization (survivors)",
+          "covariates": null
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 2.09,
+          "ci_lower": 1.06,
+          "ci_upper": 4.14,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "3-day average",
+          "outcome_specific": "respiratory infection hospitalization (survivors)",
+          "covariates": null
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 2.03,
+          "ci_lower": 1.14,
+          "ci_upper": 3.61,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "3-day average",
+          "outcome_specific": "respiratory hospitalization (chemotherapy-treated survivors)",
+          "covariates": null
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 0.84,
+          "ci_lower": 0.57,
+          "ci_upper": 1.25,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "3-day average",
+          "outcome_specific": "respiratory hospitalization (cancer-free sample)",
+          "covariates": null
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "ed1d86c5375c4ddfe05ef6c5e7d7f2749bac5ef258bef51329e23f18453f4663"
+  },
+  {
+    "corpus_id": "ABS-0010",
+    "pmid": "28787174",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown_2013",
+      "study_location": "Israel",
+      "study_period": "2003-2013",
+      "study_design": "case_crossover",
+      "population": "children",
+      "sample_size": 3889,
+      "estimates": [
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.04,
+          "ci_lower": 1.02,
+          "ci_upper": 1.06,
+          "ci_level": 95,
+          "exposure_increment": "per IQR",
+          "lag": "other",
+          "outcome_specific": "other",
+          "covariates": [
+            "temperature"
+          ]
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.07,
+          "ci_lower": 1.01,
+          "ci_upper": 1.15,
+          "ci_level": 95,
+          "exposure_increment": "per IQR",
+          "lag": "other",
+          "outcome_specific": "other",
+          "covariates": [
+            "temperature"
+          ]
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.03,
+          "ci_lower": 1.01,
+          "ci_upper": 1.07,
+          "ci_level": 95,
+          "exposure_increment": "per IQR",
+          "lag": "other",
+          "outcome_specific": "other",
+          "covariates": [
+            "temperature"
+          ]
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.03,
+          "ci_lower": 1.01,
+          "ci_upper": 1.07,
+          "ci_level": 95,
+          "exposure_increment": "per IQR",
+          "lag": "other",
+          "outcome_specific": "other",
+          "covariates": [
+            "temperature"
+          ]
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.06,
+          "ci_lower": 1.03,
+          "ci_upper": 1.09,
+          "ci_level": 95,
+          "exposure_increment": "per IQR",
+          "lag": "other",
+          "outcome_specific": "other",
+          "covariates": [
+            "temperature"
+          ]
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.01,
+          "ci_lower": 0.97,
+          "ci_upper": 1.04,
+          "ci_level": 95,
+          "exposure_increment": "per IQR",
+          "lag": "other",
+          "outcome_specific": "other",
+          "covariates": [
+            "temperature"
+          ]
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "41f894cab2d3e105d886925fdf0cfb6649fd05b88b79f44dad72ad4caf7bbc91"
+  },
+  {
+    "corpus_id": "ABS-0011",
+    "pmid": "35802828",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown_unknown",
+      "study_location": "Canada",
+      "study_period": null,
+      "study_design": "case_crossover",
+      "population": "children",
+      "sample_size": 10500,
+      "estimates": [
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.004,
+          "ci_lower": 0.955,
+          "ci_upper": 1.056,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag1",
+          "outcome_specific": "all_respiratory",
+          "covariates": null
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.084,
+          "ci_lower": 1.007,
+          "ci_upper": 1.167,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag1",
+          "outcome_specific": "all_respiratory",
+          "covariates": null
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 0.97,
+          "ci_lower": 0.929,
+          "ci_upper": 1.014,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag1",
+          "outcome_specific": "all_respiratory",
+          "covariates": null
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "0dedf0cea2a87c47ab26d1492b26653c65ecc56ad1814c5ab083474eb41910b5"
+  },
+  {
+    "corpus_id": "ABS-0012",
+    "pmid": "36197352",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Taubat\u00e9, Trememb\u00e9, Pindamonhangaba, Brazil",
+      "study_period": "2020-2021",
+      "study_design": "time_series",
+      "population": "other",
+      "sample_size": 1300,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0124,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "other",
+          "lag": "lag7",
+          "outcome_specific": "other",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "hospitalization date"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0216,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "other",
+          "lag": "lag2",
+          "outcome_specific": "other",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "hospitalization date"
+          ]
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "a78f527e693033e938356d80de843509326fda29cd2b8aa6dcd9391367cafa81"
+  },
+  {
+    "corpus_id": "ABS-0013",
+    "pmid": "37011135",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "United States",
+      "study_period": "2005-2014",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.016,
+          "ci_lower": 1.008,
+          "ci_upper": 1.025,
+          "ci_level": 95,
+          "exposure_increment": "per 6.3 \u00b5g/m\u00b3",
+          "lag": "lag0-7",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "meteorology",
+            "time trend",
+            "influenza activity"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.014,
+          "ci_lower": 1.007,
+          "ci_upper": 1.02,
+          "ci_level": 95,
+          "exposure_increment": "per 9.6 \u00b5g/m\u00b3",
+          "lag": "lag0-7",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "meteorology",
+            "time trend",
+            "influenza activity"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.016,
+          "ci_lower": 1.009,
+          "ci_upper": 1.024,
+          "ci_level": 95,
+          "exposure_increment": "per 2.8 \u00b5g/m\u00b3",
+          "lag": "lag0-7",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "meteorology",
+            "time trend",
+            "influenza activity"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.008,
+          "ci_lower": 0.995,
+          "ci_upper": 1.022,
+          "ci_level": 95,
+          "exposure_increment": "per 0.02 ppm",
+          "lag": "lag0-7",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "meteorology",
+            "time trend",
+            "influenza activity"
+          ]
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "88e38afa26d1c678aabbdd12997870c7e4bd3078e4a974e76806c1b529660715"
+  },
+  {
+    "corpus_id": "ABS-0014",
+    "pmid": "36376253",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown_2024",
+      "study_location": "Melbourne, Australia",
+      "study_period": "2014-2019",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "IRR",
+          "effect_estimate": 1.043,
+          "ci_lower": 1.0,
+          "ci_upper": 1.089,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "7-day average",
+          "outcome_specific": "acute respiratory illnesses",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "other pollutants"
+          ]
+        },
+        {
+          "effect_measure": "IRR",
+          "effect_estimate": 1.013,
+          "ci_lower": 0.971,
+          "ci_upper": 1.056,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "7-day average",
+          "outcome_specific": "acute respiratory illnesses",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "other pollutants"
+          ]
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "6d839105ae6c0425a2efc4053ccd73950b31233c3d6a2e2c1b966aa61b74d95d"
+  },
+  {
+    "corpus_id": "ABS-0015",
+    "pmid": "36243957",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown_2020",
+      "study_location": "Changchun, China",
+      "study_period": "2015-2019",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.083,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": null,
+          "exposure_increment": "other",
+          "lag": "lag0-7",
+          "outcome_specific": "all_respiratory",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.121,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": null,
+          "exposure_increment": "other",
+          "lag": "lag0-7",
+          "outcome_specific": "all_respiratory",
+          "covariates": null
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "65d48efd8ba1b5ed29fadaaffa95be376e70121c3eaa882a315299dc703c5c91"
+  },
+  {
+    "corpus_id": "ABS-0016",
+    "pmid": "35692312",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "not_reported",
+      "study_location": "Wuhan, China",
+      "study_period": "2015-2020",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": 51676,
+      "estimates": []
+    },
+    "valid": true,
+    "output_hash": "d9ffb91423b044ccf035c2abaa1d6bc7d3b020f5b1345332c5843607ac3a5ee0"
+  },
+  {
+    "corpus_id": "ABS-0017",
+    "pmid": "40433992",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown_unknown",
+      "study_location": "United States",
+      "study_period": "2006-2016",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0051,
+          "ci_lower": 1.0035,
+          "ci_upper": 1.0067,
+          "ci_level": 95,
+          "exposure_increment": "per 0.1 \u00b5g/m\u00b3",
+          "lag": "3-month average",
+          "outcome_specific": "hypertension",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "40fce42b13234916a1827cd9dc23d988ef8829c4de198373cdbacbdea7f8e87d"
+  },
+  {
+    "corpus_id": "ABS-0018",
+    "pmid": "30781785",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Beijing, China",
+      "study_period": "2010-2012",
+      "study_design": "time_series",
+      "population": "other",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "other",
+          "effect_estimate": 0.84,
+          "ci_lower": 0.05,
+          "ci_upper": 1.64,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-3",
+          "outcome_specific": "other",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "185663e7307133c1bb670ebaf50403bda4ecc03cd67145dc737a91a047d43b84"
+  },
+  {
+    "corpus_id": "ABS-0019",
+    "pmid": "35307034",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Berlin, Germany",
+      "study_period": "2005-2015",
+      "study_design": "time_series",
+      "population": "other",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.101,
+          "ci_lower": 1.013,
+          "ci_upper": 1.195,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "asthma",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.123,
+          "ci_lower": 1.081,
+          "ci_upper": 1.168,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "COPD",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "f39732bb26267ac5ec659f11add6993e22e60f5dd681550f22b082fa4b104299"
+  },
+  {
+    "corpus_id": "ABS-0020",
+    "pmid": "40305019",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "western US",
+      "study_period": "2006-2016",
+      "study_design": "other",
+      "population": "elderly",
+      "sample_size": 10369361,
+      "estimates": [
+        {
+          "effect_measure": "other",
+          "effect_estimate": 2.4,
+          "ci_lower": 0.17,
+          "ci_upper": 4.63,
+          "ci_level": 95,
+          "exposure_increment": "per 40 \u00b5g/m\u00b3",
+          "lag": "other: lag0-7 cumulative",
+          "outcome_specific": "all_respiratory",
+          "covariates": []
+        },
+        {
+          "effect_measure": "other",
+          "effect_estimate": 2.61,
+          "ci_lower": -0.09,
+          "ci_upper": 5.3,
+          "ci_level": 95,
+          "exposure_increment": "per 40 \u00b5g/m\u00b3",
+          "lag": "other: lag0-7 cumulative",
+          "outcome_specific": "cardiovascular",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "e54ce104abad063507d3890f4a53a63e2d45cb106860191c954bec40d9d6f0cc"
+  },
+  {
+    "corpus_id": "ABS-0021",
+    "pmid": "29643111",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "Unknown_2015",
+      "study_location": "California, USA",
+      "study_period": "2015",
+      "study_design": "time_series",
+      "population": "elderly",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.15,
+          "ci_lower": 1.09,
+          "ci_upper": 1.22,
+          "ci_level": 95,
+          "exposure_increment": "dense smoke",
+          "lag": "lag0",
+          "outcome_specific": "cardiovascular",
+          "covariates": [
+            "heat index",
+            "day of week",
+            "seasonality",
+            "population"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.22,
+          "ci_lower": 1.0,
+          "ci_upper": 1.49,
+          "ci_level": 95,
+          "exposure_increment": "dense smoke",
+          "lag": "lag1",
+          "outcome_specific": "cerebrovascular",
+          "covariates": [
+            "heat index",
+            "day of week",
+            "seasonality",
+            "population"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.18,
+          "ci_lower": 1.08,
+          "ci_upper": 1.28,
+          "ci_level": 95,
+          "exposure_increment": "dense smoke",
+          "lag": "lag1",
+          "outcome_specific": "respiratory",
+          "covariates": [
+            "heat index",
+            "day of week",
+            "seasonality",
+            "population"
+          ]
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "0b0cb93c4810557f1a596ac3c0e29af9239845b9323458645d2dddbad5a0a9b8"
+  },
+  {
+    "corpus_id": "ABS-0022",
+    "pmid": "37972204",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown_2019",
+      "study_location": "Chiang Mai, Thailand",
+      "study_period": "2018-2019",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": 3540,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.023,
+          "ci_lower": 1.002,
+          "ci_upper": 1.044,
+          "ci_level": 95,
+          "exposure_increment": null,
+          "lag": "lag1",
+          "outcome_specific": "other",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.026,
+          "ci_lower": 1.005,
+          "ci_upper": 1.047,
+          "ci_level": 95,
+          "exposure_increment": null,
+          "lag": "lag2",
+          "outcome_specific": "other",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.071,
+          "ci_lower": 1.025,
+          "ci_upper": 1.118,
+          "ci_level": 95,
+          "exposure_increment": null,
+          "lag": "lag0",
+          "outcome_specific": "pneumonia",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.024,
+          "ci_lower": 1.003,
+          "ci_upper": 1.046,
+          "ci_level": 95,
+          "exposure_increment": null,
+          "lag": "lag1",
+          "outcome_specific": "pneumonia",
+          "covariates": null
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.36,
+          "ci_lower": 1.08,
+          "ci_upper": 1.73,
+          "ci_level": 95,
+          "exposure_increment": null,
+          "lag": "lag3",
+          "outcome_specific": "other",
+          "covariates": null
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "488482ae574b600186adf24bd7056a60ce58524383935affbac9761fdf35d08a"
+  },
+  {
+    "corpus_id": "ABS-0023",
+    "pmid": "34981381",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Qingdao, China",
+      "study_period": "2015-2017",
+      "study_design": "other",
+      "population": "general",
+      "sample_size": 433032,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 2.1,
+          "ci_lower": 1.06,
+          "ci_upper": 4.13,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "other",
+          "outcome_specific": "pneumonia",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "a3b9ef6a0d6f097940c6e6c9703a08fd565f9cfd85bb80cde7def9a5a2b2a660"
+  },
+  {
+    "corpus_id": "ABS-0024",
+    "pmid": "31787180",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown",
+      "study_location": null,
+      "study_period": null,
+      "study_design": "time_series",
+      "population": null,
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.011,
+          "ci_lower": 1.002,
+          "ci_upper": 1.02,
+          "ci_level": 95,
+          "exposure_increment": "per IQR (76 \u03bcg/m\u00b3)",
+          "lag": "lag4",
+          "outcome_specific": "all_respiratory",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.072,
+          "ci_lower": 1.024,
+          "ci_upper": 1.119,
+          "ci_level": 95,
+          "exposure_increment": "per IQR (76 \u03bcg/m\u00b3)",
+          "lag": "lag5",
+          "outcome_specific": "asthma",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.104,
+          "ci_lower": 1.032,
+          "ci_upper": 1.176,
+          "ci_level": 95,
+          "exposure_increment": "per IQR (76 \u03bcg/m\u00b3)",
+          "lag": "lag4",
+          "outcome_specific": "bronchitis",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.091,
+          "ci_lower": 1.047,
+          "ci_upper": 1.135,
+          "ci_level": 95,
+          "exposure_increment": "per IQR (76 \u03bcg/m\u00b3)",
+          "lag": "lag3",
+          "outcome_specific": "COPD",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "7d46f77bfbae7e1788543fe3b46bf7ca33a1b5f5a75579fc95a21186d5923890"
+  },
+  {
+    "corpus_id": "ABS-0025",
+    "pmid": "37980997",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "not_reported",
+      "study_location": "Hanoi, Vietnam",
+      "study_period": "2007-2019",
+      "study_design": "case_crossover",
+      "population": "children",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "other",
+          "effect_estimate": 0.6,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-2",
+          "outcome_specific": "all_respiratory",
+          "covariates": null
+        },
+        {
+          "effect_measure": "other",
+          "effect_estimate": 1.2,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-2",
+          "outcome_specific": "all_respiratory",
+          "covariates": null
+        },
+        {
+          "effect_measure": "other",
+          "effect_estimate": 1.4,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-2",
+          "outcome_specific": "all_respiratory",
+          "covariates": null
+        },
+        {
+          "effect_measure": "other",
+          "effect_estimate": 0.8,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-2",
+          "outcome_specific": "all_respiratory",
+          "covariates": null
+        },
+        {
+          "effect_measure": "other",
+          "effect_estimate": 1.6,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-2",
+          "outcome_specific": "all_respiratory",
+          "covariates": null
+        },
+        {
+          "effect_measure": "other",
+          "effect_estimate": 0.3,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-2",
+          "outcome_specific": "all_respiratory",
+          "covariates": null
+        },
+        {
+          "effect_measure": "other",
+          "effect_estimate": 1.7,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 1000 \u00b5g/m\u00b3",
+          "lag": "lag0-2",
+          "outcome_specific": "all_respiratory",
+          "covariates": null
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "20914d74988e1b665920bcfbb9447ac6869b20349622658613e5b1951f0d89bc"
+  },
+  {
+    "corpus_id": "ABS-0026",
+    "pmid": "35583542",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "Unknown_2019",
+      "study_location": "Jinan, China",
+      "study_period": "2015-2019",
+      "study_design": "time_series",
+      "population": "other",
+      "sample_size": 221,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.00875,
+          "ci_lower": 1.00375,
+          "ci_upper": 1.01377,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "other",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.00548,
+          "ci_lower": 1.00148,
+          "ci_upper": 1.00949,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "other",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.01968,
+          "ci_lower": 1.00869,
+          "ci_upper": 1.0308,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "other",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.01534,
+          "ci_lower": 1.00305,
+          "ci_upper": 1.02778,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag2",
+          "outcome_specific": "other",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "c2efc0f0f9481d3678186a1330c173158f2a40dedc678954b1c0a3805a54bc4b"
+  },
+  {
+    "corpus_id": "ABS-0027",
+    "pmid": "26452298",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "Strickland_2016",
+      "study_location": "Georgia, USA",
+      "study_period": "2002-2010",
+      "study_design": "case_crossover",
+      "population": "children",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.013,
+          "ci_lower": 1.003,
+          "ci_upper": 1.023,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "asthma",
+          "covariates": []
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.015,
+          "ci_lower": 1.008,
+          "ci_upper": 1.022,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "other",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "e7c574625f4933012add4229caea159dc63f4b47db7f7c654dc40ca8bbd5a415"
+  },
+  {
+    "corpus_id": "ABS-0028",
+    "pmid": "39038774",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown_unknown",
+      "study_location": "New York State, USA",
+      "study_period": "2014-2019",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.021,
+          "ci_lower": 1.007,
+          "ci_upper": 1.036,
+          "ci_level": 95,
+          "exposure_increment": "per IQR",
+          "lag": "lag0-6",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "temperature",
+            "relative humidity",
+            "weekday"
+          ]
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "d67396fc9da301e784968eac3595091ffff666ac602a1932b988426b513dba6c"
+  },
+  {
+    "corpus_id": "ABS-0029",
+    "pmid": "37772521",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown_unknown",
+      "study_location": "Lanzhou, China",
+      "study_period": "2013-2019",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "estimates": []
+    },
+    "valid": true,
+    "output_hash": "23aeff5ab256c99f471a4c3a41e3a91e8d3d9dcb8fcc0a5b1a4ea9f6ba20456e"
+  },
+  {
+    "corpus_id": "ABS-0030",
+    "pmid": "35142610",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "Unknown_2020",
+      "study_location": "San Francisco Bay Area, California, USA",
+      "study_period": "2015-2017",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.25,
+          "ci_lower": 1.21,
+          "ci_upper": 1.3,
+          "ci_level": 95,
+          "exposure_increment": "other",
+          "lag": "lag0",
+          "outcome_specific": "all_respiratory",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality",
+            "day_of_week"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.18,
+          "ci_lower": 1.1,
+          "ci_upper": 1.27,
+          "ci_level": 95,
+          "exposure_increment": "other",
+          "lag": "lag0",
+          "outcome_specific": "CLRD",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality",
+            "day_of_week"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.14,
+          "ci_lower": 1.03,
+          "ci_upper": 1.25,
+          "ci_level": 95,
+          "exposure_increment": "other",
+          "lag": "lag0",
+          "outcome_specific": "acute_myocardial_infarction",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality",
+            "day_of_week"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.46,
+          "ci_lower": 1.38,
+          "ci_upper": 1.55,
+          "ci_level": 95,
+          "exposure_increment": "other",
+          "lag": "lag0",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality",
+            "day_of_week"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 0.77,
+          "ci_lower": 0.55,
+          "ci_upper": 1.08,
+          "ci_level": 95,
+          "exposure_increment": "other",
+          "lag": "lag0",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality",
+            "day_of_week"
+          ]
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "d04b6fc5a3b63af26f019364c8db69afef442cc9d38fa97396eb24d6ffce5569"
+  },
+  {
+    "corpus_id": "ABS-0031",
+    "pmid": "39048614",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "Ganzhou_study",
+      "study_location": "Ganzhou, China",
+      "study_period": "2016-2019",
+      "study_design": "time_series",
+      "population": "other",
+      "sample_size": 57251,
+      "estimates": [
+        {
+          "effect_measure": "other",
+          "effect_estimate": -0.227,
+          "ci_lower": -0.293,
+          "ci_upper": -0.161,
+          "ci_level": 95,
+          "exposure_increment": "other",
+          "lag": null,
+          "outcome_specific": "COPD",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "d6b4445ffaff2e6bb4be05bd4cc5475b6a5cc2fe15cf66c51eb914d8899f2228"
+  },
+  {
+    "corpus_id": "ABS-0032",
+    "pmid": "35627536",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown_unknown",
+      "study_location": "Kuwait",
+      "study_period": "2010-2018",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": 218749,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0161,
+          "ci_lower": 1.0087,
+          "ci_upper": 1.0235,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "other",
+          "outcome_specific": "all_respiratory",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "1a424020367b639d23717302fa18559e761d08e01dd33b6c3d06032c32959288"
+  },
+  {
+    "corpus_id": "ABS-0033",
+    "pmid": "31755707",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "not_reported",
+      "study_location": "New York State, USA",
+      "study_period": "2005-2016",
+      "study_design": "case_crossover",
+      "population": "other",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "other",
+          "effect_estimate": 9.2,
+          "ci_lower": 4.3,
+          "ci_upper": 14.3,
+          "ci_level": 95,
+          "exposure_increment": "per IQR",
+          "lag": "other",
+          "outcome_specific": "other",
+          "covariates": []
+        },
+        {
+          "effect_measure": "other",
+          "effect_estimate": 3.9,
+          "ci_lower": 1.1,
+          "ci_upper": 6.8,
+          "ci_level": 95,
+          "exposure_increment": "per IQR",
+          "lag": "other",
+          "outcome_specific": "other",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "98b11c1fa8aee3c611d149fa5512f24100549a861dd2f8b84a41a4e40cbc70db"
+  },
+  {
+    "corpus_id": "ABS-0034",
+    "pmid": "34989991",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Lanzhou, China",
+      "study_period": "2014-2018",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "other",
+          "effect_estimate": 5.302,
+          "ci_lower": 3.202,
+          "ci_upper": 7.445,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag07",
+          "outcome_specific": "other",
+          "covariates": [
+            "temperature",
+            "humidity"
+          ]
+        },
+        {
+          "effect_measure": "other",
+          "effect_estimate": 0.808,
+          "ci_lower": 0.291,
+          "ci_upper": 1.328,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag07",
+          "outcome_specific": "other",
+          "covariates": [
+            "temperature",
+            "humidity"
+          ]
+        },
+        {
+          "effect_measure": "other",
+          "effect_estimate": 10.607,
+          "ci_lower": 5.819,
+          "ci_upper": 15.611,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag07",
+          "outcome_specific": "other",
+          "covariates": [
+            "temperature",
+            "humidity"
+          ]
+        },
+        {
+          "effect_measure": "other",
+          "effect_estimate": 5.325,
+          "ci_lower": 2.379,
+          "ci_upper": 8.357,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag07",
+          "outcome_specific": "other",
+          "covariates": [
+            "temperature",
+            "humidity"
+          ]
+        },
+        {
+          "effect_measure": "other",
+          "effect_estimate": 20.799,
+          "ci_lower": 11.834,
+          "ci_upper": 30.482,
+          "ci_level": 95,
+          "exposure_increment": "per 1 mg/m\u00b3",
+          "lag": "lag07",
+          "outcome_specific": "other",
+          "covariates": [
+            "temperature",
+            "humidity"
+          ]
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "26ef2099763485e05277ac685962b22a4b2d4421a8345cde9d6872d34f20f9d2"
+  },
+  {
+    "corpus_id": "ABS-0035",
+    "pmid": "36777770",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "Ningbo_2017",
+      "study_location": "Ningbo, China",
+      "study_period": "2015-2017",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0222,
+          "ci_lower": 1.0064,
+          "ci_upper": 1.0382,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag03",
+          "outcome_specific": "pneumonia_and_asthma",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0194,
+          "ci_lower": 1.0085,
+          "ci_upper": 1.0304,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag03",
+          "outcome_specific": "pneumonia_and_asthma",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.1121,
+          "ci_lower": 1.047,
+          "ci_upper": 1.181,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag03",
+          "outcome_specific": "pneumonia_and_asthma",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0542,
+          "ci_lower": 1.0307,
+          "ci_upper": 1.0782,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag03",
+          "outcome_specific": "pneumonia_and_asthma",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "65ea952c7705c8d9a2454cc649e9e4c5d3c645ee1f0d76e53b02eb17ccb42a4d"
+  },
+  {
+    "corpus_id": "ABS-0036",
+    "pmid": "31254082",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Jackson, MS, USA",
+      "study_period": "2003-2011",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "other",
+          "effect_estimate": 7.2,
+          "ci_lower": 1.7,
+          "ci_upper": 13.1,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "other",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "long-term temporal trends",
+            "meteorology"
+          ]
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "f2fd3ceeae3fd0e0a91025cdfac44293e9ead0b504c890e4fedf7f107031d444"
+  },
+  {
+    "corpus_id": "ABS-0037",
+    "pmid": "39520750",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown_unknown",
+      "study_location": "Jiangsu province, China",
+      "study_period": "2019-2022",
+      "study_design": "case_crossover",
+      "population": "other",
+      "sample_size": 9128,
+      "estimates": [
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.1618,
+          "ci_lower": 1.0379,
+          "ci_upper": 1.3003,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": null,
+          "outcome_specific": "ILD",
+          "covariates": []
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.0406,
+          "ci_lower": 1.0075,
+          "ci_upper": 1.0749,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": null,
+          "outcome_specific": "ILD",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "440b680e3f1511b72ef9e53555bfc9e01ccfe5a1c29ca141adf977e11740f76b"
+  },
+  {
+    "corpus_id": "ABS-0038",
+    "pmid": "36580986",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown_2023",
+      "study_location": "Madrid, Spain",
+      "study_period": "2013-2018",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.007,
+          "ci_lower": 1.004,
+          "ci_upper": 1.011,
+          "ci_level": 95,
+          "exposure_increment": null,
+          "lag": null,
+          "outcome_specific": "natural_causes",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "Public Holidays",
+            "seasonality",
+            "trend",
+            "autoregressive"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.012,
+          "ci_lower": 1.005,
+          "ci_upper": 1.019,
+          "ci_level": 95,
+          "exposure_increment": null,
+          "lag": null,
+          "outcome_specific": "all_respiratory",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "Public Holidays",
+            "seasonality",
+            "trend",
+            "autoregressive"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.049,
+          "ci_lower": 1.014,
+          "ci_upper": 1.046,
+          "ci_level": 95,
+          "exposure_increment": null,
+          "lag": null,
+          "outcome_specific": "natural_causes",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "Public Holidays",
+            "seasonality",
+            "trend",
+            "autoregressive"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.088,
+          "ci_lower": 1.039,
+          "ci_upper": 1.14,
+          "ci_level": 95,
+          "exposure_increment": null,
+          "lag": null,
+          "outcome_specific": "circulatory_causes",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "Public Holidays",
+            "seasonality",
+            "trend",
+            "autoregressive"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.001,
+          "ci_lower": 1.001,
+          "ci_upper": 1.002,
+          "ci_level": 95,
+          "exposure_increment": null,
+          "lag": null,
+          "outcome_specific": "natural_causes",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "Public Holidays",
+            "seasonality",
+            "trend",
+            "autoregressive"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.002,
+          "ci_lower": 1.001,
+          "ci_upper": 1.003,
+          "ci_level": 95,
+          "exposure_increment": null,
+          "lag": null,
+          "outcome_specific": "all_respiratory",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "Public Holidays",
+            "seasonality",
+            "trend",
+            "autoregressive"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.003,
+          "ci_lower": 1.002,
+          "ci_upper": 1.005,
+          "ci_level": 95,
+          "exposure_increment": null,
+          "lag": null,
+          "outcome_specific": "circulatory_causes",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "Public Holidays",
+            "seasonality",
+            "trend",
+            "autoregressive"
+          ]
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "1e508c6e1b13abaa63d1cf63953bfc95036d5a4256a757bc12acd6cc7b49f256"
+  },
+  {
+    "corpus_id": "ABS-0039",
+    "pmid": "37968236",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown_2019",
+      "study_location": "city, China",
+      "study_period": "2014-2019",
+      "study_design": "time_series",
+      "population": "other",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "other",
+          "effect_estimate": null,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": null,
+          "exposure_increment": "per unit increase",
+          "lag": "lag0-4",
+          "outcome_specific": "COPD",
+          "covariates": null
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "bc4f83ac63272ce5ab005272b53e30f6b7b9a176c05641f4b4f0d3eaa08f2bff"
+  },
+  {
+    "corpus_id": "ABS-0040",
+    "pmid": "37159523",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "China",
+      "study_period": "2013-2020",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": 1399955,
+      "estimates": [
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.0173,
+          "ci_lower": 1.0134,
+          "ci_upper": 1.0212,
+          "ci_level": 95,
+          "exposure_increment": "per IQR (34.5 \u00b5g/m\u00b3)",
+          "lag": "lag0-4",
+          "outcome_specific": "all_respiratory",
+          "covariates": null
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.017,
+          "ci_lower": 1.0131,
+          "ci_upper": 1.021,
+          "ci_level": 95,
+          "exposure_increment": "per IQR (26.0 \u00b5g/m\u00b3)",
+          "lag": "lag0-4",
+          "outcome_specific": "all_respiratory",
+          "covariates": null
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "47e27b27b806b2306bf44bb610c46f3ef7d37e3726584ecb7f7d6167140a88cc"
+  },
+  {
+    "corpus_id": "ABS-0041",
+    "pmid": "27581332",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown_2012",
+      "study_location": "Volta Redonda, Brazil",
+      "study_period": "2012-2012",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": 752,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.017,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": null,
+          "exposure_increment": "per 5 \u00b5g/m\u00b3",
+          "lag": "lag2",
+          "outcome_specific": "all_respiratory",
+          "covariates": [
+            "temperature",
+            "relative humidity",
+            "seasonality",
+            "day of the week"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.022,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": null,
+          "exposure_increment": "per 5 \u00b5g/m\u00b3",
+          "lag": "lag5",
+          "outcome_specific": "all_respiratory",
+          "covariates": [
+            "temperature",
+            "relative humidity",
+            "seasonality",
+            "day of the week"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.02,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": null,
+          "exposure_increment": "per 5 \u00b5g/m\u00b3",
+          "lag": "lag7",
+          "outcome_specific": "all_respiratory",
+          "covariates": [
+            "temperature",
+            "relative humidity",
+            "seasonality",
+            "day of the week"
+          ]
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "e26cdbb18589df0850770ad26ff837aeb6b0882d4dfd5cca3679730ac6704dbd"
+  },
+  {
+    "corpus_id": "ABS-0042",
+    "pmid": "32554254",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Republic of Korea",
+      "study_period": "2013-2015",
+      "study_design": "other",
+      "population": "children",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.048,
+          "ci_lower": 1.028,
+          "ci_upper": 1.069,
+          "ci_level": 95,
+          "exposure_increment": "10 \u00b5g/m\u00b3 increase (30 vs 20 \u00b5g/m\u00b3)",
+          "lag": null,
+          "outcome_specific": "other",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.06,
+          "ci_lower": 1.038,
+          "ci_upper": 1.082,
+          "ci_level": 95,
+          "exposure_increment": "10 \u00b5g/m\u00b3 increase (30 vs 20 \u00b5g/m\u00b3)",
+          "lag": null,
+          "outcome_specific": "other",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.083,
+          "ci_lower": 1.046,
+          "ci_upper": 1.122,
+          "ci_level": 95,
+          "exposure_increment": "20 \u00b5g/m\u00b3 increase (40 vs 20 \u00b5g/m\u00b3)",
+          "lag": null,
+          "outcome_specific": "other",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.094,
+          "ci_lower": 1.054,
+          "ci_upper": 1.136,
+          "ci_level": 95,
+          "exposure_increment": "20 \u00b5g/m\u00b3 increase (40 vs 20 \u00b5g/m\u00b3)",
+          "lag": null,
+          "outcome_specific": "other",
+          "covariates": null
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "c1e175da20df452da2789f5c48a5768a20609a4ae841c400f6f4fd14ed6a694d"
+  },
+  {
+    "corpus_id": "ABS-0043",
+    "pmid": "29459308",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown",
+      "study_location": "Ontario, Canada",
+      "study_period": "2004-2011",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": null,
+      "estimates": []
+    },
+    "valid": true,
+    "output_hash": "004803a9355ccf1f0eff89f15ca3826ce1e04f7e2a8788d3c452fc45d007e53e"
+  },
+  {
+    "corpus_id": "ABS-0044",
+    "pmid": "34184226",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Yancheng, China",
+      "study_period": "2014-2019",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": 43283,
+      "estimates": [
+        {
+          "effect_measure": "other",
+          "effect_estimate": 0.73,
+          "ci_lower": 0.4,
+          "ci_upper": 1.06,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "other",
+          "covariates": []
+        },
+        {
+          "effect_measure": "other",
+          "effect_estimate": 0.8,
+          "ci_lower": 0.02,
+          "ci_upper": 1.57,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "pneumonia",
+          "covariates": []
+        },
+        {
+          "effect_measure": "other",
+          "effect_estimate": 1.08,
+          "ci_lower": 0.38,
+          "ci_upper": 1.78,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "COPD",
+          "covariates": []
+        },
+        {
+          "effect_measure": "other",
+          "effect_estimate": 0.67,
+          "ci_lower": 0.23,
+          "ci_upper": 1.11,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "other",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "d9b97e2f7c8e787a0092ef2d6b2b1b32be72127894e1e40552f5279ebf049db1"
+  },
+  {
+    "corpus_id": "ABS-0045",
+    "pmid": "32760064",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown_2017",
+      "study_location": "China",
+      "study_period": "2013-2017",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": 117338867,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0021,
+          "ci_lower": 1.0015,
+          "ci_upper": 1.0027,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "other",
+          "covariates": [
+            "ozone"
+          ]
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "c52681773bae28d167688a3b028d85ed0b0ee0c4af280679b8ab18138d278314"
+  },
+  {
+    "corpus_id": "ABS-0046",
+    "pmid": "32729038",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Taipei, Taiwan",
+      "study_period": "2012-2015",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.31,
+          "ci_lower": 1.069,
+          "ci_upper": 1.606,
+          "ci_level": 95,
+          "exposure_increment": null,
+          "lag": "lag0",
+          "outcome_specific": "asthma (PM2.5, pediatric)",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.289,
+          "ci_lower": 1.05,
+          "ci_upper": 1.582,
+          "ci_level": 95,
+          "exposure_increment": null,
+          "lag": "lag1",
+          "outcome_specific": "asthma (PM2.5-bound PAH, adult)",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.242,
+          "ci_lower": 1.039,
+          "ci_upper": 1.485,
+          "ci_level": 95,
+          "exposure_increment": null,
+          "lag": "lag2",
+          "outcome_specific": "asthma (PM2.5-bound PAH, adult)",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.576,
+          "ci_lower": 1.371,
+          "ci_upper": 1.81,
+          "ci_level": 95,
+          "exposure_increment": null,
+          "lag": "lag1",
+          "outcome_specific": "asthma (PM2.5-bound PAH, pediatric)",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.426,
+          "ci_lower": 1.265,
+          "ci_upper": 1.607,
+          "ci_level": 95,
+          "exposure_increment": null,
+          "lag": "lag2",
+          "outcome_specific": "asthma (PM2.5-bound PAH, pediatric)",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "f50ea0a71103d0af5e4b2eec11eb6063b32f2b9e1fb4c706a4197e5f84e2be01"
+  },
+  {
+    "corpus_id": "ABS-0047",
+    "pmid": "35027064",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Shanghai, China",
+      "study_period": "2008-2020",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": 1960361,
+      "estimates": [
+        {
+          "effect_measure": "other",
+          "effect_estimate": 0.755,
+          "ci_lower": 0.422,
+          "ci_upper": 1.089,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "all_respiratory",
+          "covariates": [
+            "calendar time",
+            "day of the week",
+            "public holidays",
+            "meteorological factors"
+          ]
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "4b954a599bf23f14204718401919ffe55758758f7040fa8eb97bfca38a7ef273"
+  },
+  {
+    "corpus_id": "ABS-0048",
+    "pmid": "32193561",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown_unknown",
+      "study_location": "Jubail Industrial City, Saudi Arabia",
+      "study_period": "2007-2011",
+      "study_design": "time_series",
+      "population": "other",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.054,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": null,
+          "exposure_increment": "per IQR",
+          "lag": null,
+          "outcome_specific": "asthma",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.044,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": null,
+          "exposure_increment": "per IQR",
+          "lag": null,
+          "outcome_specific": "asthma",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.034,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": null,
+          "exposure_increment": "per IQR",
+          "lag": null,
+          "outcome_specific": "asthma",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.022,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": null,
+          "exposure_increment": "per IQR",
+          "lag": null,
+          "outcome_specific": "asthma",
+          "covariates": null
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "afb60dd1b79217dcf2820757de07d01790ca97044f643f8437ee6e5a21ff457e"
+  },
+  {
+    "corpus_id": "ABS-0049",
+    "pmid": "24240657",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown_unknown",
+      "study_location": "Orange County, California, USA",
+      "study_period": null,
+      "study_design": "case_crossover",
+      "population": "children",
+      "sample_size": 7492,
+      "estimates": []
+    },
+    "valid": true,
+    "output_hash": "d057ecef178cda30149b898a7bbee0627516eb6dba41263bf752244654332796"
+  },
+  {
+    "corpus_id": "ABS-0050",
+    "pmid": "30502738",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Chengdu, China",
+      "study_period": "2015-2016",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "other",
+          "effect_estimate": 0.65,
+          "ci_lower": 0.32,
+          "ci_upper": 0.99,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3 PM10",
+          "lag": "lag06",
+          "outcome_specific": "all_respiratory",
+          "covariates": []
+        },
+        {
+          "effect_measure": "other",
+          "effect_estimate": 0.49,
+          "ci_lower": 0.04,
+          "ci_upper": 0.95,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3 PM10",
+          "lag": "lag06",
+          "outcome_specific": "other",
+          "covariates": []
+        },
+        {
+          "effect_measure": "other",
+          "effect_estimate": 0.91,
+          "ci_lower": 0.15,
+          "ci_upper": 1.69,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3 PM10",
+          "lag": "lag06",
+          "outcome_specific": "other",
+          "covariates": []
+        },
+        {
+          "effect_measure": "other",
+          "effect_estimate": 1.03,
+          "ci_lower": 0.5,
+          "ci_upper": 1.56,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3 PM2.5",
+          "lag": "lag06",
+          "outcome_specific": "all_respiratory",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "ac7a9c9671bc21c4b6f09392248197202345e22da9d1be6aa4b5420d8197b80a"
+  },
+  {
+    "corpus_id": "ABS-0051",
+    "pmid": "20502338",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "London, UK",
+      "study_period": "2000-2005",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "other",
+          "effect_estimate": 2.2,
+          "ci_lower": 0.6,
+          "ci_upper": 3.8,
+          "ci_level": 95,
+          "exposure_increment": "per 10,166 n/cm3",
+          "lag": "lag1",
+          "outcome_specific": "cardiovascular_deaths",
+          "covariates": null
+        },
+        {
+          "effect_measure": "other",
+          "effect_estimate": 0.6,
+          "ci_lower": -0.4,
+          "ci_upper": 1.7,
+          "ci_level": 95,
+          "exposure_increment": "per 10,166 n/cm3",
+          "lag": "lag1",
+          "outcome_specific": "cardiovascular_admissions",
+          "covariates": null
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "38b89c322238e1fecaaec671de109ed389c101ce60e1c4d5c00be30b1f0b6057"
+  },
+  {
+    "corpus_id": "ABS-0052",
+    "pmid": "36863162",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "not_reported",
+      "study_location": "Wuhan, China",
+      "study_period": "2017-2019",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": 2636026,
+      "estimates": [
+        {
+          "effect_measure": "other",
+          "effect_estimate": 2.83,
+          "ci_lower": 0.96,
+          "ci_upper": 4.73,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "unknown",
+          "outcome_specific": "other",
+          "covariates": null
+        },
+        {
+          "effect_measure": "other",
+          "effect_estimate": 2.17,
+          "ci_lower": 0.88,
+          "ci_upper": 3.47,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "unknown",
+          "outcome_specific": "other",
+          "covariates": null
+        },
+        {
+          "effect_measure": "other",
+          "effect_estimate": 1.36,
+          "ci_lower": 0.74,
+          "ci_upper": 1.98,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "unknown",
+          "outcome_specific": "all_respiratory",
+          "covariates": null
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "15c91a246417c6271ee597479bbcbd60594db066077c21e632ced97761127784"
+  },
+  {
+    "corpus_id": "ABS-0053",
+    "pmid": "33980121",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Brescia, Italy",
+      "study_period": "2014-2017",
+      "study_design": "time_series",
+      "population": "other",
+      "sample_size": 543,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.24,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-1",
+          "outcome_specific": "asthma",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.12,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-5",
+          "outcome_specific": "asthma",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.31,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-1",
+          "outcome_specific": "asthma",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "ba848d041a7eaae98b3b37c61d30c5a6a0e0fd42fa2e628d46da0d43bc3d5f98"
+  },
+  {
+    "corpus_id": "ABS-0054",
+    "pmid": "35921071",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Louisiana, USA",
+      "study_period": "2010-2012",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": 63789,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.145,
+          "ci_lower": 1.009,
+          "ci_upper": 1.3,
+          "ci_level": 95,
+          "exposure_increment": "per 1 g/m\u00b2/s",
+          "lag": "lag0",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "date",
+            "parish",
+            "holiday",
+            "day_of_week",
+            "season",
+            "O3",
+            "PM2.5",
+            "pressure",
+            "temperature"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.011,
+          "ci_lower": 1.0,
+          "ci_upper": 1.021,
+          "ci_level": 95,
+          "exposure_increment": "per 1\u00b0C",
+          "lag": "lag0",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "date",
+            "parish",
+            "holiday",
+            "day_of_week",
+            "season",
+            "O3",
+            "PM2.5",
+            "pressure",
+            "precipitation"
+          ]
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "51c8582dfa58201710c966b34cad3872cd3b0e185a2b90bbec1abf0c582650d4"
+  },
+  {
+    "corpus_id": "ABS-0055",
+    "pmid": "36641448",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Sichuan Province, China",
+      "study_period": "2017-2018",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": 192079,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0064,
+          "ci_lower": 1.0004,
+          "ci_upper": 1.0124,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag4",
+          "outcome_specific": "pneumonia",
+          "covariates": [
+            "long-term trends",
+            "seasonality",
+            "day of the week",
+            "meteorological factors"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0133,
+          "ci_lower": 1.0025,
+          "ci_upper": 1.0242,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag010",
+          "outcome_specific": "bronchitis",
+          "covariates": [
+            "long-term trends",
+            "seasonality",
+            "day of the week",
+            "meteorological factors"
+          ]
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "b37c1b754f6cd60ece10aea67ed97ac9332dded31b50e6b6eeee1cf0758a230e"
+  },
+  {
+    "corpus_id": "ABS-0056",
+    "pmid": "36107568",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown_unknown",
+      "study_location": "Seoul, South Korea",
+      "study_period": "2006-2016",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.012,
+          "ci_lower": 1.008,
+          "ci_upper": 1.016,
+          "ci_level": 95,
+          "exposure_increment": "per 1 \u00b5g/m\u00b3",
+          "lag": null,
+          "outcome_specific": "asthma",
+          "covariates": []
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.015,
+          "ci_lower": 1.008,
+          "ci_upper": 1.023,
+          "ci_level": 95,
+          "exposure_increment": "per 1 \u00b5g/m\u00b3",
+          "lag": null,
+          "outcome_specific": "asthma",
+          "covariates": []
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.015,
+          "ci_lower": 1.006,
+          "ci_upper": 1.015,
+          "ci_level": 95,
+          "exposure_increment": "per 1 \u00b5g/m\u00b3",
+          "lag": null,
+          "outcome_specific": "asthma",
+          "covariates": []
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.015,
+          "ci_lower": 1.009,
+          "ci_upper": 1.024,
+          "ci_level": 95,
+          "exposure_increment": "per 1 \u00b5g/m\u00b3",
+          "lag": null,
+          "outcome_specific": "asthma",
+          "covariates": []
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.012,
+          "ci_lower": 1.005,
+          "ci_upper": 1.019,
+          "ci_level": 95,
+          "exposure_increment": "per 1 \u00b5g/m\u00b3",
+          "lag": null,
+          "outcome_specific": "COPD",
+          "covariates": []
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.013,
+          "ci_lower": 1.0,
+          "ci_upper": 1.026,
+          "ci_level": 95,
+          "exposure_increment": "per 1 \u00b5g/m\u00b3",
+          "lag": null,
+          "outcome_specific": "COPD",
+          "covariates": []
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.016,
+          "ci_lower": 1.008,
+          "ci_upper": 1.024,
+          "ci_level": 95,
+          "exposure_increment": "per 1 \u00b5g/m\u00b3",
+          "lag": null,
+          "outcome_specific": "COPD",
+          "covariates": []
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.022,
+          "ci_lower": 1.007,
+          "ci_upper": 1.036,
+          "ci_level": 95,
+          "exposure_increment": "per 1 \u00b5g/m\u00b3",
+          "lag": null,
+          "outcome_specific": "COPD",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "9d62c8f25033cf33c4fcc3e46755bfedca80efd9a90ced69543f4378ad34f054"
+  },
+  {
+    "corpus_id": "ABS-0057",
+    "pmid": "27224452",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "UFIREG_2016",
+      "study_location": "Augsburg, Germany; Dresden, Germany; Chernivtsi, Ukraine; Ljubljana, Slovenia; Prague, Czech Republic",
+      "study_period": "2011-2014",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.034,
+          "ci_lower": 0.983,
+          "ci_upper": 1.088,
+          "ci_level": 95,
+          "exposure_increment": "per 2750 particles/cm\u00b3",
+          "lag": "lag0-5",
+          "outcome_specific": "all_respiratory",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.018,
+          "ci_lower": 1.001,
+          "ci_upper": 1.034,
+          "ci_level": 95,
+          "exposure_increment": "per 12.4 \u00b5g/m\u00b3",
+          "lag": "lag2-5",
+          "outcome_specific": "other",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.075,
+          "ci_lower": 1.049,
+          "ci_upper": 1.102,
+          "ci_level": 95,
+          "exposure_increment": "per 12.4 \u00b5g/m\u00b3",
+          "lag": "lag0-5",
+          "outcome_specific": "all_respiratory",
+          "covariates": null
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "f84b3537c3c0617254bcac73080fac1a3c83c255e4216dd9baefb3e2d83d9e1b"
+  },
+  {
+    "corpus_id": "ABS-0058",
+    "pmid": "33678143",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown_unknown",
+      "study_location": "San Diego, USA",
+      "study_period": "1999-2013",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.041,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": null,
+          "outcome_specific": "all_respiratory",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.086,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": null,
+          "outcome_specific": "all_respiratory",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.062,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": null,
+          "outcome_specific": "all_respiratory",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "1ba5918f597dd3b9387119cd9cd57bf81ac99e392ff46200612a4daf0a39d428"
+  },
+  {
+    "corpus_id": "ABS-0059",
+    "pmid": "37137261",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "multiple cities, Japan",
+      "study_period": "2016-2019",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0052,
+          "ci_lower": 1.0013,
+          "ci_upper": 1.0092,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "cardiovascular",
+          "covariates": [
+            "temperature",
+            "humidity"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0174,
+          "ci_lower": 1.0141,
+          "ci_upper": 1.0207,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "all_respiratory",
+          "covariates": [
+            "temperature",
+            "humidity"
+          ]
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "1e2fdc3645bc08e8263d93958fd10eb46ce92045fa37e4ffe9e64b8e5db1eb94"
+  },
+  {
+    "corpus_id": "ABS-0060",
+    "pmid": "33910560",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "not_reported",
+      "study_location": "Wuhan, China",
+      "study_period": "2016-2018",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": 2806115,
+      "estimates": [
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.0195,
+          "ci_lower": 1.0163,
+          "ci_upper": 1.0227,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-2",
+          "outcome_specific": "all_respiratory",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "4756201022f2ae83b8b369077464f32653b77ae39c21e60741c4fefd55a3c5b9"
+  },
+  {
+    "corpus_id": "ABS-0061",
+    "pmid": "27350257",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "London, United Kingdom",
+      "study_period": "2011-2012",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "estimates": []
+    },
+    "valid": true,
+    "output_hash": "d2f277bdd94eef829b62372a5697abb7e94d2cb50ac83f340e230225a48fc9dd"
+  },
+  {
+    "corpus_id": "ABS-0062",
+    "pmid": "25776011",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Atlanta, USA",
+      "study_period": "2002-2010",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.06,
+          "ci_lower": 1.01,
+          "ci_upper": 1.1,
+          "ci_level": 95,
+          "exposure_increment": "other",
+          "lag": "lag0-7",
+          "outcome_specific": "asthma",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.1,
+          "ci_lower": 1.04,
+          "ci_upper": 1.17,
+          "ci_level": 95,
+          "exposure_increment": "other",
+          "lag": "lag0-7",
+          "outcome_specific": "asthma",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "def696e3e728ffaaf09e1b944bc2011bbadacf45e3acfd0f8aa62bd62c0c2c23"
+  },
+  {
+    "corpus_id": "ABS-0063",
+    "pmid": "34574538",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown_2019",
+      "study_location": "Kandy, Sri Lanka",
+      "study_period": "2019",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0195,
+          "ci_lower": 1.0025,
+          "ci_upper": 1.0367,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "all_respiratory",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0163,
+          "ci_lower": 1.0016,
+          "ci_upper": 1.0312,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "all_respiratory",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0467,
+          "ci_lower": 1.0123,
+          "ci_upper": 1.0823,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "asthma",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0404,
+          "ci_lower": 1.0106,
+          "ci_upper": 1.0711,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "asthma",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0274,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "all_respiratory (65+)",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0228,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "all_respiratory (65+)",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "035157d952aafa9c19b4decd914dcf09572d4bd849c2e5cf34126863878bec56"
+  },
+  {
+    "corpus_id": "ABS-0064",
+    "pmid": "39013602",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown_2017",
+      "study_location": "Perth, Australia",
+      "study_period": "2015-2017",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.16,
+          "ci_lower": 1.0,
+          "ci_upper": 1.35,
+          "ci_level": 95,
+          "exposure_increment": "other",
+          "lag": "lag0",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality",
+            "sociodemographic factors"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.12,
+          "ci_lower": 1.02,
+          "ci_upper": 1.24,
+          "ci_level": 95,
+          "exposure_increment": "other",
+          "lag": "lag0",
+          "outcome_specific": "arrhythmias",
+          "covariates": [
+            "temperature",
+            "humidity",
+            "trend",
+            "seasonality",
+            "sociodemographic factors"
+          ]
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "73555c81819e17c9f3b84f86257cbbf08497e0e2401444f159a2219c962f10dd"
+  },
+  {
+    "corpus_id": "ABS-0065",
+    "pmid": "35661917",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Ningbo, China",
+      "study_period": "2015-2017",
+      "study_design": "time_series",
+      "population": "elderly",
+      "sample_size": 23610,
+      "estimates": [
+        {
+          "effect_measure": "other",
+          "effect_estimate": 2.13,
+          "ci_lower": 0.55,
+          "ci_upper": 3.74,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag07",
+          "outcome_specific": "other",
+          "covariates": [
+            "temporal trends",
+            "seasonality",
+            "meteorological conditions",
+            "day of week",
+            "public holidays"
+          ]
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "4e23ea152cd00fbbb74727e7a88b0034f2e28ebdb94b5df14f5bcf13ad2db0d6"
+  },
+  {
+    "corpus_id": "ABS-0066",
+    "pmid": "38622704",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "western Montana, USA",
+      "study_period": "2017-2020",
+      "study_design": "case_crossover",
+      "population": "children",
+      "sample_size": null,
+      "estimates": []
+    },
+    "valid": true,
+    "output_hash": "76f4ae1b500c86d185a28b00119ecbbe3a0b031de85cba29571f2ce34bf98913"
+  },
+  {
+    "corpus_id": "ABS-0067",
+    "pmid": "39633418",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown_2023",
+      "study_location": "Suzhou, China",
+      "study_period": "2017-2022",
+      "study_design": "case_crossover",
+      "population": "children",
+      "sample_size": 13408,
+      "estimates": [
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.017,
+          "ci_lower": 1.003,
+          "ci_upper": 1.031,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-2",
+          "outcome_specific": "all_respiratory",
+          "covariates": []
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.015,
+          "ci_lower": 1.004,
+          "ci_upper": 1.026,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-2",
+          "outcome_specific": "all_respiratory",
+          "covariates": []
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.117,
+          "ci_lower": 1.001,
+          "ci_upper": 1.247,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-1",
+          "outcome_specific": "all_respiratory",
+          "covariates": []
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.036,
+          "ci_lower": 1.009,
+          "ci_upper": 1.064,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-7",
+          "outcome_specific": "all_respiratory",
+          "covariates": []
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.267,
+          "ci_lower": 1.017,
+          "ci_upper": 1.579,
+          "ci_level": 95,
+          "exposure_increment": "per 1 mg/m\u00b3",
+          "lag": "lag0-7",
+          "outcome_specific": "all_respiratory",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "2e9dfcf400e96fd32ca639f38d7e528c7e97bf41ee13c498a577cd379a4e45b8"
+  },
+  {
+    "corpus_id": "ABS-0068",
+    "pmid": "38164931",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown_unknown",
+      "study_location": "Philadelphia, PA, USA",
+      "study_period": "2011-2016",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0,
+          "ci_lower": 0.85,
+          "ci_upper": 1.17,
+          "ci_level": 95,
+          "exposure_increment": "90th percentile vs 0",
+          "lag": null,
+          "outcome_specific": "asthma_exacerbation",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.04,
+          "ci_lower": 0.95,
+          "ci_upper": 1.15,
+          "ci_level": 95,
+          "exposure_increment": "90th percentile vs 0",
+          "lag": null,
+          "outcome_specific": "asthma_exacerbation",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.12,
+          "ci_lower": 0.96,
+          "ci_upper": 1.32,
+          "ci_level": 95,
+          "exposure_increment": "90th percentile vs 0",
+          "lag": null,
+          "outcome_specific": "asthma_exacerbation",
+          "covariates": null
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "a9940370d8bb1b8bf9262bb9aeb01fef8bb7e81c3f75974d2454c7ecf4022adc"
+  },
+  {
+    "corpus_id": "ABS-0069",
+    "pmid": "37830139",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Panzhihua, China",
+      "study_period": "2016-2020",
+      "study_design": "time_series",
+      "population": "other",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0725,
+          "ci_lower": 1.0426,
+          "ci_upper": 1.1033,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": null,
+          "outcome_specific": "other",
+          "covariates": null
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "f025cd520b7286806f6d4f2ff74cf77162d5da8df66b87069f759d236b993caa"
+  },
+  {
+    "corpus_id": "ABS-0070",
+    "pmid": "38858655",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown_2020",
+      "study_location": "Ningbo, China",
+      "study_period": "2015-2019",
+      "study_design": "time_series",
+      "population": "other",
+      "sample_size": 104441,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.02,
+          "ci_lower": 1.08,
+          "ci_upper": 1.4,
+          "ci_level": 95,
+          "exposure_increment": "other",
+          "lag": "lag8",
+          "outcome_specific": "other",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.03,
+          "ci_lower": 1.0,
+          "ci_upper": 1.06,
+          "ci_level": 95,
+          "exposure_increment": "other",
+          "lag": "lag13",
+          "outcome_specific": "other",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.27,
+          "ci_lower": 1.08,
+          "ci_upper": 1.48,
+          "ci_level": 95,
+          "exposure_increment": "other",
+          "lag": "lag5",
+          "outcome_specific": "other",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "3852c81a737a8513c17de3d2a70cdf0e07f29b6011eec1374cb381aef4795c3f"
+  },
+  {
+    "corpus_id": "ABS-0071",
+    "pmid": "32854703",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "Unknown_2018",
+      "study_location": "Reno, Nevada, USA",
+      "study_period": "2013-2018",
+      "study_design": "time_series",
+      "population": "other",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.061,
+          "ci_lower": 1.021,
+          "ci_upper": 1.103,
+          "ci_level": 95,
+          "exposure_increment": "per 5 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "asthma",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.068,
+          "ci_lower": 1.012,
+          "ci_upper": 1.127,
+          "ci_level": 95,
+          "exposure_increment": "per 5 \u00b5g/m\u00b3",
+          "lag": "lag0-2",
+          "outcome_specific": "asthma",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "978d464eb602502fd68654f97a95438878d45644a989ad1faeaf51a007d077ab"
+  },
+  {
+    "corpus_id": "ABS-0072",
+    "pmid": "39505076",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Multiple communities, South Korea",
+      "study_period": "2006-2021",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0143,
+          "ci_lower": 1.0134,
+          "ci_upper": 1.0152,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": null,
+          "outcome_specific": "all_respiratory",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0094,
+          "ci_lower": 1.0084,
+          "ci_upper": 1.0104,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": null,
+          "outcome_specific": "other",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "8759a05ba05b53daf485e871762ebfa8534e62336f857e433cbceeabb8483e17"
+  },
+  {
+    "corpus_id": "ABS-0073",
+    "pmid": "34545525",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Guangzhou, China",
+      "study_period": "2014-2015",
+      "study_design": "case_crossover",
+      "population": "other",
+      "sample_size": 40002,
+      "estimates": [
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.016,
+          "ci_lower": 1.006,
+          "ci_upper": 1.027,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-5",
+          "outcome_specific": "COPD",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "39f2b8268acd3433986e679a5eaac13818c03fd50de1cf0e54736068255f3abc"
+  },
+  {
+    "corpus_id": "ABS-0074",
+    "pmid": "24528997",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": null,
+      "study_period": null,
+      "study_design": "case_crossover",
+      "population": "children",
+      "sample_size": 74,
+      "estimates": [
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.27,
+          "ci_lower": 0.9,
+          "ci_upper": 1.79,
+          "ci_level": 95,
+          "exposure_increment": "per IQR",
+          "lag": "other",
+          "outcome_specific": "asthma",
+          "covariates": []
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.63,
+          "ci_lower": 1.03,
+          "ci_upper": 2.59,
+          "ci_level": 95,
+          "exposure_increment": "per IQR",
+          "lag": "other",
+          "outcome_specific": "asthma",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "eb92caf8cbdb157ba9cedeb32bdd9725774506834161771dfde0420da754790b"
+  },
+  {
+    "corpus_id": "ABS-0075",
+    "pmid": "25244038",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Santiago, Chile",
+      "study_period": "2004-2007",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": null,
+      "estimates": []
+    },
+    "valid": true,
+    "output_hash": "5d433871ad5f2d0705754f7b1667b51ba705dca3e495d6138a21c833b576fb1b"
+  },
+  {
+    "corpus_id": "ABS-0076",
+    "pmid": "33590391",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "Unknown_unknown",
+      "study_location": "Shenzhen, China",
+      "study_period": null,
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.26,
+          "ci_lower": 1.06,
+          "ci_upper": 1.5,
+          "ci_level": 95,
+          "exposure_increment": "per IQR",
+          "lag": "lag0",
+          "outcome_specific": "COPD",
+          "covariates": [
+            "SO2",
+            "NO2",
+            "CO",
+            "O3",
+            "wind speed",
+            "air pressure"
+          ]
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.24,
+          "ci_lower": 1.05,
+          "ci_upper": 1.46,
+          "ci_level": 95,
+          "exposure_increment": "per IQR",
+          "lag": "lag0",
+          "outcome_specific": "COPD",
+          "covariates": [
+            "SO2",
+            "NO2",
+            "CO",
+            "O3",
+            "wind speed",
+            "air pressure"
+          ]
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.21,
+          "ci_lower": 1.06,
+          "ci_upper": 1.39,
+          "ci_level": 95,
+          "exposure_increment": "per IQR",
+          "lag": "lag0",
+          "outcome_specific": "COPD",
+          "covariates": [
+            "SO2",
+            "NO2",
+            "CO",
+            "O3",
+            "wind speed",
+            "air pressure"
+          ]
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "636677f4184a5506ff4c154ef1ffaab691157ac12b2977310b7fdcfb1dece9a5"
+  },
+  {
+    "corpus_id": "ABS-0077",
+    "pmid": "29870428",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "Unknown_2017",
+      "study_location": "Multiple cities, China",
+      "study_period": "2014-2015",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": 916388,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0026,
+          "ci_lower": 1.0022,
+          "ci_upper": 1.0031,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "all_respiratory",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0019,
+          "ci_lower": 1.0018,
+          "ci_upper": 1.002,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "all_respiratory",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0023,
+          "ci_lower": 1.002,
+          "ci_upper": 1.0026,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "other",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0021,
+          "ci_lower": 1.0017,
+          "ci_upper": 1.0024,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "all_respiratory",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0012,
+          "ci_lower": 1.0011,
+          "ci_upper": 1.0013,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "all_respiratory",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0015,
+          "ci_lower": 1.0013,
+          "ci_upper": 1.0017,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "other",
+          "covariates": []
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.018,
+          "ci_lower": 1.015,
+          "ci_upper": 1.022,
+          "ci_level": 95,
+          "exposure_increment": "from <15 to \u226515 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "all_respiratory",
+          "covariates": []
+        },
+        {
+          "effect_measure": "OR",
+          "effect_estimate": 1.025,
+          "ci_lower": 1.017,
+          "ci_upper": 1.034,
+          "ci_level": 95,
+          "exposure_increment": "from <15 to \u226515 \u00b5g/m\u00b3",
+          "lag": "lag0",
+          "outcome_specific": "other",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "05608dc083824e68da6052c87d1bf696a7b11d818b534fcdb1e24d48685961ba"
+  },
+  {
+    "corpus_id": "ABS-0078",
+    "pmid": "32184587",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Ahvaz, Iran",
+      "study_period": "2008-2018",
+      "study_design": "time_series",
+      "population": "other",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.004,
+          "ci_lower": 1.002,
+          "ci_upper": 1.007,
+          "ci_level": 95,
+          "exposure_increment": "other",
+          "lag": "other",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "trend",
+            "seasonality",
+            "weather",
+            "weekdays",
+            "holidays"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.003,
+          "ci_lower": 1.001,
+          "ci_upper": 1.005,
+          "ci_level": 95,
+          "exposure_increment": "other",
+          "lag": "other",
+          "outcome_specific": "COPD",
+          "covariates": [
+            "trend",
+            "seasonality",
+            "weather",
+            "weekdays",
+            "holidays"
+          ]
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "c01f752ec7c9bf3a00aab7d9b76c82c629922875de380e707fdf8270c9618731"
+  },
+  {
+    "corpus_id": "ABS-0079",
+    "pmid": "24555678",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "_raw_unparseable": ""
+    },
+    "valid": false,
+    "output_hash": "2defce652230a0b5b3a624bd44a143ab3340e9d36998d795d4bf5ebd53610efa"
+  },
+  {
+    "corpus_id": "ABS-0080",
+    "pmid": "23729683",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "California, USA",
+      "study_period": "2005-2008",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.033,
+          "ci_lower": 1.02,
+          "ci_upper": 1.046,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag2",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "PM2.5",
+            "ozone",
+            "nitrogen dioxide",
+            "carbon monoxide",
+            "sulfur dioxide"
+          ]
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "497f69652e47c3fff65147462dd6fe0fb3e50351e4473b0af309a49257565411"
+  },
+  {
+    "corpus_id": "ABS-0081",
+    "pmid": "38347929",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown_unknown",
+      "study_location": "Sichuan, China",
+      "study_period": null,
+      "study_design": "time_series",
+      "population": "elderly",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.327,
+          "ci_lower": 1.116,
+          "ci_upper": 1.577,
+          "ci_level": 95,
+          "exposure_increment": "per 1 mg/m\u00b3",
+          "lag": "lag7",
+          "outcome_specific": "asthma",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.044,
+          "ci_lower": 1.011,
+          "ci_upper": 1.078,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": null,
+          "outcome_specific": "asthma",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.018,
+          "ci_lower": 1.002,
+          "ci_upper": 1.034,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": null,
+          "outcome_specific": "asthma",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.013,
+          "ci_lower": 1.004,
+          "ci_upper": 1.022,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": null,
+          "outcome_specific": "asthma",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.015,
+          "ci_lower": 1.003,
+          "ci_upper": 1.028,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": null,
+          "outcome_specific": "asthma",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.13,
+          "ci_lower": 1.041,
+          "ci_upper": 1.227,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": null,
+          "outcome_specific": "asthma",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "ae6f0c10e8616ab60148fa31846f20fe15cbf4c73db932997216081ed294ae4d"
+  },
+  {
+    "corpus_id": "ABS-0082",
+    "pmid": "33640663",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Brescia, Italy",
+      "study_period": "2014-2016",
+      "study_design": "time_series",
+      "population": "other",
+      "sample_size": 431,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.08,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-1",
+          "outcome_specific": "COPD_exacerbation_ED_admission",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.09,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-5",
+          "outcome_specific": "COPD_exacerbation_ED_admission",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.1,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-1",
+          "outcome_specific": "COPD_exacerbation_hospitalization",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.11,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-5",
+          "outcome_specific": "COPD_exacerbation_hospitalization",
+          "covariates": null
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "c0b161521dc370323286262092cfda04a0d5d900a84ea3453b0f6814861d04bb"
+  },
+  {
+    "corpus_id": "ABS-0083",
+    "pmid": "30277796",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "United States",
+      "study_period": null,
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.024,
+          "ci_lower": 1.018,
+          "ci_upper": 1.029,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": null,
+          "outcome_specific": "all_respiratory_children_0_18",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.008,
+          "ci_lower": 1.004,
+          "ci_upper": 1.012,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": null,
+          "outcome_specific": "all_respiratory_adults_19_64",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.002,
+          "ci_lower": 0.996,
+          "ci_upper": 1.007,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": null,
+          "outcome_specific": "all_respiratory_adults_65plus",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.017,
+          "ci_lower": 1.011,
+          "ci_upper": 1.023,
+          "ci_level": 95,
+          "exposure_increment": "other",
+          "lag": null,
+          "outcome_specific": "all_respiratory_children_0_18",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.051,
+          "ci_lower": 1.046,
+          "ci_upper": 1.056,
+          "ci_level": 95,
+          "exposure_increment": "other",
+          "lag": null,
+          "outcome_specific": "all_respiratory_adults_19_64",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.033,
+          "ci_lower": 1.026,
+          "ci_upper": 1.04,
+          "ci_level": 95,
+          "exposure_increment": "other",
+          "lag": null,
+          "outcome_specific": "all_respiratory_adults_65plus",
+          "covariates": null
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "43a28d1232207ae5ccd67ce7a018cb494be03a57349cb80e303b410824dcbc68"
+  },
+  {
+    "corpus_id": "ABS-0084",
+    "pmid": "27605585",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "California, USA",
+      "study_period": "2005-2009",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "other",
+          "effect_estimate": 1.6,
+          "ci_lower": 0.9,
+          "ci_upper": 2.4,
+          "ci_level": 95,
+          "exposure_increment": "per IQR",
+          "lag": null,
+          "outcome_specific": "other",
+          "covariates": []
+        },
+        {
+          "effect_measure": "other",
+          "effect_estimate": 4.5,
+          "ci_lower": 1.1,
+          "ci_upper": 8.0,
+          "ci_level": 95,
+          "exposure_increment": "per IQR",
+          "lag": null,
+          "outcome_specific": "asthma",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "869c4cd8017175404adb666830e325af08fd4a2cda5d2441ebeb721c7cb3ddab"
+  },
+  {
+    "corpus_id": "ABS-0085",
+    "pmid": "31200718",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Shijiazhuang, China",
+      "study_period": "2013-2016",
+      "study_design": "time_series",
+      "population": "other",
+      "sample_size": null,
+      "estimates": []
+    },
+    "valid": true,
+    "output_hash": "a4913c943c8abbbac35cf102ec68d911e87974502d7b341879230c458040abee"
+  },
+  {
+    "corpus_id": "ABS-0086",
+    "pmid": "35202623",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "null_2023",
+      "study_location": "Bintulu, Malaysia",
+      "study_period": "2010-2019",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.089,
+          "ci_lower": 1.001,
+          "ci_upper": 1.183,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-2",
+          "outcome_specific": "all_respiratory",
+          "covariates": null
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "e4a5d33309d05b17eade264e22a6f65f09753cd82839c33c97984f4a6cb601e9"
+  },
+  {
+    "corpus_id": "ABS-0087",
+    "pmid": "35396614",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Sichuan Province, China",
+      "study_period": "2017-2018",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": 49975,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0123,
+          "ci_lower": 1.0021,
+          "ci_upper": 1.0226,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-7",
+          "outcome_specific": "other",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0133,
+          "ci_lower": 1.0062,
+          "ci_upper": 1.0205,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-7",
+          "outcome_specific": "other",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.2352,
+          "ci_lower": 1.1152,
+          "ci_upper": 1.3681,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-7",
+          "outcome_specific": "other",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.1247,
+          "ci_lower": 1.0846,
+          "ci_upper": 1.1664,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-7",
+          "outcome_specific": "other",
+          "covariates": null
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "406629d58c79ba6a59b2f639d44c353f97b2dc8fad0931fc7c25abd1c1f987ee"
+  },
+  {
+    "corpus_id": "ABS-0088",
+    "pmid": "26350981",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "not_provided",
+      "study_location": "Atlanta, Dallas, St. Louis, USA",
+      "study_period": "1993-2009",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "estimates": []
+    },
+    "valid": true,
+    "output_hash": "1ef9ab446dec0d89e58c02db967443af6943b162c93b443ff8e0b697f06b2832"
+  },
+  {
+    "corpus_id": "ABS-0089",
+    "pmid": "39879475",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Cuiab\u00e1-MT, Brazil",
+      "study_period": "2016-2018",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": 1612,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.18,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": null,
+          "exposure_increment": "per 4\u00b0C",
+          "lag": "other: lags 1-5",
+          "outcome_specific": "other: composite of tracheitis, laryngitis, pneumonia, bronchitis, bronchiolitis, asthma",
+          "covariates": [
+            "minimum temperature",
+            "PM2.5"
+          ]
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "446214b6aba38cd76997111af2eff64f5f13486890f6eab3aa20e3097be4b210"
+  },
+  {
+    "corpus_id": "ABS-0090",
+    "pmid": "22998927",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "St. Louis, Missouri, USA",
+      "study_period": null,
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.02,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "other",
+          "lag": null,
+          "outcome_specific": "respiratory_disease",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.004,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "other",
+          "lag": null,
+          "outcome_specific": "respiratory_disease",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.069,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "other",
+          "lag": null,
+          "outcome_specific": "asthma_wheeze",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.106,
+          "ci_lower": null,
+          "ci_upper": null,
+          "ci_level": 95,
+          "exposure_increment": "other",
+          "lag": null,
+          "outcome_specific": "asthma_wheeze",
+          "covariates": null
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "475bd551a5ba091945c7f52221643d8af9ea1829d6f44f418797f2a74f3c6b02"
+  },
+  {
+    "corpus_id": "ABS-0091",
+    "pmid": "38383039",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "Wei_2023",
+      "study_location": "United States",
+      "study_period": "2010-2016",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": 50100000,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0091,
+          "ci_lower": 1.0055,
+          "ci_upper": 1.0126,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-1",
+          "outcome_specific": "natural_causes",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0134,
+          "ci_lower": 1.0073,
+          "ci_upper": 1.0194,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-1",
+          "outcome_specific": "all_respiratory",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "88218935b019ad54e937c07c4d20dfd88029107b647c6af3411de77ca8f0bfd5"
+  },
+  {
+    "corpus_id": "ABS-0092",
+    "pmid": "36856604",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "not_reported",
+      "study_location": "Warsaw, Krak\u00f3w, Tricity, Poland",
+      "study_period": "2011-2018",
+      "study_design": "case_crossover",
+      "population": "other",
+      "sample_size": 26948,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.03,
+          "ci_lower": 1.006,
+          "ci_upper": 1.055,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "other",
+          "outcome_specific": "COPD",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.028,
+          "ci_lower": 1.008,
+          "ci_upper": 1.049,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "other",
+          "outcome_specific": "COPD",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.032,
+          "ci_lower": 0.988,
+          "ci_upper": 1.078,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "other",
+          "outcome_specific": "COPD",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.145,
+          "ci_lower": 1.038,
+          "ci_upper": 1.262,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "other",
+          "outcome_specific": "COPD",
+          "covariates": null
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "71c00ea0a7dacf0149cd291a680bf56ac0e79cb62b74a87701127baef489f86f"
+  },
+  {
+    "corpus_id": "ABS-0093",
+    "pmid": "21172759",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "New York City, USA",
+      "study_period": "2001-2002",
+      "study_design": "time_series",
+      "population": "elderly",
+      "sample_size": null,
+      "estimates": []
+    },
+    "valid": true,
+    "output_hash": "7374962e151950b10d43071036bdd057db3dba078c6a7cef23cb9f82605d6248"
+  },
+  {
+    "corpus_id": "ABS-0094",
+    "pmid": "32822929",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "not_reported",
+      "study_location": "Shanghai, China",
+      "study_period": "2016-2018",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": 108817,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.011,
+          "ci_lower": 1.002,
+          "ci_upper": 1.021,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "other",
+          "outcome_specific": "asthma",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "6f4f00f324fa4082bbf60b6a99832b3fed1319a1a4ce117dcd55d69a1bf22ede"
+  },
+  {
+    "corpus_id": "ABS-0095",
+    "pmid": "35627528",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": "unknown_unknown",
+      "study_location": "Poland",
+      "study_period": "2010-2018",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": 31919,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.014,
+          "ci_lower": 1.0,
+          "ci_upper": 1.028,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-6",
+          "outcome_specific": "asthma",
+          "covariates": null
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "89361019fce2223a143dfa3a4c997f06f146fbe1dd86efef9dfb4008febcbdda"
+  },
+  {
+    "corpus_id": "ABS-0096",
+    "pmid": "37626307",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Lanzhou, China",
+      "study_period": "2014-2020",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": 51206,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.089,
+          "ci_lower": 1.075,
+          "ci_upper": 1.103,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-7",
+          "outcome_specific": "other",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.018,
+          "ci_lower": 1.014,
+          "ci_upper": 1.021,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-7",
+          "outcome_specific": "other",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.186,
+          "ci_lower": 1.154,
+          "ci_upper": 1.219,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-7",
+          "outcome_specific": "other",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.149,
+          "ci_lower": 1.13,
+          "ci_upper": 1.168,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag0-7",
+          "outcome_specific": "other",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "6b42abd8ad147f6a1f364e23c0a17a9bc8ee688fb10e626b585ec1ea39f0d47f"
+  },
+  {
+    "corpus_id": "ABS-0097",
+    "pmid": "30875246",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "United States",
+      "study_period": "2008-2010",
+      "study_design": "time_series",
+      "population": "elderly",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0108,
+          "ci_lower": 1.0028,
+          "ci_upper": 1.0189,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag1",
+          "outcome_specific": "all_respiratory",
+          "covariates": [
+            "day of week",
+            "temperature",
+            "humidity",
+            "seasonal trend"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0067,
+          "ci_lower": null,
+          "ci_upper": 1.0144,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag1",
+          "outcome_specific": "all_respiratory",
+          "covariates": [
+            "day of week",
+            "temperature",
+            "humidity",
+            "seasonal trend"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0061,
+          "ci_lower": 1.0009,
+          "ci_upper": 1.0114,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag1",
+          "outcome_specific": "cardiovascular",
+          "covariates": [
+            "day of week",
+            "temperature",
+            "humidity",
+            "seasonal trend"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0069,
+          "ci_lower": 1.0019,
+          "ci_upper": 1.012,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag1",
+          "outcome_specific": "cardiovascular",
+          "covariates": [
+            "day of week",
+            "temperature",
+            "humidity",
+            "seasonal trend"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.069,
+          "ci_lower": 1.0371,
+          "ci_upper": 1.1011,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag1",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "day of week",
+            "temperature",
+            "humidity",
+            "seasonal trend"
+          ]
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.0134,
+          "ci_lower": null,
+          "ci_upper": 1.0377,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag1",
+          "outcome_specific": "asthma",
+          "covariates": [
+            "day of week",
+            "temperature",
+            "humidity",
+            "seasonal trend"
+          ]
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "c33fb8ae75de94fa275d748ddbebd3ce995c1bfcbbec611c057551366c0fe6ba"
+  },
+  {
+    "corpus_id": "ABS-0098",
+    "pmid": "27492006",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Turin, Italy",
+      "study_period": "2008-2010",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": 21793,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.013,
+          "ci_lower": 1.003,
+          "ci_upper": 1.022,
+          "ci_level": 95,
+          "exposure_increment": "per 10 \u00b5g/m\u00b3",
+          "lag": "lag5",
+          "outcome_specific": "all_respiratory",
+          "covariates": []
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.007,
+          "ci_lower": 1.001,
+          "ci_upper": 1.012,
+          "ci_level": 95,
+          "exposure_increment": "per 10 grains/m\u00b3",
+          "lag": "lag1",
+          "outcome_specific": "all_respiratory",
+          "covariates": []
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "9764f477e3ab3e455e71453f29bc956498c9dae7032d78c87d5fb3dd81a1d720"
+  },
+  {
+    "corpus_id": "ABS-0099",
+    "pmid": "39068973",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Victoria, Australia",
+      "study_period": "2009-2022",
+      "study_design": "other",
+      "population": "general",
+      "sample_size": null,
+      "estimates": []
+    },
+    "valid": true,
+    "output_hash": "a557dfac2a635e265acefb1c37d360b60ce5e5590e9b2ff1819a8ba425b10051"
+  },
+  {
+    "corpus_id": "ABS-0100",
+    "pmid": "25324558",
+    "run_id": 1,
+    "model_id": "deepseek-r1-silver",
+    "output": {
+      "study_id": null,
+      "study_location": "Atlanta, Georgia, USA",
+      "study_period": "1993-2010",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": null,
+      "estimates": [
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.04,
+          "ci_lower": 1.02,
+          "ci_upper": 1.06,
+          "ci_level": 95,
+          "exposure_increment": "per IQR",
+          "lag": "3-day moving average",
+          "outcome_specific": "URI",
+          "covariates": null
+        },
+        {
+          "effect_measure": "RR",
+          "effect_estimate": 1.08,
+          "ci_lower": 1.04,
+          "ci_upper": 1.13,
+          "ci_level": 95,
+          "exposure_increment": "per IQR",
+          "lag": "3-day moving average",
+          "outcome_specific": "pneumonia",
+          "covariates": null
+        }
+      ]
+    },
+    "valid": true,
+    "output_hash": "bc0dbeb481a56b9b93c1dd1c77c483bfaee9a7bb9fcc9299c3e5fad5e62015e0"
+  }
+]

@@ -1,0 +1,2308 @@
+[
+  {
+    "corpus_id": "ABS-0001",
+    "pmid": "38698010",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_year",
+      "study_location": "South Korea",
+      "study_period": "2016-2020",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 0
+    },
+    "valid": true,
+    "output_hash": "667df382c4dcfe6a2695c1ffaf45fbb708d77749d31d6773d9b5f6750075b48d"
+  },
+  {
+    "corpus_id": "ABS-0002",
+    "pmid": "29259031",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "first_author_year",
+      "study_location": "Paris, France",
+      "study_period": "2010-2015",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": 47107,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 0
+    },
+    "valid": true,
+    "output_hash": "ef74b17dc17c6db21d8d993579091e0a2ede70acf19475dd3068cffc76926b3e"
+  },
+  {
+    "corpus_id": "ABS-0003",
+    "pmid": "35073244",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_2012",
+      "study_location": "National, USA",
+      "study_period": "2000-2012",
+      "study_design": "case_crossover",
+      "population": "other",
+      "sample_size": 1627002,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.0315,
+        "ci_lower": 1.0243,
+        "ci_upper": 1.0376,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": "0.31% (0.24, 0.37) per 1 ug/m3",
+        "lag": "other",
+        "outcome_specific": "asthma",
+        "covariates": [
+          "trend",
+          "seasonality"
+        ]
+      },
+      "n_estimates_in_abstract": 3
+    },
+    "valid": true,
+    "output_hash": "a514922f0b1dfa7d82b1b23cf13f398e0ec6c4682dc8eb034ad0e57a93d4d6db"
+  },
+  {
+    "corpus_id": "ABS-0004",
+    "pmid": "35394903",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "AirQualityIndex_YYYY",
+      "study_location": "Allegheny County, USA",
+      "study_period": "2010-2018",
+      "study_design": "case_crossover",
+      "population": "children",
+      "sample_size": 6573,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 2
+    },
+    "valid": true,
+    "output_hash": "a392f75dc761a25f43855df120e9a78ea301f308afa712ba22c3aaf33e7c7ef5"
+  },
+  {
+    "corpus_id": "ABS-0005",
+    "pmid": "35104259",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "DAngelo_2020",
+      "study_location": "United States",
+      "study_period": "2000-2014",
+      "study_design": "case_crossover",
+      "population": "elderly",
+      "sample_size": 8690837,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 0
+    },
+    "valid": true,
+    "output_hash": "3b08cd6d1ddabaf79ccfe27fadf028c8025afd1c18b752f70e3f03f2040eff46"
+  },
+  {
+    "corpus_id": "ABS-0006",
+    "pmid": "35384572",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "first_author_year",
+      "study_location": "Lanzhou, China",
+      "study_period": "2014-2019",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": 90942,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.03,
+        "ci_lower": 1.012,
+        "ci_upper": 1.049,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "other",
+        "outcome_specific": "all_respiratory",
+        "covariates": [
+          "temperature",
+          "humidity",
+          "trend",
+          "seasonality"
+        ]
+      },
+      "n_estimates_in_abstract": 4
+    },
+    "valid": true,
+    "output_hash": "8df723fa09e9d52631ed00dc940f012b2a74659204b230236df2c6275d2e8b2d"
+  },
+  {
+    "corpus_id": "ABS-0007",
+    "pmid": "35989078",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Anonymous_YYYY",
+      "study_location": "Padova, Italy",
+      "study_period": "2007-2018",
+      "study_design": "case_crossover",
+      "population": "other",
+      "sample_size": 2251,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 0
+    },
+    "valid": true,
+    "output_hash": "b71780671a57d592cc7dc676aeb4cfee9a44fbd9699c71bcf7f92cda6ece367e"
+  },
+  {
+    "corpus_id": "ABS-0008",
+    "pmid": "37792321",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "He_2022",
+      "study_location": "Lanzhou, China",
+      "study_period": "2014-2019",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": 15881,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.0247,
+        "ci_lower": 1.0092,
+        "ci_upper": 1.0405,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "other",
+        "outcome_specific": "other",
+        "covariates": []
+      },
+      "n_estimates_in_abstract": 4
+    },
+    "valid": true,
+    "output_hash": "c6d66fc1c8ee549be1620fb01ed0dcb93ebb9d89394651adb8b5d9ac25cf02ab"
+  },
+  {
+    "corpus_id": "ABS-0009",
+    "pmid": "30917578",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "first_author_year",
+      "study_location": "Utah, USA",
+      "study_period": null,
+      "study_design": "case_crossover",
+      "population": "other",
+      "sample_size": null,
+      "primary_estimate": {
+        "effect_measure": "OR",
+        "effect_estimate": 1.84,
+        "ci_lower": 1.13,
+        "ci_upper": 3.0,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "other",
+        "outcome_specific": "all_respiratory",
+        "covariates": []
+      },
+      "n_estimates_in_abstract": 4
+    },
+    "valid": true,
+    "output_hash": "b6c9f09edf7423798cba63d05acb7312d971cac29d37b0e1e38791230bdc2ae0"
+  },
+  {
+    "corpus_id": "ABS-0010",
+    "pmid": "28787174",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "first_author_year",
+      "study_location": "Not specified",
+      "study_period": "2003-2013",
+      "study_design": "case_crossover",
+      "population": "children",
+      "sample_size": 4069,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 13
+    },
+    "valid": true,
+    "output_hash": "3a4e125ce757d2cdba7f108bc1c8ccdb19816e7f02e4c46c8920be3a695374a1"
+  },
+  {
+    "corpus_id": "ABS-0011",
+    "pmid": "35802828",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_2023",
+      "study_location": "Canada",
+      "study_period": null,
+      "study_design": "case_crossover",
+      "population": "children",
+      "sample_size": 10500,
+      "primary_estimate": {
+        "effect_measure": "OR",
+        "effect_estimate": 1.004,
+        "ci_lower": 0.955,
+        "ci_upper": 1.056,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "lag1",
+        "outcome_specific": "all_respiratory",
+        "covariates": []
+      },
+      "n_estimates_in_abstract": 3
+    },
+    "valid": true,
+    "output_hash": "e1c4c12d84d3b76c2c667aee713b69ae067ce44587d0ef423d195804faf0bfd7"
+  },
+  {
+    "corpus_id": "ABS-0012",
+    "pmid": "36197352",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Anonymous_2022",
+      "study_location": "Taubat\u00e9, Trememb\u00e9, and Pindamonhangaba, Brazil",
+      "study_period": "2020-2021",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": 1300,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 2
+    },
+    "valid": true,
+    "output_hash": "51b7838260ea7d0bc73029b69dd42698e41b7a4ad35bae4912f2df9dcc6e44f6"
+  },
+  {
+    "corpus_id": "ABS-0013",
+    "pmid": "37011135",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Liu_2023",
+      "study_location": "multiple, USA",
+      "study_period": "2005-2014",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": 3190000,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.0255,
+        "ci_lower": 1.0127,
+        "ci_upper": 1.0399,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": "per 6.3 ug/m3",
+        "lag": "other",
+        "outcome_specific": "asthma",
+        "covariates": [
+          "meteorology",
+          "time trends",
+          "influenza activity"
+        ]
+      },
+      "n_estimates_in_abstract": 4
+    },
+    "valid": true,
+    "output_hash": "8adf3f63778b2623c94e2c602bb4a70794d2efba692ee827077f7a3f6e6d35ca"
+  },
+  {
+    "corpus_id": "ABS-0014",
+    "pmid": "36376253",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "first_author_year",
+      "study_location": "Melbourne, Australia",
+      "study_period": "2014-2019",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": {
+        "effect_measure": "IRR",
+        "effect_estimate": 1.013,
+        "ci_lower": 0.971,
+        "ci_upper": 1.056,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "other",
+        "outcome_specific": "all_respiratory",
+        "covariates": [
+          "weather conditions"
+        ]
+      },
+      "n_estimates_in_abstract": 2
+    },
+    "valid": true,
+    "output_hash": "da262059233fc321b7673d6520de652f33f1a4e3aafb727cf4c9e4061ddf9f78"
+  },
+  {
+    "corpus_id": "ABS-0015",
+    "pmid": "36243957",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "first_author_year",
+      "study_location": "Changchun, China",
+      "study_period": "2015-2019",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 0
+    },
+    "valid": true,
+    "output_hash": "ab389a03896301d12f2bd208cbd71c059b003a2ebe46bab5723df03035e6ee19"
+  },
+  {
+    "corpus_id": "ABS-0016",
+    "pmid": "35692312",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_year",
+      "study_location": "Wuhan, China",
+      "study_period": "2015-2020",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": 51676,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 0
+    },
+    "valid": true,
+    "output_hash": "932d754ff4208aa3ffede2714fd1ff8fe8a22ad3a06e99cb85596602a642c84a"
+  },
+  {
+    "corpus_id": "ABS-0017",
+    "pmid": "40433992",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "first_author_year",
+      "study_location": "15 states, USA",
+      "study_period": "2006-2016",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 1
+    },
+    "valid": true,
+    "output_hash": "b83cbe1cbc3265881b4c252341641167625c6ea36c86625f5bd9b357d238be56"
+  },
+  {
+    "corpus_id": "ABS-0018",
+    "pmid": "30781785",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_YYYY",
+      "study_location": "Beijing, China",
+      "study_period": "2010-2012",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.0084,
+        "ci_lower": 1.0005,
+        "ci_upper": 1.0164,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": "0.84% increase",
+        "lag": "other",
+        "outcome_specific": "other",
+        "covariates": []
+      },
+      "n_estimates_in_abstract": 1
+    },
+    "valid": true,
+    "output_hash": "0aec4e19579f5dae24fac4a2007c4843020b71beeda59e20a1112ce75b18ddc6"
+  },
+  {
+    "corpus_id": "ABS-0019",
+    "pmid": "35307034",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_2016",
+      "study_location": "Berlin, Germany",
+      "study_period": "2005-2015",
+      "study_design": "time_series",
+      "population": "other",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 8
+    },
+    "valid": true,
+    "output_hash": "bfb9dccaf7f0c90c9dd07f995dd581f905df596aab7c9f80b6531385d659d282"
+  },
+  {
+    "corpus_id": "ABS-0020",
+    "pmid": "40305019",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_2024",
+      "study_location": "Western US",
+      "study_period": "2006-2016",
+      "study_design": "time_series",
+      "population": "elderly",
+      "sample_size": 10369361,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 2
+    },
+    "valid": true,
+    "output_hash": "ba1fe72d77d1b7b84461ac86a2dae2a9ed7520a07aa777847b2d33f597166f6a"
+  },
+  {
+    "corpus_id": "ABS-0021",
+    "pmid": "29643111",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_2015",
+      "study_location": "California, USA",
+      "study_period": "2015-2015",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 3
+    },
+    "valid": true,
+    "output_hash": "fea4afd768d0510eb9dbe572127f1baf6e198bbd818957240be8104f1f7b7ab9"
+  },
+  {
+    "corpus_id": "ABS-0022",
+    "pmid": "37972204",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "first_author_year",
+      "study_location": "Chiang Mai, Thailand",
+      "study_period": "2018-2019",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": 3540,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 5
+    },
+    "valid": true,
+    "output_hash": "76d241340a6c9aa3e7b6adfd1d11657ffbb1d1c57dcfe2de59f63747c75da117"
+  },
+  {
+    "corpus_id": "ABS-0023",
+    "pmid": "34981381",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_YYYY",
+      "study_location": "Qingdao, China",
+      "study_period": "2015-2017",
+      "study_design": "other",
+      "population": "general",
+      "sample_size": 433032,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 1
+    },
+    "valid": true,
+    "output_hash": "d70bbd1f69c5a4c73f8c3bf70ab5062b476f952914c991dcafb12e3d6a537c4e"
+  },
+  {
+    "corpus_id": "ABS-0024",
+    "pmid": "31787180",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "first_author_year",
+      "study_location": "city, country",
+      "study_period": "YYYY-YYYY",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.0014,
+        "ci_lower": 1.0003,
+        "ci_upper": 1.0026,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": "per IQR (76 ug/m3)",
+        "lag": "other",
+        "outcome_specific": "all_respiratory",
+        "covariates": []
+      },
+      "n_estimates_in_abstract": 4
+    },
+    "valid": true,
+    "output_hash": "79a9fa7117fe92512a709bba41dc928f48150c84cc63c9f815cfc896c932e327"
+  },
+  {
+    "corpus_id": "ABS-0025",
+    "pmid": "37980997",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_2022",
+      "study_location": "Hanoi, Vietnam",
+      "study_period": "2007-2019",
+      "study_design": "case_crossover",
+      "population": "children",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 7
+    },
+    "valid": true,
+    "output_hash": "fa20f11919ae34f2aecfbd75f4b38293d3f5c2d7a85d4c827946f6f6c4b0aff5"
+  },
+  {
+    "corpus_id": "ABS-0026",
+    "pmid": "35583542",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Li_2021",
+      "study_location": "Jinan, China",
+      "study_period": "2015-2019",
+      "study_design": "time_series",
+      "population": "other",
+      "sample_size": 221,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.00875,
+        "ci_lower": 1.00375,
+        "ci_upper": 1.01377,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": "0.875% increase",
+        "lag": "lag0",
+        "outcome_specific": "other",
+        "covariates": []
+      },
+      "n_estimates_in_abstract": 4
+    },
+    "valid": true,
+    "output_hash": "453e8fed3e2c9a7d6fd713f171ed2f4d7c4025c94a6259b6be18f9b8a0393bd6"
+  },
+  {
+    "corpus_id": "ABS-0027",
+    "pmid": "26452298",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Strickland_2016",
+      "study_location": "Georgia, USA",
+      "study_period": "2002-2010",
+      "study_design": "case_crossover",
+      "population": "children",
+      "sample_size": 987139,
+      "primary_estimate": {
+        "effect_measure": "OR",
+        "effect_estimate": 1.015,
+        "ci_lower": 1.008,
+        "ci_upper": 1.022,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "lag0",
+        "outcome_specific": "other",
+        "covariates": [
+          "trend",
+          "seasonality"
+        ]
+      },
+      "n_estimates_in_abstract": 2
+    },
+    "valid": true,
+    "output_hash": "604e9fd2b6d38a8280d1e0dbfdb19a4e9a6943e8f6c6f0f9c5b4e847de4903b3"
+  },
+  {
+    "corpus_id": "ABS-0028",
+    "pmid": "39038774",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Anonymous_YYYY",
+      "study_location": "New York State, USA",
+      "study_period": "2014-2019",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 2
+    },
+    "valid": true,
+    "output_hash": "c88d943cc53ca9544f89ac01a23e98be13ee3d47c7e2ed62c241bd2b9e2b9423"
+  },
+  {
+    "corpus_id": "ABS-0029",
+    "pmid": "37772521",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_year",
+      "study_location": "Lanzhou, China",
+      "study_period": "2013-2019",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 0
+    },
+    "valid": true,
+    "output_hash": "082b85980158119f55950f3b100919b16f9a2afdaa64e594c864a1b97e851da7"
+  },
+  {
+    "corpus_id": "ABS-0030",
+    "pmid": "35142610",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_2017",
+      "study_location": "San Francisco Bay Area, USA",
+      "study_period": "2015-2017",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.1,
+        "ci_lower": 1.086,
+        "ci_upper": 1.119,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": "per 23.4 ug/m3",
+        "lag": "lag0",
+        "outcome_specific": "all_respiratory",
+        "covariates": [
+          "trend",
+          "seasonality"
+        ]
+      },
+      "n_estimates_in_abstract": 5
+    },
+    "valid": true,
+    "output_hash": "39972a082e5f0bfea01704cec686c1005a9754b55aad34939a5334b57b026b47"
+  },
+  {
+    "corpus_id": "ABS-0031",
+    "pmid": "39048614",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Anonymous_2019",
+      "study_location": "Ganzhou, China",
+      "study_period": "2016-2019",
+      "study_design": "time_series",
+      "population": "other",
+      "sample_size": 57251,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 4
+    },
+    "valid": true,
+    "output_hash": "f52ba1a38605588a92c07beb352d2d6da75704a780ad67df8b001c330e06c109"
+  },
+  {
+    "corpus_id": "ABS-0032",
+    "pmid": "35627536",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Al-Hemoud_2022",
+      "study_location": "Kuwait, Kuwait",
+      "study_period": "2010-2018",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": 218749,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.0161,
+        "ci_lower": 1.0087,
+        "ci_upper": 1.0235,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": "1.61% increase",
+        "lag": "other",
+        "outcome_specific": "all_respiratory",
+        "covariates": []
+      },
+      "n_estimates_in_abstract": 1
+    },
+    "valid": true,
+    "output_hash": "efec1db7c1e630f0138da61f2a7d830dd16ca22c3cbc0ee7e0d4785b4ce01d95"
+  },
+  {
+    "corpus_id": "ABS-0033",
+    "pmid": "31755707",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "AssociationsSourceSpecific_YYYY",
+      "study_location": "New York State, USA",
+      "study_period": "2005-2016",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": 460509,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 2
+    },
+    "valid": true,
+    "output_hash": "2e08151f5644637b24ca13cb467edec14a156cbab4fc6e0b424acc99bbd5f0cc"
+  },
+  {
+    "corpus_id": "ABS-0034",
+    "pmid": "34989991",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Anonymous_YYYY",
+      "study_location": "Lanzhou, China",
+      "study_period": "2014-2018",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.05302,
+        "ci_lower": 1.03202,
+        "ci_upper": 1.07445,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "other",
+        "outcome_specific": "other",
+        "covariates": [
+          "temperature",
+          "humidity",
+          "trend",
+          "seasonality"
+        ]
+      },
+      "n_estimates_in_abstract": 5
+    },
+    "valid": true,
+    "output_hash": "6b55a451e16ea4a8374517e5c639626df50ba72f251443cd05b9d9aa6fb692f7"
+  },
+  {
+    "corpus_id": "ABS-0035",
+    "pmid": "36777770",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Anonymous_2017",
+      "study_location": "Ningbo, China",
+      "study_period": "2015-2017",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": 10416,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.0222,
+        "ci_lower": 1.0064,
+        "ci_upper": 1.0382,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "other",
+        "outcome_specific": "other",
+        "covariates": []
+      },
+      "n_estimates_in_abstract": 4
+    },
+    "valid": true,
+    "output_hash": "4fb0d53bd064d009a28e2c9bd6bcda9ebdd3b40f1829412ef858260286acd5ae"
+  },
+  {
+    "corpus_id": "ABS-0036",
+    "pmid": "31254082",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_YYYY",
+      "study_location": "Jackson, USA",
+      "study_period": "2003-2011",
+      "study_design": "time_series",
+      "population": "other",
+      "sample_size": null,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.072,
+        "ci_lower": 1.017,
+        "ci_upper": 1.131,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": "7.2% increase",
+        "lag": "other",
+        "outcome_specific": "asthma",
+        "covariates": [
+          "trend",
+          "meteorology"
+        ]
+      },
+      "n_estimates_in_abstract": 1
+    },
+    "valid": true,
+    "output_hash": "1d187ba3b7d7bb761f478bf013a1ccb5bd59d0dc84b41df92a0b38d3385b738b"
+  },
+  {
+    "corpus_id": "ABS-0037",
+    "pmid": "39520750",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_2022",
+      "study_location": "Jiangsu province, China",
+      "study_period": "2019-2022",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": 9128,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 2
+    },
+    "valid": true,
+    "output_hash": "3c98b904f6c387500eb4a02f05e21ed912a5bf9bf8d96f2370ba4a1ba8239b47"
+  },
+  {
+    "corpus_id": "ABS-0038",
+    "pmid": "36580986",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_year",
+      "study_location": "Madrid, Spain",
+      "study_period": "2013-2018",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 7
+    },
+    "valid": true,
+    "output_hash": "b04c30ba03c85c42dc2541169d2cc9ddce18d72d745f1f62b2c757c669766ec9"
+  },
+  {
+    "corpus_id": "ABS-0039",
+    "pmid": "37968236",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_2019",
+      "study_location": "a city, China",
+      "study_period": "2014-2019",
+      "study_design": "time_series",
+      "population": "other",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 1
+    },
+    "valid": true,
+    "output_hash": "c53b892a004f2426ce38d7e4de21e3cadbbafb44b34219aa663a3ca85cacddd5"
+  },
+  {
+    "corpus_id": "ABS-0040",
+    "pmid": "37159523",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Anonymous_2023",
+      "study_location": "China",
+      "study_period": "2013-2020",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": 1399955,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.005,
+        "ci_lower": 1.0039,
+        "ci_upper": 1.0061,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": "per 34.5 ug/m3 (IQR)",
+        "lag": "other",
+        "outcome_specific": "all_respiratory",
+        "covariates": []
+      },
+      "n_estimates_in_abstract": 2
+    },
+    "valid": true,
+    "output_hash": "d6d97c35b381ce54dc94a96265a887df6fed78867fdbf2eab7f952c1bb9f07ff"
+  },
+  {
+    "corpus_id": "ABS-0041",
+    "pmid": "27581332",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "unknown_2013",
+      "study_location": "Volta Redonda, Brazil",
+      "study_period": "2012-2012",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": 752,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 3
+    },
+    "valid": true,
+    "output_hash": "a7c6d2aed2b821c91599d64fffd440e92f23182b23495a709e824c2dd275c3cf"
+  },
+  {
+    "corpus_id": "ABS-0042",
+    "pmid": "32554254",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "first_author_year",
+      "study_location": "Republic of Korea",
+      "study_period": "2013-2015",
+      "study_design": "other",
+      "population": "children",
+      "sample_size": null,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.048,
+        "ci_lower": 1.028,
+        "ci_upper": 1.069,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": "30.0 ug/m3 vs 20.0 ug/m3 reference",
+        "lag": "other",
+        "outcome_specific": "other",
+        "covariates": [
+          "meteorological factors"
+        ]
+      },
+      "n_estimates_in_abstract": 4
+    },
+    "valid": true,
+    "output_hash": "ba7f38f2f8795c5427b79ef55cc24b253e8b78c9fb16e5960ce0cdff568de838"
+  },
+  {
+    "corpus_id": "ABS-0043",
+    "pmid": "29459308",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_year",
+      "study_location": "Ontario, Canada",
+      "study_period": "2004-2011",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 0
+    },
+    "valid": true,
+    "output_hash": "56c3b83c3e94e0282e72fcbc34288904af565943c53628649f404edb8d34c680"
+  },
+  {
+    "corpus_id": "ABS-0044",
+    "pmid": "34184226",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "He_2021",
+      "study_location": "Yancheng City, China",
+      "study_period": "2014-2019",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": 43283,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.0073,
+        "ci_lower": 1.004,
+        "ci_upper": 1.0106,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "lag0",
+        "outcome_specific": "all_respiratory",
+        "covariates": []
+      },
+      "n_estimates_in_abstract": 4
+    },
+    "valid": true,
+    "output_hash": "5f31db569cb2081efccd743b88a295a3e2250078dcbbf135dee1a480df8a0285"
+  },
+  {
+    "corpus_id": "ABS-0045",
+    "pmid": "32760064",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "He_2021",
+      "study_location": "252 cities, China",
+      "study_period": "2013-2017",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": 117338867,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 1
+    },
+    "valid": true,
+    "output_hash": "9238d9385d804998a8d8a821e6d3c159aadc237ff295377401ba0c52ae0ea174"
+  },
+  {
+    "corpus_id": "ABS-0046",
+    "pmid": "32729038",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_YYYY",
+      "study_location": "Taipei, Taiwan",
+      "study_period": "2012-2015",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": null,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.31,
+        "ci_lower": 1.069,
+        "ci_upper": 1.606,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "lag0",
+        "outcome_specific": "asthma",
+        "covariates": []
+      },
+      "n_estimates_in_abstract": 5
+    },
+    "valid": true,
+    "output_hash": "bcda06b687eb4afebd8d353e08bd803ed3f4512d63f9010339eb6b9d381604d8"
+  },
+  {
+    "corpus_id": "ABS-0047",
+    "pmid": "35027064",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_YYYY",
+      "study_location": "Shanghai, China",
+      "study_period": "2008-2020",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": 1960361,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.00755,
+        "ci_lower": 1.00422,
+        "ci_upper": 1.01089,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "lag0",
+        "outcome_specific": "all_respiratory",
+        "covariates": [
+          "calendar time",
+          "day of the week",
+          "public holidays",
+          "meteorological factors"
+        ]
+      },
+      "n_estimates_in_abstract": 2
+    },
+    "valid": true,
+    "output_hash": "3298634b13d2473f5b3b301e198730353ab99f03a359601261feaa2d47cf2034"
+  },
+  {
+    "corpus_id": "ABS-0048",
+    "pmid": "32193561",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_2011",
+      "study_location": "Jubail Industrial City, Saudi Arabia",
+      "study_period": "2007-2011",
+      "study_design": "time_series",
+      "population": "other",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 4
+    },
+    "valid": true,
+    "output_hash": "da3720286c756500d15cf08be6f2f891b7a4cd733bf917d4cf41cc323297351d"
+  },
+  {
+    "corpus_id": "ABS-0049",
+    "pmid": "24240657",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "first_author_year",
+      "study_location": "Orange County, CA, USA",
+      "study_period": null,
+      "study_design": "case_crossover",
+      "population": "children",
+      "sample_size": 11390,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 0
+    },
+    "valid": true,
+    "output_hash": "756780729655a9528a284c94e8fffc87d0e70c01649172811877910ecc381156"
+  },
+  {
+    "corpus_id": "ABS-0050",
+    "pmid": "30502738",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Chen_2019",
+      "study_location": "Chengdu, China",
+      "study_period": "2015-2016",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.0103,
+        "ci_lower": 1.005,
+        "ci_upper": 1.0156,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "other",
+        "outcome_specific": "all_respiratory",
+        "covariates": [
+          "trend",
+          "seasonality"
+        ]
+      },
+      "n_estimates_in_abstract": 4
+    },
+    "valid": true,
+    "output_hash": "a4a706844c0acf35e38a165bf20d7e02c5379a1c6955dfd3646723e612183524"
+  },
+  {
+    "corpus_id": "ABS-0051",
+    "pmid": "20502338",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "UrbanAmbientParticleMetrics_2005",
+      "study_location": "London, UK",
+      "study_period": "2000-2005",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 2
+    },
+    "valid": true,
+    "output_hash": "ffabf38529a92a527c984b4664167f92435781bc2a54140409be9df86f684a21"
+  },
+  {
+    "corpus_id": "ABS-0052",
+    "pmid": "36863162",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_2021",
+      "study_location": "Wuhan, China",
+      "study_period": "2017-2019",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": 2636026,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 6
+    },
+    "valid": true,
+    "output_hash": "9ab8042594c397d55cbff919e3ae7804685cddb6de669e27561f36aec848b6b1"
+  },
+  {
+    "corpus_id": "ABS-0053",
+    "pmid": "33980121",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_year",
+      "study_location": "Brescia, Italy",
+      "study_period": "2014-2017",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": 543,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 3
+    },
+    "valid": true,
+    "output_hash": "49044793c2b51b8ea9bb4a0edb68086eb4d09c07fc5de71f6cd0e200c16f6e67"
+  },
+  {
+    "corpus_id": "ABS-0054",
+    "pmid": "35921071",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Shrestha_2022",
+      "study_location": "Louisiana, USA",
+      "study_period": "2010-2012",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": 63789,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 0
+    },
+    "valid": true,
+    "output_hash": "024bc947c02bc8990523ef8ffd4a0a248cba1df1b6418d7860df627492dac76b"
+  },
+  {
+    "corpus_id": "ABS-0055",
+    "pmid": "36641448",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "He_2022",
+      "study_location": "Sichuan Province, China",
+      "study_period": "2017-2018",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": 192079,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.0064,
+        "ci_lower": 1.0004,
+        "ci_upper": 1.0124,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "other",
+        "outcome_specific": "pneumonia",
+        "covariates": [
+          "long-term trends",
+          "seasonality",
+          "day of the week",
+          "meteorological factors"
+        ]
+      },
+      "n_estimates_in_abstract": 8
+    },
+    "valid": true,
+    "output_hash": "c504e98ec21b1729e9fb052b1595ae0a118e114cd1b181a0b74dd02548ac4aeb"
+  },
+  {
+    "corpus_id": "ABS-0056",
+    "pmid": "36107568",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "_raw_unparseable": ""
+    },
+    "valid": false,
+    "output_hash": "2defce652230a0b5b3a624bd44a143ab3340e9d36998d795d4bf5ebd53610efa"
+  },
+  {
+    "corpus_id": "ABS-0057",
+    "pmid": "27224452",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Stolzel_2017",
+      "study_location": "Augsburg, Germany; Dresden, Germany; Chernivtsi, Ukraine; Ljubljana, Slovenia; Prague, Czech Republic",
+      "study_period": "2011-2014",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.06,
+        "ci_lower": 1.039,
+        "ci_upper": 1.081,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": "per 12.4 ug/m3",
+        "lag": "other",
+        "outcome_specific": "all_respiratory",
+        "covariates": [
+          "temperature",
+          "humidity",
+          "trend",
+          "seasonality"
+        ]
+      },
+      "n_estimates_in_abstract": 3
+    },
+    "valid": true,
+    "output_hash": "b658561caff87c2028f5055c363dd4e9f4d1670c795eb80b3d825a2b56d9d09c"
+  },
+  {
+    "corpus_id": "ABS-0058",
+    "pmid": "33678143",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_YYYY",
+      "study_location": "San Diego County, USA",
+      "study_period": "1999-2013",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 3
+    },
+    "valid": true,
+    "output_hash": "0b71a11cd297a04b9c32d545984a5585b8915db2fe159d1dd5697dfccdd009f0"
+  },
+  {
+    "corpus_id": "ABS-0059",
+    "pmid": "37137261",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "first_author_year",
+      "study_location": "139 cities, Japan",
+      "study_period": "2016-2019",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.0174,
+        "ci_lower": 1.0141,
+        "ci_upper": 1.0207,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "lag0",
+        "outcome_specific": "all_respiratory",
+        "covariates": [
+          "temperature",
+          "humidity",
+          "trend",
+          "seasonality"
+        ]
+      },
+      "n_estimates_in_abstract": 2
+    },
+    "valid": true,
+    "output_hash": "bf9502a1628b9bbed5e99a21f0551ad17cca2dcb9309de04a8fa80ec36a49676"
+  },
+  {
+    "corpus_id": "ABS-0060",
+    "pmid": "33910560",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "first_author_year",
+      "study_location": "Wuhan, China",
+      "study_period": "2016-2018",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": 159365,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.0195,
+        "ci_lower": 1.0163,
+        "ci_upper": 1.0227,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "other",
+        "outcome_specific": "all_respiratory",
+        "covariates": [
+          "temperature",
+          "humidity",
+          "trend",
+          "seasonality"
+        ]
+      },
+      "n_estimates_in_abstract": 2
+    },
+    "valid": true,
+    "output_hash": "b6fefe942e64fc3678a0f137fe686439e8b80dd5857a0070091a93d364930e2c"
+  },
+  {
+    "corpus_id": "ABS-0061",
+    "pmid": "27350257",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_year",
+      "study_location": "London, UK",
+      "study_period": "2011-2012",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 0
+    },
+    "valid": true,
+    "output_hash": "a5d62faa0fb52945489338717ef869168ba359b1e386ee736785155f791a7986"
+  },
+  {
+    "corpus_id": "ABS-0062",
+    "pmid": "25776011",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Ensemble_based_YYYY",
+      "study_location": "Atlanta, USA",
+      "study_period": "2002-2010",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 2
+    },
+    "valid": true,
+    "output_hash": "225c7de061ef5b329a8ba333b8ef9acac7a24cc3e48075d713de2bd99fed5eb5"
+  },
+  {
+    "corpus_id": "ABS-0063",
+    "pmid": "34574538",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Anonymous_2019",
+      "study_location": "Kandy, Sri Lanka",
+      "study_period": "2019-2019",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.0195,
+        "ci_lower": 1.0025,
+        "ci_upper": 1.0367,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "lag0",
+        "outcome_specific": "all_respiratory",
+        "covariates": []
+      },
+      "n_estimates_in_abstract": 4
+    },
+    "valid": true,
+    "output_hash": "4f056bee755870fae68987872b94116ca402fdbc84edff8f2bf2472b397faec5"
+  },
+  {
+    "corpus_id": "ABS-0064",
+    "pmid": "39013602",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "first_author_year",
+      "study_location": "Perth, Australia",
+      "study_period": "2015-2017",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 2
+    },
+    "valid": true,
+    "output_hash": "61c8c45dcadd8b218b2bec2444966d6f734b9aa63491a6651a052fd506b7fd53"
+  },
+  {
+    "corpus_id": "ABS-0065",
+    "pmid": "35661917",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "_raw_unparseable": ""
+    },
+    "valid": false,
+    "output_hash": "2defce652230a0b5b3a624bd44a143ab3340e9d36998d795d4bf5ebd53610efa"
+  },
+  {
+    "corpus_id": "ABS-0066",
+    "pmid": "38622704",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Seasonal_2024",
+      "study_location": "western Montana, USA",
+      "study_period": "2017-2020",
+      "study_design": "case_crossover",
+      "population": "children",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 0
+    },
+    "valid": true,
+    "output_hash": "5e8896e6346c35048a3926165880886e8bbb49daa7feafbfcc6c4fd08c91e2fc"
+  },
+  {
+    "corpus_id": "ABS-0067",
+    "pmid": "39633418",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_2024",
+      "study_location": "Suzhou, China",
+      "study_period": "2017-2022",
+      "study_design": "case_crossover",
+      "population": "children",
+      "sample_size": 13408,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.017,
+        "ci_lower": 1.003,
+        "ci_upper": 1.031,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "other",
+        "outcome_specific": "all_respiratory",
+        "covariates": [
+          "trend",
+          "seasonality"
+        ]
+      },
+      "n_estimates_in_abstract": 5
+    },
+    "valid": true,
+    "output_hash": "38ff05781aca0653f6a0ce3b9b4662f3e8f98e3f2277704f49ac225198c7abd5"
+  },
+  {
+    "corpus_id": "ABS-0068",
+    "pmid": "38164931",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_year",
+      "study_location": "Philadelphia, USA",
+      "study_period": "2011-2016",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": 52984,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 3
+    },
+    "valid": true,
+    "output_hash": "274c1f7351e0ea68495eb0bace08db76ff24c732d88e7580c129fe673856b9b1"
+  },
+  {
+    "corpus_id": "ABS-0069",
+    "pmid": "37830139",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Luo_2023",
+      "study_location": "Panzhihua, China",
+      "study_period": "2016-2020",
+      "study_design": "time_series",
+      "population": "other",
+      "sample_size": null,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.0725,
+        "ci_lower": 1.0426,
+        "ci_upper": 1.1033,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "other",
+        "outcome_specific": "all_respiratory",
+        "covariates": []
+      },
+      "n_estimates_in_abstract": 6
+    },
+    "valid": true,
+    "output_hash": "3c9ac2c17ced75ae1fe4f999b365e849aafe48f90509ddc5d610cf122ea68d37"
+  },
+  {
+    "corpus_id": "ABS-0070",
+    "pmid": "38858655",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Anonymous_2019",
+      "study_location": "Ningbo, China",
+      "study_period": "2015-2019",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": 104441,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 3
+    },
+    "valid": true,
+    "output_hash": "2d21b317882f1a8c87e8e47e662b0a39dc165e1cf62d68c21b6b252b7900e1d4"
+  },
+  {
+    "corpus_id": "ABS-0071",
+    "pmid": "32854703",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "_raw_unparseable": ""
+    },
+    "valid": false,
+    "output_hash": "2defce652230a0b5b3a624bd44a143ab3340e9d36998d795d4bf5ebd53610efa"
+  },
+  {
+    "corpus_id": "ABS-0072",
+    "pmid": "39505076",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Spatial_2024",
+      "study_location": "Korea",
+      "study_period": "2006-2021",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.0143,
+        "ci_lower": 1.0134,
+        "ci_upper": 1.0152,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": "1.43% increase",
+        "lag": "lag0",
+        "outcome_specific": "all_respiratory",
+        "covariates": []
+      },
+      "n_estimates_in_abstract": 2
+    },
+    "valid": true,
+    "output_hash": "7abc0496fdb0bfd92c0b22d3ab4c3db88bcdb2267c8912cabd6d1b4b44b11176"
+  },
+  {
+    "corpus_id": "ABS-0073",
+    "pmid": "34545525",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "first_author_year",
+      "study_location": "Guangzhou, China",
+      "study_period": "2014-2015",
+      "study_design": "case_crossover",
+      "population": "other",
+      "sample_size": 40002,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.016,
+        "ci_lower": 1.006,
+        "ci_upper": 1.027,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": "1.6% increase",
+        "lag": "other",
+        "outcome_specific": "COPD",
+        "covariates": []
+      },
+      "n_estimates_in_abstract": 1
+    },
+    "valid": true,
+    "output_hash": "97c1b146f302de0815497464ff9328e691ede9fb3bc0a08b926853312f662471"
+  },
+  {
+    "corpus_id": "ABS-0074",
+    "pmid": "24528997",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "first_author_year",
+      "study_location": "urban, country_not_specified",
+      "study_period": null,
+      "study_design": "case_crossover",
+      "population": "children",
+      "sample_size": 96,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 2
+    },
+    "valid": true,
+    "output_hash": "3b5c7747a224ae8f1986f407546c994c15fa810c38e60acfc58415088a8b21aa"
+  },
+  {
+    "corpus_id": "ABS-0075",
+    "pmid": "25244038",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Multifactorial_airborne_exposures_year",
+      "study_location": "Santiago, Chile",
+      "study_period": "2004-2007",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 0
+    },
+    "valid": true,
+    "output_hash": "46078d416407583b2834fddd5f56c8bb5082777c8e84af2d138830c300093a9e"
+  },
+  {
+    "corpus_id": "ABS-0076",
+    "pmid": "33590391",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Assessing PM_YYYY",
+      "study_location": "Shenzhen, China",
+      "study_period": null,
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 3
+    },
+    "valid": true,
+    "output_hash": "35d1abad32e00a761d7cd9712662c23e1218b3ae96eabf7e6104cbdde611c342"
+  },
+  {
+    "corpus_id": "ABS-0077",
+    "pmid": "29870428",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_year",
+      "study_location": "26 cities, China",
+      "study_period": "2014-2015",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": 14569622,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.0026,
+        "ci_lower": 1.0022,
+        "ci_upper": 1.0031,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "lag0",
+        "outcome_specific": "all_respiratory",
+        "covariates": []
+      },
+      "n_estimates_in_abstract": 8
+    },
+    "valid": true,
+    "output_hash": "0d2c7113a01a24c0c28e16ad023e45d34ab890952b44d813b4fcf613e9ca85bf"
+  },
+  {
+    "corpus_id": "ABS-0078",
+    "pmid": "32184587",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "FirstAuthor_YYYY",
+      "study_location": "Ahvaz, Iran",
+      "study_period": "2008-2018",
+      "study_design": "time_series",
+      "population": "other",
+      "sample_size": null,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.041,
+        "ci_lower": 1.02,
+        "ci_upper": 1.072,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": "per 1 ug/m3 (assumed from RR=1.004)",
+        "lag": "other",
+        "outcome_specific": "asthma",
+        "covariates": [
+          "trend",
+          "seasonality",
+          "weather",
+          "weekdays",
+          "holidays"
+        ]
+      },
+      "n_estimates_in_abstract": 10
+    },
+    "valid": true,
+    "output_hash": "b5e7e0798bf424747d2a761c4a1e3bcf1ae330a394b478547fe68ffb872063ec"
+  },
+  {
+    "corpus_id": "ABS-0079",
+    "pmid": "24555678",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Chen_2012",
+      "study_location": "Taipei, Taiwan",
+      "study_period": "2006-2010",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 2
+    },
+    "valid": true,
+    "output_hash": "3387c359509dad9ddcd29e7f6542c0baec24dc1b6d235b36421b252e632be99c"
+  },
+  {
+    "corpus_id": "ABS-0080",
+    "pmid": "23729683",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "first_author_year",
+      "study_location": "California, USA",
+      "study_period": "2005-2008",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 1
+    },
+    "valid": true,
+    "output_hash": "43b3a7655e6404f83fc6f832762f3f880bdb2b23c36e1d69639f052dd47f66f4"
+  },
+  {
+    "corpus_id": "ABS-0081",
+    "pmid": "38347929",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "first_author_year",
+      "study_location": "Sichuan province, China",
+      "study_period": null,
+      "study_design": "time_series",
+      "population": "elderly",
+      "sample_size": null,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.015,
+        "ci_lower": 1.003,
+        "ci_upper": 1.028,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "other",
+        "outcome_specific": "asthma",
+        "covariates": []
+      },
+      "n_estimates_in_abstract": 6
+    },
+    "valid": true,
+    "output_hash": "36082383ba60c00175d55f0350113f1b7c2c808df72dd411c4623d81aba485c6"
+  },
+  {
+    "corpus_id": "ABS-0082",
+    "pmid": "33640663",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_2017",
+      "study_location": "Brescia, Italy",
+      "study_period": "2014-2016",
+      "study_design": "time_series",
+      "population": "other",
+      "sample_size": 431,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 8
+    },
+    "valid": true,
+    "output_hash": "c9fab93160e31da6ddb216138e62df5f907d873d9b5b81963317bcc92444a5cf"
+  },
+  {
+    "corpus_id": "ABS-0083",
+    "pmid": "30277796",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Mirabelli_2016",
+      "study_location": "United States",
+      "study_period": null,
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.024,
+        "ci_lower": 1.018,
+        "ci_upper": 1.029,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "other",
+        "outcome_specific": "all_respiratory",
+        "covariates": []
+      },
+      "n_estimates_in_abstract": 6
+    },
+    "valid": true,
+    "output_hash": "7abca2c91ae01f94d8e3c507883403eea26ba3fd9e0cc0d97b7a47f705c33492"
+  },
+  {
+    "corpus_id": "ABS-0084",
+    "pmid": "27605585",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Malig_2014",
+      "study_location": "California, USA",
+      "study_period": "2005-2009",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 2
+    },
+    "valid": true,
+    "output_hash": "6436fd8a40f2c7ddcb500e351ef2f239c2bad7f2c281e6c10287a344ee5a3c75"
+  },
+  {
+    "corpus_id": "ABS-0085",
+    "pmid": "31200718",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "unknown_2017",
+      "study_location": "Shijiazhuang, China",
+      "study_period": "2013-2016",
+      "study_design": "time_series",
+      "population": "other",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 0
+    },
+    "valid": true,
+    "output_hash": "afdf963862efc091f2467f772a34f010a1dcfd8db5054c0c5a92df01d0af6f21"
+  },
+  {
+    "corpus_id": "ABS-0086",
+    "pmid": "35202623",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_2022",
+      "study_location": "Bintulu, Malaysia",
+      "study_period": "2010-2019",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": null,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.089,
+        "ci_lower": 1.001,
+        "ci_upper": 1.183,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "other",
+        "outcome_specific": "all_respiratory",
+        "covariates": []
+      },
+      "n_estimates_in_abstract": 2
+    },
+    "valid": true,
+    "output_hash": "190241790b743dfa2105d8e4f262b4a44dfd5f19f6004436c7b835f512534707"
+  },
+  {
+    "corpus_id": "ABS-0087",
+    "pmid": "35396614",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_YYYY",
+      "study_location": "Sichuan Province, China",
+      "study_period": "2017-2018",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": 49975,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.0123,
+        "ci_lower": 1.0021,
+        "ci_upper": 1.0226,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": "1.23% increase",
+        "lag": "other",
+        "outcome_specific": "other",
+        "covariates": [
+          "temperature",
+          "humidity",
+          "trend",
+          "seasonality"
+        ]
+      },
+      "n_estimates_in_abstract": 4
+    },
+    "valid": true,
+    "output_hash": "17bc121e922fc3b928cb1c2f15a1a017a37f97daede91ec4c4479e1ceca1b370"
+  },
+  {
+    "corpus_id": "ABS-0088",
+    "pmid": "26350981",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_year",
+      "study_location": "Atlanta, Dallas, and St. Louis, USA",
+      "study_period": "1993-2009",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 0
+    },
+    "valid": true,
+    "output_hash": "c328ab664513488762cb5cc122baa93ab672036d45e2f07f2bf93af7b82209b3"
+  },
+  {
+    "corpus_id": "ABS-0089",
+    "pmid": "39879475",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_2019",
+      "study_location": "Cuiab\u00e1, Brazil",
+      "study_period": "2016-2018",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": 1612,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 0
+    },
+    "valid": true,
+    "output_hash": "3fc2ce7186e29e7307e3ca19eafc8243dd57385f7c1602d44c4bfcca469ce941"
+  },
+  {
+    "corpus_id": "ABS-0090",
+    "pmid": "22998927",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_year",
+      "study_location": "St. Louis, USA",
+      "study_period": null,
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 0
+    },
+    "valid": true,
+    "output_hash": "70dba213b3871891d54cb284fecebce2a5be2b0a2e913be7039a2477f6920786"
+  },
+  {
+    "corpus_id": "ABS-0091",
+    "pmid": "38383039",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "first_author_year",
+      "study_location": "USA",
+      "study_period": "2010-2016",
+      "study_design": "time_series",
+      "population": "general",
+      "sample_size": 50100000,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.0134,
+        "ci_lower": 1.0073,
+        "ci_upper": 1.0194,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "lag0-1",
+        "outcome_specific": "all_respiratory",
+        "covariates": []
+      },
+      "n_estimates_in_abstract": 2
+    },
+    "valid": true,
+    "output_hash": "8863d57cbf52bffa2409c58b0adbb2484df7592db3a551c97f85435a52e45f47"
+  },
+  {
+    "corpus_id": "ABS-0092",
+    "pmid": "36856604",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_year",
+      "study_location": "Warsaw, Krak\u00f3w, and Tricity, Poland",
+      "study_period": "2011-2018",
+      "study_design": "case_crossover",
+      "population": "other",
+      "sample_size": 26948,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.03,
+        "ci_lower": 1.006,
+        "ci_upper": 1.055,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "other",
+        "outcome_specific": "COPD",
+        "covariates": []
+      },
+      "n_estimates_in_abstract": 4
+    },
+    "valid": true,
+    "output_hash": "983fad2770d5b4500e2fe480ecaa0ffe513d4cb3dc7a4f7b63dc2dcec3d213a8"
+  },
+  {
+    "corpus_id": "ABS-0093",
+    "pmid": "21172759",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "unknown_year",
+      "study_location": "Manhattan, USA",
+      "study_period": "2001-2002",
+      "study_design": "time_series",
+      "population": "elderly",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 0
+    },
+    "valid": true,
+    "output_hash": "0e265da8bf5d64f366900472b7fe91d8be39322453f1f05ae7681d803600ea67"
+  },
+  {
+    "corpus_id": "ABS-0094",
+    "pmid": "32822929",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "He_2021",
+      "study_location": "Shanghai, China",
+      "study_period": "2016-2018",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": 108817,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.011,
+        "ci_lower": 1.002,
+        "ci_upper": 1.021,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "other",
+        "outcome_specific": "asthma",
+        "covariates": []
+      },
+      "n_estimates_in_abstract": 4
+    },
+    "valid": true,
+    "output_hash": "53fdfd842557f986309aa2eef9bfc48ac782190d9d4b59bc684acfb4017c9e49"
+  },
+  {
+    "corpus_id": "ABS-0095",
+    "pmid": "35627528",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Unknown_2018",
+      "study_location": "Three largest urban agglomerations, Poland",
+      "study_period": "2010-2018",
+      "study_design": "case_crossover",
+      "population": "general",
+      "sample_size": 31919,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.014,
+        "ci_lower": 1.0,
+        "ci_upper": 1.028,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "other",
+        "outcome_specific": "asthma",
+        "covariates": []
+      },
+      "n_estimates_in_abstract": 8
+    },
+    "valid": true,
+    "output_hash": "6fb9bcc208af1bcbe280527add54d9279b15b050c38f947244c9debeb09cc14c"
+  },
+  {
+    "corpus_id": "ABS-0096",
+    "pmid": "37626307",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Anonymous_2022",
+      "study_location": "Lanzhou, China",
+      "study_period": "2014-2020",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": 51206,
+      "primary_estimate": {
+        "effect_measure": "RR",
+        "effect_estimate": 1.089,
+        "ci_lower": 1.075,
+        "ci_upper": 1.103,
+        "ci_level": 95,
+        "exposure_increment": "per 10 ug/m3",
+        "exposure_increment_original": null,
+        "lag": "other",
+        "outcome_specific": "all_respiratory",
+        "covariates": []
+      },
+      "n_estimates_in_abstract": 4
+    },
+    "valid": true,
+    "output_hash": "b55002d5f3f6b9344ca1e810b7c50ba9f6da5bb6228ea3f2d97f052151f1bc25"
+  },
+  {
+    "corpus_id": "ABS-0097",
+    "pmid": "30875246",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "_raw_unparseable": ""
+    },
+    "valid": false,
+    "output_hash": "2defce652230a0b5b3a624bd44a143ab3340e9d36998d795d4bf5ebd53610efa"
+  },
+  {
+    "corpus_id": "ABS-0098",
+    "pmid": "27492006",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Berti_2016",
+      "study_location": "Turin, Italy",
+      "study_period": "2008-2010",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": 21793,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 2
+    },
+    "valid": true,
+    "output_hash": "46fd18c803cb30e1eaf5b4d01e0b89598e2f564e449b5d55c56dd7e39485fe64"
+  },
+  {
+    "corpus_id": "ABS-0099",
+    "pmid": "39068973",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "Anonymous_2024",
+      "study_location": "Victoria, Australia",
+      "study_period": "2009-2022",
+      "study_design": "other",
+      "population": "general",
+      "sample_size": null,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 0
+    },
+    "valid": true,
+    "output_hash": "b3416f67aabb91468e9ff7f7e428beba5232f309067f9aee507d389aeb07081c"
+  },
+  {
+    "corpus_id": "ABS-0100",
+    "pmid": "25324558",
+    "run_id": 1,
+    "model_id": "gemini-2.5-pro-fixedslot",
+    "output": {
+      "study_id": "unknown_year",
+      "study_location": "Atlanta, USA",
+      "study_period": "1993-2010",
+      "study_design": "time_series",
+      "population": "children",
+      "sample_size": 503004,
+      "primary_estimate": null,
+      "n_estimates_in_abstract": 2
+    },
+    "valid": true,
+    "output_hash": "3a2708a4cb3b1cb0c978afe27c1cede46d52753b6a9421f70365f9bf371cc518"
+  }
+]

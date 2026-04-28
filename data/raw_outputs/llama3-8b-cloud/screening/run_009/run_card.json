@@ -1,0 +1,18 @@
+{
+  "model_id": "llama3-8b-cloud",
+  "provider": "openrouter:DeepInfra",
+  "underlying_model": "meta-llama/llama-3-8b-instruct",
+  "stage": "screening",
+  "run_id": 9,
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 512,
+  "n_items": 500,
+  "n_success": 491,
+  "n_fail": 9,
+  "started": "2026-04-27T18:03:12.497390+00:00",
+  "ended": "2026-04-27T18:37:18.240595+00:00",
+  "duration_seconds": 2045.743205,
+  "total_input_tokens": 420992,
+  "total_output_tokens": 51507
+}
