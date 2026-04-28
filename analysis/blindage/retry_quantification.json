@@ -1,0 +1,143 @@
+{
+  "method": "Retry quantification from run_card.json and experiment logs",
+  "caveat": "run_card.json did not record per-call retry counts in v1 of the protocol. Log-based mentions are an approximation and reflect log verbosity, not exact retry counts.",
+  "from_run_cards": {
+    "llama3-8b:screening": {
+      "n_runs_inspected": 10,
+      "total_calls": 0,
+      "successful": 0,
+      "failed": 0,
+      "retries_reported": 0,
+      "has_retry_field": false
+    },
+    "llama3-8b:extraction": {
+      "n_runs_inspected": 10,
+      "total_calls": 0,
+      "successful": 0,
+      "failed": 0,
+      "retries_reported": 0,
+      "has_retry_field": false
+    },
+    "mistral-7b:screening": {
+      "n_runs_inspected": 10,
+      "total_calls": 0,
+      "successful": 0,
+      "failed": 0,
+      "retries_reported": 0,
+      "has_retry_field": false
+    },
+    "mistral-7b:extraction": {
+      "n_runs_inspected": 10,
+      "total_calls": 0,
+      "successful": 0,
+      "failed": 0,
+      "retries_reported": 0,
+      "has_retry_field": false
+    },
+    "gemma2-9b:screening": {
+      "n_runs_inspected": 10,
+      "total_calls": 0,
+      "successful": 0,
+      "failed": 0,
+      "retries_reported": 0,
+      "has_retry_field": false
+    },
+    "gemma2-9b:extraction": {
+      "n_runs_inspected": 10,
+      "total_calls": 0,
+      "successful": 0,
+      "failed": 0,
+      "retries_reported": 0,
+      "has_retry_field": false
+    },
+    "claude-sonnet-4-5:screening": {
+      "n_runs_inspected": 10,
+      "total_calls": 0,
+      "successful": 0,
+      "failed": 0,
+      "retries_reported": 0,
+      "has_retry_field": false
+    },
+    "claude-sonnet-4-5:extraction": {
+      "n_runs_inspected": 10,
+      "total_calls": 0,
+      "successful": 0,
+      "failed": 0,
+      "retries_reported": 0,
+      "has_retry_field": false
+    },
+    "gemini-2.5-pro:screening": {
+      "n_runs_inspected": 10,
+      "total_calls": 0,
+      "successful": 0,
+      "failed": 0,
+      "retries_reported": 0,
+      "has_retry_field": false
+    },
+    "gemini-2.5-pro:extraction": {
+      "n_runs_inspected": 10,
+      "total_calls": 0,
+      "successful": 0,
+      "failed": 0,
+      "retries_reported": 0,
+      "has_retry_field": false
+    },
+    "gpt-4.1:screening": {
+      "n_runs_inspected": 10,
+      "total_calls": 0,
+      "successful": 0,
+      "failed": 0,
+      "retries_reported": 0,
+      "has_retry_field": false
+    },
+    "gpt-4.1:extraction": {
+      "n_runs_inspected": 10,
+      "total_calls": 0,
+      "successful": 0,
+      "failed": 0,
+      "retries_reported": 0,
+      "has_retry_field": false
+    }
+  },
+  "from_logs": {
+    "per_model": {
+      "llama3-8b": {
+        "retry_mentions": 0,
+        "timeout_mentions": 0,
+        "rate_limit_mentions": 0
+      },
+      "mistral-7b": {
+        "retry_mentions": 0,
+        "timeout_mentions": 0,
+        "rate_limit_mentions": 0
+      },
+      "gemma2-9b": {
+        "retry_mentions": 0,
+        "timeout_mentions": 0,
+        "rate_limit_mentions": 8
+      },
+      "claude-sonnet-4-5": {
+        "retry_mentions": 0,
+        "timeout_mentions": 0,
+        "rate_limit_mentions": 0
+      },
+      "gemini-2.5-pro": {
+        "retry_mentions": 0,
+        "timeout_mentions": 0,
+        "rate_limit_mentions": 0
+      },
+      "gpt-4.1": {
+        "retry_mentions": 0,
+        "timeout_mentions": 0,
+        "rate_limit_mentions": 0
+      }
+    },
+    "global": {
+      "retry_lines": 0,
+      "backoff_lines": 0,
+      "429_lines": 8,
+      "500_lines": 4156,
+      "timeout_lines": 0
+    }
+  }
+}

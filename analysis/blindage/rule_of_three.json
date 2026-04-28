@@ -1,0 +1,85 @@
+{
+  "method": "Rule of three: 95% upper bound on non-match rate when 0 non-matches observed in n items",
+  "formula": "UCL_{95%}(non-match rate) = 3/n  (Hanley & Lippman-Hand, JAMA 1983)",
+  "rationale": "Bootstrap CI [1.000, 1.000] is uninformative when EMR=1.000 with 0 variation. Rule of three provides a principled upper bound on the unseen non-match rate.",
+  "items": {
+    "llama3-8b": {
+      "screening": {
+        "emr": 1.0,
+        "n": 500,
+        "rule_of_three_upper_bound": 0.006,
+        "recommended_reporting": "EMR = 1.000  (non-match rate $\\leq$0.006, 95% upper bound, n=500)"
+      },
+      "extraction": {
+        "emr": 1.0,
+        "n": 100,
+        "rule_of_three_upper_bound": 0.03,
+        "recommended_reporting": "EMR = 1.000  (non-match rate $\\leq$0.030, 95% upper bound, n=100)"
+      }
+    },
+    "mistral-7b": {
+      "screening": {
+        "emr": 1.0,
+        "n": 500,
+        "rule_of_three_upper_bound": 0.006,
+        "recommended_reporting": "EMR = 1.000  (non-match rate $\\leq$0.006, 95% upper bound, n=500)"
+      },
+      "extraction": {
+        "emr": 1.0,
+        "n": 100,
+        "rule_of_three_upper_bound": 0.03,
+        "recommended_reporting": "EMR = 1.000  (non-match rate $\\leq$0.030, 95% upper bound, n=100)"
+      }
+    },
+    "gemma2-9b": {
+      "screening": {
+        "emr": 1.0,
+        "n": 500,
+        "rule_of_three_upper_bound": 0.006,
+        "recommended_reporting": "EMR = 1.000  (non-match rate $\\leq$0.006, 95% upper bound, n=500)"
+      },
+      "extraction": {
+        "emr": 1.0,
+        "n": 100,
+        "rule_of_three_upper_bound": 0.03,
+        "recommended_reporting": "EMR = 1.000  (non-match rate $\\leq$0.030, 95% upper bound, n=100)"
+      }
+    },
+    "claude-sonnet-4-5": {
+      "screening": {
+        "emr": 0.974,
+        "n": 500,
+        "note": "Not applicable: EMR < 1.0, standard bootstrap CI is informative"
+      },
+      "extraction": {
+        "emr": 0.05,
+        "n": 100,
+        "note": "Not applicable: EMR < 1.0, standard bootstrap CI is informative"
+      }
+    },
+    "gemini-2.5-pro": {
+      "screening": {
+        "emr": 0.936,
+        "n": 500,
+        "note": "Not applicable: EMR < 1.0, standard bootstrap CI is informative"
+      },
+      "extraction": {
+        "emr": 0.2,
+        "n": 100,
+        "note": "Not applicable: EMR < 1.0, standard bootstrap CI is informative"
+      }
+    },
+    "gpt-4.1": {
+      "screening": {
+        "emr": 0.97,
+        "n": 500,
+        "note": "Not applicable: EMR < 1.0, standard bootstrap CI is informative"
+      },
+      "extraction": {
+        "emr": 0.15,
+        "n": 100,
+        "note": "Not applicable: EMR < 1.0, standard bootstrap CI is informative"
+      }
+    }
+  }
+}

@@ -1,0 +1,1134 @@
+{
+  "method": "DerSimonian-Laird random-effects + fixed-effect inverse-variance",
+  "note": "Each row = pooled estimate using first valid effect per abstract for one model \u00d7 run.",
+  "models": {
+    "llama3-8b": {
+      "runs": {
+        "1": {
+          "k_studies": 63,
+          "pooled_rr_FE": 1.0091,
+          "ci_FE": [
+            1.008,
+            1.0101
+          ],
+          "pooled_rr_RE": 1.0377,
+          "ci_RE": [
+            1.0307,
+            1.0448
+          ],
+          "tau2": 0.000294,
+          "I2_pct": 92.61,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "2": {
+          "k_studies": 63,
+          "pooled_rr_FE": 1.0091,
+          "ci_FE": [
+            1.008,
+            1.0101
+          ],
+          "pooled_rr_RE": 1.0377,
+          "ci_RE": [
+            1.0307,
+            1.0448
+          ],
+          "tau2": 0.000294,
+          "I2_pct": 92.61,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "3": {
+          "k_studies": 63,
+          "pooled_rr_FE": 1.0091,
+          "ci_FE": [
+            1.008,
+            1.0101
+          ],
+          "pooled_rr_RE": 1.0377,
+          "ci_RE": [
+            1.0307,
+            1.0448
+          ],
+          "tau2": 0.000294,
+          "I2_pct": 92.61,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "4": {
+          "k_studies": 63,
+          "pooled_rr_FE": 1.0091,
+          "ci_FE": [
+            1.008,
+            1.0101
+          ],
+          "pooled_rr_RE": 1.0377,
+          "ci_RE": [
+            1.0307,
+            1.0448
+          ],
+          "tau2": 0.000294,
+          "I2_pct": 92.61,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "5": {
+          "k_studies": 63,
+          "pooled_rr_FE": 1.0091,
+          "ci_FE": [
+            1.008,
+            1.0101
+          ],
+          "pooled_rr_RE": 1.0377,
+          "ci_RE": [
+            1.0307,
+            1.0448
+          ],
+          "tau2": 0.000294,
+          "I2_pct": 92.61,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "6": {
+          "k_studies": 63,
+          "pooled_rr_FE": 1.0091,
+          "ci_FE": [
+            1.008,
+            1.0101
+          ],
+          "pooled_rr_RE": 1.0377,
+          "ci_RE": [
+            1.0307,
+            1.0448
+          ],
+          "tau2": 0.000294,
+          "I2_pct": 92.61,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "7": {
+          "k_studies": 63,
+          "pooled_rr_FE": 1.0091,
+          "ci_FE": [
+            1.008,
+            1.0101
+          ],
+          "pooled_rr_RE": 1.0377,
+          "ci_RE": [
+            1.0307,
+            1.0448
+          ],
+          "tau2": 0.000294,
+          "I2_pct": 92.61,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "8": {
+          "k_studies": 63,
+          "pooled_rr_FE": 1.0091,
+          "ci_FE": [
+            1.008,
+            1.0101
+          ],
+          "pooled_rr_RE": 1.0377,
+          "ci_RE": [
+            1.0307,
+            1.0448
+          ],
+          "tau2": 0.000294,
+          "I2_pct": 92.61,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "9": {
+          "k_studies": 63,
+          "pooled_rr_FE": 1.0091,
+          "ci_FE": [
+            1.008,
+            1.0101
+          ],
+          "pooled_rr_RE": 1.0377,
+          "ci_RE": [
+            1.0307,
+            1.0448
+          ],
+          "tau2": 0.000294,
+          "I2_pct": 92.61,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "10": {
+          "k_studies": 63,
+          "pooled_rr_FE": 1.0091,
+          "ci_FE": [
+            1.008,
+            1.0101
+          ],
+          "pooled_rr_RE": 1.0377,
+          "ci_RE": [
+            1.0307,
+            1.0448
+          ],
+          "tau2": 0.000294,
+          "I2_pct": 92.61,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        }
+      },
+      "summary": {
+        "n_runs": 10,
+        "mean_FE_pooled_rr": 1.0091,
+        "range_FE_pooled_rr": 0.0,
+        "mean_RE_pooled_rr": 1.0377,
+        "range_RE_pooled_rr": 0.0,
+        "mean_I2_pct": 92.61,
+        "mean_tau2": 0.000294,
+        "mean_RE_ci_lower": 1.0307,
+        "mean_RE_ci_upper": 1.0448,
+        "RE_ci_width_mean": 0.0141,
+        "n_runs_RE_crosses_null": 0,
+        "pct_runs_RE_crosses_null": 0.0
+      }
+    },
+    "mistral-7b": {
+      "runs": {
+        "1": {
+          "k_studies": 57,
+          "pooled_rr_FE": 1.0092,
+          "ci_FE": [
+            1.0081,
+            1.0102
+          ],
+          "pooled_rr_RE": 1.0317,
+          "ci_RE": [
+            1.0253,
+            1.0381
+          ],
+          "tau2": 0.000248,
+          "I2_pct": 92.11,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "2": {
+          "k_studies": 57,
+          "pooled_rr_FE": 1.0092,
+          "ci_FE": [
+            1.0081,
+            1.0102
+          ],
+          "pooled_rr_RE": 1.0317,
+          "ci_RE": [
+            1.0253,
+            1.0381
+          ],
+          "tau2": 0.000248,
+          "I2_pct": 92.11,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "3": {
+          "k_studies": 57,
+          "pooled_rr_FE": 1.0092,
+          "ci_FE": [
+            1.0081,
+            1.0102
+          ],
+          "pooled_rr_RE": 1.0317,
+          "ci_RE": [
+            1.0253,
+            1.0381
+          ],
+          "tau2": 0.000248,
+          "I2_pct": 92.11,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "4": {
+          "k_studies": 57,
+          "pooled_rr_FE": 1.0092,
+          "ci_FE": [
+            1.0081,
+            1.0102
+          ],
+          "pooled_rr_RE": 1.0317,
+          "ci_RE": [
+            1.0253,
+            1.0381
+          ],
+          "tau2": 0.000248,
+          "I2_pct": 92.11,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "5": {
+          "k_studies": 57,
+          "pooled_rr_FE": 1.0092,
+          "ci_FE": [
+            1.0081,
+            1.0102
+          ],
+          "pooled_rr_RE": 1.0317,
+          "ci_RE": [
+            1.0253,
+            1.0381
+          ],
+          "tau2": 0.000248,
+          "I2_pct": 92.11,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "6": {
+          "k_studies": 57,
+          "pooled_rr_FE": 1.0092,
+          "ci_FE": [
+            1.0081,
+            1.0102
+          ],
+          "pooled_rr_RE": 1.0317,
+          "ci_RE": [
+            1.0253,
+            1.0381
+          ],
+          "tau2": 0.000248,
+          "I2_pct": 92.11,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "7": {
+          "k_studies": 57,
+          "pooled_rr_FE": 1.0092,
+          "ci_FE": [
+            1.0081,
+            1.0102
+          ],
+          "pooled_rr_RE": 1.0317,
+          "ci_RE": [
+            1.0253,
+            1.0381
+          ],
+          "tau2": 0.000248,
+          "I2_pct": 92.11,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "8": {
+          "k_studies": 57,
+          "pooled_rr_FE": 1.0092,
+          "ci_FE": [
+            1.0081,
+            1.0102
+          ],
+          "pooled_rr_RE": 1.0317,
+          "ci_RE": [
+            1.0253,
+            1.0381
+          ],
+          "tau2": 0.000248,
+          "I2_pct": 92.11,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "9": {
+          "k_studies": 57,
+          "pooled_rr_FE": 1.0092,
+          "ci_FE": [
+            1.0081,
+            1.0102
+          ],
+          "pooled_rr_RE": 1.0317,
+          "ci_RE": [
+            1.0253,
+            1.0381
+          ],
+          "tau2": 0.000248,
+          "I2_pct": 92.11,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "10": {
+          "k_studies": 57,
+          "pooled_rr_FE": 1.0092,
+          "ci_FE": [
+            1.0081,
+            1.0102
+          ],
+          "pooled_rr_RE": 1.0317,
+          "ci_RE": [
+            1.0253,
+            1.0381
+          ],
+          "tau2": 0.000248,
+          "I2_pct": 92.11,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        }
+      },
+      "summary": {
+        "n_runs": 10,
+        "mean_FE_pooled_rr": 1.0092,
+        "range_FE_pooled_rr": 0.0,
+        "mean_RE_pooled_rr": 1.0317,
+        "range_RE_pooled_rr": 0.0,
+        "mean_I2_pct": 92.11,
+        "mean_tau2": 0.000248,
+        "mean_RE_ci_lower": 1.0253,
+        "mean_RE_ci_upper": 1.0381,
+        "RE_ci_width_mean": 0.0128,
+        "n_runs_RE_crosses_null": 0,
+        "pct_runs_RE_crosses_null": 0.0
+      }
+    },
+    "gemma2-9b": {
+      "runs": {
+        "1": {
+          "k_studies": 50,
+          "pooled_rr_FE": 1.0101,
+          "ci_FE": [
+            1.0091,
+            1.011
+          ],
+          "pooled_rr_RE": 1.0253,
+          "ci_RE": [
+            1.02,
+            1.0306
+          ],
+          "tau2": 0.000168,
+          "I2_pct": 92.4,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "2": {
+          "k_studies": 50,
+          "pooled_rr_FE": 1.0101,
+          "ci_FE": [
+            1.0091,
+            1.011
+          ],
+          "pooled_rr_RE": 1.0253,
+          "ci_RE": [
+            1.02,
+            1.0306
+          ],
+          "tau2": 0.000168,
+          "I2_pct": 92.4,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "3": {
+          "k_studies": 50,
+          "pooled_rr_FE": 1.0101,
+          "ci_FE": [
+            1.0091,
+            1.011
+          ],
+          "pooled_rr_RE": 1.0253,
+          "ci_RE": [
+            1.02,
+            1.0306
+          ],
+          "tau2": 0.000168,
+          "I2_pct": 92.4,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "4": {
+          "k_studies": 50,
+          "pooled_rr_FE": 1.0101,
+          "ci_FE": [
+            1.0091,
+            1.011
+          ],
+          "pooled_rr_RE": 1.0253,
+          "ci_RE": [
+            1.02,
+            1.0306
+          ],
+          "tau2": 0.000168,
+          "I2_pct": 92.4,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "5": {
+          "k_studies": 50,
+          "pooled_rr_FE": 1.0101,
+          "ci_FE": [
+            1.0091,
+            1.011
+          ],
+          "pooled_rr_RE": 1.0253,
+          "ci_RE": [
+            1.02,
+            1.0306
+          ],
+          "tau2": 0.000168,
+          "I2_pct": 92.4,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "6": {
+          "k_studies": 50,
+          "pooled_rr_FE": 1.0101,
+          "ci_FE": [
+            1.0091,
+            1.011
+          ],
+          "pooled_rr_RE": 1.0253,
+          "ci_RE": [
+            1.02,
+            1.0306
+          ],
+          "tau2": 0.000168,
+          "I2_pct": 92.4,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "7": {
+          "k_studies": 50,
+          "pooled_rr_FE": 1.0101,
+          "ci_FE": [
+            1.0091,
+            1.011
+          ],
+          "pooled_rr_RE": 1.0253,
+          "ci_RE": [
+            1.02,
+            1.0306
+          ],
+          "tau2": 0.000168,
+          "I2_pct": 92.4,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "8": {
+          "k_studies": 50,
+          "pooled_rr_FE": 1.0101,
+          "ci_FE": [
+            1.0091,
+            1.011
+          ],
+          "pooled_rr_RE": 1.0253,
+          "ci_RE": [
+            1.02,
+            1.0306
+          ],
+          "tau2": 0.000168,
+          "I2_pct": 92.4,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "9": {
+          "k_studies": 50,
+          "pooled_rr_FE": 1.0101,
+          "ci_FE": [
+            1.0091,
+            1.011
+          ],
+          "pooled_rr_RE": 1.0253,
+          "ci_RE": [
+            1.02,
+            1.0306
+          ],
+          "tau2": 0.000168,
+          "I2_pct": 92.4,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "10": {
+          "k_studies": 50,
+          "pooled_rr_FE": 1.0101,
+          "ci_FE": [
+            1.0091,
+            1.011
+          ],
+          "pooled_rr_RE": 1.0253,
+          "ci_RE": [
+            1.02,
+            1.0306
+          ],
+          "tau2": 0.000168,
+          "I2_pct": 92.4,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        }
+      },
+      "summary": {
+        "n_runs": 10,
+        "mean_FE_pooled_rr": 1.0101,
+        "range_FE_pooled_rr": 0.0,
+        "mean_RE_pooled_rr": 1.0253,
+        "range_RE_pooled_rr": 0.0,
+        "mean_I2_pct": 92.4,
+        "mean_tau2": 0.000168,
+        "mean_RE_ci_lower": 1.02,
+        "mean_RE_ci_upper": 1.0306,
+        "RE_ci_width_mean": 0.0106,
+        "n_runs_RE_crosses_null": 0,
+        "pct_runs_RE_crosses_null": 0.0
+      }
+    },
+    "claude-sonnet-4-5": {
+      "runs": {
+        "1": {
+          "k_studies": 48,
+          "pooled_rr_FE": 1.002,
+          "ci_FE": [
+            1.0019,
+            1.0021
+          ],
+          "pooled_rr_RE": 1.0125,
+          "ci_RE": [
+            1.0106,
+            1.0145
+          ],
+          "tau2": 1.4e-05,
+          "I2_pct": 93.18,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "2": {
+          "k_studies": 46,
+          "pooled_rr_FE": 1.0041,
+          "ci_FE": [
+            1.0036,
+            1.0045
+          ],
+          "pooled_rr_RE": 1.0173,
+          "ci_RE": [
+            1.0143,
+            1.0204
+          ],
+          "tau2": 4.6e-05,
+          "I2_pct": 92.48,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "3": {
+          "k_studies": 47,
+          "pooled_rr_FE": 1.002,
+          "ci_FE": [
+            1.0019,
+            1.0021
+          ],
+          "pooled_rr_RE": 1.0127,
+          "ci_RE": [
+            1.0108,
+            1.0147
+          ],
+          "tau2": 1.4e-05,
+          "I2_pct": 93.26,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "4": {
+          "k_studies": 50,
+          "pooled_rr_FE": 1.002,
+          "ci_FE": [
+            1.0019,
+            1.0021
+          ],
+          "pooled_rr_RE": 1.0124,
+          "ci_RE": [
+            1.0105,
+            1.0142
+          ],
+          "tau2": 1.4e-05,
+          "I2_pct": 92.98,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "5": {
+          "k_studies": 50,
+          "pooled_rr_FE": 1.002,
+          "ci_FE": [
+            1.0019,
+            1.0021
+          ],
+          "pooled_rr_RE": 1.0161,
+          "ci_RE": [
+            1.0137,
+            1.0186
+          ],
+          "tau2": 2.9e-05,
+          "I2_pct": 93.96,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "6": {
+          "k_studies": 49,
+          "pooled_rr_FE": 1.002,
+          "ci_FE": [
+            1.0019,
+            1.0021
+          ],
+          "pooled_rr_RE": 1.0125,
+          "ci_RE": [
+            1.0106,
+            1.0143
+          ],
+          "tau2": 1.4e-05,
+          "I2_pct": 93.07,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "7": {
+          "k_studies": 50,
+          "pooled_rr_FE": 1.002,
+          "ci_FE": [
+            1.0019,
+            1.0021
+          ],
+          "pooled_rr_RE": 1.0164,
+          "ci_RE": [
+            1.0139,
+            1.0188
+          ],
+          "tau2": 2.7e-05,
+          "I2_pct": 93.55,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "8": {
+          "k_studies": 49,
+          "pooled_rr_FE": 1.002,
+          "ci_FE": [
+            1.0019,
+            1.0021
+          ],
+          "pooled_rr_RE": 1.0145,
+          "ci_RE": [
+            1.0122,
+            1.0167
+          ],
+          "tau2": 2.2e-05,
+          "I2_pct": 93.01,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "9": {
+          "k_studies": 47,
+          "pooled_rr_FE": 1.002,
+          "ci_FE": [
+            1.0019,
+            1.0021
+          ],
+          "pooled_rr_RE": 1.0154,
+          "ci_RE": [
+            1.0129,
+            1.0179
+          ],
+          "tau2": 2.5e-05,
+          "I2_pct": 93.28,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "10": {
+          "k_studies": 46,
+          "pooled_rr_FE": 1.0034,
+          "ci_FE": [
+            1.003,
+            1.0039
+          ],
+          "pooled_rr_RE": 1.0181,
+          "ci_RE": [
+            1.015,
+            1.0213
+          ],
+          "tau2": 4.8e-05,
+          "I2_pct": 92.84,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        }
+      },
+      "summary": {
+        "n_runs": 10,
+        "mean_FE_pooled_rr": 1.0024,
+        "range_FE_pooled_rr": 0.0021,
+        "mean_RE_pooled_rr": 1.0148,
+        "range_RE_pooled_rr": 0.0058,
+        "mean_I2_pct": 93.16,
+        "mean_tau2": 2.5e-05,
+        "mean_RE_ci_lower": 1.0125,
+        "mean_RE_ci_upper": 1.0171,
+        "RE_ci_width_mean": 0.0047,
+        "n_runs_RE_crosses_null": 0,
+        "pct_runs_RE_crosses_null": 0.0
+      }
+    },
+    "gemini-2.5-pro": {
+      "runs": {
+        "1": {
+          "k_studies": 43,
+          "pooled_rr_FE": 1.0046,
+          "ci_FE": [
+            1.0043,
+            1.005
+          ],
+          "pooled_rr_RE": 1.0221,
+          "ci_RE": [
+            1.0185,
+            1.0257
+          ],
+          "tau2": 5.9e-05,
+          "I2_pct": 94.71,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "2": {
+          "k_studies": 39,
+          "pooled_rr_FE": 1.0036,
+          "ci_FE": [
+            1.0032,
+            1.004
+          ],
+          "pooled_rr_RE": 1.0237,
+          "ci_RE": [
+            1.0193,
+            1.028
+          ],
+          "tau2": 9.3e-05,
+          "I2_pct": 93.88,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "3": {
+          "k_studies": 43,
+          "pooled_rr_FE": 1.0036,
+          "ci_FE": [
+            1.0032,
+            1.004
+          ],
+          "pooled_rr_RE": 1.023,
+          "ci_RE": [
+            1.0188,
+            1.0271
+          ],
+          "tau2": 9e-05,
+          "I2_pct": 93.31,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "4": {
+          "k_studies": 44,
+          "pooled_rr_FE": 1.0045,
+          "ci_FE": [
+            1.0041,
+            1.0049
+          ],
+          "pooled_rr_RE": 1.022,
+          "ci_RE": [
+            1.0184,
+            1.0255
+          ],
+          "tau2": 6.2e-05,
+          "I2_pct": 94.42,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "5": {
+          "k_studies": 42,
+          "pooled_rr_FE": 1.0036,
+          "ci_FE": [
+            1.0033,
+            1.004
+          ],
+          "pooled_rr_RE": 1.0179,
+          "ci_RE": [
+            1.015,
+            1.0208
+          ],
+          "tau2": 3.4e-05,
+          "I2_pct": 93.89,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "6": {
+          "k_studies": 45,
+          "pooled_rr_FE": 1.0045,
+          "ci_FE": [
+            1.0041,
+            1.0049
+          ],
+          "pooled_rr_RE": 1.021,
+          "ci_RE": [
+            1.0176,
+            1.0244
+          ],
+          "tau2": 5.8e-05,
+          "I2_pct": 94.29,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "7": {
+          "k_studies": 44,
+          "pooled_rr_FE": 1.004,
+          "ci_FE": [
+            1.0036,
+            1.0044
+          ],
+          "pooled_rr_RE": 1.0205,
+          "ci_RE": [
+            1.0168,
+            1.0243
+          ],
+          "tau2": 7.5e-05,
+          "I2_pct": 93.61,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "8": {
+          "k_studies": 42,
+          "pooled_rr_FE": 1.0037,
+          "ci_FE": [
+            1.0033,
+            1.0042
+          ],
+          "pooled_rr_RE": 1.0222,
+          "ci_RE": [
+            1.018,
+            1.0263
+          ],
+          "tau2": 8.9e-05,
+          "I2_pct": 93.6,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "9": {
+          "k_studies": 41,
+          "pooled_rr_FE": 1.0037,
+          "ci_FE": [
+            1.0033,
+            1.0041
+          ],
+          "pooled_rr_RE": 1.0226,
+          "ci_RE": [
+            1.0185,
+            1.0267
+          ],
+          "tau2": 8.6e-05,
+          "I2_pct": 93.67,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "10": {
+          "k_studies": 40,
+          "pooled_rr_FE": 1.0035,
+          "ci_FE": [
+            1.0031,
+            1.0038
+          ],
+          "pooled_rr_RE": 1.018,
+          "ci_RE": [
+            1.0151,
+            1.021
+          ],
+          "tau2": 3.3e-05,
+          "I2_pct": 93.79,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        }
+      },
+      "summary": {
+        "n_runs": 10,
+        "mean_FE_pooled_rr": 1.0039,
+        "range_FE_pooled_rr": 0.0012,
+        "mean_RE_pooled_rr": 1.0213,
+        "range_RE_pooled_rr": 0.0058,
+        "mean_I2_pct": 93.92,
+        "mean_tau2": 6.8e-05,
+        "mean_RE_ci_lower": 1.0176,
+        "mean_RE_ci_upper": 1.025,
+        "RE_ci_width_mean": 0.0074,
+        "n_runs_RE_crosses_null": 0,
+        "pct_runs_RE_crosses_null": 0.0
+      }
+    },
+    "gpt-4.1": {
+      "runs": {
+        "1": {
+          "k_studies": 45,
+          "pooled_rr_FE": 1.0093,
+          "ci_FE": [
+            1.0083,
+            1.0102
+          ],
+          "pooled_rr_RE": 1.0228,
+          "ci_RE": [
+            1.0184,
+            1.0273
+          ],
+          "tau2": 0.000112,
+          "I2_pct": 91.07,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "2": {
+          "k_studies": 44,
+          "pooled_rr_FE": 1.0094,
+          "ci_FE": [
+            1.0085,
+            1.0104
+          ],
+          "pooled_rr_RE": 1.024,
+          "ci_RE": [
+            1.0193,
+            1.0288
+          ],
+          "tau2": 0.000124,
+          "I2_pct": 91.25,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "3": {
+          "k_studies": 45,
+          "pooled_rr_FE": 1.0094,
+          "ci_FE": [
+            1.0087,
+            1.0101
+          ],
+          "pooled_rr_RE": 1.021,
+          "ci_RE": [
+            1.0173,
+            1.0248
+          ],
+          "tau2": 7.4e-05,
+          "I2_pct": 91.04,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "4": {
+          "k_studies": 45,
+          "pooled_rr_FE": 1.0093,
+          "ci_FE": [
+            1.0083,
+            1.0102
+          ],
+          "pooled_rr_RE": 1.0228,
+          "ci_RE": [
+            1.0184,
+            1.0273
+          ],
+          "tau2": 0.000112,
+          "I2_pct": 91.07,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "5": {
+          "k_studies": 45,
+          "pooled_rr_FE": 1.0093,
+          "ci_FE": [
+            1.0083,
+            1.0102
+          ],
+          "pooled_rr_RE": 1.0228,
+          "ci_RE": [
+            1.0184,
+            1.0273
+          ],
+          "tau2": 0.000112,
+          "I2_pct": 91.07,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "6": {
+          "k_studies": 44,
+          "pooled_rr_FE": 1.0089,
+          "ci_FE": [
+            1.0078,
+            1.0099
+          ],
+          "pooled_rr_RE": 1.0269,
+          "ci_RE": [
+            1.0216,
+            1.0322
+          ],
+          "tau2": 0.00016,
+          "I2_pct": 91.33,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "7": {
+          "k_studies": 44,
+          "pooled_rr_FE": 1.0094,
+          "ci_FE": [
+            1.0085,
+            1.0104
+          ],
+          "pooled_rr_RE": 1.024,
+          "ci_RE": [
+            1.0193,
+            1.0288
+          ],
+          "tau2": 0.000124,
+          "I2_pct": 91.25,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "8": {
+          "k_studies": 45,
+          "pooled_rr_FE": 1.0093,
+          "ci_FE": [
+            1.0083,
+            1.0102
+          ],
+          "pooled_rr_RE": 1.0228,
+          "ci_RE": [
+            1.0184,
+            1.0273
+          ],
+          "tau2": 0.000112,
+          "I2_pct": 91.07,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "9": {
+          "k_studies": 45,
+          "pooled_rr_FE": 1.0093,
+          "ci_FE": [
+            1.0084,
+            1.0102
+          ],
+          "pooled_rr_RE": 1.0229,
+          "ci_RE": [
+            1.0185,
+            1.0273
+          ],
+          "tau2": 0.00011,
+          "I2_pct": 90.97,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        },
+        "10": {
+          "k_studies": 44,
+          "pooled_rr_FE": 1.0088,
+          "ci_FE": [
+            1.0078,
+            1.0099
+          ],
+          "pooled_rr_RE": 1.0257,
+          "ci_RE": [
+            1.0205,
+            1.031
+          ],
+          "tau2": 0.000156,
+          "I2_pct": 91.15,
+          "ci_FE_crosses_null": false,
+          "ci_RE_crosses_null": false
+        }
+      },
+      "summary": {
+        "n_runs": 10,
+        "mean_FE_pooled_rr": 1.0092,
+        "range_FE_pooled_rr": 0.0006,
+        "mean_RE_pooled_rr": 1.0236,
+        "range_RE_pooled_rr": 0.0058,
+        "mean_I2_pct": 91.13,
+        "mean_tau2": 0.000119,
+        "mean_RE_ci_lower": 1.019,
+        "mean_RE_ci_upper": 1.0282,
+        "RE_ci_width_mean": 0.0092,
+        "n_runs_RE_crosses_null": 0,
+        "pct_runs_RE_crosses_null": 0.0
+      }
+    }
+  }
+}

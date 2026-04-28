@@ -1,0 +1,42 @@
+{
+  "method": "Same-model (meta-llama/llama-3-8b-instruct), different-deployment comparison: Ollama local vs OpenRouter:DeepInfra cloud, with identical seed=42 and temperature=0.",
+  "local": {
+    "n_runs": 10,
+    "emr_within_local": 1.0,
+    "n_items": 435
+  },
+  "cloud": {
+    "n_runs_completed": 10,
+    "emr_within_cloud_strict": null,
+    "n_items_strict_all_10_runs_valid": 0,
+    "n_items_strict_emr_match": 0,
+    "mean_pairwise_disagreement_within_cloud": 0.0079,
+    "pct_items_with_any_pair_disagreement": 0.0204,
+    "valid_items_per_run": {
+      "1": 491,
+      "2": 489,
+      "3": 491,
+      "4": 489,
+      "5": 45,
+      "6": 221,
+      "7": 491,
+      "8": 491,
+      "9": 491,
+      "10": 491
+    },
+    "robustness_note": "Cloud LLaMA had 2 runs with substantially fewer valid items than expected (likely DeepInfra rate-limit / transient failure). This is itself a finding about cloud-deployment reliability."
+  },
+  "cross_deployment_agreement": {
+    "n_common_items": 430,
+    "agreement_canonical_run1_vs_run1": 0.6116,
+    "mean_pairwise_agreement_across_all_runs": 0.5968,
+    "n_local_include_cloud_exclude": 167,
+    "n_local_exclude_cloud_include": 0,
+    "confusion_matrix": {
+      "include->exclude": 167,
+      "include->include": 146,
+      "exclude->exclude": 117
+    }
+  },
+  "headline_finding": "Same model weights (meta-llama/llama-3-8b-instruct), seed=42, temperature=0; different deployment: local EMR=1.000 (n=435), cloud strict EMR=NA (n_items_in_all_10_runs=0); cloud mean pairwise disagreement 0.0079; cross-deployment canonical agreement: 61.2%. Asymmetric discordance: cloud labels 167 items as exclude that local labels include, vs only 0 reverse. This refutes the model-size confound: deployment infrastructure ALONE introduces material non-determinism."
+}

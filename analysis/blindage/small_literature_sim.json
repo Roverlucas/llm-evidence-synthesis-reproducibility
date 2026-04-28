@@ -1,0 +1,268 @@
+{
+  "metadata": {
+    "k_values": [
+      10,
+      15,
+      20,
+      30
+    ],
+    "n_subsamples_per_k": 200,
+    "seed": 42,
+    "pooling_method": "DerSimonian-Laird random-effects on log(RR)",
+    "null_value": 1.0
+  },
+  "models": {
+    "llama3-8b": {
+      "k=10": {
+        "n_subsamples": 200,
+        "mean_range_pooled_rr": 0.0,
+        "median_range_pooled_rr": 0.0,
+        "p95_range_pooled_rr": 0.0,
+        "n_subsamples_any_run_crosses_null": 5,
+        "n_subsamples_all_runs_cross_null": 5,
+        "n_subsamples_UNSTABLE_null_crossing": 0,
+        "pct_unstable_null_crossing": 0.0
+      },
+      "k=15": {
+        "n_subsamples": 200,
+        "mean_range_pooled_rr": 0.0,
+        "median_range_pooled_rr": 0.0,
+        "p95_range_pooled_rr": 0.0,
+        "n_subsamples_any_run_crosses_null": 0,
+        "n_subsamples_all_runs_cross_null": 0,
+        "n_subsamples_UNSTABLE_null_crossing": 0,
+        "pct_unstable_null_crossing": 0.0
+      },
+      "k=20": {
+        "n_subsamples": 200,
+        "mean_range_pooled_rr": 0.0,
+        "median_range_pooled_rr": 0.0,
+        "p95_range_pooled_rr": 0.0,
+        "n_subsamples_any_run_crosses_null": 0,
+        "n_subsamples_all_runs_cross_null": 0,
+        "n_subsamples_UNSTABLE_null_crossing": 0,
+        "pct_unstable_null_crossing": 0.0
+      },
+      "k=30": {
+        "n_subsamples": 200,
+        "mean_range_pooled_rr": 0.0,
+        "median_range_pooled_rr": 0.0,
+        "p95_range_pooled_rr": 0.0,
+        "n_subsamples_any_run_crosses_null": 0,
+        "n_subsamples_all_runs_cross_null": 0,
+        "n_subsamples_UNSTABLE_null_crossing": 0,
+        "pct_unstable_null_crossing": 0.0
+      }
+    },
+    "mistral-7b": {
+      "k=10": {
+        "n_subsamples": 200,
+        "mean_range_pooled_rr": 0.0,
+        "median_range_pooled_rr": 0.0,
+        "p95_range_pooled_rr": 0.0,
+        "n_subsamples_any_run_crosses_null": 27,
+        "n_subsamples_all_runs_cross_null": 27,
+        "n_subsamples_UNSTABLE_null_crossing": 0,
+        "pct_unstable_null_crossing": 0.0
+      },
+      "k=15": {
+        "n_subsamples": 200,
+        "mean_range_pooled_rr": 0.0,
+        "median_range_pooled_rr": 0.0,
+        "p95_range_pooled_rr": 0.0,
+        "n_subsamples_any_run_crosses_null": 8,
+        "n_subsamples_all_runs_cross_null": 8,
+        "n_subsamples_UNSTABLE_null_crossing": 0,
+        "pct_unstable_null_crossing": 0.0
+      },
+      "k=20": {
+        "n_subsamples": 200,
+        "mean_range_pooled_rr": 0.0,
+        "median_range_pooled_rr": 0.0,
+        "p95_range_pooled_rr": 0.0,
+        "n_subsamples_any_run_crosses_null": 0,
+        "n_subsamples_all_runs_cross_null": 0,
+        "n_subsamples_UNSTABLE_null_crossing": 0,
+        "pct_unstable_null_crossing": 0.0
+      },
+      "k=30": {
+        "n_subsamples": 200,
+        "mean_range_pooled_rr": 0.0,
+        "median_range_pooled_rr": 0.0,
+        "p95_range_pooled_rr": 0.0,
+        "n_subsamples_any_run_crosses_null": 0,
+        "n_subsamples_all_runs_cross_null": 0,
+        "n_subsamples_UNSTABLE_null_crossing": 0,
+        "pct_unstable_null_crossing": 0.0
+      }
+    },
+    "gemma2-9b": {
+      "k=10": {
+        "n_subsamples": 200,
+        "mean_range_pooled_rr": 0.0,
+        "median_range_pooled_rr": 0.0,
+        "p95_range_pooled_rr": 0.0,
+        "n_subsamples_any_run_crosses_null": 30,
+        "n_subsamples_all_runs_cross_null": 30,
+        "n_subsamples_UNSTABLE_null_crossing": 0,
+        "pct_unstable_null_crossing": 0.0
+      },
+      "k=15": {
+        "n_subsamples": 200,
+        "mean_range_pooled_rr": 0.0,
+        "median_range_pooled_rr": 0.0,
+        "p95_range_pooled_rr": 0.0,
+        "n_subsamples_any_run_crosses_null": 2,
+        "n_subsamples_all_runs_cross_null": 2,
+        "n_subsamples_UNSTABLE_null_crossing": 0,
+        "pct_unstable_null_crossing": 0.0
+      },
+      "k=20": {
+        "n_subsamples": 200,
+        "mean_range_pooled_rr": 0.0,
+        "median_range_pooled_rr": 0.0,
+        "p95_range_pooled_rr": 0.0,
+        "n_subsamples_any_run_crosses_null": 0,
+        "n_subsamples_all_runs_cross_null": 0,
+        "n_subsamples_UNSTABLE_null_crossing": 0,
+        "pct_unstable_null_crossing": 0.0
+      },
+      "k=30": {
+        "n_subsamples": 200,
+        "mean_range_pooled_rr": 0.0,
+        "median_range_pooled_rr": 0.0,
+        "p95_range_pooled_rr": 0.0,
+        "n_subsamples_any_run_crosses_null": 0,
+        "n_subsamples_all_runs_cross_null": 0,
+        "n_subsamples_UNSTABLE_null_crossing": 0,
+        "pct_unstable_null_crossing": 0.0
+      }
+    },
+    "claude-sonnet-4-5": {
+      "k=10": {
+        "n_subsamples": 200,
+        "mean_range_pooled_rr": 0.0082,
+        "median_range_pooled_rr": 0.0047,
+        "p95_range_pooled_rr": 0.0292,
+        "n_subsamples_any_run_crosses_null": 1,
+        "n_subsamples_all_runs_cross_null": 0,
+        "n_subsamples_UNSTABLE_null_crossing": 1,
+        "pct_unstable_null_crossing": 0.005
+      },
+      "k=15": {
+        "n_subsamples": 200,
+        "mean_range_pooled_rr": 0.0081,
+        "median_range_pooled_rr": 0.0061,
+        "p95_range_pooled_rr": 0.0237,
+        "n_subsamples_any_run_crosses_null": 0,
+        "n_subsamples_all_runs_cross_null": 0,
+        "n_subsamples_UNSTABLE_null_crossing": 0,
+        "pct_unstable_null_crossing": 0.0
+      },
+      "k=20": {
+        "n_subsamples": 200,
+        "mean_range_pooled_rr": 0.0078,
+        "median_range_pooled_rr": 0.0067,
+        "p95_range_pooled_rr": 0.0197,
+        "n_subsamples_any_run_crosses_null": 0,
+        "n_subsamples_all_runs_cross_null": 0,
+        "n_subsamples_UNSTABLE_null_crossing": 0,
+        "pct_unstable_null_crossing": 0.0
+      },
+      "k=30": {
+        "n_subsamples": 200,
+        "mean_range_pooled_rr": 0.0073,
+        "median_range_pooled_rr": 0.0063,
+        "p95_range_pooled_rr": 0.015,
+        "n_subsamples_any_run_crosses_null": 0,
+        "n_subsamples_all_runs_cross_null": 0,
+        "n_subsamples_UNSTABLE_null_crossing": 0,
+        "pct_unstable_null_crossing": 0.0
+      }
+    },
+    "gemini-2.5-pro": {
+      "k=10": {
+        "n_subsamples": 200,
+        "mean_range_pooled_rr": 0.0167,
+        "median_range_pooled_rr": 0.0122,
+        "p95_range_pooled_rr": 0.0471,
+        "n_subsamples_any_run_crosses_null": 1,
+        "n_subsamples_all_runs_cross_null": 0,
+        "n_subsamples_UNSTABLE_null_crossing": 1,
+        "pct_unstable_null_crossing": 0.005
+      },
+      "k=15": {
+        "n_subsamples": 200,
+        "mean_range_pooled_rr": 0.0131,
+        "median_range_pooled_rr": 0.0103,
+        "p95_range_pooled_rr": 0.035,
+        "n_subsamples_any_run_crosses_null": 0,
+        "n_subsamples_all_runs_cross_null": 0,
+        "n_subsamples_UNSTABLE_null_crossing": 0,
+        "pct_unstable_null_crossing": 0.0
+      },
+      "k=20": {
+        "n_subsamples": 200,
+        "mean_range_pooled_rr": 0.011,
+        "median_range_pooled_rr": 0.0099,
+        "p95_range_pooled_rr": 0.0227,
+        "n_subsamples_any_run_crosses_null": 0,
+        "n_subsamples_all_runs_cross_null": 0,
+        "n_subsamples_UNSTABLE_null_crossing": 0,
+        "pct_unstable_null_crossing": 0.0
+      },
+      "k=30": {
+        "n_subsamples": 200,
+        "mean_range_pooled_rr": 0.0089,
+        "median_range_pooled_rr": 0.0086,
+        "p95_range_pooled_rr": 0.0151,
+        "n_subsamples_any_run_crosses_null": 0,
+        "n_subsamples_all_runs_cross_null": 0,
+        "n_subsamples_UNSTABLE_null_crossing": 0,
+        "pct_unstable_null_crossing": 0.0
+      }
+    },
+    "gpt-4.1": {
+      "k=10": {
+        "n_subsamples": 200,
+        "mean_range_pooled_rr": 0.0063,
+        "median_range_pooled_rr": 0.0039,
+        "p95_range_pooled_rr": 0.0263,
+        "n_subsamples_any_run_crosses_null": 0,
+        "n_subsamples_all_runs_cross_null": 0,
+        "n_subsamples_UNSTABLE_null_crossing": 0,
+        "pct_unstable_null_crossing": 0.0
+      },
+      "k=15": {
+        "n_subsamples": 200,
+        "mean_range_pooled_rr": 0.0054,
+        "median_range_pooled_rr": 0.0045,
+        "p95_range_pooled_rr": 0.015,
+        "n_subsamples_any_run_crosses_null": 0,
+        "n_subsamples_all_runs_cross_null": 0,
+        "n_subsamples_UNSTABLE_null_crossing": 0,
+        "pct_unstable_null_crossing": 0.0
+      },
+      "k=20": {
+        "n_subsamples": 200,
+        "mean_range_pooled_rr": 0.0065,
+        "median_range_pooled_rr": 0.0054,
+        "p95_range_pooled_rr": 0.0149,
+        "n_subsamples_any_run_crosses_null": 0,
+        "n_subsamples_all_runs_cross_null": 0,
+        "n_subsamples_UNSTABLE_null_crossing": 0,
+        "pct_unstable_null_crossing": 0.0
+      },
+      "k=30": {
+        "n_subsamples": 200,
+        "mean_range_pooled_rr": 0.006,
+        "median_range_pooled_rr": 0.0058,
+        "p95_range_pooled_rr": 0.0114,
+        "n_subsamples_any_run_crosses_null": 0,
+        "n_subsamples_all_runs_cross_null": 0,
+        "n_subsamples_UNSTABLE_null_crossing": 0,
+        "pct_unstable_null_crossing": 0.0
+      }
+    }
+  }
+}

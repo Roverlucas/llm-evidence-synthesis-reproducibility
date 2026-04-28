@@ -1,0 +1,101 @@
+{
+  "method": "Jaccard similarity on token bigrams. Pairwise across C(10,2)=45 run-pairs per item, averaged across items. Computed for two field categories: rationale (free-form long text) vs metadata (short categorical concatenation).",
+  "models": {
+    "claude-sonnet-4-5": {
+      "rationale": {
+        "n_items": 500,
+        "mean_jaccard_bigram": 0.3777,
+        "median_jaccard_bigram": 0.3661,
+        "p5_jaccard_bigram": 0.2531,
+        "p95_jaccard_bigram": 0.5486
+      },
+      "metadata": {
+        "n_items": 500,
+        "mean_jaccard_bigram": 0.9782,
+        "median_jaccard_bigram": 1.0,
+        "p5_jaccard_bigram": 0.8222,
+        "p95_jaccard_bigram": 1.0
+      }
+    },
+    "gemini-2.5-pro": {
+      "rationale": {
+        "n_items": 500,
+        "mean_jaccard_bigram": 0.6234,
+        "median_jaccard_bigram": 0.6217,
+        "p5_jaccard_bigram": 0.3787,
+        "p95_jaccard_bigram": 0.8652
+      },
+      "metadata": {
+        "n_items": 500,
+        "mean_jaccard_bigram": 0.978,
+        "median_jaccard_bigram": 1.0,
+        "p5_jaccard_bigram": 0.8,
+        "p95_jaccard_bigram": 1.0
+      }
+    },
+    "gpt-4.1": {
+      "rationale": {
+        "n_items": 500,
+        "mean_jaccard_bigram": 0.7249,
+        "median_jaccard_bigram": 0.7307,
+        "p5_jaccard_bigram": 0.4508,
+        "p95_jaccard_bigram": 1.0
+      },
+      "metadata": {
+        "n_items": 500,
+        "mean_jaccard_bigram": 0.9836,
+        "median_jaccard_bigram": 1.0,
+        "p5_jaccard_bigram": 0.8578,
+        "p95_jaccard_bigram": 1.0
+      }
+    },
+    "llama3-8b": {
+      "rationale": {
+        "n_items": 500,
+        "mean_jaccard_bigram": 1.0,
+        "median_jaccard_bigram": 1.0,
+        "p5_jaccard_bigram": 1.0,
+        "p95_jaccard_bigram": 1.0
+      },
+      "metadata": {
+        "n_items": 500,
+        "mean_jaccard_bigram": 1.0,
+        "median_jaccard_bigram": 1.0,
+        "p5_jaccard_bigram": 1.0,
+        "p95_jaccard_bigram": 1.0
+      }
+    },
+    "mistral-7b": {
+      "rationale": {
+        "n_items": 500,
+        "mean_jaccard_bigram": 1.0,
+        "median_jaccard_bigram": 1.0,
+        "p5_jaccard_bigram": 1.0,
+        "p95_jaccard_bigram": 1.0
+      },
+      "metadata": {
+        "n_items": 500,
+        "mean_jaccard_bigram": 1.0,
+        "median_jaccard_bigram": 1.0,
+        "p5_jaccard_bigram": 1.0,
+        "p95_jaccard_bigram": 1.0
+      }
+    },
+    "gemma2-9b": {
+      "rationale": {
+        "n_items": 500,
+        "mean_jaccard_bigram": 1.0,
+        "median_jaccard_bigram": 1.0,
+        "p5_jaccard_bigram": 1.0,
+        "p95_jaccard_bigram": 1.0
+      },
+      "metadata": {
+        "n_items": 500,
+        "mean_jaccard_bigram": 1.0,
+        "median_jaccard_bigram": 1.0,
+        "p5_jaccard_bigram": 1.0,
+        "p95_jaccard_bigram": 1.0
+      }
+    }
+  }
+}

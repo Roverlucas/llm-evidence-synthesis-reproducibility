@@ -1,0 +1,190 @@
+{
+  "method": "Compare EMR and pairwise disagreement between seeded vs non-seeded API models.",
+  "hypothesis": "If seed parameter is effective at deterministic APIs, seeded models should show lower run-to-run variation than non-seeded Claude.",
+  "rows": [
+    {
+      "group": "CLOUD_WITH_seed=42",
+      "model": "gemini-2.5-pro",
+      "stage": "screening",
+      "has_seed": true,
+      "emr": 0.936,
+      "flip_rate": 0.064,
+      "mean_pairwise_disagree": 0.0198,
+      "pct_items_any_disagree": 0.064
+    },
+    {
+      "group": "CLOUD_WITH_seed=42",
+      "model": "gemini-2.5-pro",
+      "stage": "extraction",
+      "has_seed": true,
+      "emr": 0.2,
+      "flip_rate": 0.8,
+      "mean_pairwise_disagree": 0.4927,
+      "pct_items_any_disagree": 0.8
+    },
+    {
+      "group": "CLOUD_WITH_seed=42",
+      "model": "gpt-4.1",
+      "stage": "screening",
+      "has_seed": true,
+      "emr": 0.97,
+      "flip_rate": 0.03,
+      "mean_pairwise_disagree": 0.0137,
+      "pct_items_any_disagree": 0.03
+    },
+    {
+      "group": "CLOUD_WITH_seed=42",
+      "model": "gpt-4.1",
+      "stage": "extraction",
+      "has_seed": true,
+      "emr": 0.15,
+      "flip_rate": 0.85,
+      "mean_pairwise_disagree": 0.4858,
+      "pct_items_any_disagree": 0.85
+    },
+    {
+      "group": "CLOUD_WITHOUT_seed",
+      "model": "claude-sonnet-4-5",
+      "stage": "screening",
+      "has_seed": false,
+      "emr": 0.974,
+      "flip_rate": 0.026,
+      "mean_pairwise_disagree": 0.0096,
+      "pct_items_any_disagree": 0.026
+    },
+    {
+      "group": "CLOUD_WITHOUT_seed",
+      "model": "claude-sonnet-4-5",
+      "stage": "extraction",
+      "has_seed": false,
+      "emr": 0.05,
+      "flip_rate": 0.95,
+      "mean_pairwise_disagree": 0.818,
+      "pct_items_any_disagree": 0.95
+    },
+    {
+      "group": "LOCAL_WITH_seed=42",
+      "model": "llama3-8b",
+      "stage": "screening",
+      "has_seed": true,
+      "emr": 1.0,
+      "flip_rate": 0.0,
+      "mean_pairwise_disagree": 0.0,
+      "pct_items_any_disagree": 0.0
+    },
+    {
+      "group": "LOCAL_WITH_seed=42",
+      "model": "llama3-8b",
+      "stage": "extraction",
+      "has_seed": true,
+      "emr": 1.0,
+      "flip_rate": 0.0,
+      "mean_pairwise_disagree": 0.0,
+      "pct_items_any_disagree": 0.0
+    },
+    {
+      "group": "LOCAL_WITH_seed=42",
+      "model": "mistral-7b",
+      "stage": "screening",
+      "has_seed": true,
+      "emr": 1.0,
+      "flip_rate": 0.0,
+      "mean_pairwise_disagree": 0.0,
+      "pct_items_any_disagree": 0.0
+    },
+    {
+      "group": "LOCAL_WITH_seed=42",
+      "model": "mistral-7b",
+      "stage": "extraction",
+      "has_seed": true,
+      "emr": 1.0,
+      "flip_rate": 0.0,
+      "mean_pairwise_disagree": 0.0,
+      "pct_items_any_disagree": 0.0
+    },
+    {
+      "group": "LOCAL_WITH_seed=42",
+      "model": "gemma2-9b",
+      "stage": "screening",
+      "has_seed": true,
+      "emr": 1.0,
+      "flip_rate": 0.0,
+      "mean_pairwise_disagree": 0.0,
+      "pct_items_any_disagree": 0.0
+    },
+    {
+      "group": "LOCAL_WITH_seed=42",
+      "model": "gemma2-9b",
+      "stage": "extraction",
+      "has_seed": true,
+      "emr": 1.0,
+      "flip_rate": 0.0,
+      "mean_pairwise_disagree": 0.0,
+      "pct_items_any_disagree": 0.0
+    }
+  ],
+  "group_summary": {
+    "CLOUD_WITH_seed=42_screening": {
+      "models": [
+        "gemini-2.5-pro",
+        "gpt-4.1"
+      ],
+      "mean_emr": 0.953,
+      "mean_pairwise_disagree": 0.0168
+    },
+    "CLOUD_WITH_seed=42_extraction": {
+      "models": [
+        "gemini-2.5-pro",
+        "gpt-4.1"
+      ],
+      "mean_emr": 0.175,
+      "mean_pairwise_disagree": 0.4893
+    },
+    "CLOUD_WITHOUT_seed_screening": {
+      "models": [
+        "claude-sonnet-4-5"
+      ],
+      "mean_emr": 0.974,
+      "mean_pairwise_disagree": 0.0096
+    },
+    "CLOUD_WITHOUT_seed_extraction": {
+      "models": [
+        "claude-sonnet-4-5"
+      ],
+      "mean_emr": 0.05,
+      "mean_pairwise_disagree": 0.818
+    },
+    "LOCAL_WITH_seed=42_screening": {
+      "models": [
+        "llama3-8b",
+        "mistral-7b",
+        "gemma2-9b"
+      ],
+      "mean_emr": 1.0,
+      "mean_pairwise_disagree": 0.0
+    },
+    "LOCAL_WITH_seed=42_extraction": {
+      "models": [
+        "llama3-8b",
+        "mistral-7b",
+        "gemma2-9b"
+      ],
+      "mean_emr": 1.0,
+      "mean_pairwise_disagree": 0.0
+    }
+  },
+  "interpretation": {
+    "screening": {
+      "seed_effect_EMR (cloud-seed vs cloud-noseed)": -0.021,
+      "seed_effect_pairwise (cloud-seed vs cloud-noseed)": 0.0072,
+      "deployment_effect_EMR (local-seed vs cloud-seed)": 0.047,
+      "conclusion": "Seed effect on cloud EMR: -0.0210 (small); Deployment effect (local vs cloud): +0.0470 (larger). Seed parameter does NOT deliver determinism on cloud APIs; deployment type dominates."
+    },
+    "extraction": {
+      "seed_effect_EMR (cloud-seed vs cloud-noseed)": 0.125,
+      "seed_effect_pairwise (cloud-seed vs cloud-noseed)": -0.3287,
+      "deployment_effect_EMR (local-seed vs cloud-seed)": 0.825,
+      "conclusion": "Seed effect on cloud EMR: +0.1250 (small); Deployment effect (local vs cloud): +0.8250 (larger). Seed parameter does NOT deliver determinism on cloud APIs; deployment type dominates."
+    }
+  }
+}

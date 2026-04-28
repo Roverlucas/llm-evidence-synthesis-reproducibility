@@ -1,0 +1,59 @@
+{
+  "method": "Cross-validation of silver-internal (6 models \u00d7 10 runs majority) vs silver-external (DeepSeek-R1 \u00d7 5 runs majority).",
+  "numeric_tolerance": 0.05,
+  "n_common_items": 100,
+  "field_agreement": {
+    "effect_estimate": {
+      "n_compared": 84,
+      "n_match": 67,
+      "agreement": 0.7976,
+      "n_only_internal": 0,
+      "n_only_external": 11
+    },
+    "ci_lower": {
+      "n_compared": 74,
+      "n_match": 59,
+      "agreement": 0.7973,
+      "n_only_internal": 0,
+      "n_only_external": 10
+    },
+    "ci_upper": {
+      "n_compared": 74,
+      "n_match": 58,
+      "agreement": 0.7838,
+      "n_only_internal": 0,
+      "n_only_external": 10
+    },
+    "effect_measure": {
+      "n_compared": 84,
+      "n_match": 62,
+      "agreement": 0.7381,
+      "n_only_internal": 0,
+      "n_only_external": 16
+    },
+    "outcome_specific": {
+      "n_compared": 84,
+      "n_match": 55,
+      "agreement": 0.6548,
+      "n_only_internal": 0,
+      "n_only_external": 16
+    },
+    "exposure_increment": {
+      "n_compared": 84,
+      "n_match": 67,
+      "agreement": 0.7976,
+      "n_only_internal": 0,
+      "n_only_external": 16
+    },
+    "lag": {
+      "n_compared": 75,
+      "n_match": 49,
+      "agreement": 0.6533,
+      "n_only_internal": 0,
+      "n_only_external": 25
+    }
+  },
+  "spearman_rho_effect_estimate": 0.845,
+  "n_pairs_for_spearman": 84,
+  "interpretation": "Silvers diverge on at least one field \u2014 investigate"
+}

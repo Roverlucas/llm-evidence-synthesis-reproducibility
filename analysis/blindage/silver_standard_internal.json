@@ -1,0 +1,3207 @@
+{
+  "method": "Majority-vote consensus across all 6 models \u00d7 10 runs (first-estimate).",
+  "note": "Silver-internal. NOT to be used circularly; validate against human gold on subset.",
+  "n_items": 100,
+  "fields_report": {
+    "effect_estimate": {
+      "n_items_with_consensus": 95,
+      "mean_agreement_at_mode": 0.8584,
+      "n_items_total": 100
+    },
+    "ci_lower": {
+      "n_items_with_consensus": 84,
+      "mean_agreement_at_mode": 0.846,
+      "n_items_total": 100
+    },
+    "ci_upper": {
+      "n_items_with_consensus": 84,
+      "mean_agreement_at_mode": 0.8447,
+      "n_items_total": 100
+    },
+    "effect_measure": {
+      "n_items_with_consensus": 100,
+      "mean_agreement_at_mode": 0.7828,
+      "n_items_total": 100
+    },
+    "outcome_specific": {
+      "n_items_with_consensus": 100,
+      "mean_agreement_at_mode": 0.6939,
+      "n_items_total": 100
+    },
+    "exposure_increment": {
+      "n_items_with_consensus": 100,
+      "mean_agreement_at_mode": 0.7609,
+      "n_items_total": 100
+    },
+    "lag": {
+      "n_items_with_consensus": 100,
+      "mean_agreement_at_mode": 0.644,
+      "n_items_total": 100
+    }
+  },
+  "silver_by_item": {
+    "ABS-0001": {
+      "consensus": {
+        "effect_estimate": 0.5,
+        "ci_lower": 0.3,
+        "ci_upper": 0.7000000000000001,
+        "effect_measure": "rr",
+        "outcome_specific": "asthma",
+        "exposure_increment": "per iqr",
+        "lag": "lag0-1"
+      },
+      "item_report": {
+        "n_total_records": 30,
+        "n_valid_by_field": {
+          "effect_estimate": 10,
+          "ci_lower": 10,
+          "ci_upper": 10,
+          "effect_measure": 30,
+          "outcome_specific": 30,
+          "exposure_increment": 30,
+          "lag": 30
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.6667,
+          "exposure_increment": 0.3333,
+          "lag": 0.3333
+        }
+      }
+    },
+    "ABS-0002": {
+      "consensus": {
+        "effect_estimate": 13.5,
+        "ci_lower": null,
+        "ci_upper": null,
+        "effect_measure": "other",
+        "outcome_specific": "asthma",
+        "exposure_increment": "other",
+        "lag": "lag0"
+      },
+      "item_report": {
+        "n_total_records": 47,
+        "n_valid_by_field": {
+          "effect_estimate": 9,
+          "ci_lower": 0,
+          "ci_upper": 0,
+          "effect_measure": 47,
+          "outcome_specific": 47,
+          "exposure_increment": 47,
+          "lag": 28
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "effect_measure": 0.3617,
+          "outcome_specific": 0.7872,
+          "exposure_increment": 0.2979,
+          "lag": 0.7143
+        }
+      }
+    },
+    "ABS-0003": {
+      "consensus": {
+        "effect_estimate": 1.0,
+        "ci_lower": 0.24,
+        "ci_upper": 0.37,
+        "effect_measure": "rr",
+        "outcome_specific": "asthma",
+        "exposure_increment": "per 1 \u00b5g/m\u00b3",
+        "lag": "not specified"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 30
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.5333,
+          "ci_lower": 0.4667,
+          "ci_upper": 0.4667,
+          "effect_measure": 0.6333,
+          "outcome_specific": 0.8333,
+          "exposure_increment": 0.4,
+          "lag": 0.3333
+        }
+      }
+    },
+    "ABS-0004": {
+      "consensus": {
+        "effect_estimate": 1.01,
+        "ci_lower": 1.0,
+        "ci_upper": 1.02,
+        "effect_measure": "or",
+        "outcome_specific": "asthma",
+        "exposure_increment": "per 10-unit increase",
+        "lag": "lag day 2"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.8333,
+          "exposure_increment": 0.5,
+          "lag": 0.5
+        }
+      }
+    },
+    "ABS-0005": {
+      "consensus": {
+        "effect_estimate": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "effect_measure": "rr",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0-1"
+      },
+      "item_report": {
+        "n_total_records": 31,
+        "n_valid_by_field": {
+          "effect_estimate": 0,
+          "ci_lower": 0,
+          "ci_upper": 0,
+          "effect_measure": 30,
+          "outcome_specific": 31,
+          "exposure_increment": 30,
+          "lag": 31
+        },
+        "mode_agreement_by_field": {
+          "effect_measure": 1.0,
+          "outcome_specific": 0.6452,
+          "exposure_increment": 1.0,
+          "lag": 0.6774
+        }
+      }
+    },
+    "ABS-0006": {
+      "consensus": {
+        "effect_estimate": 1.03,
+        "ci_lower": 1.01,
+        "ci_upper": 1.05,
+        "effect_measure": "rr",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag07"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 1.0,
+          "exposure_increment": 1.0,
+          "lag": 0.5
+        }
+      }
+    },
+    "ABS-0007": {
+      "consensus": {
+        "effect_estimate": 1.1,
+        "ci_lower": null,
+        "ci_upper": null,
+        "effect_measure": "or",
+        "outcome_specific": "bronchiolitis",
+        "exposure_increment": "other",
+        "lag": "lag0-5"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 47,
+          "ci_lower": 0,
+          "ci_upper": 0,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 54,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.5,
+          "exposure_increment": 0.3704,
+          "lag": 0.3333
+        }
+      }
+    },
+    "ABS-0008": {
+      "consensus": {
+        "effect_estimate": 1.02,
+        "ci_lower": 1.01,
+        "ci_upper": 1.04,
+        "effect_measure": "rr",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0-6"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.3333,
+          "exposure_increment": 1.0,
+          "lag": 1.0
+        }
+      }
+    },
+    "ABS-0009": {
+      "consensus": {
+        "effect_estimate": 1.84,
+        "ci_lower": 1.1300000000000001,
+        "ci_upper": 3.0,
+        "effect_measure": "or",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "other"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 50
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 1.0,
+          "exposure_increment": 1.0,
+          "lag": 0.4
+        }
+      }
+    },
+    "ABS-0010": {
+      "consensus": {
+        "effect_estimate": 1.06,
+        "ci_lower": 1.02,
+        "ci_upper": 1.09,
+        "effect_measure": "or",
+        "outcome_specific": "bronchiolitis",
+        "exposure_increment": "per iqr",
+        "lag": "other"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 50
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.5,
+          "exposure_increment": 1.0,
+          "lag": 0.32
+        }
+      }
+    },
+    "ABS-0011": {
+      "consensus": {
+        "effect_estimate": 1.0,
+        "ci_lower": 0.96,
+        "ci_upper": 1.06,
+        "effect_measure": "or",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag1"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 1.0,
+          "exposure_increment": 1.0,
+          "lag": 0.8333
+        }
+      }
+    },
+    "ABS-0012": {
+      "consensus": {
+        "effect_estimate": 1.01,
+        "ci_lower": null,
+        "ci_upper": null,
+        "effect_measure": "rr",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag7"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 0,
+          "ci_upper": 0,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 50,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.9667,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.3333,
+          "exposure_increment": 0.72,
+          "lag": 0.9
+        }
+      }
+    },
+    "ABS-0014": {
+      "consensus": {
+        "effect_estimate": 1.04,
+        "ci_lower": 1.0,
+        "ci_upper": 1.09,
+        "effect_measure": "irr",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "7-day average"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 0.8333,
+          "outcome_specific": 0.5667,
+          "exposure_increment": 1.0,
+          "lag": 0.8
+        }
+      }
+    },
+    "ABS-0015": {
+      "consensus": {
+        "effect_estimate": 1.08,
+        "ci_lower": 0.08,
+        "ci_upper": 0.08,
+        "effect_measure": "rr",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per -18\u00b0c",
+        "lag": "lag0-7"
+      },
+      "item_report": {
+        "n_total_records": 56,
+        "n_valid_by_field": {
+          "effect_estimate": 56,
+          "ci_lower": 10,
+          "ci_upper": 10,
+          "effect_measure": 56,
+          "outcome_specific": 56,
+          "exposure_increment": 56,
+          "lag": 46
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.8214,
+          "exposure_increment": 0.3571,
+          "lag": 0.4348
+        }
+      }
+    },
+    "ABS-0016": {
+      "consensus": {
+        "effect_estimate": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "effect_measure": "rr",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0-1"
+      },
+      "item_report": {
+        "n_total_records": 34,
+        "n_valid_by_field": {
+          "effect_estimate": 0,
+          "ci_lower": 0,
+          "ci_upper": 0,
+          "effect_measure": 30,
+          "outcome_specific": 34,
+          "exposure_increment": 30,
+          "lag": 30
+        },
+        "mode_agreement_by_field": {
+          "effect_measure": 1.0,
+          "outcome_specific": 1.0,
+          "exposure_increment": 1.0,
+          "lag": 0.3333
+        }
+      }
+    },
+    "ABS-0017": {
+      "consensus": {
+        "effect_estimate": 1.01,
+        "ci_lower": 1.0,
+        "ci_upper": 1.01,
+        "effect_measure": "rr",
+        "outcome_specific": "hypertension",
+        "exposure_increment": "per 0.1 \u00b5g/m\u00b3",
+        "lag": "3-month average"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 50
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.9667,
+          "exposure_increment": 0.9667,
+          "lag": 0.96
+        }
+      }
+    },
+    "ABS-0018": {
+      "consensus": {
+        "effect_estimate": 0.84,
+        "ci_lower": 0.05,
+        "ci_upper": 1.6400000000000001,
+        "effect_measure": "rr",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0-3"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.4667,
+          "ci_lower": 0.6333,
+          "ci_upper": 0.6333,
+          "effect_measure": 0.3833,
+          "outcome_specific": 0.3333,
+          "exposure_increment": 1.0,
+          "lag": 0.6833
+        }
+      }
+    },
+    "ABS-0020": {
+      "consensus": {
+        "effect_estimate": 2.4,
+        "ci_lower": 0.17,
+        "ci_upper": 4.63,
+        "effect_measure": "other",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "same-day and preceding week"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 0.5,
+          "outcome_specific": 0.6667,
+          "exposure_increment": 0.5,
+          "lag": 0.3333
+        }
+      }
+    },
+    "ABS-0021": {
+      "consensus": {
+        "effect_estimate": 1.1500000000000001,
+        "ci_lower": 1.09,
+        "ci_upper": 1.22,
+        "effect_measure": "rr",
+        "outcome_specific": "all_cardiovascular",
+        "exposure_increment": "per dense smoke days",
+        "lag": "lag0"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 50,
+          "exposure_increment": 50,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.44,
+          "exposure_increment": 0.2,
+          "lag": 1.0
+        }
+      }
+    },
+    "ABS-0022": {
+      "consensus": {
+        "effect_estimate": 1.02,
+        "ci_lower": 1.0,
+        "ci_upper": 1.04,
+        "effect_measure": "rr",
+        "outcome_specific": "acs",
+        "exposure_increment": "other",
+        "lag": "lag1"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 50,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.35,
+          "exposure_increment": 0.4,
+          "lag": 1.0
+        }
+      }
+    },
+    "ABS-0023": {
+      "consensus": {
+        "effect_estimate": 2.1,
+        "ci_lower": 1.06,
+        "ci_upper": 4.13,
+        "effect_measure": "rr",
+        "outcome_specific": "pneumonia",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "other"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 1.0,
+          "exposure_increment": 1.0,
+          "lag": 0.3333
+        }
+      }
+    },
+    "ABS-0024": {
+      "consensus": {
+        "effect_estimate": 1.01,
+        "ci_lower": 1.0,
+        "ci_upper": 1.02,
+        "effect_measure": "rr",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per iqr",
+        "lag": "lag4"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 1.0,
+          "exposure_increment": 0.6333,
+          "lag": 1.0
+        }
+      }
+    },
+    "ABS-0025": {
+      "consensus": {
+        "effect_estimate": 1.01,
+        "ci_lower": null,
+        "ci_upper": null,
+        "effect_measure": "or",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0-2"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 0,
+          "ci_upper": 0,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.6667,
+          "effect_measure": 0.5667,
+          "outcome_specific": 1.0,
+          "exposure_increment": 1.0,
+          "lag": 0.55
+        }
+      }
+    },
+    "ABS-0026": {
+      "consensus": {
+        "effect_estimate": 0.88,
+        "ci_lower": 0.38,
+        "ci_upper": 1.3800000000000001,
+        "effect_measure": "irr",
+        "outcome_specific": "other",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.6667,
+          "ci_lower": 0.6667,
+          "ci_upper": 0.6667,
+          "effect_measure": 0.3667,
+          "outcome_specific": 0.4667,
+          "exposure_increment": 1.0,
+          "lag": 1.0
+        }
+      }
+    },
+    "ABS-0027": {
+      "consensus": {
+        "effect_estimate": 1.01,
+        "ci_lower": 1.0,
+        "ci_upper": 1.02,
+        "effect_measure": "or",
+        "outcome_specific": "asthma",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.5,
+          "exposure_increment": 1.0,
+          "lag": 0.8333
+        }
+      }
+    },
+    "ABS-0028": {
+      "consensus": {
+        "effect_estimate": 1.1,
+        "ci_lower": 0.7000000000000001,
+        "ci_upper": 3.1,
+        "effect_measure": "er",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per iqr",
+        "lag": "previous 7 days"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 28,
+          "ci_upper": 38,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.7,
+          "ci_lower": 0.6429,
+          "ci_upper": 0.5263,
+          "effect_measure": 0.5,
+          "outcome_specific": 0.3333,
+          "exposure_increment": 1.0,
+          "lag": 0.5
+        }
+      }
+    },
+    "ABS-0029": {
+      "consensus": {
+        "effect_estimate": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "effect_measure": "rr",
+        "outcome_specific": "upper respiratory tract infections",
+        "exposure_increment": "per cumulative lag days",
+        "lag": "lag0-7"
+      },
+      "item_report": {
+        "n_total_records": 39,
+        "n_valid_by_field": {
+          "effect_estimate": 0,
+          "ci_lower": 0,
+          "ci_upper": 0,
+          "effect_measure": 30,
+          "outcome_specific": 39,
+          "exposure_increment": 30,
+          "lag": 39
+        },
+        "mode_agreement_by_field": {
+          "effect_measure": 0.6667,
+          "outcome_specific": 0.5128,
+          "exposure_increment": 0.3333,
+          "lag": 0.4872
+        }
+      }
+    },
+    "ABS-0030": {
+      "consensus": {
+        "effect_estimate": 1.25,
+        "ci_lower": 1.21,
+        "ci_upper": 1.3,
+        "effect_measure": "rr",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 23.4 \u00b5g/m\u00b3",
+        "lag": "lag0"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.8333,
+          "exposure_increment": 0.55,
+          "lag": 1.0
+        }
+      }
+    },
+    "ABS-0031": {
+      "consensus": {
+        "effect_estimate": -0.43,
+        "ci_lower": -0.64,
+        "ci_upper": -0.22,
+        "effect_measure": "reri",
+        "outcome_specific": "copd",
+        "exposure_increment": "other",
+        "lag": "not specified"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 50,
+          "lag": 20
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.9667,
+          "ci_lower": 0.9667,
+          "ci_upper": 0.9667,
+          "effect_measure": 0.8333,
+          "outcome_specific": 0.5,
+          "exposure_increment": 0.36,
+          "lag": 0.5
+        }
+      }
+    },
+    "ABS-0033": {
+      "consensus": {
+        "effect_estimate": 9.200000000000001,
+        "ci_lower": 4.3,
+        "ci_upper": 14.3,
+        "effect_measure": "er",
+        "outcome_specific": "influenza ed visits",
+        "exposure_increment": "per iqr",
+        "lag": "lag0-3"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.6667,
+          "ci_lower": 0.6667,
+          "ci_upper": 0.6667,
+          "effect_measure": 0.5,
+          "outcome_specific": 0.4167,
+          "exposure_increment": 1.0,
+          "lag": 0.6667
+        }
+      }
+    },
+    "ABS-0034": {
+      "consensus": {
+        "effect_estimate": 5.3,
+        "ci_lower": 3.2,
+        "ci_upper": 7.44,
+        "effect_measure": "percentage increase",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag07"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.85,
+          "ci_lower": 0.85,
+          "ci_upper": 0.85,
+          "effect_measure": 0.5,
+          "outcome_specific": 0.3333,
+          "exposure_increment": 1.0,
+          "lag": 0.6667
+        }
+      }
+    },
+    "ABS-0035": {
+      "consensus": {
+        "effect_estimate": 2.22,
+        "ci_lower": 0.64,
+        "ci_upper": 3.8200000000000003,
+        "effect_measure": "rr",
+        "outcome_specific": "pneumonia and asthma",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag03"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.5,
+          "ci_lower": 0.5,
+          "ci_upper": 0.5,
+          "effect_measure": 0.3667,
+          "outcome_specific": 0.3167,
+          "exposure_increment": 0.8333,
+          "lag": 0.6667
+        }
+      }
+    },
+    "ABS-0036": {
+      "consensus": {
+        "effect_estimate": 1.07,
+        "ci_lower": 1.02,
+        "ci_upper": 1.1300000000000001,
+        "effect_measure": "rr",
+        "outcome_specific": "asthma",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0-2"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.6,
+          "ci_lower": 0.4333,
+          "ci_upper": 0.4333,
+          "effect_measure": 0.45,
+          "outcome_specific": 0.6667,
+          "exposure_increment": 1.0,
+          "lag": 0.6667
+        }
+      }
+    },
+    "ABS-0037": {
+      "consensus": {
+        "effect_estimate": 1.16,
+        "ci_lower": 1.04,
+        "ci_upper": 1.3,
+        "effect_measure": "or",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "null"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 10
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 0.8333,
+          "ci_upper": 0.6667,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.3333,
+          "exposure_increment": 1.0,
+          "lag": 1.0
+        }
+      }
+    },
+    "ABS-0038": {
+      "consensus": {
+        "effect_estimate": 1.01,
+        "ci_lower": 1.0,
+        "ci_upper": 1.01,
+        "effect_measure": "rr",
+        "outcome_specific": "natural causes",
+        "exposure_increment": "per unknown",
+        "lag": "null"
+      },
+      "item_report": {
+        "n_total_records": 54,
+        "n_valid_by_field": {
+          "effect_estimate": 54,
+          "ci_lower": 54,
+          "ci_upper": 54,
+          "effect_measure": 54,
+          "outcome_specific": 54,
+          "exposure_increment": 40,
+          "lag": 46
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 0.8519,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.3704,
+          "exposure_increment": 0.25,
+          "lag": 0.4348
+        }
+      }
+    },
+    "ABS-0039": {
+      "consensus": {
+        "effect_estimate": 0.09,
+        "ci_lower": null,
+        "ci_upper": null,
+        "effect_measure": "rr",
+        "outcome_specific": "copd",
+        "exposure_increment": "per unit range increase in air quality index, pm2.5 and pm10",
+        "lag": "over four lag days"
+      },
+      "item_report": {
+        "n_total_records": 58,
+        "n_valid_by_field": {
+          "effect_estimate": 50,
+          "ci_lower": 0,
+          "ci_upper": 0,
+          "effect_measure": 58,
+          "outcome_specific": 58,
+          "exposure_increment": 58,
+          "lag": 58
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "effect_measure": 0.5172,
+          "outcome_specific": 0.6552,
+          "exposure_increment": 0.1724,
+          "lag": 0.3448
+        }
+      }
+    },
+    "ABS-0040": {
+      "consensus": {
+        "effect_estimate": 1.73,
+        "ci_lower": 1.34,
+        "ci_upper": 2.12,
+        "effect_measure": "other",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per iqr",
+        "lag": "lag0-4"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.6833,
+          "ci_lower": 0.6833,
+          "ci_upper": 0.6833,
+          "effect_measure": 0.4667,
+          "outcome_specific": 1.0,
+          "exposure_increment": 0.8,
+          "lag": 0.9667
+        }
+      }
+    },
+    "ABS-0041": {
+      "consensus": {
+        "effect_estimate": 1.02,
+        "ci_lower": null,
+        "ci_upper": null,
+        "effect_measure": "rr",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 5 \u00b5g/m\u00b3",
+        "lag": "lag2"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 0,
+          "ci_upper": 0,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 58,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.6667,
+          "exposure_increment": 0.7759,
+          "lag": 1.0
+        }
+      }
+    },
+    "ABS-0042": {
+      "consensus": {
+        "effect_estimate": 1.05,
+        "ci_lower": 1.03,
+        "ci_upper": 1.07,
+        "effect_measure": "rr",
+        "outcome_specific": "acute upper respiratory infection",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "null"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 51
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.8333,
+          "exposure_increment": 0.5667,
+          "lag": 0.3922
+        }
+      }
+    },
+    "ABS-0043": {
+      "consensus": {
+        "effect_estimate": 1.0,
+        "ci_lower": 1.02,
+        "ci_upper": 1.11,
+        "effect_measure": "rr",
+        "outcome_specific": "copd",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "3-6 days"
+      },
+      "item_report": {
+        "n_total_records": 43,
+        "n_valid_by_field": {
+          "effect_estimate": 20,
+          "ci_lower": 10,
+          "ci_upper": 10,
+          "effect_measure": 32,
+          "outcome_specific": 43,
+          "exposure_increment": 30,
+          "lag": 43
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.5,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 0.625,
+          "outcome_specific": 0.6977,
+          "exposure_increment": 0.6667,
+          "lag": 0.4651
+        }
+      }
+    },
+    "ABS-0044": {
+      "consensus": {
+        "effect_estimate": 0.73,
+        "ci_lower": 0.4,
+        "ci_upper": 1.06,
+        "effect_measure": "irr",
+        "outcome_specific": "total alris",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0"
+      },
+      "item_report": {
+        "n_total_records": 59,
+        "n_valid_by_field": {
+          "effect_estimate": 59,
+          "ci_lower": 59,
+          "ci_upper": 59,
+          "effect_measure": 59,
+          "outcome_specific": 59,
+          "exposure_increment": 59,
+          "lag": 59
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.5763,
+          "ci_lower": 0.5763,
+          "ci_upper": 0.5763,
+          "effect_measure": 0.4237,
+          "outcome_specific": 0.3559,
+          "exposure_increment": 1.0,
+          "lag": 1.0
+        }
+      }
+    },
+    "ABS-0045": {
+      "consensus": {
+        "effect_estimate": 0.21,
+        "ci_lower": 0.15,
+        "ci_upper": 0.27,
+        "effect_measure": "other",
+        "outcome_specific": "digestive diseases",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0"
+      },
+      "item_report": {
+        "n_total_records": 59,
+        "n_valid_by_field": {
+          "effect_estimate": 59,
+          "ci_lower": 59,
+          "ci_upper": 59,
+          "effect_measure": 59,
+          "outcome_specific": 59,
+          "exposure_increment": 59,
+          "lag": 59
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.8983,
+          "ci_lower": 0.8983,
+          "ci_upper": 0.8983,
+          "effect_measure": 0.3898,
+          "outcome_specific": 0.3559,
+          "exposure_increment": 1.0,
+          "lag": 0.8305
+        }
+      }
+    },
+    "ABS-0046": {
+      "consensus": {
+        "effect_estimate": 1.29,
+        "ci_lower": 1.05,
+        "ci_upper": 1.58,
+        "effect_measure": "rr",
+        "outcome_specific": "asthma",
+        "exposure_increment": "per unknown",
+        "lag": "lag1"
+      },
+      "item_report": {
+        "n_total_records": 59,
+        "n_valid_by_field": {
+          "effect_estimate": 59,
+          "ci_lower": 59,
+          "ci_upper": 59,
+          "effect_measure": 59,
+          "outcome_specific": 59,
+          "exposure_increment": 35,
+          "lag": 59
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.8305,
+          "exposure_increment": 0.2857,
+          "lag": 1.0
+        }
+      }
+    },
+    "ABS-0047": {
+      "consensus": {
+        "effect_estimate": 0.76,
+        "ci_lower": 0.42,
+        "ci_upper": 1.09,
+        "effect_measure": "percentage change",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 0.5,
+          "outcome_specific": 1.0,
+          "exposure_increment": 1.0,
+          "lag": 1.0
+        }
+      }
+    },
+    "ABS-0048": {
+      "consensus": {
+        "effect_estimate": 1.05,
+        "ci_lower": null,
+        "ci_upper": null,
+        "effect_measure": "rr",
+        "outcome_specific": "asthma",
+        "exposure_increment": "per iqr",
+        "lag": "lag0"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 0,
+          "ci_upper": 0,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 28
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.6667,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.8333,
+          "exposure_increment": 0.5,
+          "lag": 0.3571
+        }
+      }
+    },
+    "ABS-0049": {
+      "consensus": {
+        "effect_estimate": 1.1400000000000001,
+        "ci_lower": 1.04,
+        "ci_upper": 1.25,
+        "effect_measure": "rr",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0-1"
+      },
+      "item_report": {
+        "n_total_records": 30,
+        "n_valid_by_field": {
+          "effect_estimate": 10,
+          "ci_lower": 10,
+          "ci_upper": 10,
+          "effect_measure": 30,
+          "outcome_specific": 30,
+          "exposure_increment": 30,
+          "lag": 30
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.3333,
+          "exposure_increment": 0.3333,
+          "lag": 0.3333
+        }
+      }
+    },
+    "ABS-0050": {
+      "consensus": {
+        "effect_estimate": 0.65,
+        "ci_lower": 0.32,
+        "ci_upper": 0.99,
+        "effect_measure": "rr",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag06"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.6833,
+          "ci_lower": 0.6833,
+          "ci_upper": 0.6833,
+          "effect_measure": 0.5167,
+          "outcome_specific": 0.8333,
+          "exposure_increment": 1.0,
+          "lag": 0.6667
+        }
+      }
+    },
+    "ABS-0051": {
+      "consensus": {
+        "effect_estimate": 2.2,
+        "ci_lower": 0.6,
+        "ci_upper": 3.8000000000000003,
+        "effect_measure": "other",
+        "outcome_specific": "cardiovascular_mortality",
+        "exposure_increment": "per 10,166 n/cm3",
+        "lag": "lag1"
+      },
+      "item_report": {
+        "n_total_records": 52,
+        "n_valid_by_field": {
+          "effect_estimate": 52,
+          "ci_lower": 52,
+          "ci_upper": 52,
+          "effect_measure": 52,
+          "outcome_specific": 52,
+          "exposure_increment": 52,
+          "lag": 52
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.7692,
+          "ci_lower": 0.7692,
+          "ci_upper": 0.7692,
+          "effect_measure": 0.3846,
+          "outcome_specific": 0.5192,
+          "exposure_increment": 0.3846,
+          "lag": 1.0
+        }
+      }
+    },
+    "ABS-0052": {
+      "consensus": {
+        "effect_estimate": 2.83,
+        "ci_lower": 0.96,
+        "ci_upper": 4.73,
+        "effect_measure": "other",
+        "outcome_specific": "diseases of the eye and adnexa",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 46,
+          "lag": 20
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.9833,
+          "ci_lower": 0.9833,
+          "ci_upper": 0.9833,
+          "effect_measure": 0.35,
+          "outcome_specific": 0.6167,
+          "exposure_increment": 1.0,
+          "lag": 0.5
+        }
+      }
+    },
+    "ABS-0053": {
+      "consensus": {
+        "effect_estimate": 1.24,
+        "ci_lower": null,
+        "ci_upper": null,
+        "effect_measure": "rr",
+        "outcome_specific": "asthma",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0-1"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 0,
+          "ci_upper": 0,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.8333,
+          "exposure_increment": 1.0,
+          "lag": 1.0
+        }
+      }
+    },
+    "ABS-0054": {
+      "consensus": {
+        "effect_estimate": 1.1400000000000001,
+        "ci_lower": 1.01,
+        "ci_upper": 1.3,
+        "effect_measure": "rr",
+        "outcome_specific": "asthma",
+        "exposure_increment": "per 1 g/m2/s",
+        "lag": "lag0"
+      },
+      "item_report": {
+        "n_total_records": 52,
+        "n_valid_by_field": {
+          "effect_estimate": 50,
+          "ci_lower": 50,
+          "ci_upper": 50,
+          "effect_measure": 52,
+          "outcome_specific": 52,
+          "exposure_increment": 50,
+          "lag": 42
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 1.0,
+          "exposure_increment": 0.8,
+          "lag": 0.7619
+        }
+      }
+    },
+    "ABS-0055": {
+      "consensus": {
+        "effect_estimate": 1.01,
+        "ci_lower": 1.0,
+        "ci_upper": 1.01,
+        "effect_measure": "rr",
+        "outcome_specific": "pneumonia",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag4"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 1.0,
+          "exposure_increment": 1.0,
+          "lag": 0.9333
+        }
+      }
+    },
+    "ABS-0056": {
+      "consensus": {
+        "effect_estimate": 1.01,
+        "ci_lower": 1.01,
+        "ci_upper": 1.02,
+        "effect_measure": "or",
+        "outcome_specific": "asthma",
+        "exposure_increment": "per unit increase",
+        "lag": "other"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 57
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.3833,
+          "exposure_increment": 0.3167,
+          "lag": 0.6491
+        }
+      }
+    },
+    "ABS-0057": {
+      "consensus": {
+        "effect_estimate": 3.4,
+        "ci_lower": -1.7,
+        "ci_upper": 8.8,
+        "effect_measure": "rr",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per iqr",
+        "lag": "6-day average"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 50
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.5,
+          "ci_lower": 0.5,
+          "ci_upper": 0.5,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.7833,
+          "exposure_increment": 0.35,
+          "lag": 0.58
+        }
+      }
+    },
+    "ABS-0058": {
+      "consensus": {
+        "effect_estimate": 1.09,
+        "ci_lower": 1.6600000000000001,
+        "ci_upper": 2.06,
+        "effect_measure": "rr",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 20,
+          "ci_upper": 20,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 40
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.5833,
+          "ci_lower": 0.5,
+          "ci_upper": 0.5,
+          "effect_measure": 0.5667,
+          "outcome_specific": 1.0,
+          "exposure_increment": 1.0,
+          "lag": 0.5
+        }
+      }
+    },
+    "ABS-0059": {
+      "consensus": {
+        "effect_estimate": 0.52,
+        "ci_lower": 0.13,
+        "ci_upper": 0.92,
+        "effect_measure": "other",
+        "outcome_specific": "cardiovascular",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.45,
+          "ci_lower": 0.45,
+          "ci_upper": 0.45,
+          "effect_measure": 0.4333,
+          "outcome_specific": 0.3167,
+          "exposure_increment": 1.0,
+          "lag": 0.6667
+        }
+      }
+    },
+    "ABS-0060": {
+      "consensus": {
+        "effect_estimate": 1.01,
+        "ci_lower": 1.01,
+        "ci_upper": 1.45,
+        "effect_measure": "or",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0-2"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.45,
+          "ci_lower": 0.7833,
+          "ci_upper": 0.5,
+          "effect_measure": 0.3667,
+          "outcome_specific": 0.3833,
+          "exposure_increment": 1.0,
+          "lag": 0.55
+        }
+      }
+    },
+    "ABS-0061": {
+      "consensus": {
+        "effect_estimate": 0.9500000000000001,
+        "ci_lower": 0.8300000000000001,
+        "ci_upper": 1.09,
+        "effect_measure": "percentage change in risk",
+        "outcome_specific": "cardiovascular admissions",
+        "exposure_increment": "interquartile increment in particle op",
+        "lag": "lag0-1"
+      },
+      "item_report": {
+        "n_total_records": 33,
+        "n_valid_by_field": {
+          "effect_estimate": 10,
+          "ci_lower": 10,
+          "ci_upper": 10,
+          "effect_measure": 33,
+          "outcome_specific": 33,
+          "exposure_increment": 33,
+          "lag": 20
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 0.6061,
+          "outcome_specific": 0.6061,
+          "exposure_increment": 0.6061,
+          "lag": 0.5
+        }
+      }
+    },
+    "ABS-0062": {
+      "consensus": {
+        "effect_estimate": 1.06,
+        "ci_lower": 1.01,
+        "ci_upper": 1.1,
+        "effect_measure": "rr",
+        "outcome_specific": "asthma",
+        "exposure_increment": "other",
+        "lag": "8-day"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 32,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.6667,
+          "exposure_increment": 0.375,
+          "lag": 0.3333
+        }
+      }
+    },
+    "ABS-0063": {
+      "consensus": {
+        "effect_estimate": 1.95,
+        "ci_lower": 0.25,
+        "ci_upper": 3.67,
+        "effect_measure": "rr",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.8167,
+          "ci_lower": 0.9833,
+          "ci_upper": 0.9833,
+          "effect_measure": 0.5,
+          "outcome_specific": 0.9333,
+          "exposure_increment": 1.0,
+          "lag": 1.0
+        }
+      }
+    },
+    "ABS-0064": {
+      "consensus": {
+        "effect_estimate": 1.03,
+        "ci_lower": 1.0,
+        "ci_upper": 1.35,
+        "effect_measure": "rr",
+        "outcome_specific": "all_cause_hospital_admissions",
+        "exposure_increment": "\u226512.60 \u00b5g/m\u00b3",
+        "lag": "lag1"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 10,
+          "ci_upper": 10,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 50,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.6667,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.1833,
+          "exposure_increment": 0.4,
+          "lag": 0.8333
+        }
+      }
+    },
+    "ABS-0065": {
+      "consensus": {
+        "effect_estimate": 2.13,
+        "ci_lower": 0.55,
+        "ci_upper": 3.74,
+        "effect_measure": "other",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag07"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.9333,
+          "ci_lower": 0.9333,
+          "ci_upper": 0.9333,
+          "effect_measure": 0.4667,
+          "outcome_specific": 0.3333,
+          "exposure_increment": 1.0,
+          "lag": 0.6667
+        }
+      }
+    },
+    "ABS-0066": {
+      "consensus": {
+        "effect_estimate": 1.0,
+        "ci_lower": 1.0,
+        "ci_upper": 1.0,
+        "effect_measure": "or",
+        "outcome_specific": "asthma",
+        "exposure_increment": "per 1 \u00b5g/m\u00b3",
+        "lag": "lag7-13"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 20,
+          "ci_lower": 20,
+          "ci_upper": 20,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.5,
+          "ci_lower": 0.5,
+          "ci_upper": 0.5,
+          "effect_measure": 1.0,
+          "outcome_specific": 1.0,
+          "exposure_increment": 0.6167,
+          "lag": 0.55
+        }
+      }
+    },
+    "ABS-0067": {
+      "consensus": {
+        "effect_estimate": 1.02,
+        "ci_lower": 1.0,
+        "ci_upper": 1.03,
+        "effect_measure": "rr",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0-2"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 0.5,
+          "outcome_specific": 1.0,
+          "exposure_increment": 1.0,
+          "lag": 0.9833
+        }
+      }
+    },
+    "ABS-0068": {
+      "consensus": {
+        "effect_estimate": 1.0,
+        "ci_lower": 0.85,
+        "ci_upper": 1.17,
+        "effect_measure": "rr",
+        "outcome_specific": "asthma",
+        "exposure_increment": "per 90th percentile vs. 0",
+        "lag": "null"
+      },
+      "item_report": {
+        "n_total_records": 50,
+        "n_valid_by_field": {
+          "effect_estimate": 50,
+          "ci_lower": 50,
+          "ci_upper": 50,
+          "effect_measure": 50,
+          "outcome_specific": 50,
+          "exposure_increment": 30,
+          "lag": 15
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.8,
+          "exposure_increment": 0.3333,
+          "lag": 0.6667
+        }
+      }
+    },
+    "ABS-0069": {
+      "consensus": {
+        "effect_estimate": 1.07,
+        "ci_lower": 1.04,
+        "ci_upper": 1.1,
+        "effect_measure": "rr",
+        "outcome_specific": "other",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 40
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.75,
+          "ci_lower": 0.4167,
+          "ci_upper": 0.75,
+          "effect_measure": 0.6,
+          "outcome_specific": 0.4667,
+          "exposure_increment": 1.0,
+          "lag": 0.25
+        }
+      }
+    },
+    "ABS-0070": {
+      "consensus": {
+        "effect_estimate": 1.02,
+        "ci_lower": 1.08,
+        "ci_upper": 1.4000000000000001,
+        "effect_measure": "rr",
+        "outcome_specific": "other",
+        "exposure_increment": "per single-lag effect",
+        "lag": "lag8"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 20,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.45,
+          "exposure_increment": 0.5,
+          "lag": 0.8167
+        }
+      }
+    },
+    "ABS-0071": {
+      "consensus": {
+        "effect_estimate": 1.06,
+        "ci_lower": 1.02,
+        "ci_upper": 1.1,
+        "effect_measure": "other",
+        "outcome_specific": "asthma",
+        "exposure_increment": "per 5 \u00b5g/m\u00b3",
+        "lag": "daily"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.6667,
+          "ci_lower": 0.5,
+          "ci_upper": 0.5,
+          "effect_measure": 0.4833,
+          "outcome_specific": 1.0,
+          "exposure_increment": 0.5,
+          "lag": 0.5
+        }
+      }
+    },
+    "ABS-0072": {
+      "consensus": {
+        "effect_estimate": 0.9400000000000001,
+        "ci_lower": 0.84,
+        "ci_upper": 1.04,
+        "effect_measure": "rr",
+        "outcome_specific": "all_cardiovascular",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "not specified"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 30
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.6167,
+          "ci_lower": 0.7833,
+          "ci_upper": 0.7833,
+          "effect_measure": 0.5667,
+          "outcome_specific": 0.3333,
+          "exposure_increment": 1.0,
+          "lag": 0.3333
+        }
+      }
+    },
+    "ABS-0073": {
+      "consensus": {
+        "effect_estimate": 1.02,
+        "ci_lower": 1.01,
+        "ci_upper": 1.03,
+        "effect_measure": "or",
+        "outcome_specific": "copd",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0-5"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 0.8333,
+          "ci_upper": 0.8333,
+          "effect_measure": 0.6667,
+          "outcome_specific": 1.0,
+          "exposure_increment": 1.0,
+          "lag": 0.6
+        }
+      }
+    },
+    "ABS-0074": {
+      "consensus": {
+        "effect_estimate": 1.27,
+        "ci_lower": 0.9,
+        "ci_upper": 1.79,
+        "effect_measure": "or",
+        "outcome_specific": "asthma",
+        "exposure_increment": "per iqr",
+        "lag": "4-day mean"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.8333,
+          "exposure_increment": 0.8167,
+          "lag": 0.5
+        }
+      }
+    },
+    "ABS-0076": {
+      "consensus": {
+        "effect_estimate": 1.26,
+        "ci_lower": 1.06,
+        "ci_upper": 1.5,
+        "effect_measure": "or",
+        "outcome_specific": "copd",
+        "exposure_increment": "per iqr",
+        "lag": "null"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 29
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 1.0,
+          "exposure_increment": 1.0,
+          "lag": 0.6552
+        }
+      }
+    },
+    "ABS-0077": {
+      "consensus": {
+        "effect_estimate": 0.19,
+        "ci_lower": 0.18,
+        "ci_upper": 0.2,
+        "effect_measure": "or",
+        "outcome_specific": "all_cause",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.3333,
+          "ci_lower": 0.3333,
+          "ci_upper": 0.3333,
+          "effect_measure": 0.5,
+          "outcome_specific": 0.5667,
+          "exposure_increment": 0.8333,
+          "lag": 1.0
+        }
+      }
+    },
+    "ABS-0078": {
+      "consensus": {
+        "effect_estimate": 1.0,
+        "ci_lower": 1.0,
+        "ci_upper": 1.01,
+        "effect_measure": "rr",
+        "outcome_specific": "asthma",
+        "exposure_increment": "per unknown",
+        "lag": "unknown"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 23,
+          "lag": 25
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.8333,
+          "exposure_increment": 0.4348,
+          "lag": 0.4
+        }
+      }
+    },
+    "ABS-0079": {
+      "consensus": {
+        "effect_estimate": 1.12,
+        "ci_lower": 1.1300000000000001,
+        "ci_upper": 1.1300000000000001,
+        "effect_measure": "rr",
+        "outcome_specific": "pneumonia",
+        "exposure_increment": "per iqr",
+        "lag": "null"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 58,
+          "ci_upper": 58,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 40
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 0.4483,
+          "ci_upper": 0.5517,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.9667,
+          "exposure_increment": 1.0,
+          "lag": 0.4
+        }
+      }
+    },
+    "ABS-0080": {
+      "consensus": {
+        "effect_estimate": 1.03,
+        "ci_lower": 1.02,
+        "ci_upper": 1.05,
+        "effect_measure": "other",
+        "outcome_specific": "asthma",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag2"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.7,
+          "ci_lower": 0.5333,
+          "ci_upper": 0.7,
+          "effect_measure": 0.5,
+          "outcome_specific": 1.0,
+          "exposure_increment": 1.0,
+          "lag": 0.5
+        }
+      }
+    },
+    "ABS-0081": {
+      "consensus": {
+        "effect_estimate": 1.33,
+        "ci_lower": 1.12,
+        "ci_upper": 1.58,
+        "effect_measure": "rr",
+        "outcome_specific": "asthma",
+        "exposure_increment": "per 1 mg/m\u00b3",
+        "lag": "lag7"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.9667,
+          "ci_lower": 0.9667,
+          "ci_upper": 0.9667,
+          "effect_measure": 1.0,
+          "outcome_specific": 1.0,
+          "exposure_increment": 0.6833,
+          "lag": 0.85
+        }
+      }
+    },
+    "ABS-0082": {
+      "consensus": {
+        "effect_estimate": 1.06,
+        "ci_lower": null,
+        "ci_upper": null,
+        "effect_measure": "rr",
+        "outcome_specific": "copd exacerbation-related ed admissions",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0-1"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 0,
+          "ci_upper": 0,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.8833,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.5,
+          "exposure_increment": 1.0,
+          "lag": 1.0
+        }
+      }
+    },
+    "ABS-0083": {
+      "consensus": {
+        "effect_estimate": 1.02,
+        "ci_lower": 1.02,
+        "ci_upper": 1.03,
+        "effect_measure": "rr",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "other"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 50
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.8333,
+          "exposure_increment": 1.0,
+          "lag": 0.4
+        }
+      }
+    },
+    "ABS-0084": {
+      "consensus": {
+        "effect_estimate": 1.6,
+        "ci_lower": 0.9,
+        "ci_upper": 2.4,
+        "effect_measure": "excess risk",
+        "outcome_specific": "all_cardiovascular",
+        "exposure_increment": "per iqr",
+        "lag": "lag0"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 56,
+          "lag": 30
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.7167,
+          "ci_lower": 0.7167,
+          "ci_upper": 0.7167,
+          "effect_measure": 0.5,
+          "outcome_specific": 0.4833,
+          "exposure_increment": 0.4464,
+          "lag": 0.3333
+        }
+      }
+    },
+    "ABS-0085": {
+      "consensus": {
+        "effect_estimate": 1.02,
+        "ci_lower": 1.01,
+        "ci_upper": 1.03,
+        "effect_measure": "rr",
+        "outcome_specific": "asthma",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0-1"
+      },
+      "item_report": {
+        "n_total_records": 40,
+        "n_valid_by_field": {
+          "effect_estimate": 10,
+          "ci_lower": 10,
+          "ci_upper": 10,
+          "effect_measure": 36,
+          "outcome_specific": 40,
+          "exposure_increment": 30,
+          "lag": 20
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 0.2778,
+          "outcome_specific": 0.75,
+          "exposure_increment": 0.3333,
+          "lag": 0.5
+        }
+      }
+    },
+    "ABS-0086": {
+      "consensus": {
+        "effect_estimate": 1.09,
+        "ci_lower": 1.0,
+        "ci_upper": 1.18,
+        "effect_measure": "rr",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0-2"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 1.0,
+          "exposure_increment": 1.0,
+          "lag": 0.5
+        }
+      }
+    },
+    "ABS-0087": {
+      "consensus": {
+        "effect_estimate": 1.23,
+        "ci_lower": 0.21,
+        "ci_upper": 2.2600000000000002,
+        "effect_measure": "other",
+        "outcome_specific": "acute bronchitis",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag07"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.9167,
+          "ci_lower": 0.9167,
+          "ci_upper": 0.9167,
+          "effect_measure": 0.4667,
+          "outcome_specific": 0.4333,
+          "exposure_increment": 1.0,
+          "lag": 0.6667
+        }
+      }
+    },
+    "ABS-0088": {
+      "consensus": {
+        "effect_estimate": 2.14,
+        "ci_lower": 1.83,
+        "ci_upper": 2.5100000000000002,
+        "effect_measure": "rr",
+        "outcome_specific": "asthma",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0-1"
+      },
+      "item_report": {
+        "n_total_records": 30,
+        "n_valid_by_field": {
+          "effect_estimate": 20,
+          "ci_lower": 20,
+          "ci_upper": 20,
+          "effect_measure": 30,
+          "outcome_specific": 30,
+          "exposure_increment": 20,
+          "lag": 20
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.5,
+          "ci_lower": 0.5,
+          "ci_upper": 0.5,
+          "effect_measure": 1.0,
+          "outcome_specific": 1.0,
+          "exposure_increment": 1.0,
+          "lag": 0.5
+        }
+      }
+    },
+    "ABS-0089": {
+      "consensus": {
+        "effect_estimate": 1.18,
+        "ci_lower": null,
+        "ci_upper": null,
+        "effect_measure": "rr",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 4\u00b0c",
+        "lag": "lag1-5"
+      },
+      "item_report": {
+        "n_total_records": 50,
+        "n_valid_by_field": {
+          "effect_estimate": 50,
+          "ci_lower": 0,
+          "ci_upper": 0,
+          "effect_measure": 50,
+          "outcome_specific": 50,
+          "exposure_increment": 50,
+          "lag": 50
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 1.0,
+          "exposure_increment": 0.6,
+          "lag": 0.66
+        }
+      }
+    },
+    "ABS-0090": {
+      "consensus": {
+        "effect_estimate": 1.02,
+        "ci_lower": null,
+        "ci_upper": null,
+        "effect_measure": "rr",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0"
+      },
+      "item_report": {
+        "n_total_records": 59,
+        "n_valid_by_field": {
+          "effect_estimate": 59,
+          "ci_lower": 0,
+          "ci_upper": 0,
+          "effect_measure": 59,
+          "outcome_specific": 59,
+          "exposure_increment": 24,
+          "lag": 24
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.7966,
+          "exposure_increment": 0.8333,
+          "lag": 0.4167
+        }
+      }
+    },
+    "ABS-0091": {
+      "consensus": {
+        "effect_estimate": 0.91,
+        "ci_lower": 0.55,
+        "ci_upper": 1.26,
+        "effect_measure": "rr",
+        "outcome_specific": "natural causes",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0-1"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.5667,
+          "ci_lower": 0.5667,
+          "ci_upper": 0.5667,
+          "effect_measure": 0.7667,
+          "outcome_specific": 0.3333,
+          "exposure_increment": 1.0,
+          "lag": 0.8333
+        }
+      }
+    },
+    "ABS-0092": {
+      "consensus": {
+        "effect_estimate": 1.03,
+        "ci_lower": 1.01,
+        "ci_upper": 1.05,
+        "effect_measure": "rr",
+        "outcome_specific": "copd",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0-21"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.6667,
+          "exposure_increment": 0.8333,
+          "lag": 0.5
+        }
+      }
+    },
+    "ABS-0093": {
+      "consensus": {
+        "effect_estimate": 1.02,
+        "ci_lower": 1.01,
+        "ci_upper": 1.03,
+        "effect_measure": "rr",
+        "outcome_specific": "respiratory admissions",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "multiple-lag days"
+      },
+      "item_report": {
+        "n_total_records": 32,
+        "n_valid_by_field": {
+          "effect_estimate": 10,
+          "ci_lower": 10,
+          "ci_upper": 10,
+          "effect_measure": 32,
+          "outcome_specific": 32,
+          "exposure_increment": 22,
+          "lag": 32
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 0.9375,
+          "outcome_specific": 0.625,
+          "exposure_increment": 0.9091,
+          "lag": 0.625
+        }
+      }
+    },
+    "ABS-0094": {
+      "consensus": {
+        "effect_estimate": 1.01,
+        "ci_lower": 1.0,
+        "ci_upper": 1.02,
+        "effect_measure": "rr",
+        "outcome_specific": "asthma",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "null"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 37
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.8333,
+          "exposure_increment": 1.0,
+          "lag": 0.5405
+        }
+      }
+    },
+    "ABS-0095": {
+      "consensus": {
+        "effect_estimate": 1.01,
+        "ci_lower": 1.0,
+        "ci_upper": 1.02,
+        "effect_measure": "rr",
+        "outcome_specific": "asthma",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 1.0,
+          "exposure_increment": 1.0,
+          "lag": 0.5
+        }
+      }
+    },
+    "ABS-0096": {
+      "consensus": {
+        "effect_estimate": 1.09,
+        "ci_lower": 1.08,
+        "ci_upper": 1.1,
+        "effect_measure": "rr",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0-7"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.45,
+          "exposure_increment": 1.0,
+          "lag": 0.9833
+        }
+      }
+    },
+    "ABS-0097": {
+      "consensus": {
+        "effect_estimate": 1.08,
+        "ci_lower": 0.28,
+        "ci_upper": 1.8900000000000001,
+        "effect_measure": "other",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag1"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.85,
+          "ci_lower": 0.85,
+          "ci_upper": 0.85,
+          "effect_measure": 0.35,
+          "outcome_specific": 0.5333,
+          "exposure_increment": 0.5167,
+          "lag": 0.6667
+        }
+      }
+    },
+    "ABS-0098": {
+      "consensus": {
+        "effect_estimate": 1.01,
+        "ci_lower": 1.0,
+        "ci_upper": 1.02,
+        "effect_measure": "irr",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag5"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 50,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.4833,
+          "ci_lower": 0.4833,
+          "ci_upper": 0.4833,
+          "effect_measure": 0.65,
+          "outcome_specific": 1.0,
+          "exposure_increment": 1.0,
+          "lag": 0.9
+        }
+      }
+    },
+    "ABS-0099": {
+      "consensus": {
+        "effect_estimate": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "effect_measure": "rr",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per iqr",
+        "lag": "lag0-1"
+      },
+      "item_report": {
+        "n_total_records": 30,
+        "n_valid_by_field": {
+          "effect_estimate": 0,
+          "ci_lower": 0,
+          "ci_upper": 0,
+          "effect_measure": 30,
+          "outcome_specific": 30,
+          "exposure_increment": 20,
+          "lag": 20
+        },
+        "mode_agreement_by_field": {
+          "effect_measure": 1.0,
+          "outcome_specific": 0.3333,
+          "exposure_increment": 0.5,
+          "lag": 0.5
+        }
+      }
+    },
+    "ABS-0100": {
+      "consensus": {
+        "effect_estimate": 1.04,
+        "ci_lower": 1.02,
+        "ci_upper": 1.06,
+        "effect_measure": "rr",
+        "outcome_specific": "uri",
+        "exposure_increment": "per iqr",
+        "lag": "3-day moving average"
+      },
+      "item_report": {
+        "n_total_records": 60,
+        "n_valid_by_field": {
+          "effect_estimate": 60,
+          "ci_lower": 60,
+          "ci_upper": 60,
+          "effect_measure": 60,
+          "outcome_specific": 60,
+          "exposure_increment": 60,
+          "lag": 60
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.8333,
+          "ci_lower": 0.8333,
+          "ci_upper": 0.8333,
+          "effect_measure": 0.8833,
+          "outcome_specific": 0.65,
+          "exposure_increment": 1.0,
+          "lag": 0.4
+        }
+      }
+    },
+    "ABS-0013": {
+      "consensus": {
+        "effect_estimate": 1.02,
+        "ci_lower": 1.01,
+        "ci_upper": 1.02,
+        "effect_measure": "rr",
+        "outcome_specific": "asthma",
+        "exposure_increment": "per 6.3 \u00b5g/m\u00b3",
+        "lag": "8-day cumulative exposure"
+      },
+      "item_report": {
+        "n_total_records": 50,
+        "n_valid_by_field": {
+          "effect_estimate": 50,
+          "ci_lower": 50,
+          "ci_upper": 50,
+          "effect_measure": 50,
+          "outcome_specific": 50,
+          "exposure_increment": 50,
+          "lag": 50
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 0.8,
+          "exposure_increment": 0.56,
+          "lag": 0.2
+        }
+      }
+    },
+    "ABS-0019": {
+      "consensus": {
+        "effect_estimate": 1.1,
+        "ci_lower": 1.01,
+        "ci_upper": 1.2,
+        "effect_measure": "rr",
+        "outcome_specific": "asthma",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0"
+      },
+      "item_report": {
+        "n_total_records": 49,
+        "n_valid_by_field": {
+          "effect_estimate": 49,
+          "ci_lower": 49,
+          "ci_upper": 49,
+          "effect_measure": 49,
+          "outcome_specific": 49,
+          "exposure_increment": 49,
+          "lag": 49
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 1.0,
+          "outcome_specific": 1.0,
+          "exposure_increment": 1.0,
+          "lag": 1.0
+        }
+      }
+    },
+    "ABS-0032": {
+      "consensus": {
+        "effect_estimate": 1.02,
+        "ci_lower": 0.87,
+        "ci_upper": 2.35,
+        "effect_measure": "other",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0-4"
+      },
+      "item_report": {
+        "n_total_records": 50,
+        "n_valid_by_field": {
+          "effect_estimate": 50,
+          "ci_lower": 50,
+          "ci_upper": 50,
+          "effect_measure": 50,
+          "outcome_specific": 50,
+          "exposure_increment": 50,
+          "lag": 50
+        },
+        "mode_agreement_by_field": {
+          "effect_estimate": 0.52,
+          "ci_lower": 0.48,
+          "ci_upper": 0.48,
+          "effect_measure": 0.56,
+          "outcome_specific": 1.0,
+          "exposure_increment": 1.0,
+          "lag": 0.24
+        }
+      }
+    },
+    "ABS-0075": {
+      "consensus": {
+        "effect_estimate": null,
+        "ci_lower": null,
+        "ci_upper": null,
+        "effect_measure": "rr",
+        "outcome_specific": "all_respiratory",
+        "exposure_increment": "per 10 \u00b5g/m\u00b3",
+        "lag": "lag0"
+      },
+      "item_report": {
+        "n_total_records": 20,
+        "n_valid_by_field": {
+          "effect_estimate": 0,
+          "ci_lower": 0,
+          "ci_upper": 0,
+          "effect_measure": 20,
+          "outcome_specific": 20,
+          "exposure_increment": 20,
+          "lag": 20
+        },
+        "mode_agreement_by_field": {
+          "effect_measure": 0.5,
+          "outcome_specific": 1.0,
+          "exposure_increment": 0.5,
+          "lag": 1.0
+        }
+      }
+    }
+  }
+}

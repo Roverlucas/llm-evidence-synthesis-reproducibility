@@ -1,0 +1,273 @@
+{
+  "method": "Work saved = (human time - LLM time) for equivalent task. Human baselines from Shemilt 2016 (J Biomed Inform) and Wang 2023 (JMIR).",
+  "human_baselines": {
+    "screening_abstracts_per_hour": {
+      "low": 50,
+      "high": 120
+    },
+    "extraction_articles_per_hour": {
+      "low": 6,
+      "high": 15
+    }
+  },
+  "per_model": {
+    "llama3-8b": {
+      "screening": {
+        "llm_mean_sec_per_abstract": 25.11,
+        "llm_abstracts_per_hour": 143.0,
+        "llm_hours_500_abstracts": 3.49,
+        "human_hours_500_abstracts_range": [
+          4.17,
+          10.0
+        ],
+        "hours_saved_range": [
+          0.68,
+          6.51
+        ],
+        "speedup_vs_human_range": [
+          1.2,
+          2.9
+        ]
+      },
+      "extraction": {
+        "llm_mean_sec_per_article": 69.72,
+        "llm_articles_per_hour": 52.0,
+        "llm_hours_100_articles": 1.94,
+        "human_hours_100_articles_range": [
+          6.67,
+          16.67
+        ],
+        "hours_saved_range": [
+          4.73,
+          14.73
+        ],
+        "speedup_vs_human_range": [
+          3.4,
+          8.6
+        ]
+      },
+      "typical_SR_scenario": {
+        "screening_llm_hours": 13.95,
+        "screening_human_single_hours": 40.0,
+        "screening_human_dual_hours": 80.0,
+        "screening_hours_saved_vs_dual_human": 66.05
+      }
+    },
+    "mistral-7b": {
+      "screening": {
+        "llm_mean_sec_per_abstract": 36.9,
+        "llm_abstracts_per_hour": 98.0,
+        "llm_hours_500_abstracts": 5.12,
+        "human_hours_500_abstracts_range": [
+          4.17,
+          10.0
+        ],
+        "hours_saved_range": [
+          -0.96,
+          4.88
+        ],
+        "speedup_vs_human_range": [
+          0.8,
+          2.0
+        ]
+      },
+      "extraction": {
+        "llm_mean_sec_per_article": 91.67,
+        "llm_articles_per_hour": 39.0,
+        "llm_hours_100_articles": 2.55,
+        "human_hours_100_articles_range": [
+          6.67,
+          16.67
+        ],
+        "hours_saved_range": [
+          4.12,
+          14.12
+        ],
+        "speedup_vs_human_range": [
+          2.6,
+          6.5
+        ]
+      },
+      "typical_SR_scenario": {
+        "screening_llm_hours": 20.5,
+        "screening_human_single_hours": 40.0,
+        "screening_human_dual_hours": 80.0,
+        "screening_hours_saved_vs_dual_human": 59.5
+      }
+    },
+    "gemma2-9b": {
+      "screening": {
+        "llm_mean_sec_per_abstract": 25.19,
+        "llm_abstracts_per_hour": 143.0,
+        "llm_hours_500_abstracts": 3.5,
+        "human_hours_500_abstracts_range": [
+          4.17,
+          10.0
+        ],
+        "hours_saved_range": [
+          0.67,
+          6.5
+        ],
+        "speedup_vs_human_range": [
+          1.2,
+          2.9
+        ]
+      },
+      "extraction": {
+        "llm_mean_sec_per_article": 39.91,
+        "llm_articles_per_hour": 90.0,
+        "llm_hours_100_articles": 1.11,
+        "human_hours_100_articles_range": [
+          6.67,
+          16.67
+        ],
+        "hours_saved_range": [
+          5.56,
+          15.56
+        ],
+        "speedup_vs_human_range": [
+          6.0,
+          15.0
+        ]
+      },
+      "typical_SR_scenario": {
+        "screening_llm_hours": 14.0,
+        "screening_human_single_hours": 40.0,
+        "screening_human_dual_hours": 80.0,
+        "screening_hours_saved_vs_dual_human": 66.0
+      }
+    },
+    "claude-sonnet-4-5": {
+      "screening": {
+        "llm_mean_sec_per_abstract": 4.52,
+        "llm_abstracts_per_hour": 796.0,
+        "llm_hours_500_abstracts": 0.63,
+        "human_hours_500_abstracts_range": [
+          4.17,
+          10.0
+        ],
+        "hours_saved_range": [
+          3.54,
+          9.37
+        ],
+        "speedup_vs_human_range": [
+          6.6,
+          15.9
+        ]
+      },
+      "extraction": {
+        "llm_mean_sec_per_article": 5.8,
+        "llm_articles_per_hour": 621.0,
+        "llm_hours_100_articles": 0.16,
+        "human_hours_100_articles_range": [
+          6.67,
+          16.67
+        ],
+        "hours_saved_range": [
+          6.51,
+          16.51
+        ],
+        "speedup_vs_human_range": [
+          41.4,
+          103.5
+        ]
+      },
+      "typical_SR_scenario": {
+        "screening_llm_hours": 2.51,
+        "screening_human_single_hours": 40.0,
+        "screening_human_dual_hours": 80.0,
+        "screening_hours_saved_vs_dual_human": 77.49
+      }
+    },
+    "gemini-2.5-pro": {
+      "screening": {
+        "llm_mean_sec_per_abstract": 10.01,
+        "llm_abstracts_per_hour": 360.0,
+        "llm_hours_500_abstracts": 1.39,
+        "human_hours_500_abstracts_range": [
+          4.17,
+          10.0
+        ],
+        "hours_saved_range": [
+          2.78,
+          8.61
+        ],
+        "speedup_vs_human_range": [
+          3.0,
+          7.2
+        ]
+      },
+      "extraction": {
+        "llm_mean_sec_per_article": 23.19,
+        "llm_articles_per_hour": 155.0,
+        "llm_hours_100_articles": 0.64,
+        "human_hours_100_articles_range": [
+          6.67,
+          16.67
+        ],
+        "hours_saved_range": [
+          6.02,
+          16.02
+        ],
+        "speedup_vs_human_range": [
+          10.3,
+          25.9
+        ]
+      },
+      "typical_SR_scenario": {
+        "screening_llm_hours": 5.56,
+        "screening_human_single_hours": 40.0,
+        "screening_human_dual_hours": 80.0,
+        "screening_hours_saved_vs_dual_human": 74.44
+      }
+    },
+    "gpt-4.1": {
+      "screening": {
+        "llm_mean_sec_per_abstract": 2.48,
+        "llm_abstracts_per_hour": 1452.0,
+        "llm_hours_500_abstracts": 0.34,
+        "human_hours_500_abstracts_range": [
+          4.17,
+          10.0
+        ],
+        "hours_saved_range": [
+          3.82,
+          9.66
+        ],
+        "speedup_vs_human_range": [
+          12.1,
+          29.0
+        ]
+      },
+      "extraction": {
+        "llm_mean_sec_per_article": 5.42,
+        "llm_articles_per_hour": 664.0,
+        "llm_hours_100_articles": 0.15,
+        "human_hours_100_articles_range": [
+          6.67,
+          16.67
+        ],
+        "hours_saved_range": [
+          6.52,
+          16.52
+        ],
+        "speedup_vs_human_range": [
+          44.3,
+          110.7
+        ]
+      },
+      "typical_SR_scenario": {
+        "screening_llm_hours": 1.38,
+        "screening_human_single_hours": 40.0,
+        "screening_human_dual_hours": 80.0,
+        "screening_hours_saved_vs_dual_human": 78.62
+      }
+    }
+  },
+  "for_typical_SR": {
+    "assumptions": {
+      "abstracts_to_screen": 2000,
+      "articles_to_extract_from": 100
+    }
+  }
+}
