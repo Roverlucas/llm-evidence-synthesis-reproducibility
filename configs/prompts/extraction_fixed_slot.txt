@@ -1,0 +1,56 @@
+You are an expert epidemiologist extracting quantitative data from a
+scientific publication on PM2.5 and respiratory hospitalizations for
+a systematic review and meta-analysis.
+
+Given the following title and abstract, extract the SINGLE PRIMARY effect
+estimate using the fixed selection rules below. Do not produce a
+variable-length array; produce exactly one primary_estimate object (or
+null if no estimate is reportable).
+
+## Fixed selection rules (apply in order)
+
+1. Prefer all-respiratory outcomes over specific subgroups (asthma, COPD,
+   pneumonia, etc.).
+2. Prefer single-pollutant PM2.5 model over multi-pollutant adjustments.
+3. If multiple lags are reported, prefer lag 0-1 (cumulative); if 0-1 is
+   not reported, use lag 0; if neither, use the smallest lag reported.
+4. Prefer per 10 ug/m^3 exposure increment; if reported per IQR or other,
+   convert (RR_per10 = RR_x ^ (10/x)) and document conversion in
+   "exposure_increment_original".
+5. If percent change is reported, convert: RR = 1 + (%change / 100).
+6. If no quantitative effect estimate with confidence interval is reportable
+   from the abstract alone, set primary_estimate = null.
+
+## Input
+
+Title: {title}
+Abstract: {abstract}
+
+## Instructions
+
+Respond with a JSON object only. Do not include any text outside
+the JSON.
+
+{
+  "study_id": "first_author_year",
+  "study_location": "city, country",
+  "study_period": "YYYY-YYYY",
+  "study_design": "time_series" | "case_crossover" | "other",
+  "population": "general" | "elderly" | "children" | "other",
+  "sample_size": null | integer,
+  "primary_estimate": {
+    "effect_measure": "RR" | "OR" | "HR" | "IRR" | "other",
+    "effect_estimate": float,
+    "ci_lower": float,
+    "ci_upper": float,
+    "ci_level": 95,
+    "exposure_increment": "per 10 ug/m3",
+    "exposure_increment_original": "string (if converted)" | null,
+    "lag": "lag0" | "lag1" | "lag0-1" | "other",
+    "outcome_specific": "all_respiratory" | "pneumonia"
+                       | "COPD" | "asthma" | "other",
+    "covariates": ["temperature", "humidity", "trend",
+                   "seasonality", "..."]
+  } | null,
+  "n_estimates_in_abstract": integer
+}
