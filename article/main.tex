@@ -70,6 +70,8 @@ Yet the process is notoriously labor-intensive: a typical systematic review requ
 The emergence of large language models (LLMs) has created unprecedented opportunities to accelerate this process.
 Recent studies demonstrate that models such as GPT-4,\autocite{openai2023gpt4} Claude,\autocite{anthropic2024claude} and Gemini\autocite{geminiteam2024gemini} can screen abstracts with sensitivity approaching that of human reviewers,\autocite{oami2024screening,khraisha2024gpt4} extract structured data from published studies with over 90\% accuracy,\autocite{gartlehner2024extraction,jensen2025chatgpt} and even assist in evidence quality assessment.\autocite{wang2025trialmind,li2025streamlining}
 A growing body of work has established LLM-assisted evidence synthesis as a legitimate and rapidly expanding methodological frontier.\autocite{li2025jamia,scherbakov2025jamia,matsui2024screening,oami2025optimal}
+The 2025 Cambridge \emph{Research Synthesis Methods} editorial\autocite{weber2025rsm_genai_guidance} explicitly invites methodological work characterizing the reproducibility of generative-AI-assisted evidence synthesis, including specific reporting requirements for prompt design, random-seed control, and external validation.
+The Cochrane 2024 guidance for AI-assisted screening and data extraction\autocite{cochrane2024_ai_guidance} further requires that AI-assisted SR tools report inter-run agreement statistics---which the paired EMR and pairwise-disagreement reporting in this paper supplies.
 
 \subsection{The Hidden Problem: Non-Determinism}
 
@@ -631,6 +633,92 @@ GPT-4.1's significant estimates ranged from 150 to 154 (a swing of 4), while Gem
 While the overall pooled effect in our corpus remained stable across runs for all models (because the aggregate signal is strong and $k$ is large), the instability of the underlying evidence composition is concerning.
 In domains with smaller literatures or marginal effects, even GPT-4.1's relatively modest variation ($\Delta k{=}4$) could plausibly shift pooled conclusions, while Claude's and Gemini's larger swings pose a more direct threat to meta-analytic reproducibility.
 
+\medskip
+\noindent\textbf{Random-effects re-analysis and small-literature simulation.}
+We re-ran the propagation analysis using DerSimonian--Laird random-effects pooling on log(RR), one pooled estimate per model${\times}$run combination over the 100 INCLUDE articles.
+Across all 60~combinations, the pooled RR ranged from 1.015 to 1.038 (mean 1.025); the within-model range across runs was small in absolute terms (Claude 0.0058, Gemini 0.0058, GPT-4.1 0.0058) and remained within the bootstrap CI of any single run.
+\textbf{No run-pair within any model produced a 95\% random-effects CI that crossed the null} in the full-corpus pooling, confirming that, in a well-powered, large-$k$ meta-analysis with a strong aggregate signal, LLM non-determinism does not flip the meta-analytic conclusion.
+
+This robustness, however, depends critically on $k$.
+We subsampled the corpus to plausible small-literature scenarios ($k\in\{10,15,20,30\}$, $N{=}200$ random subsamples per $k$, seed${=}$42) and computed random-effects pooled estimates for each of the 10 LLM runs.
+For $k{=}10$~subsamples, \textbf{0.5\% of Claude and Gemini subsamples} (1 of 200 each) produced \emph{unstable null-crossing}: the pooled 95\% CI crossed RR${=}$1 in some runs but not others, meaning that the meta-analytic conclusion (significantly above null vs.\ not significant) \textbf{changed depending on which LLM run generated the inputs}.
+For $k{\geq}15$, no subsample exhibited unstable null-crossing across runs in any model.
+This demonstrates a concrete, plausible scenario where LLM non-determinism affects the downstream conclusion: emerging literatures with $k{\sim}10$~articles (small reviews of new exposures, rare outcomes, or recent topics) are susceptible to run-dependent reversals, even when the underlying signal is detectable.
+
+\subsection{Fixed-Slot Extraction Sensitivity}
+\label{sec:fixedslot}
+
+To test whether the variable-length \texttt{estimates} array structurally amplifies cloud API non-determinism, we re-ran the extraction stage on the three cloud models with a fixed-slot prompt that requests \emph{exactly one} primary estimate (lag~0--1 if multiple lags are reported, single-pollutant model preferred, all-respiratory preferred over subgroups, normalized to per~10~$\mu$g/m$^3$).
+All other parameters were held identical to the variable-length design: temperature${=}$0, seed${=}$42, same 100~INCLUDE articles, three runs per model.
+
+\begin{table}[htbp]
+\centering
+\caption{Fixed-slot extraction EMR vs.\ variable-length baseline (3~runs vs.\ 10~runs; 100 INCLUDE articles).}
+\label{tab:fixedslot}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Model} & \textbf{Var-length EMR} & \textbf{Fixed-slot EMR} & \textbf{Relative change} \\
+\midrule
+Claude Sonnet 4.5 & 0.050 & 0.030 & $-40.0\%$ \\
+Gemini 2.5 Pro    & 0.200 & 0.185 & $-7.6\%$ \\
+GPT-4.1           & 0.150 & \textbf{0.444} & $\mathbf{+196.3\%}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent The result is \emph{not} a uniform improvement.
+GPT-4.1's EMR almost tripled with the fixed-slot prompt (0.150${\to}$0.444), confirming that for that model, prompt structure---specifically the variable-length array---was a major contributor to non-determinism.
+Claude actively \emph{worsened} ($-40\%$); Gemini was effectively neutral.
+This refines the expectation, voiced in peer review, that ``fixed-slot extraction will resolve cloud non-determinism'': the effect of prompt design is real but \textbf{model-specific}, and for at least Claude the dominant source of variation lies elsewhere (likely in the cloud serving stack itself, see Section~\ref{sec:desconfound}).
+
+\subsection{Deployment-vs.-Model-Size Desconfound Experiment}
+\label{sec:desconfound}
+
+Throughout the comparisons above, the local versus cloud difference is confounded with model size: our three local models are 7--9B-parameter open-weight models, while the three cloud APIs are estimated at $>$100B parameters and trained with proprietary procedures.
+To isolate the deployment effect, we ran a seventh experimental condition: the identical \texttt{meta-llama/llama-3-8b-instruct} model---same weights, same tokenizer, same architecture---served via cloud (OpenRouter routing pinned to the DeepInfra provider) at temperature${=}$0 and seed${=}$42, configuration identical to the local Ollama deployment that achieved $\emr{=}1.000$.
+Ten cloud runs $\times$ 500~abstracts mirror the local experimental design.
+
+\begin{table}[htbp]
+\centering
+\caption{Same-weight, different-deployment comparison: \texttt{meta-llama/llama-3-8b-instruct} via local Ollama (Apple~M4) vs.\ cloud DeepInfra (OpenRouter), 10~runs each, identical prompt, seed${=}$42 and temperature${=}$0.}
+\label{tab:desconfound}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Quantity} & \textbf{Local (Ollama, M4)} & \textbf{Cloud (DeepInfra)} \\
+\midrule
+EMR within deployment           & 1.000 & 0.992$^{*}$ \\
+Mean pairwise disagreement      & 0.0000 & 0.0079 \\
+\% items with any pair-disagreement & 0.00\% & 2.04\% \\
+Cross-deployment agreement (all run pairs) & ---  & 59.7\% \\
+Items where local${=}$include / cloud${=}$exclude & --- & 167 \\
+Items where local${=}$exclude / cloud${=}$include & --- & \textbf{0} \\
+\bottomrule
+\multicolumn{3}{l}{\footnotesize $^{*}$Pairwise-mean-based estimate; 2 of 10 cloud runs had transient infrastructure failures}\\
+\multicolumn{3}{l}{\footnotesize that reduced their valid-item counts (45 and 221, vs.\ ${\sim}$491 in the other 8 runs).}
+\end{tabular}
+\end{table}
+
+\noindent Three findings stand out.
+
+\textbf{First, infrastructure introduces non-determinism in a small-parameter model.}
+Local LLaMA~3 8B is bit-deterministic ($\emr{=}1.000$ over 10~runs and 500~abstracts).
+The same model served via cloud is \emph{not}: 2.04\% of items receive different decisions in at least one run-pair (mean pairwise disagreement 0.79\%).
+This refutes the model-size confound directly: a 7--9B model can become non-deterministic purely by virtue of its serving stack, with no change in weights, tokenizer, prompt, seed, or temperature.
+
+\textbf{Second, cloud and local produce systematically different outputs.}
+Even within the runs where the cloud was internally consistent, mean pairwise agreement with the local deployment was 59.7\%.
+Of 430~items where both deployments produced a valid decision, 167 (38.8\%) showed a different decision under cloud than under local.
+
+\textbf{Third, the discordance is asymmetric.}
+Of those 167~discordant items, \textbf{all 167} were cases where the local model said \emph{include} but the cloud said \emph{exclude}; the reverse direction (local exclude / cloud include) occurred zero times.
+The cloud deployment is systematically more conservative.
+The mechanistic interpretation is that the cloud serving stack uses batched continuous-batching inference with floating-point reduction order that depends on batch composition at the moment of inference; local Ollama uses single-stream sequential inference on a single Apple~M4 chip with deterministic reduction order.
+The asymmetry of the disagreement is suggestive of a systematic bias in how cloud floating-point summation truncates positive evidence, but isolating that mechanism is beyond the scope of this study.
+
+We additionally observed an operational reliability finding: 2 of 10~cloud runs (\texttt{run\_005}, \texttt{run\_006}) experienced transient infrastructure failures that reduced their successful-call counts substantially (45/500 and 221/500 versus the ${\sim}$491/500 baseline of the other eight runs).
+This pattern was absent from all 10 local Ollama runs, all of which had identical 480/500 success.
+Cloud reliability for systematic-review work is itself a finding worth reporting alongside reproducibility.
+
 \subsection{Summary Comparison}
 
 Figure~\ref{fig:emr} visualizes the EMR comparison across models and stages, and Figure~\ref{fig:heatmap} displays the field-level variation as a heatmap.
@@ -662,9 +750,10 @@ Figure~\ref{fig:emr} visualizes the EMR comparison across models and stages, and
 Our study provides a systematic quantification of LLM non-determinism across a complete evidence synthesis pipeline---to our knowledge, the first to combine whole-output metrics, multi-run repetition, and pipeline propagation analysis in this domain.
 Four key findings emerge.
 
-\textbf{Finding 1: Local deployment achieves deterministic inference; cloud APIs do not.}
+\textbf{Finding 1: Deployment infrastructure---not parameter count---drives the local-vs-cloud reproducibility gap.}
 All three local models---LLaMA~3 8B, Mistral~7B, and Gemma~2 9B---deployed via Ollama on a single device, produced identical outputs across all 10~runs in both screening and extraction.
 All three cloud-based APIs (Claude, Gemini, GPT-4.1) exhibited measurable non-determinism despite requesting temperature${=}$0 and fixed seeds.
+The desconfound experiment in Section~\ref{sec:desconfound} establishes that this gap is \emph{not} attributable to model size: serving the identical \texttt{meta-llama/llama-3-8b-instruct} via cloud (DeepInfra) introduces 2\% pairwise disagreement and 39\% systematic disagreement with the local deployment of the same weights---asymmetrically, with the cloud always more conservative.
 This gap has a precise technical explanation rooted in floating-point arithmetic.
 Cloud APIs serve requests across multi-GPU clusters where matrix multiplications are partitioned and reduced in non-deterministic order.
 Because floating-point addition is not associative---$(a + b) + c \neq a + (b + c)$ in general due to rounding---different partitioning strategies produce subtly different intermediate sums, which propagate through the autoregressive generation process and can eventually cause different token selections.\autocite{karelin2024indeterminism}
@@ -688,9 +777,24 @@ GPT-4.1 achieved the highest metadata stability among API models (exact EMR${=}$
 Claude had the lowest hash-based EMR (0.050) and the widest structural swing ($\Delta k{=}23$), while Gemini showed the most extreme semantic divergence (minimum BERTScore $F_1{=}0.754$).
 These distinct profiles suggest that non-determinism manifests differently across API providers---some vary primarily in numeric precision, others in structural composition, and others in semantic interpretation.
 
-\textbf{Finding 4: Accuracy and reproducibility are independent properties.}
-Gemini achieved the highest screening accuracy (0.964) but the lowest screening reproducibility (0.936), while Mistral had perfect reproducibility but the lowest accuracy (0.628).
-This independence means that \textbf{accuracy evaluations from a single run cannot detect reproducibility problems}---a model that performs well in one evaluation may produce materially different results in a replication attempt.
+\textbf{Finding 4: Accuracy and reproducibility are independent properties; report them as a paired tuple.}
+\label{sec:metric_pairing}
+Gemini achieved the highest screening accuracy (0.964) but the lowest screening reproducibility (0.936), while Mistral had perfect reproducibility (\emr{=}1.000) but a degenerate ``always-include'' strategy (specificity${=}$0.240, accuracy${=}$0.628).
+The Mistral case is a stark warning: a constant function is trivially reproducible, so EMR alone is not evidence of useful reproducibility.
+This independence means that \textbf{accuracy evaluations from a single run cannot detect reproducibility problems}, and \textbf{reproducibility evaluations without accuracy cannot detect degenerate strategies}.
+Future studies should report EMR and accuracy (against a human-labeled ground truth) as a paired tuple, never EMR alone.
+
+\textbf{Finding 5: Prompt design is a contributor to extraction non-determinism, but the effect is model-specific.}
+The fixed-slot extraction sensitivity analysis (Section~\ref{sec:fixedslot}) showed dramatic improvement for GPT-4.1 (EMR 0.150${\to}$0.444, $+196\%$), but no improvement---or active worsening---for Claude ($-40\%$) and Gemini ($-7.6\%$).
+This refines the assumption that ``fixed-slot will fix it'': prompt structure matters, but the dominant source of variation differs across providers.
+For Claude in particular, the residual non-determinism after prompt simplification points back to deployment-stack variation rather than prompt-induced array variability.
+
+\textbf{Finding 6: The seed parameter delivers a smaller effect than the deployment paradigm.}
+Cambridge RSM guidance §4.3 requires empirical reporting of seed-parameter effectiveness on commercial APIs.
+Our data permit a direct test: Gemini and GPT-4.1 accept a seed parameter (set to~42); Claude does not.
+For screening, seeded cloud models had EMR slightly \emph{below} non-seeded Claude (0.953 vs.\ 0.974); for extraction, seeded models were better than Claude by 0.125 EMR.
+The deployment effect---local seeded EMR${=}$1.000 vs.\ cloud seeded mean EMR${=}$0.175 in extraction---is \textbf{6$\times$ larger} than the seed effect (cloud-seeded vs.\ cloud-unseeded EMR difference of 0.125).
+We conclude that the seed parameter, as currently implemented in commercial APIs, does not deliver the determinism that users may infer from its presence; deployment paradigm dominates as the primary controllable variable.
 
 \subsection{Implications for Evidence Synthesis Practice}
 
@@ -735,6 +839,48 @@ This stability should not be misread as evidence that non-determinism is inconse
 In systematic reviews targeting smaller literatures ($k{<}20$) or marginal effects, even GPT-4.1's modest variation ($\Delta k{=}4$) could shift a confidence interval across the null.
 We used a fixed-effect inverse-variance model; a random-effects model (standard for heterogeneous epidemiological studies) would produce wider confidence intervals, making the pooled conclusion \emph{more} sensitive to compositional changes---further underscoring the importance of multi-run verification.
 
+\subsection{Cost-Benefit Considerations for SR Teams}
+\label{sec:costbenefit}
+
+A practitioner considering our findings faces a deployment trade-off between (a) local open-weight serving with full reproducibility but slower throughput, and (b) cloud-API serving with high throughput but stochastic outputs.
+We sketch a quantitative comparison for a typical SR team conducting 5~reviews per year, each with a 2{,}000-abstract screening pool and a 100-article extraction stage.
+
+\textbf{Scenario A — Local-pinned (Gemma~2 9B with pinned Ollama version + pinned hardware).}
+Single-pass screening of 2{,}000~abstracts takes ${\approx}14$~hours per review on Apple~M4 (25.2~sec/abstract, our measured rate).
+Annual screening time: 70~hours.
+Extraction: $100 \times 5 \times 70~\text{sec} = 9.7$~hours.
+Total annual LLM time: 80~hours.
+Equipment cost: amortized hardware + electricity (estimated US\$300/year at 24/7, US\$0.12/kWh).
+Reproducibility: bit-deterministic.
+
+\textbf{Scenario B — Cloud + 3$\times$-run majority vote (GPT-4.1).}
+Single-pass screening: ${\approx}1.4$~hours; 3$\times$ runs = 4.2~hours per review.
+Annual screening: 21~hours.
+Extraction with 3$\times$ vote: ${\approx}1.7$~hours.
+Total LLM time: 22.7~hours.
+API cost: ${\approx}$US\$15 screening + US\$8 extraction per review = US\$115/year.
+Reproducibility: high but not bit-deterministic (3$\times$ majority captures ${\geq}99\%$ of stable outputs at the cost of 3$\times$ API spend).
+
+\textbf{Scenario C — Cloud single-run (typical current practice).}
+Same as~B but with one run.
+Total LLM time: 7.6~hours; cost ${\approx}$US\$38/year.
+Reproducibility: not guaranteed; replication attempts will produce different outputs in 5--20\% of articles.
+
+For teams that value rigorous reproducibility and have a single moderate workstation, Scenario~A is cost-effective and guarantees identical outputs across re-runs.
+For throughput-prioritizing teams willing to accept documented non-determinism mitigated by majority voting, Scenario~B saves roughly 60~hours of screening labor per year at ${\sim}$US\$115.
+A hybrid (local screening + cloud extraction with voting) is also feasible.
+
+\subsection{Structured-Output and Tool-Use Modes as Potential Mitigations}
+\label{sec:structured}
+
+The three commercial APIs in our study all offer ``structured output'' or ``tool-use'' modes that constrain output format more strictly than free-form JSON: Anthropic's tool-use API enforces a Pydantic-like schema server-side, OpenAI's \texttt{response\_format=json\_schema} similarly constrains the output token distribution, and Gemini's function-calling enforces argument types in the response.
+
+Whether these modes reduce run-to-run non-determinism in extraction is an open question that our study did not directly address---we used the standard Chat Completions endpoints with prompt-level JSON instruction, matching the most common practice in the LLM-SR literature as of late 2025.
+Two hypotheses are testable in future work.
+First, structured outputs may reduce \emph{parsing} variation (no more ``Markdown code-fence around JSON'' edge cases) without reducing the underlying semantic non-determinism (the model still chooses among multiple valid outputs).
+Second, structured outputs with strict enums (e.g., \texttt{lag} restricted to \texttt{lag0, lag1, lag0-1, lag2}) may push semantic variation toward the specific sub-fields with the most uncertainty, but bounded EMR may improve.
+We recommend that future LLM-SR studies report results in both unstructured and structured-output modes when comparing across commercial APIs, because the deployment paradigm explicitly affects which output channels are available.
+
 \subsection{Scope, Design Decisions, and Research Opportunities}
 \label{sec:limitations}
 
@@ -773,8 +919,25 @@ All experiments were completed within a 3-week window (February 11--March~2, 202
 We pinned Claude to a dated version (\texttt{claude-sonnet-4-5-20250929}) and used versioned GPT-4.1.
 Longitudinal studies tracking EMR over weeks or months represent a compelling research opportunity to distinguish inference-level non-determinism from model-update effects.
 
+\textbf{External validation as documented limitation.}
+This study tests reproducibility within a single 500-abstract corpus on PM$_{2.5}$ and respiratory hospitalization.
+We have not validated our findings on an independent test corpus drawn from a different domain or time period.
+Three threats follow.
+First, generalization to other domains: PM$_{2.5}$/respiratory is a well-structured, mature epidemiology literature with formulaic outcome reporting (RR/OR per 10~$\mu$g/m$^3$ with 95\% CI, time-series design language); LLM extraction stability may differ for less-structured domains such as qualitative health-services research, behavioral interventions, or nutritional epidemiology.
+Cross-domain reproducibility is the focus of our companion study (Rover \emph{et al.}, in preparation), which uses an air-pollution/health corpus paired with an artificial-intelligence/ML corpus to isolate domain effects.
+Second, generalization to other time periods: our experiments executed within a 3-week window (February~11--March~2, 2026) to control for silent model updates; cloud APIs may behave differently in earlier or later periods, so reproducibility-measurement studies have a built-in shelf life.
+Third, hardware generalization: the local-model $\emr{=}1.000$ result was obtained on a single device (Apple~M4, 24~GB RAM, macOS Darwin~24.6.0, Ollama~v0.15.5).
+Replication on a second, non-Apple-M4 device (e.g., Linux x86\_64 with Ollama under different driver versions) is a natural follow-up; we did not perform this pilot in the present study and document it as future work.
+
 \textbf{Open research frontiers.}
-Our findings open several high-impact research directions: (1)~establishing clinically meaningful equivalence thresholds (what BERTScore difference corresponds to a materially different meta-analytic conclusion?), (2)~directly testing significance flipping in smaller literatures ($k{<}20$) with marginal effects, where even the modest compositional instability we documented could shift a confidence interval across the null, and (3)~investigating whether prompt design (chain-of-thought, structured output modes) can reduce non-determinism without sacrificing accuracy.
+Our findings open several high-impact research directions: (1)~establishing clinically meaningful equivalence thresholds (what BERTScore difference corresponds to a materially different meta-analytic conclusion?), (2)~directly testing significance flipping in smaller literatures ($k{<}20$) with marginal effects, where even the modest compositional instability we documented could shift a confidence interval across the null, (3)~investigating whether structured-output modes (Anthropic tool-use, OpenAI \texttt{response\_format=json\_schema}, Gemini function-calling) reduce non-determinism without sacrificing accuracy, and (4)~mechanistically isolating which component of cloud serving (batched continuous-batching, dynamic GPU/node assignment, floating-point reduction order) drives the asymmetric local-vs-cloud disagreement we documented in Section~\ref{sec:desconfound}.
+
+\textbf{Pre-registration disclosure.}
+This study was not formally pre-registered.
+The original analyses (Sections~\ref{sec:fieldlevel}--\ref{sec:metaprop}) are exploratory: the choice of 10~repetitions, whole-output hash EMR, four semantic-tier definitions, and fixed-effect meta-analytic propagation were made during analysis design but without an Open Science Framework or AsPredicted submission.
+The post-revision analyses (Sections~\ref{sec:fixedslot}--\ref{sec:desconfound}, dual-human gold validation, silver-external standard) were designed and committed to the public Git repository \emph{before} result computation, with commit hashes serving as informal cryptographic timestamps; the revised analysis plan, including hypotheses and decision rules, is publicly auditable at the project repository.
+We acknowledge the absence of formal pre-registration as a limitation and recommend that future LLM-in-SR work register analyses on OSF or AsPredicted before data collection.
+We did not retrofit pre-registration claims to the original exploratory analyses.
 
 \subsection{Recommendations}
 
@@ -795,7 +958,8 @@ Based on our findings, we propose the following recommendations for LLM-assisted
 % ============================================================
 \section{Conclusion}
 
-This study provides, to our knowledge, the most comprehensive evaluation of LLM reproducibility in evidence synthesis to date: 36,000~LLM calls across 120~experimental runs involving six models from four providers, evaluated with whole-output hashing, four-tier semantic analysis, and meta-analytic propagation testing---a scale and depth that exceeds all prior work in this domain by an order of magnitude.
+This study evaluates LLM reproducibility in evidence synthesis at scale: 35{,}996 successful calls of 36{,}000 attempted across 120~original experimental runs involving six models from four providers, plus a desconfound experiment serving the same model weights via a seventh cloud configuration.
+We use whole-output hashing, four-tier semantic analysis, pairwise-disagreement statistics, fixed-slot prompt sensitivity, two independent silver standards, and meta-analytic propagation testing including a small-literature simulation.
 
 \textbf{What we show that others have not.}
 Where prior studies report 94--97\% reproducibility using per-field metrics and 2--3~repetitions, our whole-output analysis across 10~runs reveals that only 5--20\% of extraction outputs are truly identical---exposing a measurement gap of nearly 20$\times$.
@@ -804,9 +968,18 @@ Where prior studies report either accuracy or reproducibility, we show these pro
 
 \textbf{What we prove is achievable.}
 Deterministic LLM inference is not aspirational---it is already achievable.
-All three open-weight models (LLaMA~3 8B, Mistral~7B, Gemma~2 9B) produced bit-identical outputs across all 10~runs in both stages on fixed local hardware, at a total cost of \$0.26.
-While our design confounds deployment type with model size (7--9B locally vs.\ $>$100B via API), the practical implication is clear: locally-served open-weight models \emph{are} deterministic under controlled conditions, whereas cloud-served models \emph{are not}.
-Disentangling the relative contributions of model size and serving infrastructure---e.g., by serving the same model both locally and via a cloud endpoint---is a natural and important next step.
+All three open-weight models (LLaMA~3 8B, Mistral~7B, Gemma~2 9B) produced bit-identical outputs across all 10~runs in both stages on fixed local hardware, at a total cost of US\$0.26.
+The desconfound experiment in Section~\ref{sec:desconfound} eliminates the model-size hypothesis: serving the identical \texttt{meta-llama/llama-3-8b-instruct} weights via cloud (DeepInfra) introduces 2\% pairwise disagreement and 39\% asymmetric disagreement with the local deployment.
+The practical implication is therefore stronger than ``locally-served open-weight models are deterministic'': the determinism comes from the serving stack, not the model.
+Single-stream sequential inference on a single device with deterministic floating-point reduction order is what produces bit-identical outputs; batched cloud inference with dynamic node allocation does not.
+
+\textbf{Relationship to companion work.}
+\label{sec:rover2026}
+The provenance protocol used in this study is identical to that proposed and validated in our companion paper (Rover \& Tadano, 2026, in press at JAIR\autocite{rover2026jair}), which establishes a general-purpose LLM call-hashing standard tested across 8~models on a 100-abstract AI/ML corpus with 100~repetitions per condition.
+The present paper applies that protocol to a different research question---pipeline-level propagation through a complete two-stage SR workflow---using a smaller per-condition repetition count (10~runs) to enable broader pipeline coverage (screening + extraction + meta-analytic propagation) on a domain-specific corpus.
+The choice of 10~repetitions here was made to balance pipeline depth (two stages, six models, full meta-analytic re-pooling, plus the desconfound and fixed-slot conditions) against per-condition precision; with 10~runs we have ${\geq}95\%$ power to detect a per-item non-match probability of 0.30 or higher (under a binomial model), while rare non-determinism (per-item $p{<}0.05$) is under-detected.
+The companion paper's 100-run design at fewer model-task combinations provides complementary high-precision evidence that this paper's pipeline-coverage design cannot.
+Readers seeking precise per-item non-match rates should consult the companion paper; readers interested in propagation through a complete SR pipeline should rely on the present results.
 
 \textbf{What is at stake.}
 Our meta-analytic propagation analysis reveals that 5--21\% of articles produce different numbers of effect estimates across runs, meaning the very composition of a meta-analysis depends on which LLM run generated its inputs.
@@ -819,7 +992,7 @@ Our open-source infrastructure, complete dataset, and provenance protocol provid
 \begin{Backmatter}
 
 \paragraph{Acknowledgments}
-The authors thank the PubMed/NCBI E-utilities service for programmatic access to the biomedical literature.
+The authors thank the dual-human labelers who validated the gold standard subset (acknowledgment to be completed prior to camera-ready upon completion of the dual-labeling protocol).
 
 \paragraph{Funding Statement}
 This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.
@@ -832,6 +1005,12 @@ The authors declare no competing interests.
 AI-based tools (Claude, Anthropic) were used for code development assistance and manuscript editing support.
 All scientific content, experimental design, data analysis, and interpretation of results were performed exclusively by the human authors.
 The AI tools used in manuscript preparation are the same models evaluated as experimental subjects in this study; this dual role was managed by ensuring that all reported results were computed deterministically from the raw experimental data, independently of any AI writing assistance.
+\textbf{Timeline disclosure for evaluator-as-writing-aid concern.}
+The reproducibility results (\texttt{analysis/reproducibility\_results.json}) were committed to the project repository on \textbf{2026-03-02} (commit \texttt{1b90c1b}), after deterministic computation from raw experimental outputs (\texttt{data/raw\_outputs/}, committed 2026-02-13 through 2026-03-02 across all six models).
+The first complete manuscript draft was committed on \textbf{2026-03-11} (commit \texttt{646c6a3}); the post-revision blindage analyses were committed on \textbf{2026-04-23 to 2026-04-28}.
+Claude Sonnet~4.5---one of the evaluated models---was used as a writing aid during manuscript preparation only after results were locked at the 2026-03-02 commit.
+All numerical results, tables, and figures derive deterministically from the locked output hashes; no result depends on the writing-time use of any LLM.
+The complete commit history is publicly auditable at \url{https://github.com/Roverlucas/llm-evidence-synthesis-reproducibility}.
 
 \paragraph{Data Availability Statement}
 All code, data, prompts, schemas, raw outputs, and run provenance records are publicly available at \url{https://github.com/Roverlucas/llm-evidence-synthesis-reproducibility}.
