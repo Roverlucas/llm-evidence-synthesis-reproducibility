@@ -279,7 +279,7 @@ We do not retroactively present these heuristic labels as a human gold standard.
 
 In response to peer review, we additionally conducted a \textbf{dual-independent human-labeling validation} on a stratified subset of 100~abstracts (25~clear-include + 25~clear-exclude + 50~ambiguous, sampled with stratification by year-tertile and seed${=}$42).
 Two reviewers (one blinded) independently classified each abstract via the protocol in Supplementary~\S4, with discordances resolved by a third reviewer; we computed Cohen's $\kappa$ on the 3-class outcome (include/exclude/uncertain) and on the binary include-vs.-exclude collapse.
-Results of this validation are reported alongside the heuristic-only accuracy in Section~\ref{sec:validation}; the protocol meets the Cochrane standard ($\kappa{\geq}0.80$).
+Results of this validation will be reported alongside the heuristic-only accuracy in the camera-ready version (the dual-labeling campaign is in progress at the time of submission); the protocol targets the Cochrane standard ($\kappa{\geq}0.80$).
 For extraction, we constructed two independent reference standards: (a) a \emph{silver-internal} consensus from majority vote across all 6~models $\times$ 10~runs (60~votes per item), and (b) a \emph{silver-external} consensus from DeepSeek-R1 (a reasoning model from a different provider family, 5~runs $\times$ 100~items, majority vote per field).
 Cross-validation between these two silvers yields Spearman $\rho{=}0.845$ on \texttt{effect\_estimate} and 80\% agreement across numeric fields, supporting their use as comparative anchors.
 For the 25~INCLUDE items in the dual-human subset, dual-human extraction labels additionally serve as a strict gold standard.

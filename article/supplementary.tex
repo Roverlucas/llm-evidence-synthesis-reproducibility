@@ -506,4 +506,328 @@ GPT-4.1           & Extraction & 0.150 & [0.080, 0.220] & 100 \\
 \end{tabular}
 \end{table}
 
+% ============================================================
+\section{Fixed-Slot Extraction Prompt and Comparison}
+\label{sec:fixedslot_supp}
+
+The fixed-slot prompt template used in the sensitivity analysis (main text \S4.7):
+
+\begin{lstlisting}[language={},caption={Fixed-slot extraction prompt (\texttt{configs/prompts/extraction\_fixed\_slot.txt})}]
+You are an expert epidemiologist extracting quantitative data from a
+scientific publication on PM2.5 and respiratory hospitalizations for
+a systematic review and meta-analysis.
+
+Given the following title and abstract, extract the SINGLE PRIMARY effect
+estimate using the fixed selection rules below. Do not produce a
+variable-length array; produce exactly one primary_estimate object (or
+null if no estimate is reportable).
+
+## Fixed selection rules (apply in order)
+1. Prefer all-respiratory outcomes over specific subgroups.
+2. Prefer single-pollutant PM2.5 model over multi-pollutant adjustments.
+3. If multiple lags are reported, prefer lag 0-1 (cumulative); else lag 0.
+4. Prefer per 10 ug/m^3 exposure increment; convert if reported per IQR.
+5. If percent change reported, convert: RR = 1 + (%change/100).
+6. If no quantitative effect estimate with CI is reportable, set
+   primary_estimate = null.
+
+## Input
+Title: {title}
+Abstract: {abstract}
+
+## Output (JSON only, no extra text)
+{
+  "study_id": "first_author_year",
+  "study_location": "city, country",
+  "study_period": "YYYY-YYYY",
+  "study_design": "time_series" | "case_crossover" | "other",
+  "population": "general" | "elderly" | "children" | "other",
+  "sample_size": null | integer,
+  "primary_estimate": { ... } | null,
+  "n_estimates_in_abstract": integer
+}
+\end{lstlisting}
+
+\begin{table}[htbp]
+\centering
+\caption{Fixed-slot extraction sensitivity analysis: 3 cloud models $\times$ 3 runs $\times$ 100 INCLUDE articles. Variable-length baseline from main Table~3 (10 runs). Provider pinned per call: Claude Sonnet~4.5 via Anthropic API; Gemini~2.5~Pro via Google API; GPT-4.1 via OpenAI API.}
+\label{tab:fixedslot_supp}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Model} & \textbf{Var-len EMR} & \textbf{Fixed-slot EMR} & \textbf{$\Delta$ abs} & \textbf{$\Delta$ rel} & \textbf{Pairwise dis.} \\
+\midrule
+Claude Sonnet 4.5 & 0.050 & 0.030 & $-0.020$ & $-40.0\%$ & 0.78 \\
+Gemini 2.5 Pro    & 0.200 & 0.185 & $-0.015$ & $-7.6\%$  & 0.49 \\
+GPT-4.1           & 0.150 & \textbf{0.444} & \textbf{$+0.294$} & \textbf{$+196.3\%$} & 0.36 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ============================================================
+\section{LLaMA Cloud Desconfound Experiment Details}
+\label{sec:desconfound_supp}
+
+The desconfound experiment (main text \S4.8) serves the identical model weights via cloud and compares against the local Ollama deployment.
+
+\begin{table}[htbp]
+\centering
+\caption{Desconfound experimental configuration. Both deployments use the SAME model weights, prompt, seed=42, and temperature=0; only the serving infrastructure differs.}
+\label{tab:desconfound_supp}
+\begin{tabular}{lll}
+\toprule
+\textbf{Parameter} & \textbf{Local (Ollama)} & \textbf{Cloud (DeepInfra)} \\
+\midrule
+Model               & \texttt{llama3:8b} & \texttt{meta-llama/llama-3-8b-instruct} \\
+Provider            & Ollama v0.15.5     & OpenRouter $\to$ DeepInfra (pinned) \\
+Hardware            & Apple~M4, 24~GB    & DeepInfra GPU cluster \\
+Inference           & Single-stream      & Batched continuous-batching \\
+Seed                & 42                 & 42 \\
+Temperature         & 0.0                & 0.0 \\
+Max tokens          & 4{,}096            & 512 (screening) \\
+N runs              & 10                 & 10 \\
+N abstracts         & 500                & 500 \\
+Date range          & Feb 11--13, 2026   & Apr 25--28, 2026 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Per-run successful-call counts. Cloud runs 5 and 6 experienced transient infrastructure failures resulting in reduced valid-item counts, which we report transparently as a cloud-reliability finding. Local runs are uniformly $480/500$ successful (the same 20 abstracts deterministically exceed response length in every local run).}
+\label{tab:desconfound_runs}
+\begin{tabular}{rrr}
+\toprule
+\textbf{Run} & \textbf{Local valid} & \textbf{Cloud valid} \\
+\midrule
+1  & 480 & 491 \\
+2  & 480 & 489 \\
+3  & 480 & 491 \\
+4  & 480 & 489 \\
+5  & 480 & \textbf{45}$^{*}$ \\
+6  & 480 & \textbf{221}$^{*}$ \\
+7  & 480 & 491 \\
+8  & 480 & 491 \\
+9  & 480 & 491 \\
+10 & 480 & 491 \\
+\bottomrule
+\multicolumn{3}{l}{\footnotesize $^{*}$Transient cloud-side failure (\texttt{503 Service Unavailable} bursts).}
+\end{tabular}
+\end{table}
+
+% ============================================================
+\section{Silver Standards and Cross-Validation}
+\label{sec:silvers_supp}
+
+Two independent silver standards complement the heuristic gold standard for the 100 INCLUDE articles.
+
+\subsection{Silver-Internal: Majority Vote of Six Evaluated Models}
+
+Consensus extraction is computed as the per-field mode across all 6 models $\times$ 10 runs (60 votes per item). Numeric fields are binned at 0.01 resolution before mode computation.
+
+\begin{table}[htbp]
+\centering
+\caption{Silver-internal consensus. Items with consensus = items where at least one model-run produced a non-null value. Mean mode-agreement = average proportion of votes matching the modal value across items with consensus.}
+\label{tab:silver_internal}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Field} & \textbf{Items w/ consensus} & \textbf{Mean mode-agreement} \\
+\midrule
+effect\_estimate     & 95/100 & 0.858 \\
+ci\_lower            & 84/100 & 0.846 \\
+ci\_upper            & 84/100 & 0.845 \\
+effect\_measure      & 100/100 & 0.783 \\
+outcome\_specific    & 100/100 & 0.694 \\
+exposure\_increment  & 100/100 & 0.761 \\
+lag                  & 100/100 & 0.644 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Silver-External: DeepSeek-R1 (5 Runs)}
+
+DeepSeek-R1 (\texttt{deepseek-reasoner}) is a reasoning model from a different provider family than the 6 evaluated models, providing an independent reference. Five runs were aggregated by per-field majority vote.
+
+\begin{table}[htbp]
+\centering
+\caption{Silver-external consensus from DeepSeek-R1 (5 runs $\times$ 100 items).}
+\label{tab:silver_external}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Field} & \textbf{Items w/ consensus} & \textbf{Mean mode-agreement} \\
+\midrule
+effect\_estimate     & 84/100 & 0.890 \\
+ci\_lower            & 74/100 & 0.894 \\
+ci\_upper            & 74/100 & 0.889 \\
+effect\_measure      & 84/100 & 0.906 \\
+outcome\_specific    & 84/100 & 0.803 \\
+exposure\_increment  & 84/100 & 0.881 \\
+lag                  & 75/100 & 0.862 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Cross-Validation Between Silvers}
+
+\begin{table}[htbp]
+\centering
+\caption{Field-level agreement between silver-internal and silver-external (numeric tolerance 0.05; categorical exact match). Spearman $\rho$ on \texttt{effect\_estimate} = $\mathbf{0.845}$.}
+\label{tab:silver_crossval}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Field} & \textbf{n compared} & \textbf{Agreement} \\
+\midrule
+effect\_estimate     & 84 & 0.798 \\
+ci\_lower            & 74 & 0.797 \\
+ci\_upper            & 74 & 0.784 \\
+effect\_measure      & 84 & 0.738 \\
+outcome\_specific    & 84 & 0.655 \\
+exposure\_increment  & 84 & 0.798 \\
+lag                  & 75 & 0.653 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ============================================================
+\section{Pairwise Disagreement and Rationale Similarity}
+\label{sec:pairwise_supp}
+
+\begin{table}[htbp]
+\centering
+\caption{Pairwise disagreement (mean fraction of $\binom{10}{2}{=}45$ run-pairs producing different outputs per item; 0 = perfect determinism). Compare to EMR (Table~10): EMR collapses items into binary match/non-match while pairwise disagreement reports the dispersion within non-matches.}
+\label{tab:pairwise}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Model} & \textbf{Stage} & \textbf{EMR} & \textbf{Pairwise} & \textbf{\% items any-disagree} \\
+\midrule
+LLaMA 3 8B & screening  & 1.000 & 0.0000 & 0.00\% \\
+LLaMA 3 8B & extraction & 1.000 & 0.0000 & 0.00\% \\
+Mistral 7B & screening  & 1.000 & 0.0000 & 0.00\% \\
+Mistral 7B & extraction & 1.000 & 0.0000 & 0.00\% \\
+Gemma 2 9B & screening  & 1.000 & 0.0000 & 0.00\% \\
+Gemma 2 9B & extraction & 1.000 & 0.0000 & 0.00\% \\
+\midrule
+Claude Sonnet 4.5 & screening  & 0.974 & 0.0096 & 2.60\% \\
+Claude Sonnet 4.5 & extraction & 0.050 & \textbf{0.8180} & \textbf{95.00\%} \\
+Gemini 2.5 Pro    & screening  & 0.936 & 0.0198 & 6.40\% \\
+Gemini 2.5 Pro    & extraction & 0.200 & 0.4927 & 80.00\% \\
+GPT-4.1           & screening  & 0.970 & 0.0137 & 3.00\% \\
+GPT-4.1           & extraction & 0.150 & 0.4858 & 85.00\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Token-bigram Jaccard similarity on screening rationale (free-form text) vs.\ metadata (categorical concatenation). Computed across all $\binom{10}{2}{=}45$ run-pairs per item, averaged over 500 abstracts. Demonstrates that BERTScore $F_1{\geq}0.997$ on metadata is a saturation artifact: in non-saturating text (rationale), Claude exhibits only 0.378 mean similarity.}
+\label{tab:rationale}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Model} & \textbf{Metadata Jaccard} & \textbf{Rationale Jaccard} & \textbf{Gap} \\
+\midrule
+LLaMA 3 8B    & 1.000 & 1.000 & 0.000 \\
+Mistral 7B    & 1.000 & 1.000 & 0.000 \\
+Gemma 2 9B    & 1.000 & 1.000 & 0.000 \\
+\midrule
+Claude Sonnet 4.5 & 0.978 & \textbf{0.378} & 0.600 \\
+Gemini 2.5 Pro    & 0.978 & 0.623 & 0.355 \\
+GPT-4.1           & 0.984 & 0.725 & 0.259 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ============================================================
+\section{Multiple Comparison Correction for Field-Level Contrasts}
+\label{sec:mcc_supp}
+
+We applied Holm-Bonferroni (FWER) and Benjamini-Hochberg (FDR) corrections to the 21 pairwise field-level EMR contrasts between the three cloud models. Of 21 contrasts: 7 are significant at raw $p{<}0.05$, 3 survive Holm correction, 5 survive BH-FDR.
+
+\begin{table}[htbp]
+\centering
+\caption{Pairwise contrasts of cloud-API field-level EMR surviving Holm-Bonferroni correction at $\alpha{=}0.05$.}
+\label{tab:mcc}
+\begin{tabular}{llccc}
+\toprule
+\textbf{Field} & \textbf{Models} & \textbf{$\Delta$ EMR} & \textbf{Raw $p$} & \textbf{Holm $p$} \\
+\midrule
+study\_location           & Claude vs.\ GPT-4.1   & $-0.220$ & $<\!0.0001$ & $\mathbf{<\!0.0001}$ \\
+study\_location           & Gemini vs.\ GPT-4.1   & $-0.104$ & $0.001$ & $\mathbf{0.018}$ \\
+extraction\_overall\_EMR  & Claude vs.\ Gemini    & $-0.150$ & $0.001$ & $\mathbf{0.026}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent The remaining 18 contrasts (population, sample\_size, study\_design, study\_period, screening overall, etc.) are not statistically robust after FWER correction; the original ``distinct instability profiles'' claim (main text Finding~3) is therefore tightened to: \emph{differences are robust for study\_location and overall extraction EMR, but not for other categorical fields}.
+
+% ============================================================
+\section{Small-Literature Meta-Analytic Simulation}
+\label{sec:smalllit_supp}
+
+\begin{table}[htbp]
+\centering
+\caption{Random-effects (DerSimonian-Laird) pooled RR variation across 200 random subsamples per $k$, seed=42, computed independently for each of 10 LLM runs. ``Unstable null-crossing'' = subsamples where the pooled 95\% CI crosses RR=1 in some runs but not others (i.e., the meta-analytic conclusion changes depending on the LLM run).}
+\label{tab:smalllit}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Model} & \textbf{$k$} & \textbf{Mean range} & \textbf{P95 range} & \textbf{\% unstable null-cross} \\
+\midrule
+Claude Sonnet 4.5 & 10 & 0.0082 & 0.0292 & \textbf{0.50\%} \\
+Claude Sonnet 4.5 & 15 & 0.0081 & 0.0237 & 0.00\% \\
+Claude Sonnet 4.5 & 20 & 0.0078 & 0.0197 & 0.00\% \\
+Gemini 2.5 Pro    & 10 & 0.0167 & 0.0471 & \textbf{0.50\%} \\
+Gemini 2.5 Pro    & 15 & 0.0131 & 0.0350 & 0.00\% \\
+Gemini 2.5 Pro    & 20 & 0.0110 & 0.0227 & 0.00\% \\
+GPT-4.1           & 10 & 0.0063 & 0.0263 & 0.00\% \\
+GPT-4.1           & 15 & 0.0054 & 0.0150 & 0.00\% \\
+GPT-4.1           & 20 & 0.0065 & 0.0149 & 0.00\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ============================================================
+\section{Seed-Effect Empirical Test}
+\label{sec:seed_supp}
+
+Cambridge RSM guidance §4.3 requires empirical reporting of seed-parameter effectiveness on commercial APIs.
+
+\begin{table}[htbp]
+\centering
+\caption{Seed effect vs.\ deployment effect. Cloud models tested: Claude Sonnet~4.5 (no seed parameter), Gemini~2.5~Pro and GPT-4.1 (seed=42). Local models all use seed=42.}
+\label{tab:seed}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Group} & \textbf{Stage} & \textbf{Mean EMR} & \textbf{Mean pairwise dis.} \\
+\midrule
+Cloud, seed=42       & screening  & 0.953 & 0.017 \\
+Cloud, no seed       & screening  & 0.974 & 0.010 \\
+Local, seed=42       & screening  & 1.000 & 0.000 \\
+\midrule
+Cloud, seed=42       & extraction & 0.175 & 0.489 \\
+Cloud, no seed       & extraction & 0.050 & 0.818 \\
+Local, seed=42       & extraction & 1.000 & 0.000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent Seed effect for extraction (cloud-seeded vs.\ cloud-unseeded): $+0.125$ EMR.
+Deployment effect (local-seeded vs.\ cloud-seeded): $+0.825$ EMR. The deployment effect is \textbf{6.6$\times$ larger} than the seed effect. We conclude that the seed parameter, as currently implemented in commercial APIs, does not deliver determinism; deployment paradigm dominates.
+
+% ============================================================
+\section{Pre-Registration Disclosure}
+\label{sec:prereg_supp}
+
+This study was not formally pre-registered. The original experiments (main text \S4.1--\S4.6) are exploratory: 10 repetitions, whole-output hash EMR, four semantic-tier definitions, and fixed-effect meta-analytic pooling were chosen during analysis design but without an OSF or AsPredicted submission. The post-revision analyses (\S4.7 fixed-slot, \S4.8 desconfound, \S5.5 cost-benefit, dual-human gold validation, silver-external) were designed and committed to the public Git repository \emph{before} result computation.
+
+Key commit timestamps (publicly auditable at \url{https://github.com/Roverlucas/llm-evidence-synthesis-reproducibility}):
+
+\begin{itemize}
+  \item \textbf{2026-02-11} (\texttt{75292f2}): project initialization, prompts committed
+  \item \textbf{2026-02-13 to 2026-03-02}: original experiment raw outputs committed
+  \item \textbf{2026-03-02} (\texttt{1b90c1b}): \texttt{analysis/reproducibility\_results.json} committed (results frozen)
+  \item \textbf{2026-03-11} (\texttt{646c6a3}): first complete manuscript draft
+  \item \textbf{2026-03-20} (\texttt{7935445}): submission-hardening revision
+  \item \textbf{2026-04-23 to 2026-04-28}: post-revision blindage analyses committed
+\end{itemize}
+
+We acknowledge the absence of formal pre-registration as a limitation and recommend that future LLM-in-SR studies pre-register analyses on OSF before data collection.
+
 \end{document}
