@@ -1,0 +1,63 @@
+{
+  "title": "When the Same Question Gets Different Answers: Quantifying LLM Non-Determinism Across a Full Evidence-Synthesis Pipeline — code, data, prompts, and raw outputs (companion to Research Synthesis Methods submission)",
+  "description": "<p>This deposit accompanies the manuscript &ldquo;When the Same Question Gets Different Answers: Quantifying LLM Non-Determinism Across a Full Evidence-Synthesis Pipeline&rdquo; submitted to Research Synthesis Methods (Cambridge University Press).</p><p><strong>Contents:</strong></p><ul><li>500-abstract corpus (PubMed search Feb 2026; PM2.5 × respiratory hospitalization)</li><li>Heuristic gold standard (screening + extraction templates)</li><li>Stratified subset of 100 abstracts for dual-human labeling</li><li>Exact prompts for screening + extraction (variable-length and fixed-slot variants)</li><li>JSON Schemas for output validation</li><li>Raw outputs from 6 models × 10 runs × 2 stages = 36,000 LLM calls</li><li>Cloud-deployment desconfound experiment: meta-llama/llama-3-8b-instruct via OpenRouter:DeepInfra (10 runs)</li><li>Silver-external gold standard: DeepSeek-R1 reasoning model (5 runs, 100 items)</li><li>Fixed-slot extraction sensitivity: Claude/Gemini/GPT-4.1 (3 runs each)</li><li>Complete analysis scripts (16 files) with no SDK dependencies</li><li>Provenance hashing (SHA-256 call_hash + output_hash)</li><li>Run cards with timestamps, durations, token counts</li></ul><p><strong>Reproducibility statement:</strong> all numerical results, tables, and figures in the manuscript derive deterministically from the deposited raw outputs via the included scripts. The <code>requirements-lock.txt</code> pins exact dependency versions used during the experiments (Python 3.14.3 on macOS Darwin 24.6.0, Apple M4 silicon).</p><p><strong>License:</strong> code under MIT; data and prompts under CC-BY-4.0.</p><p><strong>Companion paper:</strong> Rover &amp; Tadano (2026), &ldquo;Hidden Non-Determinism in Large Language Model APIs: A Lightweight Provenance Protocol for Reproducible Generative AI Research&rdquo; (JAIR, in press).</p>",
+  "creators": [
+    {
+      "name": "Rover, Lucas",
+      "affiliation": "Universidade Tecnológica Federal do Paraná (UTFPR), Programa de Pós-Graduação em Sustentabilidade Ambiental Urbana (PPGSAU), Curitiba, PR, Brazil",
+      "orcid": "0000-0001-6641-9224"
+    },
+    {
+      "name": "Tadano, Yara de Souza",
+      "affiliation": "Universidade Tecnológica Federal do Paraná (UTFPR), Departamento de Matemática, Ponta Grossa, PR, Brazil"
+    }
+  ],
+  "keywords": [
+    "large language models",
+    "LLM",
+    "reproducibility",
+    "non-determinism",
+    "evidence synthesis",
+    "systematic review",
+    "meta-analysis",
+    "PM2.5",
+    "particulate matter",
+    "respiratory hospitalization",
+    "abstract screening",
+    "data extraction",
+    "provenance",
+    "SHA-256 hashing",
+    "DerSimonian-Laird",
+    "Claude",
+    "GPT-4",
+    "Gemini",
+    "LLaMA",
+    "DeepSeek",
+    "reasoning models",
+    "research methods",
+    "cloud vs local deployment"
+  ],
+  "subjects": [
+    {"term": "Research Synthesis Methods", "identifier": "https://www.cambridge.org/core/journals/research-synthesis-methods"},
+    {"term": "Systematic Reviews", "identifier": "https://www.ncbi.nlm.nih.gov/mesh/68000076"},
+    {"term": "Artificial Intelligence", "identifier": "https://www.ncbi.nlm.nih.gov/mesh/D001185"}
+  ],
+  "communities": [
+    {"identifier": "open-science"},
+    {"identifier": "reproducibility"}
+  ],
+  "language": "eng",
+  "publication_date": "2026-04-26",
+  "upload_type": "dataset",
+  "access_right": "open",
+  "license": "CC-BY-4.0",
+  "version": "1.0.0",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Roverlucas/llm-evidence-synthesis-reproducibility",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ],
+  "notes": "Funding: API costs covered by authors. UTFPR institutional infrastructure for local model serving. No competing interests. Companion paper: Rover & Tadano (2026), JAIR (in press). The manuscript title proposed for Research Synthesis Methods is the descriptive variant: 'Quantifying LLM Non-Determinism Across a Full Evidence-Synthesis Pipeline: A Multi-Repetition, Multi-Stage Reproducibility Study.'"
+}
