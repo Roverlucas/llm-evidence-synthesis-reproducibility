@@ -12,7 +12,7 @@
 
 ## Overview
 
-This OSF project hosts the materials underpinning the manuscript *"When the Same Question Gets Different Answers: Quantifying Non-Determinism in LLM-Assisted Evidence Synthesis for Environmental Health Research"* by Rover, Siqueira, Bacalhau, Azevedo, and Tadano.
+This OSF project hosts the materials underpinning the manuscript *"When the Same Question Gets Different Answers: Quantifying Non-Determinism in LLM-Assisted Evidence Synthesis for Environmental Health Research"* by Rover and Tadano.
 
 We measure whether large language model (LLM) non-determinism propagates through the full evidence-synthesis pipeline — abstract screening, numerical data extraction, and meta-analytic pooling — and whether this variation can alter conclusions in environmental health systematic reviews of PM2.5 and respiratory hospitalizations.
 
@@ -73,7 +73,7 @@ CC-BY 4.0 for data and manuscript materials; MIT for code (see GitHub LICENSE).
 ```bibtex
 @misc{rover2026rsm_osf,
   title  = {Reproducibility of Pollution–Health Evidence Synthesis using LLM-Assisted Screening and Extraction},
-  author = {Rover, Lucas and Siqueira, Hugo Valadares and Bacalhau, Eduardo Tadeu and Azevedo, Anibal Tavares and Tadano, Yara de Souza},
+  author = {Rover, Lucas and Tadano, Yara de Souza},
   year   = {2026},
   doi    = {10.17605/OSF.IO/XXXXX},
   note   = {OSF Project, manuscript under review at Research Synthesis Methods}

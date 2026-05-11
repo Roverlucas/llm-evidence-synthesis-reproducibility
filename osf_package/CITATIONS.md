@@ -13,7 +13,7 @@ Once OSF assigns the DOI, **replace `XXXXX` everywhere with the actual identifie
 ```bibtex
 @misc{rover2026rsm,
   title  = {Reproducibility of Pollution--Health Evidence Synthesis using LLM-Assisted Screening and Extraction},
-  author = {Rover, Lucas and Siqueira, Hugo Valadares and Bacalhau, Eduardo Tadeu and Azevedo, Anibal Tavares and Tadano, Yara de Souza},
+  author = {Rover, Lucas and Tadano, Yara de Souza},
   year   = {2026},
   note   = {Manuscript under review at \textit{Research Synthesis Methods}},
   doi    = {10.17605/OSF.IO/XXXXX},
@@ -41,7 +41,7 @@ Add a footnote where the dual-labeling protocol is first introduced (around `mai
 
 OSF auto-generates this for the project page. Paste it back into the manuscript references if needed:
 
-> Rover, L., Siqueira, H. V., Bacalhau, E. T., Azevedo, A. T., & Tadano, Y. S. (2026, May 11). Reproducibility of Pollution–Health Evidence Synthesis using LLM-Assisted Screening and Extraction. https://doi.org/10.17605/OSF.IO/XXXXX
+> Rover, L., & Tadano, Y. S. (2026, May 11). Reproducibility of Pollution–Health Evidence Synthesis using LLM-Assisted Screening and Extraction. https://doi.org/10.17605/OSF.IO/XXXXX
 
 ---
 
