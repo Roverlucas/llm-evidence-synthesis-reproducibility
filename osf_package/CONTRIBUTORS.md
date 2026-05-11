@@ -4,17 +4,23 @@ Authorship for the OSF deposit follows the manuscript author list and the **CRed
 
 | Author | Affiliation | ORCID | OSF role (suggested) | CRediT roles |
 |--------|-------------|-------|----------------------|--------------|
-| **Lucas Rover** | UTFPR — PPGSAU | 0000-0001-6641-9224 | **Bibliographic Contributor (Lead)** | Conceptualization; Data Curation; Formal Analysis; Investigation; Methodology; Software; Visualization; Writing — Original Draft |
-| **Hugo Valadares Siqueira** | _confirm affiliation_ | _confirm ORCID_ | Bibliographic Contributor | _confirm: Methodology; Writing — Review & Editing; Supervision (?)_ |
-| **Eduardo Tadeu Bacalhau** | _confirm affiliation_ | _confirm ORCID_ | Bibliographic Contributor | _confirm: Formal Analysis; Writing — Review & Editing (?)_ |
-| **Anibal Tavares de Azevedo** | _confirm affiliation_ | _confirm ORCID_ | Bibliographic Contributor | _confirm: Methodology; Writing — Review & Editing (?)_ |
-| **Yara de Souza Tadano** | UTFPR — PPGSAU (advisor) | _confirm ORCID_ | Bibliographic Contributor | Conceptualization; Methodology; Supervision; Writing — Review & Editing; Funding Acquisition |
+| **Lucas Rover** | UTFPR — PPGSAU (Sustentabilidade Ambiental Urbana) | [0000-0001-6641-9224](https://orcid.org/0000-0001-6641-9224) | **Bibliographic Contributor (Lead)** | Conceptualization; Data Curation; Formal Analysis; Investigation; Methodology; Software; Visualization; Writing — Original Draft |
+| **Hugo Valadares Siqueira** | UTFPR — Ponta Grossa (Computer Science / Industrial Engineering; LICON) | [0000-0002-1278-4602](https://orcid.org/0000-0002-1278-4602) | Bibliographic Contributor | _suggested: Methodology; Software; Writing — Review & Editing_ |
+| **Eduardo Tadeu Bacalhau** | UFPR — Department of Mechanical Engineering (Center for Marine Studies) | [0000-0002-3936-0375](https://orcid.org/0000-0002-3936-0375) | Bibliographic Contributor | _suggested: Formal Analysis; Methodology; Writing — Review & Editing_ |
+| **Anibal Tavares de Azevedo** | UNICAMP — Faculdade de Ciências Aplicadas (FCA), Limeira | [0000-0003-1678-7795](https://orcid.org/0000-0003-1678-7795) | Bibliographic Contributor | _suggested: Methodology; Formal Analysis; Writing — Review & Editing_ |
+| **Yara de Souza Tadano** | UTFPR — Ponta Grossa (Mathematics; coord. RAICV) | [0000-0002-3975-3419](https://orcid.org/0000-0002-3975-3419) | Bibliographic Contributor | Conceptualization; Methodology; Supervision; Writing — Review & Editing; Funding Acquisition |
+
+> **All ORCIDs verified via web search (2026-05-11).** Affiliations resolved from institutional pages + ORCID public records:
+> - Siqueira: UTFPR Ponta Grossa, adjunct professor; coords LICON (Laboratory of Computational Intelligence and Advanced Control)
+> - Bacalhau: UFPR since 2015-07-03, Mechanical Engineering Department
+> - Azevedo: UNICAMP FCA Limeira; PhD UNICAMP 2006, Free-Docency 2020; OR/optimization focus
+> - Tadano: UTFPR Mathematics; coords Research Network for Life Cycle Impact Assessment (RAICV)
 
 ## TO DO before OSF registration
 
-- [ ] Confirm affiliations of all four co-authors (your list shows shared with NatComms — verify for RSM)
-- [ ] Collect ORCIDs for Siqueira, Bacalhau, Azevedo, Tadano
-- [ ] Confirm CRediT role assignments with each author (1-line email; standard practice)
+- [x] ~~Confirm affiliations of all four co-authors~~ (resolved 2026-05-11)
+- [x] ~~Collect ORCIDs for Siqueira, Bacalhau, Azevedo, Tadano~~ (resolved 2026-05-11)
+- [ ] Confirm CRediT role assignments with each author (1-line email; current assignments are Lucas's best guesses)
 - [ ] Decide whether the 2nd human rater (for Stage A/B dual-labeling, currently unidentified) will receive co-authorship or Acknowledgment-only credit
 
 ## CRediT Role Reference
