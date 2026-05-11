@@ -6,11 +6,11 @@ CRediT role assignments mirror the Author Contributions statement of the compani
 
 | Author | Affiliation | ORCID | OSF role | CRediT roles (matched to NatComms) |
 |--------|-------------|-------|----------|------------------------------------|
-| **Lucas Rover** (L.R.) | UTFPR — PPGSAU (Sustentabilidade Ambiental Urbana) | [0000-0001-6641-9224](https://orcid.org/0000-0001-6641-9224) | **Bibliographic Contributor (Lead)** | Conceptualization; Methodology; Software; Investigation; Formal Analysis; Data Curation; Visualization; Writing — Original Draft |
-| **Hugo Valadares Siqueira** (H.V.S.) | UTFPR — Ponta Grossa (Computer Science / Industrial Engineering; LICON) | [0000-0002-1278-4602](https://orcid.org/0000-0002-1278-4602) | Bibliographic Contributor | Supervision (co-supervisor); Writing — Review & Editing |
-| **Eduardo Tadeu Bacalhau** (E.T.B.) | UFPR — Department of Mechanical Engineering | [0000-0002-3936-0375](https://orcid.org/0000-0002-3936-0375) | Bibliographic Contributor | Methodology (experimental design); Formal Analysis (data analysis) |
-| **Anibal Tavares de Azevedo** (A.T.d.A.) | UNICAMP — Faculdade de Ciências Aplicadas (FCA), Limeira | [0000-0003-1678-7795](https://orcid.org/0000-0003-1678-7795) | Bibliographic Contributor | Methodology (methodology design); Formal Analysis (statistical analysis) |
-| **Yara de Souza Tadano** (Y.d.S.T.) | UTFPR — Ponta Grossa (Mathematics; coord. RAICV) | [0000-0002-3975-3419](https://orcid.org/0000-0002-3975-3419) | Bibliographic Contributor | Supervision; Methodology (methodology design); Writing — Review & Editing |
+| **Lucas Rover** (L.R.) | UTFPR (Curitiba) | [0000-0001-6641-9224](https://orcid.org/0000-0001-6641-9224) | **Bibliographic Contributor (Lead)** | Conceptualization; Methodology; Software; Investigation; Formal Analysis; Data Curation; Visualization; Writing — Original Draft |
+| **Hugo Valadares Siqueira** (H.V.S.) | UTFPR (Ponta Grossa) | [0000-0002-1278-4602](https://orcid.org/0000-0002-1278-4602) | Bibliographic Contributor | Supervision (co-supervisor); Writing — Review & Editing |
+| **Eduardo Tadeu Bacalhau** (E.T.B.) | UFPR (Curitiba) | [0000-0002-3936-0375](https://orcid.org/0000-0002-3936-0375) | Bibliographic Contributor | Methodology (experimental design); Formal Analysis (data analysis) |
+| **Anibal Tavares de Azevedo** (A.T.d.A.) | UNICAMP (Limeira) | [0000-0003-1678-7795](https://orcid.org/0000-0003-1678-7795) | Bibliographic Contributor | Methodology (methodology design); Formal Analysis (statistical analysis) |
+| **Yara de Souza Tadano** (Y.d.S.T.) | UTFPR (Ponta Grossa) | [0000-0002-3975-3419](https://orcid.org/0000-0002-3975-3419) | Bibliographic Contributor | Supervision; Methodology (methodology design); Writing — Review & Editing |
 
 > **Sources verified 2026-05-11.** ORCIDs and affiliations from ORCID public records + institutional pages. CRediT roles transcribed from the NatComms paper's Author Contributions paragraph (line ~XXX of `ncomms_main.tex`), preserving the same scope of contribution per author across both manuscripts.
 
