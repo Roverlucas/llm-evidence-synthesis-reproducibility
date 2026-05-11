@@ -49,9 +49,9 @@
 
 \abstract{
 \textbf{Background:} Large language models (LLMs) are increasingly used in evidence synthesis, yet a critical assumption---that identical inputs produce identical outputs---remains largely untested across a complete synthesis pipeline.
-\textbf{Methods:} We quantified the reproducibility of six LLMs (three local: LLaMA~3 8B, Mistral~7B, Gemma~2 9B; three cloud APIs: Claude Sonnet~4.5, Gemini~2.5 Pro, GPT-4.1) across a two-stage pipeline---abstract screening and data extraction---applied to a 500-abstract PubMed corpus on fine particulate matter (PM$_{2.5}$) and respiratory health. Each model was run 10~times under identical configurations (temperature${=}$0, fixed seeds where supported), totalling 35{,}996 successful calls of 36{,}000 attempted (99.99\% success rate). To isolate deployment-vs.-model-size confounding, we additionally served \texttt{meta-llama/llama-3-8b-instruct} via a cloud endpoint (DeepInfra) under identical settings. We pre-committed analysis plans for the post-revision experiments to the public Git repository before result computation. The primary outcome was the Exact Match Rate (EMR) with 95\% bootstrap confidence intervals.
-\textbf{Results:} \textbf{Cloud commercial APIs achieved extraction EMR as low as 0.050 (Claude) despite temperature${=}$0 and fixed seeds, while local open-weight models achieved EMR${=}$1.000---an approximately 19$\times$ gap.} Critically, the same LLaMA~3~8B model weights served via the cloud (DeepInfra) produced 39\% systematic disagreement with the local Ollama deployment, refuting the model-size confound: deployment infrastructure alone---not parameter count---drives the gap. Across all 100 INCLUDE articles pooled by random-effects meta-analysis, the pooled estimate was robust to non-determinism; in random k=10 subsamples, however, 0.5\% of subsamples produced run-dependent reversals of the meta-analytic conclusion. A pairwise-disagreement analysis ($\binom{10}{2}{=}45$ pairs per item) revealed that 95\% of Claude's extraction articles produced at least one differing run pair. BERTScore F1 on metadata saturated near 0.997, masking true narrative variation (Jaccard similarity on rationales ranged 0.38--0.73 for cloud APIs, vs.\ 0.98 on metadata).
-\textbf{Conclusions:} Cloud API non-determinism poses a quantifiable threat to evidence synthesis reproducibility, particularly for quantitative extraction tasks and small-k literatures. Single-run results should not be treated as definitive; multiple repetitions, provenance tracking, and---where feasible---deterministic local deployment should become standard practice.
+\textbf{Methods:} We quantified the reproducibility of six LLM deployment stacks---each a tuple of (model weights, provider, infrastructure, API layer)---across three local stacks (LLaMA~3 8B, Mistral~7B, Gemma~2 9B served via Ollama on Apple~M4) and three API-served stacks (Claude Sonnet~4.5/Anthropic, Gemini~2.5 Pro/Google, GPT-4.1/OpenAI), applied to a two-stage pipeline (abstract screening and data extraction) over a 500-abstract PubMed corpus on fine particulate matter (PM$_{2.5}$) and respiratory health. Each stack was run 10~times under identical configurations (temperature${=}$0, fixed seeds where supported), totalling 35{,}996 successful calls of 36{,}000 attempted (99.99\% success rate). To probe the deployment-vs.-weights confound, we additionally served \texttt{meta-llama/llama-3-8b-instruct} via a cloud endpoint (DeepInfra) under identical settings---holding weights constant while varying the rest of the tuple. We pre-committed analysis plans for the post-revision experiments to the public Git repository before result computation. The primary outcome was the Exact Match Rate (EMR) with 95\% bootstrap confidence intervals.
+\textbf{Results:} \textbf{API-served deployment stacks achieved extraction EMR as low as 0.050 (Claude) despite temperature${=}$0 and fixed seeds, while local stacks achieved EMR${=}$1.000---an approximately 19$\times$ gap.} Critically, the same LLaMA~3~8B weights served via a cloud stack (DeepInfra) produced 39\% systematic disagreement with the local Ollama stack, isolating infrastructure and serving layer---not weights---as the dominant source of variation. Across all 100 INCLUDE articles pooled by random-effects meta-analysis, the pooled estimate was robust to non-determinism; in random k=10 subsamples, however, 0.5\% of subsamples produced run-dependent reversals of the meta-analytic conclusion. A pairwise-disagreement analysis ($\binom{10}{2}{=}45$ pairs per item) revealed that 95\% of Claude's extraction articles produced at least one differing run pair. BERTScore F1 on metadata saturated near 0.997, masking true narrative variation (Jaccard similarity on rationales ranged 0.38--0.73 for API-served stacks, vs.\ 0.98 on metadata).
+\textbf{Conclusions:} Non-determinism in API-served deployment stacks poses a quantifiable threat to evidence synthesis reproducibility, particularly for quantitative extraction tasks and small-k literatures. The unit of reproducibility variation is the deployment stack, not the model weights alone. Single-run results should not be treated as definitive; multiple repetitions, provenance tracking, and---where feasible---deterministic local stacks should become standard practice.
 }
 
 \end{Frontmatter}
@@ -240,9 +240,18 @@ Figure~\ref{fig:pipeline} provides an overview of the experimental pipeline.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../analysis/figures/pipeline_diagram.pdf}
-\caption{Experimental pipeline. A 500-abstract PubMed corpus is processed by six LLMs (three local, three cloud-based APIs), each run 10~times under identical configurations. Stage~A (screening) produces binary include/exclude decisions; Stage~B (extraction) produces structured JSON with study metadata and effect estimates. All outputs are hashed (SHA-256) for provenance tracking. Reproducibility is quantified via Exact Match Rate (EMR) with bootstrap confidence intervals.}
+\caption{Experimental pipeline. A 500-abstract PubMed corpus is processed by six deployment stacks (three local, three API-served), each run 10~times under identical configurations. Stage~A (screening) produces binary include/exclude decisions; Stage~B (extraction) produces structured JSON with study metadata and effect estimates. All outputs are hashed (SHA-256) for provenance tracking. Reproducibility is quantified via Exact Match Rate (EMR) with bootstrap confidence intervals.}
 \label{fig:pipeline}
 \end{figure}
+
+\subsection{Unit of Analysis: Deployment Stacks}
+\label{sec:unit_of_analysis}
+
+We treat the unit of analysis as the \emph{deployment stack}---the tuple $(\textit{model\_weights},\,\textit{provider},\,\textit{infrastructure},\,\textit{API\_layer})$---rather than the model weights alone.
+For the three local stacks, every component of the tuple is transparent and pinned: open-weight checkpoints with verifiable hashes (LLaMA~3 8B, Mistral~7B, Gemma~2 9B), served by Ollama~v0.15.5 on a single Apple~M4 chip (24~GB RAM, single replica, single execution thread), through Ollama's local HTTP endpoint.
+For the three API-served stacks, only the provider and the client-visible API surface are observable; the underlying weight checkpoint version, GPU topology, batching policy, and intermediate-precision routines are opaque and may change without notice.
+This framing matters because the local-vs-cloud comparison constitutes a \emph{partial quasi-isolation probe}: when two stacks share approximately matched weights (e.g., \texttt{meta-llama/llama-3-8b-instruct} served locally via Ollama and via DeepInfra) but differ in infrastructure and serving layer, any divergence in their outputs is attributable to the non-weight components of the tuple.
+Throughout this paper we use ``deployment stack'' for the experimental unit and reserve ``model'' for the weights alone.
 
 \subsection{Corpus Construction}
 
@@ -286,34 +295,37 @@ For the 25~INCLUDE items in the dual-human subset, dual-human extraction labels 
 
 Because our primary metric (EMR) measures self-consistency rather than accuracy, gold-standard quality affects only the secondary accuracy analysis; we report secondary accuracy against three sources (heuristic, silver-internal, silver-external; plus dual-human gold for the 25-item subset) to triangulate the result.
 
-\subsection{Models}
+\subsection{Deployment Stacks}
 
-We selected six models spanning local and cloud-based deployment (Table~\ref{tab:models}), covering three major families of open-weight models and three proprietary API providers.
+We selected six deployment stacks spanning local and API-served paradigms (Table~\ref{tab:models}).
+Each stack instantiates the tuple $(\textit{model\_weights},\,\textit{provider},\,\textit{infrastructure},\,\textit{API\_layer})$ defined in Section~\ref{sec:unit_of_analysis}.
+The three local stacks cover three open-weight families served on a single device; the three API-served stacks cover three proprietary providers accessed over the public network.
 
 \begin{table}[htbp]
 \centering
-\caption{Model configurations. All local models were served via Ollama with deterministic settings. Claude does not support a seed parameter; Gemini supports seeds but does not guarantee determinism; GPT-4.1 supports seeds via the API. Note that local models (7--9B parameters) are substantially smaller than cloud API models (estimated $>$100B), introducing a model-size confound discussed in Section~\ref{sec:limitations}.}
+\caption{Deployment-stack configurations. The four-component tuple $(\textit{weights},\,\textit{provider},\,\textit{infrastructure},\,\textit{API\_layer})$ is shown across the first four columns. All local stacks were served via Ollama with deterministic settings. Claude does not expose a seed parameter; Gemini accepts seeds but does not guarantee determinism; GPT-4.1 accepts seeds via the API. Local stacks are 7--9B-parameter open-weight checkpoints; API-served weights are proprietary and approximately $>$100B parameters, so the local-vs-API comparison varies multiple tuple components simultaneously (see Section~\ref{sec:desconfound} for a single-component probe).}
 \label{tab:models}
-\begin{tabular}{llccccr}
+\footnotesize
+\begin{tabular}{p{2.0cm}p{1.5cm}p{2.0cm}p{1.5cm}ccr}
 \toprule
-\textbf{Model} & \textbf{Provider} & \textbf{Type} & \textbf{Temp.} & \textbf{Seed} & \textbf{top\_p} & \textbf{Max tokens} \\
+\textbf{Weights} & \textbf{Provider} & \textbf{Infrastructure} & \textbf{API layer} & \textbf{Temp.} / \textbf{Seed} & \textbf{top\_p} & \textbf{Max tokens} \\
 \midrule
-LLaMA 3 8B         & Ollama (local)  & Local  & 0 & 42  & 1.0 & 2{,}048 \\
-Mistral 7B          & Ollama (local)  & Local  & 0 & 42  & 1.0 & 2{,}048 \\
-Gemma 2 9B          & Ollama (local)  & Local  & 0 & 42  & 1.0 & 2{,}048 \\
+LLaMA 3 8B  & Meta (open) & Ollama v0.15.5 / Apple M4 / single replica & local HTTP /api/generate & 0 / 42 & 1.0 & 2{,}048 \\
+Mistral 7B  & Mistral (open) & Ollama v0.15.5 / Apple M4 / single replica & local HTTP /api/generate & 0 / 42 & 1.0 & 2{,}048 \\
+Gemma 2 9B  & Google (open) & Ollama v0.15.5 / Apple M4 / single replica & local HTTP /api/generate & 0 / 42 & 1.0 & 2{,}048 \\
 \midrule
-Claude Sonnet 4.5   & Anthropic API   & Cloud  & 0 & --- & 1.0 & 2{,}048 \\
-Gemini 2.5 Pro      & Google AI API   & Cloud  & 0 & 42  & 1.0 & 8{,}192$^{\dagger}$ \\
-GPT-4.1             & OpenAI API      & Cloud  & 0 & 42  & 1.0 & 2{,}048 \\
+Claude Sonnet 4.5 (\texttt{20250929}) & Anthropic & opaque (production) & Messages API v1 & 0 / --- & 1.0 & 2{,}048 \\
+Gemini 2.5 Pro & Google & opaque (production) & generateContent v1 & 0 / 42 & 1.0 & 8{,}192$^{\dagger}$ \\
+GPT-4.1 & OpenAI & opaque (production) & Chat Completions v1 & 0 / 42 & 1.0 & 2{,}048 \\
 \bottomrule
 \multicolumn{7}{l}{\footnotesize $^{\dagger}$Gemini requires a higher token budget because its ``thinking'' tokens consume output capacity.}
 \end{tabular}
 \end{table}
 
-\noindent The three local models---LLaMA~3 8B,\autocite{dubey2024llama3} Mistral~7B,\autocite{jiang2023mistral} and Gemma~2 9B\autocite{team2024gemma}---were served locally via Ollama v0.15.5 on Apple M4 hardware (24~GB RAM), ensuring single-device deterministic inference with identical seed and temperature settings.
-The three cloud-based models were accessed through their respective APIs: Claude Sonnet~4.5\autocite{anthropic2025sonnet45} via the Anthropic API (no seed parameter available), Gemini~2.5 Pro\autocite{geminiteam2024gemini} via the Google AI API (seed set to~42), and GPT-4.1\autocite{openai2025gpt41} via the OpenAI API (seed set to~42).
-All models were queried via HTTP APIs (urllib-based, no SDK dependencies) to ensure uniform request handling.
-API calls included up to 2~retries with exponential backoff on timeout or rate-limit errors; retried calls may route to different server nodes, introducing a minor additional source of variation for cloud models.
+\noindent The three local stacks pair open-weight checkpoints---LLaMA~3 8B,\autocite{dubey2024llama3} Mistral~7B,\autocite{jiang2023mistral} and Gemma~2 9B\autocite{team2024gemma}---with Ollama v0.15.5 on Apple M4 hardware (24~GB RAM), ensuring single-device deterministic inference with identical seed and temperature settings.
+The three API-served stacks accessed proprietary weights through their respective providers: Claude Sonnet~4.5\autocite{anthropic2025sonnet45} via the Anthropic Messages API (no seed parameter available), Gemini~2.5 Pro\autocite{geminiteam2024gemini} via the Google AI \texttt{generateContent} API (seed set to~42), and GPT-4.1\autocite{openai2025gpt41} via the OpenAI Chat Completions API (seed set to~42).
+All stacks were queried via HTTP (urllib-based, no SDK dependencies) to ensure uniform request handling.
+API calls included up to 2~retries with exponential backoff on timeout or rate-limit errors; retried calls may route to different server nodes, introducing a minor additional source of variation for the API-served stacks.
 
 \subsection{Prompt Development}
 \label{sec:prompts}
@@ -422,20 +434,20 @@ However, the total cost of local inference was negligible (\$0.26 electricity) c
 
 \begin{table}[htbp]
 \centering
-\caption{Computational resources per model (both stages combined, 10~runs each). Latency is the mean per-call inference duration. Cost includes API pricing and estimated electricity for local models (Apple~M4, 15W, \$0.10/kWh).}
+\caption{Computational resources per deployment stack (both stages combined, 10~runs each). Latency is the mean per-call inference duration. Cost includes API pricing and estimated electricity for local stacks (Apple~M4, 15W, \$0.10/kWh).}
 \label{tab:resources}
 \small
 \begin{tabular}{llrrrr}
 \toprule
-\textbf{Model} & \textbf{Type} & \textbf{Inference (h)} & \textbf{Tokens (M)} & \textbf{Latency (s)} & \textbf{Cost (\$)} \\
+\textbf{Deployment Stack} & \textbf{Type} & \textbf{Inference (h)} & \textbf{Tokens (M)} & \textbf{Latency (s)} & \textbf{Cost (\$)} \\
 \midrule
-LLaMA 3 8B      & Local  & 52.1  & 8.7  & 32.5  & 0.08 \\
-Mistral 7B       & Local  & 76.4  & 10.6 & 46.1  & 0.11 \\
-Gemma 2 9B       & Local  & 45.6  & 9.0  & 27.7  & 0.07 \\
+LLaMA 3 8B / Ollama / M4       & Local  & 52.1  & 8.7  & 32.5  & 0.08 \\
+Mistral 7B / Ollama / M4       & Local  & 76.4  & 10.6 & 46.1  & 0.11 \\
+Gemma 2 9B / Ollama / M4       & Local  & 45.6  & 9.0  & 27.7  & 0.07 \\
 \midrule
-Claude Sonnet 4.5 & API   & 7.9   & 9.9  & 4.7   & 46.11 \\
-Gemini 2.5 Pro    & API   & 20.3  & 9.0  & 12.2  & 0.00$^{*}$ \\
-GPT-4.1           & API   & 5.0   & 8.6  & 3.0   & 23.29 \\
+Claude Sonnet 4.5 / Anthropic  & API & 7.9   & 9.9  & 4.7   & 46.11 \\
+Gemini 2.5 Pro / Google        & API & 20.3  & 9.0  & 12.2  & 0.00$^{*}$ \\
+GPT-4.1 / OpenAI               & API & 5.0   & 8.6  & 3.0   & 23.29 \\
 \midrule
 \textbf{Total}    &        & \textbf{207.2} & \textbf{55.8} & --- & \textbf{69.66} \\
 \bottomrule
@@ -457,23 +469,24 @@ Table~\ref{tab:screening} presents the screening reproducibility results.
 
 \begin{table}[htbp]
 \centering
-\caption{Screening reproducibility across 10 runs. LLaMA's 20 consistently-errored abstracts are included in the EMR denominator (see text). For models with EMR${=}$1.000, we report the rule-of-three 95\% upper bound on the non-match rate ($3/n$, Hanley \& Lippman-Hand 1983) instead of the trivial bootstrap interval.}
+\caption{Screening reproducibility across 10 runs per deployment stack. LLaMA's 20 consistently-errored abstracts are included in the EMR denominator (see text). For stacks with EMR${=}$1.000, we report the rule-of-three 95\% upper bound on the non-match rate ($3/n$, Hanley \& Lippman-Hand 1983) instead of the trivial bootstrap interval.}
 \label{tab:screening}
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{lcccccc}
 \toprule
-\textbf{Model} & \textbf{EMR} & \textbf{95\% UCL$^{*}$} & \textbf{Flip Rate} & \textbf{Accuracy} & \textbf{Sensitivity} & \textbf{Specificity} \\
+\textbf{Deployment Stack} & \textbf{EMR} & \textbf{95\% UCL$^{*}$} & \textbf{Flip Rate} & \textbf{Accuracy} & \textbf{Sensitivity} & \textbf{Specificity} \\
 \midrule
-LLaMA 3 8B       & 1.000 & $\leq$0.006 & 0.0\% & 0.927 & 0.928 & 0.926 \\
-Mistral 7B        & 1.000 & $\leq$0.006 & 0.0\% & \textbf{0.628} & \textbf{1.000} & \textbf{0.240}$^{\ddagger}$ \\
-Gemma 2 9B        & 1.000 & $\leq$0.006 & 0.0\% & 0.909 & 0.969 & 0.848 \\
+LLaMA 3 8B / Ollama / M4       & 1.000 & $\leq$0.006 & 0.0\% & 0.927 & 0.928 & 0.926 \\
+Mistral 7B / Ollama / M4       & 1.000 & $\leq$0.006 & 0.0\% & \textbf{0.628} & \textbf{1.000} & \textbf{0.240}$^{\ddagger}$ \\
+Gemma 2 9B / Ollama / M4       & 1.000 & $\leq$0.006 & 0.0\% & 0.909 & 0.969 & 0.848 \\
 \midrule
-Claude Sonnet 4.5 & 0.974 & $\ci{0.960}{0.986}$ & 2.6\% & 0.931 & 0.862 & 1.000 \\
-Gemini 2.5 Pro    & 0.936 & $\ci{0.914}{0.956}$ & 6.4\% & 0.964 & 0.929 & 1.000 \\
-GPT-4.1           & 0.970 & $\ci{0.954}{0.984}$ & 3.0\% & 0.941 & 0.882 & 1.000 \\
+Claude Sonnet 4.5 / Anthropic  & 0.974 & $\ci{0.960}{0.986}$ & 2.6\% & 0.931 & 0.862 & 1.000 \\
+Gemini 2.5 Pro / Google        & 0.936 & $\ci{0.914}{0.956}$ & 6.4\% & 0.964 & 0.929 & 1.000 \\
+GPT-4.1 / OpenAI               & 0.970 & $\ci{0.954}{0.984}$ & 3.0\% & 0.941 & 0.882 & 1.000 \\
 \bottomrule
-\multicolumn{7}{l}{\footnotesize $^{*}$For EMR${=}$1.000: 95\% rule-of-three upper bound on non-match rate, $3/n{=}3/500{=}0.006$. For EMR${<}$1.000: percentile bootstrap CI.}\\
-\multicolumn{7}{l}{\footnotesize $^{\ddagger}$Mistral 7B exhibits a degenerate ``always-include'' strategy (sens${=}$1.000, spec${=}$0.240). EMR${=}$1.000 is trivial here; see warning box.}
-\end{tabular}
+\end{tabular}}\\[2pt]
+{\footnotesize $^{*}$For EMR${=}$1.000: 95\% rule-of-three upper bound on non-match rate, $3/n{=}3/500{=}0.006$. For EMR${<}$1.000: percentile bootstrap CI.\\
+$^{\ddagger}$Mistral 7B exhibits a degenerate ``always-include'' strategy (sens${=}$1.000, spec${=}$0.240). EMR${=}$1.000 is trivial here; see warning box.}
 \end{table}
 
 \noindent All three local models---LLaMA, Mistral, and Gemma---produced identical screening decisions across all 10~runs for every successfully processed abstract ($\emr{=}1.000$), confirming that single-device deterministic inference eliminates run-to-run variation entirely.
@@ -488,19 +501,19 @@ The extraction results reveal a dramatically larger reproducibility gap (Table~\
 
 \begin{table}[htbp]
 \centering
-\caption{Extraction reproducibility across 10 runs. The ``Pairwise'' column reports the mean fraction of pairs (across $\binom{10}{2}{=}45$ run-pairs per article) producing different outputs---a more powerful indicator than EMR alone of how dispersed flipping items are. For EMR${=}$1.000 cells we report the rule-of-three upper bound (3/100${=}$0.030).}
+\caption{Extraction reproducibility across 10 runs per deployment stack. The ``Pairwise'' column reports the mean fraction of pairs (across $\binom{10}{2}{=}45$ run-pairs per article) producing different outputs---a more powerful indicator than EMR alone of how dispersed flipping items are. For EMR${=}$1.000 cells we report the rule-of-three upper bound (3/100${=}$0.030).}
 \label{tab:extraction}
 \begin{tabular}{lcccc}
 \toprule
-\textbf{Model} & \textbf{EMR} & \textbf{95\% UCL$^{*}$} & \textbf{Pairwise} & \textbf{Estimate Stability} \\
+\textbf{Deployment Stack} & \textbf{EMR} & \textbf{95\% UCL$^{*}$} & \textbf{Pairwise} & \textbf{Estimate Stability} \\
 \midrule
-LLaMA 3 8B       & 1.000 & $\leq$0.030 & 0.0000 & 1.000 \\
-Mistral 7B        & 1.000 & $\leq$0.030 & 0.0000 & 1.000 \\
-Gemma 2 9B        & 1.000 & $\leq$0.030 & 0.0000 & 1.000 \\
+LLaMA 3 8B / Ollama / M4       & 1.000 & $\leq$0.030 & 0.0000 & 1.000 \\
+Mistral 7B / Ollama / M4       & 1.000 & $\leq$0.030 & 0.0000 & 1.000 \\
+Gemma 2 9B / Ollama / M4       & 1.000 & $\leq$0.030 & 0.0000 & 1.000 \\
 \midrule
-Claude Sonnet 4.5 & 0.050 & $\ci{0.010}{0.090}$ & \textbf{0.818} & 0.880 \\
-Gemini 2.5 Pro    & 0.200 & $\ci{0.120}{0.280}$ & 0.493 & 0.735 \\
-GPT-4.1           & 0.150 & $\ci{0.080}{0.220}$ & 0.486 & 0.922 \\
+Claude Sonnet 4.5 / Anthropic  & 0.050 & $\ci{0.010}{0.090}$ & \textbf{0.818} & 0.880 \\
+Gemini 2.5 Pro / Google        & 0.200 & $\ci{0.120}{0.280}$ & 0.493 & 0.735 \\
+GPT-4.1 / OpenAI               & 0.150 & $\ci{0.080}{0.220}$ & 0.486 & 0.922 \\
 \bottomrule
 \multicolumn{5}{l}{\footnotesize $^{*}$95\% rule-of-three upper bound on non-match rate when EMR${=}$1.000.}
 \end{tabular}
@@ -520,7 +533,7 @@ Not all extraction fields are equally affected (Table~\ref{tab:fields}).
 
 \begin{table}[htbp]
 \centering
-\caption{Field-level EMR for extraction outputs.}
+\caption{Field-level EMR for extraction outputs across deployment stacks. The first three columns are local Ollama/M4 stacks; the last three are API-served (Anthropic, Google, OpenAI).}
 \label{tab:fields}
 \begin{tabular}{lcccccc}
 \toprule
@@ -562,15 +575,15 @@ To disentangle variation in the five metadata fields from variation in numeric e
 \label{tab:semantic}
 \begin{tabular}{lccclc}
 \toprule
-\textbf{Model} & \textbf{Exact} & \textbf{Norm.} & \textbf{Fuzzy} & \textbf{BERTScore F1} & \textbf{Hash}$^{*}$ \\
+\textbf{Deployment Stack} & \textbf{Exact} & \textbf{Norm.} & \textbf{Fuzzy} & \textbf{BERTScore F1} & \textbf{Hash}$^{*}$ \\
 \midrule
-LLaMA 3 8B       & 1.000 & 1.000 & 1.000 & $1.000 \pm 0.000$ & 1.000 \\
-Mistral 7B        & 1.000 & 1.000 & 1.000 & $1.000 \pm 0.000$ & 1.000 \\
-Gemma 2 9B        & 1.000 & 1.000 & 1.000 & $1.000 \pm 0.000$ & 1.000 \\
+LLaMA 3 8B / Ollama / M4       & 1.000 & 1.000 & 1.000 & $1.000 \pm 0.000$ & 1.000 \\
+Mistral 7B / Ollama / M4       & 1.000 & 1.000 & 1.000 & $1.000 \pm 0.000$ & 1.000 \\
+Gemma 2 9B / Ollama / M4       & 1.000 & 1.000 & 1.000 & $1.000 \pm 0.000$ & 1.000 \\
 \midrule
-Claude Sonnet 4.5 & 0.640 & 0.680 & 0.690 & $0.997 \pm 0.009$ & 0.050 \\
-Gemini 2.5 Pro    & 0.620 & 0.620 & 0.630 & $0.997 \pm 0.022$ & 0.200 \\
-GPT-4.1           & 0.880 & 0.880 & 0.880 & $1.000 \pm 0.004$ & 0.150 \\
+Claude Sonnet 4.5 / Anthropic  & 0.640 & 0.680 & 0.690 & $0.997 \pm 0.009$ & 0.050 \\
+Gemini 2.5 Pro / Google        & 0.620 & 0.620 & 0.630 & $0.997 \pm 0.022$ & 0.200 \\
+GPT-4.1 / OpenAI               & 0.880 & 0.880 & 0.880 & $1.000 \pm 0.004$ & 0.150 \\
 \bottomrule
 \multicolumn{6}{l}{\footnotesize $^{*}$From Table~\ref{tab:extraction}; includes all fields and numeric estimates.}
 \end{tabular}
@@ -606,15 +619,15 @@ To illustrate how extraction non-determinism propagates into downstream analysis
 \label{tab:meta}
 \begin{tabular}{lccccc}
 \toprule
-\textbf{Model} & \textbf{$k$ range} & \textbf{$\Delta k$} & \textbf{$k_{\text{sig}}$ range} & \textbf{$\Delta k_{\text{sig}}$} & \textbf{Varying} \\
+\textbf{Deployment Stack} & \textbf{$k$ range} & \textbf{$\Delta k$} & \textbf{$k_{\text{sig}}$ range} & \textbf{$\Delta k_{\text{sig}}$} & \textbf{Varying} \\
 \midrule
-LLaMA 3 8B       & 246--246 & 0  & 188--188 & 0  & 0/100 (0\%) \\
-Mistral 7B        & 229--229 & 0  & 186--186 & 0  & 0/100 (0\%) \\
-Gemma 2 9B        & 203--203 & 0  & 157--157 & 0  & 0/100 (0\%) \\
+LLaMA 3 8B / Ollama / M4       & 246--246 & 0  & 188--188 & 0  & 0/100 (0\%) \\
+Mistral 7B / Ollama / M4       & 229--229 & 0  & 186--186 & 0  & 0/100 (0\%) \\
+Gemma 2 9B / Ollama / M4       & 203--203 & 0  & 157--157 & 0  & 0/100 (0\%) \\
 \midrule
-Claude Sonnet 4.5 & 186--209 & 23 & 152--175 & 23 & 21/100 (21\%) \\
-Gemini 2.5 Pro    & 154--171 & 17 & 133--150 & 17 & 20/100 (20\%) \\
-GPT-4.1           & 176--180 & 4  & 150--154 & 4  & 5/100 (5\%) \\
+Claude Sonnet 4.5 / Anthropic  & 186--209 & 23 & 152--175 & 23 & 21/100 (21\%) \\
+Gemini 2.5 Pro / Google        & 154--171 & 17 & 133--150 & 17 & 20/100 (20\%) \\
+GPT-4.1 / OpenAI               & 176--180 & 4  & 150--154 & 4  & 5/100 (5\%) \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -657,11 +670,11 @@ All other parameters were held identical to the variable-length design: temperat
 \label{tab:fixedslot}
 \begin{tabular}{lccc}
 \toprule
-\textbf{Model} & \textbf{Var-length EMR} & \textbf{Fixed-slot EMR} & \textbf{Relative change} \\
+\textbf{Deployment Stack} & \textbf{Var-length EMR} & \textbf{Fixed-slot EMR} & \textbf{Relative change} \\
 \midrule
-Claude Sonnet 4.5 & 0.050 & 0.030 & $-40.0\%$ \\
-Gemini 2.5 Pro    & 0.200 & 0.185 & $-7.6\%$ \\
-GPT-4.1           & 0.150 & \textbf{0.444} & $\mathbf{+196.3\%}$ \\
+Claude Sonnet 4.5 / Anthropic & 0.050 & 0.030 & $-40.0\%$ \\
+Gemini 2.5 Pro / Google       & 0.200 & 0.185 & $-7.6\%$ \\
+GPT-4.1 / OpenAI              & 0.150 & \textbf{0.444} & $\mathbf{+196.3\%}$ \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -680,11 +693,12 @@ Ten cloud runs $\times$ 500~abstracts mirror the local experimental design.
 
 \begin{table}[htbp]
 \centering
-\caption{Same-weight, different-deployment comparison: \texttt{meta-llama/llama-3-8b-instruct} via local Ollama (Apple~M4) vs.\ cloud DeepInfra (OpenRouter), 10~runs each, identical prompt, seed${=}$42 and temperature${=}$0.}
+\caption{Same-weights, different-stack comparison. Two deployment stacks share the \texttt{meta-llama/llama-3-8b-instruct} weights but differ in the remaining tuple components: local stack = (weights, Meta/open, Ollama~v0.15.5/Apple~M4/single replica, local HTTP); cloud stack = (weights, Meta-via-DeepInfra, OpenRouter routing/opaque GPU pool, OpenRouter Chat Completions). Ten runs each, identical prompt, seed${=}$42, temperature${=}$0.}
 \label{tab:desconfound}
+\small
 \begin{tabular}{lcc}
 \toprule
-\textbf{Quantity} & \textbf{Local (Ollama, M4)} & \textbf{Cloud (DeepInfra)} \\
+\textbf{Quantity} & \textbf{Local stack (Ollama / M4)} & \textbf{Cloud stack (DeepInfra)} \\
 \midrule
 EMR within deployment           & 1.000 & 0.992$^{*}$ \\
 Mean pairwise disagreement      & 0.0000 & 0.0079 \\
@@ -737,7 +751,7 @@ Figure~\ref{fig:emr} visualizes the EMR comparison across models and stages, and
 \label{fig:heatmap}
 \end{figure}
 
-\noindent The results reveal three key patterns: (1)~a sharp reproducibility gap between local and cloud-based deployment, with all three local models achieving $\emr{=}1.000$ while all three API models fall below 0.200 for extraction; (2)~a dramatic amplification of non-determinism when moving from simple binary screening decisions to complex structured extraction outputs; and (3)~distinct instability profiles among API models, with GPT-4.1 showing the highest metadata and structural stability but still exhibiting meaningful numeric variation.
+\noindent The results reveal three key patterns: (1)~a sharp reproducibility gap between local and API-served deployment stacks, with all three local stacks achieving $\emr{=}1.000$ while all three API-served stacks fall below 0.200 for extraction; (2)~a dramatic amplification of non-determinism when moving from simple binary screening decisions to complex structured extraction outputs; and (3)~distinct instability profiles among API-served stacks, with the GPT-4.1 / OpenAI stack showing the highest metadata and structural stability but still exhibiting meaningful numeric variation.
 
 
 % ============================================================
@@ -749,6 +763,13 @@ Figure~\ref{fig:emr} visualizes the EMR comparison across models and stages, and
 
 Our study provides a systematic quantification of LLM non-determinism across a complete evidence synthesis pipeline---to our knowledge, the first to combine whole-output metrics, multi-run repetition, and pipeline propagation analysis in this domain.
 Four key findings emerge.
+
+\textbf{Reframing: the object of reproducibility variation is the deployment stack, not the model.}
+A first-principles consequence of our results is that ``which model'' is the wrong level of abstraction for talking about LLM reproducibility.
+A deployment stack---the tuple of weights, provider, infrastructure, and API layer (Section~\ref{sec:unit_of_analysis})---is the unit through which an LLM actually generates an answer, and it is the unit at which reproducibility is preserved or destroyed.
+Two stacks that share weights can diverge by tens of percentage points if their infrastructure or serving layer differs (Table~\ref{tab:desconfound}); two stacks that differ in weights but share a deterministic local infrastructure can both achieve $\emr{=}1.000$ (Tables~\ref{tab:screening},~\ref{tab:extraction}).
+Reporting only the model name in an LLM-assisted SR therefore underspecifies the experimental condition: the same weights on a different stack will not reliably reproduce the same outputs.
+This reframing aligns our results with a broader programme on reproducibility in API-served LLMs developed in a companion paper (Rover \& Tadano, under review at \textit{Nature Communications}) and motivates the recommendations in Section~\ref{sec:limitations}.
 
 \textbf{Finding 1: Deployment infrastructure---not parameter count---drives the local-vs-cloud reproducibility gap.}
 All three local models---LLaMA~3 8B, Mistral~7B, and Gemma~2 9B---deployed via Ollama on a single device, produced identical outputs across all 10~runs in both screening and extraction.
@@ -772,7 +793,7 @@ Even the residual metadata variation is genuinely semantic (fuzzy matching recov
 The practical implication depends on context: the high BERTScore ($F_1{\geq}0.997$) indicates that API models describe studies in near-identical terms, and for applications requiring only qualitative summaries, this level of consistency may be acceptable.
 However, for quantitative evidence synthesis---where exact numeric values feed directly into meta-analytic pooling---the hash-based EMR of 0.05--0.20 represents a genuine threat to reproducibility.
 
-\textbf{Finding 3: API models exhibit distinct instability profiles.}
+\textbf{Finding 3: API-served stacks exhibit distinct instability profiles.}
 GPT-4.1 achieved the highest metadata stability among API models (exact EMR${=}$0.880, BERTScore $F_1{=}1.000$) and the smallest structural variation ($\Delta k{=}4$ estimates across runs), yet its hash-based extraction EMR (0.150) confirms that numeric variation persists.
 Claude had the lowest hash-based EMR (0.050) and the widest structural swing ($\Delta k{=}23$), while Gemini showed the most extreme semantic divergence (minimum BERTScore $F_1{=}0.754$).
 These distinct profiles suggest that non-determinism manifests differently across API providers---some vary primarily in numeric precision, others in structural composition, and others in semantic interpretation.
@@ -887,14 +908,13 @@ We recommend that future LLM-SR studies report results in both unstructured and 
 Every experimental design involves deliberate scope choices.
 We document ours transparently---not as weaknesses, but as controlled boundaries that define the contribution and open clearly charted directions for future work.
 
-\textbf{Controlled model selection.}
-We deliberately selected six models spanning two deployment paradigms (local vs.\ cloud API), four providers, and two size regimes (7--9B vs.\ $>$100B estimated parameters).
+\textbf{Controlled stack selection.}
+We deliberately selected six deployment stacks spanning two infrastructure paradigms (local single-device vs.\ API-served opaque cluster), four providers, and two weight-size regimes (7--9B vs.\ $>$100B estimated parameters).
 This design is the broadest reproducibility comparison in evidence synthesis to date.
-We note that the local-versus-cloud comparison confounds deployment type with model size: smaller models may have sharper probability distributions, contributing to their perfect determinism independently of the serving infrastructure.
-We treat this as a known, documented variable rather than an uncontrolled confound.
-The practical finding holds regardless of mechanism: models served locally \emph{are} deterministic; models served via cloud APIs \emph{are not}.
-An informative extension---serving the same model (e.g., LLaMA~3 8B) both locally and via a cloud endpoint (Together.ai or Replicate)---would isolate the infrastructure effect and is a natural next step for a follow-up study.
-Meanwhile, extending coverage to additional architectures (Command-R, DeepSeek, Phi-4) and larger open-weight models (70B+) would map the reproducibility landscape more comprehensively.
+We note that the local-vs-API axis varies multiple tuple components simultaneously: weights, infrastructure, and serving layer all differ between, e.g., the LLaMA~3 8B / Ollama / M4 stack and the Claude / Anthropic / Messages API stack.
+The desconfound experiment in Section~\ref{sec:desconfound} addresses this by holding weights constant while varying the rest of the tuple, but the same logic applied to additional weight-checkpoint pairs (e.g., Mixtral 8x7B served locally and via two different cloud providers) would map the stack-level contribution more comprehensively.
+The practical finding holds regardless of mechanism: stacks built on local single-device inference \emph{are} deterministic; stacks built on opaque API-served infrastructure \emph{are not}.
+Extending coverage to additional architectures (Command-R, DeepSeek, Phi-4) and larger open-weight models (70B+) on multiple infrastructure tiers remains a natural next step.
 
 \textbf{Deliberate run count.}
 Ten repetitions per model-stage combination provide adequate statistical power for EMR estimation with bootstrap confidence intervals, yielding narrow CIs for screening (e.g., $\pm$0.016 for Claude) and informative CIs for extraction.
@@ -918,6 +938,11 @@ This design choice maximizes the diagnostic sensitivity of our evaluation.
 All experiments were completed within a 3-week window (February 11--March~2, 2026) to minimize the risk of silent API model updates.
 We pinned Claude to a dated version (\texttt{claude-sonnet-4-5-20250929}) and used versioned GPT-4.1.
 Longitudinal studies tracking EMR over weeks or months represent a compelling research opportunity to distinguish inference-level non-determinism from model-update effects.
+
+\textbf{Deployment-stack opacity and snapshot validity.}
+For the three API-served stacks, the infrastructure and intermediate-precision routines---GPU topology, batching policy, weight checkpoint version, internal post-training---are opaque to the client; no metadata returned by the API exposes them, and providers may change them silently.
+Our results therefore characterize the snapshot of each API stack observed during data collection (February--April 2026), and exact response-level reproducibility may not survive future provider-side updates even with identical client requests.
+The three local stacks, by contrast, expose every tuple component (open weights with verifiable hashes, single Apple~M4 chip, Ollama~v0.15.5, single replica), which is why the local-vs-API comparison is informative as a partial quasi-isolation probe (Section~\ref{sec:unit_of_analysis}): the local side is fully specified and pinned, so any cross-stack divergence localises to non-weight components.
 
 \textbf{External validation as documented limitation.}
 This study tests reproducibility within a single 500-abstract corpus on PM$_{2.5}$ and respiratory hospitalization.
