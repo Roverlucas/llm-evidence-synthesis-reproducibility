@@ -1,13 +1,13 @@
 # Citation Snippets — Ready to Paste
 
-Once OSF assigns the DOI, **replace `XXXXX` everywhere with the actual identifier** (e.g., `osf.io/a1b2c`).
+**OSF project registered 2026-05-11**: https://osf.io/vr934 (DOI: `10.17605/OSF.IO/VR934`). The pre-registration sub-component (Step 5 of UPLOAD_INSTRUCTIONS) will issue a separate DOI — `YYYYY` placeholders below should be updated when that registration is created.
 
 ---
 
 ## 1. For the NatComms Revision Manuscript
 
 ### In-text citation
-> "Validation of the silver-standard methodology across 500 abstracts is reported in our companion paper (Rover et al., under review at *Research Synthesis Methods*; OSF: 10.17605/OSF.IO/XXXXX)."
+> "Validation of the silver-standard methodology across 500 abstracts is reported in our companion paper (Rover et al., under review at *Research Synthesis Methods*; OSF: 10.17605/OSF.IO/VR934)."
 
 ### BibTeX
 ```bibtex
@@ -16,8 +16,8 @@ Once OSF assigns the DOI, **replace `XXXXX` everywhere with the actual identifie
   author = {Rover, Lucas and Tadano, Yara de Souza},
   year   = {2026},
   note   = {Manuscript under review at \textit{Research Synthesis Methods}},
-  doi    = {10.17605/OSF.IO/XXXXX},
-  url    = {https://osf.io/XXXXX}
+  doi    = {10.17605/OSF.IO/VR934},
+  url    = {https://osf.io/vr934}
 }
 ```
 
@@ -25,7 +25,7 @@ Once OSF assigns the DOI, **replace `XXXXX` everywhere with the actual identifie
 
 ## 2. For the RSM Manuscript — Data Availability Statement
 
-> **Data Availability.** All data, code, and pre-registered protocols supporting this study are deposited at the Open Science Framework (https://doi.org/10.17605/OSF.IO/XXXXX) and the underlying code is mirrored on GitHub (https://github.com/Roverlucas/llm-evidence-synthesis-reproducibility, frozen at commit `38873a2`, tag `v1.0-osf-deposit`). The dual-human labeling protocol is pre-registered as a sub-component of the OSF project (https://doi.org/10.17605/OSF.IO/YYYYY); results of the dual-labeling validation are in progress at the time of submission and will be reported as a sub-registration update.
+> **Data Availability.** All data, code, and pre-registered protocols supporting this study are deposited at the Open Science Framework (https://doi.org/10.17605/OSF.IO/VR934) and the underlying code is mirrored on GitHub (https://github.com/Roverlucas/llm-evidence-synthesis-reproducibility, frozen at commit `38873a2`, tag `v1.0-osf-deposit`). The dual-human labeling protocol is pre-registered as a sub-component of the OSF project (https://doi.org/10.17605/OSF.IO/YYYYY); results of the dual-labeling validation are in progress at the time of submission and will be reported as a sub-registration update.
 
 ---
 
@@ -41,7 +41,7 @@ Add a footnote where the dual-labeling protocol is first introduced (around `mai
 
 OSF auto-generates this for the project page. Paste it back into the manuscript references if needed:
 
-> Rover, L., & Tadano, Y. S. (2026, May 11). Reproducibility of Pollution–Health Evidence Synthesis using LLM-Assisted Screening and Extraction. https://doi.org/10.17605/OSF.IO/XXXXX
+> Rover, L., & Tadano, Y. S. (2026, May 11). Reproducibility of Pollution–Health Evidence Synthesis using LLM-Assisted Screening and Extraction. https://doi.org/10.17605/OSF.IO/VR934
 
 ---
 
@@ -68,7 +68,7 @@ Use this DOI specifically in any text discussing the dual-labeling protocol comm
 ## 7. Twitter/Bluesky Announcement (optional, when public)
 
 > 🧪 New OSF deposit: 500-abstract PM2.5/respiratory corpus, 36K LLM runs across 6 deployment stacks, full code+data+pre-registration. Manuscript on LLM non-determinism in evidence synthesis under review at @ResSynthMethods.
-> 🔗 https://osf.io/XXXXX
+> 🔗 https://osf.io/vr934
 > #OpenScience #ReproducibleResearch #SystematicReview #LLM
 
 ---
@@ -79,9 +79,9 @@ After OSF registration, **find-and-replace** the following placeholders across a
 
 | Placeholder | Replace with |
 |-------------|-------------|
-| `10.17605/OSF.IO/XXXXX` | Main project DOI |
+| `10.17605/OSF.IO/VR934` | Main project DOI |
 | `10.17605/OSF.IO/YYYYY` | Pre-Registration DOI (different — sub-component) |
-| `osf.io/XXXXX` | Short URL of project |
+| `osf.io/vr934` | Short URL of project |
 | `osf.io/YYYYY` | Short URL of pre-registration |
 
 Files containing placeholders to update:

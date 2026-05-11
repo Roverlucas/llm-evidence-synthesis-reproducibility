@@ -136,7 +136,7 @@ The registration is now **frozen and DOI'd**. You cannot edit content, but you c
 ## Step 6 — Verify and Make Public (10 min)
 
 1. Project page → **Make Public** (top right)
-2. OSF assigns the project DOI: `10.17605/OSF.IO/XXXXX`
+2. OSF assigns the project DOI: `10.17605/OSF.IO/VR934`
 3. Copy the DOI
 4. Update `osf_package/CITATIONS.md` and the manuscript's footnote/data-availability statement with the real DOI
 5. Edit `README.md` and `osf_package/README.md` in the repo to add the real DOI (commit + push)
@@ -151,7 +151,7 @@ Add the OSF DOI to:
    - Data Availability statement
    - Footnote on first mention of the dual-labeling protocol
 2. **NatComms revision** (`/Users/lucasrover/paper-experiment/`):
-   - Cite the RSM paper using the OSF DOI: `Rover et al. (in review, OSF: 10.17605/OSF.IO/XXXXX)`
+   - Cite the RSM paper using the OSF DOI: `Rover et al. (in review, OSF: 10.17605/OSF.IO/VR934)`
 3. **Both papers**: ensure citation snippets in `osf_package/CITATIONS.md` are consistent
 
 ---

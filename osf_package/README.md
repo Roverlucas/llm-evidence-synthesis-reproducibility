@@ -75,12 +75,12 @@ CC-BY 4.0 for data and manuscript materials; MIT for code (see GitHub LICENSE).
   title  = {Reproducibility of Pollution–Health Evidence Synthesis using LLM-Assisted Screening and Extraction},
   author = {Rover, Lucas and Tadano, Yara de Souza},
   year   = {2026},
-  doi    = {10.17605/OSF.IO/XXXXX},
+  doi    = {10.17605/OSF.IO/VR934},
   note   = {OSF Project, manuscript under review at Research Synthesis Methods}
 }
 ```
 
-(Replace XXXXX with the OSF-issued identifier after registration.)
+**OSF project URL**: https://osf.io/vr934 — registered 2026-05-11.
 
 ## Contact
 
