@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "batch_size": 64,
+    "bert_layer": 17,
+    "bert_model": "roberta-large",
+    "num_runs": 10,
+    "rescale_with_baseline": "Both raw and rescaled F1 computed in parallel (rescaled uses bert_score package's roberta-large baseline; reported per RSM P1.a audit).",
+    "seed": 42,
+    "sha256_self": "30ffffa1d0cf906188584cc537df36fbffb664aeba00df88d7ca0497663cbfb6",
+    "text_fields": [
+      "study_design",
+      "study_location",
+      "study_period",
+      "population",
+      "sample_size"
+    ]
+  },
+  "models": {
+    "claude-sonnet-4-5": {
+      "n_articles": 100,
+      "n_pairs": 4500,
+      "raw_f1": {
+        "max": 1.0,
+        "mean": 0.99711,
+        "min": 0.931469,
+        "n": 4500,
+        "prop_ge_0.95": 0.996667,
+        "prop_ge_0.99": 0.900222,
+        "std": 0.008931
+      },
+      "rescaled_f1": {
+        "max": 1.000001,
+        "mean": 0.982877,
+        "min": 0.593947,
+        "n": 4500,
+        "prop_ge_0.95": 0.887111,
+        "prop_ge_0.99": 0.868889,
+        "std": 0.052919
+      }
+    },
+    "gemini-2.5-pro": {
+      "n_articles": 100,
+      "n_pairs": 4500,
+      "raw_f1": {
+        "max": 1.0,
+        "mean": 0.996528,
+        "min": 0.753955,
+        "n": 4500,
+        "prop_ge_0.95": 0.985111,
+        "prop_ge_0.99": 0.938889,
+        "std": 0.021634
+      },
+      "rescaled_f1": {
+        "max": 1.000001,
+        "mean": 0.979425,
+        "min": -0.457835,
+        "n": 4500,
+        "prop_ge_0.95": 0.933778,
+        "prop_ge_0.99": 0.920444,
+        "std": 0.128183
+      }
+    },
+    "gemma2-9b": {
+      "n_articles": 100,
+      "n_pairs": 4500,
+      "raw_f1": {
+        "max": 1.0,
+        "mean": 1.0,
+        "min": 1.0,
+        "n": 4500,
+        "prop_ge_0.95": 1.0,
+        "prop_ge_0.99": 1.0,
+        "std": 0.0
+      },
+      "rescaled_f1": {
+        "max": 1.000001,
+        "mean": 1.0,
+        "min": 0.999998,
+        "n": 4500,
+        "prop_ge_0.95": 1.0,
+        "prop_ge_0.99": 1.0,
+        "std": 1e-06
+      }
+    },
+    "gpt-4.1": {
+      "n_articles": 100,
+      "n_pairs": 4500,
+      "raw_f1": {
+        "max": 1.0,
+        "mean": 0.999595,
+        "min": 0.956081,
+        "n": 4500,
+        "prop_ge_0.95": 1.0,
+        "prop_ge_0.99": 0.989333,
+        "std": 0.003768
+      },
+      "rescaled_f1": {
+        "max": 1.000001,
+        "mean": 0.9976,
+        "min": 0.739775,
+        "n": 4500,
+        "prop_ge_0.95": 0.989333,
+        "prop_ge_0.99": 0.984222,
+        "std": 0.022324
+      }
+    },
+    "llama3-8b": {
+      "n_articles": 100,
+      "n_pairs": 4500,
+      "raw_f1": {
+        "max": 1.0,
+        "mean": 1.0,
+        "min": 1.0,
+        "n": 4500,
+        "prop_ge_0.95": 1.0,
+        "prop_ge_0.99": 1.0,
+        "std": 0.0
+      },
+      "rescaled_f1": {
+        "max": 1.000001,
+        "mean": 1.0,
+        "min": 0.999999,
+        "n": 4500,
+        "prop_ge_0.95": 1.0,
+        "prop_ge_0.99": 1.0,
+        "std": 1e-06
+      }
+    },
+    "mistral-7b": {
+      "n_articles": 100,
+      "n_pairs": 4500,
+      "raw_f1": {
+        "max": 1.0,
+        "mean": 1.0,
+        "min": 1.0,
+        "n": 4500,
+        "prop_ge_0.95": 1.0,
+        "prop_ge_0.99": 1.0,
+        "std": 0.0
+      },
+      "rescaled_f1": {
+        "max": 1.000001,
+        "mean": 1.0,
+        "min": 0.999999,
+        "n": 4500,
+        "prop_ge_0.95": 1.0,
+        "prop_ge_0.99": 1.0,
+        "std": 1e-06
+      }
+    }
+  }
+}

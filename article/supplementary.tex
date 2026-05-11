@@ -22,6 +22,8 @@
 \usepackage{listings}
 \usepackage[hidelinks]{hyperref}
 \usepackage{url}
+\usepackage{xr-hyper}
+\externaldocument[main-]{main}
 
 \geometry{margin=2.5cm}
 \sloppy
@@ -666,6 +668,8 @@ lag                  & 75/100 & 0.862 \\
 \end{tabular}
 \end{table}
 
+For items lacking DeepSeek-R1 consensus across its 5~runs (16 of 100 items on \texttt{effect\_estimate}; 26 of 100 items on the CI bounds \texttt{ci\_lower}/\texttt{ci\_upper}; 25 of 100 on \texttt{lag}), per-run accuracy against silver-external is undefined and these items are excluded; the accuracies reported in the corresponding silver-external comparison tables (and the cross-validation table below) are computed over the consensus subset only.
+
 \subsection{Cross-Validation Between Silvers}
 
 \begin{table}[htbp]
@@ -736,27 +740,116 @@ GPT-4.1           & 0.984 & 0.725 & 0.259 \\
 \end{table}
 
 % ============================================================
-\section{Multiple Comparison Correction for Field-Level Contrasts}
-\label{sec:mcc_supp}
+\section{BERTScore F1: Raw vs. Rescaled (Random-Pair Baseline)}
+\label{sec:bertscore_rescaled_supp}
 
-We applied Holm-Bonferroni (FWER) and Benjamini-Hochberg (FDR) corrections to the 21 pairwise field-level EMR contrasts between the three cloud models. Of 21 contrasts: 7 are significant at raw $p{<}0.05$, 3 survive Holm correction, 5 survive BH-FDR.
+Per RSM P1.a audit, BERTScore F1 with \texttt{roberta-large} is known to saturate near $1.0$ even for thematically unrelated sentence pairs because the underlying contextual embeddings cluster all natural-English text in a small subspace. The package's authors recommend rescaling F1 against a per-language random-pair baseline (\texttt{rescale\_with\_baseline=True}, \texttt{lang="en"}) to make absolute magnitudes interpretable. We compute both raw and rescaled F1 over the same $\binom{10}{2}{=}45$ run-pairs per article (4,500 pairs per model).
 
 \begin{table}[htbp]
 \centering
-\caption{Pairwise contrasts of cloud-API field-level EMR surviving Holm-Bonferroni correction at $\alpha{=}0.05$.}
-\label{tab:mcc}
-\begin{tabular}{llccc}
+\caption{BERTScore F1 (raw vs.\ rescaled-with-baseline) per deployment stack, computed on five-field metadata concatenations across all 4,500 run-pairs. Rescaled F1 subtracts the random-pair baseline, exposing the genuine semantic agreement signal that raw F1 saturates. Negative rescaled values (e.g., Gemini's minimum $-0.458$) indicate pairs less similar than random English text. Means/std/min/max are over the 4,500 pairs.}
+\label{tab:bertscore_rescaled}
+\begin{tabular}{lcccccc}
 \toprule
-\textbf{Field} & \textbf{Models} & \textbf{$\Delta$ EMR} & \textbf{Raw $p$} & \textbf{Holm $p$} \\
+\textbf{Deployment Stack} & \multicolumn{3}{c}{\textbf{Raw F1}} & \multicolumn{3}{c}{\textbf{Rescaled F1}} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+ & Mean & Min & $\geq 0.95$ & Mean & Min & $\geq 0.95$ \\
 \midrule
-study\_location           & Claude vs.\ GPT-4.1   & $-0.220$ & $<\!0.0001$ & $\mathbf{<\!0.0001}$ \\
-study\_location           & Gemini vs.\ GPT-4.1   & $-0.104$ & $0.001$ & $\mathbf{0.018}$ \\
-extraction\_overall\_EMR  & Claude vs.\ Gemini    & $-0.150$ & $0.001$ & $\mathbf{0.026}$ \\
+LLaMA 3 8B / Ollama / M4       & 1.000 & 1.000 & 100.0\% & 1.000 & 1.000 & 100.0\% \\
+Mistral 7B / Ollama / M4       & 1.000 & 1.000 & 100.0\% & 1.000 & 1.000 & 100.0\% \\
+Gemma 2 9B / Ollama / M4       & 1.000 & 1.000 & 100.0\% & 1.000 & 1.000 & 100.0\% \\
+\midrule
+Claude Sonnet 4.5 / Anthropic  & 0.997 & 0.931 & 99.7\%  & 0.983 & \phantom{$-$}0.594 & 88.7\% \\
+Gemini 2.5 Pro / Google        & 0.997 & 0.754 & 98.5\%  & 0.979 & $-0.458$ & 93.4\% \\
+GPT-4.1 / OpenAI               & 1.000 & 0.956 & 100.0\% & 0.998 & \phantom{$-$}0.740 & 98.9\% \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\noindent The remaining 18 contrasts (population, sample\_size, study\_design, study\_period, screening overall, etc.) are not statistically robust after FWER correction; the original ``distinct instability profiles'' claim (main text Finding~3) is therefore tightened to: \emph{differences are robust for study\_location and overall extraction EMR, but not for other categorical fields}.
+\noindent The rescaling substantially separates the API models: raw F1 places all three within 0.003 of each other (saturation), whereas rescaled F1 reveals that Gemini's minimum pair similarity drops below the random-English baseline ($-0.458$), confirming that some Gemini extraction-text pairs are genuinely semantically dissimilar---not merely subject to numeric-precision noise. This supports the main-text observation (Finding~3 of Section~\ref{main-sec:semantic}) that ``Gemini shows the lowest minimum BERTScore $F_1{=}0.754$ \ldots\ some articles receive genuinely divergent interpretations across runs.''
+
+% ============================================================
+\section{Multiple Comparison Correction for Field-Level Contrasts}
+\label{sec:mcc_supp}
+
+Per RSM P1.b audit, the original two-proportion $z$-test was replaced with McNemar's test because the contrasts compare \emph{paired} per-item consistency outcomes on the same 100 articles (or 500 abstracts) across cloud APIs.
+We compute, for each model $M$ and field $F$, the article-level binary indicator $b_i^{M,F}{=}1$ if all 10 runs of $M$ produced an identical value for $F$ on article $i$, $0$ otherwise; the paired contrasts are then evaluated by McNemar's test on the $2{\times}2$ discordance table of $(b_i^{M_1,F}, b_i^{M_2,F})$, using the exact mid-$p$ binomial when discordants $b{+}c{\leq}25$ and the chi-square with continuity correction otherwise (\texttt{statsmodels.stats.contingency\_tables.mcnemar}).
+Holm-Bonferroni (FWER) and Benjamini-Hochberg (FDR) corrections are applied to the 21 paired contrasts (5 metadata fields plus overall extraction and screening EMR; 3 pairwise comparisons each). Of 21 contrasts: 7 are significant at raw $p{<}0.05$, 4 survive Holm correction, and 5 survive BH-FDR.
+
+\begin{table}[htbp]
+\centering
+\caption{Paired McNemar contrasts of cloud-API consistency surviving Holm-Bonferroni or BH-FDR correction at $\alpha{=}0.05$. ``$b$/$c$'' are the discordant cell counts ($b{=}$M$_1$ match, M$_2$ mismatch; $c{=}$M$_1$ mismatch, M$_2$ match).}
+\label{tab:mcc}
+\begin{tabular}{llcccccc}
+\toprule
+\textbf{Field} & \textbf{Models} & \textbf{$\Delta$ EMR} & \textbf{$b/c$} & \textbf{Raw $p$} & \textbf{Holm $p$} & \textbf{BH-FDR $p$} \\
+\midrule
+study\_location           & Claude vs.\ GPT-4.1   & $-0.220$ & $0/22$  & $<\!0.0001$    & $\mathbf{<\!0.0001}$ & $\mathbf{<\!0.0001}$ \\
+study\_location           & Gemini vs.\ GPT-4.1   & $-0.104$ & $0/10$  & $0.0020$       & $\mathbf{0.0391}$    & $\mathbf{0.0136}$ \\
+extraction\_overall\_EMR  & Claude vs.\ Gemini    & $-0.150$ & $4/19$  & $0.0026$       & $\mathbf{0.0468}$    & $\mathbf{0.0136}$ \\
+screening\_overall\_EMR   & Claude vs.\ Gemini    & $+0.038$ & $27/8$  & $0.0023$       & $\mathbf{0.0446}$    & $\mathbf{0.0136}$ \\
+study\_location           & Claude vs.\ Gemini    & $-0.115$ & $2/13$  & $0.0074$       & $0.1255$             & $\mathbf{0.0310}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent The remaining 16 contrasts (population, sample\_size, study\_design, study\_period; some screening/extraction overall pairs) are not statistically robust after FWER correction; the original ``distinct instability profiles'' claim (main text Finding~3) is therefore tightened to: \emph{differences are robust for study\_location, overall extraction EMR (Claude vs.\ Gemini), and overall screening EMR (Claude vs.\ Gemini), but not for other categorical fields}.
+Replacing the original two-proportion $z$-test with McNemar slightly increases the number of contrasts surviving Holm correction (from~3 to~4), as McNemar conditions on the discordant pairs and gains power when within-pair concordance is high.
+
+% ============================================================
+\section{Fleiss' Kappa for Inter-Run Agreement}
+\label{sec:fleiss_supp}
+
+Per RSM P1.c audit, we report Fleiss' $\kappa$ for inter-run agreement on screening decisions and extraction outputs, treating each of the 10 LLM runs as one rater. Fleiss' $\kappa$ adjusts the raw concordance for the agreement expected by chance under fixed-marginal multinomial sampling, providing a more interpretable benchmark than EMR alone (which conflates ``perfectly consistent'' with ``trivially consistent in a degenerate-marginals regime''). Asymptotic 95\% CIs use the closed-form variance of Fleiss (1971, eq.~13).
+
+\begin{table}[htbp]
+\centering
+\caption{Fleiss' $\kappa$ (95\% CI) for inter-run agreement across 10 runs per deployment stack. Screening: 3-class decisions (include/exclude/uncertain) over items present in all 10 runs. Extraction (hash): each unique output hash treated as a distinct category. Extraction (per categorical field): study\_design and population. Landis \& Koch (1977) reference bands: $<0.0$ poor, $0.0$--$0.2$ slight, $0.21$--$0.4$ fair, $0.41$--$0.6$ moderate, $0.61$--$0.8$ substantial, $0.81$--$1.0$ almost perfect.}
+\label{tab:fleiss}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Deployment Stack} & \textbf{Screening (3-class)} & \textbf{Extraction (hash)} & \textbf{study\_design} & \textbf{population} \\
+\midrule
+LLaMA 3 8B / Ollama / M4       & $1.000\,[0.975, 1.025]$ & $1.000\,[0.997, 1.003]$ & $1.000\,[0.942, 1.058]$ & $1.000\,[0.952, 1.048]$ \\
+Mistral 7B / Ollama / M4       & $1.000\,[0.896, 1.104]$ & $1.000\,[0.997, 1.003]$ & $1.000\,[0.945, 1.055]$ & $1.000\,[0.956, 1.044]$ \\
+Gemma 2 9B / Ollama / M4       & $1.000\,[0.965, 1.035]$ & $1.000\,[0.997, 1.003]$ & $1.000\,[0.945, 1.055]$ & $1.000\,[0.951, 1.049]$ \\
+\midrule
+Claude Sonnet 4.5 / Anthropic  & $0.981\,[0.965, 0.998]$ & $\mathbf{0.180\,[0.178, 0.181]}$ & $0.985\,[0.933, 1.037]$ & $0.974\,[0.923, 1.024]$ \\
+Gemini 2.5 Pro / Google        & $0.975\,[0.955, 0.995]$ & $\mathbf{0.505\,[0.502, 0.507]}$ & $1.000\,[0.949, 1.051]$ & $0.979\,[0.937, 1.020]$ \\
+GPT-4.1 / OpenAI               & $0.974\,[0.959, 0.989]$ & $\mathbf{0.512\,[0.509, 0.514]}$ & $0.990\,[0.937, 1.044]$ & $0.997\,[0.949, 1.044]$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent For screening decisions, all six deployment stacks reach the Cochrane $\kappa{\geq}0.80$ guideline for human inter-rater agreement, with all three local stacks attaining the trivial upper bound $\kappa{=}1.000$ and the three cloud APIs in the ``almost perfect'' band ($\kappa{\in}[0.974, 0.981]$).
+For \emph{whole-output} extraction hashes, however, Fleiss' $\kappa$ collapses for the cloud APIs to $0.180$ (Claude, ``slight''), $0.505$ (Gemini, ``moderate''), and $0.512$ (GPT-4.1, ``moderate''). The Claude value is particularly stark: when whole-output hash is the rating, Claude's 10 runs agree at only the ``slight'' level on the Landis-Koch scale, well below the Cochrane $\kappa{\geq}0.80$ threshold. Per-field $\kappa$ on categorical extraction fields (study\_design, population) remains in the ``almost perfect'' band for all stacks, isolating the source of low whole-output $\kappa$ to the variable-length \texttt{estimates} array (already documented in Section~\ref{main-sec:fieldlevel} of the main text).
+
+% ============================================================
+\section{Hartung-Knapp-Sidik-Jonkman Random-Effects Sensitivity}
+\label{sec:hksj_supp}
+
+Per RSM P2.a audit, we re-ran the per-run random-effects meta-analysis (full 100-article corpus, one pooled estimate per $\text{model}{\times}\text{run}$ combination) using the Hartung-Knapp-Sidik-Jonkman (HKSJ) variance correction alongside the original DerSimonian-Laird (DL) Wald-$z$ formulation. Both estimators share the same $\tau^2$ (method-of-moments); HKSJ inflates the standard error to $\sqrt{q^{\ast}/\sum w_i^{\ast}}$ and uses $t_{0.975,k-1}$ as the critical value. Cochrane Handbook 6.5+ recommends HKSJ over DL for $k{<}10$ because DL is known to be liberal (anti-conservative).
+
+\begin{table}[htbp]
+\centering
+\caption{Per-run random-effects pooled RR (mean across 10 runs) and 95\% CIs under DL (Wald-z) vs.\ HKSJ ($t_{k{-}1}$), with HKSJ-to-DL width ratio. ``\% runs cross null'' = fraction of the 10 LLM runs whose pooled 95\% CI on the full 100-article corpus includes RR${=}$1.}
+\label{tab:hksj_full}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Deployment Stack} & \textbf{Mean RE RR} & \textbf{Mean DL CI} & \textbf{Mean HKSJ CI} & \textbf{HKSJ/DL width} & \textbf{\% runs cross null} \\
+\midrule
+LLaMA 3 8B        & 1.0377 & $[1.031, 1.045]$ & $[1.019, 1.057]$ & $2.65\times$ & 0\% (DL) / 0\% (HKSJ) \\
+Mistral 7B        & 1.0317 & $[1.025, 1.038]$ & $[1.016, 1.048]$ & $2.51\times$ & 0\% (DL) / 0\% (HKSJ) \\
+Gemma 2 9B        & 1.0253 & $[1.020, 1.031]$ & $[1.012, 1.039]$ & $2.51\times$ & 0\% (DL) / 0\% (HKSJ) \\
+\midrule
+Claude Sonnet 4.5 & 1.0148 & $[1.013, 1.017]$ & $[1.009, 1.021]$ & $2.70\times$ & 0\% (DL) / 0\% (HKSJ) \\
+Gemini 2.5 Pro    & 1.0213 & $[1.018, 1.025]$ & $[1.012, 1.031]$ & $2.54\times$ & 0\% (DL) / 0\% (HKSJ) \\
+GPT-4.1           & 1.0236 & $[1.019, 1.028]$ & $[1.013, 1.034]$ & $2.22\times$ & 0\% (DL) / 0\% (HKSJ) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent On the full 100-article corpus, HKSJ widens CIs by $2.2{-}2.7{\times}$ but every per-run CI continues to exclude RR${=}1$ under both estimators. Thus the main-text conclusion that ``no run-pair within any model produced a 95\% random-effects CI crossing the null in the full-corpus pooling'' is \emph{robust} to the choice of DL or HKSJ. The HKSJ correction matters substantially in the small-literature simulation (Section~\ref{sec:smalllit_supp}), where the $t_{k{-}1}$ critical value and the multiplicative $q^{\ast}$ inflation become dominant.
 
 % ============================================================
 \section{Small-Literature Meta-Analytic Simulation}
@@ -764,24 +857,34 @@ extraction\_overall\_EMR  & Claude vs.\ Gemini    & $-0.150$ & $0.001$ & $\mathb
 
 \begin{table}[htbp]
 \centering
-\caption{Random-effects (DerSimonian-Laird) pooled RR variation across 200 random subsamples per $k$, seed=42, computed independently for each of 10 LLM runs. ``Unstable null-crossing'' = subsamples where the pooled 95\% CI crosses RR=1 in some runs but not others (i.e., the meta-analytic conclusion changes depending on the LLM run).}
+\caption{Random-effects pooled RR variation across 200 random subsamples per $k$, seed=42, computed independently for each of 10 LLM runs. ``Unstable null-crossing'' = subsamples where the pooled 95\% CI crosses RR=1 in some runs but not others (i.e., the meta-analytic conclusion changes depending on the LLM run). Both DerSimonian-Laird (DL, Wald-z) and Hartung-Knapp-Sidik-Jonkman (HKSJ, $t_{k{-}1}$) variances are reported; HKSJ is recommended by Cochrane Handbook 6.5+ for $k{<}10$.}
 \label{tab:smalllit}
-\begin{tabular}{lcccc}
+\begin{tabular}{lccccc}
 \toprule
-\textbf{Model} & \textbf{$k$} & \textbf{Mean range} & \textbf{P95 range} & \textbf{\% unstable null-cross} \\
+\textbf{Model} & \textbf{$k$} & \textbf{Mean range} & \textbf{P95 range} & \textbf{\% unstable (DL)} & \textbf{\% unstable (HKSJ)} \\
 \midrule
-Claude Sonnet 4.5 & 10 & 0.0082 & 0.0292 & \textbf{0.50\%} \\
-Claude Sonnet 4.5 & 15 & 0.0081 & 0.0237 & 0.00\% \\
-Claude Sonnet 4.5 & 20 & 0.0078 & 0.0197 & 0.00\% \\
-Gemini 2.5 Pro    & 10 & 0.0167 & 0.0471 & \textbf{0.50\%} \\
-Gemini 2.5 Pro    & 15 & 0.0131 & 0.0350 & 0.00\% \\
-Gemini 2.5 Pro    & 20 & 0.0110 & 0.0227 & 0.00\% \\
-GPT-4.1           & 10 & 0.0063 & 0.0263 & 0.00\% \\
-GPT-4.1           & 15 & 0.0054 & 0.0150 & 0.00\% \\
-GPT-4.1           & 20 & 0.0065 & 0.0149 & 0.00\% \\
+Claude Sonnet 4.5 & 10 & 0.0082 & 0.0292 & \textbf{0.50\%} & \textbf{31.50\%} \\
+Claude Sonnet 4.5 & 15 & 0.0081 & 0.0237 & 0.00\% & \textbf{16.50\%} \\
+Claude Sonnet 4.5 & 20 & 0.0078 & 0.0197 & 0.00\% & \textbf{16.50\%} \\
+Claude Sonnet 4.5 & 30 & 0.0073 & 0.0150 & 0.00\% & 0.00\% \\
+Gemini 2.5 Pro    & 10 & 0.0167 & 0.0471 & \textbf{0.50\%} & \textbf{48.50\%} \\
+Gemini 2.5 Pro    & 15 & 0.0131 & 0.0350 & 0.00\% & \textbf{28.50\%} \\
+Gemini 2.5 Pro    & 20 & 0.0110 & 0.0227 & 0.00\% & \textbf{10.50\%} \\
+Gemini 2.5 Pro    & 30 & 0.0089 & 0.0151 & 0.00\% & 0.00\% \\
+GPT-4.1           & 10 & 0.0063 & 0.0263 & 0.00\% & \textbf{20.00\%} \\
+GPT-4.1           & 15 & 0.0054 & 0.0150 & 0.00\% & 5.00\% \\
+GPT-4.1           & 20 & 0.0065 & 0.0149 & 0.00\% & 0.50\% \\
+GPT-4.1           & 30 & 0.0060 & 0.0114 & 0.00\% & 0.00\% \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+\noindent \textbf{HKSJ sensitivity.}
+Per RSM P2.a audit, we re-ran the small-literature simulation with the Hartung-Knapp-Sidik-Jonkman (HKSJ) variance correction alongside the original DL/Wald-z formulation.
+HKSJ uses the same method-of-moments $\tau^2$ estimator as DL but inflates the standard error to $\sqrt{q^{\ast}/\sum w_i^{\ast}}$, where $q^{\ast}{=}\frac{1}{k{-}1}\sum w_i^{\ast}(y_i{-}\hat\theta_{\text{RE}})^2$, and replaces the $z_{0.975}$ Wald critical value with $t_{0.975,\,k{-}1}$.
+Because $t$-percentiles inflate as $k{\to}2$ and $q^{\ast}{\geq}1/\sum w_i^{\ast}$ under heterogeneity, HKSJ produces substantially wider CIs in small literatures.
+The unstable-null-crossing rate under HKSJ is markedly higher: at $k{=}10$, $\mathbf{31.5\%}$ of Claude subsamples, $\mathbf{48.5\%}$ of Gemini subsamples, and $\mathbf{20.0\%}$ of GPT-4.1 subsamples produce run-dependent reversals of the meta-analytic conclusion (versus 0.5\%, 0.5\%, and 0.0\% under DL).
+The qualitative conclusion of the main text---\emph{LLM non-determinism propagates into the downstream conclusion only in small literatures}---is robust to the choice of variance estimator; the magnitude of the effect is substantially amplified under HKSJ, which Cochrane Handbook 6.5+ recommends precisely for $k{<}10$.
 
 % ============================================================
 \section{Seed-Effect Empirical Test}

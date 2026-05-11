@@ -19,6 +19,8 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{array}
+\usepackage{xr}
+\externaldocument[supp-]{supplementary}
 
 % ── Layout fix ──────────────────────────────────────────
 \raggedbottom   % prevent vertical stretching that creates gaps
@@ -289,11 +291,12 @@ We do not retroactively present these heuristic labels as a human gold standard.
 In response to peer review, we additionally conducted a \textbf{dual-independent human-labeling validation} on a stratified subset of 100~abstracts (25~clear-include + 25~clear-exclude + 50~ambiguous, sampled with stratification by year-tertile and seed${=}$42).
 Two reviewers (one blinded) independently classified each abstract via the protocol in Supplementary~\S4, with discordances resolved by a third reviewer; we computed Cohen's $\kappa$ on the 3-class outcome (include/exclude/uncertain) and on the binary include-vs.-exclude collapse.
 Results of this validation will be reported alongside the heuristic-only accuracy in the camera-ready version (the dual-labeling campaign is in progress at the time of submission); the protocol targets the Cochrane standard ($\kappa{\geq}0.80$).
-For extraction, we constructed two independent reference standards: (a) a \emph{silver-internal} consensus from majority vote across all 6~models $\times$ 10~runs (60~votes per item), and (b) a \emph{silver-external} consensus from DeepSeek-R1 (a reasoning model from a different provider family, 5~runs $\times$ 100~items, majority vote per field).
-Cross-validation between these two silvers yields Spearman $\rho{=}0.845$ on \texttt{effect\_estimate} and 80\% agreement across numeric fields, supporting their use as comparative anchors.
+For extraction, we constructed two independent reference standards: (a) a \emph{silver-internal} consensus from majority vote across all 6~models $\times$ 10~runs (60~votes per item), and (b) a \emph{silver-external} consensus from DeepSeek-R1 (5~runs $\times$ 100~items, majority vote per field).
+DeepSeek-R1 was selected for the silver-external role on three independence axes: (i)~it is served by a provider outside the four tested in our main analysis, (ii)~it was trained predominantly on a different (Chinese-led, mixed open/closed) corpus, and (iii)~it uses an explicit-reasoning decoding paradigm distinct from the standard chat models evaluated here, which together make correlated systematic errors with the evaluated stacks unlikely.
+Cross-validation between these two silvers yields Spearman $\rho{=}0.845$ on \texttt{effect\_estimate} and 80\% agreement across numeric fields (consensus subset, see Supplementary~\S14), supporting their use as comparative anchors.
 For the 25~INCLUDE items in the dual-human subset, dual-human extraction labels additionally serve as a strict gold standard.
 
-Because our primary metric (EMR) measures self-consistency rather than accuracy, gold-standard quality affects only the secondary accuracy analysis; we report secondary accuracy against three sources (heuristic, silver-internal, silver-external; plus dual-human gold for the 25-item subset) to triangulate the result.
+Because our primary metric (EMR) measures self-consistency rather than accuracy, gold-standard quality affects only the secondary accuracy analysis; we report secondary accuracy against three sources (heuristic, silver-internal, silver-external---the latter computed on the consensus subset only, see Supplementary~\S14; plus dual-human gold for the 25-item subset) to triangulate the result.
 
 \subsection{Deployment Stacks}
 
@@ -495,6 +498,13 @@ Among the cloud APIs, GPT-4.1 showed a 3.0\% flip rate (15~abstracts), Claude 2.
 Notably, accuracy and reproducibility behaved as independent properties: Gemini achieved the highest accuracy (0.964) but the lowest reproducibility ($\emr{=}0.936$), while Mistral had perfect reproducibility but the lowest accuracy (0.628) due to an include-biased strategy (sensitivity${=}$1.000, specificity${=}$0.240).
 This illustrates that a model can be accurate on average yet inconsistent across individual runs, and conversely, that perfect reproducibility does not imply high accuracy.
 
+\medskip
+\noindent\textbf{Inter-run agreement (Fleiss' $\kappa$).}
+As a chance-corrected complement to EMR, we computed Fleiss' $\kappa$ across the 10 runs on the 3-class screening decision (include/exclude/uncertain) for each deployment stack.
+Inter-run Fleiss' $\kappa$ for screening ranged from $0.974$ (GPT-4.1, ``almost perfect'') to $1.000$ (all three local stacks); the cloud APIs were $\kappa{=}0.981$ (Claude), $0.975$ (Gemini), and $0.974$ (GPT-4.1), all comfortably above the Cochrane $\kappa{\geq}0.80$ guideline for human reviewer agreement.\autocite{higgins2019cochrane}
+For whole-output extraction (each unique output hash as a distinct rating category), the picture is dramatically different: Claude's inter-run $\kappa{=}0.180$ (``slight'' on Landis \& Koch's scale), Gemini's $\kappa{=}0.505$ (``moderate''), and GPT-4.1's $\kappa{=}0.512$ (``moderate''); local stacks retain $\kappa{=}1.000$.
+Full Fleiss' $\kappa$ values with 95\% CIs and per-categorical-field decompositions are reported in Supplementary Table~\ref{supp-tab:fleiss}.
+
 \subsection{Extraction Reproducibility}
 
 The extraction results reveal a dramatically larger reproducibility gap (Table~\ref{tab:extraction}).
@@ -571,11 +581,11 @@ To disentangle variation in the five metadata fields from variation in numeric e
 
 \begin{table}[htbp]
 \centering
-\caption{Semantic equivalence under progressively relaxed criteria ($n\!=\!100$ articles, 10~runs). Columns 2--4 report whole-output EMR over the five metadata fields plus estimate count stability. BERTScore F1 (\texttt{roberta-large}) reports the mean $\pm$ SD across all $\binom{10}{2}{=}45$ unique run pairs per article (4,500~pairs per model). Hash-based EMR (from Table~\ref{tab:extraction}) additionally requires identical numeric estimates. The gap between high BERTScore (${\geq}0.997$) and low hash-based EMR (${\leq}0.200$) demonstrates that even near-identical metadata co-occurs with divergent numeric extractions.}
+\caption{Semantic equivalence under progressively relaxed criteria ($n\!=\!100$ articles, 10~runs). Columns 2--4 report whole-output EMR over the five metadata fields plus estimate count stability. BERTScore F1 (\texttt{roberta-large}) reports the mean $\pm$ SD across all $\binom{10}{2}{=}45$ unique run pairs per article (4,500~pairs per model). Raw F1 is reported here; rescaled F1 (against the package's random-pair English baseline) is shown in Supp.~Table~\ref{supp-tab:bertscore_rescaled}. Hash-based EMR (from Table~\ref{tab:extraction}) additionally requires identical numeric estimates. The gap between high BERTScore (${\geq}0.997$) and low hash-based EMR (${\leq}0.200$) demonstrates that even near-identical metadata co-occurs with divergent numeric extractions.}
 \label{tab:semantic}
 \begin{tabular}{lccclc}
 \toprule
-\textbf{Deployment Stack} & \textbf{Exact} & \textbf{Norm.} & \textbf{Fuzzy} & \textbf{BERTScore F1} & \textbf{Hash}$^{*}$ \\
+\textbf{Deployment Stack} & \textbf{Exact} & \textbf{Norm.} & \textbf{Fuzzy} & \textbf{BERTScore F1$^{\dagger}$} & \textbf{Hash}$^{*}$ \\
 \midrule
 LLaMA 3 8B / Ollama / M4       & 1.000 & 1.000 & 1.000 & $1.000 \pm 0.000$ & 1.000 \\
 Mistral 7B / Ollama / M4       & 1.000 & 1.000 & 1.000 & $1.000 \pm 0.000$ & 1.000 \\
@@ -585,7 +595,8 @@ Claude Sonnet 4.5 / Anthropic  & 0.640 & 0.680 & 0.690 & $0.997 \pm 0.009$ & 0.0
 Gemini 2.5 Pro / Google        & 0.620 & 0.620 & 0.630 & $0.997 \pm 0.022$ & 0.200 \\
 GPT-4.1 / OpenAI               & 0.880 & 0.880 & 0.880 & $1.000 \pm 0.004$ & 0.150 \\
 \bottomrule
-\multicolumn{6}{l}{\footnotesize $^{*}$From Table~\ref{tab:extraction}; includes all fields and numeric estimates.}
+\multicolumn{6}{l}{\footnotesize $^{*}$From Table~\ref{tab:extraction}; includes all fields and numeric estimates.}\\
+\multicolumn{6}{l}{\footnotesize $^{\dagger}$Raw F1 reported; rescaled F1 (against random-pair baseline) shown in Supp.~Table~\ref{supp-tab:bertscore_rescaled}.}
 \end{tabular}
 \end{table}
 
@@ -654,9 +665,14 @@ Across all 60~combinations, the pooled RR ranged from 1.015 to 1.038 (mean 1.025
 
 This robustness, however, depends critically on $k$.
 We subsampled the corpus to plausible small-literature scenarios ($k\in\{10,15,20,30\}$, $N{=}200$ random subsamples per $k$, seed${=}$42) and computed random-effects pooled estimates for each of the 10 LLM runs.
-For $k{=}10$~subsamples, \textbf{0.5\% of Claude and Gemini subsamples} (1 of 200 each) produced \emph{unstable null-crossing}: the pooled 95\% CI crossed RR${=}$1 in some runs but not others, meaning that the meta-analytic conclusion (significantly above null vs.\ not significant) \textbf{changed depending on which LLM run generated the inputs}.
-For $k{\geq}15$, no subsample exhibited unstable null-crossing across runs in any model.
+For $k{=}10$~subsamples, \textbf{0.5\% of Claude and Gemini subsamples} (1 of 200 each) produced \emph{unstable null-crossing} under the DerSimonian-Laird Wald-$z$ formulation: the pooled 95\% CI crossed RR${=}$1 in some runs but not others, meaning that the meta-analytic conclusion (significantly above null vs.\ not significant) \textbf{changed depending on which LLM run generated the inputs}.
+For $k{\geq}15$, no subsample exhibited unstable null-crossing across runs in any model under DL.
 This demonstrates a concrete, plausible scenario where LLM non-determinism affects the downstream conclusion: emerging literatures with $k{\sim}10$~articles (small reviews of new exposures, rare outcomes, or recent topics) are susceptible to run-dependent reversals, even when the underlying signal is detectable.
+
+Because DerSimonian-Laird is known to be liberal in small-$k$ settings, we re-ran the simulation with the Hartung-Knapp-Sidik-Jonkman (HKSJ) variance correction (Cochrane Handbook 6.5+ recommendation for $k{<}10$).
+Under HKSJ at $k{=}10$, the unstable-null-crossing rate rises to \textbf{31.5\% (Claude), 48.5\% (Gemini), and 20.0\% (GPT-4.1)}, with non-trivial rates persisting up to $k{=}20$ for Claude and Gemini (16.5\% and 10.5\%, respectively) before vanishing at $k{=}30$.
+The qualitative conclusion is robust to the variance estimator (run-dependent reversals affect only small literatures); the magnitude is substantially amplified under the more conservative HKSJ formulation appropriate for $k{<}10$.
+Full DL-vs.-HKSJ comparison appears in Supplementary Section~\ref{supp-sec:hksj_supp} and Table~\ref{supp-tab:smalllit}.
 
 \subsection{Fixed-Slot Extraction Sensitivity}
 \label{sec:fixedslot}

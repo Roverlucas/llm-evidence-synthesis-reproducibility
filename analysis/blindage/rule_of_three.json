@@ -1,7 +1,7 @@
 {
   "method": "Rule of three: 95% upper bound on non-match rate when 0 non-matches observed in n items",
   "formula": "UCL_{95%}(non-match rate) = 3/n  (Hanley & Lippman-Hand, JAMA 1983)",
-  "rationale": "Bootstrap CI [1.000, 1.000] is uninformative when EMR=1.000 with 0 variation. Rule of three provides a principled upper bound on the unseen non-match rate.",
+  "rationale": "Bootstrap CI [1.000, 1.000] is uninformative when EMR=1.000 with 0 variation.",
   "items": {
     "llama3-8b": {
       "screening": {

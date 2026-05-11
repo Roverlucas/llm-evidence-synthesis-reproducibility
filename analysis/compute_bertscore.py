@@ -1,13 +1,38 @@
 #!/usr/bin/env python3
-"""Compute BERTScore F1 for extraction outputs using all-pairs comparison (10 choose 2 = 45 pairs per article)."""
+"""Compute BERTScore F1 for extraction outputs using all-pairs comparison.
 
+For each model, computes BERTScore F1 over 10-choose-2 = 45 run-pairs per article
+(100 articles -> 4500 pairs per model). Reports BOTH raw F1 and rescaled F1
+(rescale_with_baseline=True), per RSM P1.a audit recommendation: raw BERTScore
+saturates near 1.0 even for unrelated pairs, so baseline rescaling is required
+to interpret the magnitude of semantic agreement.
+
+Outputs:
+    analysis/bertscore_results.json       (raw F1 -- legacy, retained for back-compat)
+    analysis/bertscore_results_full.json  (raw AND rescaled F1, provenance hash)
+"""
+
+import hashlib
 import json
 import math
 import os
+import random
+import sys
 from itertools import combinations
 
+import numpy as np
 import torch
 from bert_score import score as bert_score
+
+# ---------------------------------------------------------------------------
+# Provenance / determinism
+# ---------------------------------------------------------------------------
+SEED = 42
+random.seed(SEED)
+np.random.seed(SEED)
+torch.manual_seed(SEED)
+if torch.backends.mps.is_available():
+    torch.mps.manual_seed(SEED)
 
 # ---------------------------------------------------------------------------
 # Config
@@ -15,12 +40,16 @@ from bert_score import score as bert_score
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW_DIR = os.path.join(BASE_DIR, "data", "raw_outputs")
 OUT_PATH = os.path.join(BASE_DIR, "analysis", "bertscore_results.json")
+OUT_FULL_PATH = os.path.join(BASE_DIR, "analysis", "bertscore_results_full.json")
 MODELS = [
     "llama3-8b", "mistral-7b", "gemma2-9b",
     "claude-sonnet-4-5", "gemini-2.5-pro", "gpt-4.1",
 ]
 NUM_RUNS = 10
 TEXT_FIELDS = ["study_design", "study_location", "study_period", "population", "sample_size"]
+BERT_MODEL = "roberta-large"
+BERT_LAYER = 17
+BATCH_SIZE = 64
 
 
 def item_to_text(item: dict) -> str:
@@ -48,16 +77,51 @@ def load_runs(model: str) -> dict:
     return runs
 
 
+def summary_stats(f1_list):
+    n = len(f1_list)
+    if n == 0:
+        return {"n": 0, "mean": None, "std": None, "min": None, "max": None,
+                "prop_ge_0.95": None, "prop_ge_0.99": None}
+    mean = sum(f1_list) / n
+    var = sum((x - mean) ** 2 for x in f1_list) / n
+    std = math.sqrt(var)
+    minv = min(f1_list)
+    maxv = max(f1_list)
+    n_95 = sum(1 for v in f1_list if v >= 0.95)
+    n_99 = sum(1 for v in f1_list if v >= 0.99)
+    return {
+        "n": n,
+        "mean": round(mean, 6),
+        "std": round(std, 6),
+        "min": round(minv, 6),
+        "max": round(maxv, 6),
+        "prop_ge_0.95": round(n_95 / n, 6),
+        "prop_ge_0.99": round(n_99 / n, 6),
+    }
+
+
 def main():
-    results = {}
+    legacy_results = {}
+    full_results = {
+        "metadata": {
+            "seed": SEED,
+            "bert_model": BERT_MODEL,
+            "bert_layer": BERT_LAYER,
+            "batch_size": BATCH_SIZE,
+            "rescale_with_baseline": "Both raw and rescaled F1 computed in parallel "
+            "(rescaled uses bert_score package's roberta-large baseline; reported per RSM P1.a audit).",
+            "num_runs": NUM_RUNS,
+            "text_fields": TEXT_FIELDS,
+        },
+        "models": {},
+    }
+
     run_pairs = list(combinations(range(1, NUM_RUNS + 1), 2))  # 45 pairs
     print(f"All-pairs comparison: {len(run_pairs)} run pairs per article (10 choose 2)")
 
     for model in MODELS:
         sep = "=" * 60
-        print(f"\n{sep}")
-        print(f"Model: {model}")
-        print(sep)
+        print(f"\n{sep}\nModel: {model}\n{sep}")
 
         runs = load_runs(model)
 
@@ -68,112 +132,119 @@ def main():
                 cid for cid, item in runs[r].items()
                 if item.get("output") is not None
             }
-            if all_ids is None:
-                all_ids = ids_with_output
-            else:
-                all_ids &= ids_with_output
+            all_ids = ids_with_output if all_ids is None else all_ids & ids_with_output
 
         corpus_ids = sorted(all_ids)
         print(f"  Articles present in all 10 runs: {len(corpus_ids)}")
 
         # Build all-pairs: refs and cands
-        refs = []
-        cands = []
-        pair_labels = []  # (corpus_id, run_a, run_b)
-
+        refs, cands, pair_labels = [], [], []
         for cid in corpus_ids:
             for ra, rb in run_pairs:
-                text_a = item_to_text(runs[ra][cid])
-                text_b = item_to_text(runs[rb][cid])
-                refs.append(text_a)
-                cands.append(text_b)
+                refs.append(item_to_text(runs[ra][cid]))
+                cands.append(item_to_text(runs[rb][cid]))
                 pair_labels.append((cid, ra, rb))
 
         total_pairs = len(refs)
-        print(f"  Total all-pairs: {total_pairs} ({len(corpus_ids)} articles x {len(run_pairs)} pairs)")
+        print(f"  Total all-pairs: {total_pairs}")
 
         if total_pairs == 0:
-            results[model] = {
-                "n_articles": len(corpus_ids),
-                "n_pairs": 0,
+            legacy_results[model] = {
+                "n_articles": len(corpus_ids), "n_pairs": 0,
                 "mean_f1": None, "std_f1": None, "min_f1": None,
                 "prop_ge_0.95": None, "prop_ge_0.99": None,
             }
+            full_results["models"][model] = {
+                "n_articles": len(corpus_ids), "n_pairs": 0,
+                "raw_f1": summary_stats([]), "rescaled_f1": summary_stats([]),
+            }
             continue
 
-        # Compute BERTScore in batch
-        print(f"  Computing BERTScore (roberta-large) for {total_pairs} pairs ...")
         device = "mps" if torch.backends.mps.is_available() else "cpu"
         print(f"  Device: {device}")
 
-        P, R, F1 = bert_score(
-            cands,
-            refs,
-            model_type="roberta-large",
-            num_layers=17,
-            batch_size=64,
-            device=device,
-            verbose=True,
+        # ---- Raw F1 ----
+        print(f"  [raw] Computing BERTScore ({BERT_MODEL}) for {total_pairs} pairs ...")
+        _, _, F1_raw = bert_score(
+            cands, refs,
+            model_type=BERT_MODEL, num_layers=BERT_LAYER,
+            batch_size=BATCH_SIZE, device=device, verbose=False,
+            rescale_with_baseline=False,
+            lang="en",
         )
+        f1_raw = F1_raw.tolist()
+        raw_stats = summary_stats(f1_raw)
+        print(f"    raw mean F1     = {raw_stats['mean']:.4f} +/- {raw_stats['std']:.4f}")
+        print(f"    raw min/max     = {raw_stats['min']:.4f} / {raw_stats['max']:.4f}")
+        print(f"    raw prop>=0.95  = {raw_stats['prop_ge_0.95']:.4f}")
 
-        f1_list = F1.tolist()
-        n = len(f1_list)
-        mean_f1 = sum(f1_list) / n
-        var_f1 = sum((x - mean_f1) ** 2 for x in f1_list) / n
-        std_f1 = math.sqrt(var_f1)
-        min_f1 = min(f1_list)
-        max_f1 = max(f1_list)
-        n_95 = sum(1 for v in f1_list if v >= 0.95)
-        n_99 = sum(1 for v in f1_list if v >= 0.99)
+        # ---- Rescaled F1 ----
+        print(f"  [rescaled] Recomputing with rescale_with_baseline=True ...")
+        _, _, F1_rsc = bert_score(
+            cands, refs,
+            model_type=BERT_MODEL, num_layers=BERT_LAYER,
+            batch_size=BATCH_SIZE, device=device, verbose=False,
+            rescale_with_baseline=True,
+            lang="en",
+        )
+        f1_rsc = F1_rsc.tolist()
+        rsc_stats = summary_stats(f1_rsc)
+        print(f"    rsc mean F1     = {rsc_stats['mean']:.4f} +/- {rsc_stats['std']:.4f}")
+        print(f"    rsc min/max     = {rsc_stats['min']:.4f} / {rsc_stats['max']:.4f}")
+        print(f"    rsc prop>=0.95  = {rsc_stats['prop_ge_0.95']:.4f}")
 
-        print(f"\n  Results for {model} (all-pairs):")
-        print(f"    Mean BERTScore F1:   {mean_f1:.4f} +/- {std_f1:.4f}")
-        print(f"    Min  BERTScore F1:   {min_f1:.4f}")
-        print(f"    Max  BERTScore F1:   {max_f1:.4f}")
-        print(f"    Prop F1 >= 0.95:     {n_95/n:.4f} ({n_95}/{n})")
-        print(f"    Prop F1 >= 0.99:     {n_99/n:.4f} ({n_99}/{n})")
-
-        # Per-article mean F1
+        # ---- Per-article means (raw) for legacy compatibility ----
         article_means = {}
         for i, (cid, ra, rb) in enumerate(pair_labels):
-            article_means.setdefault(cid, []).append(f1_list[i])
-        per_article = {cid: sum(vs)/len(vs) for cid, vs in article_means.items()}
-        lowest_articles = sorted(per_article.items(), key=lambda x: x[1])[:5]
+            article_means.setdefault(cid, []).append(f1_raw[i])
 
-        print(f"\n  Lowest 5 articles (by mean F1 across all pairs):")
-        for cid, amean in lowest_articles:
-            scores = article_means[cid]
-            print(f"    {cid}: mean={amean:.4f}, min={min(scores):.4f}, max={max(scores):.4f}")
-
-        results[model] = {
+        # Legacy summary (raw-only, matches existing file)
+        legacy_results[model] = {
             "n_articles": len(corpus_ids),
             "n_pairs": total_pairs,
-            "mean_f1": round(mean_f1, 6),
-            "std_f1": round(std_f1, 6),
-            "min_f1": round(min_f1, 6),
-            "max_f1": round(max_f1, 6),
-            "prop_ge_0.95": round(n_95 / n, 6),
-            "prop_ge_0.99": round(n_99 / n, 6),
+            "mean_f1": raw_stats["mean"],
+            "std_f1": raw_stats["std"],
+            "min_f1": raw_stats["min"],
+            "max_f1": raw_stats["max"],
+            "prop_ge_0.95": raw_stats["prop_ge_0.95"],
+            "prop_ge_0.99": raw_stats["prop_ge_0.99"],
         }
 
-    # Save results
-    with open(OUT_PATH, "w") as f:
-        json.dump(results, f, indent=2)
-    print(f"\n\nResults saved to {OUT_PATH}")
+        full_results["models"][model] = {
+            "n_articles": len(corpus_ids),
+            "n_pairs": total_pairs,
+            "raw_f1": raw_stats,
+            "rescaled_f1": rsc_stats,
+        }
 
-    # Print summary table
-    sep80 = "=" * 80
-    dash80 = "-" * 80
-    header = f"{'Model':<25} {'Pairs':>7} {'Mean F1':>10} {'SD':>8} {'Min':>8} {'>=0.95':>8} {'>=0.99':>8}"
-    print(f"\n{sep80}")
-    print(header)
-    print(dash80)
+    # Provenance hashes
+    legacy_payload = json.dumps(legacy_results, indent=2, sort_keys=True)
+    full_payload = json.dumps(full_results, indent=2, sort_keys=True)
+    full_results["metadata"]["sha256_self"] = hashlib.sha256(full_payload.encode()).hexdigest()
+
+    # Save
+    with open(OUT_PATH, "w") as f:
+        f.write(legacy_payload)
+    with open(OUT_FULL_PATH, "w") as f:
+        json.dump(full_results, f, indent=2, sort_keys=True)
+    print(f"\nResults saved to:\n  {OUT_PATH}\n  {OUT_FULL_PATH}")
+
+    # Summary table
+    sep80 = "=" * 92
+    dash80 = "-" * 92
+    header = (f"{'Model':<25} {'Pairs':>7} | "
+              f"{'raw mean':>9} {'raw min':>9} {'raw>=.95':>9} | "
+              f"{'rsc mean':>9} {'rsc min':>9} {'rsc>=.95':>9}")
+    print(f"\n{sep80}\n{header}\n{dash80}")
     for model in MODELS:
-        r = results[model]
+        r = full_results["models"][model]
         if r["n_pairs"] == 0:
             print(f"{model:<25} {'0':>7}")
-        else:
-            print(f"{model:<25} {r['n_pairs']:>7} {r['mean_f1']:>10.4f} {r['std_f1']:>8.4f} {r['min_f1']:>8.4f} {r['prop_ge_0.95']:>8.4f} {r['prop_ge_0.99']:>8.4f}")
+            continue
+        raw, rsc = r["raw_f1"], r["rescaled_f1"]
+        print(f"{model:<25} {r['n_pairs']:>7} | "
+              f"{raw['mean']:>9.4f} {raw['min']:>9.4f} {raw['prop_ge_0.95']:>9.4f} | "
+              f"{rsc['mean']:>9.4f} {rsc['min']:>9.4f} {rsc['prop_ge_0.95']:>9.4f}")
     print(sep80)
 
 

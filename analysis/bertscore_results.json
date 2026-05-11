@@ -1,62 +1,62 @@
 {
-  "llama3-8b": {
-    "n_articles": 100,
-    "n_pairs": 4500,
-    "mean_f1": 1.0,
-    "std_f1": 0.0,
-    "min_f1": 1.0,
-    "max_f1": 1.0,
-    "prop_ge_0.95": 1.0,
-    "prop_ge_0.99": 1.0
-  },
-  "mistral-7b": {
-    "n_articles": 100,
-    "n_pairs": 4500,
-    "mean_f1": 1.0,
-    "std_f1": 0.0,
-    "min_f1": 1.0,
-    "max_f1": 1.0,
-    "prop_ge_0.95": 1.0,
-    "prop_ge_0.99": 1.0
-  },
-  "gemma2-9b": {
-    "n_articles": 100,
-    "n_pairs": 4500,
-    "mean_f1": 1.0,
-    "std_f1": 0.0,
-    "min_f1": 1.0,
-    "max_f1": 1.0,
-    "prop_ge_0.95": 1.0,
-    "prop_ge_0.99": 1.0
-  },
   "claude-sonnet-4-5": {
+    "max_f1": 1.0,
+    "mean_f1": 0.99711,
+    "min_f1": 0.931469,
     "n_articles": 100,
     "n_pairs": 4500,
-    "mean_f1": 0.99711,
-    "std_f1": 0.008931,
-    "min_f1": 0.931469,
-    "max_f1": 1.0,
     "prop_ge_0.95": 0.996667,
-    "prop_ge_0.99": 0.900222
+    "prop_ge_0.99": 0.900222,
+    "std_f1": 0.008931
   },
   "gemini-2.5-pro": {
+    "max_f1": 1.0,
+    "mean_f1": 0.996528,
+    "min_f1": 0.753955,
     "n_articles": 100,
     "n_pairs": 4500,
-    "mean_f1": 0.996528,
-    "std_f1": 0.021634,
-    "min_f1": 0.753955,
-    "max_f1": 1.0,
     "prop_ge_0.95": 0.985111,
-    "prop_ge_0.99": 0.938889
+    "prop_ge_0.99": 0.938889,
+    "std_f1": 0.021634
+  },
+  "gemma2-9b": {
+    "max_f1": 1.0,
+    "mean_f1": 1.0,
+    "min_f1": 1.0,
+    "n_articles": 100,
+    "n_pairs": 4500,
+    "prop_ge_0.95": 1.0,
+    "prop_ge_0.99": 1.0,
+    "std_f1": 0.0
   },
   "gpt-4.1": {
+    "max_f1": 1.0,
+    "mean_f1": 0.999595,
+    "min_f1": 0.956081,
     "n_articles": 100,
     "n_pairs": 4500,
-    "mean_f1": 0.999595,
-    "std_f1": 0.003768,
-    "min_f1": 0.956081,
-    "max_f1": 1.0,
     "prop_ge_0.95": 1.0,
-    "prop_ge_0.99": 0.989333
+    "prop_ge_0.99": 0.989333,
+    "std_f1": 0.003768
+  },
+  "llama3-8b": {
+    "max_f1": 1.0,
+    "mean_f1": 1.0,
+    "min_f1": 1.0,
+    "n_articles": 100,
+    "n_pairs": 4500,
+    "prop_ge_0.95": 1.0,
+    "prop_ge_0.99": 1.0,
+    "std_f1": 0.0
+  },
+  "mistral-7b": {
+    "max_f1": 1.0,
+    "mean_f1": 1.0,
+    "min_f1": 1.0,
+    "n_articles": 100,
+    "n_pairs": 4500,
+    "prop_ge_0.95": 1.0,
+    "prop_ge_0.99": 1.0,
+    "std_f1": 0.0
   }
 }
