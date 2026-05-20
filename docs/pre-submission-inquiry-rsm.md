@@ -9,7 +9,7 @@
 
 **To:** dmavridi@uoi.gr, tpigott@gsu.edu
 **From:** lucasrover@alunos.utfpr.edu.br
-**Subject:** Pre-submission inquiry: Quantifying LLM non-determinism in evidence synthesis (36,000 LLM calls, 6 models)
+**Subject:** Pre-submission inquiry: Reproducibility of pollution-health evidence synthesis using LLM-assisted screening and extraction (36,000 LLM calls, 6 models)
 
 ---
 
@@ -17,7 +17,7 @@ Dear Professors Mavridis and Pigott,
 
 I am writing to inquire whether the following manuscript would be suitable for Research Synthesis Methods.
 
-**Title:** "When the Same Question Gets Different Answers: Quantifying LLM Non-Determinism in Evidence Synthesis"
+**Title:** "Reproducibility of Pollution–Health Evidence Synthesis Using LLM-Assisted Screening and Extraction"
 
 **Summary:** Large language models are increasingly used for abstract screening and data extraction in systematic reviews, yet a critical assumption — that identical inputs produce identical outputs — remains largely untested at scale. We conducted what we believe is the largest reproducibility experiment in this domain: 36,000 LLM calls across 120 experimental runs involving six models (LLaMA 3 8B, Mistral 7B, Gemma 2 9B, Claude Sonnet 4.5, Gemini 2.5 Pro, GPT-4.1) applied to a 500-abstract PubMed corpus on PM2.5 and respiratory health.
 

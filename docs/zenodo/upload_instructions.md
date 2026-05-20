@@ -47,7 +47,7 @@ Use os valores do `zenodo_metadata.json` que está no tarball. Resumo:
 
 | Campo | Valor |
 |-------|-------|
-| **Title** | When the Same Question Gets Different Answers: Quantifying LLM Non-Determinism Across a Full Evidence-Synthesis Pipeline — code, data, prompts, and raw outputs (companion to Research Synthesis Methods submission) |
+| **Title** | Reproducibility of Pollution–Health Evidence Synthesis Using LLM-Assisted Screening and Extraction — code, data, prompts, and raw outputs (companion to Research Synthesis Methods submission) |
 | **Upload type** | Dataset |
 | **Authors** | Rover, Lucas (ORCID: 0000-0001-6641-9224) ; Tadano, Yara de Souza |
 | **Affiliations** | UTFPR (PPGSAU para Lucas; Departamento de Matemática para Yara) |
