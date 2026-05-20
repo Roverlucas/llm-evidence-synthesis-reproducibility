@@ -1,9 +1,12 @@
 # Email de convite — Labeler 2
 
-**Instrução:** substituir `[COLEGA]` e `[DEADLINE]` antes de enviar. Anexar:
-- `labeling_protocol.md` (protocolo)
-- `subset_100_labeler2.csv` (CSV para labelar)
-- `subset_100_rayyan.csv` (caso escolha Rayyan)
+**Instrução:** substituir `[COLEGA]` e `[DEADLINE]` antes de enviar. Anexar (nesta ordem, do mais simples ao mais técnico):
+1. `quick_start_guide.md` ⭐ — guia ELI5 super visual (recomendar ler PRIMEIRO)
+2. `flowchart.png` — fluxograma do processo de decisão (1 imagem, cola no monitor)
+3. `subset_100_labeler2.csv` — planilha pra labelar (100 abstracts, screening)
+4. `extraction_25_labeler2.csv` — planilha pra etapa 2 (extração, enviar agora ou depois)
+5. `labeling_protocol.md` — protocolo técnico completo (consulta opcional)
+6. `subset_100_rayyan.csv` — formato alternativo Rayyan (caso prefira)
 
 ---
 
@@ -42,11 +45,14 @@ seu background em epidemio ambiental é exatamente o que o protocolo pede.
 - **Co-autoria negociável** se quiser também contribuir em outras etapas (redação, revisão de resultados)
 - Seu nome + ORCID no repositório GitHub como contributor
 
-### O que está em anexo
+### O que está em anexo (leia nesta ordem)
 
-1. `labeling_protocol.md` — protocolo completo com critérios, exemplos e fluxo
-2. `subset_100_labeler2.csv` — planilha para labelar (ou use Rayyan)
-3. `subset_100_rayyan.csv` — caso prefira a plataforma Rayyan (recomendada, tem blind mode)
+1. **`quick_start_guide.md`** ⭐ — guia rápido (5 min de leitura), super visual, com 4 exemplos resolvidos. **Comece por aqui.**
+2. **`flowchart.png`** — fluxograma do processo de decisão. Cola no monitor enquanto labela.
+3. `subset_100_labeler2.csv` — planilha pra labelar (100 abstracts screening, ~4h)
+4. `extraction_25_labeler2.csv` — planilha pra etapa 2 (extração, ~2h depois)
+5. `labeling_protocol.md` — protocolo técnico completo (consulta opcional)
+6. `subset_100_rayyan.csv` — caso prefira a plataforma Rayyan (tem blind mode embutido)
 
 ### Próximos passos
 
