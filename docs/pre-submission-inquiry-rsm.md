@@ -1,7 +1,10 @@
 # Pre-Submission Inquiry — Research Synthesis Methods
 
-**Date:** 2026-03-20
-**Status:** DRAFT — ready to send
+**Drafted:** 2026-03-20
+**Title aligned to OSF-registered title:** 2026-05-20 (DOI 10.17605/OSF.IO/VR934)
+**Status:** DRAFT — ready to send. **Action required from Lucas:** confirm sent or send now.
+
+> **Update protocol:** when sent, update this header with `**Sent:** YYYY-MM-DD to <editor>` and any reply received. If editor reply is positive, proceed to final submission. If negative, revise scope and resubmit.
 
 ---
 
