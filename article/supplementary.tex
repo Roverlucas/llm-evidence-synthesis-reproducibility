@@ -360,6 +360,33 @@ GPT-4.1        & OpenAI   & 0.0 & 42   & 4096  & 90s & \texttt{gpt-4.1} \\
 \end{tabular}
 \end{table}
 
+\subsection{Provider API Documentation Links}
+\label{sec:apidocs}
+
+For full reproducibility and to disambiguate the exact API surfaces used in this study, Table~\ref{tab:apidocs} lists the official documentation pages for each provider and the local serving runtime, with the access date for each link.
+This is provided so that future reviewers and replicators can verify (a)~exactly which parameters were exposed on each API surface at the time of the study, (b)~which parameters were renamed, deprecated, or added subsequently, and (c)~whether default values (e.g., for unset \texttt{top\_p}, \texttt{stop\_sequences}, or system prompts) have changed silently between the study window and any future replication attempt.
+
+\begin{table}[htbp]
+\centering
+\caption{Official documentation references for the six deployment stacks evaluated and the desconfound cloud route. URLs and access dates are recorded so that replication studies can pin to the documented behaviour rather than to current docs that may drift.}
+\label{tab:apidocs}
+\small
+\begin{tabular}{p{2.6cm}p{2.8cm}p{6.2cm}p{1.6cm}}
+\toprule
+\textbf{Provider} & \textbf{Stack / Endpoint} & \textbf{Documentation URL} & \textbf{Access date} \\
+\midrule
+Anthropic   & Claude Sonnet~4.5 / Messages API v1            & \url{https://docs.anthropic.com/en/api/messages} & 2026-02-11 \\
+Google      & Gemini~2.5 Pro / generateContent (v1)          & \url{https://ai.google.dev/api/rest}              & 2026-02-11 \\
+OpenAI      & GPT-4.1 / Chat Completions v1                  & \url{https://platform.openai.com/docs/api-reference/chat} & 2026-02-11 \\
+Ollama (local) & LLaMA~3 8B / Mistral~7B / Gemma~2 9B (v0.15.5) & \url{https://github.com/ollama/ollama/blob/main/docs/api.md} & 2026-02-11 \\
+OpenRouter $\rightarrow$ DeepInfra & \texttt{meta-llama/llama-3-8b-instruct} (desconfound route) & \url{https://openrouter.ai/docs} & 2026-04-23 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent Access dates correspond to the start of data collection for each stack.
+The full request payload schemas used in this study, including provider-specific defaults explicitly set or accepted, are reproduced as JSON skeletons in our public repository (\texttt{configs/request\_payloads/}).
+
 % ============================================================
 \section{Provenance Protocol Details}
 \label{sec:provenance}

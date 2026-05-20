@@ -184,7 +184,7 @@ Longpre et~al.\autocite{longpre2024audit} audited 1,800+ datasets, finding licen
 Liang et~al.\autocite{liang2024modelcards} analyzed 32,111~model cards on Hugging Face, finding that documentation of limitations and environmental impact remains sparse.
 The Foundation Model Transparency Index\autocite{bommasani2024fmti} scored 14~major developers across 100~indicators, finding average transparency of only 58/100.
 
-Technical solutions for provenance include the Workflow Run RO-Crate\autocite{leo2024rocrate} and the W3C PROV ontology.\autocite{kale2023provenance}
+Technical solutions for provenance include the Workflow Run RO-Crate\autocite{leo2024rocrate} and the W3C Provenance (PROV) Data Model---a W3C Recommendation defining an interoperable standard for representing the entities, activities, and agents involved in producing a piece of data.\autocite{kale2023provenance}
 Longpre et~al.\autocite{longpre2024broken} argued at ICML~2024 that current practices for data authenticity and provenance are ``fundamentally broken,'' calling for comprehensive reform.
 
 Our provenance approach builds on the lightweight protocol proposed by Rover,\autocite{rover2026jair} using SHA-256 hashing of inputs, outputs, and configurations to create an auditable trail without requiring infrastructure beyond standard file storage.
@@ -242,7 +242,7 @@ Figure~\ref{fig:pipeline} provides an overview of the experimental pipeline.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{../analysis/figures/pipeline_diagram.pdf}
-\caption{Experimental pipeline. A 500-abstract PubMed corpus is processed by six deployment stacks (three local, three API-served), each run 10~times under identical configurations. Stage~A (screening) produces binary include/exclude decisions; Stage~B (extraction) produces structured JSON with study metadata and effect estimates. All outputs are hashed (SHA-256) for provenance tracking. Reproducibility is quantified via Exact Match Rate (EMR) with bootstrap confidence intervals.}
+\caption{Experimental pipeline. A 500-abstract PubMed corpus on PM$_{2.5}$ and respiratory health is processed by six deployment stacks: three local Ollama/Apple~M4 stacks (LLaMA~3 8B, Mistral~7B, Gemma~2 9B) and three API-served stacks (Claude Sonnet~4.5/Anthropic, Gemini~2.5 Pro/Google, GPT-4.1/OpenAI). Each stack is run 10~times under identical configurations (temperature${=}$0, fixed seed where supported). Stage~A (screening) produces binary include/exclude decisions over all 500 abstracts; Stage~B (extraction) produces structured JSON over the 100 INCLUDE articles. All outputs are SHA-256-hashed for provenance tracking. Reproducibility is quantified via the Exact Match Rate (EMR) with 95\% percentile bootstrap confidence intervals.}
 \label{fig:pipeline}
 \end{figure}
 
@@ -330,6 +330,42 @@ The three API-served stacks accessed proprietary weights through their respectiv
 All stacks were queried via HTTP (urllib-based, no SDK dependencies) to ensure uniform request handling.
 API calls included up to 2~retries with exponential backoff on timeout or rate-limit errors; retried calls may route to different server nodes, introducing a minor additional source of variation for the API-served stacks.
 
+\subsection{Sources of Non-Determinism in Distributed Inference}
+\label{sec:mechanisms}
+
+It is useful to distinguish two classes of factors that can plausibly contribute to LLM non-determinism across deployment stacks.
+\emph{Cloud-deployment factors} are those intrinsic to running a model on hardware accessed over a network: end-to-end network latency, request routing across geographically distributed endpoints, shared physical hardware, and multi-tenancy isolation policies.
+\emph{Production serving-infrastructure factors} are specific design choices in the LLM inference stack: tensor parallelism with non-deterministic all-reduce, FlashAttention kernel non-determinism, dynamic continuous batching that varies request composition between calls, speculative decoding fast-paths, mixed-precision (BF16/FP16) accumulation, and prefix-caching state shared across requests.
+These two classes are conceptually distinct: a request that traverses the network can still be served on a deterministic infrastructure, and vice versa, an infrastructure with the non-deterministic features above can be exercised under local-network conditions.
+Our desconfound experiment (Section~\ref{sec:desconfound}) helps separate them empirically by holding the weights constant while varying the rest of the stack tuple.
+
+\noindent Table~\ref{tab:mechanisms} maps six of these mechanisms onto each of the six deployment stacks studied here, classifying each cell as documented (\checkmark), \emph{likely} (consistent with public information from the provider's serving infrastructure), \emph{possible} (compatible with public information but not directly confirmed), or precluded by stack design (---).
+Attribution is necessarily \emph{inferential} for the API-served stacks because the production serving stacks of OpenAI, Anthropic, and Google are closed-source; the table reflects what is publicly documented or strongly implied by published architecture descriptions, not what we directly measured per request.
+
+\begin{table}[htbp]
+\centering
+\caption{Mapping of candidate non-determinism mechanisms onto the deployment stacks evaluated in this study. \checkmark{}~= documented in public materials (e.g., provider engineering blog, vendor docs, or directly observable from API behaviour); \emph{likely}~= strongly consistent with public information about the stack but not directly attested per request; \emph{possible}~= compatible with public information but unconfirmed; ---~= precluded by the stack's design (e.g., single-replica local inference cannot use multi-GPU all-reduce). Attribution for the three API-served stacks is inferential; for the three local Ollama/M4 stacks, the absence of every listed mechanism follows directly from the single-device, single-execution-thread serving configuration. The two Together-AI / DeepInfra cloud columns refer to the same-weights desconfound stack (Section~\ref{sec:desconfound}).}
+\label{tab:mechanisms}
+\footnotesize
+\begin{tabular}{p{4.8cm}cccccc}
+\toprule
+\textbf{Mechanism} & \textbf{Local} & \textbf{Cloud} & \textbf{API-} & \textbf{API-} & \textbf{API-} \\
+                   & \textbf{(Ollama/M4)} & \textbf{(DeepInfra/L3-8B)} & \textbf{Claude} & \textbf{Gemini} & \textbf{GPT-4.1} \\
+\midrule
+1. Floating-point non-associativity (BF16/FP16 mixed-precision accumulation) & --- & \checkmark & likely & likely & likely \\
+2. Tensor parallelism / multi-GPU all-reduce reduction order & --- & likely & likely & likely & likely \\
+3. FlashAttention / fused-kernel non-determinism & --- & likely & likely & likely & likely \\
+4. Dynamic continuous batching (batch composition varies between calls) & --- & likely & \checkmark & \checkmark & \checkmark \\
+5. Speculative decoding / draft-model fast-paths & --- & possible & likely & likely & likely \\
+6. Prefix-caching state shared across requests & --- & possible & possible & possible & possible \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent The mapping is used in two ways in our discussion.
+First, the residual disagreement observed in the same-weights cloud experiment (Section~\ref{sec:desconfound}) is most parsimoniously attributable to mechanisms 1--4, because mechanisms 5--6 are not standard for an 8B-parameter model under modest load.
+Second, the larger gap observed for the three API-served stacks of much-larger proprietary weights is consistent with all six mechanisms being active simultaneously; we therefore do not attempt single-mechanism attribution for those stacks in the present study, and we mark this as a key direction for future work (Section~\ref{sec:limitations}).
+
 \subsection{Prompt Development}
 \label{sec:prompts}
 
@@ -400,6 +436,15 @@ By the rule of three, observing zero non-matches in $N{=}500$ items yields a 95\
 \end{itemize}
 
 \subsection{Provenance Protocol}
+\label{sec:provenance_protocol}
+
+\textbf{Scope: client-side observability.}
+The provenance protocol described below is a \emph{client-side} instrument by design.
+It documents what is observable from the client side---the request payload, the resolved model identifier and version returned by the API (when available), response headers, the client-recorded API response identifier, end-to-end latency, and the input/output text together with their cryptographic hashes.
+It does not require provider-side weight hashes, GPU-topology fingerprints, or batching-policy attestation, none of which are returned by any production LLM API at the time of writing.
+The protocol is therefore not restricted to open-source local stacks: for proprietary API-served stacks, it creates the audit trail that providers' opacity would otherwise make impossible.
+Its operational value is twofold: (i)~\emph{differential diagnosis}---when the same prompt produces different outputs at the same client-pinned snapshot, the logged hashes establish that the divergence is attributable to the deployment stack rather than to client-side drift in prompts, inputs, or configuration; and (ii)~\emph{provider-agnostic minimum standard}---adopting the protocol creates a verifiable audit trail across any combination of local and API-served stacks that authors may choose to use.
+Whether providers extend the protocol with weight-checkpoint hashes or deterministic-execution attestation is a separate question of provider commitment; the protocol functions in either case.
 
 Following Rover,\autocite{rover2026jair} we implemented a lightweight provenance protocol that creates a cryptographic fingerprint of every input-output pair, enabling automated detection of any change across runs:
 \begin{itemize}
@@ -613,6 +658,7 @@ GPT-4.1's metadata EMR remaining unchanged under normalization and fuzzy matchin
 This creates an apparent paradox: the models produce \emph{semantically near-identical} metadata text, yet 85--95\% of their complete extraction outputs are non-identical.
 The resolution lies in the numeric estimates---the effect sizes, confidence intervals, and variable-length estimate arrays that drive hash-based EMR to 0.050--0.200.
 Even when a model describes a study in nearly the same words, it may extract a different number of effect estimates or parse ``RR${=}$1.05 (95\% CI: 1.01--1.09)'' with subtly different numeric precision.
+Concrete, verbatim side-by-side excerpts of an exact-match local-stack output and a near-miss API-stack output (with the divergence located in the variable-length \texttt{estimates} array rather than in the metadata fields) are reproduced as JSON listings in Supplementary~\S\ref{supp-sec:examples}.
 
 \textbf{Fourth}, the three API models exhibit distinct instability profiles.
 GPT-4.1 shows the highest metadata stability (exact EMR${=}$0.880) and the highest BERTScore ($F_1{=}1.000$), yet its hash-based EMR (0.150) confirms that numeric extraction drives the residual variation.
@@ -756,14 +802,14 @@ Figure~\ref{fig:emr} visualizes the EMR comparison across models and stages, and
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.85\textwidth]{../analysis/figures/emr_comparison.pdf}
-\caption{Exact Match Rate (EMR) by model and pipeline stage. Error bars represent 95\% bootstrap confidence intervals. The dashed line indicates perfect reproducibility ($\emr{=}1.0$).}
+\caption{Exact Match Rate (EMR) by deployment stack and pipeline stage. Six deployment stacks are shown: three local Ollama/Apple~M4 stacks (LLaMA~3 8B, Mistral~7B, Gemma~2 9B) and three API-served stacks (Claude Sonnet~4.5/Anthropic, Gemini~2.5 Pro/Google, GPT-4.1/OpenAI). Error bars represent 95\% percentile bootstrap confidence intervals over 10{,}000 resamples; for stacks with $\emr{=}1.000$, the displayed upper bound is the rule-of-three $3/n$ instead of the trivial bootstrap interval. The dashed line indicates perfect reproducibility ($\emr{=}1.0$).}
 \label{fig:emr}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.85\textwidth]{../analysis/figures/field_emr_heatmap.pdf}
-\caption{Field-level EMR heatmap for extraction outputs. Darker cells indicate lower reproducibility. Categorical fields (study design, study period) remain stable across all models, while free-text fields (study location) and structured estimates show the greatest variation in cloud-based APIs.}
+\caption{Field-level EMR heatmap for extraction outputs across the six deployment stacks (three local Ollama/Apple~M4 stacks on the left columns; three API-served stacks---Claude/Anthropic, Gemini/Google, GPT-4.1/OpenAI---on the right). Darker cells indicate lower reproducibility. Categorical fields (study design, study period) remain stable across all stacks, while free-text fields (study location) and the variable-length structured estimates array show the greatest variation in the three API-served stacks.}
 \label{fig:heatmap}
 \end{figure}
 
