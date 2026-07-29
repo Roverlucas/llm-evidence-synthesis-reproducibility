@@ -1,12 +1,46 @@
 # Protocolo de Dual-Labeling — Estudo de Reprodutibilidade LLM
 
-**Versão:** 1.1 (atualizada com extraction task)
-**Data:** 2026-04-25
+**Versão:** 1.2 (desambiguação do critério 5 + regra de falha em critério único)
+**Data:** 2026-07-29
 **Corpus:** 100 abstracts (subset estratificado de 500)
 **Tempo estimado total:** ~5.5 horas
 - **Stage A (screening):** 100 abstracts × ~2-3 min = ~3.5h
-- **Stage B (extraction):** 25 INCLUDE abstracts × ~5 min = ~2h
+- **Stage B (extraction):** abstracts INCLUDE do gold standard × ~5 min = ~2h
 **Princípios:** dual-independent (cegados um ao outro) + resolução de discordância
+
+---
+
+## 0. Changelog e nota de transparência
+
+### v1.2 (2026-07-29) — escrita APÓS o cálculo do κ inicial
+
+A rodada Stage A independente foi concluída em 2026-07-29 com os dois labelers
+(labeler1 e labeler2, 100/100 cada). O κ de Cohen pré-especificado resultou em
+**0.529 (3 classes) / 0.556 (binário), concordância bruta 75%** — abaixo do alvo
+Cochrane de 0.80.
+
+A análise das 25 discordâncias mostrou que **19 são assimétricas** (labeler1
+EXCLUDE / labeler2 INCLUDE) e **17 dessas 19 recaem sobre o critério 5**. As duas
+labelers aplicaram leituras divergentes mas ambas defensáveis do texto v1.1:
+
+- §2 dizia "Reporta RR, OR, HR (ou equivalente) **com IC 95%**" — compatível com
+  aceitar a *menção* de que o estudo reporta o efeito;
+- §3 dizia "sem estimativa de efeito quantitativa **extraível do abstract**" —
+  compatível com exigir o *valor numérico*.
+
+Além disso, a tabela de regras da §4 cobria "falha em ≥2 critérios" e "borderline
+em 1 critério", mas **não cobria falha clara em exatamente 1 critério** — que é
+precisamente o caso desses 17 abstracts. Nenhuma das labelers violou o protocolo;
+o protocolo é que estava incompleto.
+
+A v1.2 desambigua os dois pontos. **O κ inicial de 0.529 permanece como resultado
+pré-especificado e será reportado no manuscrito como tal**, independentemente do
+valor obtido após a reconciliação. Qualquer κ pós-reconciliação é reportado como
+métrica secundária, explicitamente identificada como posterior à revisão do
+protocolo. Não se substitui um resultado pelo outro.
+
+### v1.1 (2026-04-25)
+Adição da extraction task (Stage B).
 
 ---
 
@@ -33,8 +67,29 @@ curta de consenso.
 | 2 | **Exposição: PM2.5** | Mede particulate matter fino (PM2.5, ≤2.5 µm). Estudos de PM10-only = exclui |
 | 3 | **Outcome: hospitalização respiratória** | Hospital admission ou ED visit por causa respiratória. Mortalidade-only = exclui |
 | 4 | **Design: time-series ou equivalente** | Time-series, case-crossover, ecológico. Cohort/cross-sectional isolado = UNCERTAIN |
-| 5 | **Efeito quantitativo** | Reporta RR, OR, HR (ou equivalente) **com IC 95%** |
+| 5 | **Efeito quantitativo** | Ver §2.1 — regra desambiguada na v1.2 |
 | 6 | **Idioma: inglês** | Publicado em inglês |
+
+### 2.1 Critério 5 desambiguado (v1.2)
+
+O critério 5 tem **dois níveis**, e a decisão depende de qual deles o abstract atinge:
+
+| Nível | O que o abstract traz | Critério 5 | Decisão que dispara |
+|-------|----------------------|-----------|--------------------|
+| **5a** | Estimativa pontual numérica (RR, OR, HR, IRR ou % change) **e** IC 95% numérico | **ATENDIDO** | segue para os demais critérios |
+| **5b** | Menciona que o efeito foi estimado, mas **sem os valores** (p.ex. "significantly associated", "reported relative risks", "large confidence intervals") | **NÃO atendido por informação insuficiente** | **UNCERTAIN** (não EXCLUDE) |
+| **5c** | Nenhuma estimativa de efeito, nem menção — puramente descritivo/qualitativo | **NÃO atendido** | conta como falha de critério (ver §4) |
+
+**Razão da regra 5b.** A triagem é feita apenas sobre o abstract. Um estudo que
+declara ter estimado o efeito quase certamente reporta os valores no texto
+completo — o abstract é que é omisso, não o estudo. Rotular esses casos como
+EXCLUDE afirma algo sobre o *estudo* que a evidência disponível não sustenta;
+rotular como INCLUDE afirma que o critério foi verificado quando não foi.
+UNCERTAIN é a única categoria que descreve honestamente o estado da informação.
+
+Consequência prática para o Stage B: como a extração exige `effect_estimate`,
+`ci_lower` e `ci_upper` retirados do abstract, **apenas itens 5a entram no
+conjunto de extração**.
 
 ## 3. Critérios de exclusão (QUALQUER um dispara exclusão)
 
@@ -42,19 +97,32 @@ curta de consenso.
 - Estudos animais ou in-vitro
 - PM10-only (sem análise separada de PM2.5)
 - Mortalidade apenas (sem hospitalização/ED)
-- Sem estimativa de efeito quantitativa extraível do abstract
+- Nenhuma estimativa de efeito nem menção a ela no abstract (caso 5c; para o caso
+  5b — menção sem valores — ver §2.1, que manda UNCERTAIN)
 
 ## 4. Regras de decisão
+
+Os critérios não têm todos o mesmo peso. Os **estruturais** (1, 2, 3, 6) são
+discriminadores absolutos: se o abstract falha em qualquer um deles, a
+inelegibilidade é certa e verificável pelo próprio abstract. Os **condicionais**
+(4, 5) dependem de informação que o abstract pode simplesmente ter omitido.
 
 | Cenário | Decisão |
 |---------|---------|
 | Atende aos 6 critérios de inclusão | **INCLUDE** |
-| Falha claramente em ≥2 critérios | **EXCLUDE** |
+| Falha clara em **≥1 critério estrutural** (1, 2, 3 ou 6) | **EXCLUDE** |
+| Falha em **≥2 critérios**, qualquer combinação | **EXCLUDE** |
+| Falha **apenas** no critério 4 (design não é time-series/case-crossover/ecológico) | **UNCERTAIN** |
+| Falha **apenas** no critério 5 por menção sem valores (caso 5b) | **UNCERTAIN** |
 | Borderline em 1 critério | **UNCERTAIN** |
 | PM2.5 + respiratório mas cohort (não time-series) | **UNCERTAIN** |
 | PM2.5 + respiratório mas ED visits pouco claros | **UNCERTAIN** |
 | Multi-poluentes incluindo PM2.5 | **INCLUDE** (se PM2.5 reportado separadamente) |
 | PM2.5 + respiratório + mortalidade + hospitalização | **INCLUDE** |
+
+> Regra de desempate interna: quando duas linhas se aplicam, **EXCLUDE tem
+> precedência sobre UNCERTAIN, e UNCERTAIN sobre INCLUDE**. Exemplo: falha no
+> critério 2 (estrutural) + caso 5b → EXCLUDE.
 
 ## 5. Escala de confiança
 
@@ -69,7 +137,7 @@ curta de consenso.
 ### Opção A — Rayyan (recomendada)
 
 1. Acesse https://rayyan.ai e crie conta grátis
-2. O labeler 1 (Lucas) cria o projeto e convida o labeler 2
+2. Lucas (coordenador, não-labeler) cria o projeto e convida os dois labelers
 3. Importar arquivo: `subset_100_rayyan.csv`
 4. Em "Settings → Blind mode": **ativar** (essencial para independência)
 5. Para cada abstract: clicar **Include** / **Exclude** / **Maybe (UNCERTAIN)**
@@ -78,7 +146,7 @@ curta de consenso.
 
 ### Opção B — Google Sheets (fallback)
 
-1. Abrir o arquivo correspondente: `subset_100_labeler1.csv` (Lucas) ou `subset_100_labeler2.csv` (colega)
+1. Abrir o arquivo correspondente: `subset_100_labeler1.csv` (Isabelle) ou `subset_100_labeler2.csv` (Luiza)
 2. Importar em Google Sheets (File → Import → Upload)
 3. Preencher as colunas **sem ver a planilha do outro labeler**:
    - `{labeler}_decision`: INCLUDE / EXCLUDE / UNCERTAIN
@@ -124,13 +192,23 @@ curta de consenso.
 
 ---
 
-## 9. Stage B — Extraction Task (apenas INCLUDE items, 25 abstracts)
+## 9. Stage B — Extraction Task (apenas INCLUDE do gold standard humano)
 
-Para os 25 abstracts classificados como **INCLUDE** no Stage A, fazer também extração quantitativa.
+Para os abstracts classificados como **INCLUDE no gold standard humano** do Stage A
+— e que atinjam o nível **5a** do critério 5 (§2.1) — fazer também extração
+quantitativa.
+
+> **Mudança na v1.2.** O conjunto de extração original (`extraction_25_*.csv`) foi
+> montado a partir do silver standard gerado por LLM, antes da rotulagem humana.
+> Confrontado com o consenso humano, apenas **13 dos 25** sobreviveram. O conjunto
+> é reconstruído a partir do gold standard humano por
+> `scripts/dual_labeling/rebuild_extraction_set.py`. A divergência 13/25 é
+> preservada como resultado — é evidência direta de que a triagem por LLM admite
+> material que humanos rejeitam.
 
 ### Arquivos
-- `extraction_25_labeler1.csv` (Lucas)
-- `extraction_25_labeler2.csv` (colega)
+- `extraction_labeler1.csv` (Isabelle)
+- `extraction_labeler2.csv` (Luiza)
 
 ### Campos a extrair (do abstract)
 | Campo | Exemplo | Regra |
@@ -166,16 +244,33 @@ Para os 25 abstracts classificados como **INCLUDE** no Stage A, fazer também ex
 
 ## 10. Resolução de discordâncias
 
+**Atribuição de papéis (atualizada 2026-07-29):** labeler1 = Isabelle, labeler2 =
+Luiza Iltchechen, tie-breaker = **Lucas Rover**. A v1.1 previa Profa. Yara Tadano
+como tie-breaker; a mudança é deliberada e **deve ser declarada explicitamente na
+seção de métodos do manuscrito**, já que o tie-breaker é o primeiro autor do
+estudo cujos modelos estão sendo avaliados contra este gold standard.
+
+Mitigação do risco associado: o tie-break é aplicado **apenas** aos casos de
+discordância residual, sobre critérios de protocolo já escritos, e **sem acesso às
+saídas dos LLMs** durante a decisão. Cada tie-break registra critério invocado e
+justificativa em `reconciliation/` — auditável item a item.
+
 Após ambos labelers terminarem (Stage A + B):
 
-1. Lucas roda os scripts:
-   - `scripts/dual_labeling/compute_kappa.py` → gera κ + discordâncias do screening
-   - `scripts/dual_labeling/compute_extraction_agreement.py` → gera agreement + discordâncias da extraction (a criar)
-2. Reunião curta (~30-45 min) para revisar casos onde discordamos
-3. Decisão final por **consenso** (se não houver, Profa. Yara é tie-breaker)
-4. Gold standards finais salvos em:
+1. Rodar os scripts:
+   - `scripts/dual_labeling/compute_kappa.py` → κ + discordâncias do screening
+   - `scripts/dual_labeling/compute_extraction_agreement.py` → agreement + discordâncias da extraction
+2. **Sessão de recalibração v1.2** (~30 min): as duas labelers leem §0, §2.1 e §4
+   revisados e reavaliam **apenas os itens em discordância**, de novo de forma
+   independente. Os 75 itens concordantes não são reabertos.
+3. Rodar `compute_kappa.py` novamente sobre o conjunto pós-recalibração → κ
+   secundário. **O κ inicial (0.529) continua sendo reportado como o resultado
+   pré-especificado.**
+4. Discordâncias que sobreviverem à recalibração vão a **consenso**; sem consenso,
+   **tie-break por Lucas Rover** com registro do critério invocado.
+5. Gold standards finais salvos em:
    - `data/dual_labeling/gold_subset_100_final.json` (screening)
-   - `data/dual_labeling/extraction_gold_25_final.json` (extraction)
+   - `data/dual_labeling/extraction_gold_final.json` (extraction)
 
 ---
 
