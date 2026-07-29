@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "labeler1_file": "data/dual_labeling/returned/subset_100_labeler1_RETURNED.csv",
+    "labeler2_file": "data/dual_labeling/returned/subset_100_labeler2_RETURNED.csv",
+    "n_total_subset": 100,
+    "n_only_labeler1": 0,
+    "n_only_labeler2": 0
+  },
+  "three_class": {
+    "categories": [
+      "INCLUDE",
+      "EXCLUDE",
+      "UNCERTAIN"
+    ],
+    "cohen_kappa": 0.5287,
+    "kappa_interpretation": "moderate",
+    "percent_agreement": 0.75,
+    "n_discordances": 25,
+    "discordance_rate": 0.25,
+    "confusion_matrix": {
+      "INCLUDE": {
+        "INCLUDE": 28,
+        "EXCLUDE": 2,
+        "UNCERTAIN": 0
+      },
+      "EXCLUDE": {
+        "INCLUDE": 19,
+        "EXCLUDE": 46,
+        "UNCERTAIN": 2
+      },
+      "UNCERTAIN": {
+        "INCLUDE": 2,
+        "EXCLUDE": 0,
+        "UNCERTAIN": 1
+      }
+    }
+  },
+  "binary_include_vs_exclude": {
+    "cohen_kappa": 0.5562,
+    "kappa_interpretation": "moderate",
+    "percent_agreement": 0.7789,
+    "n_pairs": 95
+  },
+  "targets": {
+    "cochrane_kappa": 0.8,
+    "meets_target": false
+  }
+}
