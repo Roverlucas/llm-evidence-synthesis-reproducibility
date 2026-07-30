@@ -119,7 +119,7 @@ This is the **load-bearing** step that creates a permanent, immutable timestamp 
 2. Click **Registrations** (left sidebar) → **"New registration"**
 3. Choose template: **"OSF Preregistration"** (good default; simpler than Registered Report)
 4. Fill the template fields:
-   - **Study design**: dual-independent labeling, 2 raters each blinded to the other, 100 abstracts (Stage A) + extraction subset rebuilt from the human gold standard (Stage B), Cochrane κ≥0.80 target. Tie-breaker: the registration names the senior author; the role was reassigned to the first author, disclosed as a deviation.
+   - **Study design**: dual-independent labeling, 2 raters each blinded to the other, 100 abstracts (Stage A) + extraction subset rebuilt from the human gold standard (Stage B), Cochrane κ≥0.80 target, tie-breaker = senior author (as registered; deliberately not the first author, who developed the pipeline being scored against this gold standard).
    - **Hypotheses**: not applicable (this is a validation procedure, not a primary hypothesis)
    - **Analysis plan**: Cohen's κ (unweighted, binary collapse for INCLUDE/EXCLUDE), agreement % for extraction, MCC if useful
    - **Sample**: 100 abstracts from the 500-abstract main corpus, stratified

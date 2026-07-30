@@ -6,7 +6,7 @@ Resolution order, per abstract, with the source recorded for every single item:
     2. ``agreement_round2``  — they disagreed, then agreed in the blinded v1.2
                                recalibration round
     3. ``consensus``         — still disagreed, resolved in the consensus meeting
-    4. ``tiebreak``          — no consensus, decided by the coordinator
+    4. ``tiebreak``          — no consensus, decided by the senior author
 
 Every item lands in exactly one bucket and the bucket is written to the output,
 so a reviewer can audit how much of the gold standard rests on each mechanism.
@@ -151,7 +151,7 @@ def main() -> None:
             "protocol_version": "1.2",
             "labeler1": "Isabelle",
             "labeler2": "Luiza Iltchechen",
-            "tiebreaker": "Lucas Rover",
+            "tiebreaker": "Yara de Souza Tadano (as pre-registered in OSF fgn3e)",
             "n_abstracts": len(gold),
             "n_unresolved": len(unresolved),
             "unresolved_ids": unresolved,

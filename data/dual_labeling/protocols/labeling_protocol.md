@@ -64,8 +64,10 @@ usado para validar se os LLMs acertam a decisão correta.
 **Sua tarefa:** para cada abstract, decidir se ele deve ser **INCLUÍDO** (estudo elegível para
 meta-análise de PM2.5 × hospitalização respiratória) ou **EXCLUÍDO**, com confiança e rationale.
 
-Você **NÃO vê** as decisões do outro labeler até o final. Discordâncias serão resolvidas em reunião
-curta de consenso.
+Você **NÃO vê** as decisões do outro labeler até o final — o cegamento mútuo é o que
+torna a concordância entre vocês uma medida de verdade, e não de convergência social.
+Discordâncias serão resolvidas em reunião curta de consenso; o que não fechar em
+consenso vai para a Profa. Yara Tadano como tie-breaker (§10).
 
 ---
 
@@ -88,7 +90,7 @@ O critério 5 tem **dois níveis**, e a decisão depende de qual deles o abstrac
 |-------|----------------------|-----------|--------------------|
 | **5a** | Estimativa pontual numérica (RR, OR, HR, IRR ou % change) **e** IC 95% numérico | **ATENDIDO** | segue para os demais critérios |
 | **5b** | Menciona que o efeito foi estimado, mas **sem os valores** (p.ex. "significantly associated", "reported relative risks", "large confidence intervals") | **NÃO atendido por informação insuficiente** | **UNCERTAIN** (não EXCLUDE) |
-| **5c** | Nenhuma estimativa de efeito, nem menção — puramente descritivo/qualitativo | **NÃO atendido** | conta como falha de critério (ver §4) |
+| **5c** | Nenhuma estimativa de efeito, nem menção — puramente descritivo/qualitativo | **NÃO atendido** | **EXCLUDE** se for a única falha (§4 explica por que difere de 5b) |
 
 **Razão da regra 5b.** A triagem é feita apenas sobre o abstract. Um estudo que
 declara ter estimado o efeito quase certamente reporta os valores no texto
@@ -115,7 +117,14 @@ conjunto de extração**.
 Os critérios não têm todos o mesmo peso. Os **estruturais** (1, 2, 3, 6) são
 discriminadores absolutos: se o abstract falha em qualquer um deles, a
 inelegibilidade é certa e verificável pelo próprio abstract. Os **condicionais**
-(4, 5) dependem de informação que o abstract pode simplesmente ter omitido.
+(4, 5) dependem de informação que o abstract pode simplesmente ter omitido — e o
+que separa "omitido" de "ausente" é justamente a distinção 5b/5c da §2.1.
+
+A tabela abaixo cobre **todas** as combinações possíveis. Se você encontrar um caso
+que não se encaixa em nenhuma linha, **não improvise**: registre UNCERTAIN com
+rationale explicando o impasse e avise o Lucas. Foi um caso não coberto que produziu
+25% de discordância na primeira rodada; a tabela não voltar a ter buracos é mais
+importante do que qualquer decisão individual.
 
 | Cenário | Decisão |
 |---------|---------|
@@ -123,12 +132,22 @@ inelegibilidade é certa e verificável pelo próprio abstract. Os **condicionai
 | Falha clara em **≥1 critério estrutural** (1, 2, 3 ou 6) | **EXCLUDE** |
 | Falha em **≥2 critérios**, qualquer combinação | **EXCLUDE** |
 | Falha **apenas** no critério 4 (design não é time-series/case-crossover/ecológico) | **UNCERTAIN** |
-| Falha **apenas** no critério 5 por menção sem valores (caso 5b) | **UNCERTAIN** |
+| Falha **apenas** no critério 5, caso **5b** (menção ao efeito, sem os valores) | **UNCERTAIN** |
+| Falha **apenas** no critério 5, caso **5c** (nenhuma estimativa nem menção a ela) | **EXCLUDE** |
 | Borderline em 1 critério | **UNCERTAIN** |
 | PM2.5 + respiratório mas cohort (não time-series) | **UNCERTAIN** |
 | PM2.5 + respiratório mas ED visits pouco claros | **UNCERTAIN** |
 | Multi-poluentes incluindo PM2.5 | **INCLUDE** (se PM2.5 reportado separadamente) |
 | PM2.5 + respiratório + mortalidade + hospitalização | **INCLUDE** |
+
+**Por que 5b e 5c terminam em decisões opostas**, ambos sendo falha do mesmo
+critério condicional: em 5b o abstract *afirma* que o efeito foi estimado, então o
+estudo tem o número e o abstract é que o omitiu — não há base para afirmar nada
+sobre a elegibilidade do estudo, e UNCERTAIN é a descrição honesta. Em 5c o abstract
+não menciona estimativa alguma; a ausência total é evidência razoável de que o estudo
+não produziu estimativa extraível, e aí EXCLUDE é uma inferência sustentada. A
+diferença não é o critério que falhou, é **quanta informação o abstract oferece sobre
+a falha**.
 
 > Regra de desempate interna: quando duas linhas se aplicam, **EXCLUDE tem
 > precedência sobre UNCERTAIN, e UNCERTAIN sobre INCLUDE**. Exemplo: falha no
@@ -179,26 +198,54 @@ inelegibilidade é certa e verificável pelo próprio abstract. Os **condicionai
 
 **Decisão:** EXCLUDE | **Confiança:** HIGH | **Rationale:** systematic review, não estudo original (critério 1 falha) | **criteria_failed:** 1
 
-### Exemplo 3 — UNCERTAIN
-> "A prospective cohort of 2,500 COPD patients followed from 2015-2020 assessed long-term PM2.5 exposure and respiratory decline. Annual PM2.5 averages were associated with FEV1 decline."
+### Exemplo 3 — UNCERTAIN por falha apenas no critério 4 (design)
+> "A prospective cohort of 2,500 patients was followed from 2015-2020 to assess long-term PM2.5 exposure and hospital admissions for respiratory disease. Admission rates rose with annual PM2.5 averages (RR 1.04, 95% CI: 1.01-1.07)."
 
-**Decisão:** UNCERTAIN | **Confiança:** MEDIUM | **Rationale:** PM2.5 + respiratório ✓ mas cohort design (critério 4 borderline) e outcome não é hospitalização
+**Decisão:** UNCERTAIN | **Confiança:** MEDIUM | **Rationale:** PM2.5 ✓, hospitalização respiratória ✓, efeito com IC ✓ (nível 5a), mas design é cohort, não time-series/case-crossover — falha **só** no critério 4 | **criteria_failed:** 4
+
+> ⚠️ Atenção à diferença: se esse mesmo abstract também não tivesse hospitalização
+> (p.ex. só declínio de FEV1), seriam **dois** critérios falhando, um deles estrutural
+> (o 3) — e a §4 manda **EXCLUDE**, não UNCERTAIN. UNCERTAIN é para falha isolada em
+> critério condicional.
 
 ### Exemplo 4 — EXCLUDE por exposição errada
 > "Daily PM10 concentrations and emergency department visits for asthma in Mexico City, 2018-2020. Case-crossover design. OR per 10 µg/m³ PM10 = 1.015 (95% CI: 1.001-1.029)."
 
-**Decisão:** EXCLUDE | **Confiança:** HIGH | **Rationale:** PM10-only, sem PM2.5 | **criteria_failed:** 2
+**Decisão:** EXCLUDE | **Confiança:** HIGH | **Rationale:** PM10-only, sem PM2.5 (critério 2, estrutural) | **criteria_failed:** 2
+
+### Exemplo 5 — UNCERTAIN pelo caso 5b (a novidade da v1.2)
+> "We examined daily PM2.5 concentrations and hospital admissions for respiratory causes in three metropolitan areas using a time-series design. PM2.5 was significantly associated with increased admissions, with wide confidence intervals in the smaller city."
+
+**Decisão:** UNCERTAIN | **Confiança:** MEDIUM | **Rationale:** critérios 1-4 e 6 ✓, mas o abstract afirma que houve estimativa e IC sem trazer os valores — caso **5b**, informação insuficiente | **criteria_failed:** 5
+
+Este é o padrão que gerou 17 das 25 discordâncias da primeira rodada. Não é EXCLUDE:
+o estudo declara ter estimado o efeito, então o número existe no texto completo. Não é
+INCLUDE: o critério não foi verificado. É UNCERTAIN.
+
+### Exemplo 6 — EXCLUDE pelo caso 5c
+> "This paper describes the design and deployment of a low-cost PM2.5 sensor network in a metropolitan area and discusses its potential applications for respiratory health surveillance. Sensor performance and calibration procedures are reported."
+
+**Decisão:** EXCLUDE | **Confiança:** HIGH | **Rationale:** não há estimativa de efeito nem menção a uma — caso **5c**; além disso não é estudo epidemiológico de associação (critério 1) | **criteria_failed:** 1,5
 
 ---
 
 ## 8. Cronograma sugerido
+
+Rodada original (Stage A), já concluída:
 
 | Atividade | Duração |
 |-----------|---------|
 | Ler protocolo + exemplos | 20 min |
 | Calibração: 5 abstracts juntos (discussão) | 30 min |
 | Labeling independente 100 abstracts | 3-4 h (pode parcelar em sessões) |
-| Revisão de discordâncias | 30 min |
+
+Rodada de recalibração v1.2 (atual):
+
+| Atividade | Duração |
+|-----------|---------|
+| Ler §0, §2.1, §4 e os Exemplos 3, 5 e 6 | 15 min |
+| Reavaliar os 25 itens discordantes, independentemente | 30-40 min |
+| Reunião de consenso sobre o que restar | 30 min |
 
 ---
 
@@ -255,15 +302,23 @@ quantitativa.
 ## 10. Resolução de discordâncias
 
 **Atribuição de papéis (atualizada 2026-07-29):** labeler1 = Isabelle, labeler2 =
-Luiza Iltchechen, tie-breaker = **Lucas Rover**. A v1.1 previa Profa. Yara Tadano
-como tie-breaker; a mudança é deliberada e **deve ser declarada explicitamente na
-seção de métodos do manuscrito**, já que o tie-breaker é o primeiro autor do
-estudo cujos modelos estão sendo avaliados contra este gold standard.
+Luiza Iltchechen, tie-breaker = **Profa. Yara Tadano (Y.d.S.T.)** — o mesmo papel
+previsto na v1.1 e registrado no pré-registro OSF `fgn3e`.
 
-Mitigação do risco associado: o tie-break é aplicado **apenas** aos casos de
-discordância residual, sobre critérios de protocolo já escritos, e **sem acesso às
-saídas dos LLMs** durante a decisão. Cada tie-break registra critério invocado e
-justificativa em `reconciliation/` — auditável item a item.
+Houve uma consideração de transferir o tie-break para Lucas Rover em 2026-07-29; a
+decisão foi **revertida no mesmo dia**, e o registro dessa reversão está em
+`docs/decisions/decision-log.md` (entradas 18 e 22). O motivo de manter a Yara é
+substantivo, não burocrático: Lucas é o primeiro autor e desenvolveu o pipeline cujas
+saídas são pontuadas **contra** este gold standard. Deixar a adjudicação final com uma
+coautora que não construiu o sistema mantém o padrão de referência independente do
+objeto avaliado, e evita um desvio de pré-registro que teria de ser declarado e
+defendido sem ganho nenhum em troca.
+
+Mitigações que valem independentemente de quem adjudica: o tie-break é aplicado
+**apenas** aos casos de discordância residual, sobre critérios de protocolo já
+escritos, e **sem acesso às saídas dos LLMs** durante a decisão. Cada tie-break
+registra critério invocado e justificativa em `reconciliation/` — auditável item a
+item.
 
 Após ambos labelers terminarem (Stage A + B):
 
@@ -278,7 +333,7 @@ Após ambos labelers terminarem (Stage A + B):
    pós-recalibração: o número resultante não seria um κ interpretável (ver §0).
    O κ de 0.529 continua sendo o resultado de concordância do estudo.
 4. Discordâncias que sobreviverem à recalibração vão a **consenso**; sem consenso,
-   **tie-break por Lucas Rover** com registro do critério invocado.
+   **tie-break pela Profa. Yara Tadano** com registro do critério invocado.
 5. Gold standards finais salvos em:
    - `data/dual_labeling/gold_subset_100_final.json` (screening)
    - `data/dual_labeling/extraction_gold_final.json` (extraction)

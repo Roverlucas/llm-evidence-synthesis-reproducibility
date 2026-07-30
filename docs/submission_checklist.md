@@ -16,7 +16,7 @@ Status as of 2026-07-29.
 
 ## Blocked on Lucas — decisions
 
-- [ ] Tie-breaker: registration `fgn3e` names Y.d.S.T.; currently reassigned to L.R. Confirm or revert. Either way it is disclosed, but reverting removes a pre-registration deviation.
+- [x] ~~Tie-breaker~~ — **settled 2026-07-29: stays with Y.d.S.T., as registered.** No deviation on roles to declare. Reasoning in decision-log entry 22.
 - [ ] Fresh-sample validation of protocol v1.2 (n≈30–40): run it, or state in the limitations that the amendment is unvalidated. The recalibration round cannot serve this purpose.
 - [ ] Authorship: 2 → 5. Needs Isabelle's surname, ORCIDs and affiliations for all three additions, CRediT roles, and the acknowledgment rewritten (co-authors cannot be thanked in Acknowledgments).
 

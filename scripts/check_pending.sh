@@ -37,12 +37,20 @@ report "internal notes addressed to the authors" 'Confirm with|check email sent 
 
 echo
 echo "== consistency checks =="
-# The tie-breaker reassignment is a pre-registration deviation and must stay disclosed.
-if grep -q "tie-break" article/main.tex && ! grep -q "reassigned to the first author" article/main.tex; then
-  echo "FAIL — main.tex mentions a tie-breaker but not the reassignment from the registered senior author"
+# The tie-breaker must match the registration (senior author). If a future edit moves
+# the role to the first author, that becomes a pre-registration deviation and has to be
+# disclosed as one — this check refuses the silent version of that change.
+if grep -qiE 'reassigned to the first author|tie-break(er)? = *(L\.R\.|Lucas)' \
+     article/main.tex article/supplementary.tex data/dual_labeling/protocols/labeling_protocol.md 2>/dev/null \
+   | grep -qv 'reverted\|SUPERSEDED\|reconsidered'; then
+  echo "FAIL — tie-breaker appears reassigned away from the registered senior author;"
+  echo "       if intended, it is a deviation from OSF fgn3e and must be declared as such"
   fail=1
+elif grep -q "senior author (Y.d.S.T.) as tie-breaker" article/main.tex; then
+  echo "ok   — tie-breaker matches the registration (senior author)"
 else
-  echo "ok   — tie-breaker reassignment disclosed"
+  echo "FAIL — main.tex does not state who breaks ties; the registration specifies the senior author"
+  fail=1
 fi
 
 # The registration DOI must be cited wherever pre-commitment is claimed.

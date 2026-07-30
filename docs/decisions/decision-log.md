@@ -47,12 +47,10 @@ v1.2 properly needs a fresh independent sample (n≈30–40) — registered as a
 not claimed as a result. `build_gold_standard.py` was changed to refuse to emit such
 a coefficient at all.
 
-## 18 — 2026-07-29 · Tie-breaker reassigned Y.d.S.T. → L.R. (deviation)
-Decided by Lucas. Deviates from `fgn3e`, which names the senior author. Disclosed in
-Methods, in the supplement, and in the sub-registration update. Mitigations: applies
-only to residual discordances, adjudicated against written criteria with no access to
-model outputs, each logged with the criterion invoked. Reverting to Y.d.S.T. would
-remove the deviation entirely and remains available.
+## 18 — 2026-07-29 · Tie-breaker reassigned Y.d.S.T. → L.R. — **SUPERSEDED by 22**
+Decided by Lucas, then reverted the same day. Kept in this log because a decision log
+that quietly deletes reversed decisions is not an audit trail. See entry 22 for the
+reversal and its reasoning.
 
 ## 19 — 2026-07-29 · Stage-B extraction subset rebuilt from the human gold standard
 The registered 25-item extraction subset came from the LLM silver standard; only 13
@@ -70,3 +68,16 @@ claim replaced by a rule-of-three bound (≈6%).
 EMR and inter-run Fleiss' κ measure one stack reproducing itself; Cohen's κ measures
 two raters agreeing. Mistral-7B (EMR=1.000, specificity 0.240) makes the distinction
 concrete. Removed the claim that the stacks "reach the Cochrane guideline".
+
+## 22 — 2026-07-29 · Tie-breaker reverted to Y.d.S.T. (supersedes 18)
+Decided by Lucas after learning that registration `fgn3e` names the senior author
+explicitly — a fact not available when 18 was taken. Two reasons to revert, in order
+of weight. First, independence: L.R. developed the pipeline whose outputs are scored
+against this gold standard, so having L.R. adjudicate contested labels would make the
+reference standard partly dependent on the author whose system it evaluates. Second,
+there is no longer any pre-registration deviation on roles to declare or defend, which
+removes a line of attack for free.
+
+Net effect on the submission: the only deviations from `fgn3e` that remain are the
+substitution of the Stage-B extraction subset (entry 19) and the post-hoc statistics
+added beyond the registered point estimates. Neither concerns who decides what.

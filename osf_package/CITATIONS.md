@@ -14,7 +14,9 @@ The registration is a frozen snapshot of the component `8z6fy` and **pre-dates a
 ## 1. For the NatComms Revision Manuscript
 
 ### In-text citation
-> "Validation of the silver-standard methodology across 500 abstracts is reported in our companion paper (Rover et al., under review at *Research Synthesis Methods*; OSF: 10.17605/OSF.IO/VR934)."
+> "Validation of the silver-standard methodology across 500 abstracts is reported in our companion paper (Rover & Tadano, under review at *Research Synthesis Methods*; OSF: 10.17605/OSF.IO/VR934)."
+
+⚠️ Uses `Rover & Tadano` to match the two-author byline and the BibTeX entry below. If the RSM author list expands to include the raters, switch both this snippet and the BibTeX to `Rover et al.` in the same edit — earlier drafts had `et al.` here beside a two-author BibTeX, which is the inconsistency this note exists to prevent.
 
 ### BibTeX
 ```bibtex
@@ -38,11 +40,16 @@ The registration is a frozen snapshot of the component `8z6fy` and **pre-dates a
 
 ---
 
-## 3. For the RSM Manuscript — Footnote on Pre-Commitment
+## 3. For the RSM Manuscript — Pre-Commitment Statement
 
-Add a footnote where the dual-labeling protocol is first introduced (around `main.tex:289`):
+✅ **Already applied.** The registration DOI is now stated inline in the Methods where
+the dual-labeling validation is introduced, together with the registration date and the
+label-return dates, so no separate footnote is needed. `scripts/check_pending.sh` fails
+if a pre-registration claim ever appears in `main.tex` without the DOI beside it.
 
-> The dual-human labeling protocol (Cochrane κ≥0.80 target, two independent raters each blinded to the other) was pre-registered on OSF prior to label collection (https://doi.org/10.17605/OSF.IO/FGN3E). The registration named the senior author as tie-breaker; the role was reassigned to the first author, a deviation disclosed in the Methods and in a sub-registration update.
+Kept here as the canonical wording, in case it is needed for another venue:
+
+> The dual-human labeling protocol (Cochrane κ≥0.80 target, two independent raters each blinded to the other, tie-broken by the senior author) was pre-registered on OSF prior to label collection (https://doi.org/10.17605/OSF.IO/FGN3E).
 
 ---
 

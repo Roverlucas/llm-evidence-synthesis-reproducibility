@@ -72,15 +72,29 @@ Neither rater deviated from the registered protocol. The protocol was underspeci
 
 `labeling_protocol.md` is amended to v1.2:
 
-- **Criterion 5 is split into levels.** 5a: numeric point estimate *and* numeric 95%
-  interval present → satisfied. 5b: the effect is said to have been estimated but the
-  values are absent → **uncertain**, not exclude, because abstract-only screening
-  cannot verify what the abstract omits. 5c: no estimate and no mention → counts as
+- **Criterion 5 is split into three levels.** 5a: numeric point estimate *and* numeric
+  95% interval present → criterion satisfied. 5b: the effect is said to have been
+  estimated but the values are absent → **uncertain**, not exclude, because
+  abstract-only screening cannot verify what the abstract omits and an exclusion would
+  assert something about the study that the available evidence does not support.
+  5c: no estimate and no mention of one → **exclude**, because total absence is
+  reasonable evidence that the study produced no extractable estimate. What separates
+  5b from 5c is not which criterion failed but how much the abstract reveals about the
   failure.
 - **Criteria are weighted by kind.** Structural criteria (original study, PM2.5
   exposure, respiratory hospitalization, English) exclude on a single clear failure.
   Conditional criteria (design, effect reporting) yield *uncertain* on a single
-  failure. Precedence: exclude > uncertain > include.
+  failure, with level 5c as the stated exception. Precedence: exclude > uncertain >
+  include.
+- **The decision table is now exhaustive.** The v1.1 defect was an uncovered case, so
+  raters are instructed to record *uncertain* with a rationale and escalate, rather
+  than improvise, should they encounter a configuration the table does not cover.
+- **Calibration examples added for the new rule.** v1.1 carried no worked example of
+  the criterion-5 boundary — the very case that produced 17 of the 25 discordances.
+  v1.2 adds one for 5b and one for 5c, and corrects a pre-existing example whose
+  stated rationale (failure in two criteria, one structural) contradicted the amended
+  decision table. All examples are synthetic; none is drawn from the 100-abstract
+  subset, so the blinded recalibration round is not contaminated.
 
 The amendment was written **after** the κ was known. That sequence is disclosed in
 the amendment itself, in the manuscript, and here. It follows item (c) of the
@@ -105,20 +119,28 @@ independent sample** (n ≈ 30–40 suffices for a directional check), not a re-
 the same items. We register that as the appropriate next step and do not claim it as
 a result.
 
-### 5. Deviation from the registration: tie-breaker
+### 5. Tie-breaker: unchanged from the registration
 
 The registration states: "unresolved items are decided by the senior author (Y.d.S.T.)
-as tie-breaker." **This role has been reassigned to the first author (L.R.)**, and we
-disclose it as a deviation.
+as tie-breaker." **That assignment stands.** No change is made, and we note it here
+only because it was briefly reconsidered.
 
-Because the first author's models are the object of evaluation against this gold
-standard, the deviation carries a conflict that the original assignment avoided. The
-mitigations are: tie-breaks apply only to items still discordant after consensus;
-they are adjudicated against the written criteria with no access to any model output;
-and each is logged with the criterion invoked, so every adjudicated item can be
-audited individually. The resulting gold standard records, per abstract, whether its
-label came from first-round agreement, post-recalibration agreement, consensus, or
-tie-break.
+On 2026-07-29 we considered moving the role to the first author (L.R.) for scheduling
+convenience and decided against it the same day. The reason is substantive: the first
+author developed the pipeline whose outputs are scored against this gold standard, so
+final adjudication of contested labels by that same author would make the reference
+standard partly dependent on the person whose system it evaluates. Keeping the role
+with a co-author who did not build the pipeline preserves that independence, and it
+avoids a pre-registration deviation that would have had to be declared and defended
+with nothing gained in return. The reconsideration and its reversal are recorded in
+`docs/decisions/decision-log.md`, entries 18 and 22.
+
+Procedural safeguards, which hold regardless of who adjudicates: tie-breaks apply only
+to items still discordant after the consensus meeting; they are adjudicated against
+the written criteria with no access to any model output; and each is logged with the
+criterion invoked, so every adjudicated item can be audited individually. The
+resulting gold standard records, per abstract, whether its label came from first-round
+agreement, post-recalibration agreement, consensus, or tie-break.
 
 ### 6. Substitution of the Stage-B extraction subset
 
