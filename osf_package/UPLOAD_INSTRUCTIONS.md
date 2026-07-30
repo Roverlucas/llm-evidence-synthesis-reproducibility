@@ -51,7 +51,7 @@ In the project page → **Contributors** (left sidebar):
    - You: **Administrator**
    - Profa. Yara: **Read+Write** (so she can edit)
    - Others: **Read** (or Read+Write if you want them to upload too)
-4. **Order**: drag to match the manuscript author order (Rover, Siqueira, Bacalhau, Azevedo, Tadano)
+4. **Order**: drag to match the manuscript author order. ⚠️ For THIS deposit (RSM) that is Rover, Tadano — the five-name list (Rover, Siqueira, Bacalhau, Azevedo, Tadano) belongs to the companion NatComms paper and must not be used here. See CONTRIBUTORS.md.
 5. Click **Save**
 
 OSF will email each contributor an invite. They click to accept and OSF links their ORCID profile.
@@ -119,7 +119,7 @@ This is the **load-bearing** step that creates a permanent, immutable timestamp 
 2. Click **Registrations** (left sidebar) → **"New registration"**
 3. Choose template: **"OSF Preregistration"** (good default; simpler than Registered Report)
 4. Fill the template fields:
-   - **Study design**: dual-independent labeling, 2 raters, 100 abstracts (Stage A) + 25 extractions (Stage B), Cochrane κ≥0.80 target, tie-breaker = senior author
+   - **Study design**: dual-independent labeling, 2 raters each blinded to the other, 100 abstracts (Stage A) + extraction subset rebuilt from the human gold standard (Stage B), Cochrane κ≥0.80 target. Tie-breaker: the registration names the senior author; the role was reassigned to the first author, disclosed as a deviation.
    - **Hypotheses**: not applicable (this is a validation procedure, not a primary hypothesis)
    - **Analysis plan**: Cohen's κ (unweighted, binary collapse for INCLUDE/EXCLUDE), agreement % for extraction, MCC if useful
    - **Sample**: 100 abstracts from the 500-abstract main corpus, stratified

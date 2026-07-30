@@ -31,6 +31,13 @@
 \newcommand{\emr}{\textrm{EMR}}
 \newcommand{\ci}[2]{[#1,\;#2]}
 
+% Marks a value that cannot exist yet because it depends on data still being
+% collected. Renders loudly on purpose: a forgotten placeholder must be
+% impossible to miss in the PDF. scripts/check_pending.sh fails the build while
+% any of these remain, so none can reach a submission by accident.
+\usepackage{xcolor}
+\newcommand{\pending}[1]{\textbf{\textcolor{red}{[PENDING: #1]}}}
+
 % ── Journal metadata ────────────────────────────────────
 \jname{Research Synthesis Methods}
 \articletype{RESEARCH ARTICLE}
@@ -258,6 +265,7 @@ This framing matters because the local-vs-cloud comparison constitutes a \emph{p
 Throughout this paper we use ``deployment stack'' for the experimental unit and reserve ``model'' for the weights alone.
 
 \subsection{Corpus Construction}
+\label{sec:corpus}
 
 We constructed a 500-abstract corpus from PubMed covering the association between PM$_{2.5}$ and respiratory health outcomes (Table~\ref{tab:corpus}).
 We chose this domain because it is one of the most extensively studied areas in environmental epidemiology, with Yu et~al.\autocite{yu2024lancet} estimating approximately 1~million premature deaths annually from short-term PM$_{2.5}$ exposure.
@@ -286,19 +294,47 @@ Articles were sourced from PubMed using the E-utilities API with a broad query y
 The final corpus spans 148~journals and publication years 1994--2026, with a mean abstract length of 1,873~characters.
 
 \textbf{Gold standard construction.}
-The 200~clear-category abstracts (100~include + 100~exclude) were labeled by an automated classification rule based on inclusion-criteria keyword matching, validated against a held-out 50-abstract validation set (rule precision = 100\% on the validation set).
+The 200~clear-category abstracts (100~include + 100~exclude) were labeled by an automated classification rule based on inclusion-criteria keyword matching, validated against a held-out 50-abstract validation set (no errors observed on that set; by the rule of three this bounds the true error rate only at ${\approx}6\%$ with 95\% confidence, and we no longer describe the rule as 100\% precise).
 The 300~ambiguous abstracts received heuristic labels from the same rule operating in low-confidence regions; these labels are reported separately in all accuracy computations and are explicitly flagged as not human-validated.
 We do not retroactively present these heuristic labels as a human gold standard.
 
 In response to peer review, we additionally conducted a \textbf{dual-independent human-labeling validation} on a stratified subset of 100~abstracts (25~clear-include + 25~clear-exclude + 50~ambiguous, sampled with stratification by year-tertile and seed${=}$42).
-Two reviewers (one blinded) independently classified each abstract via the protocol in Supplementary~\S4, with discordances resolved by a third reviewer; we computed Cohen's $\kappa$ on the 3-class outcome (include/exclude/uncertain) and on the binary include-vs.-exclude collapse.
-Results of this validation will be reported alongside the heuristic-only accuracy in the camera-ready version (the dual-labeling campaign is in progress at the time of submission); the protocol targets the Cochrane standard ($\kappa{\geq}0.80$).
+The labeling protocol, screening templates, and agreement script were pre-registered on the Open Science Framework \emph{before} any label was collected (\url{https://doi.org/10.17605/OSF.IO/FGN3E}, frozen 2026-05-12; the two label sets were returned on 2026-07-15 and 2026-07-29).
+Two reviewers, each blinded to the other's decisions, independently classified every abstract via the protocol in Supplementary~\S4; we computed Cohen's $\kappa$ on the 3-class outcome (include/exclude/uncertain) and on the binary include-vs.-exclude collapse.
+Agreement fell \textbf{below the pre-specified Cochrane target} of $\kappa{\geq}0.80$: $\kappa{=}0.529$ (SE${=}0.074$, 95\%~CI \ci{0.383}{0.674}) on the 3-class outcome and $\kappa{=}0.556$ (95\%~CI \ci{0.400}{0.712}) on the binary collapse, with 75\% raw agreement and 25~discordant abstracts (confusion matrix and full agreement statistics in Supplementary~\S4).
+The shortfall against the target is itself statistically decisive ($z{=}-3.65$, $p{=}1.3{\times}10^{-4}$), whereas $n{=}100$ is not sufficient to place $\kappa$ within a single descriptive band---the interval spans ``fair'' through ``substantial''---so we report the value against the threshold rather than assigning it a label.
+Two objections can be foreclosed immediately. The low coefficient is not an artefact of skewed marginals: the prevalence index is 0.189 and PABAK (0.558 on the binary collapse) is nearly identical to $\kappa$, so the ``kappa paradox'' is not operating here. Nor is it an artefact of the three-class scale: linearly and quadratically weighted $\kappa$ (0.541 and 0.548, computed on the ordinal ordering include--uncertain--exclude) move the estimate by less than 0.02.
+The pre-registration specified in advance what to do in this event---report the value transparently, examine the disagreement pattern qualitatively, amend the protocol to address the ambiguity, and file a sub-registration update---and we followed that sequence rather than revising the target.
+The disagreement is not diffuse but directional, and this is testable: the discordant cells of the binary table are 2~versus~19 (exact McNemar $p{=}2.2{\times}10^{-4}$), and marginal homogeneity is rejected on the full 3-class table (Stuart--Maxwell $\chi^2(2){=}15.4$, $p{=}4.6{\times}10^{-4}$), with a bias index of 0.179.
+One rater is systematically more inclusive than the other, which is the signature of divergent protocol reading rather than of random rater noise.
+The source is specific: 17~of those 19 asymmetric discordances turn on inclusion criterion~5 (a quantitative effect estimate), whose v1.1 wording supported two defensible readings---requiring the numeric estimate and interval to be present, or accepting an explicit statement that the study reported them.
+The v1.1 decision table compounded this by specifying outcomes for failure in two or more criteria and for a borderline single criterion, but not for clear failure in exactly one, which is precisely the configuration of those 17~abstracts.
+Neither rater departed from the protocol; the protocol was underspecified.
+Protocol v1.2 therefore splits criterion~5 into a level satisfied by numeric values and a level of insufficient abstract information that resolves to \emph{uncertain} rather than \emph{exclude}, and separates structural criteria (original study, PM\textsubscript{2.5} exposure, respiratory hospitalization, English) from conditional ones (design, effect reporting).
+A blinded recalibration round restricted to the 25~discordant items is underway.
+We stress what that round can and cannot establish. Because re-measurement is conditioned on prior disagreement, the resulting figure is \emph{not} a second estimate of $\kappa$ and we do not report it as one: recomputing a whole-corpus coefficient after selectively re-rating only the discordant items would drive the value upward by construction, and would cross the Cochrane threshold at a resolution rate that carries no evidential content.
+We therefore report it as post-hoc reconciliation agreement conditional on the initially discordant items, and $\kappa{=}0.529$ remains the study's agreement estimate.
+Establishing that the v1.2 amendment actually repairs the ambiguity would require a fresh independent sample rather than a re-rating of the same items, which we identify as the appropriate next step rather than claim as a result here.
+Stratifying agreement exposes something the pooled coefficient hides, and it bears directly on how our accuracy numbers should be read.
+On the 25~clear-\emph{exclude} abstracts the two raters agreed unanimously (25/25, PABAK${=}1.00$; $\kappa$ is undefined there because expected agreement equals one---a degenerate-marginals case that is precisely why we report PABAK alongside).
+On the 25~clear-\emph{include} abstracts agreement was 68\% ($\kappa{=}0.359$), and on the 50~ambiguous abstracts 66\% ($\kappa{=}0.398$).
+The automated rule's include side fares worst under human scrutiny: of the 25~abstracts it called clearly includable, one rater endorsed inclusion for 13 and the other for 21, and 8~of the 25~discordances fall inside that stratum.
+The gold standard is therefore \textbf{asymmetrically valid}. Specificity rests on the unanimous exclude side and is trustworthy; sensitivity rests on include-side labels that the human raters substantially contest, and is correspondingly attenuated.
+We report this rather than pool it away, and we read all sensitivity figures in this paper as lower bounds.
+
+Residual discordances go to a consensus meeting, and items without consensus are settled by a tie-breaker.
+The pre-registration named the senior author (Y.d.S.T.) in this role; it was reassigned to the first author (L.R.), a deviation we disclose here and in the sub-registration update.
+Tie-breaks apply only to residual discordant items, are adjudicated against the written criteria without access to any model output, and are logged with the criterion invoked, so each adjudicated item remains auditable.
 For extraction, we constructed two independent reference standards: (a) a \emph{silver-internal} consensus from majority vote across all 6~models $\times$ 10~runs (60~votes per item), and (b) a \emph{silver-external} consensus from DeepSeek-R1 (5~runs $\times$ 100~items, majority vote per field).
 DeepSeek-R1 was selected for the silver-external role on three independence axes: (i)~it is served by a provider outside the four tested in our main analysis, (ii)~it was trained predominantly on a different (Chinese-led, mixed open/closed) corpus, and (iii)~it uses an explicit-reasoning decoding paradigm distinct from the standard chat models evaluated here, which together make correlated systematic errors with the evaluated stacks unlikely.
 Cross-validation between these two silvers yields Spearman $\rho{=}0.845$ on \texttt{effect\_estimate} and 80\% agreement across numeric fields (consensus subset, see Supplementary~\S14), supporting their use as comparative anchors.
-For the 25~INCLUDE items in the dual-human subset, dual-human extraction labels additionally serve as a strict gold standard.
+A dual-human extraction reference is being built for the INCLUDE items of the human gold standard, and its provenance requires a disclosure.
+The extraction subset used in earlier drafts of this work was drawn from the silver-internal standard \emph{before} any human label existed; of those 25~items only 13 survive the human consensus.
+Scoring the models against a reference derived from model output would be circular, so the extraction subset has been rebuilt from the human gold standard instead, and the 13/25 overlap is reported as a result in its own right---direct evidence that LLM-based screening admits material that human raters reject.
+Dual-human extraction agreement will be computed on that rebuilt subset (\pending{final subset size and per-field extraction agreement}).
 
-Because our primary metric (EMR) measures self-consistency rather than accuracy, gold-standard quality affects only the secondary accuracy analysis; we report secondary accuracy against three sources (heuristic, silver-internal, silver-external---the latter computed on the consensus subset only, see Supplementary~\S14; plus dual-human gold for the 25-item subset) to triangulate the result.
+Because our primary metric (EMR) measures self-consistency rather than accuracy, gold-standard quality affects only the secondary accuracy analysis; we report secondary accuracy against three sources (heuristic, silver-internal, silver-external---the latter computed on the consensus subset only, see Supplementary~\S14; plus the dual-human gold standard for screening) to triangulate the result.
+Given the asymmetric validity documented above, we treat the exclude side of every accuracy comparison as firm and the include side as a lower bound.
 
 \subsection{Deployment Stacks}
 
@@ -548,7 +584,8 @@ This illustrates that a model can be accurate on average yet inconsistent across
 \medskip
 \noindent\textbf{Inter-run agreement (Fleiss' $\kappa$).}
 As a chance-corrected complement to EMR, we computed Fleiss' $\kappa$ across the 10 runs on the 3-class screening decision (include/exclude/uncertain) for each deployment stack.
-Inter-run Fleiss' $\kappa$ for screening ranged from $0.974$ (GPT-4.1, ``almost perfect'') to $1.000$ (all three local stacks); the cloud APIs were $\kappa{=}0.981$ (Claude), $0.975$ (Gemini), and $0.974$ (GPT-4.1), all comfortably above the Cochrane $\kappa{\geq}0.80$ guideline for human reviewer agreement.\autocite{higgins2019cochrane}
+Inter-run Fleiss' $\kappa$ for screening ranged from $0.974$ (GPT-4.1, ``almost perfect'') to $1.000$ (all three local stacks); the cloud APIs were $\kappa{=}0.981$ (Claude), $0.975$ (Gemini), and $0.974$ (GPT-4.1).
+These values quantify self-consistency across repetitions of the same stack and are not directly comparable to the Cochrane $\kappa{\geq}0.80$ guideline for agreement between two human reviewers,\autocite{higgins2019cochrane} which measures a different construct (see Section~\ref{sec:metric_pairing}).
 For whole-output extraction (each unique output hash as a distinct rating category), the picture is dramatically different: Claude's inter-run $\kappa{=}0.180$ (``slight'' on Landis \& Koch's scale), Gemini's $\kappa{=}0.505$ (``moderate''), and GPT-4.1's $\kappa{=}0.512$ (``moderate''); local stacks retain $\kappa{=}1.000$.
 Full Fleiss' $\kappa$ values with 95\% CIs and per-categorical-field decompositions are reported in Supplementary Table~\ref{supp-tab:fleiss}.
 
@@ -886,7 +923,10 @@ We conclude that the seed parameter, as currently implemented in commercial APIs
 \textbf{For systematic reviewers:}
 If using cloud-based LLMs for screening or extraction, results from a single run should be treated as one sample from a distribution of possible outputs, not as a definitive answer.
 Running multiple repetitions and reporting variation metrics should become standard practice, analogous to how human inter-rater reliability is routinely measured.
-For context, Cochrane guidelines expect $\kappa{\geq}0.80$ for human screening agreement;\autocite{higgins2019cochrane} the API models' screening EMR of 0.93--0.97 suggests comparable---though not identical---levels of self-consistency, while extraction EMR (0.05--0.20) falls far below any acceptable human reliability threshold.
+It is tempting to place the models' screening EMR of 0.93--0.97 next to the Cochrane expectation of $\kappa{\geq}0.80$ for human screening agreement\autocite{higgins2019cochrane} and read the comparison as favourable, and we resist that reading for two reasons.
+First, the quantities are not commensurable: EMR and inter-run Fleiss' $\kappa$ measure how consistently a \emph{single} rater reproduces itself across repetitions, whereas Cohen's $\kappa$ measures whether \emph{two different} raters reach the same conclusion. A system can be perfectly self-consistent and consistently wrong---in this corpus Mistral-7B achieves EMR${=}1.000$ at a specificity of 0.240 (Section~\ref{sec:fieldlevel}), which is the cleanest possible demonstration that self-consistency is not accuracy.
+Second, on this same corpus our own two human raters reached $\kappa{=}0.529$ (95\%~CI \ci{0.383}{0.674}; Section~\ref{sec:corpus}), so the $0.80$ figure functions here as an aspirational guideline rather than as a measured property of human screening. The honest comparison is therefore not ``models versus the threshold'' but ``models and humans each measured, on different constructs, against a threshold that neither was shown to meet.''
+Extraction EMR (0.05--0.20), by contrast, requires no such careful framing: it falls below any reliability standard on any construct.
 
 \textbf{For journal editors and reviewers:}
 Papers reporting LLM-assisted evidence synthesis should be expected to disclose: (a)~the exact model version, (b)~all inference parameters, (c)~whether results were verified across multiple runs, and (d)~provenance information enabling independent replication.
@@ -1022,10 +1062,11 @@ Replication on a second, non-Apple-M4 device (e.g., Linux x86\_64 with Ollama un
 Our findings open several high-impact research directions: (1)~establishing clinically meaningful equivalence thresholds (what BERTScore difference corresponds to a materially different meta-analytic conclusion?), (2)~directly testing significance flipping in smaller literatures ($k{<}20$) with marginal effects, where even the modest compositional instability we documented could shift a confidence interval across the null, (3)~investigating whether structured-output modes (Anthropic tool-use, OpenAI \texttt{response\_format=json\_schema}, Gemini function-calling) reduce non-determinism without sacrificing accuracy, and (4)~mechanistically isolating which component of cloud serving (batched continuous-batching, dynamic GPU/node assignment, floating-point reduction order) drives the asymmetric local-vs-cloud disagreement we documented in Section~\ref{sec:desconfound}.
 
 \textbf{Pre-registration disclosure.}
-This study was not formally pre-registered.
+This study is partly pre-registered, and we state precisely which parts, because the distinction matters for how much weight each result can carry.
 The original analyses (Sections~\ref{sec:fieldlevel}--\ref{sec:metaprop}) are exploratory: the choice of 10~repetitions, whole-output hash EMR, four semantic-tier definitions, and fixed-effect meta-analytic propagation were made during analysis design but without an Open Science Framework or AsPredicted submission.
-The post-revision analyses (Sections~\ref{sec:fixedslot}--\ref{sec:desconfound}, dual-human gold validation, silver-external standard) were designed and committed to the public Git repository \emph{before} result computation, with commit hashes serving as informal cryptographic timestamps; the revised analysis plan, including hypotheses and decision rules, is publicly auditable at the project repository.
-We acknowledge the absence of formal pre-registration as a limitation and recommend that future LLM-in-SR work register analyses on OSF or AsPredicted before data collection.
+The dual-human labeling validation is the exception and is \emph{formally} pre-registered: the protocol, the screening templates, and the agreement script were frozen as an OSF registration on 2026-05-12 (\url{https://doi.org/10.17605/OSF.IO/FGN3E}), two months before either label set was returned, and that registration pre-specified the $\kappa{\geq}0.80$ target together with the contingency followed in Section~\ref{sec:corpus} when the target was missed.
+The remaining post-revision analyses (Sections~\ref{sec:fixedslot}--\ref{sec:desconfound}, silver-external standard) were designed and committed to the public Git repository \emph{before} result computation, with commit hashes serving as informal cryptographic timestamps; we do not present Git commits as equivalent to pre-registration.
+We acknowledge the absence of formal pre-registration for the exploratory core as a limitation and recommend that future LLM-in-SR work register analyses on OSF or AsPredicted before data collection.
 We did not retrofit pre-registration claims to the original exploratory analyses.
 
 \subsection{Recommendations}
@@ -1081,7 +1122,7 @@ Our open-source infrastructure, complete dataset, and provenance protocol provid
 \begin{Backmatter}
 
 \paragraph{Acknowledgments}
-The authors thank the dual-human labelers who validated the gold standard subset (acknowledgment to be completed prior to camera-ready upon completion of the dual-labeling protocol).
+The authors thank the two independent raters who labeled the validation subset \pending{names, or removal of this sentence if both raters are listed as co-authors}.
 
 \paragraph{Funding Statement}
 This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.
@@ -1102,7 +1143,8 @@ All numerical results, tables, and figures derive deterministically from the loc
 The complete commit history is publicly auditable at \url{https://github.com/Roverlucas/llm-evidence-synthesis-reproducibility}.
 
 \paragraph{Data Availability Statement}
-All code, data, prompts, schemas, raw outputs, and run provenance records are publicly available at \url{https://github.com/Roverlucas/llm-evidence-synthesis-reproducibility} (frozen at tag \texttt{v1.0-osf-deposit}) and archived at the Open Science Framework (\url{https://doi.org/10.17605/OSF.IO/VR934}).
+All code, data, prompts, schemas, raw outputs, and run provenance records are publicly available at \url{https://github.com/Roverlucas/llm-evidence-synthesis-reproducibility} and archived at the Open Science Framework (\url{https://doi.org/10.17605/OSF.IO/VR934}).
+The dual-human labeling protocol is deposited separately as a frozen OSF registration (\url{https://doi.org/10.17605/OSF.IO/FGN3E}, 2026-05-12), which pre-dates label collection; the returned labels, agreement statistics, and the v1.2 protocol amendment are in the repository under \texttt{data/dual\_labeling/} (\pending{repository tag for the submitted version}).
 API keys are excluded from the repository.
 The 500 PubMed abstract identifiers, gold standard labels, and complete analysis scripts are included to enable full reproduction of the reported results.
 

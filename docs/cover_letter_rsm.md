@@ -1,6 +1,6 @@
 # Cover Letter — Research Synthesis Methods Submission
 
-**Status:** DRAFT v1 — 2026-05-20 (awaiting P1-A dual-labeling completion before final send)
+**Status:** DRAFT v2 — 2026-07-29. Stage-A dual labeling complete; awaiting Stage-B extraction labels before final send.
 
 **To:** Editors-in-Chief, *Research Synthesis Methods*
 Dimitris Mavridis & Therese Pigott
@@ -32,9 +32,9 @@ We conducted what we believe is the most comprehensive empirical evaluation of L
 ## Methodological rigor we provide
 
 - 10 repetitions per model × stage (vs. typical 2–3 in prior work)
-- Pre-registered post-revision analyses (commits as cryptographic timestamps)
+- A formally pre-registered human validation protocol, frozen on OSF two months before any label was collected (DOI 10.17605/OSF.IO/FGN3E). Post-revision analyses were committed to the public repository before result computation; we describe those as timestamped, not pre-registered, and keep the distinction explicit in the manuscript.
 - Two independent silver standards: within-study majority vote + external DeepSeek-R1 (different family, different training corpus, different decoding paradigm)
-- Dual independent human labeling on a stratified 100-abstract subset (in progress; Cochrane κ ≥ 0.80 target; results to be reported in the camera-ready version)
+- Dual independent human labeling on a stratified 100-abstract subset, **completed and reported as measured**: Cohen's κ = 0.529 (95% CI 0.383–0.674), below the pre-registered Cochrane target of 0.80. We report the shortfall rather than soften it, and the manuscript treats it as a finding: the disagreement proved to be directional (exact McNemar p = 2.2×10⁻⁴) and traceable to a single ambiguous inclusion criterion, which we diagnosed, amended, and documented in a protocol revision. We believe an RSM readership will find the measured human baseline more useful than the aspirational threshold it failed to meet — particularly since it also revealed that our gold standard is asymmetrically valid, with a unanimous exclude side and a contested include side.
 - SHA-256 provenance hashes on every input, output, and configuration
 - Fleiss' κ multi-rater agreement across runs (in addition to EMR)
 - McNemar's paired contrasts (replacing the original two-proportion z-test where outcomes are paired)
@@ -43,8 +43,9 @@ We conducted what we believe is the most comprehensive empirical evaluation of L
 
 ## Open Science
 
-- **OSF project**: registered, DOI [10.17605/OSF.IO/VR934](https://doi.org/10.17605/OSF.IO/VR934)
-- **GitHub repository** (frozen at submission tag `v1.0-osf-deposit`): https://github.com/Roverlucas/llm-evidence-synthesis-reproducibility
+- **OSF project**: public, DOI [10.17605/OSF.IO/VR934](https://doi.org/10.17605/OSF.IO/VR934)
+- **Pre-registration of the human validation protocol**: frozen OSF registration of 2026-05-12, DOI [10.17605/OSF.IO/FGN3E](https://doi.org/10.17605/OSF.IO/FGN3E) — predates label collection
+- **GitHub repository**: https://github.com/Roverlucas/llm-evidence-synthesis-reproducibility (submission tag to be set at final send; the older `v1.0-osf-deposit` tag predates the dual-labeling results and must not be cited as the submitted version)
 - **License**: code under MIT; data, prompts, and manuscript materials under CC-BY 4.0
 - **Companion paper**: Rover & Tadano (2026), "Hidden Non-Determinism in Large Language Model APIs: A Lightweight Provenance Protocol", JAIR (in press); the provenance protocol applied here is validated independently in that paper.
 
@@ -61,16 +62,9 @@ We respectfully suggest the following reviewers, all of whom have published meth
 - **Linnea Jensen, MD** — Aarhus University, Denmark — author of ChatGPT-4o inter-session extraction reliability (2025). (email TBD)
 - **Berkant Atil** — author of "Non-Determinism of 'Deterministic' LLM Settings" (2024). (email TBD)
 
-We respectfully request that the following be excluded from review because of recent overlapping work or close collaboration:
-- (No exclusions at this time. Confirm with co-author Yara Tadano before final submission.)
+We have no exclusion requests.
 
-## Anticipated timing
-
-- **Pre-submission inquiry**: drafted 2026-03-20, status to be confirmed before final submission.
-- **Dual-labeling P1-A**: in progress (Profa. Yara is recruiting the two independent validators); expected completion within ~3 weeks; results integrated in camera-ready version.
-- **Target submission date**: ~2026-06-15 (subject to dual-labeling completion).
-
-Thank you for considering our work. We would be delighted to address any preliminary questions during the inquiry phase.
+Thank you for considering our work.
 
 Best regards,
 
@@ -83,19 +77,4 @@ On behalf of co-author **Yara de Souza Tadano, DSc** (UTFPR, supervisor)
 
 ---
 
-## Pre-submission checklist for Lucas before final send
-
-- [ ] Confirm pre-submission inquiry was sent (check email sent items / confirm with Yara)
-- [ ] Confirm dual-labeling Fleiss κ results integrated into main.tex §3.3
-- [ ] Replace "results to be reported in the camera-ready version" placeholder
-- [ ] Confirm suggested-reviewer emails for Oami, Jensen, Atil
-- [ ] Get Yara's sign-off on final manuscript + cover letter
-- [ ] Verify OSF deposit is public and contains all files per MANIFEST.md
-- [ ] Verify GitHub tag `v1.0-osf-deposit` matches the submitted manuscript commit
-- [ ] Tag a `v1.1-rsm-submission` if any post-deposit edits were made
-- [ ] Zenodo DOI minted (if separate from OSF DOI)
-- [ ] All co-authors approved (currently 2: L.R., Y.S.T.)
-
----
-
-*Last updated: 2026-05-20*
+*Last updated: 2026-07-29. Internal checklist moved to `docs/submission_checklist.md` so that it cannot be sent to the editors with this letter.*

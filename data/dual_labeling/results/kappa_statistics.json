@@ -1,0 +1,170 @@
+{
+  "metadata": {
+    "labeler1": "Isabelle",
+    "labeler2": "Luiza Iltchechen",
+    "protocol_version_at_labeling": "1.1",
+    "seed": 42,
+    "n_bootstrap": 10000,
+    "sources": {
+      "labeler1": "data/dual_labeling/returned/subset_100_labeler1_RETURNED.csv",
+      "labeler2": "data/dual_labeling/returned/subset_100_labeler2_RETURNED.csv"
+    }
+  },
+  "three_class": {
+    "n": 100,
+    "categories": [
+      "INCLUDE",
+      "EXCLUDE",
+      "UNCERTAIN"
+    ],
+    "kappa": 0.5287464655984919,
+    "se": 0.07421768105873423,
+    "ci95": [
+      0.38328248370729223,
+      0.6742104474896916
+    ],
+    "percent_agreement": 0.75,
+    "confusion_matrix": [
+      [
+        28,
+        2,
+        0
+      ],
+      [
+        19,
+        46,
+        2
+      ],
+      [
+        2,
+        0,
+        1
+      ]
+    ],
+    "ordinal_scale_used": [
+      "INCLUDE",
+      "UNCERTAIN",
+      "EXCLUDE"
+    ],
+    "kappa_weighted_linear": 0.5412844036697249,
+    "kappa_weighted_quadratic": 0.5481154359659033,
+    "pabak": 0.5,
+    "test_vs_cochrane": {
+      "target": 0.8,
+      "z": -3.654837102588049,
+      "p_one_sided": 0.00012867266189407018,
+      "below_target": true
+    }
+  },
+  "binary_include_vs_exclude": {
+    "n": 95,
+    "categories": [
+      "INCLUDE",
+      "EXCLUDE"
+    ],
+    "kappa": 0.5561735261401557,
+    "se": 0.07975546848956402,
+    "ci95": [
+      0.399855680330491,
+      0.7124913719498204
+    ],
+    "percent_agreement": 0.7789473684210526,
+    "confusion_matrix": [
+      [
+        28,
+        2
+      ],
+      [
+        19,
+        46
+      ]
+    ],
+    "pabak": 0.5578947368421052,
+    "test_vs_cochrane": {
+      "target": 0.8,
+      "z": -3.057175620399609,
+      "p_one_sided": 0.0011171666330599295,
+      "below_target": true
+    }
+  },
+  "bootstrap_three_class": {
+    "theta_hat": 0.5287464655984919,
+    "percentile_ci95": [
+      0.3827160493827162,
+      0.6697778758458369
+    ],
+    "n_boot": 10000,
+    "bca_ci95": [
+      0.3817949328200727,
+      0.6693186043140086
+    ],
+    "z0": 0.026322636310952642,
+    "acceleration": -0.016931278553157788
+  },
+  "marginal_homogeneity": {
+    "stuart_maxwell_3class": {
+      "statistic": 15.38202247191011,
+      "df": 2,
+      "p_value": 0.0004569158882610225
+    },
+    "bowker_symmetry_3class": {
+      "statistic": 15.561904761904763,
+      "df": 3,
+      "p_value": 0.001394305400167329
+    },
+    "mcnemar_binary_exact": {
+      "statistic": 2.0,
+      "p_value": 0.00022125244140625,
+      "discordant_cells": [
+        2,
+        19
+      ],
+      "n": 95
+    },
+    "interpretation": "A significant result means the two labelers do not merely disagree, they disagree directionally: one is systematically more inclusive. That is the statistical signature of divergent protocol reading, not of random rater noise."
+  },
+  "byrt_indices": {
+    "prevalence_index": 0.18947368421052632,
+    "bias_index": 0.17894736842105263,
+    "note": "A low prevalence index means the kappa paradox is NOT operating: the coefficient is not artificially depressed by skewed marginals, so the low value cannot be explained away on that ground."
+  },
+  "per_stratum": {
+    "ambiguous": {
+      "n": 50,
+      "percent_agreement": 0.66,
+      "pabak": 0.32000000000000006,
+      "kappa": 0.3984430290162775,
+      "labeler1_endorsed_stratum_label": 0,
+      "labeler2_endorsed_stratum_label": 0
+    },
+    "exclude": {
+      "n": 25,
+      "percent_agreement": 1.0,
+      "pabak": 1.0,
+      "kappa": null,
+      "kappa_note": "undefined: expected agreement = 1 (degenerate marginals). Perfect observed agreement with no reportable coefficient — this is why PABAK is reported alongside.",
+      "labeler1_endorsed_stratum_label": 25,
+      "labeler2_endorsed_stratum_label": 25
+    },
+    "include": {
+      "n": 25,
+      "percent_agreement": 0.68,
+      "pabak": 0.3600000000000001,
+      "kappa": 0.35897435897435903,
+      "labeler1_endorsed_stratum_label": 13,
+      "labeler2_endorsed_stratum_label": 21
+    }
+  },
+  "decision_counts": {
+    "labeler1": {
+      "EXCLUDE": 67,
+      "INCLUDE": 30,
+      "UNCERTAIN": 3
+    },
+    "labeler2": {
+      "INCLUDE": 49,
+      "EXCLUDE": 48,
+      "UNCERTAIN": 3
+    }
+  }
+}

@@ -4,7 +4,7 @@
 
 **Short Title**: LLM Evidence Synthesis Reproducibility
 
-**Status**: Manuscript under review at *Research Synthesis Methods* (Wiley, IF 6.1)
+**Status**: Manuscript under review at *Research Synthesis Methods* (Cambridge University Press, IF 6.1)
 
 **Last updated**: 2026-05-11
 
@@ -47,7 +47,8 @@ This top-level project contains the following components, each with its own DOI:
 2. **Data** — corpus, raw LLM outputs, gold standards
 3. **Code** — link to GitHub repository (frozen commit hash)
 4. **Analyses** — JSON outputs of all statistical analyses (blindage suite, Fleiss' κ, BERTScore, HKSJ sensitivity, etc.)
-5. **Pre-Registration: Dual-Human Labeling Protocol** — formal pre-commitment to dual-independent human labeling (Stage A: 100 abstracts; Stage B: 25 extractions), Cohen's κ ≥ 0.80 target, currently in progress
+4. **Pre-Registration: Dual-Human Labeling Protocol** (`8z6fy`) — formal pre-commitment to dual-independent human labeling, Cohen's κ ≥ 0.80 target. Frozen as OSF registration `fgn3e` (DOI `10.17605/OSF.IO/FGN3E`) on 2026-05-12, before any label was collected.
+   Stage A is complete: κ = 0.529 (95% CI 0.383–0.674), below the pre-registered target. The registered contingency was followed — reported as measured, disagreement diagnosed (inclusion criterion 5), protocol amended to v1.2, sub-registration update pending. Stage B is being rebuilt from the human gold standard because the original 25-item set came from the LLM silver standard and only 13 survive human consensus.
 
 ## Reproducibility
 

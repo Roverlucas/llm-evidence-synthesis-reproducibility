@@ -11,9 +11,16 @@ Resolution order, per abstract, with the source recorded for every single item:
 Every item lands in exactly one bucket and the bucket is written to the output,
 so a reviewer can audit how much of the gold standard rests on each mechanism.
 
-The pre-specified kappa (round 1) is NOT recomputed here — it is already archived
-in ``results/kappa_report.json`` and stands as the primary reported figure. This
-script optionally reports a secondary post-recalibration kappa, clearly labelled.
+The round-1 kappa is NOT recomputed here — it is archived in
+``results/kappa_report.json`` and stands as the study's agreement estimate.
+
+This script deliberately does NOT emit a post-recalibration kappa. Round 2 re-rates
+only the items that already disagreed, so any coefficient recomputed over the full
+corpus afterwards rises mechanically: at a high enough resolution rate it crosses
+the Cochrane threshold by construction and carries no evidential content. What is
+reported instead is the reconciliation convergence rate — how many of the initially
+discordant items the two labelers now agree on — which is descriptive and conditional
+on that selected subset by definition.
 
 Usage:
     python scripts/dual_labeling/build_gold_standard.py \
@@ -41,18 +48,16 @@ def norm(value: object) -> str:
     return str(value).strip().upper() if pd.notna(value) else ""
 
 
-def cohen_kappa(pairs: list[tuple[str, str]]) -> float | None:
-    """Cohen's kappa over 3 categories; None when there is nothing to score."""
-    n = len(pairs)
-    if n == 0:
+def convergence_rate(pairs: list[tuple[str, str]]) -> float | None:
+    """Share of re-rated items on which the two labelers now agree.
+
+    Descriptive by construction: the denominator is the set of items that
+    disagreed in round 1, so this is not an agreement coefficient and must never
+    be presented as one.
+    """
+    if not pairs:
         return None
-    cats = sorted(DECISIONS)
-    po = sum(1 for a, b in pairs if a == b) / n
-    c1, c2 = Counter(a for a, _ in pairs), Counter(b for _, b in pairs)
-    pe = sum((c1[c] / n) * (c2[c] / n) for c in cats)
-    if pe == 1.0:
-        return 1.0 if po == 1.0 else 0.0
-    return (po - pe) / (1 - pe)
+    return sum(1 for a, b in pairs if a == b) / len(pairs)
 
 
 def main() -> None:
@@ -139,7 +144,7 @@ def main() -> None:
 
     sources = Counter(e["resolution_source"] for e in gold)
     decisions = Counter(e["decision"] for e in gold if e["decision"])
-    kappa_round2 = cohen_kappa(round2_pairs)
+    convergence = convergence_rate(round2_pairs)
 
     payload = {
         "metadata": {
@@ -151,17 +156,22 @@ def main() -> None:
             "n_unresolved": len(unresolved),
             "unresolved_ids": unresolved,
         },
-        "kappa": {
-            "primary_prespecified_round1": "see results/kappa_report.json (0.5287)",
-            "secondary_post_recalibration": (
-                round(kappa_round2, 4) if kappa_round2 is not None else None
+        "agreement": {
+            "study_estimate_round1": (
+                "kappa = 0.5287 (3-class), 0.5562 (binary); see "
+                "results/kappa_report.json and results/kappa_statistics.json"
             ),
-            "secondary_n_pairs": len(round2_pairs),
+            "reconciliation_convergence_rate": (
+                round(convergence, 4) if convergence is not None else None
+            ),
+            "reconciliation_n_items": len(round2_pairs),
             "note": (
-                "The round-1 kappa is the pre-specified primary result and is "
-                "reported regardless of the round-2 value. The round-2 kappa is "
-                "computed only over the previously discordant items and is not "
-                "comparable to a full-corpus kappa."
+                "reconciliation_convergence_rate is NOT a kappa and must not be "
+                "reported as one. Its denominator is the set of items that "
+                "disagreed in round 1, so it is descriptive and conditional on "
+                "that selected subset. No post-recalibration coefficient is "
+                "emitted, because re-rating only the discordant items would raise "
+                "a recomputed full-corpus kappa by construction."
             ),
         },
         "resolution_sources": dict(sources),
@@ -181,8 +191,9 @@ def main() -> None:
     print(f"gold standard: {args.out}")
     print(f"resolution sources: {dict(sources)}")
     print(f"decisions: {dict(decisions)}")
-    if kappa_round2 is not None:
-        print(f"secondary kappa (discordant items only, n={len(round2_pairs)}): {kappa_round2:.4f}")
+    if convergence is not None:
+        print(f"reconciliation convergence (not a kappa): {convergence:.1%} "
+              f"of {len(round2_pairs)} re-rated items")
     if unresolved:
         print(f"WARNING: {len(unresolved)} unresolved: {unresolved}")
 

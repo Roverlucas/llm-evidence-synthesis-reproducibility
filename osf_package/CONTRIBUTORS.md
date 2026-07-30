@@ -20,7 +20,7 @@ The RSM submission lists **two authors** (Lucas Rover, lead, and Yara de Souza T
 - [x] ~~Confirm ORCIDs~~ (resolved 2026-05-11)
 - [x] ~~CRediT role assignments~~
 - [x] ~~Author Contributions paragraph in `article/main.tex`~~
-- [ ] Decide whether the 2nd human rater (for Stage A/B dual-labeling, currently unidentified) will receive co-authorship or Acknowledgment-only credit
+- [ ] Decide the credit for both raters — labeler1 = Isabelle (surname to confirm), labeler2 = Luiza Iltchechen. Both returned complete Stage-A label sets (2026-07-29 and 2026-07-15). Co-authorship is the current intention; if adopted, the Acknowledgments sentence thanking the raters must be removed, since co-authors are not thanked there. ORCIDs and affiliations still needed.
 
 ## CRediT Role Reference
 

@@ -33,11 +33,21 @@ em 1 critério", mas **não cobria falha clara em exatamente 1 critério** — q
 precisamente o caso desses 17 abstracts. Nenhuma das labelers violou o protocolo;
 o protocolo é que estava incompleto.
 
-A v1.2 desambigua os dois pontos. **O κ inicial de 0.529 permanece como resultado
-pré-especificado e será reportado no manuscrito como tal**, independentemente do
-valor obtido após a reconciliação. Qualquer κ pós-reconciliação é reportado como
-métrica secundária, explicitamente identificada como posterior à revisão do
-protocolo. Não se substitui um resultado pelo outro.
+A v1.2 desambigua os dois pontos. **O κ de 0.529 permanece como o resultado de
+concordância do estudo e será reportado no manuscrito como tal**, independentemente
+do que a reconciliação produzir.
+
+⚠️ **A rodada de reconciliação NÃO produz um segundo κ e não pode ser reportada
+como tal.** Como a remedição é condicionada à discordância prévia, recalcular um
+coeficiente sobre o corpus inteiro depois de rerrotular apenas os 25 itens
+discordantes empurra o valor para cima mecanicamente — com taxa de resolução
+suficientemente alta, cruzaria o limiar Cochrane **por construção**, sem nenhum
+conteúdo evidencial. O resultado é reportado como *concordância pós-hoc de
+reconciliação, condicional aos itens inicialmente discordantes*.
+
+Demonstrar que a v1.2 corrige de fato a ambiguidade exigiria uma **amostra nova e
+independente** (n≈30-40 basta para uma checagem direcional), não a rerrotulagem dos
+mesmos itens. Fica registrado como próximo passo, não como resultado.
 
 ### v1.1 (2026-04-25)
 Adição da extraction task (Stage B).
@@ -263,9 +273,10 @@ Após ambos labelers terminarem (Stage A + B):
 2. **Sessão de recalibração v1.2** (~30 min): as duas labelers leem §0, §2.1 e §4
    revisados e reavaliam **apenas os itens em discordância**, de novo de forma
    independente. Os 75 itens concordantes não são reabertos.
-3. Rodar `compute_kappa.py` novamente sobre o conjunto pós-recalibração → κ
-   secundário. **O κ inicial (0.529) continua sendo reportado como o resultado
-   pré-especificado.**
+3. Medir a **concordância pós-hoc de reconciliação** sobre os 25 itens (quantos
+   convergiram). **Não** rodar `compute_kappa.py` sobre o corpus inteiro
+   pós-recalibração: o número resultante não seria um κ interpretável (ver §0).
+   O κ de 0.529 continua sendo o resultado de concordância do estudo.
 4. Discordâncias que sobreviverem à recalibração vão a **consenso**; sem consenso,
    **tie-break por Lucas Rover** com registro do critério invocado.
 5. Gold standards finais salvos em:

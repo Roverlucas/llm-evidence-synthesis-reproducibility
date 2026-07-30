@@ -69,9 +69,18 @@ Lucas dá o tie-break, registrando qual critério invocou.
 
 ## Sobre o κ de 0.529
 
-Ele **será publicado assim**, como resultado pré-especificado, independentemente do que
-a recalibração produzir. Não se troca um resultado pelo outro. O κ pós-recalibração
-entra como métrica secundária, identificada como posterior à revisão do protocolo.
+Ele **será publicado assim**, independentemente do que esta rodada produzir. Não se troca
+um resultado pelo outro.
+
+E uma coisa importante, para tirar qualquer pressão de cima de vocês: **esta rodada não
+gera um novo κ.** Como só estamos reavaliando os itens em que houve discordância, qualquer
+coeficiente recalculado sobre os 100 subiria automaticamente — não porque a concordância
+real melhorou, mas por causa de como o subconjunto foi escolhido. O que a rodada mede é
+quantos dos 25 convergem, e isso é reportado como tal.
+
+Então não existe "número a bater" aqui. Se você reler um abstract sob a regra nova e
+continuar achando o mesmo, registre o mesmo. Manter a decisão é uma resposta tão útil
+quanto mudá-la.
 
 Isso é deliberado: um protocolo escrito por pesquisadores treinados ainda assim
 produziu 25% de discordância na primeira rodada. Num artigo sobre reprodutibilidade de

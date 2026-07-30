@@ -100,8 +100,8 @@ From the merged candidate pool (1,021 unique records after deduplication):
   \item 300 abstracts with borderline characteristics (e.g., mixed pollutants, ambiguous outcomes) were labeled ``ambiguous''
 \end{itemize}
 
-The 200 ``clear'' abstracts were independently labeled by two reviewers with discordance resolution.
-The 300 ``ambiguous'' abstracts were classified using study-design indicators and keyword matching (see Labeling Guide, Section~\ref{sec:labeling}).
+The 200 ``clear'' abstracts were labeled by an automated classification rule based on inclusion-criteria keyword matching, and the 300 ``ambiguous'' abstracts by the same rule operating in low-confidence regions (see Labeling Guide, Section~\ref{sec:labeling}).
+No abstract in the 500-item corpus received a human label at this stage; human dual-independent labeling was conducted later, on a stratified 100-abstract subset, and is reported in Section~\ref{sec:labeling}.
 
 % ============================================================
 \section{Prompt Templates}
@@ -237,12 +237,87 @@ Full schemas are available in the repository at \texttt{configs/schemas/}.
 
 \subsection{Screening Labels}
 
-The 200 ``clear'' abstracts (100 include, 100 exclude) were independently labeled by two reviewers following a structured protocol.
-Discordance was resolved by a third reviewer.
-Inter-rater agreement targets: Cohen's $\kappa \geq 0.80$, discordance rate $< 15\%$.
-
-The 300 ``ambiguous'' abstracts were classified using keyword matching and study-design indicators.
+The 500-item corpus was labeled by an automated classification rule: the 200 ``clear'' abstracts (100 include, 100 exclude) by inclusion-criteria keyword matching, and the 300 ``ambiguous'' abstracts by the same rule in low-confidence regions.
+The rule made no errors on a held-out 50-abstract validation set, which by the rule of three bounds its true error rate at approximately 6\% with 95\% confidence; we do not describe it as 100\% precise.
 These labels serve as reference values for accuracy computation but do not affect the primary metric (EMR), which measures self-consistency regardless of ground truth.
+
+\subsection{Dual-Independent Human Validation}
+\label{sec:dualhuman}
+
+In response to peer review we validated the automated labels against human judgement on a stratified subset of 100 abstracts (25 clear-include, 25 clear-exclude, 50 ambiguous; stratified by category $\times$ year-tertile, seed${=}42$).
+
+\textbf{Pre-registration.} The protocol, the screening templates, and the agreement script were frozen as an OSF registration on 2026-05-12 (\url{https://doi.org/10.17605/OSF.IO/FGN3E}). The two label sets were returned on 2026-07-15 and 2026-07-29, so the registration pre-dates all label collection. The registration pre-specified the target (Cohen's $\kappa \geq 0.80$, Cochrane Handbook §4.6.6), the discordance-rate expectation ($<15\%$), and a contingency for missing the target.
+
+\textbf{Both pre-specified gates were missed}, and we report them rather than drop them: $\kappa=0.529$ against a target of $0.80$, and a discordance rate of 25\% against an expectation of $<15\%$.
+
+\begin{table}[htbp]
+\centering
+\caption{Stage-A screening agreement between the two human raters ($n=100$). Analytic intervals use the Fleiss--Cohen--Everitt delta method; the bootstrap uses 10{,}000 resamples with seed 42.}
+\label{tab:humankappa}
+\small
+\begin{tabular}{lll}
+\toprule
+\textbf{Quantity} & \textbf{Value} & \textbf{95\% CI} \\
+\midrule
+Cohen's $\kappa$, 3-class & 0.529 (SE 0.074) & [0.383, 0.674] \\
+\quad bootstrap, percentile & 0.529 & [0.383, 0.670] \\
+\quad bootstrap, BCa & 0.529 & [0.382, 0.669] \\
+Cohen's $\kappa$, binary (include vs.\ exclude, $n=95$) & 0.556 & [0.400, 0.712] \\
+Weighted $\kappa$, linear (ordinal include--uncertain--exclude) & 0.541 & --- \\
+Weighted $\kappa$, quadratic & 0.548 & --- \\
+Raw agreement & 75.0\% & --- \\
+PABAK, 3-class / binary & 0.500 / 0.558 & --- \\
+Prevalence index / bias index & 0.189 / 0.179 & --- \\
+Test against Cochrane target & $z=-3.65$ & $p=1.3\times10^{-4}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Two competing explanations for a low coefficient can be ruled out. The prevalence index is low (0.189) and PABAK is almost identical to $\kappa$, so the value is not depressed by skewed marginals---the ``kappa paradox'' is not operating. Weighted variants shift the estimate by less than 0.02, so the result is not an artefact of the three-class scale. With $n=100$ the interval spans ``fair'' through ``substantial'', so we report the value relative to the threshold and do not assign it a descriptive band.
+
+\begin{table}[htbp]
+\centering
+\caption{Confusion matrix, rater~1 (rows) $\times$ rater~2 (columns).}
+\label{tab:humanconfusion}
+\small
+\begin{tabular}{lrrr}
+\toprule
+ & \textbf{INCLUDE} & \textbf{EXCLUDE} & \textbf{UNCERTAIN} \\
+\midrule
+\textbf{INCLUDE}   & 28 & 2  & 0 \\
+\textbf{EXCLUDE}   & 19 & 46 & 2 \\
+\textbf{UNCERTAIN} & 2  & 0  & 1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{The disagreement is directional, not diffuse.} The binary discordant cells are 2 versus 19 (exact McNemar $p=2.2\times10^{-4}$), and marginal homogeneity is rejected on the 3-class table (Stuart--Maxwell $\chi^2(2)=15.4$, $p=4.6\times10^{-4}$; Bowker symmetry likewise rejected). Rater~2 returned 49 INCLUDE decisions against rater~1's 30. Systematic directional divergence of this kind indicates that the two raters applied different readings of the written protocol, which is a defect of the instrument rather than noise in the raters.
+
+Of the 25 discordances, 19 run in that same direction, and 17 of those 19 turn on inclusion criterion~5 (quantitative effect estimate). Protocol v1.1 stated the criterion as ``reports RR, OR, HR (or equivalent) with 95\% CI'' in its inclusion list while its exclusion list read ``no quantitative effect estimate extractable from the abstract'' --- the first wording admits a stated intention to report an effect, the second demands the numbers themselves. Compounding this, the v1.1 decision table specified outcomes for failure in two or more criteria and for a borderline single criterion, but not for clear failure in exactly one criterion, which is the configuration of those 17 abstracts.
+
+\begin{table}[htbp]
+\centering
+\caption{Stratum-specific agreement. In the clear-exclude stratum expected agreement equals one, so $\kappa$ is undefined despite unanimity; PABAK is reported for that reason.}
+\label{tab:strata}
+\small
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Stratum} & \textbf{$n$} & \textbf{Raw agreement} & \textbf{Cohen's $\kappa$} & \textbf{PABAK} \\
+\midrule
+clear-exclude & 25 & 1.000 & undefined & 1.000 \\
+clear-include & 25 & 0.680 & 0.359 & 0.360 \\
+ambiguous     & 50 & 0.660 & 0.398 & 0.320 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{The gold standard is asymmetrically valid}, and this qualifies every accuracy figure in the main text. The exclude side is unanimous: both raters endorsed exclusion for all 25 abstracts the automated rule called clearly excludable. The include side is not: of the 25 abstracts the rule called clearly includable, rater~1 endorsed inclusion for 13 and rater~2 for 21, and 8 of the 25 discordances fall inside that stratum. Reported specificity therefore rests on labels the humans confirm, while reported sensitivity rests on include-side labels they substantially contest and should be read as a lower bound.
+
+\textbf{Protocol amendment (v1.2).} Following item (c) of the registered contingency, criterion~5 was split into a level satisfied by a numeric estimate with a numeric interval and a level of insufficient abstract information that resolves to \emph{uncertain} rather than \emph{exclude}, on the reasoning that abstract-only screening cannot verify what the abstract omits. The decision table now separates structural criteria (original study, PM\textsubscript{2.5} exposure, respiratory hospitalization, English), where a single clear failure excludes, from conditional criteria (design, effect reporting), where a single failure yields \emph{uncertain}.
+
+\textbf{Recalibration round and its limits.} A blinded round restricted to the 25 discordant items is underway; the 75 concordant items are not reopened. This round cannot produce a second estimate of $\kappa$, and we do not report one. Conditioning re-measurement on prior disagreement moves a recomputed whole-corpus coefficient upward mechanically---at a sufficiently high resolution rate it would cross the Cochrane threshold by construction, carrying no evidential content. The outcome is therefore reported as post-hoc reconciliation agreement conditional on the initially discordant items, and $\kappa=0.529$ stands as the study's agreement estimate. Demonstrating that the v1.2 amendment repairs the ambiguity would require a fresh independent sample, which we identify as the appropriate next step rather than claim here.
+
+\textbf{Discordance resolution.} Items still discordant after recalibration go to a consensus meeting; items without consensus are settled by a tie-breaker. The registration named the senior author (Y.d.S.T.) in that role and it was reassigned to the first author (L.R.); we disclose this deviation here, in the Methods, and in the sub-registration update. Tie-breaks are restricted to residual discordant items, adjudicated against the written criteria with no access to model outputs, and logged with the criterion invoked, so each adjudicated item is auditable. The resulting gold standard records, per abstract, whether its label came from first-round agreement, post-recalibration agreement, consensus, or tie-break.
 
 \subsection{Extraction Labels}
 
@@ -850,7 +925,7 @@ GPT-4.1 / OpenAI               & $0.974\,[0.959, 0.989]$ & $\mathbf{0.512\,[0.50
 \end{tabular}
 \end{table}
 
-\noindent For screening decisions, all six deployment stacks reach the Cochrane $\kappa{\geq}0.80$ guideline for human inter-rater agreement, with all three local stacks attaining the trivial upper bound $\kappa{=}1.000$ and the three cloud APIs in the ``almost perfect'' band ($\kappa{\in}[0.974, 0.981]$).
+\noindent For screening decisions, all three local stacks attain the trivial upper bound $\kappa{=}1.000$ and the three cloud APIs fall in the ``almost perfect'' band ($\kappa{\in}[0.974, 0.981]$). We deliberately avoid the shorthand that the stacks therefore ``reach the Cochrane guideline'': inter-run Fleiss' $\kappa$ measures one stack reproducing itself across repetitions, whereas the Cochrane $\kappa{\geq}0.80$ guideline concerns agreement between two independent human reviewers. On this corpus our own two human raters reached $\kappa{=}0.529$ (Section~\ref{sec:dualhuman}), and Mistral-7B attains perfect self-consistency at a specificity of $0.240$, which together show that the two quantities cannot be substituted for one another.
 For \emph{whole-output} extraction hashes, however, Fleiss' $\kappa$ collapses for the cloud APIs to $0.180$ (Claude, ``slight''), $0.505$ (Gemini, ``moderate''), and $0.512$ (GPT-4.1, ``moderate''). The Claude value is particularly stark: when whole-output hash is the rating, Claude's 10 runs agree at only the ``slight'' level on the Landis-Koch scale, well below the Cochrane $\kappa{\geq}0.80$ threshold. Per-field $\kappa$ on categorical extraction fields (study\_design, population) remains in the ``almost perfect'' band for all stacks, isolating the source of low whole-output $\kappa$ to the variable-length \texttt{estimates} array (already documented in Section~\ref{main-sec:fieldlevel} of the main text).
 
 % ============================================================
@@ -947,7 +1022,7 @@ Deployment effect (local-seeded vs.\ cloud-seeded): $+0.825$ EMR. The deployment
 \section{Pre-Registration Disclosure}
 \label{sec:prereg_supp}
 
-This study was not formally pre-registered. The original experiments (main text \S4.1--\S4.6) are exploratory: 10 repetitions, whole-output hash EMR, four semantic-tier definitions, and fixed-effect meta-analytic pooling were chosen during analysis design but without an OSF or AsPredicted submission. The post-revision analyses (\S4.7 fixed-slot, \S4.8 desconfound, \S5.5 cost-benefit, dual-human gold validation, silver-external) were designed and committed to the public Git repository \emph{before} result computation.
+This study is partly pre-registered, and the boundary is stated precisely. The original experiments (main text \S4.1--\S4.6) are exploratory: 10 repetitions, whole-output hash EMR, four semantic-tier definitions, and fixed-effect meta-analytic pooling were chosen during analysis design but without an OSF or AsPredicted submission. The dual-human labeling validation is the exception and \emph{is} formally pre-registered as a frozen OSF registration dated 2026-05-12 (\url{https://doi.org/10.17605/OSF.IO/FGN3E}), two months before either label set was returned; see Section~\ref{sec:dualhuman}. The remaining post-revision analyses (\S4.7 fixed-slot, \S4.8 desconfound, \S5.5 cost-benefit, silver-external) were designed and committed to the public Git repository \emph{before} result computation; we do not present Git commits as equivalent to pre-registration.
 
 Key commit timestamps (publicly auditable at \url{https://github.com/Roverlucas/llm-evidence-synthesis-reproducibility}):
 
@@ -960,6 +1035,6 @@ Key commit timestamps (publicly auditable at \url{https://github.com/Roverlucas/
   \item \textbf{2026-04-23 to 2026-04-28}: post-revision blindage analyses committed
 \end{itemize}
 
-We acknowledge the absence of formal pre-registration as a limitation and recommend that future LLM-in-SR studies pre-register analyses on OSF before data collection.
+We acknowledge the absence of formal pre-registration for the exploratory core as a limitation and recommend that future LLM-in-SR studies pre-register analyses on OSF before data collection.
 
 \end{document}

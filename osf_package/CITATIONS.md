@@ -1,6 +1,13 @@
 # Citation Snippets — Ready to Paste
 
-**OSF project registered 2026-05-11**: https://osf.io/vr934 (DOI: `10.17605/OSF.IO/VR934`). The pre-registration sub-component (Step 5 of UPLOAD_INSTRUCTIONS) will issue a separate DOI — `YYYYY` placeholders below should be updated when that registration is created.
+**Both OSF deposits exist and their DOIs are final.** Verified against the OSF API on 2026-07-29.
+
+| Object | ID | DOI | Date |
+|--------|----|-----|------|
+| Project (public, 4 components) | `vr934` | `10.17605/OSF.IO/VR934` | created 2026-05-11 |
+| Registration — Dual-Human Labeling Protocol (frozen, public, not embargoed) | `fgn3e` | `10.17605/OSF.IO/FGN3E` | registered 2026-05-12 |
+
+The registration is a frozen snapshot of the component `8z6fy` and **pre-dates all label collection** (labels returned 2026-07-15 and 2026-07-29), so pre-commitment claims about the labeling protocol are supportable. Note the distinction when writing: `vr934` is a *project* (mutable, no `date_registered`), `fgn3e` is a *registration*. Only the second supports the phrase "pre-registered".
 
 ---
 
@@ -25,7 +32,9 @@
 
 ## 2. For the RSM Manuscript — Data Availability Statement
 
-> **Data Availability.** All data, code, and pre-registered protocols supporting this study are deposited at the Open Science Framework (https://doi.org/10.17605/OSF.IO/VR934) and the underlying code is mirrored on GitHub (https://github.com/Roverlucas/llm-evidence-synthesis-reproducibility, frozen at commit `38873a2`, tag `v1.0-osf-deposit`). The dual-human labeling protocol is pre-registered as a sub-component of the OSF project (https://doi.org/10.17605/OSF.IO/YYYYY); results of the dual-labeling validation are in progress at the time of submission and will be reported as a sub-registration update.
+> **Data Availability.** All data, code, and protocols supporting this study are deposited at the Open Science Framework (https://doi.org/10.17605/OSF.IO/VR934) and the underlying code is mirrored on GitHub (https://github.com/Roverlucas/llm-evidence-synthesis-reproducibility). The dual-human labeling protocol is deposited separately as a frozen OSF registration (https://doi.org/10.17605/OSF.IO/FGN3E, 2026-05-12), which pre-dates label collection. Stage-A screening labels, agreement statistics, and the v1.2 protocol amendment are in the repository under `data/dual_labeling/`; Stage-B extraction labels are pending and will be added in a sub-registration update.
+
+> ⚠️ Before pasting: replace the GitHub URL with the tag for the submitted version. The earlier `v1.0-osf-deposit` tag points at `506adcd` (2026-05-11) and predates the dual-labeling evidence entirely — citing it would send reviewers to a snapshot that does not contain the results the paper reports. The commit `38873a2` referenced in earlier drafts is *not* the tagged commit; do not cite the two as if they were the same.
 
 ---
 
@@ -33,7 +42,7 @@
 
 Add a footnote where the dual-labeling protocol is first introduced (around `main.tex:289`):
 
-> The dual-human labeling protocol (Cochrane κ≥0.80 target, two independent raters, tie-broken by the senior author) was pre-registered on OSF prior to label collection (https://doi.org/10.17605/OSF.IO/YYYYY).
+> The dual-human labeling protocol (Cochrane κ≥0.80 target, two independent raters each blinded to the other) was pre-registered on OSF prior to label collection (https://doi.org/10.17605/OSF.IO/FGN3E). The registration named the senior author as tie-breaker; the role was reassigned to the first author, a deviation disclosed in the Methods and in a sub-registration update.
 
 ---
 
@@ -59,7 +68,7 @@ When the manuscripts are accepted:
 
 When the dual-labeling registration is created in Step 5 of `UPLOAD_INSTRUCTIONS.md`, OSF assigns a **separate DOI** (different from the main project DOI). Reference it as:
 
-> Rover, L., & Tadano, Y. S. (2026). Pre-registration: Dual-Human Labeling Protocol for LLM Evidence-Synthesis Validation. OSF Registrations. https://doi.org/10.17605/OSF.IO/YYYYY
+> Rover, L., & Tadano, Y. S. (2026). Pre-registration: Dual-Human Labeling Protocol for LLM Evidence-Synthesis Validation. OSF Registrations. https://doi.org/10.17605/OSF.IO/FGN3E
 
 Use this DOI specifically in any text discussing the dual-labeling protocol commitment.
 
@@ -80,9 +89,9 @@ After OSF registration, **find-and-replace** the following placeholders across a
 | Placeholder | Replace with |
 |-------------|-------------|
 | `10.17605/OSF.IO/VR934` | Main project DOI |
-| `10.17605/OSF.IO/YYYYY` | Pre-Registration DOI (different — sub-component) |
+| `10.17605/OSF.IO/FGN3E` | Pre-Registration DOI (different — sub-component) |
 | `osf.io/vr934` | Short URL of project |
-| `osf.io/YYYYY` | Short URL of pre-registration |
+| `osf.io/fgn3e` | Short URL of pre-registration |
 
 Files containing placeholders to update:
 - `osf_package/README.md`
