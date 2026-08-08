@@ -81,3 +81,22 @@ removes a line of attack for free.
 Net effect on the submission: the only deviations from `fgn3e` that remain are the
 substitution of the Stage-B extraction subset (entry 19) and the post-hoc statistics
 added beyond the registered point estimates. Neither concerns who decides what.
+
+## 23 — 2026-08-08 · Recalibration round sent as one joint message, due 22 Aug
+Decided by Lucas. The v1.2 package (blinded 25-item sheet per labeler, protocol, cover
+note) went out in a single email to both labelers with the senior author in copy, rather
+than the two separate threads drafted first. The separate-thread draft was a reaction to
+the round-one incident, where one labeler received the other's template and the role had
+to be reassigned after ingestion; that failure mode is now handled upstream instead, by
+`export_recalibration_xlsx.py`, which stamps the labeler's name onto the file name, the
+identification header and the instructions sheet, and refuses to write a sheet carrying
+a foreign labeler column or a pre-filled decision.
+
+Blinding is unaffected either way — the sheets contain no decision from either round or
+either rater. The exposure a joint thread does create is on the return leg, so the email
+asks for the filled sheet to come back to the sender alone rather than reply-all, which
+would put one labeler's decisions in front of the other before she closes her own.
+
+Deadline 22 August 2026, against ~50 minutes of work. What follows on return:
+`build_gold_standard.py` → `rebuild_extraction_set.py` → Stage B. This round still does
+not produce a second κ (entry 17).
