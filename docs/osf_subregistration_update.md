@@ -8,13 +8,24 @@
 > qualitatively, (c) update the labeling_protocol.md to address the ambiguity, and
 > (d) document the deviation in a sub-registration update."
 
-That condition was met on 2026-07-29. **How to post it:** open component `8z6fy` on
-OSF, add this as a wiki page or an uploaded file named
-`sub-registration-update-2026-07-29.md`. Do not attempt to edit `fgn3e` — a
-registration is immutable by design, and that immutability is what makes it worth
-citing.
+That condition was met on 2026-07-29.
 
-Text below is ready to paste.
+**✅ POSTED 2026-08-08.** Item (d) is discharged. The text below went up on component
+`8z6fy` in both forms, public and readable without a login:
+
+| Form | Location |
+|------|----------|
+| Wiki page | <https://osf.io/8z6fy/wiki/Sub-registration%20update%202026-07-29/> (wiki id `ecd9h`) |
+| File | `sub-registration-update-2026-07-29.md` in `osfstorage`, sha256 `66986003620f2f970be5c421a7655481b527ea52d745870f205054c9c2532d7c` (byte-identical to the section below) |
+
+The registration `fgn3e` was **not** touched — a registration is immutable by design,
+and that immutability is what makes it worth citing. The nine files already deposited
+on the component were verified intact after the upload.
+
+Keep the two copies in sync if this text is ever revised: the wiki is what a reader
+lands on, the file is what a reader can hash. Note that the OSF wiki store escapes
+`>` as `&gt;` in the criterion-precedence line; it renders correctly, and the uploaded
+file carries the literal character.
 
 ---
 

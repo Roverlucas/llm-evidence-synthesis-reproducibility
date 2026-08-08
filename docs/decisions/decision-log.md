@@ -100,3 +100,26 @@ would put one labeler's decisions in front of the other before she closes her ow
 Deadline 22 August 2026, against ~50 minutes of work. What follows on return:
 `build_gold_standard.py` → `rebuild_extraction_set.py` → Stage B. This round still does
 not produce a second κ (entry 17).
+
+## 24 — 2026-08-08 · Contingency item (d) discharged: sub-registration update posted
+The κ<0.80 contingency registered in `fgn3e` required four things; (a) transparent
+reporting, (b) qualitative examination of the disagreement and (c) the protocol
+amendment were done on 2026-07-29, leaving (d), documenting the deviation in a
+sub-registration update, outstanding since then. It is now posted on component `8z6fy`,
+public and readable without a login, as both a wiki page (`ecd9h`) and a file,
+`sub-registration-update-2026-07-29.md`, whose sha256 matches the source in
+`docs/osf_subregistration_update.md` byte for byte.
+
+Posted to the component, not to `fgn3e`. Editing a registration is neither possible nor
+desirable: its immutability is the property that makes citing it meaningful, and an
+amendable pre-registration would be no pre-registration at all.
+
+Two forms rather than one because they answer different questions. The wiki is what a
+reader lands on from the component page; the file is what a reader can download and
+hash against the repository. The nine files already deposited on the component were
+verified intact after the upload.
+
+With this, every deviation from `fgn3e` is now declared in a citable public location:
+the missed κ target, the protocol amendment written after the κ was known, the
+Stage-B subset substitution (entry 19), the post-hoc statistics, and the tie-breaker
+reconsideration that was reverted (entries 18 and 22).
