@@ -200,3 +200,39 @@ IF 5.8) is plausibly APC-free. npj Digital Medicine and BMC Med Res Methodol are
 under Springer Nature and fail the hybrid-only rule. Evidence levels: E0 for the publisher and
 for the absence of any APC mention in the repo; E1 for the publisher list; E2 for the APC
 figure and the Equity Initiative, where cambridge.org returned HTTP 429 on direct reads.
+
+## 28 — 2026-08-19 · Citation audit: the §4.3 defect was not isolated
+Swept all 51 bib entries after entry 26, checking key-to-author consistency, truncated author
+lists, and missing identifiers, then verified the suspicious ones against the source. Most of
+what the sweep flagged is noise — arXiv preprints legitimately have no DOI and `and others` is
+ordinary shorthand. What survived verification is a recurring pattern of wrong identity, not
+missing metadata:
+
+| Entry | Defect | Source |
+|---|---|---|
+| `oami2024screening` | author **Takeshi** → Takehiko Oami; issue 6 → **7** | PMID 38976267 |
+| `li2025jamia` | author **Jun Li** → Ying Li (+9 co-authors); pages 789–801 → **616–625** | doi:10.1093/jamia/ocaf030 |
+| `karelin2024indeterminism` | year 2024 → **2025** | PhilSci-Archive 26807 |
+| `cochrane2024_ai_guidance` | **source does not exist** — see below | url 404 |
+
+Three of the four are a wrong given name or a wrong locator on a real paper: the same defect
+as Therese/Terri Pigott. The internal tell was already in the file — `oami2024screening` and
+`oami2025optimal` are the same author under two different first names, one of them wrong.
+These are references filled in without opening the source.
+
+`cochrane2024_ai_guidance` is the serious one. Its URL, https://methods.cochrane.org/ai-guidance,
+returns 404, and no Cochrane document by that title exists. `main.tex:85` uses it to assert
+that Cochrane "requires that AI-assisted SR tools report inter-run agreement statistics — which
+the paired EMR and pairwise-disagreement reporting in this paper supplies". That is a fabricated
+normative requirement the paper then claims to satisfy, sitting on the line directly after the
+fabricated RSM §4.3 of entry 26. Two consecutive sentences, same construction, two different
+standards bodies.
+
+The real document is RAISE (Responsible AI in evidence SynthEsis), plus the November 2025 joint
+position statement across Cochrane, Campbell, JBI and Environmental Evidence. RAISE requires
+disclosure of tool and version, description of the human-AI workflow, and reporting of
+validation data — not inter-run agreement. Substituting it would change the claim, so the line
+is left standing for the author to decide; it must not survive to submission either way.
+Not fixed here because the substitute has not been read in full, per the read-before-citing rule.
+
+Everything else verified clean, including all five Research Synthesis Methods citations.
