@@ -236,3 +236,27 @@ is left standing for the author to decide; it must not survive to submission eit
 Not fixed here because the substitute has not been read in full, per the read-before-citing rule.
 
 Everything else verified clean, including all five Research Synthesis Methods citations.
+
+## 29 — 2026-08-19 · Entries 26 and 28 reopened: both reported work as done that was not
+A 22-specialist panel audit found that this log is not trustworthy about its own closures.
+
+Entry 26 declared the fabricated "RSM guidance §4.3" corrected. It corrected `main.tex:917`
+and left `supplementary.tex:999`, which carried the identical sentence. Entry 28 closed with
+"Everything else verified clean, including all five Research Synthesis Methods citations."
+That was false: `khraisha2024gpt4` reads 15(5):707–722; the article is at **15(4):616–626**,
+doi:10.1002/jrsm.1715. What was verified was that the journal field said Research Synthesis
+Methods, not that the locators resolved. Stating the stronger claim was the error.
+
+The shared cause is scope. Both sweeps ran over `article/` and never over `docs/`, where the
+cover letter carries the same class of defect in worse form — see entry 30.
+
+Fixed here: `supplementary.tex:999` rewritten to what the guidance actually says, matching
+`main.tex:917`; `khraisha2024gpt4` given its real locators, full title and DOI. Author list
+left as `and others` deliberately — the co-authors were not verified, and filling them from
+memory is the exact defect under audit. Both documents recompile clean (main 33pp, supp 23pp,
+zero undefined references). "§4.3" now appears nowhere in either .tex.
+
+Still open and now confirmed in three places rather than one: `cochrane2024_ai_guidance`,
+whose URL 404s, cited at `main.tex:85` and sold as argument 2 in `cover_letter_rsm.md:24`.
+Entry 28 already ruled it must not survive submission. It survives. Left standing only
+because deletion changes a claim the author should approve, not because it is defensible.
