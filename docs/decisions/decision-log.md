@@ -153,3 +153,50 @@ that ambiguity is what produced κ=0.529, and a script that guessed would hide i
 
 No coefficient computed, per entry 17. Still blocked on labeler2 before
 `build_gold_standard.py` can run.
+
+## 26 — 2026-08-19 · Misattributed citation to the target journal's own guidance, corrected
+`main.tex:917` claimed "Cambridge RSM guidance §4.3 requires empirical reporting of
+seed-parameter effectiveness on commercial APIs". Verified against the source: there is no
+§4.3. The document has five numbered sections and no numbered subsections, and section 4 is
+"Reproducibility and transparency". What it actually requires is documenting specific
+random-seed values, and for commercial models, API versions and access dates. It never asks
+for an empirical test of whether the seed works — which is precisely the gap Finding 6 fills.
+
+The bib entry was wrong on every field that identifies the work. Key `weber2025...` names an
+author who is not on the paper. Two authors were listed where there are six, in reverse
+position: Pigott is last, not first, and her name is Terri, not Therese. No DOI, volume,
+number or pages. Correct record: Farotimi, Dunn, Van Lissa, Polanin, Mavridis & Pigott,
+Research Synthesis Methods 17(2), 237–239, doi:10.1017/rsm.2025.10058, published 11 Dec 2025.
+
+This one mattered more than an ordinary citation defect. The misattribution was to the
+editorial board of the journal we are submitting to, in a manuscript about the reliability of
+AI-assisted evidence synthesis, and the fabricated element was a section number — the kind of
+specificity a reader reads as evidence the source was opened. Two of the six authors would
+have been reviewing it.
+
+Rewritten to what the guidance says, which is rhetorically stronger: the journal requires the
+seed to be documented but stops short of establishing whether documenting it delivers
+determinism. Finding 6 answers a question its own guidance leaves open. Recompiled with
+TinyTeX: 33pp, zero undefined references. Note that TeX Live 2026 basic cannot build this
+document at all — `etoc.sty` is missing there.
+
+## 27 — 2026-08-19 · The CAPES agreement does not cover this journal
+RSM left Wiley at the end of 2024 and has been published by Cambridge University Press since
+2025. The manuscript already targets Cambridge (`main.tex:5`, class `CUP-JNL-DTM`), but the
+funding consequence was never recorded: no file in `article/` or `docs/` mentions APC, open
+access or CAPES.
+
+Two independent exclusions. Cambridge is not among the seven publishers in the CAPES
+2026–2028 cycle (ACS, ACM, Elsevier, IEEE, Royal Society, Springer Nature, Wiley). And RSM is
+wholly gold OA, which the agreement excludes on its own terms — it covers hybrid titles only.
+APC is £2,610 / US$3,655. Under Wiley this would have been covered.
+
+Cambridge's Open Equity Initiative does not list Brazil; its Group B is Botswana, Colombia,
+Egypt, Georgia and Namibia. What remains is an individual waiver request, which Cambridge
+states it accepts from any corresponding author not otherwise covered.
+
+Consequence for the backup list: of the three, only J Clin Epidemiol (Elsevier, hybrid,
+IF 5.8) is plausibly APC-free. npj Digital Medicine and BMC Med Res Methodol are both gold OA
+under Springer Nature and fail the hybrid-only rule. Evidence levels: E0 for the publisher and
+for the absence of any APC mention in the repo; E1 for the publisher list; E2 for the APC
+figure and the Equity Initiative, where cambridge.org returned HTTP 429 on direct reads.

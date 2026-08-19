@@ -81,7 +81,7 @@ Yet the process is notoriously labor-intensive: a typical systematic review requ
 The emergence of large language models (LLMs) has created unprecedented opportunities to accelerate this process.
 Recent studies demonstrate that models such as GPT-4,\autocite{openai2023gpt4} Claude,\autocite{anthropic2024claude} and Gemini\autocite{geminiteam2024gemini} can screen abstracts with sensitivity approaching that of human reviewers,\autocite{oami2024screening,khraisha2024gpt4} extract structured data from published studies with over 90\% accuracy,\autocite{gartlehner2024extraction,jensen2025chatgpt} and even assist in evidence quality assessment.\autocite{wang2025trialmind,li2025streamlining}
 A growing body of work has established LLM-assisted evidence synthesis as a legitimate and rapidly expanding methodological frontier.\autocite{li2025jamia,scherbakov2025jamia,matsui2024screening,oami2025optimal}
-The 2025 Cambridge \emph{Research Synthesis Methods} editorial\autocite{weber2025rsm_genai_guidance} explicitly invites methodological work characterizing the reproducibility of generative-AI-assisted evidence synthesis, including specific reporting requirements for prompt design, random-seed control, and external validation.
+The 2025 Cambridge \emph{Research Synthesis Methods} editorial\autocite{farotimi2025rsm_genai_guidance} explicitly invites methodological work characterizing the reproducibility of generative-AI-assisted evidence synthesis, including specific reporting requirements for prompt design, random-seed control, and external validation.
 The Cochrane 2024 guidance for AI-assisted screening and data extraction\autocite{cochrane2024_ai_guidance} further requires that AI-assisted SR tools report inter-run agreement statistics---which the paired EMR and pairwise-disagreement reporting in this paper supplies.
 
 \subsection{The Hidden Problem: Non-Determinism}
@@ -914,7 +914,7 @@ This refines the assumption that ``fixed-slot will fix it'': prompt structure ma
 For Claude in particular, the residual non-determinism after prompt simplification points back to deployment-stack variation rather than prompt-induced array variability.
 
 \textbf{Finding 6: The seed parameter delivers a smaller effect than the deployment paradigm.}
-Cambridge RSM guidance §4.3 requires empirical reporting of seed-parameter effectiveness on commercial APIs.
+The journal's own guidance for GenAI submissions requires authors to document specific random-seed values and, for commercial models, API versions and access dates\autocite{farotimi2025rsm_genai_guidance}; it stops short of establishing whether a seed parameter delivers determinism once documented.
 Our data permit a direct test: Gemini and GPT-4.1 accept a seed parameter (set to~42); Claude does not.
 For screening, seeded cloud models had EMR slightly \emph{below} non-seeded Claude (0.953 vs.\ 0.974); for extraction, seeded models were better than Claude by 0.125 EMR.
 The deployment effect---local seeded EMR${=}$1.000 vs.\ cloud seeded mean EMR${=}$0.175 in extraction---is \textbf{6$\times$ larger} than the seed effect (cloud-seeded vs.\ cloud-unseeded EMR difference of 0.125).
