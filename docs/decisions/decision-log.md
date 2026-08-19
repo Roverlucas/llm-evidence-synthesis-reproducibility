@@ -260,3 +260,49 @@ Still open and now confirmed in three places rather than one: `cochrane2024_ai_g
 whose URL 404s, cited at `main.tex:85` and sold as argument 2 in `cover_letter_rsm.md:24`.
 Entry 28 already ruled it must not survive submission. It survives. Left standing only
 because deletion changes a claim the author should approve, not because it is defensible.
+
+## 30 — 2026-08-19 · The three P0 blockers from the panel audit, resolved
+### P0-1 · The desconfound arms did not send the same payload
+`run_llama_cloud_desconfound.py:146` passes the uninterpolated template, `{title}` and
+`{abstract}` literal, as the prompt and the article as a separate message part.
+`src/screening/runner.py:194-195` interpolates before the call and the Ollama layer then
+appends the article again. Re-measured here over the deposited call records: mean input
+tokens 1,279.3 local vs 842.3 cloud (−34.2%), and **0 of the 500 canonical call hashes are
+shared**. Output ceilings also differed, 2,048 local vs 512 cloud.
+
+Corrected by scoping the claim, not by deleting the finding. `main.tex` no longer says
+"configuration identical to the local Ollama deployment"; it now enumerates what was held
+constant (weights, prompt source, temperature, seed) and what was not (payload rendering,
+token ceiling), and states that the condition varies the serving stack *including its
+request-rendering layer* rather than isolating infrastructure from payload construction.
+The abstract and the table caption were brought in line.
+
+One measurement removes a competing explanation rather than adding one: **all 4,266 completed
+cloud calls returned `finish_reason = stop`**, so nothing hit the 512-token ceiling and
+truncation cannot account for the 167/0 asymmetry. The causal story for *why* the arms
+diverge is deliberately absent from the manuscript — it would be E3, and the E0 facts carry
+the scoped claim without it.
+
+### P0-2 · The fabricated Cochrane requirement, removed from all four locations
+The sentence at `main.tex:85` credited a nonexistent document (url 404) with requiring
+inter-run agreement statistics and then claimed the paper supplies them. Deleted, together
+with the `.bib` entry and argument 2 of the cover letter; `supplementary.tex:999` was cleared
+in entry 29. Not replaced by RAISE or the November 2025 joint statement: neither was read in
+full, and neither asks for inter-run agreement, so the clause "which this paper supplies"
+would not survive the substitution. The paragraph loses nothing that it could support.
+
+### P0-3 · The cover letter, corrected against Crossref
+`10.1017/rsm.2025.10018` resolves to Nussbaumer-Streit et al., *Knowledge user involvement is
+still uncommon in published rapid reviews*, RSM 16(6):876–899 — a different article. The
+editorial is Farotimi, Dunn, Van Lissa, Polanin, Mavridis & Pigott, 10.1017/rsm.2025.10058.
+"Weber et al." names nobody on it. The salutation read "Therese Pigott"; she is **Terri D.
+Pigott**, and she and Mavridis are both authors of the editorial and the recipients of the
+letter. Suggested reviewers: Yutaka → **Takehiko** Oami (Chiba, not Tsukuba); Linnea →
+**Mathias K.** Jensen; Berkant → **Berk** Atil; Gartlehner's paper is Research Synthesis
+Methods 15(4):576–589, not JCE — the letter told RSM that a paper from its own volume 15 had
+appeared elsewhere.
+
+Both documents recompile clean (main 33pp, supp 23pp, zero undefined). 151 tests pass.
+`check_pending.sh` still reports BLOCKED, correctly: three `\pending` markers awaiting
+labeler2 and the submission tag, and three reviewer emails only the author can supply.
+Those are open work, not defects.

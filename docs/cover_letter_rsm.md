@@ -3,7 +3,7 @@
 **Status:** DRAFT v2 — 2026-07-29. Stage-A dual labeling complete; awaiting Stage-B extraction labels before final send.
 
 **To:** Editors-in-Chief, *Research Synthesis Methods*
-Dimitris Mavridis & Therese Pigott
+Dimitris Mavridis & Terri D. Pigott
 **From:** Lucas Rover (Corresponding Author), Universidade Tecnológica Federal do Paraná
 **Subject:** Submission: "Reproducibility of Pollution–Health Evidence Synthesis Using LLM-Assisted Screening and Extraction"
 
@@ -19,15 +19,13 @@ We conducted what we believe is the most comprehensive empirical evaluation of L
 
 ## Why this matters for RSM readers
 
-1. **Direct response to your 2025 RSM editorial on GenAI-assisted evidence synthesis** (Weber et al., DOI: 10.1017/rsm.2025.10018). The editorial called for methodological work characterizing reproducibility of generative-AI-assisted SR, including specific reporting requirements for prompt design, random-seed control, and external validation. Every requirement is addressed empirically in this manuscript.
+1. **Direct response to your 2025 RSM editorial on GenAI-assisted evidence synthesis** (Farotimi, Dunn, Van Lissa, Polanin, Mavridis & Pigott, DOI: 10.1017/rsm.2025.10058). The editorial called for methodological work characterizing reproducibility of generative-AI-assisted SR, including specific reporting requirements for prompt design, random-seed control, and external validation. Every requirement is addressed empirically in this manuscript.
 
-2. **Direct response to the Cochrane 2024 guidance** requiring inter-run agreement statistics for AI-assisted screening and extraction. We provide paired EMR and pairwise-disagreement reporting at the granularity Cochrane requires, plus chance-corrected Fleiss' κ across runs.
+2. **Falsifies a widely-held assumption.** Studies routinely report 94–97 % LLM "reproducibility" using per-field metrics over 2–3 repetitions. Applying a stricter whole-output metric across 10 repetitions reveals only **5–20 % of cloud-API extraction outputs are truly identical**---a measurement gap of nearly 20×.
 
-3. **Falsifies a widely-held assumption.** Studies routinely report 94–97 % LLM "reproducibility" using per-field metrics over 2–3 repetitions. Applying a stricter whole-output metric across 10 repetitions reveals only **5–20 % of cloud-API extraction outputs are truly identical**---a measurement gap of nearly 20×.
+3. **Establishes the unit of reproducibility.** Our same-weights desconfound experiment (serving identical `meta-llama/llama-3-8b-instruct` weights locally via Ollama and via DeepInfra cloud) produces 39 % systematic disagreement between the two deployments, showing that **identical weights do not yield identical behaviour once the serving stack changes**. The two arms share weights, prompt source, temperature and seed but not a byte-identical payload, and the manuscript scopes the inference accordingly. This reframes "which model" as the wrong abstraction for LLM-assisted SR documentation.
 
-4. **Establishes the unit of reproducibility.** Our same-weights desconfound experiment (serving identical `meta-llama/llama-3-8b-instruct` weights locally via Ollama and via DeepInfra cloud) demonstrates that 39 % systematic disagreement between the two deployments is attributable to the **serving stack, not the model**. This reframes "which model" as the wrong abstraction for LLM-assisted SR documentation.
-
-5. **Quantifies downstream impact.** A small-literature simulation under Hartung-Knapp-Sidik-Jonkman (Cochrane Handbook 6.5+ recommendation for k<10) shows up to **48.5 %** of k=10 subsamples experience run-dependent null-crossing reversals, depending on which LLM run generated the inputs.
+4. **Quantifies downstream impact.** A small-literature simulation under Hartung-Knapp-Sidik-Jonkman (Cochrane Handbook 6.5+ recommendation for k<10) shows up to **48.5 %** of k=10 subsamples experience run-dependent null-crossing reversals, depending on which LLM run generated the inputs.
 
 ## Methodological rigor we provide
 
@@ -57,10 +55,10 @@ The work has not been published previously and is not under consideration elsewh
 
 We respectfully suggest the following reviewers, all of whom have published methodological work in LLM-assisted evidence synthesis or LLM non-determinism and have no co-authorship or institutional conflict with us:
 
-- **Gerald Gartlehner, MD MPH** — Danube University Krems, Austria — author of the most-cited LLM extraction reproducibility paper (Claude 2, JCE 2024). gerald.gartlehner@donau-uni.ac.at
-- **Yutaka Oami, MD PhD** — University of Tsukuba, Japan — author of GPT-4 Turbo screening evaluations published in RSM. (email TBD)
-- **Linnea Jensen, MD** — Aarhus University, Denmark — author of ChatGPT-4o inter-session extraction reliability (2025). (email TBD)
-- **Berkant Atil** — author of "Non-Determinism of 'Deterministic' LLM Settings" (2024). (email TBD)
+- **Gerald Gartlehner, MD MPH** — Danube University Krems, Austria — author of the most-cited LLM extraction reproducibility paper (Claude 2, Research Synthesis Methods 15(4):576–589, 2024). gerald.gartlehner@donau-uni.ac.at
+- **Takehiko Oami, MD PhD** — Chiba University Graduate School of Medicine, Japan — author of GPT-4 Turbo screening evaluations published in RSM. (email TBD)
+- **Mathias K. Jensen** — author of ChatGPT-4o inter-session extraction reliability (2025). (email TBD)
+- **Berk Atil** — author of "Non-Determinism of 'Deterministic' LLM Settings" (2024). (email TBD)
 
 We have no exclusion requests.
 
