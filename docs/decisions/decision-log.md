@@ -123,3 +123,33 @@ With this, every deviation from `fgn3e` is now declared in a citable public loca
 the missed κ target, the protocol amendment written after the κ was known, the
 Stage-B subset substitution (entry 19), the post-hoc statistics, and the tie-breaker
 reconsideration that was reverted (entries 18 and 22).
+
+## 25 — 2026-08-19 · Labeler1 recalibration ingested; movement is one-directional
+Isabelle returned the blinded v1.2 sheet three days before the deadline. All 25 items
+complete, ids and abstracts byte-identical to what was sent, no column from the other
+labeler present. Archived at
+`data/dual_labeling/reconciliation/returned/recalibration_labeler1_RETURNED{.csv,_SOURCE.xlsx}`,
+source sha256 `23d3ea92...e966725`.
+
+Round 2 counts 13 EXCLUDE / 9 UNCERTAIN / 3 INCLUDE. Eight of the 25 moved against her own
+round-1 decision, and every one of them moved the same way — seven EXCLUDE→UNCERTAIN and one
+EXCLUDE→INCLUDE, with no movement in the opposite direction. That is the shape predicted on
+2026-08-08 from the CI heuristic, which found a numeric interval in only 5 of the 19
+asymmetric cases: rule 5b routes an abstract that claims an effect without reporting it to
+UNCERTAIN rather than to INCLUDE. Seven of the eight landed on 5b.
+
+The prediction holding is not itself evidence that the amendment works. Both the heuristic
+and rule 5b read the same feature of the abstract — whether numeric values are present — so
+agreement between them is close to mechanical. What it does support is narrower: the round-1
+disagreement was information the protocol failed to ask for, not two readers judging the same
+evidence differently.
+
+Ingestion is a new script, `ingest_recalibration_xlsx.py`, because the v1.1 ingestor's
+criteria vocabulary is `[1-6]` and would reject the 5a/5b/5c levels v1.2 exists to introduce.
+It validates the return against the §4 decision table, which is fully deterministic, and the
+25 rows are consistent with it on every row. A bare `5` is rejected rather than resolved:
+that ambiguity is what produced κ=0.529, and a script that guessed would hide its return.
+25 tests cover the table, including the 5b/5c divergence and the Excel `4.0` artefact.
+
+No coefficient computed, per entry 17. Still blocked on labeler2 before
+`build_gold_standard.py` can run.
