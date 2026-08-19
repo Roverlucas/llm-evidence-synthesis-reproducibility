@@ -306,3 +306,60 @@ Both documents recompile clean (main 33pp, supp 23pp, zero undefined). 151 tests
 `check_pending.sh` still reports BLOCKED, correctly: three `\pending` markers awaiting
 labeler2 and the submission tag, and three reviewer emails only the author can supply.
 Those are open work, not defects.
+
+## 31 — 2026-08-19 · Cluster 2A: the numbers that did not come out of the artefacts
+Every figure below was re-measured here against the deposited artefacts, not taken from the
+panel's report.
+
+| Claim | Was | Is | Source |
+|---|---|---|---|
+| calls | 35,996 / 99.99% | **35,638 / 98.99%** | `timing_and_costs.json` grand_totals |
+| "each achieved 500/500" | 4 stacks | Claude and GPT-4.1 only; Mistral 4,970, Gemma 4,930 | same |
+| Mistral include rate | ~98% | **94.0%** (4,660 of 4,960 parsed) | recount of 5,000 calls |
+| accuracy denominator | 500 | **192–200** per stack | `run_analysis.py:121-130` drops the 300 ambiguous |
+| meta-analytic k | 100 | **39–63** | `random_effects_per_run.json` |
+| pooled RR range | 1.015–1.038 | 1.012–1.038 | same |
+| cost ratio | 267× per hour | 266× total, ≈1,400× per hour | $69.40/33h vs $0.26/174h |
+| local–cloud gap | 19× | **20×** | 1.000 / 0.050 |
+| non-identical outputs | 85–95% | 80–95% | Gemini EMR is exactly 0.200 |
+
+Two of these are not arithmetic slips. `main.tex:298` promised the ambiguous stratum would be
+"reported separately in all accuracy computations"; no such stratification exists anywhere in
+the supplement, and the stratum is silently dropped from the denominator instead. The text now
+says what the code does. And the varying k is not noise to be corrected away: k moves with the
+run because extraction non-determinism decides whether an article yields a usable estimate,
+which makes it a result rather than a defect, now stated as one.
+
+**Heterogeneity, previously absent, is now reported**: I² 90.97–94.71%, τ² 1.4e-5 to 2.9e-4
+across the 60 combinations. The values were already in the JSON. Submitting a random-effects
+meta-analysis to a journal of meta-analysis methodologists without them was the most
+predictable reviewer objection in the whole audit.
+
+**The "upper bounds" claim is withdrawn.** The manuscript argued that enrichment with 60%
+ambiguous abstracts made its flip rates conservative for ordinary reviews. Measured, 260 of
+those 300 abstracts carry inclusion_score 5 — the same score as every clear-include — and all
+300 carry zero exclusion reasons. The stratum marks where the automated rule lacked confidence,
+not where a human would hesitate. No directional claim replaces it; the honest position is that
+transfer to other corpora is untested.
+
+## 32 — 2026-08-19 · Fleiss intervals were computed under the null
+`compute_fleiss_kappa.py` used Fleiss (1971) eq. 13, whose expression contains no term for the
+observed agreement: it is the asymptotic variance under H₀ κ=0, correct for testing that null
+and wrong for an interval around an estimated κ. Two symptoms were already printed in the
+supplement: **18 of 24 intervals had upper limits above 1.000** (Mistral screening reached
+1.104), and three stacks with κ exactly 1.000 carried different standard errors.
+
+Replaced with a percentile bootstrap resampling items (10,000 resamples, seed 42). Zero
+intervals now exceed 1.000. The point estimates are unchanged; the intervals widen honestly,
+Claude's whole-output κ going from [0.178, 0.181] to [0.133, 0.226]. Cells where every resample
+returns 1.000 are flagged degenerate, with the rule-of-three bound named as the informative
+quantity — consistent with how the main text already handles EMR = 1.000.
+
+The chance correction is also declared inert for the whole-output hash column: 667 categories
+over 100 items for Claude gives p_e ≈ 0.003, so κ collapses onto the pairwise concordance
+already tabulated. The column is kept for its ordering, the Landis–Koch bands are no longer
+applied to it, and the Cochrane comparison is dropped there. Per-field κ, with single-digit
+category counts, is unaffected and stands.
+
+Also removed: "Per RSM P1.a/P1.b/P2.a audit" from the supplement. Internal workflow shorthand
+that an editor would read as numbered reports the journal had already issued.

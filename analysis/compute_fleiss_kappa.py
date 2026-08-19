@@ -57,8 +57,19 @@ SCREEN_CATEGORIES = ["include", "exclude", "uncertain"]
 EXTR_CAT_FIELDS = ["study_design", "population"]  # categorical-ish; location is too long-tailed
 
 
-def fleiss_se(table: np.ndarray) -> float:
-    """SE of Fleiss' kappa per Fleiss (1971) eq. 13.
+def fleiss_se_null(table: np.ndarray) -> float:
+    """SE of Fleiss' kappa under the null hypothesis kappa = 0, per Fleiss (1971) eq. 13.
+
+    Note what this is and is not. The expression depends only on the marginal
+    category proportions P_j, on N and on n; no term carries the observed
+    agreement p_o. That is the asymptotic variance *under H0*, which is the
+    right quantity for testing kappa = 0 and the wrong one for placing an
+    interval around an estimated kappa. Used that way it produces upper limits
+    above 1.000 whenever agreement is high, and assigns different standard
+    errors to stacks whose kappa is exactly 1.000.
+
+    Retained for the significance test only. Intervals come from
+    ``fleiss_ci_bootstrap``.
 
     table: (N, k) int array of counts (rows sum to n_raters).
     """
@@ -75,6 +86,35 @@ def fleiss_se(table: np.ndarray) -> float:
     if var < 0:
         return float("nan")
     return math.sqrt(var)
+
+
+
+def fleiss_ci_bootstrap(full: np.ndarray, n_boot: int = 10000, seed: int = 42) -> tuple:
+    """Percentile bootstrap CI for Fleiss' kappa, resampling ITEMS with replacement.
+
+    The item is the sampling unit: each bootstrap replicate draws N item-rows
+    from the count table and recomputes kappa. This respects the [-1, 1] range
+    of the statistic and does not assume a null value.
+
+    Where every replicate returns kappa = 1.000 the interval is degenerate, and
+    the caller should report the rule-of-three bound on the non-match rate
+    instead, as the manuscript already does for EMR = 1.000 cells.
+    """
+    rng = np.random.default_rng(seed)
+    N = full.shape[0]
+    reps = np.empty(n_boot, dtype=float)
+    for b in range(n_boot):
+        idx = rng.integers(0, N, size=N)
+        try:
+            reps[b] = fleiss_kappa(full[idx])
+        except Exception:
+            reps[b] = np.nan
+    reps = reps[~np.isnan(reps)]
+    if reps.size == 0:
+        return (float("nan"), float("nan"), True)
+    lo, hi = np.percentile(reps, [2.5, 97.5])
+    degenerate = bool(np.allclose(reps, 1.0))
+    return (float(lo), float(hi), degenerate)
 
 
 def fleiss_with_ci(rater_matrix: np.ndarray, categories: list[str]) -> dict:
@@ -103,18 +143,19 @@ def fleiss_with_ci(rater_matrix: np.ndarray, categories: list[str]) -> dict:
         categories = list(categories) + extra_cats
 
     k = fleiss_kappa(full)
-    se = fleiss_se(full)
-    if not math.isnan(se):
-        ci_lo = k - 1.959964 * se
-        ci_hi = k + 1.959964 * se
-    else:
-        ci_lo = float("nan")
-        ci_hi = float("nan")
+    se = fleiss_se_null(full)  # for the H0 test only; see docstring
+    ci_lo, ci_hi, degenerate = fleiss_ci_bootstrap(full)
+    if degenerate:
+        # every replicate agrees perfectly: an interval is uninformative and the
+        # rule-of-three bound on the non-match rate is the honest statement.
+        ci_lo, ci_hi = 1.0, 1.0
     return {
         "kappa": round(float(k), 4),
-        "se": round(float(se), 6) if not math.isnan(se) else None,
+        "se_under_null": round(float(se), 6) if not math.isnan(se) else None,
+        "ci_method": "percentile bootstrap over items, 10,000 resamples, seed 42",
         "ci_lower": round(float(ci_lo), 4) if not math.isnan(ci_lo) else None,
         "ci_upper": round(float(ci_hi), 4) if not math.isnan(ci_hi) else None,
+        "ci_degenerate_all_ones": bool(degenerate),
         "n_items": int(n_items),
         "n_raters": int(n_raters),
         "k_categories": len(categories),

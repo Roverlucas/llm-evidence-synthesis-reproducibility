@@ -60,8 +60,8 @@
 
 \abstract{
 \textbf{Background:} Large language models (LLMs) are increasingly used in evidence synthesis, yet a critical assumption---that identical inputs produce identical outputs---remains largely untested across a complete synthesis pipeline.
-\textbf{Methods:} We quantified the reproducibility of six LLM deployment stacks---each a tuple of (model weights, provider, infrastructure, API layer)---across three local stacks (LLaMA~3 8B, Mistral~7B, Gemma~2 9B served via Ollama on Apple~M4) and three API-served stacks (Claude Sonnet~4.5/Anthropic, Gemini~2.5 Pro/Google, GPT-4.1/OpenAI), applied to a two-stage pipeline (abstract screening and data extraction) over a 500-abstract PubMed corpus on fine particulate matter (PM$_{2.5}$) and respiratory health. Each stack was run 10~times under identical configurations (temperature${=}$0, fixed seeds where supported), totalling 35{,}996 successful calls of 36{,}000 attempted (99.99\% success rate). To probe the deployment-vs.-weights confound, we additionally served \texttt{meta-llama/llama-3-8b-instruct} via a cloud endpoint (DeepInfra), holding the weights, prompt source, temperature and seed constant while the rest of the serving stack---including its request-rendering layer---varied. We pre-committed analysis plans for the post-revision experiments to the public Git repository before result computation. The primary outcome was the Exact Match Rate (EMR) with 95\% bootstrap confidence intervals.
-\textbf{Results:} \textbf{API-served deployment stacks achieved extraction EMR as low as 0.050 (Claude) despite temperature${=}$0 and fixed seeds, while local stacks achieved EMR${=}$1.000---an approximately 19$\times$ gap.} Critically, the same LLaMA~3~8B weights served via a cloud stack (DeepInfra) produced 39\% systematic disagreement with the local Ollama stack, showing that identical weights do not yield identical behaviour once the serving stack changes. Across all 100 INCLUDE articles pooled by random-effects meta-analysis, the pooled estimate was robust to non-determinism; in random k=10 subsamples, however, 0.5\% of subsamples produced run-dependent reversals of the meta-analytic conclusion. A pairwise-disagreement analysis ($\binom{10}{2}{=}45$ pairs per item) revealed that 95\% of Claude's extraction articles produced at least one differing run pair. BERTScore F1 on metadata saturated near 0.997, masking true narrative variation (Jaccard similarity on rationales ranged 0.38--0.73 for API-served stacks, vs.\ 0.98 on metadata).
+\textbf{Methods:} We quantified the reproducibility of six LLM deployment stacks---each a tuple of (model weights, provider, infrastructure, API layer)---across three local stacks (LLaMA~3 8B, Mistral~7B, Gemma~2 9B served via Ollama on Apple~M4) and three API-served stacks (Claude Sonnet~4.5/Anthropic, Gemini~2.5 Pro/Google, GPT-4.1/OpenAI), applied to a two-stage pipeline (abstract screening and data extraction) over a 500-abstract PubMed corpus on fine particulate matter (PM$_{2.5}$) and respiratory health. Each stack was run 10~times under identical configurations (temperature${=}$0, fixed seeds where supported), totalling 35{,}638 successful calls of 36{,}000 attempted (98.99\% success rate). To probe the deployment-vs.-weights confound, we additionally served \texttt{meta-llama/llama-3-8b-instruct} via a cloud endpoint (DeepInfra), holding the weights, prompt source, temperature and seed constant while the rest of the serving stack---including its request-rendering layer---varied. We pre-committed analysis plans for the post-revision experiments to the public Git repository before result computation. The primary outcome was the Exact Match Rate (EMR) with 95\% bootstrap confidence intervals.
+\textbf{Results:} \textbf{API-served deployment stacks achieved extraction EMR as low as 0.050 (Claude) despite temperature${=}$0 and fixed seeds, while local stacks achieved EMR${=}$1.000---a 20$\times$ gap.} Critically, the same LLaMA~3~8B weights served via a cloud stack (DeepInfra) produced 39\% systematic disagreement with the local Ollama stack, showing that identical weights do not yield identical behaviour once the serving stack changes. Pooling each run's extracted estimates by random-effects meta-analysis (${k}{=}39$--63 articles per run, itself varying with extraction non-determinism), the pooled estimate was robust; in random k=10 subsamples, however, 0.5\% of subsamples produced run-dependent reversals of the meta-analytic conclusion. A pairwise-disagreement analysis ($\binom{10}{2}{=}45$ pairs per item) revealed that 95\% of Claude's extraction articles produced at least one differing run pair. BERTScore F1 on metadata saturated near 0.997, masking true narrative variation (Jaccard similarity on rationales ranged 0.38--0.73 for API-served stacks, vs.\ 0.98 on metadata).
 \textbf{Conclusions:} Non-determinism in API-served deployment stacks poses a quantifiable threat to evidence synthesis reproducibility, particularly for quantitative extraction tasks and small-k literatures. The unit of reproducibility variation is the deployment stack, not the model weights alone. Single-run results should not be treated as definitive; multiple repetitions, provenance tracking, and---where feasible---deterministic local stacks should become standard practice.
 }
 
@@ -294,8 +294,9 @@ The final corpus spans 148~journals and publication years 1994--2026, with a mea
 
 \textbf{Gold standard construction.}
 The 200~clear-category abstracts (100~include + 100~exclude) were labeled by an automated classification rule based on inclusion-criteria keyword matching, validated against a held-out 50-abstract validation set. No errors were observed on that set, which by the rule of three bounds the true error rate at ${\approx}6\%$ with 95\% confidence and no tighter; we therefore report that bound rather than describing the rule as 100\% precise, since zero errors in 50 trials cannot establish a zero error rate.
-The 300~ambiguous abstracts received heuristic labels from the same rule operating in low-confidence regions; these labels are reported separately in all accuracy computations and are explicitly flagged as not human-validated.
-We do not retroactively present these heuristic labels as a human gold standard.
+The 300~remaining abstracts received heuristic labels from the same rule operating in low-confidence regions and are explicitly flagged as not human-validated.
+We do not retroactively present these heuristic labels as a human gold standard, and we therefore \emph{exclude} them from the accuracy, sensitivity and specificity computations rather than reporting them separately: those metrics are computed against the 200 clear-category abstracts only, giving per-stack denominators of 192--200 rather than 500 (Table~\ref{tab:screening}).
+We also record what this stratum is and is not. Of its 300 abstracts, 260 carry the maximum inclusion score of~5---the same score borne by all 100 clear-includes---and all 300 carry zero exclusion reasons. The label ``ambiguous'' therefore denotes low rule confidence, not measured human disagreement, and the stratum is closer in composition to the include side than the name suggests.
 
 In response to peer review, we additionally conducted a \textbf{dual-independent human-labeling validation} on a stratified subset of 100~abstracts (25~clear-include + 25~clear-exclude + 50~ambiguous, stratified by heuristic category $\times$ year-tertile, seed${=}$42).
 The labeling protocol, screening templates, and agreement script were pre-registered on the Open Science Framework \emph{before} any label was collected (\url{https://doi.org/10.17605/OSF.IO/FGN3E}, frozen 2026-05-12; the two label sets were returned on 2026-07-15 and 2026-07-29).
@@ -511,7 +512,8 @@ API keys are excluded from the repository; all other materials---including the c
 All 120~experiment runs completed successfully: 60~screening runs (10~per model $\times$ 500~abstracts each) and 60~extraction runs (10~per model $\times$ 100~articles each), totaling 36,000~LLM calls.
 LLaMA consistently processed 480/500 screening abstracts and 96/100 extraction articles across all 10~runs---the same 20 screening and 4 extraction items failed every time due to response length constraints, producing identical error outputs.
 Because these failures were deterministic (the same items failed identically in every run), they contribute to perfect agreement; EMR was computed over all 500 (screening) and 100 (extraction) items.\footnote{Computing EMR over only the 480 successfully parsed items yields the same result ($\emr{=}1.000$), since the 20 consistently-errored items also agree across runs.}
-Mistral, Gemma, Claude, and GPT-4.1 each achieved 500/500 screening and 100/100 extraction in all runs.
+Claude and GPT-4.1 achieved 500/500 screening and 100/100 extraction in all runs.
+Mistral processed 497/500 screening abstracts and Gemma 493/500, in both cases failing the same items identically in every run, so the footnote above applies to them as well.
 Gemini achieved 483--500/500 screening and 98--100/100 extraction.
 
 Table~\ref{tab:resources} summarizes the computational resources consumed.
@@ -547,7 +549,7 @@ GPT-4.1 / OpenAI               & API & 5.0   & 8.6  & 3.0   & 23.29 \\
 \noindent\fbox{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
 \textbf{Important caveat regarding Mistral 7B (Stage~A):}
 Although Mistral~7B achieved \emr{=}1.000 in the screening stage (Table~\ref{tab:screening}), its specificity against the gold standard was 0.240 and its accuracy was 0.628.
-Inspection of the outputs reveals that Mistral classified $\sim$98\% of all abstracts as ``include''---i.e., a degenerate ``always-include'' strategy.
+Inspection of the outputs reveals that Mistral classified 4{,}660 of its 4{,}960 parsed screening outputs as ``include'' (94.0\%; 93.2\% of the 5{,}000 attempted)---i.e., a degenerate ``always-include'' strategy.
 Any function that returns a constant is trivially reproducible: \emr{=}1.000 alone is therefore \emph{not} evidence of useful reproducibility.
 We retain Mistral~7B in our results because this combination (perfect EMR + degenerate specificity) is itself a finding: it warns reviewers that EMR is necessary but not sufficient to characterize a screening tool's utility.
 We discuss the implications for paired-metric reporting in Section~\ref{sec:metric_pairing} of the Discussion.}}
@@ -695,7 +697,7 @@ In all three cases, the variable-length estimate arrays (effect sizes, confidenc
 GPT-4.1's metadata EMR remaining unchanged under normalization and fuzzy matching (0.880) indicates that when its metadata fields vary, the variation is genuinely semantic rather than attributable to formatting differences.
 
 \textbf{Third}, BERTScore embedding similarity computed across all $\binom{10}{2}{=}45$ unique run pairs per article (4,500~pairs per model) was near-perfect for all API models: GPT-4.1 averaged $F_1{=}1.000 \pm 0.004$, Claude $F_1{=}0.997 \pm 0.009$, and Gemini $F_1{=}0.997 \pm 0.022$, with 100\%, 99.7\%, and 98.5\% of pairs exceeding $F_1{\geq}0.95$, respectively.
-This creates an apparent paradox: the models produce \emph{semantically near-identical} metadata text, yet 85--95\% of their complete extraction outputs are non-identical.
+This creates an apparent paradox: the models produce \emph{semantically near-identical} metadata text, yet 80--95\% of their complete extraction outputs are non-identical.
 The resolution lies in the numeric estimates---the effect sizes, confidence intervals, and variable-length estimate arrays that drive hash-based EMR to 0.050--0.200.
 Even when a model describes a study in nearly the same words, it may extract a different number of effect estimates or parse ``RR${=}$1.05 (95\% CI: 1.01--1.09)'' with subtly different numeric precision.
 Concrete, verbatim side-by-side excerpts of an exact-match local-stack output and a near-miss API-stack output (with the divergence located in the variable-length \texttt{estimates} array rather than in the metadata fields) are reproduced as JSON listings in Supplementary~\S\ref{supp-sec:examples}.
@@ -745,8 +747,10 @@ In domains with smaller literatures or marginal effects, even GPT-4.1's relative
 
 \medskip
 \noindent\textbf{Random-effects re-analysis and small-literature simulation.}
-We re-ran the propagation analysis using DerSimonian--Laird random-effects pooling on log(RR), one pooled estimate per model${\times}$run combination over the 100 INCLUDE articles.
-Across all 60~combinations, the pooled RR ranged from 1.015 to 1.038 (mean 1.025); the within-model range across runs was small in absolute terms (Claude 0.0058, Gemini 0.0058, GPT-4.1 0.0058) and remained within the bootstrap CI of any single run.
+We re-ran the propagation analysis using DerSimonian--Laird random-effects pooling on log(RR), one pooled estimate per model${\times}$run combination over the INCLUDE set.
+The number of articles actually entering each pool is smaller than the 100 INCLUDE articles and varies by stack, because an article contributes only when the run returned an effect estimate and a usable interval: $k$ ranges from 39 (Gemini) to 63 (LLaMA) across the 60~combinations, and this variation in $k$ is itself a consequence of extraction non-determinism rather than a property of the corpus.
+Across all 60~combinations, the pooled RR ranged from 1.012 to 1.038 (mean 1.026); the within-model range across runs was small in absolute terms (Claude 0.0057, Gemini 0.0058, GPT-4.1 0.0059) and remained within the bootstrap CI of any single run.
+Heterogeneity was high and stable throughout: $I^2$ ranged from 90.97\% to 94.71\% and $\tau^2$ from $1.4{\times}10^{-5}$ to $2.9{\times}10^{-4}$ across the 60~combinations, so the random-effects specification is the appropriate one and the pooled estimate should be read as an average effect across a heterogeneous set rather than as a common effect.
 \textbf{No run-pair within any model produced a 95\% random-effects CI that crossed the null} in the full-corpus pooling, confirming that, in a well-powered, large-$k$ meta-analysis with a strong aggregate signal, LLM non-determinism does not flip the meta-analytic conclusion.
 
 This robustness, however, depends critically on $k$.
@@ -859,7 +863,7 @@ Figure~\ref{fig:emr} visualizes the EMR comparison across models and stages, and
 \label{fig:heatmap}
 \end{figure}
 
-\noindent The results reveal three key patterns: (1)~a sharp reproducibility gap between local and API-served deployment stacks, with all three local stacks achieving $\emr{=}1.000$ while all three API-served stacks fall below 0.200 for extraction; (2)~a dramatic amplification of non-determinism when moving from simple binary screening decisions to complex structured extraction outputs; and (3)~distinct instability profiles among API-served stacks, with the GPT-4.1 / OpenAI stack showing the highest metadata and structural stability but still exhibiting meaningful numeric variation.
+\noindent The results reveal three key patterns: (1)~a sharp reproducibility gap between local and API-served deployment stacks, with all three local stacks achieving $\emr{=}1.000$ while all three API-served stacks reach at most 0.200 for extraction; (2)~a dramatic amplification of non-determinism when moving from simple binary screening decisions to complex structured extraction outputs; and (3)~distinct instability profiles among API-served stacks, with the GPT-4.1 / OpenAI stack showing the highest metadata and structural stability but still exhibiting meaningful numeric variation.
 
 
 % ============================================================
@@ -940,7 +944,7 @@ Papers reporting LLM-assisted evidence synthesis should be expected to disclose:
 
 \textbf{For tool developers:}
 The large difference in extraction EMR between local and cloud deployment suggests that deterministic local inference should be the default for reproducibility-critical applications.
-Local inference on consumer hardware (Apple~M4, 24~GB RAM) cost \$0.26 total for 174~hours across three models, versus \$69.40 for 33~hours of API inference---a 267$\times$ cost advantage per hour that compounds with the reproducibility benefit.
+Local inference on consumer hardware (Apple~M4, 24~GB RAM) cost \$0.26 total for 174~hours across three models, versus \$69.40 for 33~hours of API inference---a 266$\times$ advantage in total outlay. Normalised per hour of inference the gap is far wider still (\$0.0015/h local vs.\ \$2.10/h API, ${\approx}1{,}400\times$), since the local stacks ran five times longer for that outlay. Either way the cost advantage compounds with the reproducibility benefit.
 Where cloud APIs must be used (e.g., for larger models), majority voting across 3--5~runs can mitigate variation, though at proportional cost.
 
 \subsection{Relationship to Prior Work}
@@ -1041,9 +1045,9 @@ This is a conservative choice: the full output also contains confidence scores, 
 Our reported screening EMR values therefore \emph{underestimate} the true extent of screening-stage non-determinism, making our findings a lower bound.
 
 \textbf{Stress-tested corpus design.}
-Our corpus was deliberately enriched with 60\% ambiguous abstracts to stress-test screening consistency under challenging conditions.
-In a typical systematic review, borderline cases constitute approximately 20--30\% of abstracts, meaning our screening flip rates represent upper bounds for standard workloads.
-This design choice maximizes the diagnostic sensitivity of our evaluation.
+Our corpus was deliberately enriched with 60\% of abstracts drawn from the rule's low-confidence region, to stress-test screening consistency.
+We previously described these flip rates as upper bounds for standard workloads, on the reasoning that a typical review contains fewer borderline cases. That claim does not survive inspection of the stratum: 260 of its 300 abstracts carry the maximum inclusion score of~5, the same score borne by every clear-include, and all 300 carry zero exclusion reasons. The stratum marks where the automated rule was unconfident, which is not the same as where a human reader would hesitate, and its composition sits closer to the include side than to a genuine borderline.
+We therefore make no directional claim about how these rates transfer to other corpora. Whether a review with fewer such abstracts would flip less often is untested here, and the enrichment fraction is a property of our sampling frame rather than a calibrated difficulty setting.
 
 \textbf{Temporal controls.}
 All experiments were completed within a 3-week window (February 11--March~2, 2026) to minimize the risk of silent API model updates.
@@ -1095,7 +1099,7 @@ Based on our findings, we propose the following recommendations for LLM-assisted
 % ============================================================
 \section{Conclusion}
 
-This study evaluates LLM reproducibility in evidence synthesis at scale: 35{,}996 successful calls of 36{,}000 attempted across 120~original experimental runs involving six models from four providers, plus a desconfound experiment serving the same model weights via a seventh cloud configuration.
+This study evaluates LLM reproducibility in evidence synthesis at scale: 35{,}638 successful calls of 36{,}000 attempted across 120~original experimental runs involving six models from four providers, plus a desconfound experiment serving the same model weights via a seventh cloud configuration.
 We use whole-output hashing, four-tier semantic analysis, pairwise-disagreement statistics, fixed-slot prompt sensitivity, two independent silver standards, and meta-analytic propagation testing including a small-literature simulation.
 
 \textbf{What we show that others have not.}

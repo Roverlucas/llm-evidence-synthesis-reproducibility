@@ -849,7 +849,7 @@ GPT-4.1           & 0.984 & 0.725 & 0.259 \\
 \section{BERTScore F1: Raw vs. Rescaled (Random-Pair Baseline)}
 \label{sec:bertscore_rescaled_supp}
 
-Per RSM P1.a audit, BERTScore F1 with \texttt{roberta-large} is known to saturate near $1.0$ even for thematically unrelated sentence pairs because the underlying contextual embeddings cluster all natural-English text in a small subspace. The package's authors recommend rescaling F1 against a per-language random-pair baseline (\texttt{rescale\_with\_baseline=True}, \texttt{lang="en"}) to make absolute magnitudes interpretable. We compute both raw and rescaled F1 over the same $\binom{10}{2}{=}45$ run-pairs per article (4,500 pairs per model).
+BERTScore F1 with \texttt{roberta-large} is known to saturate near $1.0$ even for thematically unrelated sentence pairs because the underlying contextual embeddings cluster all natural-English text in a small subspace. The package's authors recommend rescaling F1 against a per-language random-pair baseline (\texttt{rescale\_with\_baseline=True}, \texttt{lang="en"}) to make absolute magnitudes interpretable. We compute both raw and rescaled F1 over the same $\binom{10}{2}{=}45$ run-pairs per article (4,500 pairs per model).
 
 \begin{table}[htbp]
 \centering
@@ -878,7 +878,7 @@ GPT-4.1 / OpenAI               & 1.000 & 0.956 & 100.0\% & 0.998 & \phantom{$-$}
 \section{Multiple Comparison Correction for Field-Level Contrasts}
 \label{sec:mcc_supp}
 
-Per RSM P1.b audit, the original two-proportion $z$-test was replaced with McNemar's test because the contrasts compare \emph{paired} per-item consistency outcomes on the same 100 articles (or 500 abstracts) across cloud APIs.
+The original two-proportion $z$-test was replaced with McNemar's test because the contrasts compare \emph{paired} per-item consistency outcomes on the same 100 articles (or 500 abstracts) across cloud APIs.
 We compute, for each model $M$ and field $F$, the article-level binary indicator $b_i^{M,F}{=}1$ if all 10 runs of $M$ produced an identical value for $F$ on article $i$, $0$ otherwise; the paired contrasts are then evaluated by McNemar's test on the $2{\times}2$ discordance table of $(b_i^{M_1,F}, b_i^{M_2,F})$, using the exact mid-$p$ binomial when discordants $b{+}c{\leq}25$ and the chi-square with continuity correction otherwise (\texttt{statsmodels.stats.contingency\_tables.mcnemar}).
 Holm-Bonferroni (FWER) and Benjamini-Hochberg (FDR) corrections are applied to the 21 paired contrasts (5 metadata fields plus overall extraction and screening EMR; 3 pairwise comparisons each). Of 21 contrasts: 7 are significant at raw $p{<}0.05$, 4 survive Holm correction, and 5 survive BH-FDR.
 
@@ -906,35 +906,41 @@ Replacing the original two-proportion $z$-test with McNemar slightly increases t
 \section{Fleiss' Kappa for Inter-Run Agreement}
 \label{sec:fleiss_supp}
 
-Per RSM P1.c audit, we report Fleiss' $\kappa$ for inter-run agreement on screening decisions and extraction outputs, treating each of the 10 LLM runs as one rater. Fleiss' $\kappa$ adjusts the raw concordance for the agreement expected by chance under fixed-marginal multinomial sampling, providing a more interpretable benchmark than EMR alone (which conflates ``perfectly consistent'' with ``trivially consistent in a degenerate-marginals regime''). Asymptotic 95\% CIs use the closed-form variance of Fleiss (1971, eq.~13).
+We report Fleiss' $\kappa$ for inter-run agreement on screening decisions and extraction outputs, treating each of the 10 LLM runs as one rater. Fleiss' $\kappa$ adjusts the raw concordance for the agreement expected by chance under fixed-marginal multinomial sampling, providing a more interpretable benchmark than EMR alone (which conflates ``perfectly consistent'' with ``trivially consistent in a degenerate-marginals regime'').
+
+Two caveats govern how the table below should be read, and we state them before the numbers.
+
+\emph{First, the chance correction is inert for the whole-output hash column.} Treating each distinct output hash as a category yields 667 categories over 100 items for Claude, 265 for Gemini and 298 for GPT-4.1. With categories that numerous and that sparsely populated, the expected agreement $p_e$ falls to ${\approx}0.003$--$0.005$, so $\kappa{=}(p_o{-}p_e)/(1{-}p_e)$ collapses onto $p_o$ and reproduces the pairwise concordance already reported in Table~\ref{main-tab:extraction} rather than adding chance-corrected information. We keep the column because the ordering across stacks is informative, and we do not interpret it against the Landis--Koch bands, which presuppose a meaningful chance baseline. The per-field columns, where categories number in the single digits, are not affected.
+
+\emph{Second, the intervals are bootstrap, not closed-form.} The classical variance of Fleiss (1971, eq.~13) depends only on the marginal proportions and is the asymptotic variance \emph{under $H_0$: $\kappa{=}0$}, appropriate for testing that null and not for placing an interval around an estimated $\kappa$. Applied to these data it returned upper limits above 1.000 in 18 of 24 cells and assigned different standard errors to stacks whose $\kappa$ was exactly 1.000. We therefore report percentile bootstrap intervals resampling items (10,000 resamples, seed 42). Where every resample returns $\kappa{=}1.000$ the interval is degenerate and is shown as $[1.000, 1.000]$; the informative statement for those cells is the rule-of-three bound on the non-match rate, as used for the $\emr{=}1.000$ cells in the main text.
 
 \begin{table}[htbp]
 \centering
-\caption{Fleiss' $\kappa$ (95\% CI) for inter-run agreement across 10 runs per deployment stack. Screening: 3-class decisions (include/exclude/uncertain) over items present in all 10 runs. Extraction (hash): each unique output hash treated as a distinct category. Extraction (per categorical field): study\_design and population. Landis \& Koch (1977) reference bands: $<0.0$ poor, $0.0$--$0.2$ slight, $0.21$--$0.4$ fair, $0.41$--$0.6$ moderate, $0.61$--$0.8$ substantial, $0.81$--$1.0$ almost perfect.}
+\caption{Fleiss' $\kappa$ (95\% CI) for inter-run agreement across 10 runs per deployment stack. Screening: 3-class decisions (include/exclude/uncertain) over items present in all 10 runs. Extraction (hash): each unique output hash treated as a distinct category. Extraction (per categorical field): study\_design and population. Landis \& Koch (1977) reference bands: $<0.0$ poor, $0.0$--$0.2$ slight, $0.21$--$0.4$ fair, $0.41$--$0.6$ moderate, $0.61$--$0.8$ substantial, $0.81$--$1.0$ almost perfect; these bands are not applied to the hash column, where the chance baseline is inert (see text). Intervals are percentile bootstrap over items (10,000 resamples, seed 42). $^{\dagger}$every bootstrap resample returned $\kappa{=}1.000$; the interval is degenerate and the rule-of-three bound on the non-match rate is the informative quantity.}
 \label{tab:fleiss}
 \begin{tabular}{lcccc}
 \toprule
 \textbf{Deployment Stack} & \textbf{Screening (3-class)} & \textbf{Extraction (hash)} & \textbf{study\_design} & \textbf{population} \\
 \midrule
-LLaMA 3 8B / Ollama / M4       & $1.000\,[0.975, 1.025]$ & $1.000\,[0.997, 1.003]$ & $1.000\,[0.942, 1.058]$ & $1.000\,[0.952, 1.048]$ \\
-Mistral 7B / Ollama / M4       & $1.000\,[0.896, 1.104]$ & $1.000\,[0.997, 1.003]$ & $1.000\,[0.945, 1.055]$ & $1.000\,[0.956, 1.044]$ \\
-Gemma 2 9B / Ollama / M4       & $1.000\,[0.965, 1.035]$ & $1.000\,[0.997, 1.003]$ & $1.000\,[0.945, 1.055]$ & $1.000\,[0.951, 1.049]$ \\
+LLaMA 3 8B / Ollama / M4       & $1.000^{\dagger}$ & $1.000^{\dagger}$ & $1.000^{\dagger}$ & $1.000^{\dagger}$ \\
+Mistral 7B / Ollama / M4       & $1.000^{\dagger}$ & $1.000^{\dagger}$ & $1.000^{\dagger}$ & $1.000^{\dagger}$ \\
+Gemma 2 9B / Ollama / M4       & $1.000^{\dagger}$ & $1.000^{\dagger}$ & $1.000^{\dagger}$ & $1.000^{\dagger}$ \\
 \midrule
-Claude Sonnet 4.5 / Anthropic  & $0.981\,[0.965, 0.998]$ & $\mathbf{0.180\,[0.178, 0.181]}$ & $0.985\,[0.933, 1.037]$ & $0.974\,[0.923, 1.024]$ \\
-Gemini 2.5 Pro / Google        & $0.975\,[0.955, 0.995]$ & $\mathbf{0.505\,[0.502, 0.507]}$ & $1.000\,[0.949, 1.051]$ & $0.979\,[0.937, 1.020]$ \\
-GPT-4.1 / OpenAI               & $0.974\,[0.959, 0.989]$ & $\mathbf{0.512\,[0.509, 0.514]}$ & $0.990\,[0.937, 1.044]$ & $0.997\,[0.949, 1.044]$ \\
+Claude Sonnet 4.5 / Anthropic  & $0.981\,[0.970, 0.991]$ & $\mathbf{0.180\,[0.133, 0.226]}$ & $0.985\,[0.952, 1.000]$ & $0.974\,[0.944, 0.996]$ \\
+Gemini 2.5 Pro / Google        & $0.975\,[0.961, 0.987]$ & $\mathbf{0.505\,[0.445, 0.559]}$ & $1.000^{\dagger}$ & $0.979\,[0.956, 0.997]$ \\
+GPT-4.1 / OpenAI               & $0.974\,[0.960, 0.986]$ & $\mathbf{0.511\,[0.453, 0.564]}$ & $0.990\,[0.970, 1.000]$ & $0.997\,[0.989, 1.000]$ \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \noindent For screening decisions, all three local stacks attain the trivial upper bound $\kappa{=}1.000$ and the three cloud APIs fall in the ``almost perfect'' band ($\kappa{\in}[0.974, 0.981]$). We deliberately avoid the shorthand that the stacks therefore ``reach the Cochrane guideline'': inter-run Fleiss' $\kappa$ measures one stack reproducing itself across repetitions, whereas the Cochrane $\kappa{\geq}0.80$ guideline concerns agreement between two independent human reviewers. On this corpus our own two human raters reached $\kappa{=}0.529$ (Section~\ref{sec:dualhuman}), and Mistral-7B attains perfect self-consistency at a specificity of $0.240$, which together show that the two quantities cannot be substituted for one another.
-For \emph{whole-output} extraction hashes, however, Fleiss' $\kappa$ collapses for the cloud APIs to $0.180$ (Claude, ``slight''), $0.505$ (Gemini, ``moderate''), and $0.512$ (GPT-4.1, ``moderate''). The Claude value is particularly stark: when whole-output hash is the rating, Claude's 10 runs agree at only the ``slight'' level on the Landis-Koch scale, well below the Cochrane $\kappa{\geq}0.80$ threshold. Per-field $\kappa$ on categorical extraction fields (study\_design, population) remains in the ``almost perfect'' band for all stacks, isolating the source of low whole-output $\kappa$ to the variable-length \texttt{estimates} array (already documented in Section~\ref{main-sec:fieldlevel} of the main text).
+For \emph{whole-output} extraction hashes, the coefficient falls to $0.180$ (Claude), $0.505$ (Gemini) and $0.511$ (GPT-4.1). Because the chance baseline is inert at this granularity, these figures should be read as the observed whole-output concordance rather than as chance-corrected agreement, and we do not attach Landis--Koch labels or compare them to the Cochrane $\kappa{\geq}0.80$ threshold. The ordering is nonetheless the substantive point, and it matches the EMR ranking: Claude's 10 runs reproduce a whole extraction output far less often than either other cloud stack, and none of the three approaches the local stacks. Per-field $\kappa$ on categorical extraction fields (study\_design, population) remains in the ``almost perfect'' band for all stacks, isolating the source of low whole-output $\kappa$ to the variable-length \texttt{estimates} array (already documented in Section~\ref{main-sec:fieldlevel} of the main text).
 
 % ============================================================
 \section{Hartung-Knapp-Sidik-Jonkman Random-Effects Sensitivity}
 \label{sec:hksj_supp}
 
-Per RSM P2.a audit, we re-ran the per-run random-effects meta-analysis (full 100-article corpus, one pooled estimate per $\text{model}{\times}\text{run}$ combination) using the Hartung-Knapp-Sidik-Jonkman (HKSJ) variance correction alongside the original DerSimonian-Laird (DL) Wald-$z$ formulation. Both estimators share the same $\tau^2$ (method-of-moments); HKSJ inflates the standard error to $\sqrt{q^{\ast}/\sum w_i^{\ast}}$ and uses $t_{0.975,k-1}$ as the critical value. Cochrane Handbook 6.5+ recommends HKSJ over DL for $k{<}10$ because DL is known to be liberal (anti-conservative).
+we re-ran the per-run random-effects meta-analysis (full 100-article corpus, one pooled estimate per $\text{model}{\times}\text{run}$ combination) using the Hartung-Knapp-Sidik-Jonkman (HKSJ) variance correction alongside the original DerSimonian-Laird (DL) Wald-$z$ formulation. Both estimators share the same $\tau^2$ (method-of-moments); HKSJ inflates the standard error to $\sqrt{q^{\ast}/\sum w_i^{\ast}}$ and uses $t_{0.975,k-1}$ as the critical value. Cochrane Handbook 6.5+ recommends HKSJ over DL for $k{<}10$ because DL is known to be liberal (anti-conservative).
 
 \begin{table}[htbp]
 \centering
@@ -986,7 +992,7 @@ GPT-4.1           & 30 & 0.0060 & 0.0114 & 0.00\% & 0.00\% \\
 \end{table}
 
 \noindent \textbf{HKSJ sensitivity.}
-Per RSM P2.a audit, we re-ran the small-literature simulation with the Hartung-Knapp-Sidik-Jonkman (HKSJ) variance correction alongside the original DL/Wald-z formulation.
+we re-ran the small-literature simulation with the Hartung-Knapp-Sidik-Jonkman (HKSJ) variance correction alongside the original DL/Wald-z formulation.
 HKSJ uses the same method-of-moments $\tau^2$ estimator as DL but inflates the standard error to $\sqrt{q^{\ast}/\sum w_i^{\ast}}$, where $q^{\ast}{=}\frac{1}{k{-}1}\sum w_i^{\ast}(y_i{-}\hat\theta_{\text{RE}})^2$, and replaces the $z_{0.975}$ Wald critical value with $t_{0.975,\,k{-}1}$.
 Because $t$-percentiles inflate as $k{\to}2$ and $q^{\ast}{\geq}1/\sum w_i^{\ast}$ under heterogeneity, HKSJ produces substantially wider CIs in small literatures.
 The unstable-null-crossing rate under HKSJ is markedly higher: at $k{=}10$, $\mathbf{31.5\%}$ of Claude subsamples, $\mathbf{48.5\%}$ of Gemini subsamples, and $\mathbf{20.0\%}$ of GPT-4.1 subsamples produce run-dependent reversals of the meta-analytic conclusion (versus 0.5\%, 0.5\%, and 0.0\% under DL).
