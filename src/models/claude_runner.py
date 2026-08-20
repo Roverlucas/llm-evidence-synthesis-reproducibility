@@ -63,8 +63,14 @@ def run_inference(
         "max_tokens": max_tokens,
         "messages": [{"role": "user", "content": full_prompt}],
     }
-    if temperature > 0.0:
-        payload["temperature"] = temperature
+    # Send temperature unconditionally. The previous guard (`if temperature > 0.0`)
+    # silently dropped the field for temperature=0.0 — the setting this study runs
+    # under — so requests inherited the provider default of 1.0 while the run card
+    # recorded 0.0. Every other runner in this package sends it unconditionally.
+    # NOTE: the deposited data in data/raw_outputs/claude-sonnet-4-5/ was generated
+    # BEFORE this fix and therefore ran at the provider default. It has not been
+    # regenerated; the manuscript declares this explicitly.
+    payload["temperature"] = temperature
 
     headers = {
         "Content-Type": "application/json",

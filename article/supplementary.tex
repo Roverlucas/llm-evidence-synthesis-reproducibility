@@ -912,7 +912,7 @@ Two caveats govern how the table below should be read, and we state them before 
 
 \emph{First, the chance correction is inert for the whole-output hash column.} Treating each distinct output hash as a category yields 667 categories over 100 items for Claude, 265 for Gemini and 298 for GPT-4.1. With categories that numerous and that sparsely populated, the expected agreement $p_e$ falls to ${\approx}0.003$--$0.005$, so $\kappa{=}(p_o{-}p_e)/(1{-}p_e)$ collapses onto $p_o$ and reproduces the pairwise concordance already reported in Table~\ref{main-tab:extraction} rather than adding chance-corrected information. We keep the column because the ordering across stacks is informative, and we do not interpret it against the Landis--Koch bands, which presuppose a meaningful chance baseline. The per-field columns, where categories number in the single digits, are not affected.
 
-\emph{Second, the intervals are bootstrap, not closed-form.} The classical variance of Fleiss (1971, eq.~13) depends only on the marginal proportions and is the asymptotic variance \emph{under $H_0$: $\kappa{=}0$}, appropriate for testing that null and not for placing an interval around an estimated $\kappa$. Applied to these data it returned upper limits above 1.000 in 18 of 24 cells and assigned different standard errors to stacks whose $\kappa$ was exactly 1.000. We therefore report percentile bootstrap intervals resampling items (10,000 resamples, seed 42). Where every resample returns $\kappa{=}1.000$ the interval is degenerate and is shown as $[1.000, 1.000]$; the informative statement for those cells is the rule-of-three bound on the non-match rate, as used for the $\emr{=}1.000$ cells in the main text.
+\emph{Second, the intervals are bootstrap, not closed-form.} The classical variance of Fleiss (1971, eq.~13) depends only on the marginal proportions and is the asymptotic variance \emph{under $H_0$: $\kappa{=}0$}, appropriate for testing that null and not for placing an interval around an estimated $\kappa$. Applied to these data it returned upper limits above 1.000 in 18 of 24 cells and assigned different standard errors to stacks whose $\kappa$ was exactly 1.000. We therefore report percentile bootstrap intervals resampling items (10,000 resamples, seed 42). Where every resample returns $\kappa{=}1.000$ the interval is degenerate and is shown as $[1.000, 1.000]$; the informative statement for those cells is the rule-of-three bound on the non-match rate, as used for the $\textrm{EMR}{=}1.000$ cells in the main text.
 
 \begin{table}[htbp]
 \centering
@@ -1006,7 +1006,7 @@ The journal's guidance for GenAI submissions requires authors to document specif
 
 \begin{table}[htbp]
 \centering
-\caption{Seed effect vs.\ deployment effect. Cloud models tested: Claude Sonnet~4.5 (no seed parameter), Gemini~2.5~Pro and GPT-4.1 (seed=42). Local models all use seed=42.}
+\caption{Reproducibility by seed availability and deployment paradigm. Cloud stacks: Claude Sonnet~4.5 (exposes no seed parameter, and---see the configuration table in the main text---ran at the provider's default temperature rather than at~0), Gemini~2.5~Pro and GPT-4.1 (seed=42, temperature=0 verified as transmitted). Local stacks all use seed=42 at temperature=0. The rows are descriptive: the ``no seed'' row differs from the ``seed=42'' row in provider, infrastructure, API layer and temperature simultaneously, so their difference is not an estimate of a seed effect.}
 \label{tab:seed}
 \begin{tabular}{lccc}
 \toprule
@@ -1023,8 +1023,11 @@ Local, seed=42       & extraction & 1.000 & 0.000 \\
 \end{tabular}
 \end{table}
 
-\noindent Seed effect for extraction (cloud-seeded vs.\ cloud-unseeded): $+0.125$ EMR.
-Deployment effect (local-seeded vs.\ cloud-seeded): $+0.825$ EMR. The deployment effect is \textbf{6.6$\times$ larger} than the seed effect. We conclude that the seed parameter, as currently implemented in commercial APIs, does not deliver determinism; deployment paradigm dominates.
+\noindent The comparison that this table supports is the deployment one: local stacks at seed=42 and temperature=0 reach $\textrm{EMR}{=}1.000$ for extraction, while cloud stacks holding the same nominal settings reach $0.175$ on average---a difference of $+0.825$ EMR between paradigms whose declared configuration is identical.
+
+\noindent The comparison it does \emph{not} support is a seed effect. The $+0.125$ EMR separating the seeded cloud row from the unseeded one was previously reported as such, and we withdraw that reading: those rows differ in provider, infrastructure, API layer and transmitted temperature at the same time, which is precisely the confound our unit-of-analysis framing exists to prevent. Isolating the seed requires a within-stack ablation---one provider, one infrastructure, run with and without the seed---which we did not perform.
+
+\noindent The conclusion that survives is narrower and rests only on the seeded stacks: Gemini and GPT-4.1 transmitted seed=42 and temperature=0 on every call and still returned extraction EMR of $0.200$ and $0.150$. Where a seed parameter exists, is accepted, and is verifiably sent, it does not make an API-served extraction pipeline reproducible.
 
 % ============================================================
 \section{Pre-Registration Disclosure}

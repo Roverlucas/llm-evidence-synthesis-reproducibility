@@ -363,3 +363,47 @@ category counts, is unaffected and stands.
 
 Also removed: "Per RSM P1.a/P1.b/P2.a audit" from the supplement. Internal workflow shorthand
 that an editor would read as numbered reports the journal had already issued.
+
+## 33 — 2026-08-20 · The Claude stack never received temperature=0
+`src/models/claude_runner.py` attached the `temperature` field to the request body only when
+the requested value exceeded zero: `if temperature > 0.0: payload["temperature"] = temperature`.
+This study requests zero. The field was therefore never sent on any of the 6,000 Claude calls,
+and those requests ran at the Anthropic Messages API default, which the documentation gives as
+**1.0 — the maximum of that API's range**. Every other runner in `src/models/` transmits the
+field unconditionally; the defect is specific to this one client.
+
+The run cards recorded `config.temperature: 0.0` regardless, and the call hash was computed
+over the recorded value rather than the transmitted payload. The provenance trail built to make
+configuration auditable asserted, for 6,000 calls, a setting that was never on the wire.
+
+Three claims were rescoped rather than deleted:
+
+- **The headline gap no longer rests on Claude.** The abstract now computes it from GPT-4.1
+  (0.150) and Gemini (0.200), both verified to have transmitted temperature=0, against local
+  1.000 — a 5–7× gap rather than the 20× that came from Claude's 0.050. This is a genuine loss
+  of magnitude and is stated as such. Claude is reported as a separate case.
+- **Finding 6 was rebuilt on within-stack evidence.** It previously contrasted "seeded" cloud
+  stacks against "unseeded" Claude and called the difference a seed effect. Those arms differ
+  in provider, infrastructure, API layer and now temperature at once — the exact inference
+  §3.3 forbids. Withdrawn. What replaces it is cleaner and needs no cross-provider contrast:
+  Gemini and GPT-4.1 transmitted seed=42 and temperature=0 on all 6,000 of their calls and
+  still returned extraction EMR of 0.200 and 0.150. A seed that exists, is accepted and is
+  verifiably sent does not make an API-served extraction pipeline reproducible. The within-stack
+  ablation that would isolate the seed was not run and is named as the next experiment.
+- **The supplement's seed table** keeps its rows but loses its causal reading, and its caption
+  now says what varies between them.
+
+Not re-run. Re-running produces a different experiment, not a corrected one, and the deposited
+artefacts would cease to be the artefacts the analysis was performed on. The client is fixed
+for future use, with a comment stating that the deposited data predates the fix.
+
+The defect is declared in the configuration table and given the first slot in the limitations
+section, ahead of the scope choices, because it is not a scope choice. It is also an instance
+of this paper's own thesis: one conditional in a client, invisible in the configuration table,
+in the run card and in the hash, silently detached the executed configuration from the declared
+one. The recommendation that provenance must record what was transmitted rather than what was
+requested is now arrived at from our own failure.
+
+Also fixed: `\emr` was used twice in `supplementary.tex`, where the macro is not defined — it
+is declared in `main.tex` only. The supplement had been emitting a PDF with two undefined
+control sequences. Replaced with `\textrm{EMR}`.
