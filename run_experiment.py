@@ -153,7 +153,16 @@ def progress_bar(current: int, total: int, model: str = "", stage: str = ""):
 
 
 def _auto_commit(model_id: str, run_id: int, stage: str, stats: dict):
-    """Git add + commit + push after each completed run."""
+    """Git add + commit after each completed run. Opt-in, and never pushes.
+
+    Off unless AIOX_AUTOCOMMIT=1 (or --autocommit) is set. Replication runs write
+    to data/raw_outputs_replication/ and must not touch the deposited artefacts;
+    an earlier version committed and pushed unconditionally, which meant anyone
+    following the README overwrote the evidence the paper analyses.
+    """
+    import os
+    if os.environ.get("AIOX_AUTOCOMMIT") != "1":
+        return
     ok = stats.get("successful", 0)
     total = stats.get("total", 0)
     msg = f"data: {model_id} {stage} run {run_id} ({ok}/{total})"
@@ -167,11 +176,11 @@ def _auto_commit(model_id: str, run_id: int, stage: str, stats: dict):
             capture_output=True, timeout=30,
         )
         if result.returncode == 0:
-            subprocess.run(
-                ["git", "push"],
-                capture_output=True, timeout=60,
-            )
-            print(f"  [git] {msg}")
+            # Deliberately no `git push`. A replicator following the README would
+            # otherwise commit their own run outputs over the deposited evidence
+            # and push them to the shared remote — irreversible for anyone acting
+            # in good faith on our own instructions.
+            print(f"  [git] {msg} (local commit only; push is manual by design)")
     except Exception:
         pass  # Don't break the experiment if git fails
 

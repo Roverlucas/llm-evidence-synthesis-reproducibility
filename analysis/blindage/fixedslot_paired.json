@@ -1,0 +1,39 @@
+{
+  "method": "Baseline EMR averaged over all C(10,3)=120 three-run subsets of the variable-length condition, matching the 3-run fixed-slot condition. EMR is monotonically non-increasing in run count, so the 10-run baseline previously used is not comparable to a 3-run condition.",
+  "sha256_self": "436e332fe4e1eecb7cd4e2af70df042a8304907644d1ff808c40e78c3e68e378",
+  "stacks": {
+    "claude-sonnet-4-5": {
+      "baseline_emr_10run": 0.05,
+      "baseline_emr_3run_paired": 0.1007,
+      "baseline_n_articles_10run": 100,
+      "baseline_n_triples": 120,
+      "fixed_slot_emr": 0.03,
+      "fixed_slot_n_articles": 100,
+      "fixed_slot_n_runs": 3,
+      "relative_change_vs_10run_baseline_pct": -40.0,
+      "relative_change_vs_paired_baseline_pct": -70.2
+    },
+    "gemini-2.5-pro": {
+      "baseline_emr_10run": 0.2,
+      "baseline_emr_3run_paired": 0.349,
+      "baseline_n_articles_10run": 100,
+      "baseline_n_triples": 120,
+      "fixed_slot_emr": 0.1818,
+      "fixed_slot_n_articles": 99,
+      "fixed_slot_n_runs": 3,
+      "relative_change_vs_10run_baseline_pct": -9.1,
+      "relative_change_vs_paired_baseline_pct": -47.9
+    },
+    "gpt-4.1": {
+      "baseline_emr_10run": 0.15,
+      "baseline_emr_3run_paired": 0.3589,
+      "baseline_n_articles_10run": 100,
+      "baseline_n_triples": 120,
+      "fixed_slot_emr": 0.4444,
+      "fixed_slot_n_articles": 99,
+      "fixed_slot_n_runs": 3,
+      "relative_change_vs_10run_baseline_pct": 196.3,
+      "relative_change_vs_paired_baseline_pct": 23.8
+    }
+  }
+}

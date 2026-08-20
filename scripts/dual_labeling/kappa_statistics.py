@@ -160,7 +160,12 @@ def bootstrap_ci(c1: np.ndarray, c2: np.ndarray, categories: list[str]) -> dict:
 def marginal_tests(c1: np.ndarray, c2: np.ndarray, binary_mask: np.ndarray) -> dict:
     """Is the disagreement directional, or symmetric noise?"""
     t3 = contingency(c1, c2, 3)
-    sq = SquareTable(t3)
+    # shift_zeros defaults to True, which adds 0.5 to every empty cell and makes
+    # this 100-item table sum to 101. The continuity correction is meant for
+    # sparse tables where a zero would make the statistic undefined; here both
+    # statistics are well defined without it, and the published figure should
+    # reproduce from the published table.
+    sq = SquareTable(t3, shift_zeros=False)
     homogeneity = sq.homogeneity()  # Stuart-Maxwell
     symmetry = sq.symmetry()        # Bowker
 

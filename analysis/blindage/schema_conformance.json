@@ -1,0 +1,219 @@
+{
+  "definition": "conformance = share of returned outputs that validate against the stage JSON schema, over all runs. Calls that returned no output at all are counted separately as 'no_output' and excluded from the conformance denominator.",
+  "sha256_self": "806bcdf421b86f41d40785c2bb9c1b9e90dd64dd72b92696167a37e63d3c9498",
+  "stacks": {
+    "claude-sonnet-4-5": {
+      "extraction": {
+        "calls": 1000,
+        "conformance": 0.704,
+        "conforming": 704,
+        "no_output": 0,
+        "top_failure_modes": [
+          {
+            "error": "None is not of type 'number'",
+            "n": 158
+          },
+          {
+            "error": "None is not of type 'string'",
+            "n": 42
+          },
+          {
+            "error": "-0.09 is less than the minimum of 0.1",
+            "n": 10
+          }
+        ]
+      },
+      "screening": {
+        "calls": 5000,
+        "conformance": 1.0,
+        "conforming": 5000,
+        "no_output": 0,
+        "top_failure_modes": []
+      }
+    },
+    "gemini-2.5-pro": {
+      "extraction": {
+        "calls": 1000,
+        "conformance": 0.026,
+        "conforming": 26,
+        "no_output": 0,
+        "top_failure_modes": [
+          {
+            "error": "None is not of type 'string'",
+            "n": 951
+          },
+          {
+            "error": "-1.01 is less than the minimum of 0.1",
+            "n": 6
+          },
+          {
+            "error": "None is not of type 'number'",
+            "n": 4
+          }
+        ]
+      },
+      "screening": {
+        "calls": 5000,
+        "conformance": 0.9966,
+        "conforming": 4983,
+        "no_output": 0,
+        "top_failure_modes": []
+      }
+    },
+    "gemma2-9b": {
+      "extraction": {
+        "calls": 1000,
+        "conformance": 0.4,
+        "conforming": 400,
+        "no_output": 0,
+        "top_failure_modes": [
+          {
+            "error": "None is not of type 'number'",
+            "n": 170
+          },
+          {
+            "error": "'percent change' is not one of ['RR', 'OR', 'HR', 'IRR', 'other']",
+            "n": 50
+          },
+          {
+            "error": "'null' is not one of ['RR', 'OR', 'HR', 'IRR', 'other']",
+            "n": 40
+          }
+        ]
+      },
+      "screening": {
+        "calls": 5000,
+        "conformance": 0.962,
+        "conforming": 4810,
+        "no_output": 0,
+        "top_failure_modes": [
+          {
+            "error": "'time_series, case_crossover' is not one of ['time_series', 'case_crossover', 'cohort', 'other', 'not_specified']",
+            "n": 50
+          },
+          {
+            "error": "'not_specified' is not of type 'boolean'",
+            "n": 20
+          },
+          {
+            "error": "'time_series,case_crossover' is not one of ['time_series', 'case_crossover', 'cohort', 'other', 'not_specified']",
+            "n": 10
+          }
+        ]
+      }
+    },
+    "gpt-4.1": {
+      "extraction": {
+        "calls": 1000,
+        "conformance": 0.649,
+        "conforming": 649,
+        "no_output": 0,
+        "top_failure_modes": [
+          {
+            "error": "None is not of type 'number'",
+            "n": 186
+          },
+          {
+            "error": "None is not of type 'string'",
+            "n": 85
+          },
+          {
+            "error": "-0.09 is less than the minimum of 0.1",
+            "n": 10
+          }
+        ]
+      },
+      "screening": {
+        "calls": 5000,
+        "conformance": 1.0,
+        "conforming": 5000,
+        "no_output": 0,
+        "top_failure_modes": []
+      }
+    },
+    "llama3-8b": {
+      "extraction": {
+        "calls": 1000,
+        "conformance": 0.38,
+        "conforming": 380,
+        "no_output": 0,
+        "top_failure_modes": [
+          {
+            "error": "None is not of type 'number'",
+            "n": 190
+          },
+          {
+            "error": "None is not of type 'string'",
+            "n": 40
+          },
+          {
+            "error": "'adults' is not one of ['general', 'elderly', 'children', 'other']",
+            "n": 40
+          }
+        ]
+      },
+      "screening": {
+        "calls": 5000,
+        "conformance": 0.87,
+        "conforming": 4350,
+        "no_output": 0,
+        "top_failure_modes": [
+          {
+            "error": "'case-crossover' is not one of ['time_series', 'case_crossover', 'cohort', 'other', 'not_specified']",
+            "n": 100
+          },
+          {
+            "error": "'PM10' is not one of ['PM2.5', 'other', 'not_specified']",
+            "n": 90
+          },
+          {
+            "error": "'respiratory_mortality' is not one of ['respiratory_hospitalization', 'respiratory_ED', 'other', 'not_specified']",
+            "n": 40
+          }
+        ]
+      }
+    },
+    "mistral-7b": {
+      "extraction": {
+        "calls": 1000,
+        "conformance": 0.43,
+        "conforming": 430,
+        "no_output": 0,
+        "top_failure_modes": [
+          {
+            "error": "None is not of type 'number'",
+            "n": 170
+          },
+          {
+            "error": "'percentage increase' is not one of ['RR', 'OR', 'HR', 'IRR', 'other']",
+            "n": 60
+          },
+          {
+            "error": "'adults' is not one of ['general', 'elderly', 'children', 'other']",
+            "n": 40
+          }
+        ]
+      },
+      "screening": {
+        "calls": 5000,
+        "conformance": 0.842,
+        "conforming": 4210,
+        "no_output": 0,
+        "top_failure_modes": [
+          {
+            "error": "'respiratory_mortality' is not one of ['respiratory_hospitalization', 'respiratory_ED', 'other', 'not_specified']",
+            "n": 190
+          },
+          {
+            "error": "'PM10' is not one of ['PM2.5', 'other', 'not_specified']",
+            "n": 80
+          },
+          {
+            "error": "'time_series, case_crossover' is not one of ['time_series', 'case_crossover', 'cohort', 'other', 'not_specified']",
+            "n": 50
+          }
+        ]
+      }
+    }
+  }
+}

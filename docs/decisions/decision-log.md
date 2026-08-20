@@ -450,3 +450,73 @@ Also corrected in passing: two uses of `\emr` in `supplementary.tex`, a macro de
 `main.tex`. The supplement had been emitting a PDF with undefined control sequences, and the
 check I had been running grepped for the string "undefined" rather than for `^!` in the log,
 so it reported clean. Both documents now build with zero errors and zero undefined references.
+
+## 35 — 2026-08-20 · Six corrections cleared while Stage B waits on labeler2
+None of these depend on the pending labels, so they were done in one pass.
+
+**Fixed-slot compared 3 runs against a 10-run baseline (item 5).** EMR is monotonically
+non-increasing in run count — each extra run is another chance for an item to differ — so the
+comparison credited the fixed-slot prompt with an advantage it partly obtained by being
+measured over fewer repetitions. New script `scripts/blindage/fixedslot_paired_baseline.py`
+recomputes the baseline over all C(10,3)=120 three-run subsets:
+
+| Stack | vs 10-run baseline | vs matched 3-run baseline |
+|---|---|---|
+| Claude | −40.0% | **−70.2%** |
+| Gemini | −9.1% | **−47.9%** (sign of the reading flips) |
+| GPT-4.1 | +196.3% | **+23.8%** |
+
+This strengthens the section rather than weakening it. Fixed-slot prompting now *degrades*
+reproducibility on two of three stacks and improves it modestly on one, so the refutation of
+"fixed-slot will resolve cloud non-determinism" is sharper: constraining the output shape does
+not merely fail to fix the problem, it usually makes it worse. The caption also carries the
+real coverage (100/99/99 articles), against the "100 INCLUDE articles" it claimed before.
+
+**Schema conformance is a second reliability axis, and it was unmeasured (items 33, 34).**
+New script `scripts/blindage/schema_conformance.py`, new §4.9 and Table 8:
+
+| Stack | Screening | Extraction |
+|---|---|---|
+| LLaMA / Mistral / Gemma (local) | 87.0 / 84.2 / 96.2% | **38.0 / 43.0 / 40.0%** |
+| Claude / Gemini / GPT-4.1 | 100 / 99.7 / 100% | 70.4 / **2.6%** / 64.9% |
+
+Two readings, opposite directions. The local stacks reach EMR=1.000 on extraction while
+conforming in 38–43% of calls: they reproduce, perfectly, a set that is mostly records a review
+team would repair by hand. Deterministic and usable are different claims and this paper
+establishes only the first. On the other side, Gemini conforms on 2.6% of extraction calls —
+951 failures being a null where the schema types a string — and the meta-analysis still
+harvests 39–45 estimates per Gemini run from outputs its own validator rejects 97 times in 100.
+
+Item 34 resolves into the same finding. The manuscript attributed the deterministic local
+failures to "response length constraints"; they are not truncation. The returned text sits far
+below the 2,048-token ceiling and the failures are enum-orthography violations
+(`case-crossover` for `case_crossover`), two values where the schema allows one, and nulls in
+typed fields. The corrected mechanism supports the structured-output argument better than the
+one it replaces.
+
+**Stuart-Maxwell was computed on a table summing to 101 (item 19).** `SquareTable` defaults to
+`shift_zeros=True`, adding 0.5 to each empty cell. Both statistics are well defined without the
+correction here, and the published figure should reproduce from the published table. With
+`shift_zeros=False`: Stuart-Maxwell χ²(2)=**16.41**, p=**2.73e-4** (was 15.38, 4.57e-4), Bowker
+χ²(3)=**17.76**, p=**4.93e-4**. The directional-disagreement conclusion gets stronger.
+
+**A dimensionally incoherent inequality (item 21).** `supp:997` justified HKSJ with
+`q* ≥ 1/Σw*`, comparing quantities of different dimensions — in a journal of meta-analysis
+methodologists. HKSJ widens relative to DL when the variance-inflation factor `q* ≥ 1`.
+
+**κ=0.529 now appears in the abstract (item 38).** The one formally pre-registered component,
+whose target was missed, was absent from the abstract while an informal Git pre-commit was
+mentioned. It now has its own labelled block, reporting the shortfall as measured and the gold
+standard as asymmetrically valid. This converts the paper's most exposed number into its
+clearest signal of integrity, and it is better for an editor to meet it in the abstract than to
+discover it in §3.6.
+
+**run_experiment.py no longer pushes over the deposited evidence (item 54).** `_auto_commit`
+ran `git add data/raw_outputs/` + commit + push unconditionally on every run, and the README
+instructs exactly that command. A replicator following our own documentation would commit their
+outputs over the deposited artefacts and push them to the shared remote. Now opt-in via
+`AIOX_AUTOCOMMIT=1`, and the push is gone entirely.
+
+Both documents build clean (main 35pp, supplement 23pp, zero errors, zero undefined refs); 151
+tests pass. `check_pending.sh` still blocks on the three `\pending` markers awaiting Stage B and
+three reviewer emails — open work, not defects.

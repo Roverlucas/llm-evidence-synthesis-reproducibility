@@ -291,7 +291,7 @@ Two competing explanations for a low coefficient can be ruled out. The prevalenc
 \end{tabular}
 \end{table}
 
-\textbf{The disagreement is directional, not diffuse.} The binary discordant cells are 2 versus 19 (exact McNemar $p=2.2\times10^{-4}$), and marginal homogeneity is rejected on the 3-class table (Stuart--Maxwell $\chi^2(2)=15.4$, $p=4.6\times10^{-4}$; Bowker symmetry likewise rejected). Rater~2 returned 49 INCLUDE decisions against rater~1's 30. Systematic directional divergence of this kind indicates that the two raters applied different readings of the written protocol, which is a defect of the instrument rather than noise in the raters.
+\textbf{The disagreement is directional, not diffuse.} The binary discordant cells are 2 versus 19 (exact McNemar $p=2.2\times10^{-4}$), and marginal homogeneity is rejected on the 3-class table (Stuart--Maxwell $\chi^2(2)=16.4$, $p=2.7\times10^{-4}$; Bowker $\chi^2(3)=17.8$, $p=4.9\times10^{-4}$). Rater~2 returned 49 INCLUDE decisions against rater~1's 30. Systematic directional divergence of this kind indicates that the two raters applied different readings of the written protocol, which is a defect of the instrument rather than noise in the raters.
 
 Of the 25 discordances, 19 run in that same direction, and 17 of those 19 turn on inclusion criterion~5 (quantitative effect estimate). Protocol v1.1 stated the criterion as ``reports RR, OR, HR (or equivalent) with 95\% CI'' in its inclusion list while its exclusion list read ``no quantitative effect estimate extractable from the abstract'' --- the first wording admits a stated intention to report an effect, the second demands the numbers themselves. Compounding this, the v1.1 decision table specified outcomes for failure in two or more criteria and for a borderline single criterion, but not for clear failure in exactly one criterion, which is the configuration of those 17 abstracts.
 
@@ -994,7 +994,7 @@ GPT-4.1           & 30 & 0.0060 & 0.0114 & 0.00\% & 0.00\% \\
 \noindent \textbf{HKSJ sensitivity.}
 we re-ran the small-literature simulation with the Hartung-Knapp-Sidik-Jonkman (HKSJ) variance correction alongside the original DL/Wald-z formulation.
 HKSJ uses the same method-of-moments $\tau^2$ estimator as DL but inflates the standard error to $\sqrt{q^{\ast}/\sum w_i^{\ast}}$, where $q^{\ast}{=}\frac{1}{k{-}1}\sum w_i^{\ast}(y_i{-}\hat\theta_{\text{RE}})^2$, and replaces the $z_{0.975}$ Wald critical value with $t_{0.975,\,k{-}1}$.
-Because $t$-percentiles inflate as $k{\to}2$ and $q^{\ast}{\geq}1/\sum w_i^{\ast}$ under heterogeneity, HKSJ produces substantially wider CIs in small literatures.
+Because $t$-percentiles inflate as $k{\to}2$, and because the HKSJ variance-inflation factor satisfies $q^{\ast}{\geq}1$ whenever the observed dispersion exceeds what the fixed weights predict, HKSJ produces substantially wider CIs in small literatures.
 The unstable-null-crossing rate under HKSJ is markedly higher: at $k{=}10$, $\mathbf{31.5\%}$ of Claude subsamples, $\mathbf{48.5\%}$ of Gemini subsamples, and $\mathbf{20.0\%}$ of GPT-4.1 subsamples produce run-dependent reversals of the meta-analytic conclusion (versus 0.5\%, 0.5\%, and 0.0\% under DL).
 The qualitative conclusion of the main text---\emph{LLM non-determinism propagates into the downstream conclusion only in small literatures}---is robust to the choice of variance estimator; the magnitude of the effect is substantially amplified under HKSJ, which Cochrane Handbook 6.5+ recommends precisely for $k{<}10$.
 
