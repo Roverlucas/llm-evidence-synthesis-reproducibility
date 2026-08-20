@@ -407,3 +407,46 @@ requested is now arrived at from our own failure.
 Also fixed: `\emr` was used twice in `supplementary.tex`, where the macro is not defined — it
 is declared in `main.tex` only. The supplement had been emitting a PDF with two undefined
 control sequences. Replaced with `\textrm{EMR}`.
+
+## 34 — 2026-08-20 · Two high-yield, low-cost corrections
+Working by return per hour rather than down the list.
+
+**The printed inclusion criteria were not the executed ones.** `main.tex:291` listed criterion 3
+as "respiratory outcome (hospitalization, ED visits, **or mortality**)" and criterion 6 as
+"peer-reviewed publication". The screening prompt that actually ran
+(`configs/prompts/screening.txt`) says "respiratory hospitalization or emergency department
+visit" and "Published in English", and the human labeling protocol says the same, adding
+"Mortalidade-only = exclui". So the manuscript printed criteria that contradicted both the code
+and the instrument the raters followed.
+
+This one had a cost beyond tidiness. A reviewer comparing the printed criteria against the
+labels would conclude the raters excluded studies the protocol admitted — reading a κ of 0.529
+as rater error when the raters followed their protocol exactly. The corpus construction
+confirms the executed reading: `pubmed_fetch_exclude.py` uses a mortality query to populate the
+negative controls, so mortality-only abstracts are deliberate excludes. Text now matches the
+prompt and the protocol verbatim, and says so.
+
+**PABAK used the two-category formula on a three-class table.** `kappa_statistics.py` computed
+`2*p_o - 1` unconditionally. That is the k=2 special case of Brennan-Prediger; for k categories
+it is `(k*p_o - 1)/(k - 1)`. Corrected in both the overall and the per-stratum path:
+
+| | Was | Is |
+|---|---|---|
+| overall, 3-class | 0.500 | **0.625** |
+| clear-include stratum | 0.360 | **0.520** |
+| ambiguous stratum | 0.320 | **0.490** |
+
+The binary collapse (0.558) was already correct and is unchanged. Note the direction: the error
+was **understating** PABAK, which made the "kappa paradox is not operating" argument at
+`supp:276` look stronger than the data supported, since a PABAK sitting close to κ was the
+evidence for it. With the correct value the three-class PABAK is 0.625 against κ=0.529, so that
+sentence was rewritten to rest on the binary collapse, where the two genuinely do coincide, and
+to name the chance-agreement term as the reason for the three-class gap. The refutation
+survives; its support is now the comparison that actually carries it.
+
+`verify_reported_numbers.py` still passes on all its claims after the recomputation.
+
+Also corrected in passing: two uses of `\emr` in `supplementary.tex`, a macro defined only in
+`main.tex`. The supplement had been emitting a PDF with undefined control sequences, and the
+check I had been running grepped for the string "undefined" rather than for `^!` in the log,
+so it reported clean. Both documents now build with zero errors and zero undefined references.

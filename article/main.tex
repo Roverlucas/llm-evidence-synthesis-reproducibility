@@ -288,7 +288,8 @@ Ambiguous          & 300   & Primary test set (borderline cases) \\
 \end{tabular}
 \end{table}
 
-\noindent Inclusion criteria required: (1)~original epidemiological study, (2)~PM$_{2.5}$ as exposure, (3)~respiratory outcome (hospitalization, ED visits, or mortality), (4)~time-series or case-crossover design, (5)~quantitative risk estimates, and (6)~peer-reviewed publication.
+\noindent Inclusion criteria required: (1)~original epidemiological study, (2)~PM$_{2.5}$ as exposure, (3)~respiratory hospitalization or emergency-department visit as the outcome---mortality-only studies are \emph{excluded}, (4)~time-series or case-crossover design, (5)~quantitative risk estimates, and (6)~publication in English.
+These are the criteria as executed: they are the text of the screening prompt in \texttt{configs/prompts/screening.txt} and of the human labeling protocol, verbatim in both.
 Articles were sourced from PubMed using the E-utilities API with a broad query yielding 573~candidate records, supplemented by 475~exclusion candidates and a design-filtered subset of 222~records.
 The final corpus spans 148~journals and publication years 1994--2026, with a mean abstract length of 1,873~characters.
 

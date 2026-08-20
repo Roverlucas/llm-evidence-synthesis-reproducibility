@@ -48,7 +48,8 @@
     ],
     "kappa_weighted_linear": 0.5412844036697249,
     "kappa_weighted_quadratic": 0.5481154359659033,
-    "pabak": 0.5,
+    "pabak": 0.625,
+    "pabak_n_categories": 3,
     "test_vs_cochrane": {
       "target": 0.8,
       "z": -3.654837102588049,
@@ -79,7 +80,8 @@
         46
       ]
     ],
-    "pabak": 0.5578947368421052,
+    "pabak": 0.668421052631579,
+    "pabak_n_categories": 3,
     "test_vs_cochrane": {
       "target": 0.8,
       "z": -3.057175620399609,
@@ -132,7 +134,8 @@
     "ambiguous": {
       "n": 50,
       "percent_agreement": 0.66,
-      "pabak": 0.32000000000000006,
+      "pabak": 0.49,
+      "pabak_n_categories": 3,
       "kappa": 0.3984430290162775,
       "labeler1_endorsed_stratum_label": 0,
       "labeler2_endorsed_stratum_label": 0
@@ -141,6 +144,7 @@
       "n": 25,
       "percent_agreement": 1.0,
       "pabak": 1.0,
+      "pabak_n_categories": 3,
       "kappa": null,
       "kappa_note": "undefined: expected agreement = 1 (degenerate marginals). Perfect observed agreement with no reportable coefficient — this is why PABAK is reported alongside.",
       "labeler1_endorsed_stratum_label": 25,
@@ -149,7 +153,8 @@
     "include": {
       "n": 25,
       "percent_agreement": 0.68,
-      "pabak": 0.3600000000000001,
+      "pabak": 0.52,
+      "pabak_n_categories": 3,
       "kappa": 0.35897435897435903,
       "labeler1_endorsed_stratum_label": 13,
       "labeler2_endorsed_stratum_label": 21

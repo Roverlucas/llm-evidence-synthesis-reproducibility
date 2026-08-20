@@ -96,7 +96,12 @@ def kappa_block(c1: np.ndarray, c2: np.ndarray, categories: list[str]) -> dict:
             )
 
     # PABAK removes the prevalence/bias dependence that makes kappa hard to read.
-    out["pabak"] = float(2 * out["percent_agreement"] - 1)
+    # Brennan-Prediger / PABAK generalised to k categories: (k*po - 1)/(k - 1).
+    # The familiar 2*po-1 is the k=2 special case; applying it to a 3-class table
+    # understates the coefficient (0.500 instead of 0.625 at po=0.75).
+    _k = len(CATEGORIES)
+    out["pabak"] = float((_k * out["percent_agreement"] - 1) / (_k - 1))
+    out["pabak_n_categories"] = _k
 
     # One-sided test against the pre-specified threshold. Uses the observed SE,
     # not the null SE: the null SE is only valid for testing kappa = 0.
@@ -214,7 +219,8 @@ def per_stratum(df: pd.DataFrame) -> dict:
         c2 = coded(grp["labeler2_decision"], CATEGORIES)
         po = float(np.mean(c1 == c2))
         entry = {"n": int(len(grp)), "percent_agreement": po,
-                 "pabak": float(2 * po - 1)}
+                 "pabak": float((len(CATEGORIES) * po - 1) / (len(CATEGORIES) - 1)),
+                 "pabak_n_categories": len(CATEGORIES)}
         try:
             table = contingency(c1, c2, 3)
             pe = float((table.sum(axis=0) / table.sum()

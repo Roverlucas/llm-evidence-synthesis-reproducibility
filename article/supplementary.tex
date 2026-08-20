@@ -266,14 +266,14 @@ Cohen's $\kappa$, binary (include vs.\ exclude, $n=95$) & 0.556 & [0.400, 0.712]
 Weighted $\kappa$, linear (ordinal include--uncertain--exclude) & 0.541 & --- \\
 Weighted $\kappa$, quadratic & 0.548 & --- \\
 Raw agreement & 75.0\% & --- \\
-PABAK, 3-class / binary & 0.500 / 0.558 & --- \\
+PABAK, 3-class / binary & 0.625 / 0.558 & --- \\
 Prevalence index / bias index & 0.189 / 0.179 & --- \\
 Test against Cochrane target & $z=-3.65$ & $p=1.3\times10^{-4}$ \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Two competing explanations for a low coefficient can be ruled out. The prevalence index is low (0.189) and PABAK is almost identical to $\kappa$, so the value is not depressed by skewed marginals---the ``kappa paradox'' is not operating. Weighted variants shift the estimate by less than 0.02, so the result is not an artefact of the three-class scale. With $n=100$ the interval spans ``fair'' through ``substantial'', so we report the value relative to the threshold and do not assign it a descriptive band.
+Two competing explanations for a low coefficient can be ruled out. The prevalence index is low (0.189), and on the binary collapse PABAK (0.558) is almost identical to $\kappa$ (0.556), so the value is not depressed by skewed marginals---the ``kappa paradox'' is not operating. On the three-class scale PABAK is 0.625 against $\kappa{=}0.529$; the gap reflects the chance-agreement term that PABAK discards by construction, not marginal skew, and PABAK is generalised here as $(k\,p_o-1)/(k-1)$ rather than the $k{=}2$ form $2p_o-1$. Weighted variants shift the estimate by less than 0.02, so the result is not an artefact of the three-class scale. With $n=100$ the interval spans ``fair'' through ``substantial'', so we report the value relative to the threshold and do not assign it a descriptive band.
 
 \begin{table}[htbp]
 \centering
@@ -305,8 +305,8 @@ Of the 25 discordances, 19 run in that same direction, and 17 of those 19 turn o
 \textbf{Stratum} & \textbf{$n$} & \textbf{Raw agreement} & \textbf{Cohen's $\kappa$} & \textbf{PABAK} \\
 \midrule
 clear-exclude & 25 & 1.000 & undefined & 1.000 \\
-clear-include & 25 & 0.680 & 0.359 & 0.360 \\
-ambiguous     & 50 & 0.660 & 0.398 & 0.320 \\
+clear-include & 25 & 0.680 & 0.359 & 0.520 \\
+ambiguous     & 50 & 0.660 & 0.398 & 0.490 \\
 \bottomrule
 \end{tabular}
 \end{table}
