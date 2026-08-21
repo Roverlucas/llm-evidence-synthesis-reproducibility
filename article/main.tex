@@ -1,15 +1,22 @@
 % !TEX program = pdflatex
 % ============================================================
-%  Reproducibility of Pollution-Health Evidence Synthesis
-%  Using LLM-Assisted Screening and Extraction
-%  Target: Research Synthesis Methods (Cambridge University Press)
-%  Template: CUP-JNL-DTM
+%  A reproducibility audit harness for LLM-assisted evidence
+%  extraction in environmental assessment
+%  Target: Environmental Modelling & Software (Elsevier)
+%  Template: elsarticle (preprint, review mode)
 %  Compilation: pdflatex main.tex (run twice for biblatex)
 %  OSF DOI: 10.17605/OSF.IO/VR934
 % ============================================================
-\documentclass[journal=rsm]{CUP-JNL-DTM}
+% nonatbib: elsarticle loads natbib by default, which is incompatible with biblatex.
+\documentclass[preprint,review,12pt,nonatbib]{elsarticle}
 
+% elsarticle does not load biblatex (the previous CUP class did). The manuscript
+% uses \autocite throughout, so biblatex is loaded explicitly with a numeric style,
+% which matches Elsevier's default reference presentation.
+\usepackage[backend=biber,style=numeric-comp,sorting=none,giveninits=true,maxbibnames=10]{biblatex}
 \addbibresource{references.bib}
+\usepackage{url}
+\usepackage{hyperref}
 
 %%%% Packages
 \usepackage[T1]{fontenc}
@@ -38,51 +45,82 @@
 \usepackage{xcolor}
 \newcommand{\pending}[1]{\textbf{\textcolor{red}{[PENDING: #1]}}}
 
-% ── Journal metadata ────────────────────────────────────
-\jname{Research Synthesis Methods}
-\articletype{RESEARCH ARTICLE}
-\jyear{2026}
-
 \begin{document}
 
-\begin{Frontmatter}
+\begin{frontmatter}
 
-\title[Reproducibility of Pollution--Health Evidence Synthesis Using LLMs]{Reproducibility of Pollution--Health Evidence Synthesis Using LLM-Assisted Screening and Extraction}
+\title{A reproducibility audit harness for LLM-assisted evidence extraction in environmental assessment}
 
-\author[1]{Lucas Rover}
-\author[1]{Yara de Souza Tadano}
+\author[utfpr]{Lucas Rover\corref{cor1}}
+\ead{lucasrover@alunos.utfpr.edu.br}
+\author[utfpr]{Yara de Souza Tadano}
+\cortext[cor1]{Corresponding author.}
 
-\authormark{Rover and Tadano}
+\affiliation[utfpr]{organization={Universidade Tecnol\'ogica Federal do Paran\'a (UTFPR)},
+                    city={Curitiba}, state={PR}, country={Brazil}}
 
-\address*[1]{\orgname{Universidade Tecnol\'ogica Federal do Paran\'a (UTFPR)}, \orgaddress{\city{Curitiba}, \state{PR}, \country{Brazil}}. \email{lucasrover@alunos.utfpr.edu.br}}
+\begin{abstract}
+Environmental evidence bases and regulatory reviews are increasingly assembled with large language models, on the assumption that identical inputs yield identical outputs. We audit that assumption across a complete two-stage extraction pipeline---screening and structured extraction---over 500 abstracts on fine particulate matter and respiratory health, running six deployment stacks ten times each (35{,}638 of 36{,}000 calls). Local stacks reached an Exact Match Rate of 1.000; API-served stacks reached 0.150--0.200 at temperature zero with transmitted seeds. Serving identical LLaMA-3-8B weights locally and through a cloud endpoint produced 39\% systematic disagreement, locating the variation in the serving stack rather than the weights. Constraining output shape did not help: it degraded reproducibility on two of three stacks. Schema conformance proved independent of reproducibility, local stacks reproducing perfectly while conforming on 38--43\% of calls. We release the harness and a pre-registered gold standard ($\kappa{=}0.529$, reported as measured).
+\end{abstract}
 
-\keywords{reproducibility, large language models, evidence synthesis, systematic review, meta-analysis, non-determinism, data extraction, screening}
+\begin{keyword}
+reproducibility \sep large language models \sep deployment stack \sep evidence synthesis \sep
+quality assurance \sep provenance \sep environmental assessment
+\end{keyword}
 
-\abstract{
-\textbf{Background:} Large language models (LLMs) are increasingly used in evidence synthesis, yet a critical assumption---that identical inputs produce identical outputs---remains largely untested across a complete synthesis pipeline.
-\textbf{Methods:} We quantified the reproducibility of six LLM deployment stacks---each a tuple of (model weights, provider, infrastructure, API layer)---across three local stacks (LLaMA~3 8B, Mistral~7B, Gemma~2 9B served via Ollama on Apple~M4) and three API-served stacks (Claude Sonnet~4.5/Anthropic, Gemini~2.5 Pro/Google, GPT-4.1/OpenAI), applied to a two-stage pipeline (abstract screening and data extraction) over a 500-abstract PubMed corpus on fine particulate matter (PM$_{2.5}$) and respiratory health. Each stack was run 10~times under identical configurations (temperature${=}$0, fixed seeds where supported), totalling 35{,}638 successful calls of 36{,}000 attempted (98.99\% success rate). To probe the deployment-vs.-weights confound, we additionally served \texttt{meta-llama/llama-3-8b-instruct} via a cloud endpoint (DeepInfra), holding the weights, prompt source, temperature and seed constant while the rest of the serving stack---including its request-rendering layer---varied. We pre-committed analysis plans for the post-revision experiments to the public Git repository before result computation. The primary outcome was the Exact Match Rate (EMR) with 95\% bootstrap confidence intervals.
-\textbf{Results:} \textbf{The two API-served stacks verified to have transmitted temperature${=}$0 achieved extraction EMR of 0.150 (GPT-4.1) and 0.200 (Gemini) despite that setting and fixed seeds, while local stacks achieved EMR${=}$1.000---a 5--7$\times$ gap.} The third API stack (Claude) reached 0.050, but our client silently omitted the temperature field for that provider and the requests ran at the provider default of~1.0; we report it as a separate case rather than as evidence about temperature${=}$0, and the gap above does not depend on it. Critically, the same LLaMA~3~8B weights served via a cloud stack (DeepInfra) produced 39\% systematic disagreement with the local Ollama stack, showing that identical weights do not yield identical behaviour once the serving stack changes. Pooling each run's extracted estimates by random-effects meta-analysis (${k}{=}39$--63 articles per run, itself varying with extraction non-determinism), the pooled estimate was robust; in random k=10 subsamples, however, 0.5\% of subsamples produced run-dependent reversals of the meta-analytic conclusion. A pairwise-disagreement analysis ($\binom{10}{2}{=}45$ pairs per item) revealed that 95\% of Claude's extraction articles produced at least one differing run pair. BERTScore F1 on metadata saturated near 0.997, masking true narrative variation (Jaccard similarity on rationales ranged 0.38--0.73 for API-served stacks, vs.\ 0.98 on metadata).
-\textbf{Human baseline:} The gold standard against which these stacks are scored was built by dual independent human labeling under a pre-registered protocol (OSF \texttt{fgn3e}). Inter-rater agreement was $\kappa{=}0.529$ (95\%~CI 0.383--0.674), \emph{below} the pre-specified Cochrane target of 0.80. We report the shortfall as measured, trace it to a single ambiguous inclusion criterion, and treat the resulting gold standard as asymmetrically valid---firm on specificity, a lower bound on sensitivity---rather than presenting a repaired coefficient.
-\textbf{Conclusions:} Non-determinism in API-served deployment stacks poses a quantifiable threat to evidence synthesis reproducibility, particularly for quantitative extraction tasks and small-k literatures. The unit of reproducibility variation is the deployment stack, not the model weights alone. Single-run results should not be treated as definitive; multiple repetitions, provenance tracking, and---where feasible---deterministic local stacks should become standard practice.
-}
+\end{frontmatter}
 
-\end{Frontmatter}
+% ============================================================
+%  Software and data availability
+% ============================================================
+\section*{Software and data availability}
+
+\noindent\textbf{Name:} \texttt{llm-repro-harness} --- a reproducibility audit harness for LLM-assisted
+evidence extraction.\\
+\textbf{Developers:} L.\ Rover and Y.\ de Souza Tadano, Universidade Tecnol\'ogica Federal do Paran\'a,
+Curitiba, Brazil. Contact: \texttt{lucasrover@alunos.utfpr.edu.br}.\\
+\textbf{Year first available:} 2026.\\
+\textbf{Hardware required:} any POSIX workstation for the audit and analysis layer. Reproducing the
+local-stack arm additionally requires a machine able to serve 7--9B-parameter models; ours was an
+Apple~M4 with 24~GB unified memory. The API arm requires only network access and provider credentials.\\
+\textbf{Software required:} Python~3.14; Ollama~v0.15.5 for the local arm. Dependencies are pinned in
+\texttt{requirements-lock.txt}.\\
+\textbf{Program language:} Python.\\
+\textbf{Program size:} approximately 11{,}000 lines including 151 tests.\\
+\textbf{Availability and cost:} free and open source. Code:
+\url{https://github.com/Roverlucas/llm-evidence-synthesis-reproducibility} (MIT). Data, run cards and
+frozen analysis artefacts: OSF project \texttt{vr934}, \url{https://doi.org/10.17605/OSF.IO/VR934}
+(CC~BY~4.0). The human labeling protocol is deposited as an immutable pre-registration,
+\url{https://doi.org/10.17605/OSF.IO/FGN3E}.\\
+\textbf{What the harness does:} it wraps any set of LLM endpoints behind one runner interface, executes
+a task $R$ times under a declared configuration, and emits a run card per execution recording the
+transmitted payload hash, the output hash, the seed, the temperature actually sent, the API version and
+the access date. From those cards it computes Exact Match Rate with bootstrap intervals, pairwise
+disagreement, inter-run Fleiss' $\kappa$, schema conformance, and---where the task yields effect
+estimates---the propagation of run-to-run variation into a pooled meta-analytic result. It is designed
+to be pointed at a different corpus, a different schema, and a different set of endpoints than the ones
+audited here; the environmental evidence task in this paper is the demonstration, not the scope.
+
 
 % ============================================================
 %  1. INTRODUCTION
 % ============================================================
 \section{Introduction}
 
-\subsection{The Promise of AI in Evidence Synthesis}
+\subsection{Evidence Pipelines Are Becoming Software}
 
-Evidence synthesis---the systematic process of identifying, appraising, and combining research findings---forms the backbone of evidence-based medicine and public health policy.
-Systematic reviews and meta-analyses sit atop the hierarchy of evidence, informing clinical guidelines, regulatory decisions, and resource allocation worldwide.\autocite{higgins2019cochrane,page2021prisma}
+Environmental evidence bases are increasingly assembled by software rather than by hand. Regulatory reviews, exposure assessments and air-quality standards rest on syntheses of primary literature, and the screening and extraction steps that produce them are now routinely delegated to large language models. Work in this journal has already begun mapping that shift: open-weight models have been scaled for regulatory information extraction in the hydropower domain,\autocite{yoon2026hydropower} and structured tool interfaces have been evaluated---with a negative result---for driving model calibration.\autocite{park2026toolinterfaces}
+
+Delegating a pipeline step to an LLM makes that step a piece of software, and software in this journal is expected to be verifiable: the scope explicitly covers quality assurance and evaluation of models, data and procedures, backed by quantitative results. Yet the procedure being introduced here carries a property that conventional environmental software does not. A hydrological model run twice on the same inputs returns the same outputs; an LLM endpoint offers no such guarantee, and whether it happens to behave deterministically is a property of how it is served, not of the model named in the methods section. Recent work in this journal has confronted the reproducibility of geoscientific analysis pipelines\autocite{schlogl2026reproducibility} and proposed a framework for assessing computational reproducibility in geo-simulation.\autocite{zhu2025geosimulation} We extend that line to a component those frameworks do not yet cover, because it did not exist when they were written.
+
+Evidence synthesis---the systematic process of identifying, appraising, and combining research findings---forms the backbone of environmental and public health policy.
+Systematic reviews and meta-analyses sit atop the hierarchy of evidence, informing regulatory decisions, exposure standards, and resource allocation worldwide.\autocite{higgins2019cochrane,page2021prisma}
 Yet the process is notoriously labor-intensive: a typical systematic review requires 6--18~months and hundreds of person-hours, with title and abstract screening alone consuming an estimated 25\% of total effort.\autocite{borah2017analysis}
 
 The emergence of large language models (LLMs) has created unprecedented opportunities to accelerate this process.
 Recent studies demonstrate that models such as GPT-4,\autocite{openai2023gpt4} Claude,\autocite{anthropic2024claude} and Gemini\autocite{geminiteam2024gemini} can screen abstracts with sensitivity approaching that of human reviewers,\autocite{oami2024screening,khraisha2024gpt4} extract structured data from published studies with over 90\% accuracy,\autocite{gartlehner2024extraction,jensen2025chatgpt} and even assist in evidence quality assessment.\autocite{wang2025trialmind,li2025streamlining}
 A growing body of work has established LLM-assisted evidence synthesis as a legitimate and rapidly expanding methodological frontier.\autocite{li2025jamia,scherbakov2025jamia,matsui2024screening,oami2025optimal}
-The 2025 Cambridge \emph{Research Synthesis Methods} editorial\autocite{farotimi2025rsm_genai_guidance} explicitly invites methodological work characterizing the reproducibility of generative-AI-assisted evidence synthesis, including specific reporting requirements for prompt design, random-seed control, and external validation.
+Reporting guidance is beginning to catch up: a 2025 editorial in \emph{Research Synthesis Methods}\autocite{farotimi2025rsm_genai_guidance} asks authors of GenAI-assisted syntheses to document random-seed values and, for commercial models, API versions and access dates. What such guidance does not yet establish---and what an audit must supply---is whether documenting those settings buys the determinism their presence implies.
 
 \subsection{The Hidden Problem: Non-Determinism}
 
@@ -793,7 +831,8 @@ GPT-4.1 / OpenAI              & 0.359 & \textbf{0.444} & $+23.8\%$ \\
 
 \noindent The result is \emph{not} a uniform improvement, and on the matched baseline it is not even predominantly an improvement.
 Fixed-slot prompting \emph{degraded} reproducibility for two of the three stacks---Claude by 70\% and Gemini by 48\%---and improved it only for GPT-4.1, by 24\% rather than the near-tripling the unmatched comparison suggested.
-This is a sharper refutation of the expectation, voiced in peer review, that ``fixed-slot extraction will resolve cloud non-determinism'': constraining the output shape does not merely fail to fix the problem in general, it makes it worse on most of the stacks tested. The effect of prompt design is real but \textbf{model-specific}, and for two of three stacks the dominant source of variation lies elsewhere (see Section~\ref{sec:desconfound}).
+This is a sharper refutation of the expectation, voiced in peer review, that ``fixed-slot extraction will resolve cloud non-determinism'': constraining the output shape does not merely fail to fix the problem in general, it makes it worse on most of the stacks tested.
+The finding converges with a result obtained independently in a different environmental domain: structured tool interfaces for LLM-driven SWAT+ calibration were likewise found to deliver less than their design implies.\autocite{park2026toolinterfaces} Two studies, different tasks, same direction---constraining the interface is not a general remedy for LLM variability. The effect of prompt design is real but \textbf{model-specific}, and for two of three stacks the dominant source of variation lies elsewhere (see Section~\ref{sec:desconfound}).
 
 \subsection{Deployment-vs.-Model-Size Desconfound Experiment}
 \label{sec:desconfound}
@@ -1176,19 +1215,18 @@ The path forward is clear: multiple repetitions, provenance hashing, and transpa
 Our open-source infrastructure, complete dataset, and provenance protocol provide the tools to make this transition immediately actionable.
 
 
-\begin{Backmatter}
 
-\paragraph{Acknowledgments}
+\section*{Acknowledgements}
 The authors thank the two independent raters who labeled the validation subset \pending{names, or removal of this sentence if both raters are listed as co-authors}.
 
-\paragraph{Funding Statement}
+\section*{Funding Statement}
 This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.
 API costs for Claude, Gemini, and GPT-4.1 experiments were funded by the authors.
 
-\paragraph{Competing Interests}
+\section*{Competing Interests}
 The authors declare no competing interests.
 
-\paragraph{Use of AI Writing Tools}
+\section*{Use of AI Writing Tools}
 AI-based tools (Claude, Anthropic) were used for code development assistance and manuscript editing support.
 All scientific content, experimental design, data analysis, and interpretation of results were performed exclusively by the human authors.
 The AI tools used in manuscript preparation are the same models evaluated as experimental subjects in this study; this dual role was managed by ensuring that all reported results were computed deterministically from the raw experimental data, independently of any AI writing assistance.
@@ -1199,18 +1237,16 @@ Claude Sonnet~4.5---one of the evaluated models---was used as a writing aid duri
 All numerical results, tables, and figures derive deterministically from the locked output hashes; no result depends on the writing-time use of any LLM.
 The complete commit history is publicly auditable at \url{https://github.com/Roverlucas/llm-evidence-synthesis-reproducibility}.
 
-\paragraph{Data Availability Statement}
+\section*{Data Availability Statement}
 All code, data, prompts, schemas, raw outputs, and run provenance records are publicly available at \url{https://github.com/Roverlucas/llm-evidence-synthesis-reproducibility} and archived at the Open Science Framework (\url{https://doi.org/10.17605/OSF.IO/VR934}).
 The dual-human labeling protocol is deposited separately as a frozen OSF registration (\url{https://doi.org/10.17605/OSF.IO/FGN3E}, 2026-05-12), which pre-dates label collection; the returned labels, agreement statistics, and the v1.2 protocol amendment are in the repository under \texttt{data/dual\_labeling/} (\pending{repository tag for the submitted version}).
 API keys are excluded from the repository.
 The 500 PubMed abstract identifiers, gold standard labels, and complete analysis scripts are included to enable full reproduction of the reported results.
 
-\paragraph{Author Contributions}
+\section*{Author Contributions}
 \textbf{Lucas Rover} (L.R.) conceived the study, designed the protocol, developed the software, conducted all experiments and analyses, and wrote the manuscript.
 \textbf{Yara de Souza Tadano} (Y.d.S.T.) supervised the research, contributed to methodology design, and reviewed the manuscript.
 
 \printbibliography
-
-\end{Backmatter}
 
 \end{document}
