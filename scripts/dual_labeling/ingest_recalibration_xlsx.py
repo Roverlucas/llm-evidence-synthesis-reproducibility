@@ -57,19 +57,38 @@ def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def normalise_criteria(value: object) -> object:
-    """Canonicalise ``2; 3`` / ``2,3`` / ``4.0`` into the protocol form ``2,3``.
+# Portuguese conjunction used as a separator by one labeler ("3, 4 E 5"). Treated as
+# punctuation, not as a criterion code.
+_CONJUNCTIONS = {"E", "AND"}
+
+
+def normalise_criteria(value: object, *, bare_five_as: str | None = None) -> object:
+    """Canonicalise ``2; 3`` / ``2,3`` / ``4.0`` / ``3, 4 E 5`` into ``2,3``.
 
     Excel stores a lone ``4`` as the float ``4.0``; the trailing ``.0`` is a
     spreadsheet artefact, not a labeler choice, so it is stripped here rather
-    than reported as a malformed entry.
+    than reported as a malformed entry. ``0`` means "no criterion failed" and
+    normalises to empty, which is what an INCLUDE decision implies.
+
+    ``bare_five_as`` handles a bare ``5`` where the v1.2 vocabulary requires
+    ``5b`` or ``5c``. It is **off by default and must be passed explicitly**:
+    guessing the level silently would reintroduce the very ambiguity that
+    produced the round-1 kappa. Pass it only when the returned rationales
+    determine the level independently, and record that determination.
     """
     if pd.isna(value):
         return value
     text = str(value).strip()
     if re.fullmatch(r"\d+\.0", text):
         text = text[:-2]
-    parts = [re.sub(r"\.0$", "", p.strip()) for p in re.split(r"[;,\s]+", text) if p.strip()]
+    parts = []
+    for p in re.split(r"[;,\s]+", text):
+        p = re.sub(r"\.0$", "", p.strip())
+        if not p or p.upper() in _CONJUNCTIONS or p == "0":
+            continue
+        if p == "5" and bare_five_as:
+            p = bare_five_as
+        parts.append(p)
     return ",".join(parts)
 
 
@@ -150,6 +169,9 @@ def main() -> None:
                     help="the labeler's own round-1 return, to report what changed")
     ap.add_argument("--prefix", default="labeler1", choices=["labeler1", "labeler2"])
     ap.add_argument("--sheet", default=SHEET)
+    ap.add_argument("--bare-five-as", choices=["5b", "5c"], default=None,
+                    help="map a bare '5' to this v1.2 level. Off by default; pass only "
+                         "when the rationales determine the level, and say so in the log.")
     ap.add_argument("--out", required=True, type=Path)
     ap.add_argument("--archive-raw", action="store_true",
                     help="copy the untouched workbook next to the CSV for provenance")
@@ -160,7 +182,11 @@ def main() -> None:
     template = pd.read_csv(args.template)
 
     col_criteria = f"{args.prefix}_criteria_failed_v12"
-    df[col_criteria] = df[col_criteria].map(normalise_criteria)
+    df[col_criteria] = df[col_criteria].map(
+        lambda v: normalise_criteria(v, bare_five_as=args.bare_five_as)
+    )
+    if args.bare_five_as:
+        print(f"NOTE: bare '5' entries mapped to '{args.bare_five_as}' by explicit instruction.")
     for col in (f"{args.prefix}_decision_v12", f"{args.prefix}_confidence_v12"):
         df[col] = df[col].astype(str).str.strip().str.upper()
 

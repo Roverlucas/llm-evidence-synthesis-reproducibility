@@ -520,3 +520,49 @@ outputs over the deposited artefacts and push them to the shared remote. Now opt
 Both documents build clean (main 35pp, supplement 23pp, zero errors, zero undefined refs); 151
 tests pass. `check_pending.sh` still blocks on the three `\pending` markers awaiting Stage B and
 three reviewer emails — open work, not defects.
+
+## 36 — 2026-08-22 · Round 2 complete: labeler2 returned; 56% converged, 11 unresolved
+Luiza returned on the deadline. The ingestor **rejected** the file on arrival: 15 of 25 items
+carried a bare `5` where v1.2 requires 5b or 5c, plus a `0` for "no criterion failed" and an
+`E` that was the Portuguese conjunction in "3, 4 E 5". The rejection was correct behaviour —
+that ambiguity is what produced κ=0.529, and guessing the level would have hidden its return.
+
+Reading the 25 rationales settled what the labels did not. All 15 bare-`5` entries describe
+case 5b in words — "cita RR, mas sem valores", "CITA IC 95%, SEM VALORES", "com associação sem
+número" — and all 15 decisions are UNCERTAIN, which is what 5b prescribes; 5c would prescribe
+EXCLUDE and none of them is EXCLUDE. The two apparent contradictions were artefacts of my
+parser, not of her labelling: `LBL-011` reads "3, 4 E 5" (three criteria, EXCLUDE, correct) and
+`LBL-097`'s phrasing simply escaped the pattern. **16 of 16 consistent with v1.2.** She applied
+the amended rule; the sheet did not force the notation.
+
+Normalisation `5 → 5b` authorised by the first author and implemented as an explicit,
+logged CLI flag (`--bare-five-as`), **off by default**, so no future ingest resolves a bare `5`
+silently. The conjunction and the `0` are handled as punctuation and as "no failure".
+
+**Her movement is the mirror of labeler1's.** 21 of 25 changed, almost all INCLUDE → UNCERTAIN;
+labeler1 moved 8 of 25, EXCLUDE → UNCERTAIN. The most inclusive and the most exclusive rater
+both migrated toward the middle, which is what rule 5b is built to do: it routes an abstract
+that claims an effect without reporting it to UNCERTAIN instead of to either extreme.
+
+**Reconciliation convergence: 14/25 (56%).** Not a κ — the denominator is the set of items that
+already disagreed (entry 17).
+
+**The residual disagreement is the finding.** Eight of the 11 unresolved items are the two
+raters splitting on 5b versus 5c — the very distinction v1.2 introduced to end the problem.
+They are not applying different rules; they are reading the same abstract and disagreeing on
+whether it *mentions* an estimate at all. Amending the rule disambiguated the text and did not
+disambiguate the judgement. On `LBL-022` labeler1's own rationale describes 5b ("menciona que
+estimou RR, mas sem valores") while the criterion marked is 5c.
+
+Two of the 11 are decidable on the record rather than by judgement, and both were checked
+against the abstracts: `LBL-091` carries a bracketed PubMed title in *J Peking University
+Health Sciences*, the convention for a non-English article, so criterion 6 appears to fail as
+labeler2 held; `LBL-047` is titled "…**fine particulate matter** and **emergency department
+visits** for pediatric asthma", which contradicts labeler1's rationale that neither is
+mentioned. Recorded as coordinator notes with the evidence, **not** as decisions.
+
+`build_gold_standard.py` refuses to write with 11 unresolved, as designed. Adjudication stays
+with Y.d.S.T. per the pre-registration and per entries 18/22: the first author built the
+pipeline that this gold standard scores, and deciding the contested items himself would make
+the reference standard dependent on the object it evaluates. Audit sheet for the tie-breaker:
+`data/dual_labeling/reconciliation/coordinator_audit_round2.csv`.
