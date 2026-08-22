@@ -936,6 +936,64 @@ GPT-4.1 / OpenAI               & $0.974\,[0.960, 0.986]$ & $\mathbf{0.511\,[0.45
 \noindent For screening decisions, all three local stacks attain the trivial upper bound $\kappa{=}1.000$ and the three cloud APIs fall in the ``almost perfect'' band ($\kappa{\in}[0.974, 0.981]$). We deliberately avoid the shorthand that the stacks therefore ``reach the Cochrane guideline'': inter-run Fleiss' $\kappa$ measures one stack reproducing itself across repetitions, whereas the Cochrane $\kappa{\geq}0.80$ guideline concerns agreement between two independent human reviewers. On this corpus our own two human raters reached $\kappa{=}0.529$ (Section~\ref{sec:dualhuman}), and Mistral-7B attains perfect self-consistency at a specificity of $0.240$, which together show that the two quantities cannot be substituted for one another.
 For \emph{whole-output} extraction hashes, the coefficient falls to $0.180$ (Claude), $0.505$ (Gemini) and $0.511$ (GPT-4.1). Because the chance baseline is inert at this granularity, these figures should be read as the observed whole-output concordance rather than as chance-corrected agreement, and we do not attach Landis--Koch labels or compare them to the Cochrane $\kappa{\geq}0.80$ threshold. The ordering is nonetheless the substantive point, and it matches the EMR ranking: Claude's 10 runs reproduce a whole extraction output far less often than either other cloud stack, and none of the three approaches the local stacks. Per-field $\kappa$ on categorical extraction fields (study\_design, population) remains in the ``almost perfect'' band for all stacks, isolating the source of low whole-output $\kappa$ to the variable-length \texttt{estimates} array (already documented in Section~\ref{main-sec:fieldlevel} of the main text).
 
+\section{Meta-Analytic Propagation: Full Analysis}
+\label{sec:metaprop_supp}
+
+To illustrate how extraction non-determinism propagates into downstream analysis, we performed a fixed-effect inverse-variance meta-analysis on the extracted risk ratios (RR/OR/HR) from each run independently (Table~\ref{tab:meta}).
+
+\begin{table}[htbp]
+\centering
+\caption{Meta-analytic inputs across 10 runs. ``$k$'' is the number of usable effect estimates per run; ``$k_{\text{sig}}$'' is the number of those estimates whose confidence interval excludes the null. $\Delta k$ and $\Delta k_{\text{sig}}$ report the range across runs. The ``Varying'' column reports the proportion of articles for which the number of extracted estimates changed across runs.}
+\label{tab:meta}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Deployment Stack} & \textbf{$k$ range} & \textbf{$\Delta k$} & \textbf{$k_{\text{sig}}$ range} & \textbf{$\Delta k_{\text{sig}}$} & \textbf{Varying} \\
+\midrule
+LLaMA 3 8B / Ollama / M4       & 246--246 & 0  & 188--188 & 0  & 0/100 (0\%) \\
+Mistral 7B / Ollama / M4       & 229--229 & 0  & 186--186 & 0  & 0/100 (0\%) \\
+Gemma 2 9B / Ollama / M4       & 203--203 & 0  & 157--157 & 0  & 0/100 (0\%) \\
+\midrule
+Claude Sonnet 4.5 / Anthropic  & 186--209 & 23 & 152--175 & 23 & 21/100 (21\%) \\
+Gemini 2.5 Pro / Google        & 154--171 & 17 & 133--150 & 17 & 20/100 (20\%) \\
+GPT-4.1 / OpenAI               & 176--180 & 4  & 150--154 & 4  & 5/100 (5\%) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent Three findings emerge.
+\textbf{First}, all three local models produced identical estimate sets across all runs: LLaMA extracted 246~estimates, Mistral 229, and Gemma 203 per run, with zero variation---confirming that deterministic inference extends to the structural composition of extractions, not just field-level content.
+
+\textbf{Second}, the three API models showed varying degrees of structural instability.
+Claude's per-run estimate count varied from 186 to 209 (a 12.4\% swing, 21\% of articles affected), Gemini's from 154 to 171 (11.0\%, 20\% of articles), and GPT-4.1's from 176 to 180 (2.3\%, 5\% of articles).
+GPT-4.1 was the most structurally stable API model, with only 5~articles producing a different number of estimates across runs---compared to 20--21 for Claude and Gemini.
+
+\textbf{Third}, the variation in estimate counts directly mirrors the variation in significant estimates.
+For Claude, the number of significant estimates ranged from 152 to 175 (a swing of 23), meaning that \textbf{up to 23~study-level effect estimates---each representing a distinct epidemiological finding---appear or disappear from the evidence base depending solely on which run of the LLM was used}.
+GPT-4.1's significant estimates ranged from 150 to 154 (a swing of 4), while Gemini's ranged from 133 to 150 (a swing of 17).
+
+While the overall pooled effect in our corpus remained stable across runs for all models (because the aggregate signal is strong and $k$ is large), the instability of the underlying evidence composition is concerning.
+In domains with smaller literatures or marginal effects, even GPT-4.1's relatively modest variation ($\Delta k{=}4$) could plausibly shift pooled conclusions, while Claude's and Gemini's larger swings pose a more direct threat to meta-analytic reproducibility.
+
+\medskip
+\noindent\textbf{Random-effects re-analysis and small-literature simulation.}
+We re-ran the propagation analysis using DerSimonian--Laird random-effects pooling on log(RR), one pooled estimate per model${\times}$run combination over the INCLUDE set.
+The number of articles actually entering each pool is smaller than the 100 INCLUDE articles and varies by stack, because an article contributes only when the run returned an effect estimate and a usable interval: $k$ ranges from 39 (Gemini) to 63 (LLaMA) across the 60~combinations, and this variation in $k$ is itself a consequence of extraction non-determinism rather than a property of the corpus.
+Across all 60~combinations, the pooled RR ranged from 1.012 to 1.038 (mean 1.026); the within-model range across runs was small in absolute terms (Claude 0.0057, Gemini 0.0058, GPT-4.1 0.0059) and remained within the bootstrap CI of any single run.
+Heterogeneity was high and stable throughout: $I^2$ ranged from 90.97\% to 94.71\% and $\tau^2$ from $1.4{\times}10^{-5}$ to $2.9{\times}10^{-4}$ across the 60~combinations, so the random-effects specification is the appropriate one and the pooled estimate should be read as an average effect across a heterogeneous set rather than as a common effect.
+\textbf{No run-pair within any model produced a 95\% random-effects CI that crossed the null} in the full-corpus pooling, confirming that, in a well-powered, large-$k$ meta-analysis with a strong aggregate signal, LLM non-determinism does not flip the meta-analytic conclusion.
+
+This robustness, however, depends critically on $k$.
+We subsampled the corpus to plausible small-literature scenarios ($k\in\{10,15,20,30\}$, $N{=}200$ random subsamples per $k$, seed${=}$42) and computed random-effects pooled estimates for each of the 10 LLM runs.
+For $k{=}10$~subsamples, \textbf{0.5\% of Claude and Gemini subsamples} (1 of 200 each) produced \emph{unstable null-crossing} under the DerSimonian-Laird Wald-$z$ formulation: the pooled 95\% CI crossed RR${=}$1 in some runs but not others, meaning that the meta-analytic conclusion (significantly above null vs.\ not significant) \textbf{changed depending on which LLM run generated the inputs}.
+For $k{\geq}15$, no subsample exhibited unstable null-crossing across runs in any model under DL.
+This demonstrates a concrete, plausible scenario where LLM non-determinism affects the downstream conclusion: emerging literatures with $k{\sim}10$~articles (small reviews of new exposures, rare outcomes, or recent topics) are susceptible to run-dependent reversals, even when the underlying signal is detectable.
+
+Because DerSimonian-Laird is known to be liberal in small-$k$ settings, we re-ran the simulation with the Hartung-Knapp-Sidik-Jonkman (HKSJ) variance correction (Cochrane Handbook 6.5+ recommendation for $k{<}10$).
+Under HKSJ at $k{=}10$, the unstable-null-crossing rate rises to \textbf{31.5\% (Claude), 48.5\% (Gemini), and 20.0\% (GPT-4.1)}, with non-trivial rates persisting up to $k{=}20$ for Claude and Gemini (16.5\% and 10.5\%, respectively) before vanishing at $k{=}30$.
+The qualitative conclusion is robust to the variance estimator (run-dependent reversals affect only small literatures); the magnitude is substantially amplified under the more conservative HKSJ formulation appropriate for $k{<}10$.
+Full DL-vs.-HKSJ comparison appears in Supplementary Section~\ref{sec:hksj_supp} and Table~\ref{tab:smalllit}.
+
+
 % ============================================================
 \section{Hartung-Knapp-Sidik-Jonkman Random-Effects Sensitivity}
 \label{sec:hksj_supp}
