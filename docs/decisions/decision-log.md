@@ -560,3 +560,46 @@ pages, converging with our fixed-slot result from a different environmental doma
 ⚠️ **BLOCKED (R1):** none of the four EMS papers has been read in full text. Every sentence citing
 them is written to stay at title level for that reason, and Park et al.'s characterisation in
 particular must be checked against its conclusions before submission.
+
+## 38 — 2026-08-22 · The four EMS papers read; two changed the argument, two are blocked
+The R1 gate flagged in entry 37 is discharged for two of the four and stands for the other two.
+`data/fichamentos/envsoft_prior_work.md` records all four with `read_depth`.
+
+**Yoon et al. (2026), read in full via arXiv:2511.11821 — and it gave us a better anchor than the
+one we had.** Its §3.8 states, verbatim: *"Temperature was fixed at 0 across all model inferences,
+thereby eliminating sampling variability and facilitating consistent outputs across multiple
+experimental runs"*, and immediately after: *"Each model-method permutation was executed once."*
+The study does not measure run-to-run variability; it measures accuracy against a gold standard.
+So a 2026 paper in the target journal states, openly, exactly the premise this paper tests, and
+treats a single execution as sufficient because the decoding parameters are believed to make
+repetition redundant.
+
+The introduction now uses that, and uses it without disparaging the study. The choice is the
+field's convention, not an error, and the fact that these authors documented it clearly is what
+makes it testable. The text says so in terms: the question is not whether that study was well
+conducted but whether the premise it shares with the field survives measurement. This is a far
+stronger opening than the generic "work has begun mapping the shift" it replaces.
+
+**Schlögl et al. (2026), read in full via EGUsphere 2025-5210.** Its barrier catalogue already
+names our problem — *"non-deterministic model outputs from generative AI"* — and notes that LLM
+adoption introduces reproducibility challenges of a new kind. It names and does not measure, and is
+not designed to. It also supplies a vocabulary worth adopting: methodological vs results vs
+inferential reproducibility. We now locate this paper explicitly in the first of the three, which
+is more precise than the undifferentiated word we were using.
+
+**Park et al. and Zhu et al. are BLOCKED and the manuscript was weakened accordingly.** Verified
+2026-08-22: Unpaywall `closed` for both, Semantic Scholar not open access, Europe PMC has no record
+of either DOI, ScienceDirect 403, no preprint found.
+
+The Park claim was the costly one. The manuscript asserted that structured tool interfaces "were
+found to deliver less than their design implies" and claimed convergence with our fixed-slot result
+— an assertion about that paper's conclusion, derived from its title. The title reads "what
+structured tool interfaces do and do not provide", which does not license a direction. **Removed.**
+The convergence argument, which was the most rhetorically valuable of the four anchors, is gone
+until someone reads the paper. The Zhu characterisation was softened the same way.
+
+This is a net loss of one strong argument and a net gain of a stronger one, and the trade is
+correct in both directions: the Yoon anchor is now evidenced, and the Park anchor was not.
+
+Read the two blocked papers through the UTFPR institutional access before submission. If Park et
+al. does converge, the claim deserves to return — with the quotation behind it.
