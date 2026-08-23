@@ -603,3 +603,46 @@ correct in both directions: the Yoon anchor is now evidenced, and the Park ancho
 
 Read the two blocked papers through the UTFPR institutional access before submission. If Park et
 al. does converge, the claim deserves to return — with the quotation behind it.
+
+## 39 — 2026-08-22 · All four EMS papers read in full; the Park inference had been wrong
+The two paywalled papers were reached through the browser under the author's institutional access.
+`data/fichamentos/envsoft_prior_work.md` now records `read_depth: full-text` for all four. The R1
+gate from entries 37 and 38 is discharged.
+
+**The Park inference had been wrong, and reading it is what showed how.** From the title —
+"what structured tool interfaces do and do not provide" — the manuscript had claimed the study
+found structured interfaces "deliver less than their design implies", and asserted convergence with
+our fixed-slot result. Entry 38 removed that as unverifiable. Now verified, it was also inaccurate.
+
+Hydro-MCP delivers a great deal: it shortened the LLM agent's calibration path from 62.0 to 21.9
+model evaluations (p<0.001) with terminal performance unchanged, and produced reviewable
+operational provenance. What it did not deliver is **validity**. An acceptable KGE did not
+guarantee hydrological quality — they name the failure mode *zombie calibration* — and a held-out
+corruption task found that "logs and range constraints alone cannot detect physically corrupted
+model states": physically impossible SOL_K values of 5,000–15,000 mm h⁻¹ went unreported by both
+the constrained agent and the scripted baseline.
+
+That is a **better** convergence than the one we claimed, and it is the same boundary as ours seen
+from the opposite side. They constrain the interface and find control without correctness; we
+constrain the output shape and find no reproducibility gain, then find EMR = 1.000 sitting beside
+38–43% schema conformance. Both results say the control layer is necessary and not sufficient, and
+that the layer which would fix it is not the control layer. The Discussion now states this with
+their numbers.
+
+**Zhu et al.** proposes a two-part framework: assess the overall computational workflow, then
+diagnose the individual processes where reproducibility fails. Full-text search confirms the paper
+never mentions large language models, non-determinism or randomness anywhere in the body — the one
+related term appears in a reference. So the diagnostic step presumes a process that behaves the
+same way when re-executed, which is true of the service-based components it targets and false of an
+LLM-mediated one. Our claim now rests on that verification rather than on the title, and the text
+offers EMR and conformance as the per-process check such a framework would need.
+
+**One thing worth stealing from Park et al.**, recorded in the fichamento: their sentence on the
+corruption failure — "is not a failure of the MCP concept, it is a measurement of where that concept
+currently sits in the design space, and a specification of the next layer required to advance it."
+That is precisely the register the limitations section was reframed into, and it is precedent from
+the target journal itself.
+
+Net effect of reading all four: one anchor recovered and strengthened (Park), one grounded
+(Zhu), one already strong (Yoon, whose stated premise this paper tests), one sharpened
+(Schlögl, whose barrier catalogue names our problem without measuring it).

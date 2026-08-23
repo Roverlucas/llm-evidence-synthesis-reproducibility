@@ -54,30 +54,57 @@ methodological reproducibility.
 
 ---
 
-## 🔴 Park, Park, Kim & Jin (2026) — EMS 205:107142 — **BLOQUEADO**
-**read_depth: title-only** · doi:10.1016/j.envsoft.2026.107142
+## Park, Park, Kim & Jin (2026) — EMS 205:107142
+**read_depth: full-text** · via ScienceDirect com acesso institucional UTFPR, 2026-08-22 (10.406 palavras)
 
-Sem acesso ao texto. Verificado em 2026-08-22: Unpaywall `is_oa: false / closed`; Semantic Scholar
-`isOpenAccess: false`; Europe PMC não registra o DOI; ScienceDirect retorna 403; nenhuma versão
-preprint localizada.
+**O que é:** introduz o **Hydro-MCP**, um framework Model Context Protocol que restringe a operação
+do SWAT+ mediada por LLM através de schemas de função tipados, validação de faixa de parâmetros,
+feedback diagnóstico estruturado e log de trajetória. Ablação de seis níveis na bacia urbana de
+Jungnangcheon, mais baselines de referência, um stress test rural em Jiseokcheon e uma tarefa
+held-out de corrupção.
 
-**Consequência aplicada ao manuscrito:** a afirmação anterior de que o estudo encontrou que
-interfaces estruturadas "entregam menos do que seu desenho sugere", e a alegação de convergência
-com o nosso resultado de fixed-slot, **foram removidas**. O título diz "what structured tool
-interfaces do and do not provide" e não autoriza inferir a direção do achado. O texto agora cita
-apenas a existência da pergunta na revista.
+**Achados (números do abstract e da §5):**
+- Caminho de calibração mais curto: **21,9 ± 5,3 vs 62,0 ± 16,5** avaliações de modelo (p < 0,001,
+  Wilcoxon), com performance terminal praticamente inalterada (NSE mensal ≈ 0,893).
+- Baseline de busca aleatória exigiu **menos** avaliações porém com NSE terminal levemente inferior —
+  ou seja, o ganho é de operação guiada por LLM, não de eficiência de amostragem.
+- Bacia rural: configuração completa atinge conclusão operacional em 10/10 execuções; níveis 2–3 não
+  iniciam simulação alguma (0/30).
+- **"acceptable KGE did not guarantee hydrological quality"** — expôs *zombie calibration*.
+- Tarefa de corrupção: **"logs and range constraints alone cannot detect physically corrupted model
+  states"**; valores fisicamente impossíveis de SOL_K (5.000–15.000 mm h⁻¹) não geraram relatório de
+  corrupção nem pelo agente restrito nem pelo baseline com script.
 
-**Antes de submeter:** ler pelo acesso institucional da UTFPR. Se o achado de fato convergir, a
-afirmação de convergência é forte e deve voltar — com a evidência.
+**A convergência real com o nosso trabalho — e NÃO é a que eu havia suposto do título.**
+Eu havia inferido que o estudo mostrava interfaces estruturadas "entregando menos do que o desenho
+sugere". Errado: elas entregam bastante — controle operacional e proveniência revisável. O que não
+entregam é **validade**. Isso espelha exatamente o nosso par EMR/conformidade: reproduzir
+perfeitamente não garante saída utilizável, e restringir o formato (fixed-slot) não melhora a
+reprodutibilidade. Ambos localizam a mesma fronteira por lados opostos: a camada de controle é
+necessária e não suficiente.
+
+⚠️ **Enquadramento a imitar.** A frase deles sobre a falha da tarefa de corrupção é o modelo do que
+o Lucas pediu: *"is not a failure of the MCP concept, it is a measurement of where that concept
+currently sits in the design space, and a specification of the next layer required to advance it."*
+Precedente, na revista-alvo, de limitação apresentada como especificação.
 
 ---
 
-## 🔴 Zhu, Chen, Ren, He, Sun, Zhang, Wen, Yue & Lü (2025) — EMS 186:106323 — **BLOQUEADO**
-**read_depth: title-only** · doi:10.1016/j.envsoft.2025.106323
+## Zhu, Chen, Ren, He, Sun, Zhang, Wen, Yue & Lü (2025) — EMS 186:106323
+**read_depth: full-text** · via ScienceDirect com acesso institucional UTFPR, 2026-08-22 (9.770 palavras)
 
-Sem acesso, mesmas verificações e mesmo resultado.
+**O que é:** framework integrado para avaliar reprodutibilidade computacional de *geo-simulation
+experiments* (GSEs), em duas partes: (1) avaliar o workflow computacional como um todo e (2)
+investigar processos individuais para identificar inconsistências. Modelo de avaliação com dimensões
+e métricas qualitativas e quantitativas, mais um sistema protótipo.
 
-**Consequência aplicada:** a afirmação de que um passo mediado por LLM é algo que tal framework
-"não consegue ainda alcançar" foi suavizada para o que o título sustenta — que frameworks desse
-tipo foram propostos, e que um componente não-determinístico difere do que eles foram construídos
-para avaliar.
+**Por que importa para nós:** o passo diagnóstico pressupõe que um processo, isolado, se comporta
+da mesma forma ao ser re-executado — o que é verdade dos componentes computacionais baseados em
+serviço para os quais o framework foi desenhado. Um passo mediado por LLM não se comporta assim.
+
+**Verificado por busca no texto integral:** o artigo **não menciona** large language models, nem
+não-determinismo, nem aleatoriedade em nenhum ponto do corpo (a única ocorrência de termo
+correlato está numa referência bibliográfica). A afirmação de que se trata de um componente que
+tais frameworks ainda não alcançam está, portanto, fundamentada — não é inferência do título.
+
+**Limitação que eles próprios declaram:** aplicação confinada a GSEs baseados em serviço.
