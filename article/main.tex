@@ -86,7 +86,7 @@ Apple~M4 with 24~GB unified memory. The API arm requires only network access and
 \textbf{Software required:} Python~3.14; Ollama~v0.15.5 for the local arm. Dependencies are pinned in
 \texttt{requirements-lock.txt}.\\
 \textbf{Program language:} Python.\\
-\textbf{Program size:} approximately 11{,}000 lines including 151 tests.\\
+\textbf{Program size:} approximately 11{,}000 lines; the test suite collects 151 cases from 132 test functions.\\
 \textbf{Availability and cost:} free and open source. Code:
 \url{https://github.com/Roverlucas/llm-evidence-synthesis-reproducibility} (MIT). Data, run cards and
 frozen analysis artefacts: OSF project \texttt{vr934}, \url{https://doi.org/10.17605/OSF.IO/VR934}
@@ -172,7 +172,7 @@ We address this gap with the following contributions:
   \item \textbf{Isolating the deployment effect from the model-size confound} via an additional 10-run experiment in which the same \texttt{meta-llama/llama-3-8b-instruct} model is served via a cloud endpoint (DeepInfra) under settings identical to the local Ollama deployment;
   \item Testing whether prompt design (variable-length array vs.\ fixed-slot single-estimate) is the primary driver of cloud-API extraction non-determinism;
   \item Cross-validating extraction outputs against two independent reference standards: a within-study majority-vote ``silver-internal'' and an external silver from DeepSeek-R1 (a reasoning model from a different family);
-  \item Demonstrating that common ``deterministic'' API settings (temperature${=}$0, fixed seeds) are insufficient to ensure reproducibility, and that the seed parameter empirically delivers a 6$\times$ smaller effect than the deployment paradigm.
+  \item Demonstrating that the settings practitioners rely on for determinism do not deliver it: Gemini and GPT-4.1 transmitted seed${=}$42 at temperature${=}$0 on all 6{,}000 of their calls each and still returned extraction EMR of 0.200 and 0.150. We report no magnitude for the seed's own contribution, because isolating it requires a within-stack ablation we did not run.
 \end{enumerate}
 
 
@@ -956,7 +956,7 @@ This independence means that \textbf{accuracy evaluations from a single run cann
 Future studies should report EMR and accuracy (against a human-labeled ground truth) as a paired tuple, never EMR alone.
 
 \textbf{Finding 5: Prompt design is a contributor to extraction non-determinism, but the effect is model-specific.}
-The fixed-slot extraction sensitivity analysis (Section~\ref{sec:fixedslot}) showed dramatic improvement for GPT-4.1 (EMR 0.150${\to}$0.444, $+196\%$), but no improvement---or active worsening---for Claude ($-40\%$) and Gemini ($-7.6\%$).
+The fixed-slot sensitivity analysis (Section~\ref{sec:fixedslot}), read against a run-count-matched baseline, degraded extraction reproducibility on two of the three API-served stacks (Claude $-70.2\%$, Gemini $-47.9\%$) and improved it on one (GPT-4.1 $+23.8\%$). Against an unmatched 10-run baseline the same data would read $-40.0\%$, $-9.1\%$ and $+196.3\%$; the matched comparison changes both the magnitude and, for Gemini, the sign, and it is the defensible one.
 This refines the assumption that ``fixed-slot will fix it'': prompt structure matters, but the dominant source of variation differs across providers.
 For Claude in particular, the residual non-determinism after prompt simplification points back to deployment-stack variation rather than prompt-induced array variability.
 
@@ -981,6 +981,7 @@ Extraction EMR (0.05--0.20), by contrast, requires no such careful framing: it f
 Papers reporting LLM-assisted evidence synthesis should be expected to disclose: (a)~the exact model version, (b)~all inference parameters, (c)~whether results were verified across multiple runs, and (d)~provenance information enabling independent replication.
 
 \textbf{For tool developers:}
+Open-weight models have already been scaled in this journal for regulatory information extraction in the hydropower domain;\autocite{yoon2026hydropower} our result adds a property to that choice which cost and control arguments do not cover, since the local single-device arm is the only configuration here that returned bit-identical output across all ten runs.
 The large difference in extraction EMR between local and cloud deployment suggests that deterministic local inference should be the default for reproducibility-critical applications.
 Local inference on consumer hardware (Apple~M4, 24~GB RAM) cost \$0.26 total for 174~hours across three models, versus \$69.40 for 33~hours of API inference---a 266$\times$ advantage in total outlay. Normalised per hour of inference the gap is far wider still (\$0.0015/h local vs.\ \$2.10/h API, ${\approx}1{,}400\times$), since the local stacks ran five times longer for that outlay. Either way the cost advantage compounds with the reproducibility benefit.
 Where cloud APIs must be used (e.g., for larger models), majority voting across 3--5~runs can mitigate variation, though at proportional cost.
@@ -1081,6 +1082,25 @@ Extending coverage to additional architectures (Command-R, DeepSeek, Phi-4) and 
 Ten repetitions per model-stage combination provide adequate statistical power for EMR estimation with bootstrap confidence intervals, yielding narrow CIs for screening (e.g., $\pm$0.016 for Claude) and informative CIs for extraction.
 Our prior work\autocite{rover2026jair} demonstrated that scaling to 100~repetitions enables detection of tail-event instability; future studies targeting rare variation patterns ($<$10\% of runs) can build on our infrastructure by simply increasing the run count.
 
+\textbf{The seed ablation this design defers.}
+Our data establish that a transmitted seed does not buy determinism (Finding~6) and do not estimate how much the seed contributes on its own.
+That estimate requires a within-stack ablation: one provider, one infrastructure, one API layer, run with and without the seed, everything else held.
+We did not execute it, and the cross-stack contrast otherwise available in these data is precisely the confound our own unit-of-analysis framing exists to forbid.
+The experiment is small---one stack, two conditions, ten runs each---and the harness runs it as a configuration change rather than as new code, which is why we name it as the immediate next measurement rather than as a general limitation of the approach.
+
+\textbf{An agreement coefficient reported rather than repaired.}
+Two blinded raters working from a pre-registered protocol reached $\kappa{=}0.529$ (95\%~CI \ci{0.383}{0.674}) against a target of 0.80, and the shortfall is statistically decisive ($z{=}-3.65$).
+We did not raise the target, drop a rater, or recompute the coefficient after selectively re-rating the discordant items, each of which would have produced a number above the threshold with no evidential content behind it.
+The disagreement is directional rather than diffuse (exact McNemar $p{=}2.2{\times}10^{-4}$), and 17 of the 19 asymmetric discordances turn on a single inclusion criterion whose original wording admitted two defensible readings.
+What this buys is a \emph{located} defect in the instrument rather than an unexplained coefficient: the amended protocol splits that criterion into three levels, and establishing that the amendment works requires a fresh independent sample, which we identify as the required next step and do not claim as a result.
+The consequence for this paper is bounded and stated: our primary metric measures self-consistency and needs no reference standard at all, so the gold standard constrains only the secondary accuracy analysis, where the exclude side is unanimous and firm and every sensitivity figure is read as a lower bound.
+
+\textbf{What the local-stack result does and does not certify.}
+The three local stacks reach $\emr{=}1.000$ on extraction while returning schema-conforming output on 38--43\% of calls.
+Their perfect reproducibility is therefore reproducibility of a set in which most records would still need manual repair, and this paper establishes that they are deterministic, not that they are ready to use.
+We report the pair rather than the headline because the pair is the finding: reproducibility and usability are separable, cheap to measure together, and measured together in no study in Table~\ref{tab:comparison}.
+Raising conformance is a prompt- and schema-engineering problem that the harness measures but does not solve.
+
 \textbf{Domain focus as a strength.}
 We chose PM$_{2.5}$/respiratory health because it provides a well-characterized testbed with standardized reporting conventions (relative risks, confidence intervals, exposure lags), enabling clean measurement of non-determinism without confounding from heterogeneous reporting styles.
 This domain focus is a feature, not a limitation: it provides a controlled baseline against which cross-domain studies---in behavioral health, pharmacology, or nutritional epidemiology, where reporting is more heterogeneous---can calibrate expected amplification patterns.
@@ -1105,9 +1125,10 @@ For the three API-served stacks, the infrastructure and intermediate-precision r
 Our results therefore characterize the snapshot of each API stack observed during data collection (February--April 2026), and exact response-level reproducibility may not survive future provider-side updates even with identical client requests.
 The three local stacks, by contrast, expose every tuple component (open weights with verifiable hashes, single Apple~M4 chip, Ollama~v0.15.5, single replica), which is why the local-vs-API comparison is informative as a partial quasi-isolation probe (Section~\ref{sec:unit_of_analysis}): the local side is fully specified and pinned, so any cross-stack divergence localises to non-weight components.
 
-\textbf{External validation as documented limitation.}
-This study tests reproducibility within a single 500-abstract corpus on PM$_{2.5}$ and respiratory hospitalization.
-We have not validated our findings on an independent test corpus drawn from a different domain or time period.
+\textbf{One corpus, deliberately, and what a second one would test.}
+This study measures reproducibility within a single 500-abstract corpus on PM$_{2.5}$ and respiratory hospitalization, and we have not validated the findings on an independent corpus from another domain or period.
+The single-corpus design is what makes the stack comparison clean: holding the corpus fixed across six stacks, ten runs and two pipeline stages is what allows an observed divergence to be assigned to the stack rather than to the material.
+A second corpus answers a different question---how far the amplification factors transfer---and it needs this one as its baseline.
 Three threats follow.
 First, generalization to other domains: PM$_{2.5}$/respiratory is a well-structured, mature epidemiology literature with formulaic outcome reporting (RR/OR per 10~$\mu$g/m$^3$ with 95\% CI, time-series design language); LLM extraction stability may differ for less-structured domains such as qualitative health-services research, behavioral interventions, or nutritional epidemiology.
 Cross-domain reproducibility is the focus of our companion study (Rover \emph{et al.}, in preparation), which uses an air-pollution/health corpus paired with an artificial-intelligence/ML corpus to isolate domain effects.
@@ -1129,7 +1150,7 @@ We did not retrofit pre-registration claims to the original exploratory analyses
 \subsection{Recommendations}
 \label{sec:recommendations}
 
-Based on our findings, we propose the following recommendations for LLM-assisted evidence synthesis:
+Practical strategies for reproducible geoscientific data analysis have been set out in this journal.\autocite{schlogl2026reproducibility} Every such strategy presumes a compute step that returns the same output when re-executed, which is the premise an LLM-mediated step removes. The recommendations below are what that premise costs when it no longer holds, and they are additions to existing practice rather than a substitute for it.
 
 \begin{enumerate}
   \item \textbf{Run at least 3 repetitions} and report the EMR alongside accuracy metrics.
@@ -1148,6 +1169,8 @@ Based on our findings, we propose the following recommendations for LLM-assisted
 
 This study evaluates LLM reproducibility in evidence synthesis at scale: 35{,}638 successful calls of 36{,}000 attempted across 120~original experimental runs involving six models from four providers, plus a desconfound experiment serving the same model weights via a seventh cloud configuration.
 We use whole-output hashing, four-tier semantic analysis, pairwise-disagreement statistics, fixed-slot prompt sensitivity, two independent silver standards, and meta-analytic propagation testing including a small-literature simulation.
+
+Frameworks for assessing the computational reproducibility of environmental simulation experiments already exist in this journal.\autocite{zhu2025geosimulation} An LLM-mediated extraction step is a component such a framework must now assess and cannot yet reach, because determinism is not a property it can assume of the component. The two quantities we report, whole-output Exact Match Rate and schema conformance, are cheap enough to sit inside such an assessment, and the harness computes both from run cards that any pipeline can emit.
 
 \textbf{What we show that others have not.}
 Where prior studies report 94--97\% reproducibility using per-field metrics and 2--3~repetitions, our whole-output analysis across 10~runs reveals that only 5--20\% of extraction outputs are truly identical---exposing a measurement gap of nearly 20$\times$.

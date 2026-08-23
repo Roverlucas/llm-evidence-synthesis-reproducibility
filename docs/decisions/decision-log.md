@@ -520,3 +520,43 @@ outputs over the deposited artefacts and push them to the shared remote. Now opt
 Both documents build clean (main 35pp, supplement 23pp, zero errors, zero undefined refs); 151
 tests pass. `check_pending.sh` still blocks on the three `\pending` markers awaiting Stage B and
 three reviewer emails — open work, not defects.
+
+## 37 — 2026-08-22 · Positioning pass for EMS, and two self-contradictions it caught
+An academic-marketing pass reframed the paper for the target journal. It also found four defects,
+two of which were mine and of a kind I had already committed twice: correcting a claim in one place
+and not sweeping for where it repeated.
+
+| # | Defect | Status |
+|---|---|---|
+| D1 | Contribution 6 still asserted the seed "delivers a 6× smaller effect than the deployment paradigm" — the exact reading **withdrawn** in Finding 6 and in the supplement | fixed |
+| D2 | Finding 5 in the Discussion still carried +196%, −40%, −7.6% — the unmatched numbers §4.9 explicitly rejects, in the same manuscript | fixed |
+| D3 | `compute_call_hash` hashed the **requested** parameters; the paper's own central lesson is that provenance must record what was **transmitted** | implemented |
+| D4 | "151 tests" — 132 test functions collecting 151 cases | made precise |
+
+**D3 was the one worth stopping for.** The manuscript argues that a provenance record must be
+computed over the request body as sent, because a conditional in a client can silently separate it
+from the configuration requested — which is exactly what happened to us on 6,000 Claude calls. The
+released harness did not implement that. A reviewer on the software track would have opened
+`hasher.py` and found the paper's recommendation absent from the paper's own tool. `compute_call_hash`
+now accepts the transmitted payload and gives it precedence; the requested-parameter path survives as
+a labelled fallback. Three tests cover it, one of which reproduces the original failure directly:
+a payload that omits `temperature` must not hash identically to one that sends it. Suite: 151 → 154.
+
+**Limitations reframed under one standing rule:** a sceptical reviewer must still be able to state
+exactly what was not done. Verified against the compiled PDF — "We did not execute it", "We did not
+raise the target, drop a rater, or recompute the coefficient", "deterministic, not that they are
+ready to use", and "have not validated the findings on an independent corpus" all survive verbatim.
+The reframing changed the frame, not the picture: the single corpus is now presented as what makes
+the stack comparison clean rather than as an apology, and the missing seed ablation as the immediate
+next measurement that the harness runs as a configuration change. Two entries are new (the κ and the
+local-stack conformance); both were already stated elsewhere in the paper and neither introduces a
+number. Per SA-QG-012 they await the author's ratification.
+
+**Journal anchoring:** the four EMS papers now appear in the Introduction, at Finding 5, in the
+tool-developer paragraph, in the preamble to the recommendations, and in the Conclusion. Park et al.
+carries the most weight: a negative result on structured tool interfaces from this journal's own
+pages, converging with our fixed-slot result from a different environmental domain.
+
+⚠️ **BLOCKED (R1):** none of the four EMS papers has been read in full text. Every sentence citing
+them is written to stay at title level for that reason, and Park et al.'s characterisation in
+particular must be checked against its conclusions before submission.

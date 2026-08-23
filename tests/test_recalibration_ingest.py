@@ -117,3 +117,45 @@ class TestValidate:
     def test_vocabulary_outside_protocol_fails(self):
         errors = ingest.validate(_frame("MAYBE", "5b"), _template(), "labeler1")
         assert any("outside protocol vocabulary" in e for e in errors)
+
+
+class TestCallHashBasis:
+    """The hash must distinguish what was requested from what was transmitted.
+
+    This is the paper's own central recommendation, and the package did not
+    implement it until the temperature defect made the cost concrete.
+    """
+
+    def _hasher(self):
+        import importlib.util
+        from pathlib import Path
+        spec = importlib.util.spec_from_file_location(
+            "hasher", Path(__file__).resolve().parents[1] / "src" / "provenance" / "hasher.py")
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        return mod
+
+    def test_transmitted_payload_changes_the_hash(self):
+        """The exact failure that motivated this: same request, different payload."""
+        h = self._hasher()
+        sent = h.compute_call_hash("p", "i", "m", 0.0, 42,
+                                   transmitted={"temperature": 0.0, "seed": 42})
+        omitted = h.compute_call_hash("p", "i", "m", 0.0, 42,
+                                      transmitted={"seed": 42})  # field dropped by the client
+        assert sent != omitted, (
+            "a payload that omits temperature must not hash identically to one that sends it"
+        )
+
+    def test_requested_basis_is_labelled(self):
+        """Falling back to requested parameters must be visible in the hash basis."""
+        h = self._hasher()
+        a = h.compute_call_hash("p", "i", "m", 0.0, 42)
+        b = h.compute_call_hash("p", "i", "m", 0.0, 42, transmitted={"temperature": 0.0, "seed": 42})
+        assert a != b, "requested-parameter and transmitted-payload hashes must differ"
+
+    def test_transmitted_takes_precedence(self):
+        """Requested args are ignored once the payload is supplied."""
+        h = self._hasher()
+        a = h.compute_call_hash("p", "i", "m", 0.0, 42, transmitted={"temperature": 1.0})
+        b = h.compute_call_hash("p", "i", "m", 0.9, 7, transmitted={"temperature": 1.0})
+        assert a == b, "the requested values must not enter the hash when transmitted is given"

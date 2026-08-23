@@ -18,16 +18,39 @@ def compute_call_hash(
     model_id: str,
     temperature: float,
     seed: Optional[int] = None,
+    transmitted: Optional[dict[str, Any]] = None,
 ) -> str:
-    """Compute SHA-256 hash of a single LLM call's inputs."""
-    fields = {
-        "prompt": prompt,
-        "input_text": input_text,
-        "model_id": model_id,
-        "temperature": temperature,
-        "seed": seed,
-    }
-    canonical = json.dumps(fields, sort_keys=True, ensure_ascii=True)
+    """Compute SHA-256 hash of a single LLM call's inputs.
+
+    ``transmitted`` is the request body as the client actually put it on the wire.
+    When supplied it takes precedence over the requested arguments, and this is the
+    form callers should use.
+
+    The distinction is not academic. An earlier version of this package hashed the
+    requested parameters only, and one client attached ``temperature`` to the payload
+    only when the value exceeded zero — so 6,000 calls requesting 0 were transmitted
+    without the field, ran at the provider default, and were recorded as 0. The
+    provenance trail asserted a setting that was never sent, and nothing in the record
+    could reveal it, because the record was built from the request rather than from
+    the payload. Hashing what left the process is what makes that failure detectable.
+    """
+    if transmitted is not None:
+        fields = {
+            "prompt": prompt,
+            "input_text": input_text,
+            "model_id": model_id,
+            "transmitted": transmitted,
+        }
+    else:
+        fields = {
+            "prompt": prompt,
+            "input_text": input_text,
+            "model_id": model_id,
+            "temperature": temperature,
+            "seed": seed,
+            "_hash_basis": "requested-parameters",
+        }
+    canonical = json.dumps(fields, sort_keys=True, ensure_ascii=True, default=str)
     return hashlib.sha256(canonical.encode()).hexdigest()
 
 
