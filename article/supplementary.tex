@@ -1106,4 +1106,125 @@ Key commit timestamps (publicly auditable at \url{https://github.com/Roverlucas/
 
 We acknowledge the absence of formal pre-registration for the exploratory core as a limitation and recommend that future LLM-in-SR studies pre-register analyses on OSF before data collection.
 
+
+
+% ============================================================
+\section{Corpus Composition}
+
+\begin{table}[htbp]
+\centering
+\caption{Corpus composition for the PM$_{2.5}$ and respiratory health abstract screening task.}
+\label{tab:corpus}
+\begin{tabular}{lrl}
+\toprule
+\textbf{Category} & \textbf{Count} & \textbf{Purpose} \\
+\midrule
+Clearly include    & 100   & Positive controls (meet all inclusion criteria) \\
+Clearly exclude    & 100   & Negative controls (clear exclusion reasons) \\
+Ambiguous          & 300   & Primary test set (borderline cases) \\
+\midrule
+\textbf{Total}     & \textbf{500} & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+% ============================================================
+\section{Non-Determinism Mechanisms by Stack}
+
+\begin{table}[htbp]
+\centering
+\caption{Mapping of candidate non-determinism mechanisms onto the deployment stacks evaluated in this study. \checkmark{}~= documented in public materials (e.g., provider engineering blog, vendor docs, or directly observable from API behaviour); \emph{likely}~= strongly consistent with public information about the stack but not directly attested per request; \emph{possible}~= compatible with public information but unconfirmed; ---~= precluded by the stack's design (e.g., single-replica local inference cannot use multi-GPU all-reduce). Attribution for the three API-served stacks is inferential; for the three local Ollama/M4 stacks, the absence of every listed mechanism follows directly from the single-device, single-execution-thread serving configuration. The two Together-AI / DeepInfra cloud columns refer to the same-weights desconfound stack (Section~\ref{sec:desconfound}).}
+\label{tab:mechanisms}
+\footnotesize
+\begin{tabular}{p{4.8cm}cccccc}
+\toprule
+\textbf{Mechanism} & \textbf{Local} & \textbf{Cloud} & \textbf{API-} & \textbf{API-} & \textbf{API-} \\
+                   & \textbf{(Ollama/M4)} & \textbf{(DeepInfra/L3-8B)} & \textbf{Claude} & \textbf{Gemini} & \textbf{GPT-4.1} \\
+\midrule
+1. Floating-point non-associativity (BF16/FP16 mixed-precision accumulation) & --- & \checkmark & likely & likely & likely \\
+2. Tensor parallelism / multi-GPU all-reduce reduction order & --- & likely & likely & likely & likely \\
+3. FlashAttention / fused-kernel non-determinism & --- & likely & likely & likely & likely \\
+4. Dynamic continuous batching (batch composition varies between calls) & --- & likely & \checkmark & \checkmark & \checkmark \\
+5. Speculative decoding / draft-model fast-paths & --- & possible & likely & likely & likely \\
+6. Prefix-caching state shared across requests & --- & possible & possible & possible & possible \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+% ============================================================
+\section{Computational Resources}
+
+\begin{table}[htbp]
+\centering
+\caption{Computational resources per deployment stack (both stages combined, 10~runs each). Latency is the mean per-call inference duration. Cost includes API pricing and estimated electricity for local stacks (Apple~M4, 15W, \$0.10/kWh).}
+\label{tab:resources}
+\small
+\begin{tabular}{llrrrr}
+\toprule
+\textbf{Deployment Stack} & \textbf{Type} & \textbf{Inference (h)} & \textbf{Tokens (M)} & \textbf{Latency (s)} & \textbf{Cost (\$)} \\
+\midrule
+LLaMA 3 8B / Ollama / M4       & Local  & 52.1  & 8.7  & 32.5  & 0.08 \\
+Mistral 7B / Ollama / M4       & Local  & 76.4  & 10.6 & 46.1  & 0.11 \\
+Gemma 2 9B / Ollama / M4       & Local  & 45.6  & 9.0  & 27.7  & 0.07 \\
+\midrule
+Claude Sonnet 4.5 / Anthropic  & API & 7.9   & 9.9  & 4.7   & 46.11 \\
+Gemini 2.5 Pro / Google        & API & 20.3  & 9.0  & 12.2  & 0.00$^{*}$ \\
+GPT-4.1 / OpenAI               & API & 5.0   & 8.6  & 3.0   & 23.29 \\
+\midrule
+\textbf{Total}    &        & \textbf{207.2} & \textbf{55.8} & --- & \textbf{69.66} \\
+\bottomrule
+\multicolumn{6}{l}{\footnotesize $^{*}$Gemini was used under the free tier (rate-limited).}
+\end{tabular}
+\end{table}
+
+
+% ============================================================
+\section{Field-Level Extraction EMR}
+
+\begin{table}[htbp]
+\centering
+\caption{Field-level EMR for extraction outputs across deployment stacks. The first three columns are local Ollama/M4 stacks; the last three are API-served (Anthropic, Google, OpenAI).}
+\label{tab:fields}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Field} & \textbf{LLaMA} & \textbf{Mistral} & \textbf{Gemma} & \textbf{Claude} & \textbf{Gemini} & \textbf{GPT-4.1} \\
+\midrule
+Study design    & 1.000 & 1.000 & 1.000 & 0.990 & 1.000 & 0.990 \\
+Study period    & 1.000 & 1.000 & 1.000 & 0.990 & 1.000 & 0.990 \\
+Sample size     & 1.000 & 1.000 & 1.000 & 0.970 & 1.000 & 0.980 \\
+Population      & 1.000 & 1.000 & 1.000 & 0.960 & 0.948 & 0.990 \\
+Study location  & 1.000 & 1.000 & 1.000 & 0.780 & 0.896 & 1.000 \\
+\midrule
+\textbf{Est.\ stability} & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} & \textbf{0.880} & \textbf{0.735} & \textbf{0.922} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+% ============================================================
+\section{Semantic Equivalence Under Relaxed Criteria}
+
+\begin{table}[htbp]
+\centering
+\caption{Semantic equivalence under progressively relaxed criteria ($n\!=\!100$ articles, 10~runs). Columns 2--4 report whole-output EMR over the five metadata fields plus estimate count stability. BERTScore F1 (\texttt{roberta-large}) reports the mean $\pm$ SD across all $\binom{10}{2}{=}45$ unique run pairs per article (4,500~pairs per model). Raw F1 is reported here; rescaled F1 (against the package's random-pair English baseline) is shown in Supp.~Table~\ref{supp-tab:bertscore_rescaled}. Hash-based EMR (from Table~\ref{tab:extraction}) additionally requires identical numeric estimates. The gap between high BERTScore (${\geq}0.997$) and low hash-based EMR (${\leq}0.200$) demonstrates that even near-identical metadata co-occurs with divergent numeric extractions.}
+\label{tab:semantic}
+\begin{tabular}{lccclc}
+\toprule
+\textbf{Deployment Stack} & \textbf{Exact} & \textbf{Norm.} & \textbf{Fuzzy} & \textbf{BERTScore F1$^{\dagger}$} & \textbf{Hash}$^{*}$ \\
+\midrule
+LLaMA 3 8B / Ollama / M4       & 1.000 & 1.000 & 1.000 & $1.000 \pm 0.000$ & 1.000 \\
+Mistral 7B / Ollama / M4       & 1.000 & 1.000 & 1.000 & $1.000 \pm 0.000$ & 1.000 \\
+Gemma 2 9B / Ollama / M4       & 1.000 & 1.000 & 1.000 & $1.000 \pm 0.000$ & 1.000 \\
+\midrule
+Claude Sonnet 4.5 / Anthropic  & 0.640 & 0.680 & 0.690 & $0.997 \pm 0.009$ & 0.050 \\
+Gemini 2.5 Pro / Google        & 0.620 & 0.620 & 0.630 & $0.997 \pm 0.022$ & 0.200 \\
+GPT-4.1 / OpenAI               & 0.880 & 0.880 & 0.880 & $1.000 \pm 0.004$ & 0.150 \\
+\bottomrule
+\multicolumn{6}{l}{\footnotesize $^{*}$From Table~\ref{tab:extraction}; includes all fields and numeric estimates.}\\
+\multicolumn{6}{l}{\footnotesize $^{\dagger}$Raw F1 reported; rescaled F1 (against random-pair baseline) shown in Supp.~Table~\ref{supp-tab:bertscore_rescaled}.}
+\end{tabular}
+\end{table}
+
 \end{document}

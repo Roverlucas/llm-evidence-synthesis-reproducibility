@@ -646,3 +646,36 @@ the target journal itself.
 Net effect of reading all four: one anchor recovered and strengthened (Park), one grounded
 (Zhu), one already strong (Yoon, whose stated premise this paper tests), one sharpened
 (Schlögl, whose barrier catalogue names our problem without measuring it).
+
+## 40 — 2026-08-22 · Body reduced to seven tables; cover letter rewritten for EMS
+**Five tables moved to the supplement:** corpus composition, mechanism mapping, computational
+resources, field-level EMR (the heatmap figure already carries it) and semantic equivalence. The
+body keeps the seven that carry the argument: the prior-work comparison, the deployment-stack
+configurations, screening and extraction reproducibility, fixed-slot, the same-weights desconfound
+and schema conformance. Main went from 83 to 79 pages, supplement from 25 to 27.
+
+Two mistakes on the way, both caught by checking rather than by assuming. The moved blocks were
+appended after `\end{document}`, so they compiled into nothing and their labels never reached the
+`.aux` — which is why the cross-references stayed unresolved through two full builds. And
+`tab:meta`, which had gone to the supplement earlier with the meta-analysis section, still had a
+same-document `\ref` in the body. Both fixed; zero `??` in the compiled PDF, zero undefined
+references, 154 tests passing.
+
+**Cover letter rewritten as `docs/cover_letter_envsoft.md`.** The RSM letter is kept, not deleted:
+it remains the artefact for that submission route if the EMS one does not work out.
+
+The new letter argues from the journal's own pages, which is what reading the four papers bought.
+Yoon et al. is cited as the statement of the premise this paper tests — explicitly not as a
+criticism, since it is the field's standard practice and their clear documentation of it is what
+made the premise identifiable. Park et al. is cited as the same boundary reached from the opposite
+side, with their numbers: 62.0 to 21.9 evaluations, control and provenance delivered, validity not.
+Schlögl et al. is cited as having named the barrier we measure. Zhu et al. as the framework whose
+per-process diagnostic an LLM step does not yet fit.
+
+The letter also reports two things against ourselves before the editor can find them: the κ that
+missed its target, and the client that did not transmit the configuration we declared. Both are in
+the manuscript; putting them in the letter is a deliberate choice about which impression the editor
+forms first.
+
+Verified: no RSM residue, no superseded figure, and every number in the letter traced to the
+manuscript.

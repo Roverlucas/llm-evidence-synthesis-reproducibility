@@ -307,27 +307,11 @@ Throughout this paper we use ``deployment stack'' for the experimental unit and 
 \subsection{Corpus Construction}
 \label{sec:corpus}
 
-We constructed a 500-abstract corpus from PubMed covering the association between PM$_{2.5}$ and respiratory health outcomes (Table~\ref{tab:corpus}).
+We constructed a 500-abstract corpus from PubMed covering the association between PM$_{2.5}$ and respiratory health outcomes (Supplementary Table~\ref{supp-tab:corpus}).
 We chose this domain because it is one of the most extensively studied areas in environmental epidemiology, with Yu et~al.\autocite{yu2024lancet} estimating approximately 1~million premature deaths annually from short-term PM$_{2.5}$ exposure.
 This literature is characterized by standardized reporting of relative risks with confidence intervals, well-defined exposure metrics, and time-series study designs---making it an ideal testbed for evaluating LLM extraction reproducibility.\autocite{iyer2025geoai,yu2025aiml}
 Prior work on particulate matter and respiratory morbidity has shown that machine learning models can capture the complex, lagged relationships between PM$_{10}$ concentration and hospital admissions,\autocite{tadano2021unorganized} further motivating a domain where both the epidemiological patterns and the computational methods are well established.
 
-\begin{table}[htbp]
-\centering
-\caption{Corpus composition for the PM$_{2.5}$ and respiratory health abstract screening task.}
-\label{tab:corpus}
-\begin{tabular}{lrl}
-\toprule
-\textbf{Category} & \textbf{Count} & \textbf{Purpose} \\
-\midrule
-Clearly include    & 100   & Positive controls (meet all inclusion criteria) \\
-Clearly exclude    & 100   & Negative controls (clear exclusion reasons) \\
-Ambiguous          & 300   & Primary test set (borderline cases) \\
-\midrule
-\textbf{Total}     & \textbf{500} & \\
-\bottomrule
-\end{tabular}
-\end{table}
 
 \noindent Inclusion criteria required: (1)~original epidemiological study, (2)~PM$_{2.5}$ as exposure, (3)~respiratory hospitalization or emergency-department visit as the outcome---mortality-only studies are \emph{excluded}, (4)~time-series or case-crossover design, (5)~quantitative risk estimates, and (6)~publication in English.
 These are the criteria as executed: they are the text of the screening prompt in \texttt{configs/prompts/screening.txt} and of the human labeling protocol, verbatim in both.
@@ -422,28 +406,9 @@ It is useful to distinguish two classes of factors that can plausibly contribute
 These two classes are conceptually distinct: a request that traverses the network can still be served on a deterministic infrastructure, and vice versa, an infrastructure with the non-deterministic features above can be exercised under local-network conditions.
 Our desconfound experiment (Section~\ref{sec:desconfound}) helps separate them empirically by holding the weights constant while varying the rest of the stack tuple.
 
-\noindent Table~\ref{tab:mechanisms} maps six of these mechanisms onto each of the six deployment stacks studied here, classifying each cell as documented (\checkmark), \emph{likely} (consistent with public information from the provider's serving infrastructure), \emph{possible} (compatible with public information but not directly confirmed), or precluded by stack design (---).
+\noindent Supplementary Table~\ref{supp-tab:mechanisms} maps six of these mechanisms onto each of the six deployment stacks studied here, classifying each cell as documented (\checkmark), \emph{likely} (consistent with public information from the provider's serving infrastructure), \emph{possible} (compatible with public information but not directly confirmed), or precluded by stack design (---).
 Attribution is necessarily \emph{inferential} for the API-served stacks because the production serving stacks of OpenAI, Anthropic, and Google are closed-source; the table reflects what is publicly documented or strongly implied by published architecture descriptions, not what we directly measured per request.
 
-\begin{table}[htbp]
-\centering
-\caption{Mapping of candidate non-determinism mechanisms onto the deployment stacks evaluated in this study. \checkmark{}~= documented in public materials (e.g., provider engineering blog, vendor docs, or directly observable from API behaviour); \emph{likely}~= strongly consistent with public information about the stack but not directly attested per request; \emph{possible}~= compatible with public information but unconfirmed; ---~= precluded by the stack's design (e.g., single-replica local inference cannot use multi-GPU all-reduce). Attribution for the three API-served stacks is inferential; for the three local Ollama/M4 stacks, the absence of every listed mechanism follows directly from the single-device, single-execution-thread serving configuration. The two Together-AI / DeepInfra cloud columns refer to the same-weights desconfound stack (Section~\ref{sec:desconfound}).}
-\label{tab:mechanisms}
-\footnotesize
-\begin{tabular}{p{4.8cm}cccccc}
-\toprule
-\textbf{Mechanism} & \textbf{Local} & \textbf{Cloud} & \textbf{API-} & \textbf{API-} & \textbf{API-} \\
-                   & \textbf{(Ollama/M4)} & \textbf{(DeepInfra/L3-8B)} & \textbf{Claude} & \textbf{Gemini} & \textbf{GPT-4.1} \\
-\midrule
-1. Floating-point non-associativity (BF16/FP16 mixed-precision accumulation) & --- & \checkmark & likely & likely & likely \\
-2. Tensor parallelism / multi-GPU all-reduce reduction order & --- & likely & likely & likely & likely \\
-3. FlashAttention / fused-kernel non-determinism & --- & likely & likely & likely & likely \\
-4. Dynamic continuous batching (batch composition varies between calls) & --- & likely & \checkmark & \checkmark & \checkmark \\
-5. Speculative decoding / draft-model fast-paths & --- & possible & likely & likely & likely \\
-6. Prefix-caching state shared across requests & --- & possible & possible & possible & possible \\
-\bottomrule
-\end{tabular}
-\end{table}
 
 \noindent The mapping is used in two ways in our discussion.
 First, the residual disagreement observed in the same-weights cloud experiment (Section~\ref{sec:desconfound}) is most parsimoniously attributable to mechanisms 1--4, because mechanisms 5--6 are not standard for an 8B-parameter model under modest load.
@@ -560,33 +525,11 @@ Claude and GPT-4.1 achieved 500/500 screening and 100/100 extraction in all runs
 Mistral processed 497/500 screening abstracts and Gemma 493/500, in both cases failing the same items identically in every run, so the footnote above applies to them as well.
 Gemini achieved 483--500/500 screening and 98--100/100 extraction.
 
-Table~\ref{tab:resources} summarizes the computational resources consumed.
+Supplementary Table~\ref{supp-tab:resources} summarizes the computational resources consumed.
 The total experiment required 207~hours of inference time and processed 55.8~million tokens.
 Local models were substantially slower per call (mean latency 28--92~seconds) than cloud APIs (3--12~seconds), reflecting the difference between single-device Apple~M4 inference and distributed GPU clusters.
 However, the total cost of local inference was negligible (\$0.26 electricity) compared to API costs (\$69.40), with Claude Sonnet~4.5 accounting for 66\% of the total budget.
 
-\begin{table}[htbp]
-\centering
-\caption{Computational resources per deployment stack (both stages combined, 10~runs each). Latency is the mean per-call inference duration. Cost includes API pricing and estimated electricity for local stacks (Apple~M4, 15W, \$0.10/kWh).}
-\label{tab:resources}
-\small
-\begin{tabular}{llrrrr}
-\toprule
-\textbf{Deployment Stack} & \textbf{Type} & \textbf{Inference (h)} & \textbf{Tokens (M)} & \textbf{Latency (s)} & \textbf{Cost (\$)} \\
-\midrule
-LLaMA 3 8B / Ollama / M4       & Local  & 52.1  & 8.7  & 32.5  & 0.08 \\
-Mistral 7B / Ollama / M4       & Local  & 76.4  & 10.6 & 46.1  & 0.11 \\
-Gemma 2 9B / Ollama / M4       & Local  & 45.6  & 9.0  & 27.7  & 0.07 \\
-\midrule
-Claude Sonnet 4.5 / Anthropic  & API & 7.9   & 9.9  & 4.7   & 46.11 \\
-Gemini 2.5 Pro / Google        & API & 20.3  & 9.0  & 12.2  & 0.00$^{*}$ \\
-GPT-4.1 / OpenAI               & API & 5.0   & 8.6  & 3.0   & 23.29 \\
-\midrule
-\textbf{Total}    &        & \textbf{207.2} & \textbf{55.8} & --- & \textbf{69.66} \\
-\bottomrule
-\multicolumn{6}{l}{\footnotesize $^{*}$Gemini was used under the free tier (rate-limited).}
-\end{tabular}
-\end{table}
 
 \subsection{Screening Reproducibility}
 
@@ -670,38 +613,20 @@ To assess practical significance, we examine field-level variation below.
 \subsection{Field-Level Analysis}
 \label{sec:fieldlevel}
 
-Not all extraction fields are equally affected (Table~\ref{tab:fields}).
+Not all extraction fields are equally affected (Supplementary Table~\ref{supp-tab:fields}).
 
-\begin{table}[htbp]
-\centering
-\caption{Field-level EMR for extraction outputs across deployment stacks. The first three columns are local Ollama/M4 stacks; the last three are API-served (Anthropic, Google, OpenAI).}
-\label{tab:fields}
-\begin{tabular}{lcccccc}
-\toprule
-\textbf{Field} & \textbf{LLaMA} & \textbf{Mistral} & \textbf{Gemma} & \textbf{Claude} & \textbf{Gemini} & \textbf{GPT-4.1} \\
-\midrule
-Study design    & 1.000 & 1.000 & 1.000 & 0.990 & 1.000 & 0.990 \\
-Study period    & 1.000 & 1.000 & 1.000 & 0.990 & 1.000 & 0.990 \\
-Sample size     & 1.000 & 1.000 & 1.000 & 0.970 & 1.000 & 0.980 \\
-Population      & 1.000 & 1.000 & 1.000 & 0.960 & 0.948 & 0.990 \\
-Study location  & 1.000 & 1.000 & 1.000 & 0.780 & 0.896 & 1.000 \\
-\midrule
-\textbf{Est.\ stability} & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} & \textbf{0.880} & \textbf{0.735} & \textbf{0.922} \\
-\bottomrule
-\end{tabular}
-\end{table}
 
 \noindent A clear pattern emerges: \textbf{categorical fields} (study design, study period) are highly reproducible even for API models ($\emr{\geq}0.990$), while \textbf{free-text fields} (study location) and \textbf{numerical extractions} (effect estimates) show the greatest variation.
 GPT-4.1 is notable for achieving perfect location reproducibility (1.000) while showing variation in categorical fields like study design and period (0.990 each)---a different instability profile from Claude and Gemini, where location is the most variable field.
 
-The estimate count stability metric reveals that 26.5\% of Gemini's articles with extractable estimates, 12.0\% of Claude's, and 7.8\% of GPT-4.1's received a different number of effect estimates across runs.\footnote{Estimate count stability is computed over articles that produced at least one estimate in all 10~runs, yielding denominators of 83 (Gemini), 92 (Claude), and 90 (GPT-4.1) rather than the full 100. The meta-analytic ``Varying'' column in Table~\ref{tab:meta} uses the full 100-article denominator, producing slightly lower percentages (20\%, 21\%, 5\%).}
+The estimate count stability metric reveals that 26.5\% of Gemini's articles with extractable estimates, 12.0\% of Claude's, and 7.8\% of GPT-4.1's received a different number of effect estimates across runs.\footnote{Estimate count stability is computed over articles that produced at least one estimate in all 10~runs, yielding denominators of 83 (Gemini), 92 (Claude), and 90 (GPT-4.1) rather than the full 100. The meta-analytic ``Varying'' column in Supplementary Table~\ref{supp-tab:meta} uses the full 100-article denominator, producing slightly lower percentages (20\%, 21\%, 5\%).}
 This structural variation directly affects any downstream meta-analysis.
 
 \subsection{Semantic Equivalence Analysis}
 \label{sec:semantic}
 
 The hash-based EMR reported in Table~\ref{tab:extraction} (0.050 for Claude, 0.150 for GPT-4.1, 0.200 for Gemini) treats any character-level difference in the \emph{full JSON output}---including all numeric effect estimates, confidence intervals, and variable-length estimate arrays---as a mismatch.
-To disentangle variation in the five metadata fields from variation in numeric estimates, and to assess whether metadata variation is merely cosmetic (formatting, abbreviation) or genuinely semantic, we applied three progressively relaxed equivalence criteria to the metadata fields only (Table~\ref{tab:semantic}).
+To disentangle variation in the five metadata fields from variation in numeric estimates, and to assess whether metadata variation is merely cosmetic (formatting, abbreviation) or genuinely semantic, we applied three progressively relaxed equivalence criteria to the metadata fields only (Supplementary Table~\ref{supp-tab:semantic}).
 
 \begin{enumerate}
   \item \textbf{Exact match}: character-identical outputs (equivalent to SHA-256 hash comparison).
@@ -710,26 +635,6 @@ To disentangle variation in the five metadata fields from variation in numeric e
   \item \textbf{BERTScore}: Embedding-based semantic similarity using \texttt{roberta-large}, computing the F1 score across all $\binom{10}{2}{=}45$ unique run pairs per article (4,500~pairs per model).
 \end{enumerate}
 
-\begin{table}[htbp]
-\centering
-\caption{Semantic equivalence under progressively relaxed criteria ($n\!=\!100$ articles, 10~runs). Columns 2--4 report whole-output EMR over the five metadata fields plus estimate count stability. BERTScore F1 (\texttt{roberta-large}) reports the mean $\pm$ SD across all $\binom{10}{2}{=}45$ unique run pairs per article (4,500~pairs per model). Raw F1 is reported here; rescaled F1 (against the package's random-pair English baseline) is shown in Supp.~Table~\ref{supp-tab:bertscore_rescaled}. Hash-based EMR (from Table~\ref{tab:extraction}) additionally requires identical numeric estimates. The gap between high BERTScore (${\geq}0.997$) and low hash-based EMR (${\leq}0.200$) demonstrates that even near-identical metadata co-occurs with divergent numeric extractions.}
-\label{tab:semantic}
-\begin{tabular}{lccclc}
-\toprule
-\textbf{Deployment Stack} & \textbf{Exact} & \textbf{Norm.} & \textbf{Fuzzy} & \textbf{BERTScore F1$^{\dagger}$} & \textbf{Hash}$^{*}$ \\
-\midrule
-LLaMA 3 8B / Ollama / M4       & 1.000 & 1.000 & 1.000 & $1.000 \pm 0.000$ & 1.000 \\
-Mistral 7B / Ollama / M4       & 1.000 & 1.000 & 1.000 & $1.000 \pm 0.000$ & 1.000 \\
-Gemma 2 9B / Ollama / M4       & 1.000 & 1.000 & 1.000 & $1.000 \pm 0.000$ & 1.000 \\
-\midrule
-Claude Sonnet 4.5 / Anthropic  & 0.640 & 0.680 & 0.690 & $0.997 \pm 0.009$ & 0.050 \\
-Gemini 2.5 Pro / Google        & 0.620 & 0.620 & 0.630 & $0.997 \pm 0.022$ & 0.200 \\
-GPT-4.1 / OpenAI               & 0.880 & 0.880 & 0.880 & $1.000 \pm 0.004$ & 0.150 \\
-\bottomrule
-\multicolumn{6}{l}{\footnotesize $^{*}$From Table~\ref{tab:extraction}; includes all fields and numeric estimates.}\\
-\multicolumn{6}{l}{\footnotesize $^{\dagger}$Raw F1 reported; rescaled F1 (against random-pair baseline) shown in Supp.~Table~\ref{supp-tab:bertscore_rescaled}.}
-\end{tabular}
-\end{table}
 
 \noindent Four findings emerge from this multi-level analysis.
 
