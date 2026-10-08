@@ -725,3 +725,31 @@ forms first.
 
 Verified: no RSM residue, no superseded figure, and every number in the letter traced to the
 manuscript.
+
+## 41 — 2026-10-08 · Claude arm re-run at temperature 0, fixed before any output exists
+**Why.** The deposited Claude outputs (`data/raw_outputs/claude-sonnet-4-5/`) ran at the provider
+default of 1.0 because `claude_runner.py` dropped `temperature` when it was 0.0 (item 24). The
+paper declares this as its first limitation. The author authorised a full re-run (US$ ~48, all
+three Claude conditions, synchronous Messages API) on 2026-10-08. Batch API was rejected: it is a
+different serving path, and the serving path is the variable this paper studies.
+
+**What runs.** Same model (`claude-sonnet-4-5-20250929`), same prompts, corpus, max_tokens and
+run counts as the original arm: screening 10 × 500, extraction 10 × 100, fixed-slot 3 × 100.
+New ids `claude-sonnet-4-5-t0` and `claude-sonnet-4-5-t0-fixedslot`. The original outputs are not
+touched; they remain the evidence for the defect. Every call record now stores
+`request_temperature`, echoed from the payload actually sent.
+
+**Fixed before running.**
+1. Metrics: identical to the other stacks — EMR with 95% percentile bootstrap CI per stage,
+   sensitivity/specificity/accuracy against the same gold standard, run-count-matched 3-run
+   baseline for fixed-slot. No new metric is introduced for this arm.
+2. Reporting rule: the t0 arm REPLACES the 1.0 arm in every headline table and in the abstract,
+   whatever its values. The 1.0 arm moves to the supplement as a temperature-sensitivity
+   contrast (same model, same days-of-week window not guaranteed), reported whatever its values.
+3. The headline API-vs-local gap is recomputed with all three API stacks. If Claude t0 differs
+   from Claude 1.0, both values are reported; no claim is chosen after seeing which is larger.
+4. Declared confounds: the re-run is ~8 months after the other arms (Feb 2026 → Oct 2026), on a
+   model deprecated on 2026-09-30 and retiring 2026-11-30. Provider-side changes in that window
+   cannot be excluded and are stated as such.
+5. Validity check before analysis: every call record must carry `request_temperature == 0.0`;
+   a run with any other value or a missing value is excluded and re-run, not analysed.

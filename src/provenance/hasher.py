@@ -70,7 +70,7 @@ def create_call_record(
     inference_result: dict,
 ) -> dict:
     """Create a provenance record for a single LLM call."""
-    return {
+    record = {
         "corpus_id": corpus_id,
         "stage": stage,
         "run_id": run_id,
@@ -88,6 +88,10 @@ def create_call_record(
             or inference_result.get("finish_reason")
         ),
     }
+    # Runners that echo the transmitted temperature get it recorded per call.
+    if inference_result.get("request_temperature") is not None:
+        record["request_temperature"] = inference_result["request_temperature"]
+    return record
 
 
 def create_run_card(

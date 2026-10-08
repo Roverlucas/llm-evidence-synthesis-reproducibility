@@ -107,6 +107,8 @@ def run_inference(
         "output_tokens": usage.get("output_tokens"),
         "stop_reason": result.get("stop_reason"),
         "response_id": result.get("id"),
+        # Echo what was actually transmitted, so the call record can prove it.
+        "request_temperature": payload["temperature"],
     }
 
 

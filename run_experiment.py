@@ -75,6 +75,16 @@ MODEL_CONFIGS = {
         "temperature": 0.0,
         "max_tokens": 2048,
     },
+    # Re-run of the Claude arm with temperature actually transmitted (decision 41).
+    # Same model and settings; the original claude-sonnet-4-5 outputs ran at the
+    # provider default of 1.0 and are kept untouched as the record of that defect.
+    "claude-sonnet-4-5-t0": {
+        "id": "claude-sonnet-4-5-t0",
+        "provider": "anthropic",
+        "model": "claude-sonnet-4-5-20250929",
+        "temperature": 0.0,
+        "max_tokens": 2048,
+    },
     "gemini-2.5-pro": {
         "id": "gemini-2.5-pro",
         "provider": "google",

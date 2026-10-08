@@ -41,6 +41,12 @@ MODELS = {
         "model_arg": "claude-sonnet-4-5-20250929",
         "max_tokens": 1500,
     },
+    # Temperature-0 re-run of the Claude arm (decision 41).
+    "claude-sonnet-4-5-t0-fixedslot": {
+        "runner": "claude_runner",
+        "model_arg": "claude-sonnet-4-5-20250929",
+        "max_tokens": 1500,
+    },
     "gemini-2.5-pro-fixedslot": {
         "runner": "gemini_runner",
         "model_arg": "gemini-2.5-pro",
@@ -160,6 +166,7 @@ def run_one(model_name: str, run_id: int):
                 "inference_duration_ms": get_duration_ms(resp),
                 "input_tokens": resp.get("input_tokens"),
                 "output_tokens": resp.get("output_tokens"),
+                "request_temperature": resp.get("request_temperature"),
             })
             if (i + 1) % 25 == 0:
                 done = sum(1 for r in results if r["valid"])
