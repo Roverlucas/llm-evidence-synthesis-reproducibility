@@ -753,3 +753,32 @@ touched; they remain the evidence for the defect. Every call record now stores
    cannot be excluded and are stated as such.
 5. Validity check before analysis: every call record must carry `request_temperature == 0.0`;
    a run with any other value or a missing value is excluded and re-run, not analysed.
+
+## 42 — 2026-10-08 · Jev added as a seventh stack, screening only, fixed before any output exists
+**Why.** The author authorised (2026-10-08) a decision-model arm: TypeSafe Jev returns a choice
+plus the probability of every option instead of sampling text. It is a third family next to
+local open-weight stacks and API-served generative stacks, and it tests the remedy the paper
+points toward — returning the distribution rather than a sample.
+
+**Scope.** Screening (Stage A) only. Jev does not generate text, so structured extraction and
+the meta-analytic stage do not apply. Added after the six original arms had results; reported
+as such, not as part of the original design. The OSF registration `fgn3e` covers the labeling
+protocol, not the stack list, so this is a declared addition, not a protocol deviation.
+
+**How it is called.** `typesafe-ai/jev` through Vercel AI Gateway `POST /v1/evaluate`, provider
+pinned to `typesafe-ai`, no decision fallback. State = the same `Title/Abstract` string the LLM
+stacks receive. One `choice` question whose instructions are the Inclusion and Exclusion sections
+of `configs/prompts/screening.txt`, verbatim; options include / exclude / uncertain, the same
+labels the LLM stacks may return. The JSON output instructions are dropped because they have no
+meaning for a decision model; this interface difference is declared in Methods. 10 runs × 500.
+
+**Fixed before running.**
+1. Metrics: screening EMR on the decision with 95% percentile bootstrap CI; sensitivity,
+   specificity and accuracy against the same gold standard; additionally the run-to-run spread
+   of the probability of the chosen option (max − min per item), reported descriptively.
+2. No calibration claim (ECE, reliability) in this paper: the human gold subset is n = 100.
+3. Reported whatever the values. If EMR = 1.000, that is reported together with accuracy, under
+   the same "EMR is necessary but not sufficient" caveat already applied to Mistral.
+4. Any call answered by a provider other than `typesafe-ai` is treated as failed and re-run.
+5. Model version pinned by recording the served model id and generation id per call; Jev was
+   released 2026-09-15 and the date of the runs is stated.
