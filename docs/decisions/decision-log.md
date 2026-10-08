@@ -754,6 +754,12 @@ touched; they remain the evidence for the defect. Every call record now stores
 5. Validity check before analysis: every call record must carry `request_temperature == 0.0`;
    a run with any other value or a missing value is excluded and re-run, not analysed.
 
+Addendum (2026-10-08, execution log). Screening run 6 aborted after a local DNS outage
+(`nodename nor servname provided`): 433/500 valid, 10 failed calls, 57 abstracts never sent.
+Under rule 5 it was excluded and re-run in full (500/500 valid, all `request_temperature == 0.0`,
+US$ 3.50). The partial run is archived in `data/aborted_runs/`, outside the analysed outputs.
+Script: `scripts/redo_claude_t0_screening_run6.sh`. Total spend of the arm: US$ 50.99.
+
 ## 42 — 2026-10-08 · Jev added as a seventh stack, screening only, fixed before any output exists
 **Why.** The author authorised (2026-10-08) a decision-model arm: TypeSafe Jev returns a choice
 plus the probability of every option instead of sampling text. It is a third family next to
