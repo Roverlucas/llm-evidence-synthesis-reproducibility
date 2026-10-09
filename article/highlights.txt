@@ -1,5 +1,5 @@
-Local stacks reproduced exactly; API stacks 0.150-0.470 on extraction at T=0
-Same weights, different server: 39% one-directional disagreement
+Local stacks reproduced exactly; API stacks: extraction EMR 0.150-0.470 at T=0
+Same weights, different serving stack: 39% one-directional disagreement
 Seed, fixed-slot prompts and probability outputs did not remove variation
 Schema conformance is independent of reproducibility; measure both
 Provenance must record the transmitted payload, not the requested one

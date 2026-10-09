@@ -1102,7 +1102,7 @@ Recent reporting guidance for GenAI-assisted evidence syntheses asks authors to 
 
 \begin{table}[htbp]
 \centering
-\caption{Reproducibility by seed availability and deployment paradigm. Cloud stacks: Claude Sonnet~4.5 (exposes no seed parameter; temperature=0 verified as transmitted), Gemini~2.5~Pro and GPT-4.1 (seed=42, temperature=0 verified as transmitted). Local stacks all use seed=42 at temperature=0. The rows are descriptive: the ``no seed'' row differs from the ``seed=42'' row in provider, infrastructure and API layer simultaneously, so their difference is not an estimate of a seed effect.}
+\caption{Reproducibility by seed availability and deployment paradigm. Cloud stacks: Claude Sonnet~4.5 (exposes no seed parameter; temperature=0 recorded per call as transmitted), Gemini~2.5~Pro and GPT-4.1 (seed=42, temperature=0 placed in every request by the client code). Local stacks all use seed=42 at temperature=0. The rows are descriptive: the ``no seed'' row differs from the ``seed=42'' row in provider, infrastructure and API layer simultaneously, so their difference is not an estimate of a seed effect.}
 \label{tab:seed}
 \begin{tabular}{lccc}
 \toprule
@@ -1123,7 +1123,7 @@ Local, seed=42       & extraction & 1.000 & 0.000 \\
 
 \noindent The comparison it does \emph{not} support is a seed effect. The unseeded cloud stack is the more reproducible one on extraction ($0.470$ against $0.175$), but the rows differ in provider, infrastructure and API layer at the same time, which is precisely the confound our unit-of-analysis framing exists to prevent. What the ordering does rule out is the seed being what separates reproducible from non-reproducible API stacks. Isolating the seed's own contribution requires a within-stack ablation---one provider, one infrastructure, run with and without the seed---which we did not perform.
 
-\noindent The conclusion that survives is narrower and rests only on the seeded stacks: Gemini and GPT-4.1 transmitted seed=42 and temperature=0 on every call and still returned extraction EMR of $0.200$ and $0.150$. Where a seed parameter exists, is accepted, and is verifiably sent, it does not make an API-served extraction pipeline reproducible.
+\noindent The conclusion that survives is narrower and rests only on the seeded stacks: Gemini and GPT-4.1 transmitted seed=42 and temperature=0 on every call and still returned extraction EMR of $0.200$ and $0.150$. Where a seed parameter exists, is accepted, and is placed in every request, it does not make an API-served extraction pipeline reproducible.
 
 % ============================================================
 \section{Claude Stack: Temperature Contrast Between the Two Executions}
@@ -1196,7 +1196,7 @@ To translate the measured rates into a team's workload we sketch three scenarios
 
 \textbf{Scenario C --- API, single run (common practice).} One third of~B: ${\approx}$7.6~hours and US\$38 per year. In our data two runs of the same API stack returned different complete extractions for 24--49\% of articles on average (mean pairwise disagreement).
 
-\noindent The local scenario costs about 50 more hours of machine time per year than Scenario~B and returns the same output when re-run; the API scenarios are faster and do not.
+\noindent The local scenario costs about 53 more hours of machine time per year than Scenario~B and returns the same output when re-run; the API scenarios are faster and do not.
 
 % ============================================================
 \section{Pre-Registration Disclosure}

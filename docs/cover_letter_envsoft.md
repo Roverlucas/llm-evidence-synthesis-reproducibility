@@ -18,7 +18,7 @@ We audit that property across a complete two-stage extraction pipeline. Six depl
 
 Five results:
 
-1. **Local stacks returned bit-identical output across all ten runs; API-served stacks reached an extraction Exact Match Rate of 0.150 to 0.470** at temperature zero verified as transmitted. The most reproducible of the three is the one that accepts no seed.
+1. **Local stacks returned bit-identical output across all ten runs; API-served stacks reached an extraction Exact Match Rate of 0.150 to 0.470** at temperature zero, verified in the client code. The most reproducible of the three is the one that accepts no seed.
 
 2. **The same weights, served differently, disagree.** Running `meta-llama/llama-3-8b-instruct` locally and through a cloud endpoint produced systematic disagreement on 167 of the 430 abstracts where both returned a decision, all in the same direction. The variation is a property of the serving stack, not of the model.
 

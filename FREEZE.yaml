@@ -37,6 +37,7 @@ artifacts:
   - {path: analysis/blindage/work_saved.json, hash: "sha256:15404d39be809351953478bc03b907a246ee88a0d919afedb7e6650f8f5c10b0", produced_by: scripts/blindage/work_saved_metric.py, describes: "work saved"}
   - {path: analysis/blindage/fixed_slot_comparison.json, hash: "sha256:3ce5d6844b5a6d111c6c3ceab8c0a41f4a1914afb4c8d4dcf1a5a2037cb3c375", produced_by: scripts/blindage/analyze_fixed_slot_results.py, describes: "fixed-slot vs 10-run baseline"}
 
+  - {path: analysis/blindage/llama_cloud_desconfound.json, hash: "sha256:713e3933cd7a2932a26abb78ca13ff55ea0f1138bc98164844859f15ad46037d", produced_by: scripts/blindage/analyze_llama_cloud_vs_local.py, describes: "same-weights local vs cloud comparison (unchanged since April 2026; added to the freeze list on 2026-10-09)"}
 derived:
   - {artifact: analysis/figures/emr_comparison.pdf, from: analysis/reproducibility_results.json, regenerated_after_freeze: true}
   - {artifact: analysis/figures/field_emr_heatmap.pdf, from: analysis/reproducibility_results.json, regenerated_after_freeze: true}
