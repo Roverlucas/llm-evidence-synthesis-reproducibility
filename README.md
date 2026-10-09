@@ -2,9 +2,10 @@
 
 > Can LLM non-determinism alter the conclusions of environmental health meta-analyses?
 
-**Status:** manuscript prepared for *Research Synthesis Methods*. All LLM experiments
-are complete. Stage A of the dual-human validation is complete and reported; Stage B
-(dual-human extraction) is in progress and is the only work still outstanding.
+**Status:** manuscript prepared for *Environmental Modelling & Software*. All LLM
+experiments are complete, and every number the manuscript cites is listed with its
+SHA-256 in `FREEZE.yaml`. Stage A of the dual-human validation is complete and reported;
+no dual-human extraction reference was built for this study.
 
 | Deposit | DOI |
 |---------|-----|
@@ -68,7 +69,7 @@ registration pre-specified for exactly this outcome. Two things make the result
 informative rather than merely disappointing.
 
 The disagreement is **directional**, not noise: discordant cells run 2 versus 19
-(exact McNemar p = 2.2×10⁻⁴; Stuart-Maxwell χ²(2) = 15.4, p = 4.6×10⁻⁴). It traces to
+(exact McNemar p = 2.2×10⁻⁴; Stuart-Maxwell χ²(2) = 16.4, p = 2.7×10⁻⁴). It traces to
 a single ambiguous inclusion criterion, which the protocol has since been amended to
 disambiguate (v1.2). Neither rater departed from the protocol — the protocol was
 underspecified.
@@ -102,7 +103,7 @@ python scripts/dual_labeling/kappa_statistics.py \
 
 ## Prerequisites
 
-- **Python 3.12+** (developed with 3.14.3)
+- **Python 3.14** (developed with 3.14.3)
 - **Ollama** (for local models): Install from https://ollama.com
 - **API Keys** (for cloud models): Anthropic, Google AI, OpenAI
 
@@ -141,8 +142,8 @@ ollama pull gemma2:9b
 # Run a single model/stage/run
 python run_experiment.py --model llama3-8b --stage screening --runs 1-10
 
-# Run all models (caution: takes hours and costs API credits)
-python run_experiment.py --model all --stage all --runs 1-10
+# Run every model and both stages (caution: takes hours and costs API credits)
+python run_experiment.py --runs 1-10
 ```
 
 ## Running Analysis
@@ -194,7 +195,7 @@ analysis/
   figures/          # Publication-ready figures
   tables/           # Result tables
   bootstrap/        # Bootstrap CIs (10,000 resamples)
-article/            # Manuscript (LaTeX, CUP-JNL-DTM template for RSM)
+article/            # Manuscript (LaTeX, elsarticle template for EMS)
 configs/            # Experiment configurations and prompts
 scripts/
   dual_labeling/    # Ingest, agreement statistics, gold-standard consolidation

@@ -1,9 +1,9 @@
 % !TEX program = pdflatex
 % ============================================================
 %  Supplementary Material
-%  Reproducibility of Pollution-Health Evidence Synthesis
-%  Using LLM-Assisted Screening and Extraction
-%  Target: Research Synthesis Methods
+%  Deployment stack, not model: a reproducibility audit harness for
+%  LLM-assisted evidence extraction in environmental assessment
+%  Target: Environmental Modelling & Software
 %  Compilation: pdflatex supplementary.tex (run twice for TOC)
 %  OSF DOI: 10.17605/OSF.IO/VR934
 % ============================================================
@@ -42,8 +42,8 @@
 }
 
 \title{Supplementary Material\\[0.5em]
-\large Reproducibility of Pollution--Health Evidence Synthesis\\
-Using LLM-Assisted Screening and Extraction}
+\large Deployment stack, not model: a reproducibility audit harness\\
+for LLM-assisted evidence extraction in environmental assessment}
 \author{Lucas Rover \and Yara de Souza Tadano}
 \date{}
 
@@ -232,13 +232,13 @@ Each estimate requires: \texttt{effect\_measure}, \texttt{effect\_estimate}, \te
 Full schemas are available in the repository at \texttt{configs/schemas/}.
 
 % ============================================================
-\section{Gold Standard Labeling Protocol}
+\section{Reference Labels and Dual-Human Labeling Protocol}
 \label{sec:labeling}
 
 \subsection{Screening Labels}
 
 The 500-item corpus was labeled by an automated classification rule: the 200 ``clear'' abstracts (100 include, 100 exclude) by inclusion-criteria keyword matching, and the 300 ``ambiguous'' abstracts by the same rule in low-confidence regions.
-The rule made no errors on a held-out 50-abstract validation set, which by the rule of three bounds its true error rate at approximately 6\% with 95\% confidence; we do not describe it as 100\% precise.
+Its agreement with human judgement is measured by the dual-human validation below.
 These labels serve as reference values for accuracy computation but do not affect the primary metric (EMR), which measures self-consistency regardless of ground truth.
 
 \subsection{Dual-Independent Human Validation}
@@ -268,7 +268,7 @@ Weighted $\kappa$, quadratic & 0.548 & --- \\
 Raw agreement & 75.0\% & --- \\
 PABAK, 3-class / binary & 0.625 / 0.558 & --- \\
 Prevalence index / bias index & 0.189 / 0.179 & --- \\
-Test against Cochrane target & $z=-3.65$ & $p=1.3\times10^{-4}$ \\
+Test against the 0.80 target & $z=-3.65$ & $p=1.3\times10^{-4}$ \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -311,15 +311,13 @@ ambiguous     & 50 & 0.660 & 0.398 & 0.490 \\
 \end{tabular}
 \end{table}
 
-\textbf{The gold standard is asymmetrically valid}, and this qualifies every accuracy figure in the main text. The exclude side is unanimous: both raters endorsed exclusion for all 25 abstracts the automated rule called clearly excludable. The include side is not: of the 25 abstracts the rule called clearly includable, rater~1 endorsed inclusion for 13 and rater~2 for 21, and 8 of the 25 discordances fall inside that stratum. Reported specificity therefore rests on labels the humans confirm, while reported sensitivity rests on include-side labels they substantially contest and should be read as a lower bound.
+\textbf{The reference labels are asymmetrically valid}, and this qualifies every accuracy figure in the main text. The exclude side is unanimous: both raters endorsed exclusion for all 25 abstracts the automated rule called clearly excludable. The include side is not: of the 25 abstracts the rule called clearly includable, rater~1 endorsed inclusion for 13 and rater~2 for 21, and 8 of the 25 discordances fall inside that stratum. Reported specificity therefore rests on labels the humans confirm, drawn from clearly off-topic records; reported sensitivity rests on include-side labels they substantially contest, so its error has no known direction and sensitivity differences between stacks are not interpreted.
 
 \textbf{Protocol amendment (v1.2).} Following item (c) of the registered contingency, criterion~5 was split into three levels. Level 5a: a numeric point estimate with a numeric interval is present, and the criterion is satisfied. Level 5b: the abstract states that the effect was estimated but omits the values, which resolves to \emph{uncertain}, on the reasoning that abstract-only screening cannot verify what the abstract omits and that an EXCLUDE would assert something about the study the available evidence does not support. Level 5c: no estimate and no mention of one, which resolves to \emph{exclude}, because total absence is reasonable evidence that the study produced no extractable estimate. The distinction between 5b and 5c is not which criterion failed but how much the abstract reveals about the failure.
 
 The decision table now also separates structural criteria (original study, PM\textsubscript{2.5} exposure, respiratory hospitalization, English), where a single clear failure excludes, from conditional criteria (design, effect reporting), where a single failure yields \emph{uncertain} --- with level 5c as the stated exception. Precedence when several rows apply is exclude $>$ uncertain $>$ include. The amended table is exhaustive by design: the v1.1 defect was an uncovered case, and raters are now instructed to record \emph{uncertain} and escalate rather than improvise if they meet one.
 
-\textbf{Recalibration round and its limits.} A blinded round restricted to the 25 discordant items is underway; the 75 concordant items are not reopened. This round cannot produce a second estimate of $\kappa$, and we do not report one. Conditioning re-measurement on prior disagreement moves a recomputed whole-corpus coefficient upward mechanically---at a sufficiently high resolution rate it would cross the Cochrane threshold by construction, carrying no evidential content. The outcome is therefore reported as post-hoc reconciliation agreement conditional on the initially discordant items, and $\kappa=0.529$ stands as the study's agreement estimate. Demonstrating that the v1.2 amendment repairs the ambiguity would require a fresh independent sample, which we identify as the appropriate next step rather than claim here.
-
-\textbf{Discordance resolution.} Items still discordant after recalibration go to a consensus meeting; items without consensus are settled by the senior author (Y.d.S.T.) as tie-breaker, as pre-registered. The role is deliberately held by a co-author who did not develop the pipeline being scored against this gold standard, which keeps final adjudication independent of the system under evaluation. Tie-breaks are restricted to residual discordant items, adjudicated against the written criteria with no access to model outputs, and logged with the criterion invoked, so each adjudicated item is auditable. The resulting gold standard records, per abstract, whether its label came from first-round agreement, post-recalibration agreement, consensus, or tie-break.
+\textbf{Recalibration, consensus and tie-break.} The pre-registered protocol routes the 25 discordant items to a blinded recalibration (the 75 concordant items are not reopened), then to a consensus meeting and a tie-break by the senior author. No label from that sequence enters any number reported in the main text or here, and $\kappa=0.529$ is the study's agreement estimate. A re-rating restricted to discordant items cannot produce a second estimate of $\kappa$; showing that the v1.2 amendment repairs the ambiguity requires a fresh independent sample.
 
 \subsection{Extraction Labels}
 
@@ -486,7 +484,7 @@ This is provided so that future reviewers and replicators can verify (a)~exactly
 
 \begin{table}[htbp]
 \centering
-\caption{Official documentation references for the six deployment stacks evaluated and the desconfound cloud route. URLs and access dates are recorded so that replication studies can pin to the documented behaviour rather than to current docs that may drift.}
+\caption{Official documentation references for the six deployment stacks evaluated and the same-weights cloud route. URLs and access dates are recorded so that replication studies can pin to the documented behaviour rather than to current docs that may drift.}
 \label{tab:apidocs}
 \small
 \begin{tabular}{p{2.6cm}p{2.8cm}p{6.2cm}p{1.6cm}}
@@ -494,10 +492,10 @@ This is provided so that future reviewers and replicators can verify (a)~exactly
 \textbf{Provider} & \textbf{Stack / Endpoint} & \textbf{Documentation URL} & \textbf{Access date} \\
 \midrule
 Anthropic   & Claude Sonnet~4.5 / Messages API v1            & \url{https://docs.anthropic.com/en/api/messages} & 2026-02-11; 2026-10-08 \\
-Google      & Gemini~2.5 Pro / generateContent (v1)          & \url{https://ai.google.dev/api/rest}              & 2026-02-11 \\
+Google      & Gemini~2.5 Pro / generateContent (v1beta)          & \url{https://ai.google.dev/api/rest}              & 2026-02-11 \\
 OpenAI      & GPT-4.1 / Chat Completions v1                  & \url{https://platform.openai.com/docs/api-reference/chat} & 2026-02-11 \\
 Ollama (local) & LLaMA~3 8B / Mistral~7B / Gemma~2 9B (v0.15.5) & \url{https://github.com/ollama/ollama/blob/main/docs/api.md} & 2026-02-11 \\
-OpenRouter $\rightarrow$ DeepInfra & \texttt{meta-llama/llama-3-8b-instruct} (desconfound route) & \url{https://openrouter.ai/docs} & 2026-04-23 \\
+OpenRouter $\rightarrow$ DeepInfra & \texttt{meta-llama/llama-3-8b-instruct} (same-weights route) & \url{https://openrouter.ai/docs} & 2026-04-23 \\
 Vercel AI Gateway & \texttt{typesafe-ai/jev} / \texttt{POST /v1/evaluate} & \url{https://vercel.com/docs/ai-gateway} & 2026-10-08 \\
 \bottomrule
 \end{tabular}
@@ -698,7 +696,7 @@ Abstract: {abstract}
 
 \begin{table}[htbp]
 \centering
-\caption{Fixed-slot extraction sensitivity analysis: 3 cloud models $\times$ 3 runs $\times$ 100 INCLUDE articles. Variable-length baseline from the main extraction table (10 runs), i.e.\ the unmatched comparison; the run-count-matched comparison is in the main text. Here EMR and pairwise disagreement are computed over schema-valid outputs only (\texttt{scripts/blindage/analyze\_fixed\_slot\_results.py}), so Gemini's fixed-slot EMR rests on 92 articles and differs slightly from the main-text value, which counts every returned output. Provider pinned per call: Claude Sonnet~4.5 via Anthropic API; Gemini~2.5~Pro via Google API; GPT-4.1 via OpenAI API.}
+\caption{Fixed-slot extraction sensitivity analysis: 3 cloud models $\times$ 3 runs $\times$ 100 INCLUDE articles. Variable-length baseline from the main extraction table (10 runs), i.e.\ the unmatched comparison; the run-count-matched comparison is in the main text. Here EMR and pairwise disagreement are computed over schema-valid outputs only (\texttt{scripts/blindage/analyze\_fixed\_slot\_results.py}), so Gemini's fixed-slot EMR rests on 92 articles and differs slightly from the main-text value, which counts every returned output. The main-text comparison (run-count- and identity-matched baseline, every returned output; \texttt{analysis/blindage/fixedslot\_paired.json}) is the reference comparison. With that file's baseline hashed on the raw response text instead of the parsed JSON, the relative changes are $-3.0\%$ (Claude), $-47.9\%$ (Gemini) and $+23.8\%$ (GPT-4.1). Provider pinned per call: Claude Sonnet~4.5 via Anthropic API; Gemini~2.5~Pro via Google API; GPT-4.1 via OpenAI API.}
 \label{tab:fixedslot_supp}
 \begin{tabular}{lccccc}
 \toprule
@@ -712,14 +710,14 @@ GPT-4.1           & 0.150 & 0.444 & \textbf{$+0.294$} & \textbf{$+196.3\%$} & 0.
 \end{table}
 
 % ============================================================
-\section{LLaMA Cloud Desconfound Experiment Details}
+\section{Same-Weights Comparison: Details}
 \label{sec:desconfound_supp}
 
-The desconfound experiment (main text \S4.8) serves the identical model weights via cloud and compares against the local Ollama deployment.
+The same-weights comparison (main text, Section~\ref{main-sec:desconfound}) serves the Llama~3 8B Instruct checkpoint via cloud and compares it with the local Ollama deployment, which serves a 4-bit (Q4\_0) quantization of that checkpoint. In the deposited call records of the cloud arm the provider field reads \texttt{groq}, a fixed string left in the script; the run cards record the route actually used (OpenRouter to DeepInfra), and no reported number reads the provider field (\texttt{analysis/blindage/samemodel\_payload.json}).
 
 \begin{table}[htbp]
 \centering
-\caption{Desconfound experimental configuration. Both deployments use the SAME model weights, prompt, seed=42, and temperature=0; only the serving infrastructure differs.}
+\caption{Same-weights comparison: configuration. Both deployments use the same checkpoint (4-bit locally, undisclosed precision in the cloud), prompt source file, seed${=}$42 and temperature${=}$0; the request payloads are not byte-identical (main text, Section~\ref{main-sec:desconfound}).}
 \label{tab:desconfound_supp}
 \begin{tabular}{lll}
 \toprule
@@ -766,7 +764,7 @@ Date range          & Feb 11--13, 2026   & Apr 25--28, 2026 \\
 \section{Silver Standards and Cross-Validation}
 \label{sec:silvers_supp}
 
-Two independent silver standards complement the heuristic gold standard for the 100 INCLUDE articles.
+Two independent silver standards complement the rule's labels for the 100 INCLUDE articles.
 
 \subsection{Silver-Internal: Majority Vote of Six Evaluated Models}
 
@@ -1018,7 +1016,7 @@ We re-ran the propagation analysis using DerSimonian--Laird random-effects pooli
 The number of articles actually entering each pool is smaller than the 100 INCLUDE articles and varies by stack, because an article contributes only when the run returned an effect estimate and a usable interval: $k$ ranges from 39 (Gemini) to 63 (LLaMA) across the 60~combinations, and this variation in $k$ is itself a consequence of extraction non-determinism rather than a property of the corpus.
 Across all 60~combinations, the pooled RR ranged from 1.015 to 1.038 (mean 1.026); the within-model range across runs was small in absolute terms (Gemini 0.0058, GPT-4.1 0.0058, and zero for Claude, whose first usable estimate per article was identical in every run) and remained within the bootstrap CI of any single run.
 Heterogeneity was high and stable throughout: $I^2$ ranged from 90.97\% to 94.71\% and $\tau^2$ from $2.5{\times}10^{-5}$ to $2.9{\times}10^{-4}$ across the 60~combinations, so the random-effects specification is the appropriate one and the pooled estimate should be read as an average effect across a heterogeneous set rather than as a common effect.
-\textbf{No run-pair within any model produced a 95\% random-effects CI that crossed the null} in the full-corpus pooling, confirming that, in a well-powered, large-$k$ meta-analysis with a strong aggregate signal, LLM non-determinism does not flip the meta-analytic conclusion.
+\textbf{No run-pair within any model produced a 95\% random-effects CI that crossed the null} in the full-corpus pooling, so at the full-corpus $k$ run-to-run variation did not move the pooled interval across the null; the pooled set is not harmonized for increment, lag, outcome or pollutant and is not an effect estimate.
 
 This robustness, however, depends critically on $k$.
 We subsampled the corpus to plausible small-literature scenarios ($k\in\{10,15,20,30\}$, $N{=}200$ random subsamples per $k$, one generator per stack seeded from 42 and the stack identifier) and computed random-effects pooled estimates for each of the 10 LLM runs.
@@ -1144,13 +1142,15 @@ Screening accuracy / sensitivity / specificity & 0.931 / 0.862 / 1.000 & 0.935 /
 Extraction EMR [95\% CI]           & 0.050 [0.010, 0.090] & 0.470 [0.370, 0.570] \\
 Estimate count stability           & 0.880 & 0.978 \\
 Study location field EMR           & 0.780 & 0.960 \\
-Fixed-slot EMR (3 runs) / matched baseline & 0.030 / 0.101 & 0.640 / 0.660 \\
-Fixed-slot relative change (matched) & $-70.2\%$ & $-3.0\%$ \\
+Fixed-slot EMR (3 runs) / matched baseline$^{*}$ & 0.030 / 0.107 & 0.640 / 0.678 \\
+Fixed-slot relative change (matched)$^{*}$ & $-72.1\%$ & $-5.6\%$ \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\noindent Moving from 1.0 to 0 raised extraction EMR nearly tenfold and removed most of the structural variation in the number of extracted estimates, yet more than half of the articles still received a different complete extraction across the ten runs. The fixed-slot result changes qualitatively: at~1.0 the single-estimate prompt appeared to degrade reproducibility by 70\%, at~0 it leaves it essentially unchanged, so the degradation seen at~1.0 belongs to sampling at the top of the temperature range rather than to the prompt.
+\noindent $^{*}$Run-count- and identity-matched baseline, as in the main-text fixed-slot table.
+
+\noindent Extraction EMR was nearly ten times higher in the temperature-0 execution, and most of the structural variation in the number of extracted estimates disappeared, yet more than half of the articles still received a different complete extraction across the ten runs. The fixed-slot result also differs between the two executions ($-72\%$ against $-6\%$). The two executions differ in both temperature and date, so neither change can be assigned to either.
 
 % ============================================================
 \section{Decision-Model Stack (Jev): Details}

@@ -14,13 +14,13 @@ We are submitting the manuscript above for consideration as a Research Article.
 
 Environmental evidence bases and regulatory reviews are increasingly assembled with the help of large language models. When a pipeline step is delegated to an LLM, that step becomes software — but software with a property the components around it do not have: running it twice on the same input does not guarantee the same output, and whether it happens to behave deterministically depends on how the model is served rather than on which model was named in the methods.
 
-We audit that property across a complete two-stage extraction pipeline. Six deployment stacks — three served locally through Ollama, three through commercial APIs — each executed ten times over a 500-abstract corpus on fine particulate matter and respiratory health, screening and then extracting structured data. 35,636 of 36,000 calls completed. A decision model that returns option probabilities instead of sampled text was added on the screening stage.
+We audit that property across the screening and extraction stages of an evidence pipeline. Six deployment stacks — three served locally through Ollama, three through commercial APIs — each executed ten times over a 500-abstract corpus on fine particulate matter and respiratory health, screening and then extracting structured data. 35,636 of 36,000 calls completed. A decision model that returns option probabilities instead of sampled text was added on the screening stage.
 
 Five results:
 
 1. **Local stacks returned bit-identical output across all ten runs; API-served stacks reached an extraction Exact Match Rate of 0.150 to 0.470** at temperature zero, verified in the client code. The most reproducible of the three is the one that accepts no seed.
 
-2. **The same weights, served differently, disagree.** Running `meta-llama/llama-3-8b-instruct` locally and through a cloud endpoint produced systematic disagreement on 167 of the 430 abstracts where both returned a decision, all in the same direction. The variation is a property of the serving stack, not of the model.
+2. **The same model, served differently, behaves differently.** Llama 3 8B Instruct reproduced exactly on the local stack and varied across runs when served through a cloud endpoint. The two arms also differ in weight precision and request construction, which the paper states, so the result shows that small model size does not confer determinism; it does not isolate the serving layer.
 
 3. **Constraining the output shape is not a fix.** Against a run-count-matched baseline, a fixed-slot prompt degraded reproducibility on one stack, improved it on another and left the third unchanged.
 
@@ -30,7 +30,7 @@ Five results:
 
 ## Why EMS
 
-The journal's scope covers quality assurance and evaluation of models, data and procedures, with reliability and validation backed by quantitative results. That is the register of this paper: it does not advance a hydrological or epidemiological claim, it measures whether a procedure now entering environmental workflows behaves as its users assume.
+Model and software evaluation is part of the journal's stated scope, and that is the register of this paper: it advances no epidemiological claim; it measures whether a procedure now entering environmental workflows behaves as its users assume.
 
 Three papers in EMS bear directly on this one.
 
@@ -44,9 +44,9 @@ We also note **Zhu et al. (2025, 186:106323)**, whose framework diagnoses the in
 
 ## What we release
 
-`llm-repro-harness` places any set of endpoints behind one runner interface and takes the corpus, prompts, schema, endpoint list, decoding parameters and repetition count from configuration rather than code. It emits a run card per call and computes Exact Match Rate with bootstrap intervals, pairwise disagreement, inter-run Fleiss' κ, schema conformance, and the propagation of run-to-run variation into a pooled estimate.
+`llm-repro-harness` runs a task repeatedly against each configured endpoint through one runner interface, with corpus, prompts and schema held in files. It emits a call record per call and a run card per run, and computes Exact Match Rate with bootstrap intervals, pairwise disagreement, inter-run Fleiss' κ, schema conformance, and the propagation of run-to-run variation into a pooled estimate.
 
-We are aware that per-vendor numbers age. Stacks observed in a given window will not survive the next provider-side update---one of ours is now scheduled for retirement--- and that is the reason the instrument exists rather than an objection to it: a figure that expires needs a procedure that can be re-run. The environmental evidence task here exercises the harness on a case where the downstream consequence is measurable. It is the demonstration, not the scope.
+We are aware that per-vendor numbers age. Stacks observed in a given window will not survive the next provider-side update---one of ours is now scheduled for retirement--- and that is the reason the instrument exists rather than an objection to it: a figure that expires needs a procedure that can be re-run. Every result reported is scoped to the environmental evidence task on which it was obtained.
 
 Code: https://github.com/Roverlucas/llm-evidence-synthesis-reproducibility (MIT). Data and frozen artefacts: OSF `vr934`, https://doi.org/10.17605/OSF.IO/VR934 (CC BY 4.0). Human labeling protocol as an immutable pre-registration: https://doi.org/10.17605/OSF.IO/FGN3E.
 
@@ -60,7 +60,7 @@ We would rather you meet these here than find them in the manuscript.
 
 ## Declarations
 
-The work is original, is not under consideration elsewhere, and all authors have approved the submission. We declare no competing interests. AI-based tools were used for code development and manuscript editing; the timeline separating result computation from writing assistance is documented in the manuscript and auditable in the public commit history.
+The work is original, is not under consideration elsewhere, and all authors have approved the submission. We declare no competing interests. AI-based tools were used for code development and language editing, as declared in the manuscript. A related manuscript describing the provenance protocol (Rover et al., Nature Communications, in press) is cited in the text; the present study applies that protocol to a two-stage environmental evidence pipeline and reports no data from it.
 
 Thank you for considering our work.
 
