@@ -80,31 +80,31 @@
       "estimate_count_stability": 1.0
     }
   },
-  "claude-sonnet-4-5": {
+  "claude-sonnet-4-5-t0": {
     "screening": {
-      "emr": 0.974,
-      "ci_lower": 0.96,
-      "ci_upper": 0.986,
+      "emr": 0.99,
+      "ci_lower": 0.98,
+      "ci_upper": 0.998,
       "n_abstracts": 500,
-      "flip_rate": 0.026000000000000023,
-      "mean_agreement": 0.9937999999999999,
-      "accuracy": 0.9313885996665375,
-      "sensitivity": 0.8615281789066767,
+      "flip_rate": 0.010000000000000009,
+      "mean_agreement": 0.9977999999999999,
+      "accuracy": 0.9349295555785766,
+      "sensitivity": 0.8676439003436427,
       "specificity": 1.0
     },
     "extraction": {
-      "emr": 0.05,
-      "ci_lower": 0.01,
-      "ci_upper": 0.09,
+      "emr": 0.47,
+      "ci_lower": 0.37,
+      "ci_upper": 0.57,
       "n_articles": 100,
       "field_emr": {
-        "study_design": 0.99,
-        "study_location": 0.78,
-        "study_period": 0.99,
-        "population": 0.96,
-        "sample_size": 0.97
+        "study_design": 1.0,
+        "study_location": 0.96,
+        "study_period": 1.0,
+        "population": 0.99,
+        "sample_size": 1.0
       },
-      "estimate_count_stability": 0.8804347826086957
+      "estimate_count_stability": 0.9775280898876404
     }
   },
   "gemini-2.5-pro": {

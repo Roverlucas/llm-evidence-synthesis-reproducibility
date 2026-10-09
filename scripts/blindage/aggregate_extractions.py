@@ -11,13 +11,17 @@ from __future__ import annotations
 import json
 import os
 from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
+from arms import CLAUDE  # noqa: E402  (headline Claude arm, decision 41)
 
 ROOT = Path(__file__).resolve().parents[2]
 RAW = ROOT / "data" / "raw_outputs"
 OUT = ROOT / "analysis" / "blindage" / "extraction_long.json"
 
 MODELS = ["llama3-8b", "mistral-7b", "gemma2-9b",
-          "claude-sonnet-4-5", "gemini-2.5-pro", "gpt-4.1"]
+          CLAUDE, "gemini-2.5-pro", "gpt-4.1"]
 
 
 def covariates_str(cov) -> str:

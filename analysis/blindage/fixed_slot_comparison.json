@@ -1,18 +1,18 @@
 {
   "method": "Compare fixed-slot extraction (single primary_estimate) vs variable-length array baseline.",
   "comparison_per_model": {
-    "claude-sonnet-4-5-fixedslot": {
-      "baseline_model": "claude-sonnet-4-5",
-      "baseline_emr_variable_length": 0.05,
+    "claude-sonnet-4-5-t0-fixedslot": {
+      "baseline_model": "claude-sonnet-4-5-t0",
+      "baseline_emr_variable_length": 0.47,
       "baseline_n_articles": 100,
       "baseline_n_runs": 10,
-      "fixed_slot_emr": 0.03,
+      "fixed_slot_emr": 0.64,
       "fixed_slot_n_articles": 100,
       "fixed_slot_n_runs": 3,
-      "delta_emr_absolute": -0.02,
-      "delta_emr_relative_pct": -40.0,
-      "fixed_slot_pairwise_disagreement": 0.8833,
-      "interpretation": "FIXED-SLOT MINIMALLY CHANGES NON-DETERMINISM"
+      "delta_emr_absolute": 0.17,
+      "delta_emr_relative_pct": 36.17,
+      "fixed_slot_pairwise_disagreement": 0.2633,
+      "interpretation": "FIXED-SLOT REDUCES NON-DETERMINISM"
     },
     "gemini-2.5-pro-fixedslot": {
       "baseline_model": "gemini-2.5-pro",
@@ -42,7 +42,7 @@
     }
   },
   "summary": {
-    "mean_delta_emr": 0.0864,
-    "interpretation_overall": "Across 3 cloud models, fixed-slot extraction changes EMR by an average of +0.0864. This is a minor change, suggesting that prompt-design is NOT the sole contributor to extraction non-determinism."
+    "mean_delta_emr": 0.1497,
+    "interpretation_overall": "Across 3 cloud models, fixed-slot extraction changes EMR by an average of +0.1497. This is a meaningful reduction in non-determinism, suggesting that prompt-design IS a major contributor to extraction non-determinism."
   }
 }

@@ -1,0 +1,50 @@
+{
+  "claude-sonnet-4-5": {
+    "screening": {
+      "emr": 0.974,
+      "ci_lower": 0.96,
+      "ci_upper": 0.986,
+      "n_abstracts": 500,
+      "flip_rate": 0.026000000000000023,
+      "mean_agreement": 0.9937999999999999,
+      "accuracy": 0.9313885996665375,
+      "sensitivity": 0.8615281789066767,
+      "specificity": 1.0
+    },
+    "extraction": {
+      "emr": 0.05,
+      "ci_lower": 0.01,
+      "ci_upper": 0.09,
+      "n_articles": 100,
+      "field_emr": {
+        "study_design": 0.99,
+        "study_location": 0.78,
+        "study_period": 0.99,
+        "population": 0.96,
+        "sample_size": 0.97
+      },
+      "estimate_count_stability": 0.8804347826086957
+    }
+  },
+  "jev": {
+    "screening": {
+      "emr": 0.956,
+      "ci_lower": 0.938,
+      "ci_upper": 0.972,
+      "n_abstracts": 500,
+      "flip_rate": 0.04400000000000004,
+      "mean_agreement": 0.9907999999999999,
+      "accuracy": 0.8878869346733668,
+      "sensitivity": 0.7755454545454545,
+      "specificity": 1.0
+    },
+    "extraction": {
+      "emr": null,
+      "ci_lower": null,
+      "ci_upper": null,
+      "n_articles": null,
+      "field_emr": null,
+      "estimate_count_stability": null
+    }
+  }
+}

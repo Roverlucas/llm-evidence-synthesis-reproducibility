@@ -26,8 +26,8 @@
     },
     "effect_measure": {
       "n_compared": 84,
-      "n_match": 62,
-      "agreement": 0.7381,
+      "n_match": 61,
+      "agreement": 0.7262,
       "n_only_internal": 0,
       "n_only_external": 16
     },
@@ -40,15 +40,15 @@
     },
     "exposure_increment": {
       "n_compared": 84,
-      "n_match": 67,
-      "agreement": 0.7976,
+      "n_match": 66,
+      "agreement": 0.7857,
       "n_only_internal": 0,
       "n_only_external": 16
     },
     "lag": {
       "n_compared": 75,
-      "n_match": 49,
-      "agreement": 0.6533,
+      "n_match": 48,
+      "agreement": 0.64,
       "n_only_internal": 0,
       "n_only_external": 25
     }

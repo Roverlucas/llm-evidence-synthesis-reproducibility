@@ -795,53 +795,53 @@
         "pct_runs_HKSJ_crosses_null": 0.0
       }
     },
-    "claude-sonnet-4-5": {
+    "claude-sonnet-4-5-t0": {
       "runs": {
         "1": {
-          "k_studies": 48,
+          "k_studies": 47,
           "pooled_rr_FE": 1.002,
           "ci_FE": [
             1.0019,
             1.0021
           ],
-          "pooled_rr_RE": 1.0125,
+          "pooled_rr_RE": 1.0151,
           "ci_RE_DL": [
-            1.0106,
-            1.0145
+            1.0127,
+            1.0175
           ],
           "ci_RE_HKSJ": [
-            1.0071,
-            1.0181
+            1.0086,
+            1.0216
           ],
-          "se_re_dl": 0.00096,
-          "se_re_hksj": 0.002701,
-          "t_crit_hksj": 2.0117,
-          "tau2": 1.4e-05,
-          "I2_pct": 93.18,
+          "se_re_dl": 0.001202,
+          "se_re_hksj": 0.003191,
+          "t_crit_hksj": 2.0129,
+          "tau2": 2.5e-05,
+          "I2_pct": 93.33,
           "ci_DL_crosses_null": false,
           "ci_HKSJ_crosses_null": false
         },
         "2": {
-          "k_studies": 46,
-          "pooled_rr_FE": 1.0041,
+          "k_studies": 47,
+          "pooled_rr_FE": 1.002,
           "ci_FE": [
-            1.0036,
-            1.0045
+            1.0019,
+            1.0021
           ],
-          "pooled_rr_RE": 1.0173,
+          "pooled_rr_RE": 1.0151,
           "ci_RE_DL": [
-            1.0143,
-            1.0204
+            1.0127,
+            1.0175
           ],
           "ci_RE_HKSJ": [
-            1.0096,
-            1.0251
+            1.0086,
+            1.0216
           ],
-          "se_re_dl": 0.001524,
-          "se_re_hksj": 0.003801,
-          "t_crit_hksj": 2.0141,
-          "tau2": 4.6e-05,
-          "I2_pct": 92.48,
+          "se_re_dl": 0.001202,
+          "se_re_hksj": 0.003191,
+          "t_crit_hksj": 2.0129,
+          "tau2": 2.5e-05,
+          "I2_pct": 93.33,
           "ci_DL_crosses_null": false,
           "ci_HKSJ_crosses_null": false
         },
@@ -852,140 +852,140 @@
             1.0019,
             1.0021
           ],
-          "pooled_rr_RE": 1.0127,
+          "pooled_rr_RE": 1.0151,
           "ci_RE_DL": [
-            1.0108,
-            1.0147
+            1.0127,
+            1.0175
           ],
           "ci_RE_HKSJ": [
-            1.007,
-            1.0184
+            1.0086,
+            1.0216
           ],
-          "se_re_dl": 0.000981,
-          "se_re_hksj": 0.00279,
+          "se_re_dl": 0.001202,
+          "se_re_hksj": 0.003191,
           "t_crit_hksj": 2.0129,
-          "tau2": 1.4e-05,
-          "I2_pct": 93.26,
+          "tau2": 2.5e-05,
+          "I2_pct": 93.33,
           "ci_DL_crosses_null": false,
           "ci_HKSJ_crosses_null": false
         },
         "4": {
-          "k_studies": 50,
+          "k_studies": 47,
           "pooled_rr_FE": 1.002,
           "ci_FE": [
             1.0019,
             1.0021
           ],
-          "pooled_rr_RE": 1.0124,
+          "pooled_rr_RE": 1.0151,
           "ci_RE_DL": [
-            1.0105,
-            1.0142
+            1.0127,
+            1.0175
           ],
           "ci_RE_HKSJ": [
-            1.0071,
-            1.0176
+            1.0086,
+            1.0216
           ],
-          "se_re_dl": 0.000935,
-          "se_re_hksj": 0.002588,
-          "t_crit_hksj": 2.0096,
-          "tau2": 1.4e-05,
-          "I2_pct": 92.98,
+          "se_re_dl": 0.001202,
+          "se_re_hksj": 0.003191,
+          "t_crit_hksj": 2.0129,
+          "tau2": 2.5e-05,
+          "I2_pct": 93.33,
           "ci_DL_crosses_null": false,
           "ci_HKSJ_crosses_null": false
         },
         "5": {
-          "k_studies": 50,
+          "k_studies": 47,
           "pooled_rr_FE": 1.002,
           "ci_FE": [
             1.0019,
             1.0021
           ],
-          "pooled_rr_RE": 1.0161,
+          "pooled_rr_RE": 1.0151,
           "ci_RE_DL": [
-            1.0137,
-            1.0186
+            1.0127,
+            1.0175
           ],
           "ci_RE_HKSJ": [
-            1.0099,
-            1.0225
+            1.0086,
+            1.0216
           ],
-          "se_re_dl": 0.001225,
-          "se_re_hksj": 0.003088,
-          "t_crit_hksj": 2.0096,
-          "tau2": 2.9e-05,
-          "I2_pct": 93.96,
+          "se_re_dl": 0.001202,
+          "se_re_hksj": 0.003191,
+          "t_crit_hksj": 2.0129,
+          "tau2": 2.5e-05,
+          "I2_pct": 93.33,
           "ci_DL_crosses_null": false,
           "ci_HKSJ_crosses_null": false
         },
         "6": {
-          "k_studies": 49,
+          "k_studies": 47,
           "pooled_rr_FE": 1.002,
           "ci_FE": [
             1.0019,
             1.0021
           ],
-          "pooled_rr_RE": 1.0125,
+          "pooled_rr_RE": 1.0151,
           "ci_RE_DL": [
-            1.0106,
-            1.0143
+            1.0127,
+            1.0175
           ],
           "ci_RE_HKSJ": [
-            1.0071,
-            1.0178
+            1.0086,
+            1.0216
           ],
-          "se_re_dl": 0.000945,
-          "se_re_hksj": 0.002636,
-          "t_crit_hksj": 2.0106,
-          "tau2": 1.4e-05,
-          "I2_pct": 93.07,
+          "se_re_dl": 0.001202,
+          "se_re_hksj": 0.003191,
+          "t_crit_hksj": 2.0129,
+          "tau2": 2.5e-05,
+          "I2_pct": 93.33,
           "ci_DL_crosses_null": false,
           "ci_HKSJ_crosses_null": false
         },
         "7": {
-          "k_studies": 50,
+          "k_studies": 47,
           "pooled_rr_FE": 1.002,
           "ci_FE": [
             1.0019,
             1.0021
           ],
-          "pooled_rr_RE": 1.0164,
+          "pooled_rr_RE": 1.0151,
           "ci_RE_DL": [
-            1.0139,
-            1.0188
+            1.0127,
+            1.0175
           ],
           "ci_RE_HKSJ": [
-            1.01,
-            1.0228
+            1.0086,
+            1.0216
           ],
-          "se_re_dl": 0.001229,
-          "se_re_hksj": 0.003128,
-          "t_crit_hksj": 2.0096,
-          "tau2": 2.7e-05,
-          "I2_pct": 93.55,
+          "se_re_dl": 0.001202,
+          "se_re_hksj": 0.003191,
+          "t_crit_hksj": 2.0129,
+          "tau2": 2.5e-05,
+          "I2_pct": 93.33,
           "ci_DL_crosses_null": false,
           "ci_HKSJ_crosses_null": false
         },
         "8": {
-          "k_studies": 49,
+          "k_studies": 47,
           "pooled_rr_FE": 1.002,
           "ci_FE": [
             1.0019,
             1.0021
           ],
-          "pooled_rr_RE": 1.0145,
+          "pooled_rr_RE": 1.0151,
           "ci_RE_DL": [
-            1.0122,
-            1.0167
+            1.0127,
+            1.0175
           ],
           "ci_RE_HKSJ": [
-            1.0084,
-            1.0207
+            1.0086,
+            1.0216
           ],
-          "se_re_dl": 0.001133,
-          "se_re_hksj": 0.00302,
-          "t_crit_hksj": 2.0106,
-          "tau2": 2.2e-05,
-          "I2_pct": 93.01,
+          "se_re_dl": 0.001202,
+          "se_re_hksj": 0.003191,
+          "t_crit_hksj": 2.0129,
+          "tau2": 2.5e-05,
+          "I2_pct": 93.33,
           "ci_DL_crosses_null": false,
           "ci_HKSJ_crosses_null": false
         },
@@ -996,63 +996,63 @@
             1.0019,
             1.0021
           ],
-          "pooled_rr_RE": 1.0154,
+          "pooled_rr_RE": 1.0151,
           "ci_RE_DL": [
-            1.0129,
-            1.0179
+            1.0127,
+            1.0175
           ],
           "ci_RE_HKSJ": [
-            1.0087,
-            1.0221
+            1.0086,
+            1.0216
           ],
-          "se_re_dl": 0.001232,
-          "se_re_hksj": 0.003273,
+          "se_re_dl": 0.001202,
+          "se_re_hksj": 0.003191,
           "t_crit_hksj": 2.0129,
           "tau2": 2.5e-05,
-          "I2_pct": 93.28,
+          "I2_pct": 93.33,
           "ci_DL_crosses_null": false,
           "ci_HKSJ_crosses_null": false
         },
         "10": {
-          "k_studies": 46,
-          "pooled_rr_FE": 1.0034,
+          "k_studies": 47,
+          "pooled_rr_FE": 1.002,
           "ci_FE": [
-            1.003,
-            1.0039
+            1.0019,
+            1.0021
           ],
-          "pooled_rr_RE": 1.0181,
+          "pooled_rr_RE": 1.0151,
           "ci_RE_DL": [
-            1.015,
-            1.0213
+            1.0127,
+            1.0175
           ],
           "ci_RE_HKSJ": [
-            1.0102,
-            1.0261
+            1.0086,
+            1.0216
           ],
-          "se_re_dl": 0.001572,
-          "se_re_hksj": 0.003864,
-          "t_crit_hksj": 2.0141,
-          "tau2": 4.8e-05,
-          "I2_pct": 92.84,
+          "se_re_dl": 0.001202,
+          "se_re_hksj": 0.003191,
+          "t_crit_hksj": 2.0129,
+          "tau2": 2.5e-05,
+          "I2_pct": 93.33,
           "ci_DL_crosses_null": false,
           "ci_HKSJ_crosses_null": false
         }
       },
       "summary": {
         "n_runs": 10,
-        "mean_FE_pooled_rr": 1.0024,
-        "range_FE_pooled_rr": 0.0021,
-        "mean_RE_pooled_rr": 1.0148,
-        "range_RE_pooled_rr": 0.0058,
-        "mean_I2_pct": 93.16,
+        "mean_FE_pooled_rr": 1.002,
+        "range_FE_pooled_rr": 0.0,
+        "mean_RE_pooled_rr": 1.0151,
+        "range_RE_pooled_rr": 0.0,
+        "mean_I2_pct": 93.33,
         "mean_tau2": 2.5e-05,
-        "mean_DL_ci_lower": 1.0125,
-        "mean_DL_ci_upper": 1.0171,
-        "mean_HKSJ_ci_lower": 1.0085,
-        "mean_HKSJ_ci_upper": 1.0211,
-        "mean_DL_ci_width": 0.0047,
-        "mean_HKSJ_ci_width": 0.0126,
-        "HKSJ_DL_width_ratio": 2.701,
+        "mean_DL_ci_lower": 1.0127,
+        "mean_DL_ci_upper": 1.0175,
+        "mean_HKSJ_ci_lower": 1.0086,
+        "mean_HKSJ_ci_upper": 1.0216,
+        "mean_DL_ci_width": 0.0048,
+        "mean_HKSJ_ci_width": 0.013,
+        "HKSJ_DL_width_ratio": 2.726,
         "n_runs_DL_crosses_null": 0,
         "n_runs_HKSJ_crosses_null": 0,
         "pct_runs_DL_crosses_null": 0.0,
@@ -1588,6 +1588,6 @@
       }
     }
   },
-  "sha256_self": "7ab7b9b963f989cd91573e3a947382e00d8fcbc6fdff807750757e510dbea104",
+  "sha256_self": "8412b7d60b3bd3ee0489f6f41945af638bed2640675985e7c0c288030b7fd61f",
   "seed": 42
 }

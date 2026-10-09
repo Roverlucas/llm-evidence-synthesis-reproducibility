@@ -27,13 +27,17 @@ from collections import defaultdict
 from pathlib import Path
 
 from scipy import stats
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
+from arms import CLAUDE  # noqa: E402  (headline Claude arm, decision 41)
 
 ROOT = Path(__file__).resolve().parents[2]
 INPUT = ROOT / "analysis" / "blindage" / "extraction_long.json"
 OUT = ROOT / "analysis" / "blindage" / "small_literature_sim.json"
 
 MODELS = ["llama3-8b", "mistral-7b", "gemma2-9b",
-          "claude-sonnet-4-5", "gemini-2.5-pro", "gpt-4.1"]
+          CLAUDE, "gemini-2.5-pro", "gpt-4.1"]
 
 SEED = 42
 K_VALUES = [10, 15, 20, 30]
@@ -135,8 +139,6 @@ def main() -> None:
     for r in rows:
         rows_per_model[r["model"]][r["run_id"]].append(r)
 
-    rng = random.Random(SEED)
-
     report = {
         "metadata": {
             "k_values": K_VALUES,
@@ -152,6 +154,9 @@ def main() -> None:
     }
 
     for model in MODELS:
+        # One generator per model, so the subsamples drawn for one stack never depend
+        # on how many items another stack contributed earlier in the loop.
+        rng = random.Random(f"{SEED}:{model}")
         report["models"][model] = {}
         runs_dict = rows_per_model[model]
         if not runs_dict:

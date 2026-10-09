@@ -1,12 +1,12 @@
 {
   "definition": "conformance = share of returned outputs that validate against the stage JSON schema, over all runs. Calls that returned no output at all are counted separately as 'no_output' and excluded from the conformance denominator.",
-  "sha256_self": "806bcdf421b86f41d40785c2bb9c1b9e90dd64dd72b92696167a37e63d3c9498",
+  "sha256_self": "7cf0746152b701dd884221666fffebde5d2750017ac766d96da914200e9f84ce",
   "stacks": {
-    "claude-sonnet-4-5": {
+    "claude-sonnet-4-5-t0": {
       "extraction": {
         "calls": 1000,
-        "conformance": 0.704,
-        "conforming": 704,
+        "conformance": 0.724,
+        "conforming": 724,
         "no_output": 0,
         "top_failure_modes": [
           {
@@ -15,18 +15,18 @@
           },
           {
             "error": "None is not of type 'string'",
-            "n": 42
+            "n": 23
           },
           {
-            "error": "-0.09 is less than the minimum of 0.1",
+            "error": "0.05 is less than the minimum of 0.1",
             "n": 10
           }
         ]
       },
       "screening": {
         "calls": 5000,
-        "conformance": 1.0,
-        "conforming": 5000,
+        "conformance": 0.9996,
+        "conforming": 4998,
         "no_output": 0,
         "top_failure_modes": []
       }

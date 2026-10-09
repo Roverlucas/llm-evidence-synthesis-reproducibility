@@ -13,6 +13,9 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+from arms import CLAUDE  # noqa: E402  (headline Claude arm, decision 41)
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 RAW_DIR = BASE_DIR / "data" / "raw_outputs"
 OUT_DIR = BASE_DIR / "analysis"
@@ -21,7 +24,7 @@ MODELS = [
     "llama3-8b",
     "mistral-7b",
     "gemma2-9b",
-    "claude-sonnet-4-5",
+    CLAUDE,
     "gemini-2.5-pro",
     "gpt-4.1",
 ]
@@ -30,7 +33,7 @@ STAGES = ["screening", "extraction"]
 
 COST_TABLE = {
     "gpt-4.1": {"input_per_1m": 2.00, "output_per_1m": 8.00, "provider": "openai"},
-    "claude-sonnet-4-5": {"input_per_1m": 3.00, "output_per_1m": 15.00, "provider": "anthropic"},
+    CLAUDE: {"input_per_1m": 3.00, "output_per_1m": 15.00, "provider": "anthropic"},
     "gemini-2.5-pro": {"input_per_1m": 0.00, "output_per_1m": 0.00, "provider": "google", "note": "Free tier used"},
     "llama3-8b": {"input_per_1m": 0.00, "output_per_1m": 0.00, "provider": "ollama", "note": "Local inference"},
     "mistral-7b": {"input_per_1m": 0.00, "output_per_1m": 0.00, "provider": "ollama", "note": "Local inference"},
@@ -271,7 +274,7 @@ def main():
             "design": "6 models x 2 stages x 10 runs x 500 calls = 60,000 LLM calls",
             "cost_assumptions": {
                 "gpt-4.1": "$2.00/1M input, $8.00/1M output",
-                "claude-sonnet-4-5": "$3.00/1M input, $15.00/1M output",
+                CLAUDE: "$3.00/1M input, $15.00/1M output",
                 "gemini-2.5-pro": "Free tier (rate-limited)",
                 "local_models": "Electricity only: M4 ~15W, $0.10/kWh",
             },

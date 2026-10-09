@@ -27,13 +27,17 @@ from pathlib import Path
 
 import numpy as np
 from statsmodels.stats.contingency_tables import mcnemar
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
+from arms import CLAUDE  # noqa: E402  (headline Claude arm, decision 41)
 
 ROOT = Path(__file__).resolve().parents[2]
 REPRO = ROOT / "analysis" / "reproducibility_results.json"
 OUT = ROOT / "analysis" / "blindage" / "multiple_comparison.json"
 RAW_DIR = ROOT / "data" / "raw_outputs"
 
-CLOUD_MODELS = ["claude-sonnet-4-5", "gemini-2.5-pro", "gpt-4.1"]
+CLOUD_MODELS = [CLAUDE, "gemini-2.5-pro", "gpt-4.1"]
 FIELDS_EXTRACTION = ["study_design", "study_location", "study_period", "population", "sample_size"]
 NUM_RUNS = 10
 SEED = 42  # deterministic ordering only; mcnemar itself has no RNG

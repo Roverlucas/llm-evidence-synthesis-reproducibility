@@ -16,12 +16,16 @@ import re
 from collections import defaultdict
 from itertools import combinations
 from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
+from arms import CLAUDE  # noqa: E402  (headline Claude arm, decision 41)
 
 ROOT = Path(__file__).resolve().parents[2]
 RAW = ROOT / "data" / "raw_outputs"
 OUT = ROOT / "analysis" / "blindage" / "rationale_similarity.json"
 
-CLOUD_MODELS = ["claude-sonnet-4-5", "gemini-2.5-pro", "gpt-4.1"]
+CLOUD_MODELS = [CLAUDE, "gemini-2.5-pro", "gpt-4.1"]
 LOCAL_MODELS = ["llama3-8b", "mistral-7b", "gemma2-9b"]
 
 

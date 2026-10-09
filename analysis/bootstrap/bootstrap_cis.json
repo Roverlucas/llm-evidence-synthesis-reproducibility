@@ -47,18 +47,18 @@
       "n_bootstrap": 10000
     }
   },
-  "claude-sonnet-4-5": {
+  "claude-sonnet-4-5-t0": {
     "screening": {
-      "emr": 0.974,
-      "ci_lower": 0.96,
-      "ci_upper": 0.986,
+      "emr": 0.99,
+      "ci_lower": 0.98,
+      "ci_upper": 0.998,
       "n_items": 500,
       "n_bootstrap": 10000
     },
     "extraction": {
-      "emr": 0.05,
-      "ci_lower": 0.01,
-      "ci_upper": 0.09,
+      "emr": 0.47,
+      "ci_lower": 0.37,
+      "ci_upper": 0.57,
       "n_items": 100,
       "n_bootstrap": 10000
     }
@@ -94,5 +94,31 @@
       "n_items": 100,
       "n_bootstrap": 10000
     }
+  },
+  "claude-sonnet-4-5": {
+    "screening": {
+      "emr": 0.974,
+      "ci_lower": 0.96,
+      "ci_upper": 0.986,
+      "n_items": 500,
+      "n_bootstrap": 10000
+    },
+    "extraction": {
+      "emr": 0.05,
+      "ci_lower": 0.01,
+      "ci_upper": 0.09,
+      "n_items": 100,
+      "n_bootstrap": 10000
+    }
+  },
+  "jev": {
+    "screening": {
+      "emr": 0.956,
+      "ci_lower": 0.938,
+      "ci_upper": 0.972,
+      "n_items": 500,
+      "n_bootstrap": 10000
+    },
+    "extraction": null
   }
 }

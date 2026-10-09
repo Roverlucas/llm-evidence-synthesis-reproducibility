@@ -45,14 +45,14 @@
         "recommended_reporting": "EMR = 1.000  (non-match rate $\\leq$0.030, 95% upper bound, n=100)"
       }
     },
-    "claude-sonnet-4-5": {
+    "claude-sonnet-4-5-t0": {
       "screening": {
-        "emr": 0.974,
+        "emr": 0.99,
         "n": 500,
         "note": "Not applicable: EMR < 1.0, standard bootstrap CI is informative"
       },
       "extraction": {
-        "emr": 0.05,
+        "emr": 0.47,
         "n": 100,
         "note": "Not applicable: EMR < 1.0, standard bootstrap CI is informative"
       }

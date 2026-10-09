@@ -38,6 +38,10 @@ from collections import defaultdict
 from pathlib import Path
 
 from scipy import stats
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
+from arms import CLAUDE  # noqa: E402  (headline Claude arm, decision 41)
 
 ROOT = Path(__file__).resolve().parents[2]
 LONG = ROOT / "analysis" / "blindage" / "extraction_long.json"
@@ -46,7 +50,7 @@ RULE3_OUT = ROOT / "analysis" / "blindage" / "rule_of_three.json"
 RE_OUT = ROOT / "analysis" / "blindage" / "random_effects_per_run.json"
 
 MODELS = ["llama3-8b", "mistral-7b", "gemma2-9b",
-          "claude-sonnet-4-5", "gemini-2.5-pro", "gpt-4.1"]
+          CLAUDE, "gemini-2.5-pro", "gpt-4.1"]
 
 SEED = 42  # deterministic ordering only; the inverse-variance pool has no RNG
 

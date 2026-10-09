@@ -22,12 +22,18 @@ import hashlib
 import json
 from itertools import combinations
 from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
+from arms import CLAUDE, CLAUDE_FIXEDSLOT, CLAUDE_T1, CLAUDE_T1_FIXEDSLOT  # noqa: E402  (headline Claude arm, decision 41)
 
 RAW = Path("data/raw_outputs")
 STACKS = {
-    "claude-sonnet-4-5": "claude-sonnet-4-5-fixedslot",
+    CLAUDE: CLAUDE_FIXEDSLOT,
     "gemini-2.5-pro": "gemini-2.5-pro-fixedslot",
     "gpt-4.1": "gpt-4.1-fixedslot",
+    # Temperature-1.0 Claude pair, reported in the supplement as a contrast (decision 41).
+    CLAUDE_T1: CLAUDE_T1_FIXEDSLOT,
 }
 
 

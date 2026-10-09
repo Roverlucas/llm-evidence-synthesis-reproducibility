@@ -14,6 +14,10 @@ from __future__ import annotations
 import json
 from collections import defaultdict
 from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
+from arms import CLAUDE  # noqa: E402  (headline Claude arm, decision 41)
 
 ROOT = Path(__file__).resolve().parents[2]
 REPRO = ROOT / "analysis" / "reproducibility_results.json"
@@ -21,7 +25,7 @@ PAIRWISE = ROOT / "analysis" / "blindage" / "pairwise_disagreement.json"
 OUT = ROOT / "analysis" / "blindage" / "seed_effect.json"
 
 WITH_SEED = ["gemini-2.5-pro", "gpt-4.1"]
-WITHOUT_SEED = ["claude-sonnet-4-5"]
+WITHOUT_SEED = [CLAUDE]
 LOCAL_WITH_SEED = ["llama3-8b", "mistral-7b", "gemma2-9b"]
 
 

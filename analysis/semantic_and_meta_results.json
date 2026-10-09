@@ -104,39 +104,39 @@
       "fuzzy_emr": 1.0
     }
   },
-  "claude-sonnet-4-5_semantic": {
+  "claude-sonnet-4-5-t0_semantic": {
     "n_items": 100,
     "field_results": {
       "study_design": {
-        "exact_emr": 0.99,
-        "normalized_emr": 0.99,
-        "fuzzy_emr": 0.99
+        "exact_emr": 1.0,
+        "normalized_emr": 1.0,
+        "fuzzy_emr": 1.0
       },
       "study_location": {
-        "exact_emr": 0.78,
-        "normalized_emr": 0.82,
-        "fuzzy_emr": 0.83
-      },
-      "study_period": {
-        "exact_emr": 0.99,
-        "normalized_emr": 0.99,
-        "fuzzy_emr": 0.99
-      },
-      "population": {
         "exact_emr": 0.96,
         "normalized_emr": 0.96,
         "fuzzy_emr": 0.96
       },
+      "study_period": {
+        "exact_emr": 1.0,
+        "normalized_emr": 1.0,
+        "fuzzy_emr": 1.0
+      },
+      "population": {
+        "exact_emr": 0.99,
+        "normalized_emr": 0.99,
+        "fuzzy_emr": 0.99
+      },
       "sample_size": {
-        "exact_emr": 0.97,
-        "normalized_emr": 0.97,
-        "fuzzy_emr": 0.97
+        "exact_emr": 1.0,
+        "normalized_emr": 1.0,
+        "fuzzy_emr": 1.0
       }
     },
     "whole_output": {
-      "exact_emr": 0.64,
-      "normalized_emr": 0.68,
-      "fuzzy_emr": 0.69
+      "exact_emr": 0.93,
+      "normalized_emr": 0.93,
+      "fuzzy_emr": 0.93
     }
   },
   "gemini-2.5-pro_semantic": {
@@ -485,94 +485,94 @@
       "significant_005": true
     }
   ],
-  "claude-sonnet-4-5_meta": [
+  "claude-sonnet-4-5-t0_meta": [
     {
       "run": 1,
-      "n_estimates": 198,
-      "pooled_effect": 1.001756,
+      "n_estimates": 197,
+      "pooled_effect": 1.001752,
       "pooled_se": 3.1e-05,
-      "z_score": 56.344,
+      "z_score": 55.9137,
       "p_value": 0.0,
       "significant_005": true
     },
     {
       "run": 2,
-      "n_estimates": 188,
-      "pooled_effect": 1.001637,
-      "pooled_se": 4.5e-05,
-      "z_score": 36.5645,
+      "n_estimates": 197,
+      "pooled_effect": 1.001752,
+      "pooled_se": 3.1e-05,
+      "z_score": 55.9137,
       "p_value": 0.0,
       "significant_005": true
     },
     {
       "run": 3,
-      "n_estimates": 194,
-      "pooled_effect": 1.001753,
+      "n_estimates": 197,
+      "pooled_effect": 1.001752,
       "pooled_se": 3.1e-05,
-      "z_score": 56.2192,
+      "z_score": 55.9137,
       "p_value": 0.0,
       "significant_005": true
     },
     {
       "run": 4,
-      "n_estimates": 209,
-      "pooled_effect": 1.001754,
-      "pooled_se": 3.3e-05,
-      "z_score": 52.9811,
+      "n_estimates": 197,
+      "pooled_effect": 1.001752,
+      "pooled_se": 3.1e-05,
+      "z_score": 55.9043,
       "p_value": 0.0,
       "significant_005": true
     },
     {
       "run": 5,
-      "n_estimates": 200,
-      "pooled_effect": 1.002196,
-      "pooled_se": 4.5e-05,
-      "z_score": 48.8611,
+      "n_estimates": 197,
+      "pooled_effect": 1.001752,
+      "pooled_se": 3.1e-05,
+      "z_score": 55.9137,
       "p_value": 0.0,
       "significant_005": true
     },
     {
       "run": 6,
-      "n_estimates": 197,
-      "pooled_effect": 1.001761,
+      "n_estimates": 195,
+      "pooled_effect": 1.001751,
       "pooled_se": 3.1e-05,
-      "z_score": 56.4994,
+      "z_score": 55.8956,
       "p_value": 0.0,
       "significant_005": true
     },
     {
       "run": 7,
-      "n_estimates": 197,
-      "pooled_effect": 1.001758,
+      "n_estimates": 195,
+      "pooled_effect": 1.001751,
       "pooled_se": 3.1e-05,
-      "z_score": 56.201,
+      "z_score": 55.8956,
       "p_value": 0.0,
       "significant_005": true
     },
     {
       "run": 8,
-      "n_estimates": 200,
-      "pooled_effect": 1.001735,
-      "pooled_se": 3.2e-05,
-      "z_score": 54.3395,
+      "n_estimates": 197,
+      "pooled_effect": 1.001752,
+      "pooled_se": 3.1e-05,
+      "z_score": 55.9137,
       "p_value": 0.0,
       "significant_005": true
     },
     {
       "run": 9,
-      "n_estimates": 196,
-      "pooled_effect": 1.001749,
+      "n_estimates": 197,
+      "pooled_effect": 1.001752,
       "pooled_se": 3.1e-05,
-      "z_score": 55.8152,
+      "z_score": 55.9136,
       "p_value": 0.0,
       "significant_005": true
     },
     {
       "run": 10,
-      "n_estimates": 186,
-      "pooled_effect": 1.001561,
-      "pooled_se": 4.7e-05,
-      "z_score": 33.5007,
+      "n_estimates": 195,
+      "pooled_effect": 1.001751,
+      "pooled_se": 3.1e-05,
+      "z_score": 55.8956,
       "p_value": 0.0,
       "significant_005": true
     }
@@ -785,12 +785,12 @@
     "varying_n_estimates": 0,
     "total_with_estimates": 100
   },
-  "claude-sonnet-4-5_flips": {
+  "claude-sonnet-4-5-t0_flips": {
     "total_articles": 51,
     "flipped_articles": 0,
     "flip_pct": 0.0,
-    "varying_effects": 1,
-    "varying_n_estimates": 21,
+    "varying_effects": 0,
+    "varying_n_estimates": 1,
     "total_with_estimates": 100
   },
   "gemini-2.5-pro_flips": {

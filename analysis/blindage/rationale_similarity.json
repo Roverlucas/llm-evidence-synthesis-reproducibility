@@ -1,19 +1,19 @@
 {
   "method": "Jaccard similarity on token bigrams. Pairwise across C(10,2)=45 run-pairs per item, averaged across items. Computed for two field categories: rationale (free-form long text) vs metadata (short categorical concatenation).",
   "models": {
-    "claude-sonnet-4-5": {
+    "claude-sonnet-4-5-t0": {
       "rationale": {
         "n_items": 500,
-        "mean_jaccard_bigram": 0.3777,
-        "median_jaccard_bigram": 0.3661,
-        "p5_jaccard_bigram": 0.2531,
-        "p95_jaccard_bigram": 0.5486
+        "mean_jaccard_bigram": 0.8039,
+        "median_jaccard_bigram": 0.8229,
+        "p5_jaccard_bigram": 0.528,
+        "p95_jaccard_bigram": 1.0
       },
       "metadata": {
         "n_items": 500,
-        "mean_jaccard_bigram": 0.9782,
+        "mean_jaccard_bigram": 0.9888,
         "median_jaccard_bigram": 1.0,
-        "p5_jaccard_bigram": 0.8222,
+        "p5_jaccard_bigram": 0.9,
         "p95_jaccard_bigram": 1.0
       }
     },

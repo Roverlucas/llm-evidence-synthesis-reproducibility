@@ -5,37 +5,37 @@
   "fields_report": {
     "effect_estimate": {
       "n_items_with_consensus": 95,
-      "mean_agreement_at_mode": 0.8584,
+      "mean_agreement_at_mode": 0.8623,
       "n_items_total": 100
     },
     "ci_lower": {
       "n_items_with_consensus": 84,
-      "mean_agreement_at_mode": 0.846,
+      "mean_agreement_at_mode": 0.8506,
       "n_items_total": 100
     },
     "ci_upper": {
       "n_items_with_consensus": 84,
-      "mean_agreement_at_mode": 0.8447,
+      "mean_agreement_at_mode": 0.8507,
       "n_items_total": 100
     },
     "effect_measure": {
       "n_items_with_consensus": 100,
-      "mean_agreement_at_mode": 0.7828,
+      "mean_agreement_at_mode": 0.7863,
       "n_items_total": 100
     },
     "outcome_specific": {
       "n_items_with_consensus": 100,
-      "mean_agreement_at_mode": 0.6939,
+      "mean_agreement_at_mode": 0.6976,
       "n_items_total": 100
     },
     "exposure_increment": {
       "n_items_with_consensus": 100,
-      "mean_agreement_at_mode": 0.7609,
+      "mean_agreement_at_mode": 0.763,
       "n_items_total": 100
     },
     "lag": {
       "n_items_with_consensus": 100,
-      "mean_agreement_at_mode": 0.644,
+      "mean_agreement_at_mode": 0.645,
       "n_items_total": 100
     }
   },
@@ -127,7 +127,7 @@
           "effect_estimate": 0.5333,
           "ci_lower": 0.4667,
           "ci_upper": 0.4667,
-          "effect_measure": 0.6333,
+          "effect_measure": 0.6667,
           "outcome_specific": 0.8333,
           "exposure_increment": 0.4,
           "lag": 0.3333
@@ -177,21 +177,21 @@
         "lag": "lag0-1"
       },
       "item_report": {
-        "n_total_records": 31,
+        "n_total_records": 35,
         "n_valid_by_field": {
           "effect_estimate": 0,
           "ci_lower": 0,
           "ci_upper": 0,
           "effect_measure": 30,
-          "outcome_specific": 31,
+          "outcome_specific": 35,
           "exposure_increment": 30,
-          "lag": 31
+          "lag": 35
         },
         "mode_agreement_by_field": {
           "effect_measure": 1.0,
-          "outcome_specific": 0.6452,
+          "outcome_specific": 0.5714,
           "exposure_increment": 1.0,
-          "lag": 0.6774
+          "lag": 0.7143
         }
       }
     },
@@ -240,19 +240,19 @@
       "item_report": {
         "n_total_records": 60,
         "n_valid_by_field": {
-          "effect_estimate": 47,
+          "effect_estimate": 50,
           "ci_lower": 0,
           "ci_upper": 0,
           "effect_measure": 60,
           "outcome_specific": 60,
-          "exposure_increment": 54,
+          "exposure_increment": 58,
           "lag": 60
         },
         "mode_agreement_by_field": {
           "effect_estimate": 1.0,
           "effect_measure": 1.0,
           "outcome_specific": 0.5,
-          "exposure_increment": 0.3704,
+          "exposure_increment": 0.4828,
           "lag": 0.3333
         }
       }
@@ -407,11 +407,11 @@
           "lag": 60
         },
         "mode_agreement_by_field": {
-          "effect_estimate": 0.9667,
+          "effect_estimate": 1.0,
           "effect_measure": 1.0,
           "outcome_specific": 0.3333,
-          "exposure_increment": 0.72,
-          "lag": 0.9
+          "exposure_increment": 0.66,
+          "lag": 0.9333
         }
       }
     },
@@ -443,7 +443,7 @@
           "effect_measure": 0.8333,
           "outcome_specific": 0.5667,
           "exposure_increment": 1.0,
-          "lag": 0.8
+          "lag": 0.8333
         }
       }
     },
@@ -490,13 +490,13 @@
         "lag": "lag0-1"
       },
       "item_report": {
-        "n_total_records": 34,
+        "n_total_records": 30,
         "n_valid_by_field": {
           "effect_estimate": 0,
           "ci_lower": 0,
           "ci_upper": 0,
           "effect_measure": 30,
-          "outcome_specific": 34,
+          "outcome_specific": 30,
           "exposure_increment": 30,
           "lag": 30
         },
@@ -562,9 +562,9 @@
           "lag": 60
         },
         "mode_agreement_by_field": {
-          "effect_estimate": 0.4667,
-          "ci_lower": 0.6333,
-          "ci_upper": 0.6333,
+          "effect_estimate": 0.5,
+          "ci_lower": 0.6667,
+          "ci_upper": 0.6667,
           "effect_measure": 0.3833,
           "outcome_specific": 0.3333,
           "exposure_increment": 1.0,
@@ -630,7 +630,7 @@
           "ci_lower": 1.0,
           "ci_upper": 1.0,
           "effect_measure": 1.0,
-          "outcome_specific": 0.44,
+          "outcome_specific": 0.4,
           "exposure_increment": 0.2,
           "lag": 1.0
         }
@@ -662,7 +662,7 @@
           "ci_lower": 1.0,
           "ci_upper": 1.0,
           "effect_measure": 1.0,
-          "outcome_specific": 0.35,
+          "outcome_specific": 0.3333,
           "exposure_increment": 0.4,
           "lag": 1.0
         }
@@ -676,7 +676,7 @@
         "effect_measure": "rr",
         "outcome_specific": "pneumonia",
         "exposure_increment": "per 10 \u00b5g/m\u00b3",
-        "lag": "other"
+        "lag": "4-week lag"
       },
       "item_report": {
         "n_total_records": 60,
@@ -755,7 +755,7 @@
         },
         "mode_agreement_by_field": {
           "effect_estimate": 0.6667,
-          "effect_measure": 0.5667,
+          "effect_measure": 0.5,
           "outcome_specific": 1.0,
           "exposure_increment": 1.0,
           "lag": 0.55
@@ -768,7 +768,7 @@
         "ci_lower": 0.38,
         "ci_upper": 1.3800000000000001,
         "effect_measure": "irr",
-        "outcome_specific": "other",
+        "outcome_specific": "all_respiratory",
         "exposure_increment": "per 10 \u00b5g/m\u00b3",
         "lag": "lag0"
       },
@@ -787,8 +787,8 @@
           "effect_estimate": 0.6667,
           "ci_lower": 0.6667,
           "ci_upper": 0.6667,
-          "effect_measure": 0.3667,
-          "outcome_specific": 0.4667,
+          "effect_measure": 0.5,
+          "outcome_specific": 0.3333,
           "exposure_increment": 1.0,
           "lag": 1.0
         }
@@ -840,8 +840,8 @@
         "n_total_records": 60,
         "n_valid_by_field": {
           "effect_estimate": 60,
-          "ci_lower": 28,
-          "ci_upper": 38,
+          "ci_lower": 26,
+          "ci_upper": 36,
           "effect_measure": 60,
           "outcome_specific": 60,
           "exposure_increment": 60,
@@ -849,8 +849,8 @@
         },
         "mode_agreement_by_field": {
           "effect_estimate": 0.7,
-          "ci_lower": 0.6429,
-          "ci_upper": 0.5263,
+          "ci_lower": 0.6923,
+          "ci_upper": 0.5556,
           "effect_measure": 0.5,
           "outcome_specific": 0.3333,
           "exposure_increment": 1.0,
@@ -869,21 +869,21 @@
         "lag": "lag0-7"
       },
       "item_report": {
-        "n_total_records": 39,
+        "n_total_records": 30,
         "n_valid_by_field": {
           "effect_estimate": 0,
           "ci_lower": 0,
           "ci_upper": 0,
           "effect_measure": 30,
-          "outcome_specific": 39,
+          "outcome_specific": 30,
           "exposure_increment": 30,
-          "lag": 39
+          "lag": 30
         },
         "mode_agreement_by_field": {
           "effect_measure": 0.6667,
-          "outcome_specific": 0.5128,
+          "outcome_specific": 0.6667,
           "exposure_increment": 0.3333,
-          "lag": 0.4872
+          "lag": 0.3333
         }
       }
     },
@@ -977,7 +977,7 @@
           "ci_lower": 0.6667,
           "ci_upper": 0.6667,
           "effect_measure": 0.5,
-          "outcome_specific": 0.4167,
+          "outcome_specific": 0.4333,
           "exposure_increment": 1.0,
           "lag": 0.6667
         }
@@ -1040,8 +1040,8 @@
           "effect_estimate": 0.5,
           "ci_lower": 0.5,
           "ci_upper": 0.5,
-          "effect_measure": 0.3667,
-          "outcome_specific": 0.3167,
+          "effect_measure": 0.35,
+          "outcome_specific": 0.3333,
           "exposure_increment": 0.8333,
           "lag": 0.6667
         }
@@ -1069,9 +1069,9 @@
           "lag": 60
         },
         "mode_agreement_by_field": {
-          "effect_estimate": 0.6,
-          "ci_lower": 0.4333,
-          "ci_upper": 0.4333,
+          "effect_estimate": 0.6167,
+          "ci_lower": 0.45,
+          "ci_upper": 0.45,
           "effect_measure": 0.45,
           "outcome_specific": 0.6667,
           "exposure_increment": 1.0,
@@ -1130,16 +1130,16 @@
           "effect_measure": 54,
           "outcome_specific": 54,
           "exposure_increment": 40,
-          "lag": 46
+          "lag": 40
         },
         "mode_agreement_by_field": {
           "effect_estimate": 1.0,
           "ci_lower": 1.0,
-          "ci_upper": 0.8519,
+          "ci_upper": 0.9259,
           "effect_measure": 1.0,
           "outcome_specific": 0.3704,
           "exposure_increment": 0.25,
-          "lag": 0.4348
+          "lag": 0.5
         }
       }
     },
@@ -1195,12 +1195,12 @@
           "lag": 60
         },
         "mode_agreement_by_field": {
-          "effect_estimate": 0.6833,
-          "ci_lower": 0.6833,
-          "ci_upper": 0.6833,
-          "effect_measure": 0.4667,
+          "effect_estimate": 0.7,
+          "ci_lower": 0.7,
+          "ci_upper": 0.7,
+          "effect_measure": 0.4833,
           "outcome_specific": 1.0,
-          "exposure_increment": 0.8,
+          "exposure_increment": 0.8333,
           "lag": 0.9667
         }
       }
@@ -1254,7 +1254,7 @@
           "effect_measure": 60,
           "outcome_specific": 60,
           "exposure_increment": 60,
-          "lag": 51
+          "lag": 50
         },
         "mode_agreement_by_field": {
           "effect_estimate": 1.0,
@@ -1262,8 +1262,8 @@
           "ci_upper": 1.0,
           "effect_measure": 1.0,
           "outcome_specific": 0.8333,
-          "exposure_increment": 0.5667,
-          "lag": 0.3922
+          "exposure_increment": 0.6667,
+          "lag": 0.4
         }
       }
     },
@@ -1325,7 +1325,7 @@
           "ci_lower": 0.5763,
           "ci_upper": 0.5763,
           "effect_measure": 0.4237,
-          "outcome_specific": 0.3559,
+          "outcome_specific": 0.339,
           "exposure_increment": 1.0,
           "lag": 1.0
         }
@@ -1353,11 +1353,11 @@
           "lag": 59
         },
         "mode_agreement_by_field": {
-          "effect_estimate": 0.8983,
-          "ci_lower": 0.8983,
-          "ci_upper": 0.8983,
-          "effect_measure": 0.3898,
-          "outcome_specific": 0.3559,
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
+          "effect_measure": 0.4915,
+          "outcome_specific": 0.339,
           "exposure_increment": 1.0,
           "lag": 0.8305
         }
@@ -1381,7 +1381,7 @@
           "ci_upper": 59,
           "effect_measure": 59,
           "outcome_specific": 59,
-          "exposure_increment": 35,
+          "exposure_increment": 36,
           "lag": 59
         },
         "mode_agreement_by_field": {
@@ -1390,7 +1390,7 @@
           "ci_upper": 1.0,
           "effect_measure": 1.0,
           "outcome_specific": 0.8305,
-          "exposure_increment": 0.2857,
+          "exposure_increment": 0.2778,
           "lag": 1.0
         }
       }
@@ -1511,9 +1511,9 @@
           "lag": 60
         },
         "mode_agreement_by_field": {
-          "effect_estimate": 0.6833,
-          "ci_lower": 0.6833,
-          "ci_upper": 0.6833,
+          "effect_estimate": 0.8167,
+          "ci_lower": 0.8167,
+          "ci_upper": 0.8167,
           "effect_measure": 0.5167,
           "outcome_specific": 0.8333,
           "exposure_increment": 1.0,
@@ -1547,7 +1547,7 @@
           "ci_lower": 0.7692,
           "ci_upper": 0.7692,
           "effect_measure": 0.3846,
-          "outcome_specific": 0.5192,
+          "outcome_specific": 0.5769,
           "exposure_increment": 0.3846,
           "lag": 1.0
         }
@@ -1575,11 +1575,11 @@
           "lag": 20
         },
         "mode_agreement_by_field": {
-          "effect_estimate": 0.9833,
-          "ci_lower": 0.9833,
-          "ci_upper": 0.9833,
+          "effect_estimate": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
           "effect_measure": 0.35,
-          "outcome_specific": 0.6167,
+          "outcome_specific": 0.6667,
           "exposure_increment": 1.0,
           "lag": 0.5
         }
@@ -1634,7 +1634,7 @@
           "effect_measure": 52,
           "outcome_specific": 52,
           "exposure_increment": 50,
-          "lag": 42
+          "lag": 40
         },
         "mode_agreement_by_field": {
           "effect_estimate": 1.0,
@@ -1643,7 +1643,7 @@
           "effect_measure": 1.0,
           "outcome_specific": 1.0,
           "exposure_increment": 0.8,
-          "lag": 0.7619
+          "lag": 0.75
         }
       }
     },
@@ -1698,16 +1698,16 @@
           "effect_measure": 60,
           "outcome_specific": 60,
           "exposure_increment": 60,
-          "lag": 57
+          "lag": 60
         },
         "mode_agreement_by_field": {
           "effect_estimate": 1.0,
           "ci_lower": 1.0,
           "ci_upper": 1.0,
           "effect_measure": 1.0,
-          "outcome_specific": 0.3833,
+          "outcome_specific": 0.45,
           "exposure_increment": 0.3167,
-          "lag": 0.6491
+          "lag": 0.6667
         }
       }
     },
@@ -1738,8 +1738,8 @@
           "ci_upper": 0.5,
           "effect_measure": 1.0,
           "outcome_specific": 0.7833,
-          "exposure_increment": 0.35,
-          "lag": 0.58
+          "exposure_increment": 0.3333,
+          "lag": 0.6
         }
       }
     },
@@ -1797,11 +1797,11 @@
           "lag": 60
         },
         "mode_agreement_by_field": {
-          "effect_estimate": 0.45,
-          "ci_lower": 0.45,
-          "ci_upper": 0.45,
-          "effect_measure": 0.4333,
-          "outcome_specific": 0.3167,
+          "effect_estimate": 0.5,
+          "ci_lower": 0.5,
+          "ci_upper": 0.5,
+          "effect_measure": 0.5,
+          "outcome_specific": 0.3333,
           "exposure_increment": 1.0,
           "lag": 0.6667
         }
@@ -1829,11 +1829,11 @@
           "lag": 60
         },
         "mode_agreement_by_field": {
-          "effect_estimate": 0.45,
-          "ci_lower": 0.7833,
+          "effect_estimate": 0.3833,
+          "ci_lower": 0.7167,
           "ci_upper": 0.5,
-          "effect_measure": 0.3667,
-          "outcome_specific": 0.3833,
+          "effect_measure": 0.35,
+          "outcome_specific": 0.45,
           "exposure_increment": 1.0,
           "lag": 0.55
         }
@@ -1850,23 +1850,23 @@
         "lag": "lag0-1"
       },
       "item_report": {
-        "n_total_records": 33,
+        "n_total_records": 30,
         "n_valid_by_field": {
           "effect_estimate": 10,
           "ci_lower": 10,
           "ci_upper": 10,
-          "effect_measure": 33,
-          "outcome_specific": 33,
-          "exposure_increment": 33,
+          "effect_measure": 30,
+          "outcome_specific": 30,
+          "exposure_increment": 30,
           "lag": 20
         },
         "mode_agreement_by_field": {
           "effect_estimate": 1.0,
           "ci_lower": 1.0,
           "ci_upper": 1.0,
-          "effect_measure": 0.6061,
-          "outcome_specific": 0.6061,
-          "exposure_increment": 0.6061,
+          "effect_measure": 0.6667,
+          "outcome_specific": 0.6667,
+          "exposure_increment": 0.6667,
           "lag": 0.5
         }
       }
@@ -1878,7 +1878,7 @@
         "ci_upper": 1.1,
         "effect_measure": "rr",
         "outcome_specific": "asthma",
-        "exposure_increment": "other",
+        "exposure_increment": "per 8-day exposure",
         "lag": "8-day"
       },
       "item_report": {
@@ -1889,7 +1889,7 @@
           "ci_upper": 60,
           "effect_measure": 60,
           "outcome_specific": 60,
-          "exposure_increment": 32,
+          "exposure_increment": 30,
           "lag": 60
         },
         "mode_agreement_by_field": {
@@ -1898,7 +1898,7 @@
           "ci_upper": 1.0,
           "effect_measure": 1.0,
           "outcome_specific": 0.6667,
-          "exposure_increment": 0.375,
+          "exposure_increment": 0.3333,
           "lag": 0.3333
         }
       }
@@ -1925,9 +1925,9 @@
           "lag": 60
         },
         "mode_agreement_by_field": {
-          "effect_estimate": 0.8167,
-          "ci_lower": 0.9833,
-          "ci_upper": 0.9833,
+          "effect_estimate": 0.8333,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0,
           "effect_measure": 0.5,
           "outcome_specific": 0.9333,
           "exposure_increment": 1.0,
@@ -1941,7 +1941,7 @@
         "ci_lower": 1.0,
         "ci_upper": 1.35,
         "effect_measure": "rr",
-        "outcome_specific": "all_cause_hospital_admissions",
+        "outcome_specific": "asthma",
         "exposure_increment": "\u226512.60 \u00b5g/m\u00b3",
         "lag": "lag1"
       },
@@ -1961,7 +1961,7 @@
           "ci_lower": 1.0,
           "ci_upper": 1.0,
           "effect_measure": 1.0,
-          "outcome_specific": 0.1833,
+          "outcome_specific": 0.1667,
           "exposure_increment": 0.4,
           "lag": 0.8333
         }
@@ -1989,10 +1989,10 @@
           "lag": 60
         },
         "mode_agreement_by_field": {
-          "effect_estimate": 0.9333,
-          "ci_lower": 0.9333,
-          "ci_upper": 0.9333,
-          "effect_measure": 0.4667,
+          "effect_estimate": 0.9833,
+          "ci_lower": 0.9833,
+          "ci_upper": 0.9833,
+          "effect_measure": 0.5,
           "outcome_specific": 0.3333,
           "exposure_increment": 1.0,
           "lag": 0.6667
@@ -2117,9 +2117,9 @@
           "lag": 40
         },
         "mode_agreement_by_field": {
-          "effect_estimate": 0.75,
-          "ci_lower": 0.4167,
-          "ci_upper": 0.75,
+          "effect_estimate": 0.7667,
+          "ci_lower": 0.4333,
+          "ci_upper": 0.7667,
           "effect_measure": 0.6,
           "outcome_specific": 0.4667,
           "exposure_increment": 1.0,
@@ -2153,7 +2153,7 @@
           "ci_lower": 1.0,
           "ci_upper": 1.0,
           "effect_measure": 1.0,
-          "outcome_specific": 0.45,
+          "outcome_specific": 0.5,
           "exposure_increment": 0.5,
           "lag": 0.8167
         }
@@ -2184,7 +2184,7 @@
           "effect_estimate": 0.6667,
           "ci_lower": 0.5,
           "ci_upper": 0.5,
-          "effect_measure": 0.4833,
+          "effect_measure": 0.5,
           "outcome_specific": 1.0,
           "exposure_increment": 0.5,
           "lag": 0.5
@@ -2282,7 +2282,7 @@
           "ci_upper": 1.0,
           "effect_measure": 1.0,
           "outcome_specific": 0.8333,
-          "exposure_increment": 0.8167,
+          "exposure_increment": 0.8333,
           "lag": 0.5
         }
       }
@@ -2345,7 +2345,7 @@
           "ci_lower": 0.3333,
           "ci_upper": 0.3333,
           "effect_measure": 0.5,
-          "outcome_specific": 0.5667,
+          "outcome_specific": 0.6667,
           "exposure_increment": 0.8333,
           "lag": 1.0
         }
@@ -2563,12 +2563,12 @@
           "lag": 30
         },
         "mode_agreement_by_field": {
-          "effect_estimate": 0.7167,
-          "ci_lower": 0.7167,
-          "ci_upper": 0.7167,
+          "effect_estimate": 0.6667,
+          "ci_lower": 0.6667,
+          "ci_upper": 0.6667,
           "effect_measure": 0.5,
-          "outcome_specific": 0.4833,
-          "exposure_increment": 0.4464,
+          "outcome_specific": 0.5,
+          "exposure_increment": 0.4643,
           "lag": 0.3333
         }
       }
@@ -2589,7 +2589,7 @@
           "effect_estimate": 10,
           "ci_lower": 10,
           "ci_upper": 10,
-          "effect_measure": 36,
+          "effect_measure": 40,
           "outcome_specific": 40,
           "exposure_increment": 30,
           "lag": 20
@@ -2598,7 +2598,7 @@
           "effect_estimate": 1.0,
           "ci_lower": 1.0,
           "ci_upper": 1.0,
-          "effect_measure": 0.2778,
+          "effect_measure": 0.25,
           "outcome_specific": 0.75,
           "exposure_increment": 0.3333,
           "lag": 0.5
@@ -2659,11 +2659,11 @@
           "lag": 60
         },
         "mode_agreement_by_field": {
-          "effect_estimate": 0.9167,
-          "ci_lower": 0.9167,
-          "ci_upper": 0.9167,
-          "effect_measure": 0.4667,
-          "outcome_specific": 0.4333,
+          "effect_estimate": 0.9333,
+          "ci_lower": 0.9333,
+          "ci_upper": 0.9333,
+          "effect_measure": 0.5,
+          "outcome_specific": 0.4833,
           "exposure_increment": 1.0,
           "lag": 0.6667
         }
@@ -2727,7 +2727,7 @@
           "effect_measure": 1.0,
           "outcome_specific": 1.0,
           "exposure_increment": 0.6,
-          "lag": 0.66
+          "lag": 0.8
         }
       }
     },
@@ -2755,7 +2755,7 @@
         "mode_agreement_by_field": {
           "effect_estimate": 1.0,
           "effect_measure": 1.0,
-          "outcome_specific": 0.7966,
+          "outcome_specific": 0.8305,
           "exposure_increment": 0.8333,
           "lag": 0.4167
         }
@@ -2958,7 +2958,7 @@
         "effect_estimate": 1.08,
         "ci_lower": 0.28,
         "ci_upper": 1.8900000000000001,
-        "effect_measure": "other",
+        "effect_measure": "percentage increase",
         "outcome_specific": "all_respiratory",
         "exposure_increment": "per 10 \u00b5g/m\u00b3",
         "lag": "lag1"
@@ -2975,11 +2975,11 @@
           "lag": 60
         },
         "mode_agreement_by_field": {
-          "effect_estimate": 0.85,
-          "ci_lower": 0.85,
-          "ci_upper": 0.85,
-          "effect_measure": 0.35,
-          "outcome_specific": 0.5333,
+          "effect_estimate": 0.8333,
+          "ci_lower": 0.8333,
+          "ci_upper": 0.8333,
+          "effect_measure": 0.3333,
+          "outcome_specific": 0.4667,
           "exposure_increment": 0.5167,
           "lag": 0.6667
         }
@@ -3074,7 +3074,7 @@
           "effect_measure": 0.8833,
           "outcome_specific": 0.65,
           "exposure_increment": 1.0,
-          "lag": 0.4
+          "lag": 0.3333
         }
       }
     },
@@ -3170,7 +3170,7 @@
           "effect_measure": 0.56,
           "outcome_specific": 1.0,
           "exposure_increment": 1.0,
-          "lag": 0.24
+          "lag": 0.22
         }
       }
     },

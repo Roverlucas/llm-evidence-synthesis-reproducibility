@@ -113,39 +113,39 @@
         }
       }
     },
-    "claude-sonnet-4-5": {
+    "claude-sonnet-4-5-t0": {
       "screening": {
         "n_items": 500,
         "n_items_full_10_runs": 500,
-        "mean_pairwise_disagreement": 0.0096,
+        "mean_pairwise_disagreement": 0.0035,
         "median_pairwise_disagreement": 0.0,
         "p95_pairwise_disagreement": 0.0,
-        "n_items_any_disagreement": 13,
-        "pct_items_any_disagreement": 0.026,
+        "n_items_any_disagreement": 5,
+        "pct_items_any_disagreement": 0.01,
         "distribution": {
-          "0%": 487,
+          "0%": 495,
           "(0%, 10%]": 0,
-          "(10%, 25%]": 5,
-          "(25%, 50%]": 4,
-          "(50%, 75%]": 4,
+          "(10%, 25%]": 2,
+          "(25%, 50%]": 2,
+          "(50%, 75%]": 1,
           "(75%, 100%]": 0
         }
       },
       "extraction": {
         "n_items": 100,
         "n_items_full_10_runs": 100,
-        "mean_pairwise_disagreement": 0.818,
-        "median_pairwise_disagreement": 0.9111,
-        "p95_pairwise_disagreement": 1.0,
-        "n_items_any_disagreement": 95,
-        "pct_items_any_disagreement": 0.95,
+        "mean_pairwise_disagreement": 0.2413,
+        "median_pairwise_disagreement": 0.2,
+        "p95_pairwise_disagreement": 0.7333,
+        "n_items_any_disagreement": 53,
+        "pct_items_any_disagreement": 0.53,
         "distribution": {
-          "0%": 5,
+          "0%": 47,
           "(0%, 10%]": 0,
-          "(10%, 25%]": 1,
-          "(25%, 50%]": 1,
-          "(50%, 75%]": 13,
-          "(75%, 100%]": 80
+          "(10%, 25%]": 13,
+          "(25%, 50%]": 14,
+          "(50%, 75%]": 22,
+          "(75%, 100%]": 4
         }
       }
     },

@@ -44,23 +44,23 @@
     },
     {
       "group": "CLOUD_WITHOUT_seed",
-      "model": "claude-sonnet-4-5",
+      "model": "claude-sonnet-4-5-t0",
       "stage": "screening",
       "has_seed": false,
-      "emr": 0.974,
-      "flip_rate": 0.026,
-      "mean_pairwise_disagree": 0.0096,
-      "pct_items_any_disagree": 0.026
+      "emr": 0.99,
+      "flip_rate": 0.01,
+      "mean_pairwise_disagree": 0.0035,
+      "pct_items_any_disagree": 0.01
     },
     {
       "group": "CLOUD_WITHOUT_seed",
-      "model": "claude-sonnet-4-5",
+      "model": "claude-sonnet-4-5-t0",
       "stage": "extraction",
       "has_seed": false,
-      "emr": 0.05,
-      "flip_rate": 0.95,
-      "mean_pairwise_disagree": 0.818,
-      "pct_items_any_disagree": 0.95
+      "emr": 0.47,
+      "flip_rate": 0.53,
+      "mean_pairwise_disagree": 0.2413,
+      "pct_items_any_disagree": 0.53
     },
     {
       "group": "LOCAL_WITH_seed=42",
@@ -142,17 +142,17 @@
     },
     "CLOUD_WITHOUT_seed_screening": {
       "models": [
-        "claude-sonnet-4-5"
+        "claude-sonnet-4-5-t0"
       ],
-      "mean_emr": 0.974,
-      "mean_pairwise_disagree": 0.0096
+      "mean_emr": 0.99,
+      "mean_pairwise_disagree": 0.0035
     },
     "CLOUD_WITHOUT_seed_extraction": {
       "models": [
-        "claude-sonnet-4-5"
+        "claude-sonnet-4-5-t0"
       ],
-      "mean_emr": 0.05,
-      "mean_pairwise_disagree": 0.818
+      "mean_emr": 0.47,
+      "mean_pairwise_disagree": 0.2413
     },
     "LOCAL_WITH_seed=42_screening": {
       "models": [
@@ -175,16 +175,16 @@
   },
   "interpretation": {
     "screening": {
-      "seed_effect_EMR (cloud-seed vs cloud-noseed)": -0.021,
-      "seed_effect_pairwise (cloud-seed vs cloud-noseed)": 0.0072,
+      "seed_effect_EMR (cloud-seed vs cloud-noseed)": -0.037,
+      "seed_effect_pairwise (cloud-seed vs cloud-noseed)": 0.0133,
       "deployment_effect_EMR (local-seed vs cloud-seed)": 0.047,
-      "conclusion": "Seed effect on cloud EMR: -0.0210 (small); Deployment effect (local vs cloud): +0.0470 (larger). Seed parameter does NOT deliver determinism on cloud APIs; deployment type dominates."
+      "conclusion": "Seed effect on cloud EMR: -0.0370 (small); Deployment effect (local vs cloud): +0.0470 (larger). Seed parameter does NOT deliver determinism on cloud APIs; deployment type dominates."
     },
     "extraction": {
-      "seed_effect_EMR (cloud-seed vs cloud-noseed)": 0.125,
-      "seed_effect_pairwise (cloud-seed vs cloud-noseed)": -0.3287,
+      "seed_effect_EMR (cloud-seed vs cloud-noseed)": -0.295,
+      "seed_effect_pairwise (cloud-seed vs cloud-noseed)": 0.248,
       "deployment_effect_EMR (local-seed vs cloud-seed)": 0.825,
-      "conclusion": "Seed effect on cloud EMR: +0.1250 (small); Deployment effect (local vs cloud): +0.8250 (larger). Seed parameter does NOT deliver determinism on cloud APIs; deployment type dominates."
+      "conclusion": "Seed effect on cloud EMR: -0.2950 (small); Deployment effect (local vs cloud): +0.8250 (larger). Seed parameter does NOT deliver determinism on cloud APIs; deployment type dominates."
     }
   }
 }

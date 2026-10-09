@@ -1,0 +1,44 @@
+{
+  "decision_counts": {
+    "exclude": 2558,
+    "include": 2420,
+    "uncertain": 20
+  },
+  "flipping_abstracts": {
+    "max_probability_range": 0.15,
+    "n": 20
+  },
+  "modal_choice_probability": {
+    "mean": 0.8652,
+    "share_below_0.5": 0.044
+  },
+  "n_abstracts": 500,
+  "n_calls": 5000,
+  "n_failed_calls": 2,
+  "probability_range_across_runs": {
+    "exclude": {
+      "max": 0.2,
+      "mean": 0.038,
+      "median": 0.02,
+      "share_zero": 0.34
+    },
+    "include": {
+      "max": 0.19,
+      "mean": 0.0369,
+      "median": 0.02,
+      "share_zero": 0.314
+    },
+    "uncertain": {
+      "max": 0.14,
+      "mean": 0.0126,
+      "median": 0.0,
+      "share_zero": 0.532
+    }
+  },
+  "probability_sd_across_runs_mean": {
+    "exclude": 0.0117,
+    "include": 0.0113,
+    "uncertain": 0.0041
+  },
+  "sha256_self": "001e5f88951e7e5c6d2af8959ba7dba662b5a8c5b94cb982143590027d9d183b"
+}

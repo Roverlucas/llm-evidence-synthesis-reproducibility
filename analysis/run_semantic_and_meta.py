@@ -10,6 +10,10 @@ import os
 import re
 from collections import defaultdict
 from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+from arms import CLAUDE  # noqa: E402  (headline Claude arm, decision 41)
 
 BASE = Path(__file__).resolve().parent.parent
 RAW = BASE / "data" / "raw_outputs"
@@ -312,7 +316,7 @@ if __name__ == "__main__":
 
     ALL_MODELS = [
         "llama3-8b", "mistral-7b", "gemma2-9b",
-        "claude-sonnet-4-5", "gemini-2.5-pro", "gpt-4.1",
+        CLAUDE, "gemini-2.5-pro", "gpt-4.1",
     ]
 
     for model in ALL_MODELS:

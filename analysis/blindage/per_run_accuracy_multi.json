@@ -34,10 +34,10 @@
           "ci_lower": 0.7083,
           "ci_upper": 0.7292,
           "effect_measure": 0.7917,
-          "outcome_specific": 0.6354,
-          "exposure_increment": 0.8438,
+          "outcome_specific": 0.6562,
+          "exposure_increment": 0.8542,
           "lag": 0.6771,
-          "all_fields": 0.2188
+          "all_fields": 0.2292
         },
         "2": {
           "n": 96,
@@ -45,10 +45,10 @@
           "ci_lower": 0.7083,
           "ci_upper": 0.7292,
           "effect_measure": 0.7917,
-          "outcome_specific": 0.6354,
-          "exposure_increment": 0.8438,
+          "outcome_specific": 0.6562,
+          "exposure_increment": 0.8542,
           "lag": 0.6771,
-          "all_fields": 0.2188
+          "all_fields": 0.2292
         },
         "3": {
           "n": 96,
@@ -56,10 +56,10 @@
           "ci_lower": 0.7083,
           "ci_upper": 0.7292,
           "effect_measure": 0.7917,
-          "outcome_specific": 0.6354,
-          "exposure_increment": 0.8438,
+          "outcome_specific": 0.6562,
+          "exposure_increment": 0.8542,
           "lag": 0.6771,
-          "all_fields": 0.2188
+          "all_fields": 0.2292
         },
         "4": {
           "n": 96,
@@ -67,10 +67,10 @@
           "ci_lower": 0.7083,
           "ci_upper": 0.7292,
           "effect_measure": 0.7917,
-          "outcome_specific": 0.6354,
-          "exposure_increment": 0.8438,
+          "outcome_specific": 0.6562,
+          "exposure_increment": 0.8542,
           "lag": 0.6771,
-          "all_fields": 0.2188
+          "all_fields": 0.2292
         },
         "5": {
           "n": 96,
@@ -78,10 +78,10 @@
           "ci_lower": 0.7083,
           "ci_upper": 0.7292,
           "effect_measure": 0.7917,
-          "outcome_specific": 0.6354,
-          "exposure_increment": 0.8438,
+          "outcome_specific": 0.6562,
+          "exposure_increment": 0.8542,
           "lag": 0.6771,
-          "all_fields": 0.2188
+          "all_fields": 0.2292
         },
         "6": {
           "n": 96,
@@ -89,10 +89,10 @@
           "ci_lower": 0.7083,
           "ci_upper": 0.7292,
           "effect_measure": 0.7917,
-          "outcome_specific": 0.6354,
-          "exposure_increment": 0.8438,
+          "outcome_specific": 0.6562,
+          "exposure_increment": 0.8542,
           "lag": 0.6771,
-          "all_fields": 0.2188
+          "all_fields": 0.2292
         },
         "7": {
           "n": 96,
@@ -100,10 +100,10 @@
           "ci_lower": 0.7083,
           "ci_upper": 0.7292,
           "effect_measure": 0.7917,
-          "outcome_specific": 0.6354,
-          "exposure_increment": 0.8438,
+          "outcome_specific": 0.6562,
+          "exposure_increment": 0.8542,
           "lag": 0.6771,
-          "all_fields": 0.2188
+          "all_fields": 0.2292
         },
         "8": {
           "n": 96,
@@ -111,10 +111,10 @@
           "ci_lower": 0.7083,
           "ci_upper": 0.7292,
           "effect_measure": 0.7917,
-          "outcome_specific": 0.6354,
-          "exposure_increment": 0.8438,
+          "outcome_specific": 0.6562,
+          "exposure_increment": 0.8542,
           "lag": 0.6771,
-          "all_fields": 0.2188
+          "all_fields": 0.2292
         },
         "9": {
           "n": 96,
@@ -122,10 +122,10 @@
           "ci_lower": 0.7083,
           "ci_upper": 0.7292,
           "effect_measure": 0.7917,
-          "outcome_specific": 0.6354,
-          "exposure_increment": 0.8438,
+          "outcome_specific": 0.6562,
+          "exposure_increment": 0.8542,
           "lag": 0.6771,
-          "all_fields": 0.2188
+          "all_fields": 0.2292
         },
         "10": {
           "n": 96,
@@ -133,10 +133,10 @@
           "ci_lower": 0.7083,
           "ci_upper": 0.7292,
           "effect_measure": 0.7917,
-          "outcome_specific": 0.6354,
-          "exposure_increment": 0.8438,
+          "outcome_specific": 0.6562,
+          "exposure_increment": 0.8542,
           "lag": 0.6771,
-          "all_fields": 0.2188
+          "all_fields": 0.2292
         }
       },
       "summary_across_runs": {
@@ -165,15 +165,15 @@
           "range": 0.0
         },
         "outcome_specific": {
-          "mean": 0.6354,
-          "min": 0.6354,
-          "max": 0.6354,
+          "mean": 0.6562,
+          "min": 0.6562,
+          "max": 0.6562,
           "range": 0.0
         },
         "exposure_increment": {
-          "mean": 0.8438,
-          "min": 0.8438,
-          "max": 0.8438,
+          "mean": 0.8542,
+          "min": 0.8542,
+          "max": 0.8542,
           "range": 0.0
         },
         "lag": {
@@ -183,9 +183,9 @@
           "range": 0.0
         },
         "all_fields": {
-          "mean": 0.2188,
-          "min": 0.2188,
-          "max": 0.2188,
+          "mean": 0.2292,
+          "min": 0.2292,
+          "max": 0.2292,
           "range": 0.0
         }
       }
@@ -197,110 +197,110 @@
           "effect_estimate": 0.74,
           "ci_lower": 0.65,
           "ci_upper": 0.67,
-          "effect_measure": 0.79,
-          "outcome_specific": 0.73,
+          "effect_measure": 0.8,
+          "outcome_specific": 0.74,
           "exposure_increment": 0.72,
-          "lag": 0.58,
-          "all_fields": 0.23
+          "lag": 0.59,
+          "all_fields": 0.24
         },
         "2": {
           "n": 100,
           "effect_estimate": 0.74,
           "ci_lower": 0.65,
           "ci_upper": 0.67,
-          "effect_measure": 0.79,
-          "outcome_specific": 0.73,
+          "effect_measure": 0.8,
+          "outcome_specific": 0.74,
           "exposure_increment": 0.72,
-          "lag": 0.58,
-          "all_fields": 0.23
+          "lag": 0.59,
+          "all_fields": 0.24
         },
         "3": {
           "n": 100,
           "effect_estimate": 0.74,
           "ci_lower": 0.65,
           "ci_upper": 0.67,
-          "effect_measure": 0.79,
-          "outcome_specific": 0.73,
+          "effect_measure": 0.8,
+          "outcome_specific": 0.74,
           "exposure_increment": 0.72,
-          "lag": 0.58,
-          "all_fields": 0.23
+          "lag": 0.59,
+          "all_fields": 0.24
         },
         "4": {
           "n": 100,
           "effect_estimate": 0.74,
           "ci_lower": 0.65,
           "ci_upper": 0.67,
-          "effect_measure": 0.79,
-          "outcome_specific": 0.73,
+          "effect_measure": 0.8,
+          "outcome_specific": 0.74,
           "exposure_increment": 0.72,
-          "lag": 0.58,
-          "all_fields": 0.23
+          "lag": 0.59,
+          "all_fields": 0.24
         },
         "5": {
           "n": 100,
           "effect_estimate": 0.74,
           "ci_lower": 0.65,
           "ci_upper": 0.67,
-          "effect_measure": 0.79,
-          "outcome_specific": 0.73,
+          "effect_measure": 0.8,
+          "outcome_specific": 0.74,
           "exposure_increment": 0.72,
-          "lag": 0.58,
-          "all_fields": 0.23
+          "lag": 0.59,
+          "all_fields": 0.24
         },
         "6": {
           "n": 100,
           "effect_estimate": 0.74,
           "ci_lower": 0.65,
           "ci_upper": 0.67,
-          "effect_measure": 0.79,
-          "outcome_specific": 0.73,
+          "effect_measure": 0.8,
+          "outcome_specific": 0.74,
           "exposure_increment": 0.72,
-          "lag": 0.58,
-          "all_fields": 0.23
+          "lag": 0.59,
+          "all_fields": 0.24
         },
         "7": {
           "n": 100,
           "effect_estimate": 0.74,
           "ci_lower": 0.65,
           "ci_upper": 0.67,
-          "effect_measure": 0.79,
-          "outcome_specific": 0.73,
+          "effect_measure": 0.8,
+          "outcome_specific": 0.74,
           "exposure_increment": 0.72,
-          "lag": 0.58,
-          "all_fields": 0.23
+          "lag": 0.59,
+          "all_fields": 0.24
         },
         "8": {
           "n": 100,
           "effect_estimate": 0.74,
           "ci_lower": 0.65,
           "ci_upper": 0.67,
-          "effect_measure": 0.79,
-          "outcome_specific": 0.73,
+          "effect_measure": 0.8,
+          "outcome_specific": 0.74,
           "exposure_increment": 0.72,
-          "lag": 0.58,
-          "all_fields": 0.23
+          "lag": 0.59,
+          "all_fields": 0.24
         },
         "9": {
           "n": 100,
           "effect_estimate": 0.74,
           "ci_lower": 0.65,
           "ci_upper": 0.67,
-          "effect_measure": 0.79,
-          "outcome_specific": 0.73,
+          "effect_measure": 0.8,
+          "outcome_specific": 0.74,
           "exposure_increment": 0.72,
-          "lag": 0.58,
-          "all_fields": 0.23
+          "lag": 0.59,
+          "all_fields": 0.24
         },
         "10": {
           "n": 100,
           "effect_estimate": 0.74,
           "ci_lower": 0.65,
           "ci_upper": 0.67,
-          "effect_measure": 0.79,
-          "outcome_specific": 0.73,
+          "effect_measure": 0.8,
+          "outcome_specific": 0.74,
           "exposure_increment": 0.72,
-          "lag": 0.58,
-          "all_fields": 0.23
+          "lag": 0.59,
+          "all_fields": 0.24
         }
       },
       "summary_across_runs": {
@@ -323,15 +323,15 @@
           "range": 0.0
         },
         "effect_measure": {
-          "mean": 0.79,
-          "min": 0.79,
-          "max": 0.79,
+          "mean": 0.8,
+          "min": 0.8,
+          "max": 0.8,
           "range": 0.0
         },
         "outcome_specific": {
-          "mean": 0.73,
-          "min": 0.73,
-          "max": 0.73,
+          "mean": 0.74,
+          "min": 0.74,
+          "max": 0.74,
           "range": 0.0
         },
         "exposure_increment": {
@@ -341,15 +341,15 @@
           "range": 0.0
         },
         "lag": {
-          "mean": 0.58,
-          "min": 0.58,
-          "max": 0.58,
+          "mean": 0.59,
+          "min": 0.59,
+          "max": 0.59,
           "range": 0.0
         },
         "all_fields": {
-          "mean": 0.23,
-          "min": 0.23,
-          "max": 0.23,
+          "mean": 0.24,
+          "min": 0.24,
+          "max": 0.24,
           "range": 0.0
         }
       }
@@ -361,7 +361,7 @@
           "effect_estimate": 0.74,
           "ci_lower": 0.61,
           "ci_upper": 0.63,
-          "effect_measure": 0.78,
+          "effect_measure": 0.79,
           "outcome_specific": 0.66,
           "exposure_increment": 0.65,
           "lag": 0.61,
@@ -372,7 +372,7 @@
           "effect_estimate": 0.74,
           "ci_lower": 0.61,
           "ci_upper": 0.63,
-          "effect_measure": 0.78,
+          "effect_measure": 0.79,
           "outcome_specific": 0.66,
           "exposure_increment": 0.65,
           "lag": 0.61,
@@ -383,7 +383,7 @@
           "effect_estimate": 0.74,
           "ci_lower": 0.61,
           "ci_upper": 0.63,
-          "effect_measure": 0.78,
+          "effect_measure": 0.79,
           "outcome_specific": 0.66,
           "exposure_increment": 0.65,
           "lag": 0.61,
@@ -394,7 +394,7 @@
           "effect_estimate": 0.74,
           "ci_lower": 0.61,
           "ci_upper": 0.63,
-          "effect_measure": 0.78,
+          "effect_measure": 0.79,
           "outcome_specific": 0.66,
           "exposure_increment": 0.65,
           "lag": 0.61,
@@ -405,7 +405,7 @@
           "effect_estimate": 0.74,
           "ci_lower": 0.61,
           "ci_upper": 0.63,
-          "effect_measure": 0.78,
+          "effect_measure": 0.79,
           "outcome_specific": 0.66,
           "exposure_increment": 0.65,
           "lag": 0.61,
@@ -416,7 +416,7 @@
           "effect_estimate": 0.74,
           "ci_lower": 0.61,
           "ci_upper": 0.63,
-          "effect_measure": 0.78,
+          "effect_measure": 0.79,
           "outcome_specific": 0.66,
           "exposure_increment": 0.65,
           "lag": 0.61,
@@ -427,7 +427,7 @@
           "effect_estimate": 0.74,
           "ci_lower": 0.61,
           "ci_upper": 0.63,
-          "effect_measure": 0.78,
+          "effect_measure": 0.79,
           "outcome_specific": 0.66,
           "exposure_increment": 0.65,
           "lag": 0.61,
@@ -438,7 +438,7 @@
           "effect_estimate": 0.74,
           "ci_lower": 0.61,
           "ci_upper": 0.63,
-          "effect_measure": 0.78,
+          "effect_measure": 0.79,
           "outcome_specific": 0.66,
           "exposure_increment": 0.65,
           "lag": 0.61,
@@ -449,7 +449,7 @@
           "effect_estimate": 0.74,
           "ci_lower": 0.61,
           "ci_upper": 0.63,
-          "effect_measure": 0.78,
+          "effect_measure": 0.79,
           "outcome_specific": 0.66,
           "exposure_increment": 0.65,
           "lag": 0.61,
@@ -460,7 +460,7 @@
           "effect_estimate": 0.74,
           "ci_lower": 0.61,
           "ci_upper": 0.63,
-          "effect_measure": 0.78,
+          "effect_measure": 0.79,
           "outcome_specific": 0.66,
           "exposure_increment": 0.65,
           "lag": 0.61,
@@ -487,9 +487,9 @@
           "range": 0.0
         },
         "effect_measure": {
-          "mean": 0.78,
-          "min": 0.78,
-          "max": 0.78,
+          "mean": 0.79,
+          "min": 0.79,
+          "max": 0.79,
           "range": 0.0
         },
         "outcome_specific": {
@@ -518,167 +518,167 @@
         }
       }
     },
-    "claude-sonnet-4-5": {
+    "claude-sonnet-4-5-t0": {
       "per_run": {
         "1": {
           "n": 89,
-          "effect_estimate": 0.7865,
-          "ci_lower": 0.6517,
-          "ci_upper": 0.6404,
-          "effect_measure": 0.7865,
-          "outcome_specific": 0.7303,
-          "exposure_increment": 0.7191,
-          "lag": 0.5393,
-          "all_fields": 0.1685
+          "effect_estimate": 0.8202,
+          "ci_lower": 0.6854,
+          "ci_upper": 0.6629,
+          "effect_measure": 0.7753,
+          "outcome_specific": 0.7528,
+          "exposure_increment": 0.7416,
+          "lag": 0.5618,
+          "all_fields": 0.1798
         },
         "2": {
+          "n": 88,
+          "effect_estimate": 0.8182,
+          "ci_lower": 0.6818,
+          "ci_upper": 0.6591,
+          "effect_measure": 0.7841,
+          "outcome_specific": 0.75,
+          "exposure_increment": 0.7614,
+          "lag": 0.5568,
+          "all_fields": 0.1818
+        },
+        "3": {
           "n": 89,
-          "effect_estimate": 0.7978,
-          "ci_lower": 0.6629,
+          "effect_estimate": 0.8315,
+          "ci_lower": 0.6966,
+          "ci_upper": 0.6742,
+          "effect_measure": 0.7753,
+          "outcome_specific": 0.7416,
+          "exposure_increment": 0.7528,
+          "lag": 0.5618,
+          "all_fields": 0.1798
+        },
+        "4": {
+          "n": 88,
+          "effect_estimate": 0.8182,
+          "ci_lower": 0.6818,
+          "ci_upper": 0.6591,
+          "effect_measure": 0.7841,
+          "outcome_specific": 0.7273,
+          "exposure_increment": 0.75,
+          "lag": 0.5568,
+          "all_fields": 0.1818
+        },
+        "5": {
+          "n": 88,
+          "effect_estimate": 0.8295,
+          "ci_lower": 0.6932,
+          "ci_upper": 0.6705,
+          "effect_measure": 0.7841,
+          "outcome_specific": 0.75,
+          "exposure_increment": 0.75,
+          "lag": 0.5568,
+          "all_fields": 0.1818
+        },
+        "6": {
+          "n": 89,
+          "effect_estimate": 0.809,
+          "ci_lower": 0.6742,
           "ci_upper": 0.6517,
           "effect_measure": 0.7753,
           "outcome_specific": 0.7303,
-          "exposure_increment": 0.7416,
-          "lag": 0.5281,
-          "all_fields": 0.1573
-        },
-        "3": {
-          "n": 88,
-          "effect_estimate": 0.7841,
-          "ci_lower": 0.6477,
-          "ci_upper": 0.625,
-          "effect_measure": 0.7614,
-          "outcome_specific": 0.75,
-          "exposure_increment": 0.7386,
-          "lag": 0.5341,
-          "all_fields": 0.1705
-        },
-        "4": {
-          "n": 91,
-          "effect_estimate": 0.7363,
-          "ci_lower": 0.6264,
-          "ci_upper": 0.6154,
-          "effect_measure": 0.7253,
-          "outcome_specific": 0.7253,
-          "exposure_increment": 0.7033,
-          "lag": 0.5275,
-          "all_fields": 0.1648
-        },
-        "5": {
-          "n": 89,
-          "effect_estimate": 0.7753,
-          "ci_lower": 0.6404,
-          "ci_upper": 0.618,
-          "effect_measure": 0.764,
-          "outcome_specific": 0.7416,
-          "exposure_increment": 0.7416,
-          "lag": 0.573,
-          "all_fields": 0.1685
-        },
-        "6": {
-          "n": 90,
-          "effect_estimate": 0.7778,
-          "ci_lower": 0.6556,
-          "ci_upper": 0.6333,
-          "effect_measure": 0.7444,
-          "outcome_specific": 0.6889,
-          "exposure_increment": 0.7333,
-          "lag": 0.5333,
-          "all_fields": 0.1556
+          "exposure_increment": 0.7528,
+          "lag": 0.5618,
+          "all_fields": 0.1798
         },
         "7": {
-          "n": 90,
-          "effect_estimate": 0.7667,
-          "ci_lower": 0.6556,
-          "ci_upper": 0.6333,
-          "effect_measure": 0.7444,
-          "outcome_specific": 0.7111,
-          "exposure_increment": 0.7111,
-          "lag": 0.5111,
-          "all_fields": 0.1556
+          "n": 89,
+          "effect_estimate": 0.8202,
+          "ci_lower": 0.6854,
+          "ci_upper": 0.6629,
+          "effect_measure": 0.7753,
+          "outcome_specific": 0.7303,
+          "exposure_increment": 0.7416,
+          "lag": 0.5618,
+          "all_fields": 0.1798
         },
         "8": {
-          "n": 89,
-          "effect_estimate": 0.7753,
-          "ci_lower": 0.6404,
-          "ci_upper": 0.618,
-          "effect_measure": 0.7079,
-          "outcome_specific": 0.7416,
-          "exposure_increment": 0.7191,
-          "lag": 0.5506,
-          "all_fields": 0.1573
+          "n": 88,
+          "effect_estimate": 0.8295,
+          "ci_lower": 0.6932,
+          "ci_upper": 0.6705,
+          "effect_measure": 0.7841,
+          "outcome_specific": 0.75,
+          "exposure_increment": 0.75,
+          "lag": 0.5568,
+          "all_fields": 0.1818
         },
         "9": {
-          "n": 90,
-          "effect_estimate": 0.7778,
-          "ci_lower": 0.6444,
-          "ci_upper": 0.6222,
-          "effect_measure": 0.7556,
-          "outcome_specific": 0.7222,
-          "exposure_increment": 0.7333,
-          "lag": 0.5333,
-          "all_fields": 0.1667
+          "n": 88,
+          "effect_estimate": 0.8182,
+          "ci_lower": 0.6818,
+          "ci_upper": 0.6591,
+          "effect_measure": 0.7841,
+          "outcome_specific": 0.75,
+          "exposure_increment": 0.75,
+          "lag": 0.5568,
+          "all_fields": 0.1818
         },
         "10": {
-          "n": 92,
-          "effect_estimate": 0.7717,
-          "ci_lower": 0.6413,
-          "ci_upper": 0.6196,
-          "effect_measure": 0.7174,
-          "outcome_specific": 0.7065,
-          "exposure_increment": 0.7174,
-          "lag": 0.5435,
-          "all_fields": 0.163
+          "n": 89,
+          "effect_estimate": 0.8202,
+          "ci_lower": 0.6854,
+          "ci_upper": 0.6629,
+          "effect_measure": 0.7753,
+          "outcome_specific": 0.7416,
+          "exposure_increment": 0.7416,
+          "lag": 0.5618,
+          "all_fields": 0.1798
         }
       },
       "summary_across_runs": {
         "effect_estimate": {
-          "mean": 0.7749,
-          "min": 0.7363,
-          "max": 0.7978,
-          "range": 0.0615
+          "mean": 0.8215,
+          "min": 0.809,
+          "max": 0.8315,
+          "range": 0.0225
         },
         "ci_lower": {
-          "mean": 0.6466,
-          "min": 0.6264,
-          "max": 0.6629,
-          "range": 0.0365
+          "mean": 0.6859,
+          "min": 0.6742,
+          "max": 0.6966,
+          "range": 0.0224
         },
         "ci_upper": {
-          "mean": 0.6277,
-          "min": 0.6154,
-          "max": 0.6517,
-          "range": 0.0363
+          "mean": 0.6633,
+          "min": 0.6517,
+          "max": 0.6742,
+          "range": 0.0225
         },
         "effect_measure": {
-          "mean": 0.7482,
-          "min": 0.7079,
-          "max": 0.7865,
-          "range": 0.0786
+          "mean": 0.7797,
+          "min": 0.7753,
+          "max": 0.7841,
+          "range": 0.0088
         },
         "outcome_specific": {
-          "mean": 0.7248,
-          "min": 0.6889,
-          "max": 0.75,
-          "range": 0.0611
+          "mean": 0.7424,
+          "min": 0.7273,
+          "max": 0.7528,
+          "range": 0.0255
         },
         "exposure_increment": {
-          "mean": 0.7258,
-          "min": 0.7033,
-          "max": 0.7416,
-          "range": 0.0383
+          "mean": 0.7492,
+          "min": 0.7416,
+          "max": 0.7614,
+          "range": 0.0198
         },
         "lag": {
-          "mean": 0.5374,
-          "min": 0.5111,
-          "max": 0.573,
-          "range": 0.0619
+          "mean": 0.5593,
+          "min": 0.5568,
+          "max": 0.5618,
+          "range": 0.005
         },
         "all_fields": {
-          "mean": 0.1628,
-          "min": 0.1556,
-          "max": 0.1705,
-          "range": 0.0149
+          "mean": 0.1808,
+          "min": 0.1798,
+          "max": 0.1818,
+          "range": 0.002
         }
       }
     },
@@ -689,110 +689,110 @@
           "effect_estimate": 0.8372,
           "ci_lower": 0.7442,
           "ci_upper": 0.7093,
-          "effect_measure": 0.7674,
-          "outcome_specific": 0.6279,
+          "effect_measure": 0.7558,
+          "outcome_specific": 0.6163,
           "exposure_increment": 0.7442,
-          "lag": 0.4302,
-          "all_fields": 0.1279
+          "lag": 0.4186,
+          "all_fields": 0.1163
         },
         "2": {
           "n": 82,
           "effect_estimate": 0.8171,
           "ci_lower": 0.6951,
           "ci_upper": 0.6951,
-          "effect_measure": 0.7439,
-          "outcome_specific": 0.622,
+          "effect_measure": 0.7317,
+          "outcome_specific": 0.6098,
           "exposure_increment": 0.7561,
-          "lag": 0.4512,
-          "all_fields": 0.1585
+          "lag": 0.439,
+          "all_fields": 0.1463
         },
         "3": {
           "n": 84,
           "effect_estimate": 0.8571,
           "ci_lower": 0.7381,
           "ci_upper": 0.7262,
-          "effect_measure": 0.7857,
-          "outcome_specific": 0.619,
+          "effect_measure": 0.7738,
+          "outcome_specific": 0.6071,
           "exposure_increment": 0.7619,
-          "lag": 0.4643,
-          "all_fields": 0.1548
+          "lag": 0.4524,
+          "all_fields": 0.1429
         },
         "4": {
           "n": 85,
           "effect_estimate": 0.8588,
           "ci_lower": 0.7059,
           "ci_upper": 0.7176,
-          "effect_measure": 0.7765,
-          "outcome_specific": 0.6588,
+          "effect_measure": 0.7647,
+          "outcome_specific": 0.6471,
           "exposure_increment": 0.7176,
-          "lag": 0.3647,
-          "all_fields": 0.1294
+          "lag": 0.3529,
+          "all_fields": 0.1059
         },
         "5": {
           "n": 83,
           "effect_estimate": 0.8675,
           "ci_lower": 0.7229,
           "ci_upper": 0.7229,
-          "effect_measure": 0.759,
-          "outcome_specific": 0.6145,
+          "effect_measure": 0.747,
+          "outcome_specific": 0.6024,
           "exposure_increment": 0.7349,
-          "lag": 0.4337,
-          "all_fields": 0.1807
+          "lag": 0.4217,
+          "all_fields": 0.1566
         },
         "6": {
           "n": 83,
           "effect_estimate": 0.8193,
           "ci_lower": 0.7229,
           "ci_upper": 0.6988,
-          "effect_measure": 0.7711,
-          "outcome_specific": 0.6265,
+          "effect_measure": 0.759,
+          "outcome_specific": 0.6145,
           "exposure_increment": 0.7711,
-          "lag": 0.4458,
-          "all_fields": 0.1687
+          "lag": 0.4337,
+          "all_fields": 0.1446
         },
         "7": {
           "n": 84,
           "effect_estimate": 0.8452,
           "ci_lower": 0.7381,
           "ci_upper": 0.7143,
-          "effect_measure": 0.7738,
-          "outcome_specific": 0.5952,
+          "effect_measure": 0.7619,
+          "outcome_specific": 0.5833,
           "exposure_increment": 0.8095,
-          "lag": 0.4167,
-          "all_fields": 0.1429
+          "lag": 0.4048,
+          "all_fields": 0.131
         },
         "8": {
           "n": 84,
           "effect_estimate": 0.8333,
           "ci_lower": 0.7262,
           "ci_upper": 0.7143,
-          "effect_measure": 0.75,
-          "outcome_specific": 0.631,
+          "effect_measure": 0.7381,
+          "outcome_specific": 0.619,
           "exposure_increment": 0.7143,
-          "lag": 0.4048,
-          "all_fields": 0.131
+          "lag": 0.3929,
+          "all_fields": 0.1071
         },
         "9": {
           "n": 84,
           "effect_estimate": 0.8333,
           "ci_lower": 0.6905,
           "ci_upper": 0.6905,
-          "effect_measure": 0.7738,
-          "outcome_specific": 0.6429,
+          "effect_measure": 0.7619,
+          "outcome_specific": 0.631,
           "exposure_increment": 0.7619,
-          "lag": 0.4048,
-          "all_fields": 0.131
+          "lag": 0.3929,
+          "all_fields": 0.1071
         },
         "10": {
           "n": 81,
           "effect_estimate": 0.8519,
           "ci_lower": 0.7037,
           "ci_upper": 0.6914,
-          "effect_measure": 0.7531,
-          "outcome_specific": 0.642,
+          "effect_measure": 0.7407,
+          "outcome_specific": 0.6296,
           "exposure_increment": 0.7531,
-          "lag": 0.4074,
-          "all_fields": 0.1235
+          "lag": 0.3951,
+          "all_fields": 0.0988
         }
       },
       "summary_across_runs": {
@@ -815,16 +815,16 @@
           "range": 0.0357
         },
         "effect_measure": {
-          "mean": 0.7654,
-          "min": 0.7439,
-          "max": 0.7857,
-          "range": 0.0418
+          "mean": 0.7535,
+          "min": 0.7317,
+          "max": 0.7738,
+          "range": 0.0421
         },
         "outcome_specific": {
-          "mean": 0.628,
-          "min": 0.5952,
-          "max": 0.6588,
-          "range": 0.0636
+          "mean": 0.616,
+          "min": 0.5833,
+          "max": 0.6471,
+          "range": 0.0638
         },
         "exposure_increment": {
           "mean": 0.7525,
@@ -833,16 +833,16 @@
           "range": 0.0952
         },
         "lag": {
-          "mean": 0.4224,
-          "min": 0.3647,
-          "max": 0.4643,
-          "range": 0.0996
+          "mean": 0.4104,
+          "min": 0.3529,
+          "max": 0.4524,
+          "range": 0.0995
         },
         "all_fields": {
-          "mean": 0.1448,
-          "min": 0.1235,
-          "max": 0.1807,
-          "range": 0.0572
+          "mean": 0.1257,
+          "min": 0.0988,
+          "max": 0.1566,
+          "range": 0.0578
         }
       }
     },
@@ -853,110 +853,110 @@
           "effect_estimate": 0.8222,
           "ci_lower": 0.6667,
           "ci_upper": 0.6444,
-          "effect_measure": 0.7778,
-          "outcome_specific": 0.7556,
-          "exposure_increment": 0.7444,
-          "lag": 0.6889,
-          "all_fields": 0.2333
+          "effect_measure": 0.7667,
+          "outcome_specific": 0.7333,
+          "exposure_increment": 0.7333,
+          "lag": 0.6778,
+          "all_fields": 0.2222
         },
         "2": {
           "n": 88,
           "effect_estimate": 0.8409,
           "ci_lower": 0.7045,
           "ci_upper": 0.6705,
-          "effect_measure": 0.7841,
-          "outcome_specific": 0.7614,
-          "exposure_increment": 0.75,
-          "lag": 0.7045,
-          "all_fields": 0.2386
+          "effect_measure": 0.7727,
+          "outcome_specific": 0.7386,
+          "exposure_increment": 0.7386,
+          "lag": 0.6932,
+          "all_fields": 0.2273
         },
         "3": {
           "n": 88,
           "effect_estimate": 0.8409,
           "ci_lower": 0.6932,
           "ci_upper": 0.6591,
-          "effect_measure": 0.7955,
-          "outcome_specific": 0.7614,
-          "exposure_increment": 0.7614,
-          "lag": 0.7159,
-          "all_fields": 0.2386
+          "effect_measure": 0.7841,
+          "outcome_specific": 0.75,
+          "exposure_increment": 0.75,
+          "lag": 0.7045,
+          "all_fields": 0.2273
         },
         "4": {
           "n": 89,
           "effect_estimate": 0.8315,
           "ci_lower": 0.6629,
           "ci_upper": 0.6404,
-          "effect_measure": 0.7865,
-          "outcome_specific": 0.764,
-          "exposure_increment": 0.764,
-          "lag": 0.6854,
-          "all_fields": 0.236
+          "effect_measure": 0.7753,
+          "outcome_specific": 0.7416,
+          "exposure_increment": 0.7528,
+          "lag": 0.6742,
+          "all_fields": 0.2135
         },
         "5": {
           "n": 89,
           "effect_estimate": 0.8315,
           "ci_lower": 0.6742,
           "ci_upper": 0.6517,
-          "effect_measure": 0.7753,
-          "outcome_specific": 0.7528,
-          "exposure_increment": 0.7528,
-          "lag": 0.7079,
-          "all_fields": 0.236
+          "effect_measure": 0.764,
+          "outcome_specific": 0.7416,
+          "exposure_increment": 0.7416,
+          "lag": 0.6966,
+          "all_fields": 0.2247
         },
         "6": {
           "n": 89,
           "effect_estimate": 0.7978,
           "ci_lower": 0.6517,
           "ci_upper": 0.618,
-          "effect_measure": 0.7865,
-          "outcome_specific": 0.7416,
-          "exposure_increment": 0.7303,
-          "lag": 0.6966,
-          "all_fields": 0.2135
+          "effect_measure": 0.7753,
+          "outcome_specific": 0.7191,
+          "exposure_increment": 0.7191,
+          "lag": 0.6854,
+          "all_fields": 0.2022
         },
         "7": {
           "n": 88,
           "effect_estimate": 0.8523,
           "ci_lower": 0.7159,
           "ci_upper": 0.6818,
-          "effect_measure": 0.7841,
-          "outcome_specific": 0.7614,
-          "exposure_increment": 0.7614,
-          "lag": 0.7159,
-          "all_fields": 0.2386
+          "effect_measure": 0.7727,
+          "outcome_specific": 0.7386,
+          "exposure_increment": 0.75,
+          "lag": 0.7045,
+          "all_fields": 0.2273
         },
         "8": {
           "n": 87,
           "effect_estimate": 0.8391,
           "ci_lower": 0.6897,
           "ci_upper": 0.6552,
-          "effect_measure": 0.7816,
-          "outcome_specific": 0.7586,
-          "exposure_increment": 0.7586,
-          "lag": 0.7241,
-          "all_fields": 0.2414
+          "effect_measure": 0.7701,
+          "outcome_specific": 0.7356,
+          "exposure_increment": 0.7471,
+          "lag": 0.7126,
+          "all_fields": 0.2299
         },
         "9": {
           "n": 88,
           "effect_estimate": 0.8409,
           "ci_lower": 0.6818,
           "ci_upper": 0.6477,
-          "effect_measure": 0.7841,
-          "outcome_specific": 0.7614,
-          "exposure_increment": 0.75,
-          "lag": 0.7045,
-          "all_fields": 0.2159
+          "effect_measure": 0.7727,
+          "outcome_specific": 0.7386,
+          "exposure_increment": 0.7386,
+          "lag": 0.6932,
+          "all_fields": 0.2045
         },
         "10": {
           "n": 87,
           "effect_estimate": 0.8506,
           "ci_lower": 0.7011,
           "ci_upper": 0.6782,
-          "effect_measure": 0.7931,
-          "outcome_specific": 0.7586,
-          "exposure_increment": 0.7471,
-          "lag": 0.7126,
-          "all_fields": 0.2299
+          "effect_measure": 0.7816,
+          "outcome_specific": 0.7471,
+          "exposure_increment": 0.7356,
+          "lag": 0.7011,
+          "all_fields": 0.2184
         }
       },
       "summary_across_runs": {
@@ -979,34 +979,34 @@
           "range": 0.0638
         },
         "effect_measure": {
-          "mean": 0.7849,
-          "min": 0.7753,
-          "max": 0.7955,
-          "range": 0.0202
+          "mean": 0.7735,
+          "min": 0.764,
+          "max": 0.7841,
+          "range": 0.0201
         },
         "outcome_specific": {
-          "mean": 0.7577,
-          "min": 0.7416,
-          "max": 0.764,
-          "range": 0.0224
+          "mean": 0.7384,
+          "min": 0.7191,
+          "max": 0.75,
+          "range": 0.0309
         },
         "exposure_increment": {
-          "mean": 0.752,
-          "min": 0.7303,
-          "max": 0.764,
+          "mean": 0.7407,
+          "min": 0.7191,
+          "max": 0.7528,
           "range": 0.0337
         },
         "lag": {
-          "mean": 0.7056,
-          "min": 0.6854,
-          "max": 0.7241,
-          "range": 0.0387
+          "mean": 0.6943,
+          "min": 0.6742,
+          "max": 0.7126,
+          "range": 0.0384
         },
         "all_fields": {
-          "mean": 0.2322,
-          "min": 0.2135,
-          "max": 0.2414,
-          "range": 0.0279
+          "mean": 0.2197,
+          "min": 0.2022,
+          "max": 0.2299,
+          "range": 0.0277
         }
       }
     }
@@ -1504,167 +1504,167 @@
         }
       }
     },
-    "claude-sonnet-4-5": {
+    "claude-sonnet-4-5-t0": {
       "per_run": {
         "1": {
           "n": 89,
-          "effect_estimate": 0.6854,
+          "effect_estimate": 0.6966,
           "ci_lower": 0.6292,
           "ci_upper": 0.618,
           "effect_measure": 0.6966,
-          "outcome_specific": 0.5955,
-          "exposure_increment": 0.6742,
-          "lag": 0.5843,
-          "all_fields": 0.1798
-        },
-        "2": {
-          "n": 89,
-          "effect_estimate": 0.7079,
-          "ci_lower": 0.6404,
-          "ci_upper": 0.6292,
-          "effect_measure": 0.7079,
-          "outcome_specific": 0.6404,
-          "exposure_increment": 0.7191,
-          "lag": 0.573,
-          "all_fields": 0.191
-        },
-        "3": {
-          "n": 88,
-          "effect_estimate": 0.7045,
-          "ci_lower": 0.6477,
-          "ci_upper": 0.6364,
-          "effect_measure": 0.7045,
-          "outcome_specific": 0.6023,
-          "exposure_increment": 0.7045,
-          "lag": 0.5682,
-          "all_fields": 0.1932
-        },
-        "4": {
-          "n": 91,
-          "effect_estimate": 0.6813,
-          "ci_lower": 0.6264,
-          "ci_upper": 0.6154,
-          "effect_measure": 0.6593,
-          "outcome_specific": 0.5934,
-          "exposure_increment": 0.6813,
-          "lag": 0.5495,
-          "all_fields": 0.1868
-        },
-        "5": {
-          "n": 89,
-          "effect_estimate": 0.7079,
-          "ci_lower": 0.6404,
-          "ci_upper": 0.6292,
-          "effect_measure": 0.6854,
-          "outcome_specific": 0.6292,
+          "outcome_specific": 0.6067,
           "exposure_increment": 0.7079,
           "lag": 0.5843,
           "all_fields": 0.191
         },
-        "6": {
-          "n": 90,
-          "effect_estimate": 0.7111,
-          "ci_lower": 0.6444,
-          "ci_upper": 0.6333,
-          "effect_measure": 0.6889,
-          "outcome_specific": 0.5889,
-          "exposure_increment": 0.6889,
-          "lag": 0.5778,
-          "all_fields": 0.1889
+        "2": {
+          "n": 88,
+          "effect_estimate": 0.7159,
+          "ci_lower": 0.6477,
+          "ci_upper": 0.6364,
+          "effect_measure": 0.7045,
+          "outcome_specific": 0.6023,
+          "exposure_increment": 0.7159,
+          "lag": 0.5909,
+          "all_fields": 0.1932
         },
-        "7": {
-          "n": 90,
-          "effect_estimate": 0.7,
-          "ci_lower": 0.6444,
-          "ci_upper": 0.6333,
-          "effect_measure": 0.6889,
-          "outcome_specific": 0.5778,
-          "exposure_increment": 0.7111,
-          "lag": 0.5444,
-          "all_fields": 0.1778
-        },
-        "8": {
+        "3": {
           "n": 89,
-          "effect_estimate": 0.7303,
-          "ci_lower": 0.6629,
-          "ci_upper": 0.6517,
+          "effect_estimate": 0.7079,
+          "ci_lower": 0.6404,
+          "ci_upper": 0.6292,
           "effect_measure": 0.6966,
-          "outcome_specific": 0.6404,
-          "exposure_increment": 0.6966,
+          "outcome_specific": 0.5955,
+          "exposure_increment": 0.7079,
           "lag": 0.5843,
           "all_fields": 0.191
         },
+        "4": {
+          "n": 88,
+          "effect_estimate": 0.7159,
+          "ci_lower": 0.6477,
+          "ci_upper": 0.6364,
+          "effect_measure": 0.7045,
+          "outcome_specific": 0.6136,
+          "exposure_increment": 0.7159,
+          "lag": 0.5909,
+          "all_fields": 0.1932
+        },
+        "5": {
+          "n": 88,
+          "effect_estimate": 0.7045,
+          "ci_lower": 0.6364,
+          "ci_upper": 0.625,
+          "effect_measure": 0.7045,
+          "outcome_specific": 0.6023,
+          "exposure_increment": 0.7159,
+          "lag": 0.5909,
+          "all_fields": 0.1932
+        },
+        "6": {
+          "n": 89,
+          "effect_estimate": 0.7079,
+          "ci_lower": 0.6404,
+          "ci_upper": 0.6292,
+          "effect_measure": 0.6966,
+          "outcome_specific": 0.5843,
+          "exposure_increment": 0.7079,
+          "lag": 0.5843,
+          "all_fields": 0.191
+        },
+        "7": {
+          "n": 89,
+          "effect_estimate": 0.6966,
+          "ci_lower": 0.6292,
+          "ci_upper": 0.618,
+          "effect_measure": 0.6966,
+          "outcome_specific": 0.5955,
+          "exposure_increment": 0.7079,
+          "lag": 0.5843,
+          "all_fields": 0.191
+        },
+        "8": {
+          "n": 88,
+          "effect_estimate": 0.7045,
+          "ci_lower": 0.6364,
+          "ci_upper": 0.625,
+          "effect_measure": 0.7045,
+          "outcome_specific": 0.6023,
+          "exposure_increment": 0.7159,
+          "lag": 0.5909,
+          "all_fields": 0.1932
+        },
         "9": {
-          "n": 90,
-          "effect_estimate": 0.6889,
-          "ci_lower": 0.6222,
-          "ci_upper": 0.6111,
-          "effect_measure": 0.6889,
-          "outcome_specific": 0.6222,
-          "exposure_increment": 0.7,
-          "lag": 0.5667,
-          "all_fields": 0.1778
+          "n": 88,
+          "effect_estimate": 0.7159,
+          "ci_lower": 0.6477,
+          "ci_upper": 0.6364,
+          "effect_measure": 0.7045,
+          "outcome_specific": 0.6023,
+          "exposure_increment": 0.7159,
+          "lag": 0.5909,
+          "all_fields": 0.1932
         },
         "10": {
-          "n": 92,
-          "effect_estimate": 0.7065,
-          "ci_lower": 0.6413,
-          "ci_upper": 0.6304,
-          "effect_measure": 0.6739,
-          "outcome_specific": 0.6196,
-          "exposure_increment": 0.6848,
-          "lag": 0.5761,
-          "all_fields": 0.2065
+          "n": 89,
+          "effect_estimate": 0.6966,
+          "ci_lower": 0.6292,
+          "ci_upper": 0.618,
+          "effect_measure": 0.6966,
+          "outcome_specific": 0.5955,
+          "exposure_increment": 0.7079,
+          "lag": 0.5843,
+          "all_fields": 0.191
         }
       },
       "summary_across_runs": {
         "effect_estimate": {
-          "mean": 0.7024,
-          "min": 0.6813,
-          "max": 0.7303,
-          "range": 0.049
+          "mean": 0.7062,
+          "min": 0.6966,
+          "max": 0.7159,
+          "range": 0.0193
         },
         "ci_lower": {
-          "mean": 0.6399,
-          "min": 0.6222,
-          "max": 0.6629,
-          "range": 0.0407
+          "mean": 0.6384,
+          "min": 0.6292,
+          "max": 0.6477,
+          "range": 0.0185
         },
         "ci_upper": {
-          "mean": 0.6288,
-          "min": 0.6111,
-          "max": 0.6517,
-          "range": 0.0406
+          "mean": 0.6272,
+          "min": 0.618,
+          "max": 0.6364,
+          "range": 0.0184
         },
         "effect_measure": {
-          "mean": 0.6891,
-          "min": 0.6593,
-          "max": 0.7079,
-          "range": 0.0486
+          "mean": 0.7006,
+          "min": 0.6966,
+          "max": 0.7045,
+          "range": 0.0079
         },
         "outcome_specific": {
-          "mean": 0.611,
-          "min": 0.5778,
-          "max": 0.6404,
-          "range": 0.0626
+          "mean": 0.6,
+          "min": 0.5843,
+          "max": 0.6136,
+          "range": 0.0293
         },
         "exposure_increment": {
-          "mean": 0.6968,
-          "min": 0.6742,
-          "max": 0.7191,
-          "range": 0.0449
+          "mean": 0.7119,
+          "min": 0.7079,
+          "max": 0.7159,
+          "range": 0.008
         },
         "lag": {
-          "mean": 0.5709,
-          "min": 0.5444,
-          "max": 0.5843,
-          "range": 0.0399
+          "mean": 0.5876,
+          "min": 0.5843,
+          "max": 0.5909,
+          "range": 0.0066
         },
         "all_fields": {
-          "mean": 0.1884,
-          "min": 0.1778,
-          "max": 0.2065,
-          "range": 0.0287
+          "mean": 0.1921,
+          "min": 0.191,
+          "max": 0.1932,
+          "range": 0.0022
         }
       }
     },

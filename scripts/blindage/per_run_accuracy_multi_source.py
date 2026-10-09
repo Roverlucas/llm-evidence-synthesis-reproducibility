@@ -17,6 +17,10 @@ from __future__ import annotations
 import json
 from collections import defaultdict
 from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
+from arms import CLAUDE  # noqa: E402  (headline Claude arm, decision 41)
 
 ROOT = Path(__file__).resolve().parents[2]
 SILVER_INT = ROOT / "analysis" / "blindage" / "silver_standard_internal.json"
@@ -30,7 +34,7 @@ CATEGORICAL_FIELDS = ["effect_measure", "outcome_specific", "exposure_increment"
 NUMERIC_TOL = 0.01
 
 MODELS = ["llama3-8b", "mistral-7b", "gemma2-9b",
-          "claude-sonnet-4-5", "gemini-2.5-pro", "gpt-4.1"]
+          CLAUDE, "gemini-2.5-pro", "gpt-4.1"]
 
 
 def numeric_match(a, b, tol=NUMERIC_TOL):

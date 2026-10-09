@@ -40,6 +40,11 @@ from collections import defaultdict
 
 import numpy as np
 from statsmodels.stats.inter_rater import aggregate_raters, fleiss_kappa
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+from arms import CLAUDE  # noqa: E402  (headline Claude arm, decision 41)
 
 SEED = 42
 np.random.seed(SEED)
@@ -50,7 +55,7 @@ OUT_PATH = os.path.join(BASE_DIR, "analysis", "fleiss_kappa.json")
 
 MODELS = [
     "llama3-8b", "mistral-7b", "gemma2-9b",
-    "claude-sonnet-4-5", "gemini-2.5-pro", "gpt-4.1",
+    CLAUDE, "gemini-2.5-pro", "gpt-4.1",
 ]
 NUM_RUNS = 10
 SCREEN_CATEGORIES = ["include", "exclude", "uncertain"]

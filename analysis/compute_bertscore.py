@@ -23,6 +23,10 @@ from itertools import combinations
 import numpy as np
 import torch
 from bert_score import score as bert_score
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+from arms import CLAUDE  # noqa: E402  (headline Claude arm, decision 41)
 
 # ---------------------------------------------------------------------------
 # Provenance / determinism
@@ -43,7 +47,7 @@ OUT_PATH = os.path.join(BASE_DIR, "analysis", "bertscore_results.json")
 OUT_FULL_PATH = os.path.join(BASE_DIR, "analysis", "bertscore_results_full.json")
 MODELS = [
     "llama3-8b", "mistral-7b", "gemma2-9b",
-    "claude-sonnet-4-5", "gemini-2.5-pro", "gpt-4.1",
+    CLAUDE, "gemini-2.5-pro", "gpt-4.1",
 ]
 NUM_RUNS = 10
 TEXT_FIELDS = ["study_design", "study_location", "study_period", "population", "sample_size"]

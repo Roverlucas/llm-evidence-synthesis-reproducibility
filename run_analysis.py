@@ -28,10 +28,11 @@ TABLES_DIR = OUT_DIR / "tables"
 FIGURES_DIR = OUT_DIR / "figures"
 BOOTSTRAP_DIR = OUT_DIR / "bootstrap"
 
-MODELS = [
-    "llama3-8b", "mistral-7b", "gemma2-9b",       # Local (Ollama)
-    "claude-sonnet-4-5", "gemini-2.5-pro", "gpt-4.1",  # API
-]
+sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
+from arms import CLAUDE_T1, JEV, MODELS  # noqa: E402  (headline arms, decision 41)
+
+# Reported in the supplement only: the temperature-1.0 Claude arm and Jev (screening only).
+SUPPLEMENT_MODELS = [CLAUDE_T1, JEV]
 STAGES = ["screening", "extraction"]
 N_RUNS = 10
 N_BOOTSTRAP = 10_000
@@ -70,7 +71,7 @@ def compute_screening_emr(runs: dict[int, list[dict]]) -> dict:
     for run_id in sorted(runs.keys()):
         for item in runs[run_id]:
             cid = item["corpus_id"]
-            output = item.get("output", {})
+            output = item.get("output") or {"error": item.get("error")}
             if "error" in output:
                 decisions[cid].append("ERROR")
             else:
@@ -116,7 +117,7 @@ def compute_screening_accuracy(runs: dict[int, list[dict]], gold: dict[str, str]
             cid = item["corpus_id"]
             if cid not in gold:
                 continue
-            pred = item.get("output", {}).get("decision", "error")
+            pred = (item.get("output") or {}).get("decision", "error")
             true = gold[cid]
             if pred == "include" and true == "include":
                 tp += 1
@@ -193,7 +194,7 @@ def compute_extraction_field_variation(runs: dict[int, list[dict]]) -> dict:
     for run_id in sorted(runs.keys()):
         for item in runs[run_id]:
             cid = item["corpus_id"]
-            output = item.get("output", {})
+            output = item.get("output") or {"error": item.get("error")}
             if "error" in output:
                 continue
             for f in fields_to_check:
@@ -279,7 +280,7 @@ def main():
     all_results = {}
 
     # ── Per-model analysis ───────────────────────────────────────
-    for model in MODELS:
+    for model in MODELS + SUPPLEMENT_MODELS:
         print(f"\n{'─' * 60}")
         print(f"  Model: {model}")
         print(f"{'─' * 60}")
@@ -335,7 +336,7 @@ def main():
     print(f"\n  {'Model':<22} {'Scr EMR':>10} {'Scr CI':>18} {'Ext EMR':>10} {'Ext CI':>18}")
     print(f"  {'─' * 22} {'─' * 10} {'─' * 18} {'─' * 10} {'─' * 18}")
 
-    for model in MODELS:
+    for model in MODELS + SUPPLEMENT_MODELS:
         r = all_results[model]
         s_emr = r["screening_bootstrap"]["emr"] if r["screening_bootstrap"] else 0
         s_ci = f"[{r['screening_bootstrap']['ci_lower']:.3f}, {r['screening_bootstrap']['ci_upper']:.3f}]" if r["screening_bootstrap"] else "N/A"
@@ -370,12 +371,15 @@ def main():
         }
 
     with open(OUT_DIR / "reproducibility_results.json", "w") as f:
-        json.dump(save_results, f, indent=2)
+        json.dump({m: save_results[m] for m in MODELS}, f, indent=2)
     print(f"\n  Results saved to: {OUT_DIR / 'reproducibility_results.json'}")
+    with open(OUT_DIR / "supplementary_arms_results.json", "w") as f:
+        json.dump({m: save_results[m] for m in SUPPLEMENT_MODELS}, f, indent=2)
+    print(f"  Supplementary arms saved to: {OUT_DIR / 'supplementary_arms_results.json'}")
 
     # Save bootstrap CIs
     bootstrap_data = {}
-    for model in MODELS:
+    for model in MODELS + SUPPLEMENT_MODELS:
         r = all_results[model]
         bootstrap_data[model] = {
             "screening": r["screening_bootstrap"],

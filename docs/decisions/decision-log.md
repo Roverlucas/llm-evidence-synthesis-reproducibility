@@ -796,3 +796,28 @@ meaning for a decision model; this interface difference is declared in Methods. 
 4. Any call answered by a provider other than `typesafe-ai` is treated as failed and re-run.
 5. Model version pinned by recording the served model id and generation id per call; Jev was
    released 2026-09-15 and the date of the runs is stated.
+
+## 43 — 2026-10-08 · New arms wired into the analyses
+**What.** `src/arms.py` now defines which output directory stands for which stack; every
+analysis script reads its model list from it. Headline Claude = `claude-sonnet-4-5-t0`
+(decision 41). `run_analysis.py` also computes the T=1.0 Claude arm and Jev and writes them to
+`analysis/supplementary_arms_results.json`; `fixedslot_paired_baseline.py` keeps the T=1.0 pair
+next to the headline pair. Jev's probability spread: `scripts/blindage/jev_screening_profile.py`.
+
+**Regression check.** After the switch, every non-Claude value in `reproducibility_results.json`
+is unchanged, and the T=1.0 arm recomputed from the same code reproduces the previously reported
+values exactly (screening EMR 0.974, extraction EMR 0.050, fixed-slot −70.2 %).
+
+**Correction found on the way.** `small_literature_simulation.py` drew all subsamples from one
+generator shared across stacks, so a change in one stack's data shifted the subsamples of every
+stack after it in the loop (GPT-4.1 moved when only Claude changed). Each stack now has its own
+generator seeded from (42, stack id). This changes the simulation figures of all stacks; the
+supplement is updated from the new output.
+
+**Scope of the T=1.0 contrast.** The supplement contrasts T=1.0 and T=0 on screening EMR and
+accuracy, extraction EMR and the fixed-slot comparison. Secondary analyses (semantic tiers,
+Fleiss, BERTScore, silver standards, simulation) are reported for the headline arm only.
+
+**Known pre-existing defect, untouched.** `scripts/blindage/per_run_accuracy.py` fails on the
+current gold-standard format and its output is not tracked or cited; the multi-source version
+(`per_run_accuracy_multi_source.py`) is the one reported.

@@ -11,6 +11,10 @@ import json
 from collections import Counter, defaultdict
 from itertools import combinations
 from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
+from arms import CLAUDE, CLAUDE_FIXEDSLOT  # noqa: E402  (headline Claude arm, decision 41)
 
 ROOT = Path(__file__).resolve().parents[2]
 RAW = ROOT / "data" / "raw_outputs"
@@ -18,7 +22,7 @@ REPRO = ROOT / "analysis" / "reproducibility_results.json"
 OUT = ROOT / "analysis" / "blindage" / "fixed_slot_comparison.json"
 
 FIXED_SLOT_MODELS = {
-    "claude-sonnet-4-5-fixedslot": "claude-sonnet-4-5",
+    CLAUDE_FIXEDSLOT: CLAUDE,
     "gemini-2.5-pro-fixedslot": "gemini-2.5-pro",
     "gpt-4.1-fixedslot": "gpt-4.1",
 }
