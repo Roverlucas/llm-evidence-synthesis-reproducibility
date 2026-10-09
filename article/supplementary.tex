@@ -531,7 +531,7 @@ def compute_call_hash(prompt, input_text, model_id, temperature,
     return hashlib.sha256(canonical.encode()).hexdigest()
 \end{lstlisting}
 
-The use of \texttt{sort\_keys=True} and \texttt{ensure\_ascii=True} ensures deterministic serialization across platforms and Python versions.
+The use of \texttt{sort\_keys=True} and \texttt{ensure\_ascii=True} ensures deterministic serialization across platforms and Python versions. The hash covers the declared configuration, not the transmitted request body; for the Claude stack each call record also stores the temperature read back from the request body as sent (\texttt{request\_temperature}).
 
 \subsection{Output Hashing}
 
@@ -1098,7 +1098,7 @@ The qualitative conclusion of the main text---\emph{LLM non-determinism propagat
 \section{Seed-Effect Empirical Test}
 \label{sec:seed_supp}
 
-The journal's guidance for GenAI submissions requires authors to document specific random-seed values and, for commercial models, API versions and access dates; it stops short of establishing whether a seed parameter delivers determinism once documented.
+Recent reporting guidance for GenAI-assisted evidence syntheses asks authors to document random-seed values and, for commercial models, API versions and access dates; it does not establish whether a documented seed delivers determinism.
 
 \begin{table}[htbp]
 \centering
@@ -1185,10 +1185,24 @@ Abstracts whose modal option has probability $<0.5$ & 4.4\% \\
 \noindent No calibration statistic is reported: the human-labelled subset ($n{=}100$) is too small to estimate one.
 
 % ============================================================
+\section{Deployment Cost Scenarios for a Review Team}
+\label{sec:costbenefit_supp}
+
+To translate the measured rates into a team's workload we sketch three scenarios for a team conducting 5~reviews per year, each with a 2{,}000-abstract screening pool and a 100-article extraction stage. Per-call times and prices are the measured means of this study (\texttt{analysis/timing\_and\_costs.json}; GPT-4.1 at US\$2.00/US\$8.00 per million input/output tokens); hardware amortisation is not included.
+
+\textbf{Scenario A --- local (Gemma~2 9B, pinned Ollama version and hardware).} Screening at 25.2~s per abstract takes ${\approx}14$~hours per review (70~hours per year); extraction at 39.9~s per article adds 5.5~hours per year. Electricity at the rate of the resources table is a few cents per review. In our data this stack reproduced every output.
+
+\textbf{Scenario B --- API, three runs per item (GPT-4.1).} Screening at 2.5~s per abstract and US\$0.0035 per call costs ${\approx}$4.1~hours and US\$21 per review for three runs; extraction at 5.4~s and US\$0.0057 per article adds 0.45~hours and US\$1.7. Per year: ${\approx}$23~hours and US\$114. Three runs expose run-to-run variation; whether a majority over them yields a stable output was not measured.
+
+\textbf{Scenario C --- API, single run (common practice).} One third of~B: ${\approx}$7.6~hours and US\$38 per year. In our data two runs of the same API stack returned different complete extractions for 24--49\% of articles on average (mean pairwise disagreement).
+
+\noindent The local scenario costs about 50 more hours of machine time per year than Scenario~B and returns the same output when re-run; the API scenarios are faster and do not.
+
+% ============================================================
 \section{Pre-Registration Disclosure}
 \label{sec:prereg_supp}
 
-This study is partly pre-registered, and the boundary is stated precisely. The original experiments (main text \S4.1--\S4.6) are exploratory: 10 repetitions, whole-output hash EMR, four semantic-tier definitions, and fixed-effect meta-analytic pooling were chosen during analysis design but without an OSF or AsPredicted submission. The dual-human labeling validation is the exception and \emph{is} formally pre-registered as a frozen OSF registration dated 2026-05-12 (\url{https://doi.org/10.17605/OSF.IO/FGN3E}), two months before either label set was returned; see Section~\ref{sec:dualhuman}. The later analyses (\S4.7 fixed-slot, \S4.8 desconfound, \S5.5 cost-benefit, silver-external), the Claude stack at temperature~0 and the Jev arm are likewise not pre-registered.
+This study is partly pre-registered, and the boundary is stated precisely. The original experiments (main text \S4.1--\S4.6) are exploratory: 10 repetitions, whole-output hash EMR, four semantic-tier definitions, and fixed-effect meta-analytic pooling were chosen during analysis design but without an OSF or AsPredicted submission. The dual-human labeling validation is the exception and \emph{is} formally pre-registered as a frozen OSF registration dated 2026-05-12 (\url{https://doi.org/10.17605/OSF.IO/FGN3E}), two months before either label set was returned; see Section~\ref{sec:dualhuman}. The later analyses (\S4.7 fixed-slot, \S4.8 desconfound, the cost scenarios of Section~\ref{sec:costbenefit_supp}, silver-external), the Claude stack at temperature~0 and the Jev arm are likewise not pre-registered.
 
 We acknowledge the absence of formal pre-registration for the exploratory core as a limitation and recommend that future LLM-in-SR studies pre-register analyses on OSF before data collection.
 

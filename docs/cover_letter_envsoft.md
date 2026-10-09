@@ -1,10 +1,8 @@
 # Cover Letter — Environmental Modelling & Software
 
-**Status:** DRAFT v1 — 2026-08-22. Awaiting the tie-break on 11 residual disagreements before final send.
-
 **To:** The Editors, *Environmental Modelling & Software*
 **From:** Lucas Rover (Corresponding Author), Universidade Tecnológica Federal do Paraná, Curitiba, Brazil
-**Subject:** Submission — "A reproducibility audit harness for LLM-assisted evidence extraction in environmental assessment"
+**Subject:** Submission — "Deployment stack, not model: a reproducibility audit harness for LLM-assisted evidence extraction in environmental assessment"
 
 ---
 
@@ -34,7 +32,7 @@ Five results:
 
 The journal's scope covers quality assurance and evaluation of models, data and procedures, with reliability and validation backed by quantitative results. That is the register of this paper: it does not advance a hydrological or epidemiological claim, it measures whether a procedure now entering environmental workflows behaves as its users assume.
 
-Three papers in EMS made us confident this is the right venue, and each shaped the manuscript.
+Three papers in EMS bear directly on this one.
 
 **Yoon et al. (2026, 203:107030)** scaled open-weight models for hydropower regulatory extraction. Their experimental setup fixes temperature at zero "thereby eliminating sampling variability and facilitating consistent outputs across multiple experimental runs", and executes each configuration once. We cite this not as a criticism — it is the field's standard practice and their documentation of it is exemplary, which is precisely what let us identify the premise — but because it states plainly the assumption our paper sets out to test.
 
