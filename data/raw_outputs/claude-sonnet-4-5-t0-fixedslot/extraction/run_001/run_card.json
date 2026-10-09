@@ -1,0 +1,13 @@
+{
+  "model_id": "claude-sonnet-4-5-t0-fixedslot",
+  "stage": "extraction",
+  "run_id": 1,
+  "n_items": 100,
+  "n_success": 100,
+  "n_fail": 0,
+  "started": "2026-10-08T15:37:33.136744+00:00",
+  "ended": "2026-10-08T15:43:39.661654+00:00",
+  "duration_seconds": 366.52491,
+  "total_input_tokens": 118045,
+  "total_output_tokens": 18428
+}

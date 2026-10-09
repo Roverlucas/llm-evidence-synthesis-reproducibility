@@ -1,0 +1,33 @@
+{
+  "run_card_version": "1.0",
+  "run_id": 10,
+  "stage": "screening",
+  "model_id": "jev",
+  "provider": "typesafe-ai",
+  "model_info": {
+    "model_id": "typesafe-ai/jev",
+    "provider": "typesafe-ai",
+    "weights_hash": "proprietary-not-available",
+    "model_source": "vercel-ai-gateway"
+  },
+  "config": {
+    "question_type": "choice",
+    "options": [
+      "include",
+      "exclude",
+      "uncertain"
+    ],
+    "gateway_only": [
+      "typesafe-ai"
+    ],
+    "fallbacks": "none"
+  },
+  "execution": {
+    "start_time": "2026-10-08T15:11:48.032415+00:00",
+    "end_time": "2026-10-08T15:17:33.062950+00:00",
+    "total_calls": 500,
+    "successful_calls": 499,
+    "failed_calls": 1
+  },
+  "total_cost_usd": 0.021209
+}

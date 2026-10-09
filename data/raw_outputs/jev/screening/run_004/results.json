@@ -1,0 +1,8002 @@
+[
+  {
+    "corpus_id": "ABS-0001",
+    "pmid": "38698010",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "exclude": 0.38,
+        "include": 0.35,
+        "uncertain": 0.27
+      }
+    },
+    "valid": true,
+    "output_hash": "563c21a98329162270bc241a389571ea8665e693074fea00dedb6fd6f97eaca8"
+  },
+  {
+    "corpus_id": "ABS-0002",
+    "pmid": "29259031",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.21,
+        "exclude": 0.72,
+        "uncertain": 0.07
+      }
+    },
+    "valid": true,
+    "output_hash": "b3bba86083ad0c556725ade0b4a3e0743b09799c7e8ecca31a47d1eac92200a2"
+  },
+  {
+    "corpus_id": "ABS-0003",
+    "pmid": "35073244",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.94,
+        "exclude": 0.06,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "9cd80f5ea8fb091a20e2fde1a76a0211dd13cfccf4eebb9a0f448f4406978bb9"
+  },
+  {
+    "corpus_id": "ABS-0004",
+    "pmid": "35394903",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.97,
+        "exclude": 0.03,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a828f3e1d0d17869be9cb24d0c25ba338c74e8a66616e27ba9a6631c8a5ef25b"
+  },
+  {
+    "corpus_id": "ABS-0005",
+    "pmid": "35104259",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.25,
+        "exclude": 0.69,
+        "uncertain": 0.06
+      }
+    },
+    "valid": true,
+    "output_hash": "e1e86e3701c4d97ef81790f5a6455da8aa9476f3f9ee1a260673ba8018ecccab"
+  },
+  {
+    "corpus_id": "ABS-0006",
+    "pmid": "35384572",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.97,
+        "uncertain": 0.02,
+        "exclude": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "f9e7964c02279be7baac1ace5638c04c7b1512ff2d6a504606161d7b1294ce25"
+  },
+  {
+    "corpus_id": "ABS-0007",
+    "pmid": "35989078",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.34,
+        "uncertain": 0.09,
+        "include": 0.57
+      }
+    },
+    "valid": true,
+    "output_hash": "ae270fb0b111c3e2c3e41018f985a376e739cc0f2154fb6944dd2b6e0c42dc3b"
+  },
+  {
+    "corpus_id": "ABS-0008",
+    "pmid": "37792321",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.02,
+        "include": 0.96,
+        "exclude": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "bf55c4bcf05130866a58a6c9ff4957650dbcc37c219ab086d7ab2d41f08ca00f"
+  },
+  {
+    "corpus_id": "ABS-0009",
+    "pmid": "30917578",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 1,
+        "exclude": 0,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0010",
+    "pmid": "28787174",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 1,
+        "exclude": 0,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0011",
+    "pmid": "35802828",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 1,
+        "uncertain": 0,
+        "exclude": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0012",
+    "pmid": "36197352",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.05,
+        "exclude": 0.93,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "9597f65d82d9f08eb1e6d5b88ea30e3423e1863b0fbfa69854b863e62c8b41ed"
+  },
+  {
+    "corpus_id": "ABS-0013",
+    "pmid": "37011135",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0,
+        "uncertain": 0,
+        "include": 1
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0014",
+    "pmid": "36376253",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.99,
+        "exclude": 0,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "f67c32b4fe06ac04287fba972d14bf402fa970cfa0db3d19626ee974e39c42e7"
+  },
+  {
+    "corpus_id": "ABS-0015",
+    "pmid": "36243957",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.34,
+        "exclude": 0.5,
+        "uncertain": 0.16
+      }
+    },
+    "valid": true,
+    "output_hash": "560c2539be1357b20d5761b539a1466a4c80c66eabda902faaf06b6b9ada7e27"
+  },
+  {
+    "corpus_id": "ABS-0016",
+    "pmid": "35692312",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.4,
+        "exclude": 0.39,
+        "uncertain": 0.21
+      }
+    },
+    "valid": true,
+    "output_hash": "d6629d051a5d7ce3927fbc9e645297c68523a709e5cb6defd81cf60bffd7786f"
+  },
+  {
+    "corpus_id": "ABS-0017",
+    "pmid": "40433992",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.01,
+        "include": 0.62,
+        "exclude": 0.37
+      }
+    },
+    "valid": true,
+    "output_hash": "443375a7df58e95a96ed1273552dd7f71167d87ab90435becbe8417f73529fc3"
+  },
+  {
+    "corpus_id": "ABS-0018",
+    "pmid": "30781785",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.92,
+        "exclude": 0.07,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "97c84f024bd59b97295d622f15c70520e4dbf03756c7b71c833ef53ee6bd1211"
+  },
+  {
+    "corpus_id": "ABS-0019",
+    "pmid": "35307034",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.92,
+        "exclude": 0.08,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "1cd09c8cb40f6dac764cf090d58438e8ac72642214d506aadb6e6d9d58fa2113"
+  },
+  {
+    "corpus_id": "ABS-0020",
+    "pmid": "40305019",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0,
+        "include": 0.14,
+        "exclude": 0.86
+      }
+    },
+    "valid": true,
+    "output_hash": "97f0ee2d530764c33b3e27a88610ceea71bba4a92b89e1a28363033ea92e568c"
+  },
+  {
+    "corpus_id": "ABS-0021",
+    "pmid": "29643111",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.06,
+        "exclude": 0.94,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "484d4f963fbbbc5e06f68aaf5d93dc62d4287cf359e9ba3a35ff3fee2cff70bd"
+  },
+  {
+    "corpus_id": "ABS-0022",
+    "pmid": "37972204",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.89,
+        "exclude": 0.1,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "08e27a5b6b6a4872b051bdecc4cf4afbe83c3d7b3aac1af952ea9477365a43cf"
+  },
+  {
+    "corpus_id": "ABS-0023",
+    "pmid": "34981381",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.18,
+        "uncertain": 0.01,
+        "exclude": 0.81
+      }
+    },
+    "valid": true,
+    "output_hash": "b13c515efd46793ef83abdc2c194d09b5ee87b1a4989f28b0f209f822a9a72ca"
+  },
+  {
+    "corpus_id": "ABS-0024",
+    "pmid": "31787180",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.99,
+        "exclude": 0,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "f67c32b4fe06ac04287fba972d14bf402fa970cfa0db3d19626ee974e39c42e7"
+  },
+  {
+    "corpus_id": "ABS-0025",
+    "pmid": "37980997",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.98,
+        "exclude": 0.01,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "31182e54ead194466611d19c636baed0982573fedbf360140266b54df7ab1918"
+  },
+  {
+    "corpus_id": "ABS-0026",
+    "pmid": "35583542",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.25,
+        "exclude": 0.75,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "c86fb2dc452d62aa53eb5258fa677d18785368111bf56c7aaf1187b253f2fd45"
+  },
+  {
+    "corpus_id": "ABS-0027",
+    "pmid": "26452298",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0,
+        "exclude": 0.01,
+        "include": 0.99
+      }
+    },
+    "valid": true,
+    "output_hash": "2b1509390cc0b6d5d0babe9f798e3bed2daac2a6cb20d70e93ae8e4e39898b77"
+  },
+  {
+    "corpus_id": "ABS-0028",
+    "pmid": "39038774",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.98,
+        "exclude": 0.01,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "31182e54ead194466611d19c636baed0982573fedbf360140266b54df7ab1918"
+  },
+  {
+    "corpus_id": "ABS-0029",
+    "pmid": "37772521",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.02,
+        "exclude": 0.97,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "d8a1f470e874e68af8a09446a5d80588c15fa9193fb7982ae69587e4257be8b5"
+  },
+  {
+    "corpus_id": "ABS-0030",
+    "pmid": "35142610",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0,
+        "include": 0.94,
+        "exclude": 0.06
+      }
+    },
+    "valid": true,
+    "output_hash": "9cd80f5ea8fb091a20e2fde1a76a0211dd13cfccf4eebb9a0f448f4406978bb9"
+  },
+  {
+    "corpus_id": "ABS-0031",
+    "pmid": "39048614",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.95,
+        "exclude": 0.04,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "c1e5a55b57f99a9017b0350937eb5a69cf9ae97b9500f608227bba4f33e4f057"
+  },
+  {
+    "corpus_id": "ABS-0032",
+    "pmid": "35627536",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 1,
+        "exclude": 0,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0033",
+    "pmid": "31755707",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.99,
+        "exclude": 0.01,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "2b1509390cc0b6d5d0babe9f798e3bed2daac2a6cb20d70e93ae8e4e39898b77"
+  },
+  {
+    "corpus_id": "ABS-0034",
+    "pmid": "34989991",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0,
+        "exclude": 0.01,
+        "include": 0.99
+      }
+    },
+    "valid": true,
+    "output_hash": "2b1509390cc0b6d5d0babe9f798e3bed2daac2a6cb20d70e93ae8e4e39898b77"
+  },
+  {
+    "corpus_id": "ABS-0035",
+    "pmid": "36777770",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.92,
+        "exclude": 0.06,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "e47ba87b6540dd1282b53e135d2fb056cc18fba7ef1476d2fef2179c345ecd80"
+  },
+  {
+    "corpus_id": "ABS-0036",
+    "pmid": "31254082",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0,
+        "include": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0037",
+    "pmid": "39520750",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.41,
+        "exclude": 0.57,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "7aa79a5cc9a44fe6341f6b650157dcab28745900e85c1ec7718292b011ff6c88"
+  },
+  {
+    "corpus_id": "ABS-0038",
+    "pmid": "36580986",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.42,
+        "exclude": 0.55,
+        "uncertain": 0.03
+      }
+    },
+    "valid": true,
+    "output_hash": "2a2b79aa8f826fa30b23a196f0a49a03f9eae012b843131f1963447dfb3e7fd6"
+  },
+  {
+    "corpus_id": "ABS-0039",
+    "pmid": "37968236",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.31,
+        "exclude": 0.62,
+        "uncertain": 0.07
+      }
+    },
+    "valid": true,
+    "output_hash": "c0816710338a80728bf26689540f644be83d0ccca301972c6c8bc8d462a4a6c1"
+  },
+  {
+    "corpus_id": "ABS-0040",
+    "pmid": "37159523",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0,
+        "include": 1,
+        "exclude": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0041",
+    "pmid": "27581332",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0,
+        "include": 0.05,
+        "exclude": 0.95
+      }
+    },
+    "valid": true,
+    "output_hash": "a337cb3eb4a787c03cfea81c475c09a66e6e5b0f56351234663a622896a28d5a"
+  },
+  {
+    "corpus_id": "ABS-0042",
+    "pmid": "32554254",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.75,
+        "exclude": 0.24,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "95e944fb46032375a2330ec66d9409aa2bf88f8c1330970c35d698bb97edadb5"
+  },
+  {
+    "corpus_id": "ABS-0043",
+    "pmid": "29459308",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.21,
+        "exclude": 0.69,
+        "uncertain": 0.1
+      }
+    },
+    "valid": true,
+    "output_hash": "2c528e1a6519eda77fa0f55193d4e5f18d69b4fb1765cf62cf725ced81f04d67"
+  },
+  {
+    "corpus_id": "ABS-0044",
+    "pmid": "34184226",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.02,
+        "include": 0.92,
+        "uncertain": 0.06
+      }
+    },
+    "valid": true,
+    "output_hash": "b2bc985320ae1267499e365dcf0b74ca7a69425fd0d1e5b6d7c60a25836a8295"
+  },
+  {
+    "corpus_id": "ABS-0045",
+    "pmid": "32760064",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0,
+        "exclude": 0.72,
+        "include": 0.28
+      }
+    },
+    "valid": true,
+    "output_hash": "021209ea5f904e94a3982384dce38d2f85d41e895390c49cb59edda6eb2ddade"
+  },
+  {
+    "corpus_id": "ABS-0046",
+    "pmid": "32729038",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.95,
+        "exclude": 0.02,
+        "uncertain": 0.03
+      }
+    },
+    "valid": true,
+    "output_hash": "40b1ad7f65aaa78f320470be9692594734e351422db6d9ae9990717e32eb6d96"
+  },
+  {
+    "corpus_id": "ABS-0047",
+    "pmid": "35027064",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.97,
+        "exclude": 0.02,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "ab5d0dfc1b6030e901538ecfe26c15fb4e8470dcb23b8d138126b10cc82cdff2"
+  },
+  {
+    "corpus_id": "ABS-0048",
+    "pmid": "32193561",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.05,
+        "include": 0.6,
+        "exclude": 0.35
+      }
+    },
+    "valid": true,
+    "output_hash": "5c71d52a85600d426a7c214e87e17dbd00f80eb9773c4ba150bfcfa088fd7d32"
+  },
+  {
+    "corpus_id": "ABS-0049",
+    "pmid": "24240657",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.66,
+        "exclude": 0.22,
+        "uncertain": 0.12
+      }
+    },
+    "valid": true,
+    "output_hash": "805e3ee929d503909b4c0f0024ec67964a8f3a61c2c0869c75d7891347ed47f8"
+  },
+  {
+    "corpus_id": "ABS-0050",
+    "pmid": "30502738",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.53,
+        "uncertain": 0.01,
+        "exclude": 0.46
+      }
+    },
+    "valid": true,
+    "output_hash": "7e91e1037b662b75a0cad6b4cedc836156c4bf7df67ffda11c9ea11c1c6c4018"
+  },
+  {
+    "corpus_id": "ABS-0051",
+    "pmid": "20502338",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.62,
+        "exclude": 0.34,
+        "uncertain": 0.04
+      }
+    },
+    "valid": true,
+    "output_hash": "d0f88518cbb50805b25ccfae68eea336e84613717e65848e23963a38fe9925c2"
+  },
+  {
+    "corpus_id": "ABS-0052",
+    "pmid": "36863162",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.19,
+        "uncertain": 0.01,
+        "exclude": 0.8
+      }
+    },
+    "valid": true,
+    "output_hash": "4f873427df83e5676c59b56d924d17bfc056f8c4b8623d02c0ed2485b0ee4037"
+  },
+  {
+    "corpus_id": "ABS-0053",
+    "pmid": "33980121",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.05,
+        "include": 0.92,
+        "exclude": 0.03
+      }
+    },
+    "valid": true,
+    "output_hash": "73f8d663db5d9f3f590b40e7b334361bd0a6ef15b5385d26ddb3fa793b99b62e"
+  },
+  {
+    "corpus_id": "ABS-0054",
+    "pmid": "35921071",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.56,
+        "uncertain": 0.01,
+        "exclude": 0.43
+      }
+    },
+    "valid": true,
+    "output_hash": "5493ff218259566b8c3c95de45cefe6b54afed49b4fa97b890c08191b798922c"
+  },
+  {
+    "corpus_id": "ABS-0055",
+    "pmid": "36641448",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.98,
+        "exclude": 0.01,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "31182e54ead194466611d19c636baed0982573fedbf360140266b54df7ab1918"
+  },
+  {
+    "corpus_id": "ABS-0056",
+    "pmid": "36107568",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.97,
+        "exclude": 0.01,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "f9e7964c02279be7baac1ace5638c04c7b1512ff2d6a504606161d7b1294ce25"
+  },
+  {
+    "corpus_id": "ABS-0057",
+    "pmid": "27224452",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0,
+        "include": 0.97,
+        "exclude": 0.03
+      }
+    },
+    "valid": true,
+    "output_hash": "a828f3e1d0d17869be9cb24d0c25ba338c74e8a66616e27ba9a6631c8a5ef25b"
+  },
+  {
+    "corpus_id": "ABS-0058",
+    "pmid": "33678143",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.47,
+        "include": 0.47,
+        "uncertain": 0.06
+      }
+    },
+    "valid": true,
+    "output_hash": "28309abed454861eba76ea7e28b62a514a5403a5d841dfccb2002dc1d78c75e2"
+  },
+  {
+    "corpus_id": "ABS-0059",
+    "pmid": "37137261",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.92,
+        "exclude": 0.07,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "97c84f024bd59b97295d622f15c70520e4dbf03756c7b71c833ef53ee6bd1211"
+  },
+  {
+    "corpus_id": "ABS-0060",
+    "pmid": "33910560",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.83,
+        "exclude": 0.16,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "815e062f119c1d61f6f92dc54546968d4e735749475cb333e985c9c503c120c0"
+  },
+  {
+    "corpus_id": "ABS-0061",
+    "pmid": "27350257",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.46,
+        "exclude": 0.51,
+        "uncertain": 0.03
+      }
+    },
+    "valid": true,
+    "output_hash": "3ab5ebb69aa551383a524e3b02badf0fcee545987e3270ebf740f8a98a3db45b"
+  },
+  {
+    "corpus_id": "ABS-0062",
+    "pmid": "25776011",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 1,
+        "uncertain": 0,
+        "exclude": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0063",
+    "pmid": "34574538",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.02,
+        "exclude": 0.01,
+        "include": 0.97
+      }
+    },
+    "valid": true,
+    "output_hash": "f9e7964c02279be7baac1ace5638c04c7b1512ff2d6a504606161d7b1294ce25"
+  },
+  {
+    "corpus_id": "ABS-0064",
+    "pmid": "39013602",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.72,
+        "exclude": 0.27,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "bc63beb8fecbe96a55df29913831a9f2cbe55e556db885d8aa891ecaf60bfb4d"
+  },
+  {
+    "corpus_id": "ABS-0065",
+    "pmid": "35661917",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0,
+        "include": 0.99,
+        "exclude": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "2b1509390cc0b6d5d0babe9f798e3bed2daac2a6cb20d70e93ae8e4e39898b77"
+  },
+  {
+    "corpus_id": "ABS-0066",
+    "pmid": "38622704",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.18,
+        "exclude": 0.24,
+        "include": 0.58
+      }
+    },
+    "valid": true,
+    "output_hash": "4eb1d62042f5dfef90863a7ed536387f59e8bb9971ea7eb65ad6be81c9fcad8d"
+  },
+  {
+    "corpus_id": "ABS-0067",
+    "pmid": "39633418",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.01,
+        "exclude": 0.01,
+        "include": 0.98
+      }
+    },
+    "valid": true,
+    "output_hash": "31182e54ead194466611d19c636baed0982573fedbf360140266b54df7ab1918"
+  },
+  {
+    "corpus_id": "ABS-0068",
+    "pmid": "38164931",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.82,
+        "exclude": 0.17,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "582fd91035c4fff80d2f03e0f7c64084508abe65d5f1dd58737904d23f0ca4d4"
+  },
+  {
+    "corpus_id": "ABS-0069",
+    "pmid": "37830139",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.01,
+        "include": 0.6,
+        "exclude": 0.39
+      }
+    },
+    "valid": true,
+    "output_hash": "e5b3d1fc1670499b6825ed3cdf1ac9822da5fce46a45694cba349eeab31777cb"
+  },
+  {
+    "corpus_id": "ABS-0070",
+    "pmid": "38858655",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.91,
+        "exclude": 0.08,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "11da61f1b0be182745107a83b4242b57ce20edb5528f61e9d03937904410f366"
+  },
+  {
+    "corpus_id": "ABS-0071",
+    "pmid": "32854703",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.99,
+        "exclude": 0.01,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "2b1509390cc0b6d5d0babe9f798e3bed2daac2a6cb20d70e93ae8e4e39898b77"
+  },
+  {
+    "corpus_id": "ABS-0072",
+    "pmid": "39505076",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.8,
+        "exclude": 0.17,
+        "uncertain": 0.03
+      }
+    },
+    "valid": true,
+    "output_hash": "339eed453e6602b76fc32ae968d378134f73a9494b67b3d9684c854a4e7a798d"
+  },
+  {
+    "corpus_id": "ABS-0073",
+    "pmid": "34545525",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.94,
+        "exclude": 0.01,
+        "uncertain": 0.05
+      }
+    },
+    "valid": true,
+    "output_hash": "c1e0733f64c80ed9779c221b3fb070ef2a9f61138819598750806b85d17532cb"
+  },
+  {
+    "corpus_id": "ABS-0074",
+    "pmid": "24528997",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.24,
+        "exclude": 0.75,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "c4b8c4988684eeb03427b0d4354196e34132fb600bb0dd8f9c8dd12873c9a463"
+  },
+  {
+    "corpus_id": "ABS-0075",
+    "pmid": "25244038",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.27,
+        "exclude": 0.54,
+        "uncertain": 0.19
+      }
+    },
+    "valid": true,
+    "output_hash": "0931c2c97924c0ccc3c6e9e39b984c6f9383792e6dfbb2e799a35dfca2b4d9bf"
+  },
+  {
+    "corpus_id": "ABS-0076",
+    "pmid": "33590391",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.99,
+        "exclude": 0,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "f67c32b4fe06ac04287fba972d14bf402fa970cfa0db3d19626ee974e39c42e7"
+  },
+  {
+    "corpus_id": "ABS-0077",
+    "pmid": "29870428",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.11,
+        "uncertain": 0,
+        "include": 0.89
+      }
+    },
+    "valid": true,
+    "output_hash": "dfe9155a2d42f66e7a26becfd7c24935002cc3b49ba938cd01228ea3d33db014"
+  },
+  {
+    "corpus_id": "ABS-0078",
+    "pmid": "32184587",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.02,
+        "uncertain": 0.01,
+        "include": 0.97
+      }
+    },
+    "valid": true,
+    "output_hash": "ab5d0dfc1b6030e901538ecfe26c15fb4e8470dcb23b8d138126b10cc82cdff2"
+  },
+  {
+    "corpus_id": "ABS-0079",
+    "pmid": "24555678",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.01,
+        "include": 0.92,
+        "exclude": 0.07
+      }
+    },
+    "valid": true,
+    "output_hash": "97c84f024bd59b97295d622f15c70520e4dbf03756c7b71c833ef53ee6bd1211"
+  },
+  {
+    "corpus_id": "ABS-0080",
+    "pmid": "23729683",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.08,
+        "exclude": 0.92,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "341b09ccb1e1dafd27a2ce0e11d56314b485d5957946dd85e3838fe3b3dc3b6c"
+  },
+  {
+    "corpus_id": "ABS-0081",
+    "pmid": "38347929",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.01,
+        "exclude": 0.09,
+        "include": 0.9
+      }
+    },
+    "valid": true,
+    "output_hash": "3d6e1a6867856ced69cd1de9b1999ded02ea3fbe89a670ddf5cd73305701a8ab"
+  },
+  {
+    "corpus_id": "ABS-0082",
+    "pmid": "33640663",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.65,
+        "exclude": 0.3,
+        "uncertain": 0.05
+      }
+    },
+    "valid": true,
+    "output_hash": "049c5a8cb8c0eaf61980ddbbf1329519b4cdd3f6c62b544aca38a12348009c40"
+  },
+  {
+    "corpus_id": "ABS-0083",
+    "pmid": "30277796",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0,
+        "include": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0084",
+    "pmid": "27605585",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0,
+        "include": 0.99,
+        "exclude": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "2b1509390cc0b6d5d0babe9f798e3bed2daac2a6cb20d70e93ae8e4e39898b77"
+  },
+  {
+    "corpus_id": "ABS-0085",
+    "pmid": "31200718",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.53,
+        "exclude": 0.3,
+        "uncertain": 0.17
+      }
+    },
+    "valid": true,
+    "output_hash": "dc0933ac52228166b479881edc3ad6d1be11891467a538cb1aa42fbffb6a710b"
+  },
+  {
+    "corpus_id": "ABS-0086",
+    "pmid": "35202623",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 1,
+        "exclude": 0,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0087",
+    "pmid": "35396614",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.96,
+        "exclude": 0.03,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "79a58762255acbee2d6ac20b796a5ec1237dd4077a662c69999527b1d7bede67"
+  },
+  {
+    "corpus_id": "ABS-0088",
+    "pmid": "26350981",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.92,
+        "exclude": 0.04,
+        "uncertain": 0.04
+      }
+    },
+    "valid": true,
+    "output_hash": "2f4bb69493e1892be7c7835843eb5ee5773e4a416d7f8fcb9734072962aae47f"
+  },
+  {
+    "corpus_id": "ABS-0089",
+    "pmid": "39879475",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.17,
+        "exclude": 0.81,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "f02281dd6ed4f141fe59cf76cbf8d910dcabd5a9351872cc6ce77f6f70d65e0b"
+  },
+  {
+    "corpus_id": "ABS-0090",
+    "pmid": "22998927",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.54,
+        "exclude": 0.24,
+        "uncertain": 0.22
+      }
+    },
+    "valid": true,
+    "output_hash": "a3742b9fb5b1b516f5bc0c8bd28255aefbbe4267aac6a25e671c17c2edabd6f1"
+  },
+  {
+    "corpus_id": "ABS-0091",
+    "pmid": "38383039",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.8,
+        "uncertain": 0,
+        "exclude": 0.2
+      }
+    },
+    "valid": true,
+    "output_hash": "f50a87e1004680d74ed25c554659d97573763347d39807670170504c9880525e"
+  },
+  {
+    "corpus_id": "ABS-0092",
+    "pmid": "36856604",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.01,
+        "exclude": 0.05,
+        "include": 0.94
+      }
+    },
+    "valid": true,
+    "output_hash": "8a049e8a5bc166377509959f37715773d5f84a9a6d1b0de88a492757fb332d56"
+  },
+  {
+    "corpus_id": "ABS-0093",
+    "pmid": "21172759",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.49,
+        "exclude": 0.35,
+        "uncertain": 0.16
+      }
+    },
+    "valid": true,
+    "output_hash": "be8cb217874baef8bff6718cf77835cca0fef7da1a7c00526b7503610a22c0ee"
+  },
+  {
+    "corpus_id": "ABS-0094",
+    "pmid": "32822929",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0,
+        "include": 1,
+        "exclude": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0095",
+    "pmid": "35627528",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.93,
+        "exclude": 0.06,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "74e251eac9fe75b7121c30f20db4ca7dd76cf2a6acc865b2b85cfa97696edd1a"
+  },
+  {
+    "corpus_id": "ABS-0096",
+    "pmid": "37626307",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.01,
+        "uncertain": 0.01,
+        "include": 0.98
+      }
+    },
+    "valid": true,
+    "output_hash": "31182e54ead194466611d19c636baed0982573fedbf360140266b54df7ab1918"
+  },
+  {
+    "corpus_id": "ABS-0097",
+    "pmid": "30875246",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.8200000000000001,
+        "exclude": 0.18,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "265a983f401d2384132b74d338f8c886b4434b806881ccf7e43d3e414afc6fc1"
+  },
+  {
+    "corpus_id": "ABS-0098",
+    "pmid": "27492006",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.1,
+        "uncertain": 0,
+        "include": 0.9
+      }
+    },
+    "valid": true,
+    "output_hash": "7a6d2d8a5790c3165025431f4ef4f46a158cac9fe3c01e3957f3f91c97e35c02"
+  },
+  {
+    "corpus_id": "ABS-0099",
+    "pmid": "39068973",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.17,
+        "exclude": 0.74,
+        "uncertain": 0.09
+      }
+    },
+    "valid": true,
+    "output_hash": "231b69f1ae0447e7793f2a129f7329b58896c713079ed35419bbe86f23b25f18"
+  },
+  {
+    "corpus_id": "ABS-0100",
+    "pmid": "25324558",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0,
+        "include": 0.98,
+        "exclude": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "f428159c7c27f0adc7e410f3658bb93e209fb33b9b23aa76e54c43b1ad44bd99"
+  },
+  {
+    "corpus_id": "ABS-0101",
+    "pmid": "34702659",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0102",
+    "pmid": "38169380",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0103",
+    "pmid": "8777372",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0104",
+    "pmid": "16893917",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0105",
+    "pmid": "12002192",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0,
+        "exclude": 1,
+        "include": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0106",
+    "pmid": "32301991",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0107",
+    "pmid": "36115280",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0,
+        "exclude": 1,
+        "include": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0108",
+    "pmid": "26834745",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0109",
+    "pmid": "38385199",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0110",
+    "pmid": "22510275",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "uncertain": 0,
+        "exclude": 1
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0111",
+    "pmid": "26219103",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0112",
+    "pmid": "23314899",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "uncertain": 0,
+        "exclude": 1
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0113",
+    "pmid": "29211200",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0114",
+    "pmid": "31993912",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.28,
+        "exclude": 0.59,
+        "uncertain": 0.13
+      }
+    },
+    "valid": true,
+    "output_hash": "601ca771f7a6c1efbdbc1468c7fe5bb5c17d9555f0afe584adc405c3953af015"
+  },
+  {
+    "corpus_id": "ABS-0115",
+    "pmid": "24075310",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0116",
+    "pmid": "31962264",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "exclude": 1,
+        "uncertain": 0,
+        "include": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0117",
+    "pmid": "31766396",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0118",
+    "pmid": "29546882",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0119",
+    "pmid": "32590284",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0,
+        "include": 0,
+        "exclude": 1
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0120",
+    "pmid": "29177960",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0121",
+    "pmid": "33478650",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0122",
+    "pmid": "36965278",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "exclude": 1,
+        "include": 0,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0123",
+    "pmid": "35457613",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0,
+        "exclude": 1,
+        "include": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0124",
+    "pmid": "35134940",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0125",
+    "pmid": "30841819",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0126",
+    "pmid": "36328229",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0127",
+    "pmid": "30680618",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0128",
+    "pmid": "41640321",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0129",
+    "pmid": "26039390",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "exclude": 1,
+        "uncertain": 0,
+        "include": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0130",
+    "pmid": "28525859",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0131",
+    "pmid": "36375501",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "exclude": 1,
+        "uncertain": 0,
+        "include": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0132",
+    "pmid": "26969808",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "exclude": 1,
+        "uncertain": 0,
+        "include": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0133",
+    "pmid": "36795640",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0134",
+    "pmid": "28292780",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0135",
+    "pmid": "30665519",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0136",
+    "pmid": "30702928",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0137",
+    "pmid": "38639298",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0138",
+    "pmid": "11028649",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "uncertain": 0,
+        "exclude": 1
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0139",
+    "pmid": "29467106",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0140",
+    "pmid": "38617429",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0141",
+    "pmid": "24733279",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0142",
+    "pmid": "36612404",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0143",
+    "pmid": "37030285",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0144",
+    "pmid": "35671471",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0145",
+    "pmid": "29889687",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0146",
+    "pmid": "28988023",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0147",
+    "pmid": "35192816",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0148",
+    "pmid": "17006435",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0,
+        "include": 0,
+        "exclude": 1
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0149",
+    "pmid": "19842328",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0150",
+    "pmid": "41325566",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0,
+        "include": 0,
+        "exclude": 1
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0151",
+    "pmid": "30369511",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0,
+        "exclude": 1,
+        "include": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0152",
+    "pmid": "23434817",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0153",
+    "pmid": "19590680",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "uncertain": 0,
+        "exclude": 1
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0154",
+    "pmid": "39889591",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0155",
+    "pmid": "39195680",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0156",
+    "pmid": "26340298",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0157",
+    "pmid": "24377209",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "uncertain": 0.02,
+        "exclude": 0.98
+      }
+    },
+    "valid": true,
+    "output_hash": "e2cf3c9dfff19a0c4be0a53ab142c8092d38949da39a248d12b173c1ce751207"
+  },
+  {
+    "corpus_id": "ABS-0158",
+    "pmid": "26036738",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0,
+        "include": 0,
+        "exclude": 1
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0159",
+    "pmid": "23604788",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "exclude": 1,
+        "uncertain": 0,
+        "include": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0160",
+    "pmid": "24293487",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0161",
+    "pmid": "37399145",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0162",
+    "pmid": "35742761",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0163",
+    "pmid": "34253165",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "uncertain": 0,
+        "exclude": 1
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0164",
+    "pmid": "36384657",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0165",
+    "pmid": "36521994",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0166",
+    "pmid": "33456360",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0167",
+    "pmid": "32164596",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0168",
+    "pmid": "25460637",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0169",
+    "pmid": "40383471",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0,
+        "include": 0,
+        "exclude": 1
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0170",
+    "pmid": "37250231",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0,
+        "include": 0,
+        "exclude": 1
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0171",
+    "pmid": "34529145",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0172",
+    "pmid": "28255648",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0,
+        "include": 0,
+        "exclude": 1
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0173",
+    "pmid": "30731313",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0174",
+    "pmid": "36780425",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0175",
+    "pmid": "34998464",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0176",
+    "pmid": "40436385",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0,
+        "include": 0,
+        "exclude": 1
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0177",
+    "pmid": "33496025",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0178",
+    "pmid": "32526820",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0,
+        "include": 0,
+        "exclude": 1
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0179",
+    "pmid": "24965327",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0,
+        "exclude": 1,
+        "include": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0180",
+    "pmid": "36261990",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "uncertain": 0,
+        "exclude": 1
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0181",
+    "pmid": "34634399",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0,
+        "exclude": 1,
+        "include": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0182",
+    "pmid": "26846245",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0183",
+    "pmid": "35853756",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0184",
+    "pmid": "36451289",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "uncertain": 0,
+        "exclude": 1
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0185",
+    "pmid": "38537965",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0186",
+    "pmid": "39534282",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0187",
+    "pmid": "29966381",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0188",
+    "pmid": "37987510",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0189",
+    "pmid": "24558178",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0190",
+    "pmid": "37734693",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0191",
+    "pmid": "37357089",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0192",
+    "pmid": "35259180",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0193",
+    "pmid": "36360958",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 0.99,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "eb408c249b0ec5d8753a7b5fe9129288fc07dbd61cd9da1b64b810a822005119"
+  },
+  {
+    "corpus_id": "ABS-0194",
+    "pmid": "34343988",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0,
+        "exclude": 1,
+        "include": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0195",
+    "pmid": "24935943",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0196",
+    "pmid": "25071915",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0197",
+    "pmid": "40300246",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0198",
+    "pmid": "31090042",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0199",
+    "pmid": "27367707",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0200",
+    "pmid": "39578775",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0201",
+    "pmid": "33631593",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "uncertain": 0,
+        "exclude": 1
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0202",
+    "pmid": "33508951",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0.02,
+        "include": 0,
+        "exclude": 0.98
+      }
+    },
+    "valid": true,
+    "output_hash": "e2cf3c9dfff19a0c4be0a53ab142c8092d38949da39a248d12b173c1ce751207"
+  },
+  {
+    "corpus_id": "ABS-0203",
+    "pmid": "25323244",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0204",
+    "pmid": "21463414",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0205",
+    "pmid": "22446713",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0206",
+    "pmid": "15692817",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "exclude": 1,
+        "include": 0,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0207",
+    "pmid": "8896385",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.02,
+        "exclude": 0.96,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "69e66c98f23775a0d579389f0d26f83a68a7c410cee17dc2bb5491c742bd2f77"
+  },
+  {
+    "corpus_id": "ABS-0208",
+    "pmid": "26216315",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0209",
+    "pmid": "27338189",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "exclude": 0.99,
+        "include": 0.01,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "0654a1ee1eaf7bb7e34a7a182a8dd5d4b53e23a3c97824320e2da69eddcfc3b5"
+  },
+  {
+    "corpus_id": "ABS-0210",
+    "pmid": "37209338",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0211",
+    "pmid": "40971567",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.01,
+        "exclude": 0.81,
+        "uncertain": 0.18
+      }
+    },
+    "valid": true,
+    "output_hash": "21b656c5325b9a558a0ad9d31e0d8ce6524264bcbe11696f99443d90b89e2524"
+  },
+  {
+    "corpus_id": "ABS-0212",
+    "pmid": "27814549",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0.26,
+        "include": 0,
+        "exclude": 0.74
+      }
+    },
+    "valid": true,
+    "output_hash": "80135d6dd6c4c56d867e12fbb26f72be9fca5677acf9a628164e051fb2c5d4b2"
+  },
+  {
+    "corpus_id": "ABS-0213",
+    "pmid": "28732014",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.95,
+        "exclude": 0.04,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "c1e5a55b57f99a9017b0350937eb5a69cf9ae97b9500f608227bba4f33e4f057"
+  },
+  {
+    "corpus_id": "ABS-0214",
+    "pmid": "28076967",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.96,
+        "exclude": 0.02,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "bf55c4bcf05130866a58a6c9ff4957650dbcc37c219ab086d7ab2d41f08ca00f"
+  },
+  {
+    "corpus_id": "ABS-0215",
+    "pmid": "34879071",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.56,
+        "exclude": 0.22,
+        "uncertain": 0.22
+      }
+    },
+    "valid": true,
+    "output_hash": "5d8a52bcfcf1ad9a1f1d3986a336412bdf347b8e00cf995d429ae81886b2041f"
+  },
+  {
+    "corpus_id": "ABS-0216",
+    "pmid": "39363981",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.95,
+        "exclude": 0.04,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "c1e5a55b57f99a9017b0350937eb5a69cf9ae97b9500f608227bba4f33e4f057"
+  },
+  {
+    "corpus_id": "ABS-0217",
+    "pmid": "16522832",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.38,
+        "uncertain": 0.01,
+        "include": 0.61
+      }
+    },
+    "valid": true,
+    "output_hash": "00643027690b0daa48124416ecb7b8768456ba5de1afce383bc7e00eb9bcd7f0"
+  },
+  {
+    "corpus_id": "ABS-0218",
+    "pmid": "27315241",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.15,
+        "exclude": 0.23,
+        "include": 0.62
+      }
+    },
+    "valid": true,
+    "output_hash": "beb803143d18d4fdc925bdf0f4d97bd7a019954353757fa8beb4ce6e22db36bf"
+  },
+  {
+    "corpus_id": "ABS-0219",
+    "pmid": "27887621",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.96,
+        "exclude": 0.04,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "0a84e673c25f8e25feb56d1829d8183edf6122a545523d65a57d8ceb8ede3c9a"
+  },
+  {
+    "corpus_id": "ABS-0220",
+    "pmid": "33157415",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.93,
+        "exclude": 0.06,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "74e251eac9fe75b7121c30f20db4ca7dd76cf2a6acc865b2b85cfa97696edd1a"
+  },
+  {
+    "corpus_id": "ABS-0221",
+    "pmid": "36705825",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.06,
+        "include": 0.73,
+        "exclude": 0.21
+      }
+    },
+    "valid": true,
+    "output_hash": "036d7db580a176ef419e2e0b1e71e9f8e328bdf380d47295979470659ad5369e"
+  },
+  {
+    "corpus_id": "ABS-0222",
+    "pmid": "33957138",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 1,
+        "exclude": 0,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0223",
+    "pmid": "35772504",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.01,
+        "exclude": 0.01,
+        "include": 0.98
+      }
+    },
+    "valid": true,
+    "output_hash": "31182e54ead194466611d19c636baed0982573fedbf360140266b54df7ab1918"
+  },
+  {
+    "corpus_id": "ABS-0224",
+    "pmid": "34968974",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.44,
+        "uncertain": 0.02,
+        "include": 0.54
+      }
+    },
+    "valid": true,
+    "output_hash": "d8b854e4a4c4eb809c07b6d248cfa4715dc7fe21ac63fbe2f313a76dc4aa3b9b"
+  },
+  {
+    "corpus_id": "ABS-0225",
+    "pmid": "28099552",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0,
+        "exclude": 0.99,
+        "include": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "0654a1ee1eaf7bb7e34a7a182a8dd5d4b53e23a3c97824320e2da69eddcfc3b5"
+  },
+  {
+    "corpus_id": "ABS-0226",
+    "pmid": "34583244",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.93,
+        "exclude": 0.05,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "8c33211884a8347b348f3b938b3d19a6f854c20fd080996fa3305b211553b180"
+  },
+  {
+    "corpus_id": "ABS-0227",
+    "pmid": "23981468",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.45,
+        "exclude": 0.53,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "9f33067afe4ad3cd2151f1f8dba9ecc35b2841795ca1cc06494c30131b6ba739"
+  },
+  {
+    "corpus_id": "ABS-0228",
+    "pmid": "35703601",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.97,
+        "exclude": 0.02,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "ab5d0dfc1b6030e901538ecfe26c15fb4e8470dcb23b8d138126b10cc82cdff2"
+  },
+  {
+    "corpus_id": "ABS-0229",
+    "pmid": "25947314",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.67,
+        "exclude": 0.27,
+        "uncertain": 0.06
+      }
+    },
+    "valid": true,
+    "output_hash": "2be304e9da55b45165b82c13a9afe326466d7a541f9afcde33c8f67a328fe187"
+  },
+  {
+    "corpus_id": "ABS-0230",
+    "pmid": "39862954",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.17,
+        "exclude": 0.82,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "7a18f27e0bab1d0ddb1ecd886ba5849453c1508f8698923a1ff487ae84d32789"
+  },
+  {
+    "corpus_id": "ABS-0231",
+    "pmid": "31520956",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.94,
+        "exclude": 0.06,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "9cd80f5ea8fb091a20e2fde1a76a0211dd13cfccf4eebb9a0f448f4406978bb9"
+  },
+  {
+    "corpus_id": "ABS-0232",
+    "pmid": "27649448",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.74,
+        "exclude": 0.25,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "339701bf0863da006414bcc86a581dc852f50fcdd51067fd4d478c8b0162fa94"
+  },
+  {
+    "corpus_id": "ABS-0233",
+    "pmid": "34976938",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.01,
+        "include": 0.85,
+        "exclude": 0.14
+      }
+    },
+    "valid": true,
+    "output_hash": "8f8e78996156469da41ff0e1ba9f01431c51f60a897a7ad883e096d6f632de7f"
+  },
+  {
+    "corpus_id": "ABS-0234",
+    "pmid": "34763018",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.77,
+        "uncertain": 0.13,
+        "exclude": 0.1
+      }
+    },
+    "valid": true,
+    "output_hash": "6b57703a8b4fb47680a5e873dc5aa7e06410a59fff8407b366bace6a246fb367"
+  },
+  {
+    "corpus_id": "ABS-0235",
+    "pmid": "32361457",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.01,
+        "uncertain": 0,
+        "exclude": 0.99
+      }
+    },
+    "valid": true,
+    "output_hash": "0654a1ee1eaf7bb7e34a7a182a8dd5d4b53e23a3c97824320e2da69eddcfc3b5"
+  },
+  {
+    "corpus_id": "ABS-0236",
+    "pmid": "30196203",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0,
+        "include": 0.93,
+        "exclude": 0.07
+      }
+    },
+    "valid": true,
+    "output_hash": "f15c57d3556425726393a35a17224390c65c86885a4978f9d2d8fe50296a7a06"
+  },
+  {
+    "corpus_id": "ABS-0237",
+    "pmid": "26346113",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0,
+        "exclude": 0,
+        "include": 1
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0238",
+    "pmid": "30275384",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.4,
+        "uncertain": 0.07,
+        "include": 0.53
+      }
+    },
+    "valid": true,
+    "output_hash": "94010cbfa0a41d13087b85d4943f0ef54d9ef2b8a9e50812df8febfc44c99a81"
+  },
+  {
+    "corpus_id": "ABS-0239",
+    "pmid": "40274412",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.33,
+        "exclude": 0.67,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "63b176da21e951ac5ecd1dba9d58d2a50398cfef4e6b60f0a3278f33ede07a56"
+  },
+  {
+    "corpus_id": "ABS-0240",
+    "pmid": "40360060",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.01,
+        "exclude": 0.99,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "0654a1ee1eaf7bb7e34a7a182a8dd5d4b53e23a3c97824320e2da69eddcfc3b5"
+  },
+  {
+    "corpus_id": "ABS-0241",
+    "pmid": "36717420",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.61,
+        "exclude": 0.38,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "00643027690b0daa48124416ecb7b8768456ba5de1afce383bc7e00eb9bcd7f0"
+  },
+  {
+    "corpus_id": "ABS-0242",
+    "pmid": "31991627",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.64,
+        "exclude": 0.3,
+        "uncertain": 0.06
+      }
+    },
+    "valid": true,
+    "output_hash": "4cf4a47e3de5df133bff140c8195e009b3a15de54112f9f7397716a13daa31ea"
+  },
+  {
+    "corpus_id": "ABS-0243",
+    "pmid": "37384843",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.97,
+        "exclude": 0.01,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "f9e7964c02279be7baac1ace5638c04c7b1512ff2d6a504606161d7b1294ce25"
+  },
+  {
+    "corpus_id": "ABS-0244",
+    "pmid": "28420157",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.74,
+        "exclude": 0.22,
+        "uncertain": 0.04
+      }
+    },
+    "valid": true,
+    "output_hash": "5558e2722338bd7b00d1bac4c7c8fdfa2be08e38d34ea2de280e19e394ee0d41"
+  },
+  {
+    "corpus_id": "ABS-0245",
+    "pmid": "37390950",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.67,
+        "exclude": 0.31,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "4fc658423da290640a5ed278132d76a3e651f604671fa5a6e4d357164399f1e6"
+  },
+  {
+    "corpus_id": "ABS-0246",
+    "pmid": "32847589",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "exclude": 0.97,
+        "uncertain": 0,
+        "include": 0.03
+      }
+    },
+    "valid": true,
+    "output_hash": "9b7e8d5283760e11dd01613bd77bce9b363e36b88da3f670d2a3a4ce53cf21e2"
+  },
+  {
+    "corpus_id": "ABS-0247",
+    "pmid": "35817164",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.77,
+        "exclude": 0.18,
+        "uncertain": 0.05
+      }
+    },
+    "valid": true,
+    "output_hash": "272d12592d709cb56db6432cbdb1c550d12fa34feb5c9cfae6f2bf846c29ba95"
+  },
+  {
+    "corpus_id": "ABS-0248",
+    "pmid": "28432994",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.85,
+        "exclude": 0.06,
+        "uncertain": 0.09
+      }
+    },
+    "valid": true,
+    "output_hash": "d2ebbdfdb610ba2be32f49c12f0a88a5877552d05c5e6a7ec3921b0cf1bdb2e8"
+  },
+  {
+    "corpus_id": "ABS-0249",
+    "pmid": "25575028",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.53,
+        "exclude": 0.28,
+        "uncertain": 0.19
+      }
+    },
+    "valid": true,
+    "output_hash": "cd6cd9d8293c140effb266e12add0881deca11d1b0497ac918196a00108081f7"
+  },
+  {
+    "corpus_id": "ABS-0250",
+    "pmid": "37386433",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.64,
+        "exclude": 0.35,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "2a6e5bf9321aed841087ae763daf489e09defd64858dbd298eb9d14068000214"
+  },
+  {
+    "corpus_id": "ABS-0251",
+    "pmid": "31672367",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.95,
+        "exclude": 0.01,
+        "uncertain": 0.04
+      }
+    },
+    "valid": true,
+    "output_hash": "3cbecf2a4f11944f85582a301ad55dc9e35117233cf086ad002941f049c5e7e7"
+  },
+  {
+    "corpus_id": "ABS-0252",
+    "pmid": "30970047",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.11,
+        "exclude": 0.88,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "dc56c354fd83041d51fee6e835d05128d50a2749f5dac9384a289482393ea029"
+  },
+  {
+    "corpus_id": "ABS-0253",
+    "pmid": "33919089",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.98,
+        "exclude": 0.01,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "31182e54ead194466611d19c636baed0982573fedbf360140266b54df7ab1918"
+  },
+  {
+    "corpus_id": "ABS-0254",
+    "pmid": "34715823",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.01,
+        "exclude": 0.99,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "0654a1ee1eaf7bb7e34a7a182a8dd5d4b53e23a3c97824320e2da69eddcfc3b5"
+  },
+  {
+    "corpus_id": "ABS-0255",
+    "pmid": "29380201",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.91,
+        "exclude": 0.06,
+        "uncertain": 0.03
+      }
+    },
+    "valid": true,
+    "output_hash": "0745bd3156a25b78b8764cd519e043eed470e4a9ffb821bc8ac6e2938698cb06"
+  },
+  {
+    "corpus_id": "ABS-0256",
+    "pmid": "32278916",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.41,
+        "exclude": 0.43,
+        "uncertain": 0.16
+      }
+    },
+    "valid": true,
+    "output_hash": "f196d334dee53bf61688dd265c03ac8f7270be562c850bdc988988a910da4030"
+  },
+  {
+    "corpus_id": "ABS-0257",
+    "pmid": "20708875",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.02,
+        "exclude": 0.98,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "29ac23a65faa18c620f26714c12e2a243f7ecd5b0f2258047d559e7ca546cca9"
+  },
+  {
+    "corpus_id": "ABS-0258",
+    "pmid": "29990362",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.97,
+        "uncertain": 0,
+        "exclude": 0.03
+      }
+    },
+    "valid": true,
+    "output_hash": "a828f3e1d0d17869be9cb24d0c25ba338c74e8a66616e27ba9a6631c8a5ef25b"
+  },
+  {
+    "corpus_id": "ABS-0259",
+    "pmid": "30398895",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0,
+        "uncertain": 0,
+        "include": 1
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0260",
+    "pmid": "31059876",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.97,
+        "exclude": 0.01,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "f9e7964c02279be7baac1ace5638c04c7b1512ff2d6a504606161d7b1294ce25"
+  },
+  {
+    "corpus_id": "ABS-0261",
+    "pmid": "36011773",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.11,
+        "uncertain": 0.05,
+        "exclude": 0.84
+      }
+    },
+    "valid": true,
+    "output_hash": "6155e94f8febff6b804982a641898388e9fded638f0311f148085047fed03c01"
+  },
+  {
+    "corpus_id": "ABS-0262",
+    "pmid": "31753527",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.01,
+        "uncertain": 0.01,
+        "include": 0.98
+      }
+    },
+    "valid": true,
+    "output_hash": "31182e54ead194466611d19c636baed0982573fedbf360140266b54df7ab1918"
+  },
+  {
+    "corpus_id": "ABS-0263",
+    "pmid": "24213019",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.96,
+        "exclude": 0.04,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "0a84e673c25f8e25feb56d1829d8183edf6122a545523d65a57d8ceb8ede3c9a"
+  },
+  {
+    "corpus_id": "ABS-0264",
+    "pmid": "31776122",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.04,
+        "exclude": 0.96,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "b8fa3d496a727837f0b1b8a9087d38a007d8242011e68dcf808a7916d4b13c9d"
+  },
+  {
+    "corpus_id": "ABS-0265",
+    "pmid": "27507084",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.52,
+        "exclude": 0.43,
+        "uncertain": 0.05
+      }
+    },
+    "valid": true,
+    "output_hash": "0d924028ff27d353d6670b1c19956cce99e225800e18ee6b4bc2f22b749f83e7"
+  },
+  {
+    "corpus_id": "ABS-0266",
+    "pmid": "34390671",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.19,
+        "uncertain": 0.01,
+        "include": 0.8
+      }
+    },
+    "valid": true,
+    "output_hash": "65e9c245dadb84c9d762b1ca86f0cd218bcd8a354e58172a38068d8e43a701ee"
+  },
+  {
+    "corpus_id": "ABS-0267",
+    "pmid": "19515235",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.98,
+        "exclude": 0.02,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "f428159c7c27f0adc7e410f3658bb93e209fb33b9b23aa76e54c43b1ad44bd99"
+  },
+  {
+    "corpus_id": "ABS-0268",
+    "pmid": "26517197",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.96,
+        "exclude": 0.04,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "0a84e673c25f8e25feb56d1829d8183edf6122a545523d65a57d8ceb8ede3c9a"
+  },
+  {
+    "corpus_id": "ABS-0269",
+    "pmid": "19337525",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 1,
+        "exclude": 0,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0270",
+    "pmid": "31927244",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0,
+        "include": 0,
+        "exclude": 1
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0271",
+    "pmid": "26501308",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.06,
+        "exclude": 0.94,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "484d4f963fbbbc5e06f68aaf5d93dc62d4287cf359e9ba3a35ff3fee2cff70bd"
+  },
+  {
+    "corpus_id": "ABS-0272",
+    "pmid": "24858282",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 1,
+        "exclude": 0,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0273",
+    "pmid": "27259511",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0,
+        "include": 0.97,
+        "exclude": 0.03
+      }
+    },
+    "valid": true,
+    "output_hash": "a828f3e1d0d17869be9cb24d0c25ba338c74e8a66616e27ba9a6631c8a5ef25b"
+  },
+  {
+    "corpus_id": "ABS-0274",
+    "pmid": "24569869",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "exclude": 0.99,
+        "uncertain": 0,
+        "include": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "0654a1ee1eaf7bb7e34a7a182a8dd5d4b53e23a3c97824320e2da69eddcfc3b5"
+  },
+  {
+    "corpus_id": "ABS-0275",
+    "pmid": "41426702",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0.02,
+        "include": 0.06,
+        "exclude": 0.92
+      }
+    },
+    "valid": true,
+    "output_hash": "21354adda783cff84f7f3743c0a2cff93360f860ab7c7a30134c5ea2e1ee38a5"
+  },
+  {
+    "corpus_id": "ABS-0276",
+    "pmid": "27023589",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.97,
+        "exclude": 0.01,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "f9e7964c02279be7baac1ace5638c04c7b1512ff2d6a504606161d7b1294ce25"
+  },
+  {
+    "corpus_id": "ABS-0277",
+    "pmid": "24037350",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.06,
+        "exclude": 0.93,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "b00db9536a138ddd1c858fd7a9142fe12bc65d225d148f0ae1a184bf3aa620c2"
+  },
+  {
+    "corpus_id": "ABS-0278",
+    "pmid": "31848968",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.83,
+        "exclude": 0.16,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "815e062f119c1d61f6f92dc54546968d4e735749475cb333e985c9c503c120c0"
+  },
+  {
+    "corpus_id": "ABS-0279",
+    "pmid": "26522821",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.03,
+        "exclude": 0.97,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "9b7e8d5283760e11dd01613bd77bce9b363e36b88da3f670d2a3a4ce53cf21e2"
+  },
+  {
+    "corpus_id": "ABS-0280",
+    "pmid": "34682345",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.98,
+        "exclude": 0.01,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "31182e54ead194466611d19c636baed0982573fedbf360140266b54df7ab1918"
+  },
+  {
+    "corpus_id": "ABS-0281",
+    "pmid": "32356054",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.76,
+        "exclude": 0.15,
+        "uncertain": 0.09
+      }
+    },
+    "valid": true,
+    "output_hash": "783dbda61567b9df54306642faa24fe33e92f2c0d439736cf8d9bf0f5d696f62"
+  },
+  {
+    "corpus_id": "ABS-0282",
+    "pmid": "27513706",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.05,
+        "uncertain": 0,
+        "include": 0.95
+      }
+    },
+    "valid": true,
+    "output_hash": "46f608d8155005cc6ea7f747fe1603a17fbd58a2d1ec51937568770d01b1f756"
+  },
+  {
+    "corpus_id": "ABS-0283",
+    "pmid": "27437680",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.01,
+        "uncertain": 0.01,
+        "exclude": 0.98
+      }
+    },
+    "valid": true,
+    "output_hash": "9c6761221ba4f4acf58751271ec25d5ec5b437bf4d2a535d3188d080d9511b9a"
+  },
+  {
+    "corpus_id": "ABS-0284",
+    "pmid": "40753101",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.95,
+        "exclude": 0.01,
+        "uncertain": 0.04
+      }
+    },
+    "valid": true,
+    "output_hash": "3cbecf2a4f11944f85582a301ad55dc9e35117233cf086ad002941f049c5e7e7"
+  },
+  {
+    "corpus_id": "ABS-0285",
+    "pmid": "23544440",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0.25,
+        "exclude": 0.61,
+        "include": 0.14
+      }
+    },
+    "valid": true,
+    "output_hash": "843d0c1e10f38625bd4502d3576fe0715acba3ebe689b9fb4eb7e9b0e8141bec"
+  },
+  {
+    "corpus_id": "ABS-0286",
+    "pmid": "32640508",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 1,
+        "uncertain": 0,
+        "exclude": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0287",
+    "pmid": "31538430",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.15,
+        "uncertain": 0.02,
+        "include": 0.83
+      }
+    },
+    "valid": true,
+    "output_hash": "76e695c3cbd05bcdf915b648dd9c3c94c12e06dcb5954ead3d8f44844ecd1e5d"
+  },
+  {
+    "corpus_id": "ABS-0288",
+    "pmid": "26211997",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.98,
+        "exclude": 0.02,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "f428159c7c27f0adc7e410f3658bb93e209fb33b9b23aa76e54c43b1ad44bd99"
+  },
+  {
+    "corpus_id": "ABS-0289",
+    "pmid": "39642739",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.66,
+        "exclude": 0.29,
+        "uncertain": 0.05
+      }
+    },
+    "valid": true,
+    "output_hash": "f672fd8b01c55d63f0e190c40627952c3d7526504e7b65b17415ffdc3a5fe5ef"
+  },
+  {
+    "corpus_id": "ABS-0290",
+    "pmid": "22156960",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0,
+        "exclude": 0.01,
+        "include": 0.99
+      }
+    },
+    "valid": true,
+    "output_hash": "2b1509390cc0b6d5d0babe9f798e3bed2daac2a6cb20d70e93ae8e4e39898b77"
+  },
+  {
+    "corpus_id": "ABS-0291",
+    "pmid": "24037362",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0.05,
+        "include": 0.07,
+        "exclude": 0.88
+      }
+    },
+    "valid": true,
+    "output_hash": "184106a36ee821ba4a79956ee46745ceb06b6a12472dcac4c019d6485e5484cb"
+  },
+  {
+    "corpus_id": "ABS-0292",
+    "pmid": "38867184",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.28,
+        "exclude": 0.71,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "5e275df9601d8e04cfb9a2e9c17985156e0b6622c85525b224bb3e6bc937b51c"
+  },
+  {
+    "corpus_id": "ABS-0293",
+    "pmid": "30680626",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.98,
+        "exclude": 0.01,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "31182e54ead194466611d19c636baed0982573fedbf360140266b54df7ab1918"
+  },
+  {
+    "corpus_id": "ABS-0294",
+    "pmid": "25365267",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.81,
+        "exclude": 0.18,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "bc5a75a2e13d9b78f1f95e6aa00f11cbb2cdb9a445abadfc0daaabf07ccc104d"
+  },
+  {
+    "corpus_id": "ABS-0295",
+    "pmid": "38829734",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0.01,
+        "include": 0.11,
+        "exclude": 0.88
+      }
+    },
+    "valid": true,
+    "output_hash": "dc56c354fd83041d51fee6e835d05128d50a2749f5dac9384a289482393ea029"
+  },
+  {
+    "corpus_id": "ABS-0296",
+    "pmid": "30929168",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.38,
+        "exclude": 0.39,
+        "uncertain": 0.23
+      }
+    },
+    "valid": true,
+    "output_hash": "593f3dca766d5ff11ab24f39e142fee83acddaec461f86c2705f653803364892"
+  },
+  {
+    "corpus_id": "ABS-0297",
+    "pmid": "35074347",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.52,
+        "exclude": 0.23,
+        "uncertain": 0.25
+      }
+    },
+    "valid": true,
+    "output_hash": "d2fc1e00225ade62dadfc56bed10def5f853bd71d922863b0e920c6cc1598b5e"
+  },
+  {
+    "corpus_id": "ABS-0298",
+    "pmid": "20060145",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.09,
+        "include": 0.9,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "3d6e1a6867856ced69cd1de9b1999ded02ea3fbe89a670ddf5cd73305701a8ab"
+  },
+  {
+    "corpus_id": "ABS-0299",
+    "pmid": "27669280",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.81,
+        "exclude": 0.15,
+        "uncertain": 0.04
+      }
+    },
+    "valid": true,
+    "output_hash": "380616b0676b61bed2321d4f752bfc07e1e255094e89cce35114312e760953d2"
+  },
+  {
+    "corpus_id": "ABS-0300",
+    "pmid": "39447918",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.25,
+        "exclude": 0.69,
+        "uncertain": 0.06
+      }
+    },
+    "valid": true,
+    "output_hash": "e1e86e3701c4d97ef81790f5a6455da8aa9476f3f9ee1a260673ba8018ecccab"
+  },
+  {
+    "corpus_id": "ABS-0301",
+    "pmid": "22609899",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.79,
+        "exclude": 0.16,
+        "uncertain": 0.05
+      }
+    },
+    "valid": true,
+    "output_hash": "23dc0d250780985b0f59150941fd6537043f033f4e474ab86a8830ce2f786fcb"
+  },
+  {
+    "corpus_id": "ABS-0302",
+    "pmid": "33233547",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.02,
+        "include": 0.78,
+        "exclude": 0.2
+      }
+    },
+    "valid": true,
+    "output_hash": "4c2679241600eb54e3f15bde1cfb439bc3acad5a4e61bd472642e42f4a268c7f"
+  },
+  {
+    "corpus_id": "ABS-0303",
+    "pmid": "40659757",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.04,
+        "include": 0.88,
+        "exclude": 0.08
+      }
+    },
+    "valid": true,
+    "output_hash": "464f44ea2fdc8c37d1a20ab076474305474592c85861c91530d57351ef132af3"
+  },
+  {
+    "corpus_id": "ABS-0304",
+    "pmid": "31634664",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 1,
+        "exclude": 0,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0305",
+    "pmid": "29538512",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.06,
+        "exclude": 0.92,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "21354adda783cff84f7f3743c0a2cff93360f860ab7c7a30134c5ea2e1ee38a5"
+  },
+  {
+    "corpus_id": "ABS-0306",
+    "pmid": "22266709",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.63,
+        "exclude": 0.37,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "dc10a0a8f9c305ae7c036b73a7c2b314a6d8f4dc78f83923ccd9d17c9992bc69"
+  },
+  {
+    "corpus_id": "ABS-0307",
+    "pmid": "32007283",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.32,
+        "exclude": 0.56,
+        "uncertain": 0.12
+      }
+    },
+    "valid": true,
+    "output_hash": "ff8cbf125b0c15692200c6e293ea3315c790f5481011c8b682ec72786240ee5f"
+  },
+  {
+    "corpus_id": "ABS-0308",
+    "pmid": "27525668",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.01,
+        "include": 0.74,
+        "exclude": 0.25
+      }
+    },
+    "valid": true,
+    "output_hash": "339701bf0863da006414bcc86a581dc852f50fcdd51067fd4d478c8b0162fa94"
+  },
+  {
+    "corpus_id": "ABS-0309",
+    "pmid": "40483781",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.03,
+        "uncertain": 0.01,
+        "include": 0.96
+      }
+    },
+    "valid": true,
+    "output_hash": "79a58762255acbee2d6ac20b796a5ec1237dd4077a662c69999527b1d7bede67"
+  },
+  {
+    "corpus_id": "ABS-0310",
+    "pmid": "41325786",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.98,
+        "exclude": 0.02,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "f428159c7c27f0adc7e410f3658bb93e209fb33b9b23aa76e54c43b1ad44bd99"
+  },
+  {
+    "corpus_id": "ABS-0311",
+    "pmid": "25072894",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0,
+        "uncertain": 0.01,
+        "include": 0.99
+      }
+    },
+    "valid": true,
+    "output_hash": "f67c32b4fe06ac04287fba972d14bf402fa970cfa0db3d19626ee974e39c42e7"
+  },
+  {
+    "corpus_id": "ABS-0312",
+    "pmid": "20386174",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.79,
+        "uncertain": 0.01,
+        "exclude": 0.2
+      }
+    },
+    "valid": true,
+    "output_hash": "b540d32cca40de040c85e303b71036f9afa36dab51e5254ae41ca3379099300f"
+  },
+  {
+    "corpus_id": "ABS-0313",
+    "pmid": "34710436",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.3,
+        "uncertain": 0.01,
+        "include": 0.69
+      }
+    },
+    "valid": true,
+    "output_hash": "b261b877b78812fe3ff2844c2f6bc566185932813c53e5db7a608e40eb36a4a4"
+  },
+  {
+    "corpus_id": "ABS-0314",
+    "pmid": "33396113",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.03,
+        "uncertain": 0.01,
+        "include": 0.96
+      }
+    },
+    "valid": true,
+    "output_hash": "79a58762255acbee2d6ac20b796a5ec1237dd4077a662c69999527b1d7bede67"
+  },
+  {
+    "corpus_id": "ABS-0315",
+    "pmid": "39746628",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.43,
+        "exclude": 0.37,
+        "uncertain": 0.2
+      }
+    },
+    "valid": true,
+    "output_hash": "ce0669382b5e5d788c2867564a3cc4234747fa6a489bc8a375ae8affadfa40ce"
+  },
+  {
+    "corpus_id": "ABS-0316",
+    "pmid": "20512215",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.58,
+        "exclude": 0.33,
+        "uncertain": 0.09
+      }
+    },
+    "valid": true,
+    "output_hash": "87a439290ccbd3ba9ae380b6a53c455de01e41d6da1eed18f90e91c9c64c8d21"
+  },
+  {
+    "corpus_id": "ABS-0317",
+    "pmid": "26338689",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.02,
+        "exclude": 0.97,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "d8a1f470e874e68af8a09446a5d80588c15fa9193fb7982ae69587e4257be8b5"
+  },
+  {
+    "corpus_id": "ABS-0318",
+    "pmid": "36868451",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.81,
+        "exclude": 0.15,
+        "uncertain": 0.04
+      }
+    },
+    "valid": true,
+    "output_hash": "380616b0676b61bed2321d4f752bfc07e1e255094e89cce35114312e760953d2"
+  },
+  {
+    "corpus_id": "ABS-0319",
+    "pmid": "31446603",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.07,
+        "include": 0.6,
+        "exclude": 0.33
+      }
+    },
+    "valid": true,
+    "output_hash": "093510c71b2675db3e0a11a0f1a482163974bd03f52b076327eb164fa9ffded7"
+  },
+  {
+    "corpus_id": "ABS-0320",
+    "pmid": "40651278",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0.01,
+        "exclude": 0.96,
+        "include": 0.03
+      }
+    },
+    "valid": true,
+    "output_hash": "4459d722658bd0f9fbf0a6279fd54462f890ee95beedd509912341852849f57f"
+  },
+  {
+    "corpus_id": "ABS-0321",
+    "pmid": "40328061",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0.24,
+        "exclude": 0.57,
+        "include": 0.19
+      }
+    },
+    "valid": true,
+    "output_hash": "ba2c3c805b0ad9b622bebeb269a36e965c1982fe38ac84f36505c53880d3bd1d"
+  },
+  {
+    "corpus_id": "ABS-0322",
+    "pmid": "29317583",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0,
+        "include": 0.01,
+        "exclude": 0.99
+      }
+    },
+    "valid": true,
+    "output_hash": "0654a1ee1eaf7bb7e34a7a182a8dd5d4b53e23a3c97824320e2da69eddcfc3b5"
+  },
+  {
+    "corpus_id": "ABS-0323",
+    "pmid": "29673181",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.46,
+        "exclude": 0.31,
+        "uncertain": 0.23
+      }
+    },
+    "valid": true,
+    "output_hash": "9eb10bee561cc155f727429b52933837fcfcacc26956590966a95fd6a847ea85"
+  },
+  {
+    "corpus_id": "ABS-0324",
+    "pmid": "24603899",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.07,
+        "exclude": 0.92,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "7128bbd6993ee11f2e18abe31bdee8982a274e9c0c864f2cbff06045b9a740b5"
+  },
+  {
+    "corpus_id": "ABS-0325",
+    "pmid": "27756407",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "exclude": 0.92,
+        "uncertain": 0,
+        "include": 0.08
+      }
+    },
+    "valid": true,
+    "output_hash": "341b09ccb1e1dafd27a2ce0e11d56314b485d5957946dd85e3838fe3b3dc3b6c"
+  },
+  {
+    "corpus_id": "ABS-0326",
+    "pmid": "38262660",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.9,
+        "exclude": 0.1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "7a6d2d8a5790c3165025431f4ef4f46a158cac9fe3c01e3957f3f91c97e35c02"
+  },
+  {
+    "corpus_id": "ABS-0327",
+    "pmid": "12055048",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.51,
+        "exclude": 0.48,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "6bb2de2450af6f08debd69a2102b4703d4bc6e1747d346b51f6f5cfa6a1c61b8"
+  },
+  {
+    "corpus_id": "ABS-0328",
+    "pmid": "40887914",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.35,
+        "exclude": 0.63,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "6ad15dd055fa790a375a9595a798a8a2514ca14139987d351d9544396acbf873"
+  },
+  {
+    "corpus_id": "ABS-0329",
+    "pmid": "28347336",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.18,
+        "exclude": 0.8,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "39143983cb533ca65a74c477e5f415f72d4f4a0aa4137ec0d8e667e43050d81d"
+  },
+  {
+    "corpus_id": "ABS-0330",
+    "pmid": "41337816",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.98,
+        "exclude": 0.02,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "f428159c7c27f0adc7e410f3658bb93e209fb33b9b23aa76e54c43b1ad44bd99"
+  },
+  {
+    "corpus_id": "ABS-0331",
+    "pmid": "16599010",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.03,
+        "exclude": 0.92,
+        "uncertain": 0.05
+      }
+    },
+    "valid": true,
+    "output_hash": "c32c83e0e6613da7f0d295b82bd135fbfadb61d9f65d2c425df2f2b7a5ade57b"
+  },
+  {
+    "corpus_id": "ABS-0332",
+    "pmid": "41225162",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "exclude": 0.63,
+        "include": 0.35,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "6ad15dd055fa790a375a9595a798a8a2514ca14139987d351d9544396acbf873"
+  },
+  {
+    "corpus_id": "ABS-0333",
+    "pmid": "19756042",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.38,
+        "exclude": 0.39,
+        "uncertain": 0.23
+      }
+    },
+    "valid": true,
+    "output_hash": "593f3dca766d5ff11ab24f39e142fee83acddaec461f86c2705f653803364892"
+  },
+  {
+    "corpus_id": "ABS-0334",
+    "pmid": "40586883",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.22,
+        "uncertain": 0.13,
+        "exclude": 0.65
+      }
+    },
+    "valid": true,
+    "output_hash": "99e07d0cbddb337794e05ea34800a91082747697e17f90d685423e2971a8ab03"
+  },
+  {
+    "corpus_id": "ABS-0335",
+    "pmid": "25319352",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0.02,
+        "exclude": 0.94,
+        "include": 0.04
+      }
+    },
+    "valid": true,
+    "output_hash": "628020b143c91028e677ca5a282f201a5d0c7c4db43d1553151ef875e6d2b8c0"
+  },
+  {
+    "corpus_id": "ABS-0336",
+    "pmid": "20066914",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0.02,
+        "include": 0.2,
+        "exclude": 0.78
+      }
+    },
+    "valid": true,
+    "output_hash": "d083115a8eb89740b35f3605d6f5a6f5f9d28b0d7b8b5aba7b8f02f9844d0aa0"
+  },
+  {
+    "corpus_id": "ABS-0337",
+    "pmid": "17182644",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0338",
+    "pmid": "33166757",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.02,
+        "include": 0.97,
+        "exclude": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "f9e7964c02279be7baac1ace5638c04c7b1512ff2d6a504606161d7b1294ce25"
+  },
+  {
+    "corpus_id": "ABS-0339",
+    "pmid": "40570205",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0340",
+    "pmid": "30544078",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.1,
+        "uncertain": 0.02,
+        "include": 0.88
+      }
+    },
+    "valid": true,
+    "output_hash": "46a0da54aeb9f4db7aca48a96389397349fb5b90d7c99326be134b391d9b879b"
+  },
+  {
+    "corpus_id": "ABS-0341",
+    "pmid": "31845265",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "exclude": 0.52,
+        "include": 0.27,
+        "uncertain": 0.21
+      }
+    },
+    "valid": true,
+    "output_hash": "033e98cc3d54a275ce410b721bbacfe0914bbf7c27d0626997100bde1cc7eeb8"
+  },
+  {
+    "corpus_id": "ABS-0342",
+    "pmid": "9888276",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 1,
+        "exclude": 0,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0343",
+    "pmid": "28628139",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.14,
+        "exclude": 0.84,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "09c154b2624c3347e217737c4ffc0548453e49ea988450f133f403f2da2e73c4"
+  },
+  {
+    "corpus_id": "ABS-0344",
+    "pmid": "38609898",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.07,
+        "uncertain": 0.02,
+        "include": 0.91
+      }
+    },
+    "valid": true,
+    "output_hash": "d18b830eada440f4b9886007df748cb881debef2e6ee25c0a19edf88f2bec1a0"
+  },
+  {
+    "corpus_id": "ABS-0345",
+    "pmid": "25491235",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.85,
+        "exclude": 0.14,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "8f8e78996156469da41ff0e1ba9f01431c51f60a897a7ad883e096d6f632de7f"
+  },
+  {
+    "corpus_id": "ABS-0346",
+    "pmid": "34019894",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.02,
+        "exclude": 0.98,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "29ac23a65faa18c620f26714c12e2a243f7ecd5b0f2258047d559e7ca546cca9"
+  },
+  {
+    "corpus_id": "ABS-0347",
+    "pmid": "26855129",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.24,
+        "exclude": 0.75,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "c4b8c4988684eeb03427b0d4354196e34132fb600bb0dd8f9c8dd12873c9a463"
+  },
+  {
+    "corpus_id": "ABS-0348",
+    "pmid": "23695491",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.95,
+        "exclude": 0.05,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "46f608d8155005cc6ea7f747fe1603a17fbd58a2d1ec51937568770d01b1f756"
+  },
+  {
+    "corpus_id": "ABS-0349",
+    "pmid": "24720177",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 0.99,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "eb408c249b0ec5d8753a7b5fe9129288fc07dbd61cd9da1b64b810a822005119"
+  },
+  {
+    "corpus_id": "ABS-0350",
+    "pmid": "16087571",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.94,
+        "exclude": 0.06,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "9cd80f5ea8fb091a20e2fde1a76a0211dd13cfccf4eebb9a0f448f4406978bb9"
+  },
+  {
+    "corpus_id": "ABS-0351",
+    "pmid": "40480103",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.07,
+        "uncertain": 0,
+        "include": 0.93
+      }
+    },
+    "valid": true,
+    "output_hash": "f15c57d3556425726393a35a17224390c65c86885a4978f9d2d8fe50296a7a06"
+  },
+  {
+    "corpus_id": "ABS-0352",
+    "pmid": "32609172",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.04,
+        "exclude": 0.62,
+        "uncertain": 0.34
+      }
+    },
+    "valid": true,
+    "output_hash": "aba239611feb4599c46080c1de4ab2840ab34551791c7f90329ee3529ca685a4"
+  },
+  {
+    "corpus_id": "ABS-0353",
+    "pmid": "27707554",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.73,
+        "exclude": 0.26,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "536545b6fa06156b9aa767f07abfc0d6ad180a627848f4f757ff24db6853c154"
+  },
+  {
+    "corpus_id": "ABS-0354",
+    "pmid": "16507479",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.28,
+        "exclude": 0.56,
+        "uncertain": 0.16
+      }
+    },
+    "valid": true,
+    "output_hash": "0b8bd4884c7bf6e120e0c3e738a43df64476f0ced07290016c1eb2e6ecd7c6f0"
+  },
+  {
+    "corpus_id": "ABS-0355",
+    "pmid": "21895725",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "uncertain": 0,
+        "exclude": 1
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0356",
+    "pmid": "16079066",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "uncertain": 0,
+        "exclude": 1
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0357",
+    "pmid": "41370291",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "exclude": 0.59,
+        "include": 0.35,
+        "uncertain": 0.06
+      }
+    },
+    "valid": true,
+    "output_hash": "071f93a454567856e0f5ffb5db04532bf18acf908a30d71ad017abf88d2aca68"
+  },
+  {
+    "corpus_id": "ABS-0358",
+    "pmid": "21569371",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.74,
+        "exclude": 0.13,
+        "uncertain": 0.13
+      }
+    },
+    "valid": true,
+    "output_hash": "e98c256ae1bc7bb5326b95ba8c32998e98bde90f2acffdc238ae4412a464e8eb"
+  },
+  {
+    "corpus_id": "ABS-0359",
+    "pmid": "17096045",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.04,
+        "exclude": 0.9299999999999999,
+        "uncertain": 0.03
+      }
+    },
+    "valid": true,
+    "output_hash": "dcd45db7a968f2a1c14cd2d95009ed3e4b7e6ff2ef9df9d90b56080aadaa5360"
+  },
+  {
+    "corpus_id": "ABS-0360",
+    "pmid": "29962121",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0361",
+    "pmid": "29466982",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 1,
+        "exclude": 0,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0362",
+    "pmid": "28832531",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "uncertain",
+      "probabilities": {
+        "include": 0.3,
+        "exclude": 0.33,
+        "uncertain": 0.37
+      }
+    },
+    "valid": true,
+    "output_hash": "52dfcde984c676d647b9ab1118051a67a47c2c4ebcd8bde3084b84981458c005"
+  },
+  {
+    "corpus_id": "ABS-0363",
+    "pmid": "24625053",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.99,
+        "exclude": 0.01,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "2b1509390cc0b6d5d0babe9f798e3bed2daac2a6cb20d70e93ae8e4e39898b77"
+  },
+  {
+    "corpus_id": "ABS-0364",
+    "pmid": "29043427",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.4,
+        "exclude": 0.56,
+        "uncertain": 0.04
+      }
+    },
+    "valid": true,
+    "output_hash": "145c4089b50e09305779761c2bbbf2d5ca8afb6910a660c8dad16ac234b65436"
+  },
+  {
+    "corpus_id": "ABS-0365",
+    "pmid": "41402958",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0.01,
+        "include": 0.25,
+        "exclude": 0.74
+      }
+    },
+    "valid": true,
+    "output_hash": "f60b71a847e04747f5183292ca557387aa4ec7f550c7504afe1775e24e17de07"
+  },
+  {
+    "corpus_id": "ABS-0366",
+    "pmid": "31462279",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.99,
+        "exclude": 0.01,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "2b1509390cc0b6d5d0babe9f798e3bed2daac2a6cb20d70e93ae8e4e39898b77"
+  },
+  {
+    "corpus_id": "ABS-0367",
+    "pmid": "16451867",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.5,
+        "exclude": 0.45,
+        "uncertain": 0.05
+      }
+    },
+    "valid": true,
+    "output_hash": "1c87cbb26fd4dc1736f81480af29d8e1a5d2f5891e9e517426891e1db524c93a"
+  },
+  {
+    "corpus_id": "ABS-0368",
+    "pmid": "29929325",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "exclude": 0.61,
+        "include": 0.35,
+        "uncertain": 0.04
+      }
+    },
+    "valid": true,
+    "output_hash": "ded8b56f7eb8fbb72ea7af896a6c7017725e46197a843cc26cd13881a8d73ee1"
+  },
+  {
+    "corpus_id": "ABS-0369",
+    "pmid": "37806428",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.97,
+        "exclude": 0.01,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "f9e7964c02279be7baac1ace5638c04c7b1512ff2d6a504606161d7b1294ce25"
+  },
+  {
+    "corpus_id": "ABS-0370",
+    "pmid": "12881887",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.15,
+        "exclude": 0.77,
+        "uncertain": 0.08
+      }
+    },
+    "valid": true,
+    "output_hash": "0448e8013a3f424c60fcc292c3c7821fee3c00ee77a9cd9a8f67a8c19ace27cf"
+  },
+  {
+    "corpus_id": "ABS-0371",
+    "pmid": "34283949",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 1,
+        "uncertain": 0,
+        "exclude": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0372",
+    "pmid": "16061576",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.7,
+        "exclude": 0.29,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "e5bd239b8ee202b28ef0b7455dc6a45d80f61a15694ab65d24e5e19b770728ea"
+  },
+  {
+    "corpus_id": "ABS-0373",
+    "pmid": "30061515",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.39,
+        "exclude": 0.36,
+        "uncertain": 0.25
+      }
+    },
+    "valid": true,
+    "output_hash": "c711ed08814b16c56e619672b2ff912435ee709c5871204d340a0f1c1bb1eae5"
+  },
+  {
+    "corpus_id": "ABS-0374",
+    "pmid": "38735375",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.26,
+        "include": 0.48,
+        "exclude": 0.26
+      }
+    },
+    "valid": true,
+    "output_hash": "205c76f2cd9a8471396e311379a931ec2c8f31fc0e9c0da7964e488a0cbb6ab2"
+  },
+  {
+    "corpus_id": "ABS-0375",
+    "pmid": "38768882",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "uncertain",
+      "probabilities": {
+        "uncertain": 0.44,
+        "include": 0.32,
+        "exclude": 0.24
+      }
+    },
+    "valid": true,
+    "output_hash": "30258281ecbbaa2b921f05e720f2c2c015942f396870f8e45658246d1897e9fc"
+  },
+  {
+    "corpus_id": "ABS-0376",
+    "pmid": "35334045",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.96,
+        "exclude": 0.01,
+        "uncertain": 0.03
+      }
+    },
+    "valid": true,
+    "output_hash": "cc626d47fa2dea3452865a30294f8a58556a760a1e3d19f69f0907c7002d9382"
+  },
+  {
+    "corpus_id": "ABS-0377",
+    "pmid": "37940200",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.01,
+        "exclude": 0.01,
+        "include": 0.98
+      }
+    },
+    "valid": true,
+    "output_hash": "31182e54ead194466611d19c636baed0982573fedbf360140266b54df7ab1918"
+  },
+  {
+    "corpus_id": "ABS-0378",
+    "pmid": "27884187",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0.02,
+        "exclude": 0.63,
+        "include": 0.35
+      }
+    },
+    "valid": true,
+    "output_hash": "6ad15dd055fa790a375a9595a798a8a2514ca14139987d351d9544396acbf873"
+  },
+  {
+    "corpus_id": "ABS-0379",
+    "pmid": "27110987",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0,
+        "exclude": 1,
+        "include": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0380",
+    "pmid": "17352124",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.02,
+        "exclude": 0.97,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "d8a1f470e874e68af8a09446a5d80588c15fa9193fb7982ae69587e4257be8b5"
+  },
+  {
+    "corpus_id": "ABS-0381",
+    "pmid": "33525695",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0,
+        "exclude": 0.99,
+        "include": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "0654a1ee1eaf7bb7e34a7a182a8dd5d4b53e23a3c97824320e2da69eddcfc3b5"
+  },
+  {
+    "corpus_id": "ABS-0382",
+    "pmid": "34065982",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.49,
+        "exclude": 0.4,
+        "uncertain": 0.11
+      }
+    },
+    "valid": true,
+    "output_hash": "4abb2ef3bef90a4518c687df1bdc16a6efe7da80892a48f10f414bde82495c16"
+  },
+  {
+    "corpus_id": "ABS-0383",
+    "pmid": "35595966",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.42,
+        "exclude": 0.34,
+        "uncertain": 0.24
+      }
+    },
+    "valid": true,
+    "output_hash": "5cd41da6eef01d637f5648c030a5b81ca1aecc1cbbb828b72497355b27f89af5"
+  },
+  {
+    "corpus_id": "ABS-0384",
+    "pmid": "37080281",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.02,
+        "exclude": 0.94,
+        "uncertain": 0.04
+      }
+    },
+    "valid": true,
+    "output_hash": "ce3b39e0a03bf6c7acd6030141bacb1ff5707d1b9fdbda0659f550ffbe39adba"
+  },
+  {
+    "corpus_id": "ABS-0385",
+    "pmid": "39002627",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.01,
+        "exclude": 0.99,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "0654a1ee1eaf7bb7e34a7a182a8dd5d4b53e23a3c97824320e2da69eddcfc3b5"
+  },
+  {
+    "corpus_id": "ABS-0386",
+    "pmid": "36293917",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.39,
+        "exclude": 0.46,
+        "uncertain": 0.15
+      }
+    },
+    "valid": true,
+    "output_hash": "05fbf916e231f435de907941550833c7c0d1fb50a4ca8d75e88b3214c0b95a4c"
+  },
+  {
+    "corpus_id": "ABS-0387",
+    "pmid": "27007384",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.96,
+        "exclude": 0.01,
+        "uncertain": 0.03
+      }
+    },
+    "valid": true,
+    "output_hash": "cc626d47fa2dea3452865a30294f8a58556a760a1e3d19f69f0907c7002d9382"
+  },
+  {
+    "corpus_id": "ABS-0388",
+    "pmid": "35618005",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.02,
+        "exclude": 0.23,
+        "include": 0.75
+      }
+    },
+    "valid": true,
+    "output_hash": "ab33a819dc39a9e4926d7606813a64bde95dd8c2fbbc790f2e980d87f55f2ed4"
+  },
+  {
+    "corpus_id": "ABS-0389",
+    "pmid": "30622072",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0,
+        "include": 0.75,
+        "exclude": 0.25
+      }
+    },
+    "valid": true,
+    "output_hash": "48d30ae33a2c362624254aac26302040347e0cbc1c0657e946e3b235b9139fc7"
+  },
+  {
+    "corpus_id": "ABS-0390",
+    "pmid": "31860802",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.64,
+        "exclude": 0.35,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "2a6e5bf9321aed841087ae763daf489e09defd64858dbd298eb9d14068000214"
+  },
+  {
+    "corpus_id": "ABS-0391",
+    "pmid": "30412999",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.01,
+        "exclude": 0.99,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "0654a1ee1eaf7bb7e34a7a182a8dd5d4b53e23a3c97824320e2da69eddcfc3b5"
+  },
+  {
+    "corpus_id": "ABS-0392",
+    "pmid": "22035655",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.82,
+        "exclude": 0.17,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "582fd91035c4fff80d2f03e0f7c64084508abe65d5f1dd58737904d23f0ca4d4"
+  },
+  {
+    "corpus_id": "ABS-0393",
+    "pmid": "41242364",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.02,
+        "exclude": 0.98,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "29ac23a65faa18c620f26714c12e2a243f7ecd5b0f2258047d559e7ca546cca9"
+  },
+  {
+    "corpus_id": "ABS-0394",
+    "pmid": "41468575",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.48,
+        "exclude": 0.49,
+        "uncertain": 0.03
+      }
+    },
+    "valid": true,
+    "output_hash": "1c3fe85c4764b337467c8a09b13ba65be08a0b1edfd80aecfcacc039dfc40b0c"
+  },
+  {
+    "corpus_id": "ABS-0395",
+    "pmid": "37352580",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.79,
+        "exclude": 0.2,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "b540d32cca40de040c85e303b71036f9afa36dab51e5254ae41ca3379099300f"
+  },
+  {
+    "corpus_id": "ABS-0396",
+    "pmid": "11051535",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.08,
+        "uncertain": 0.04,
+        "exclude": 0.88
+      }
+    },
+    "valid": true,
+    "output_hash": "ca6dc875f6c3820a832e60d7da25719cd4ab8f5ec088a30240a7733987896fb8"
+  },
+  {
+    "corpus_id": "ABS-0397",
+    "pmid": "21430578",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "exclude": 0.95,
+        "uncertain": 0,
+        "include": 0.05
+      }
+    },
+    "valid": true,
+    "output_hash": "a337cb3eb4a787c03cfea81c475c09a66e6e5b0f56351234663a622896a28d5a"
+  },
+  {
+    "corpus_id": "ABS-0398",
+    "pmid": "25192402",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.96,
+        "exclude": 0.04,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "0a84e673c25f8e25feb56d1829d8183edf6122a545523d65a57d8ceb8ede3c9a"
+  },
+  {
+    "corpus_id": "ABS-0399",
+    "pmid": "11051536",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.7,
+        "exclude": 0.28,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "d62ed835e087e26aed84ba5a397543fb12c2c7f739bb1940209ab7eb0c0a2669"
+  },
+  {
+    "corpus_id": "ABS-0400",
+    "pmid": "34761317",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.35,
+        "exclude": 0.63,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "6ad15dd055fa790a375a9595a798a8a2514ca14139987d351d9544396acbf873"
+  },
+  {
+    "corpus_id": "ABS-0401",
+    "pmid": "40914101",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.25,
+        "uncertain": 0.01,
+        "include": 0.74
+      }
+    },
+    "valid": true,
+    "output_hash": "339701bf0863da006414bcc86a581dc852f50fcdd51067fd4d478c8b0162fa94"
+  },
+  {
+    "corpus_id": "ABS-0402",
+    "pmid": "10339450",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 1,
+        "exclude": 0,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0403",
+    "pmid": "11246487",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0.03,
+        "include": 0.09,
+        "exclude": 0.88
+      }
+    },
+    "valid": true,
+    "output_hash": "910ab05bdf30401d91bc4802871c95a17abbf7f5b1080df5c45db6120e866bc0"
+  },
+  {
+    "corpus_id": "ABS-0404",
+    "pmid": "37243735",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.11,
+        "exclude": 0.88,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "dc56c354fd83041d51fee6e835d05128d50a2749f5dac9384a289482393ea029"
+  },
+  {
+    "corpus_id": "ABS-0405",
+    "pmid": "18079764",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.21,
+        "uncertain": 0.24,
+        "exclude": 0.55
+      }
+    },
+    "valid": true,
+    "output_hash": "6625920b0364b57a558dd4b02e3240d8409f67afc6648d69f9e9ea0a7824f8e8"
+  },
+  {
+    "corpus_id": "ABS-0406",
+    "pmid": "40699147",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.37,
+        "exclude": 0.3,
+        "uncertain": 0.33
+      }
+    },
+    "valid": true,
+    "output_hash": "059a7fa58e04dd2bb75b1ef55df1a7e5f3ff5052791194d76eb5beca74dfe36c"
+  },
+  {
+    "corpus_id": "ABS-0407",
+    "pmid": "18560541",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.92,
+        "exclude": 0.08,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "1cd09c8cb40f6dac764cf090d58438e8ac72642214d506aadb6e6d9d58fa2113"
+  },
+  {
+    "corpus_id": "ABS-0408",
+    "pmid": "37886498",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 1,
+        "exclude": 0,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0409",
+    "pmid": "28917169",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0.01,
+        "include": 0.24,
+        "exclude": 0.75
+      }
+    },
+    "valid": true,
+    "output_hash": "c4b8c4988684eeb03427b0d4354196e34132fb600bb0dd8f9c8dd12873c9a463"
+  },
+  {
+    "corpus_id": "ABS-0410",
+    "pmid": "18849779",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.38,
+        "exclude": 0.57,
+        "uncertain": 0.05
+      }
+    },
+    "valid": true,
+    "output_hash": "ab1dfe079dcc0bcd53fe8af1bff7c04826dbcfa03a432d567faed8fcd9525a48"
+  },
+  {
+    "corpus_id": "ABS-0411",
+    "pmid": "22509360",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0,
+        "exclude": 0.92,
+        "include": 0.08
+      }
+    },
+    "valid": true,
+    "output_hash": "341b09ccb1e1dafd27a2ce0e11d56314b485d5957946dd85e3838fe3b3dc3b6c"
+  },
+  {
+    "corpus_id": "ABS-0412",
+    "pmid": "33542035",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "exclude": 0.92,
+        "uncertain": 0,
+        "include": 0.08
+      }
+    },
+    "valid": true,
+    "output_hash": "341b09ccb1e1dafd27a2ce0e11d56314b485d5957946dd85e3838fe3b3dc3b6c"
+  },
+  {
+    "corpus_id": "ABS-0413",
+    "pmid": "34428652",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0414",
+    "pmid": "33981453",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.69,
+        "uncertain": 0.08,
+        "exclude": 0.23
+      }
+    },
+    "valid": true,
+    "output_hash": "557f6a559e01d60de346f30354ed9bdaf8030c1dbcb03b5fa090d5c8ed5d612c"
+  },
+  {
+    "corpus_id": "ABS-0415",
+    "pmid": "20084840",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.34,
+        "uncertain": 0.02,
+        "exclude": 0.64
+      }
+    },
+    "valid": true,
+    "output_hash": "5d0a24dbfce590e5b4b9b4492e41f82ab3d1cb35c3297d685d3b527c43020fb3"
+  },
+  {
+    "corpus_id": "ABS-0416",
+    "pmid": "27422981",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.71,
+        "exclude": 0.18,
+        "uncertain": 0.11
+      }
+    },
+    "valid": true,
+    "output_hash": "206ee4b6e109372ee7e8e161725bf2d3b4b0dd438e46fe24d7e1a816e4bf3901"
+  },
+  {
+    "corpus_id": "ABS-0417",
+    "pmid": "7925192",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0.05,
+        "exclude": 0.95,
+        "include": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "56ab740ed4f1686d26e2fc47a80db36aec613aacac014c799f3443b49cb7c814"
+  },
+  {
+    "corpus_id": "ABS-0418",
+    "pmid": "39670153",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.97,
+        "exclude": 0.03,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a828f3e1d0d17869be9cb24d0c25ba338c74e8a66616e27ba9a6631c8a5ef25b"
+  },
+  {
+    "corpus_id": "ABS-0419",
+    "pmid": "34036208",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.98,
+        "exclude": 0.02,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "f428159c7c27f0adc7e410f3658bb93e209fb33b9b23aa76e54c43b1ad44bd99"
+  },
+  {
+    "corpus_id": "ABS-0420",
+    "pmid": "25621447",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.98,
+        "exclude": 0.02,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "f428159c7c27f0adc7e410f3658bb93e209fb33b9b23aa76e54c43b1ad44bd99"
+  },
+  {
+    "corpus_id": "ABS-0421",
+    "pmid": "41105438",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.93,
+        "exclude": 0.05,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "8c33211884a8347b348f3b938b3d19a6f854c20fd080996fa3305b211553b180"
+  },
+  {
+    "corpus_id": "ABS-0422",
+    "pmid": "35853664",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 1,
+        "exclude": 0,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0423",
+    "pmid": "33778357",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.9,
+        "exclude": 0.09,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "3d6e1a6867856ced69cd1de9b1999ded02ea3fbe89a670ddf5cd73305701a8ab"
+  },
+  {
+    "corpus_id": "ABS-0424",
+    "pmid": "34528013",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0.02,
+        "exclude": 0.9299999999999999,
+        "include": 0.05
+      }
+    },
+    "valid": true,
+    "output_hash": "bb6389f9e469db9413f541c8f4c974a03a2d87a95bc08992471d3d8ac55196fd"
+  },
+  {
+    "corpus_id": "ABS-0425",
+    "pmid": "36003277",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.07,
+        "exclude": 0.31,
+        "include": 0.62
+      }
+    },
+    "valid": true,
+    "output_hash": "3e0e1a0fb2e5b7727a8376467605b19acbc414321fb2665e6f2febe43314f2a9"
+  },
+  {
+    "corpus_id": "ABS-0426",
+    "pmid": "37666316",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0,
+        "include": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0427",
+    "pmid": "26495360",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.45,
+        "uncertain": 0.02,
+        "include": 0.53
+      }
+    },
+    "valid": true,
+    "output_hash": "8e7846973bd2475492c50a610731bc56465b15035edd4bd830636c49fb92e89a"
+  },
+  {
+    "corpus_id": "ABS-0428",
+    "pmid": "38560560",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 1,
+        "exclude": 0,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0429",
+    "pmid": "34445977",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.98,
+        "exclude": 0.01,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "31182e54ead194466611d19c636baed0982573fedbf360140266b54df7ab1918"
+  },
+  {
+    "corpus_id": "ABS-0430",
+    "pmid": "38993972",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 1,
+        "uncertain": 0,
+        "exclude": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0431",
+    "pmid": "40064519",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.1,
+        "include": 0.86,
+        "exclude": 0.04
+      }
+    },
+    "valid": true,
+    "output_hash": "720f406ee109addeb40302e43bbc2e9fcdbd3e321d038d5cefa0ce3a993a040c"
+  },
+  {
+    "corpus_id": "ABS-0432",
+    "pmid": "38653569",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0.01,
+        "exclude": 0.81,
+        "include": 0.18
+      }
+    },
+    "valid": true,
+    "output_hash": "b13c515efd46793ef83abdc2c194d09b5ee87b1a4989f28b0f209f822a9a72ca"
+  },
+  {
+    "corpus_id": "ABS-0433",
+    "pmid": "21764049",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 1,
+        "exclude": 0,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0434",
+    "pmid": "26232212",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.03,
+        "uncertain": 0,
+        "include": 0.97
+      }
+    },
+    "valid": true,
+    "output_hash": "a828f3e1d0d17869be9cb24d0c25ba338c74e8a66616e27ba9a6631c8a5ef25b"
+  },
+  {
+    "corpus_id": "ABS-0435",
+    "pmid": "40158673",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0,
+        "include": 1,
+        "exclude": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0436",
+    "pmid": "31812526",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "exclude": 0.75,
+        "uncertain": 0.01,
+        "include": 0.24
+      }
+    },
+    "valid": true,
+    "output_hash": "c4b8c4988684eeb03427b0d4354196e34132fb600bb0dd8f9c8dd12873c9a463"
+  },
+  {
+    "corpus_id": "ABS-0437",
+    "pmid": "25849769",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.05,
+        "exclude": 0.95,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a337cb3eb4a787c03cfea81c475c09a66e6e5b0f56351234663a622896a28d5a"
+  },
+  {
+    "corpus_id": "ABS-0438",
+    "pmid": "32051501",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "uncertain": 0.01,
+        "exclude": 0.67,
+        "include": 0.32
+      }
+    },
+    "valid": true,
+    "output_hash": "6137b8036064c19e4bd262f07bef8181c041d95799302c472abd9380a481e008"
+  },
+  {
+    "corpus_id": "ABS-0439",
+    "pmid": "32094459",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.93,
+        "uncertain": 0.01,
+        "exclude": 0.06
+      }
+    },
+    "valid": true,
+    "output_hash": "74e251eac9fe75b7121c30f20db4ca7dd76cf2a6acc865b2b85cfa97696edd1a"
+  },
+  {
+    "corpus_id": "ABS-0440",
+    "pmid": "32491083",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.01,
+        "exclude": 0.97,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "9787b6219aed6ec6409d1b1be049ad2a38abf3dc52e47015f5cd19d15474dfb3"
+  },
+  {
+    "corpus_id": "ABS-0441",
+    "pmid": "25072896",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.96,
+        "exclude": 0.01,
+        "uncertain": 0.03
+      }
+    },
+    "valid": true,
+    "output_hash": "cc626d47fa2dea3452865a30294f8a58556a760a1e3d19f69f0907c7002d9382"
+  },
+  {
+    "corpus_id": "ABS-0442",
+    "pmid": "27342649",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.06,
+        "exclude": 0.4,
+        "include": 0.54
+      }
+    },
+    "valid": true,
+    "output_hash": "31e892f9298e3785c36f1361fdbe982f39149c0c2e8126ff49ecf743454925f3"
+  },
+  {
+    "corpus_id": "ABS-0443",
+    "pmid": "40630285",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.41,
+        "uncertain": 0.01,
+        "exclude": 0.58
+      }
+    },
+    "valid": true,
+    "output_hash": "c1abc3a0a747b8ae6d056e1b915bcdf621957328a7344287938cc4247db9939b"
+  },
+  {
+    "corpus_id": "ABS-0444",
+    "pmid": "30273725",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.04,
+        "uncertain": 0.01,
+        "include": 0.95
+      }
+    },
+    "valid": true,
+    "output_hash": "c1e5a55b57f99a9017b0350937eb5a69cf9ae97b9500f608227bba4f33e4f057"
+  },
+  {
+    "corpus_id": "ABS-0445",
+    "pmid": "31819749",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0446",
+    "pmid": "39990055",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.51,
+        "exclude": 0.43,
+        "uncertain": 0.06
+      }
+    },
+    "valid": true,
+    "output_hash": "c1cf4a7d32ecab7e97af5d9c8a24a361bb1da2c728697dd7a939372d468c08d9"
+  },
+  {
+    "corpus_id": "ABS-0447",
+    "pmid": "18854492",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.82,
+        "uncertain": 0.01,
+        "exclude": 0.17
+      }
+    },
+    "valid": true,
+    "output_hash": "582fd91035c4fff80d2f03e0f7c64084508abe65d5f1dd58737904d23f0ca4d4"
+  },
+  {
+    "corpus_id": "ABS-0448",
+    "pmid": "30698228",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.63,
+        "uncertain": 0.05,
+        "exclude": 0.32
+      }
+    },
+    "valid": true,
+    "output_hash": "3ab47b93e99a7a831bbc74a8ce93e29c488b4e89998665971ceb1666e6812cce"
+  },
+  {
+    "corpus_id": "ABS-0449",
+    "pmid": "26982960",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "exclude": 0.99,
+        "include": 0.01,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "0654a1ee1eaf7bb7e34a7a182a8dd5d4b53e23a3c97824320e2da69eddcfc3b5"
+  },
+  {
+    "corpus_id": "ABS-0450",
+    "pmid": "24284359",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 1,
+        "exclude": 0,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0451",
+    "pmid": "39398546",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.14,
+        "exclude": 0.41,
+        "include": 0.45
+      }
+    },
+    "valid": true,
+    "output_hash": "f4462f897dccb53be822ca7d4145c0e488ef921f4a47fa253908d1b7efda20fc"
+  },
+  {
+    "corpus_id": "ABS-0452",
+    "pmid": "31883240",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.22,
+        "include": 0.75,
+        "uncertain": 0.03
+      }
+    },
+    "valid": true,
+    "output_hash": "315f5dd1a5c7c1411d7169ce03165ea6a023692a0771cd85e7282b71e6642e6e"
+  },
+  {
+    "corpus_id": "ABS-0453",
+    "pmid": "31452658",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0454",
+    "pmid": "30774327",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.97,
+        "exclude": 0.03,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a828f3e1d0d17869be9cb24d0c25ba338c74e8a66616e27ba9a6631c8a5ef25b"
+  },
+  {
+    "corpus_id": "ABS-0455",
+    "pmid": "23982122",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0,
+        "include": 1,
+        "exclude": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "a9fc8e3b165f49606743dbc49ba5b342b70a79e3d30a449e08da0496277fa2fc"
+  },
+  {
+    "corpus_id": "ABS-0456",
+    "pmid": "30906916",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.42,
+        "exclude": 0.52,
+        "uncertain": 0.06
+      }
+    },
+    "valid": true,
+    "output_hash": "047f06581b797b54d39725bb300de8f5db407f95c8c486369533fd3d51a0d981"
+  },
+  {
+    "corpus_id": "ABS-0457",
+    "pmid": "20098503",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "uncertain": 0.02,
+        "exclude": 0.98
+      }
+    },
+    "valid": true,
+    "output_hash": "e2cf3c9dfff19a0c4be0a53ab142c8092d38949da39a248d12b173c1ce751207"
+  },
+  {
+    "corpus_id": "ABS-0458",
+    "pmid": "32620124",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.32,
+        "exclude": 0.66,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "c6d362084d03ee255f088c8a8dc20b4bfda2fe1955989c0aac589126555b7ed3"
+  },
+  {
+    "corpus_id": "ABS-0459",
+    "pmid": "35786346",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.43,
+        "uncertain": 0.11,
+        "include": 0.45999999999999996
+      }
+    },
+    "valid": true,
+    "output_hash": "85e368dbf73940c2d750dd9c948ef5803271fe82cf1ea711bda1164dbeb8210e"
+  },
+  {
+    "corpus_id": "ABS-0460",
+    "pmid": "37628320",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.75,
+        "exclude": 0.22,
+        "uncertain": 0.03
+      }
+    },
+    "valid": true,
+    "output_hash": "315f5dd1a5c7c1411d7169ce03165ea6a023692a0771cd85e7282b71e6642e6e"
+  },
+  {
+    "corpus_id": "ABS-0461",
+    "pmid": "35128294",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.59,
+        "uncertain": 0.14,
+        "exclude": 0.27
+      }
+    },
+    "valid": true,
+    "output_hash": "11237ad87dc1b1e9c686d03d9a7469b1aaa622aa62675bb84075e34a6096f9e8"
+  },
+  {
+    "corpus_id": "ABS-0462",
+    "pmid": "29653570",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0463",
+    "pmid": "37338586",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.08,
+        "exclude": 0.17,
+        "include": 0.75
+      }
+    },
+    "valid": true,
+    "output_hash": "d927bc150fb81579198f093bab56643de417bc891b2d5278f6919f635a6fae0b"
+  },
+  {
+    "corpus_id": "ABS-0464",
+    "pmid": "35346202",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.93,
+        "exclude": 0.07,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "f15c57d3556425726393a35a17224390c65c86885a4978f9d2d8fe50296a7a06"
+  },
+  {
+    "corpus_id": "ABS-0465",
+    "pmid": "29614737",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.25,
+        "exclude": 0.54,
+        "uncertain": 0.21
+      }
+    },
+    "valid": true,
+    "output_hash": "26fdccc6b5b0012e176a74e57cd06ef55ff8add96ad2a046fc57f681bed7e142"
+  },
+  {
+    "corpus_id": "ABS-0466",
+    "pmid": "28653196",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.96,
+        "exclude": 0.04,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "0a84e673c25f8e25feb56d1829d8183edf6122a545523d65a57d8ceb8ede3c9a"
+  },
+  {
+    "corpus_id": "ABS-0467",
+    "pmid": "38505689",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.98,
+        "exclude": 0.01,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "31182e54ead194466611d19c636baed0982573fedbf360140266b54df7ab1918"
+  },
+  {
+    "corpus_id": "ABS-0468",
+    "pmid": "33309823",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "exclude": 0.02,
+        "include": 0.97,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "ab5d0dfc1b6030e901538ecfe26c15fb4e8470dcb23b8d138126b10cc82cdff2"
+  },
+  {
+    "corpus_id": "ABS-0469",
+    "pmid": "34657126",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.78,
+        "exclude": 0.21,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "b06159d8f0ff867870144c2d7ffded80b4889b6675ae28f1cb995dcecfec1309"
+  },
+  {
+    "corpus_id": "ABS-0470",
+    "pmid": "33413265",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.91,
+        "exclude": 0.07,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "d18b830eada440f4b9886007df748cb881debef2e6ee25c0a19edf88f2bec1a0"
+  },
+  {
+    "corpus_id": "ABS-0471",
+    "pmid": "35281479",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.83,
+        "exclude": 0.16,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "815e062f119c1d61f6f92dc54546968d4e735749475cb333e985c9c503c120c0"
+  },
+  {
+    "corpus_id": "ABS-0472",
+    "pmid": "32844984",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.01,
+        "exclude": 0.99,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "0654a1ee1eaf7bb7e34a7a182a8dd5d4b53e23a3c97824320e2da69eddcfc3b5"
+  },
+  {
+    "corpus_id": "ABS-0473",
+    "pmid": "39251631",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "uncertain": 0,
+        "exclude": 1
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0474",
+    "pmid": "38445971",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "exclude": 0.99,
+        "uncertain": 0,
+        "include": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "0654a1ee1eaf7bb7e34a7a182a8dd5d4b53e23a3c97824320e2da69eddcfc3b5"
+  },
+  {
+    "corpus_id": "ABS-0475",
+    "pmid": "31553231",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.01,
+        "exclude": 0.99,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "0654a1ee1eaf7bb7e34a7a182a8dd5d4b53e23a3c97824320e2da69eddcfc3b5"
+  },
+  {
+    "corpus_id": "ABS-0476",
+    "pmid": "28041838",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.3,
+        "exclude": 0.69,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "d4cffb487822de3b85d6cd30fae055265a9fcf8994ef64f8ea53c55b0f487aa0"
+  },
+  {
+    "corpus_id": "ABS-0477",
+    "pmid": "35382829",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0,
+        "exclude": 0.11,
+        "include": 0.89
+      }
+    },
+    "valid": true,
+    "output_hash": "dfe9155a2d42f66e7a26becfd7c24935002cc3b49ba938cd01228ea3d33db014"
+  },
+  {
+    "corpus_id": "ABS-0478",
+    "pmid": "29084634",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.7,
+        "uncertain": 0.01,
+        "exclude": 0.29
+      }
+    },
+    "valid": true,
+    "output_hash": "e5bd239b8ee202b28ef0b7455dc6a45d80f61a15694ab65d24e5e19b770728ea"
+  },
+  {
+    "corpus_id": "ABS-0479",
+    "pmid": "34566522",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.19,
+        "exclude": 0.61,
+        "uncertain": 0.2
+      }
+    },
+    "valid": true,
+    "output_hash": "0100ca00223ca38ed40c0b87987a08433710bdea832ceba40728773433a89286"
+  },
+  {
+    "corpus_id": "ABS-0480",
+    "pmid": "38514998",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.07,
+        "exclude": 0.92,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "7128bbd6993ee11f2e18abe31bdee8982a274e9c0c864f2cbff06045b9a740b5"
+  },
+  {
+    "corpus_id": "ABS-0481",
+    "pmid": "28532658",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0482",
+    "pmid": "25480818",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.01,
+        "exclude": 0.99,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "0654a1ee1eaf7bb7e34a7a182a8dd5d4b53e23a3c97824320e2da69eddcfc3b5"
+  },
+  {
+    "corpus_id": "ABS-0483",
+    "pmid": "35361687",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.96,
+        "exclude": 0.04,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "0a84e673c25f8e25feb56d1829d8183edf6122a545523d65a57d8ceb8ede3c9a"
+  },
+  {
+    "corpus_id": "ABS-0484",
+    "pmid": "37310769",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.29,
+        "exclude": 0.69,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "5409b80e6f409b551f55af8cd2690e957436f6b4ae05882369c158fd0b7af294"
+  },
+  {
+    "corpus_id": "ABS-0485",
+    "pmid": "36878971",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.01,
+        "exclude": 0.99,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "0654a1ee1eaf7bb7e34a7a182a8dd5d4b53e23a3c97824320e2da69eddcfc3b5"
+  },
+  {
+    "corpus_id": "ABS-0486",
+    "pmid": "33033020",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "uncertain": 0.03,
+        "include": 0.56,
+        "exclude": 0.41
+      }
+    },
+    "valid": true,
+    "output_hash": "22eddfa1d152eb8ffb1a9562366a37a454bd6986dc767a4a47da71def5d963b3"
+  },
+  {
+    "corpus_id": "ABS-0487",
+    "pmid": "38880973",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0488",
+    "pmid": "34748777",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.03,
+        "exclude": 0.97,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "9b7e8d5283760e11dd01613bd77bce9b363e36b88da3f670d2a3a4ce53cf21e2"
+  },
+  {
+    "corpus_id": "ABS-0489",
+    "pmid": "31770406",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 0.98,
+        "uncertain": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "e2cf3c9dfff19a0c4be0a53ab142c8092d38949da39a248d12b173c1ce751207"
+  },
+  {
+    "corpus_id": "ABS-0490",
+    "pmid": "29283681",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.98,
+        "uncertain": 0,
+        "exclude": 0.02
+      }
+    },
+    "valid": true,
+    "output_hash": "f428159c7c27f0adc7e410f3658bb93e209fb33b9b23aa76e54c43b1ad44bd99"
+  },
+  {
+    "corpus_id": "ABS-0491",
+    "pmid": "22529923",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.46,
+        "exclude": 0.53,
+        "uncertain": 0.01
+      }
+    },
+    "valid": true,
+    "output_hash": "3c1bb032d29f5cfa1b6f0f0cb830532ca11ae794c7bd691a5ea0ff3861b10be3"
+  },
+  {
+    "corpus_id": "ABS-0492",
+    "pmid": "39937479",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0493",
+    "pmid": "34849952",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.04,
+        "exclude": 0.55,
+        "uncertain": 0.41
+      }
+    },
+    "valid": true,
+    "output_hash": "2d345880a1212507ab96088eafaddb80da255d3b97327a0659363be92c4dc753"
+  },
+  {
+    "corpus_id": "ABS-0494",
+    "pmid": "35805772",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "uncertain": 0,
+        "exclude": 1
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0495",
+    "pmid": "19864216",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "exclude": 0.51,
+        "include": 0.29,
+        "uncertain": 0.2
+      }
+    },
+    "valid": true,
+    "output_hash": "d26b104a18b60d3a5dec7b96f2da9181cac4011d75e70be597bf7a7efb110677"
+  },
+  {
+    "corpus_id": "ABS-0496",
+    "pmid": "38374709",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "include",
+      "probabilities": {
+        "include": 0.53,
+        "exclude": 0.44,
+        "uncertain": 0.03
+      }
+    },
+    "valid": true,
+    "output_hash": "b723d42dbd138f3ef9ef20ce30dd88dcd935945cd31532e744822d156fdf7473"
+  },
+  {
+    "corpus_id": "ABS-0497",
+    "pmid": "22735221",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0498",
+    "pmid": "34015667",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0499",
+    "pmid": "22092966",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0,
+        "exclude": 1,
+        "uncertain": 0
+      }
+    },
+    "valid": true,
+    "output_hash": "870481e729b7908e342210ddd64e04b90c36f58318a210b09021364b796e7395"
+  },
+  {
+    "corpus_id": "ABS-0500",
+    "pmid": "34242247",
+    "run_id": 4,
+    "model_id": "jev",
+    "output": {
+      "decision": "exclude",
+      "probabilities": {
+        "include": 0.01,
+        "exclude": 0.71,
+        "uncertain": 0.28
+      }
+    },
+    "valid": true,
+    "output_hash": "0bd6b26199413bef36687127f4e7e5d57fe64fb1a9aa5f5ec36e8fe935b005b2"
+  }
+]
