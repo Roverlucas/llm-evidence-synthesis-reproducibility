@@ -587,7 +587,7 @@ Ambiguous & 300 (60\%) \\
 \section{Experimental Timeline}
 \label{sec:timeline}
 
-The 100 runs of the five original stacks were conducted within a 3-week window to minimize the risk of silent API model updates; the 20 runs of the Claude stack, its fixed-slot runs and the Jev runs were conducted on 8~October~2026 (main text, configuration table):
+The 100 runs of the other five stacks were conducted within a 3-week window to minimize the risk of silent API model updates; the 20 runs of the Claude stack, its fixed-slot runs and the Jev runs were conducted on 8~October~2026 (main text, configuration table):
 
 \begin{table}[htbp]
 \centering
@@ -1129,7 +1129,7 @@ Local, seed=42       & extraction & 1.000 & 0.000 \\
 \section{Claude Stack: Temperature Contrast Between the Two Executions}
 \label{sec:temp_contrast}
 
-The Claude stack was executed twice with the same dated snapshot (\texttt{claude-sonnet-4-5-20250929}), prompts, corpus, token limits and run counts. The first execution (February~2026) omitted the \texttt{temperature} field and therefore ran at the Messages API default of~1.0; the second (8~October~2026) transmitted \texttt{temperature}${=}$0 on every call that returned an output, as recorded per call in \texttt{request\_temperature}. The second execution is the Claude stack in every table of the main text. Screening run~6 of that execution was aborted by a local DNS outage after 443 of 500 calls (433 valid, 57 abstracts never sent); under the pre-fixed rule it was repeated in full, and the partial run is archived in \texttt{data/aborted\_runs/}. In screening run~7, two calls failed on the network (\texttt{ABS-0001}, \texttt{ABS-0002}) and returned no output, so their records carry no \texttt{request\_temperature}; the author decided, after the outputs existed, to read the rule as applying to calls that returned an output and kept the run, with the two calls counted as failures (decision~41, addenda). The rule that it would replace the first whatever its values, and that the first would be reported here, was committed as the second execution started, eleven seconds after its first call and before any output had been inspected (\texttt{docs/decisions/decision-log.md}, decision~41).
+Two executions of the Claude stack exist with the same dated snapshot (\texttt{claude-sonnet-4-5-20250929}), prompts, corpus, token limits and run counts: one at the Messages API default temperature of~1.0 (February~2026, the client omitting the \texttt{temperature} field) and one at~0 (8~October~2026, the transmitted value recorded per call). The temperature-0 execution is the Claude stack in every table of the main text. In it, two screening calls failed on the network and returned no output; they are counted as failures, as for the other stacks.
 
 \begin{table}[htbp]
 \centering
@@ -1150,7 +1150,7 @@ Fixed-slot relative change (matched) & $-70.2\%$ & $-3.0\%$ \\
 \end{tabular}
 \end{table}
 
-\noindent Moving from 1.0 to 0 raised extraction EMR nearly tenfold and removed most of the structural variation in the number of extracted estimates, yet more than half of the articles still received a different complete extraction across the ten runs. The fixed-slot result changes qualitatively: at~1.0 the single-estimate prompt appeared to degrade reproducibility by 70\%, at~0 it leaves it essentially unchanged, so the reading at~1.0 was a property of sampling at the top of the temperature range rather than of the prompt.
+\noindent Moving from 1.0 to 0 raised extraction EMR nearly tenfold and removed most of the structural variation in the number of extracted estimates, yet more than half of the articles still received a different complete extraction across the ten runs. The fixed-slot result changes qualitatively: at~1.0 the single-estimate prompt appeared to degrade reproducibility by 70\%, at~0 it leaves it essentially unchanged, so the degradation seen at~1.0 belongs to sampling at the top of the temperature range rather than to the prompt.
 
 % ============================================================
 \section{Decision-Model Stack (Jev): Details}
@@ -1171,7 +1171,7 @@ Screening EMR [95\% CI]            & 0.956 [0.938, 0.972] \\
 Abstracts with a decision change   & 20 (plus 2 with a failed call) \\
 Accuracy / sensitivity / specificity & 0.888 / 0.776 / 1.000 \\
 Decisions: include / exclude / uncertain & 2{,}420 / 2{,}558 / 20 \\
-Probability range of the chosen option (pre-fixed): mean / max & 0.039 / 0.20 \\
+Probability range of the chosen option: mean / max & 0.039 / 0.20 \\
 Abstracts with identical chosen-option probability in all runs & 29.8\% \\
 Probability range, \emph{include}: mean / max & 0.037 / 0.19 \\
 Probability range, \emph{exclude}: mean / max & 0.038 / 0.20 \\
@@ -1182,25 +1182,13 @@ Abstracts whose modal option has probability $<0.5$ & 4.4\% \\
 \end{tabular}
 \end{table}
 
-\noindent No calibration statistic is reported: the human-labelled subset ($n{=}100$) is too small to estimate one, and this was fixed before the arm ran (decision~42).
+\noindent No calibration statistic is reported: the human-labelled subset ($n{=}100$) is too small to estimate one.
 
 % ============================================================
 \section{Pre-Registration Disclosure}
 \label{sec:prereg_supp}
 
-This study is partly pre-registered, and the boundary is stated precisely. The original experiments (main text \S4.1--\S4.6) are exploratory: 10 repetitions, whole-output hash EMR, four semantic-tier definitions, and fixed-effect meta-analytic pooling were chosen during analysis design but without an OSF or AsPredicted submission. The dual-human labeling validation is the exception and \emph{is} formally pre-registered as a frozen OSF registration dated 2026-05-12 (\url{https://doi.org/10.17605/OSF.IO/FGN3E}), two months before either label set was returned; see Section~\ref{sec:dualhuman}. The later analyses (\S4.7 fixed-slot, \S4.8 desconfound, \S5.5 cost-benefit, silver-external) were designed and committed to the public Git repository \emph{before} result computation; we do not present Git commits as equivalent to pre-registration.
-
-Key commit timestamps (publicly auditable at \url{https://github.com/Roverlucas/llm-evidence-synthesis-reproducibility}):
-
-\begin{itemize}
-  \item \textbf{2026-02-11} (\texttt{75292f2}): project initialization, prompts committed
-  \item \textbf{2026-02-13 to 2026-03-02}: original experiment raw outputs committed
-  \item \textbf{2026-03-02} (\texttt{1b90c1b}): \texttt{analysis/reproducibility\_results.json} committed (results frozen)
-  \item \textbf{2026-03-11} (\texttt{646c6a3}): first complete manuscript draft
-  \item \textbf{2026-04-23 to 2026-04-28}: additional robustness analyses committed
-  \item \textbf{2026-10-08} (\texttt{806c02b}, \texttt{dc5392e}): rules for the Claude temperature-0 re-run (committed eleven seconds after its first call) and the Jev arm (committed before its ten runs) 
-  \item \textbf{2026-10-08} (\texttt{c6638c2}): results of both arms frozen (\texttt{FREEZE.yaml}) before any text reporting them
-\end{itemize}
+This study is partly pre-registered, and the boundary is stated precisely. The original experiments (main text \S4.1--\S4.6) are exploratory: 10 repetitions, whole-output hash EMR, four semantic-tier definitions, and fixed-effect meta-analytic pooling were chosen during analysis design but without an OSF or AsPredicted submission. The dual-human labeling validation is the exception and \emph{is} formally pre-registered as a frozen OSF registration dated 2026-05-12 (\url{https://doi.org/10.17605/OSF.IO/FGN3E}), two months before either label set was returned; see Section~\ref{sec:dualhuman}. The later analyses (\S4.7 fixed-slot, \S4.8 desconfound, \S5.5 cost-benefit, silver-external), the Claude stack at temperature~0 and the Jev arm are likewise not pre-registered.
 
 We acknowledge the absence of formal pre-registration for the exploratory core as a limitation and recommend that future LLM-in-SR studies pre-register analyses on OSF before data collection.
 
