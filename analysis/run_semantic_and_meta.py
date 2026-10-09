@@ -249,6 +249,7 @@ def run_meta_analysis_experiment(model: str, n_runs: int = 10):
         # Collect all usable estimates
         estimates_for_pooling = []
         articles_used = 0
+        n_ci_excludes_null = 0  # usable estimates whose own CI excludes RR = 1
 
         for item in results:
             output = item.get("output", {})
@@ -284,6 +285,8 @@ def run_meta_analysis_experiment(model: str, n_runs: int = 10):
                     if se > 0:
                         estimates_for_pooling.append((log_eff, se))
                         articles_used += 1
+                        if ci_lo > 1 or ci_hi < 1:
+                            n_ci_excludes_null += 1
                 except (ValueError, ZeroDivisionError):
                     continue
 
@@ -292,6 +295,7 @@ def run_meta_analysis_experiment(model: str, n_runs: int = 10):
         run_results.append({
             "run": r,
             "n_estimates": len(estimates_for_pooling),
+            "n_estimates_ci_excludes_null": n_ci_excludes_null,
             "pooled_effect": round(pooled_eff, 6) if pooled_eff is not None else None,
             "pooled_se": round(pooled_se, 6) if pooled_se is not None else None,
             "z_score": round(z, 4) if z is not None else None,

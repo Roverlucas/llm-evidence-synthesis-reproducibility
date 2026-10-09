@@ -16,7 +16,7 @@ artifacts:
   - {path: analysis/reproducibility_results.json, hash: "sha256:b5f7fe1ed6e6004f7912604b46aa299cfabab1804090166d1fc7c0689ecc5237", produced_by: run_analysis.py, describes: "headline EMR, CIs, accuracy, field EMR (6 stacks)"}
   - {path: analysis/supplementary_arms_results.json, hash: "sha256:1ad366cac5f10eec6deefefabb8d1e997bea8fc9f259bd8f896d7f85cc2c8a6d", produced_by: run_analysis.py, describes: "Claude T=1.0 contrast and Jev screening"}
   - {path: analysis/bootstrap/bootstrap_cis.json, hash: "sha256:a57240c769511e9eef54ac44bdca31f82f9b3161afc0933b17d4e5480b537bba", produced_by: run_analysis.py, describes: "bootstrap CIs, 10k resamples, seed 42"}
-  - {path: analysis/semantic_and_meta_results.json, hash: "sha256:ab39f6f1c6a27af9e347dc7c2482773fdab9c2dd96ada5b7da4a1c53be432a49", produced_by: analysis/run_semantic_and_meta.py, describes: "semantic tiers and meta-analytic propagation"}
+  - {path: analysis/semantic_and_meta_results.json, hash: "sha256:2d9d009cbe34d0ae4464b9eab073fb31e0b63a4a885cad5005af87669c17b044", produced_by: analysis/run_semantic_and_meta.py, describes: "semantic tiers and meta-analytic propagation"}
   - {path: analysis/fleiss_kappa.json, hash: "sha256:bb7cc06cdc6dbd93e5ed7772e389d73a952d9540914ae8682d4855a1f9563fd2", produced_by: analysis/compute_fleiss_kappa.py, describes: "inter-run Fleiss kappa"}
   - {path: analysis/bertscore_results.json, hash: "sha256:aec36fc5049fa458c419bbcc8833225eac5725ca3835761ac4d128a7774f85d5", produced_by: analysis/compute_bertscore.py, describes: "BERTScore F1 all-pairs"}
   - {path: analysis/timing_and_costs.json, hash: "sha256:ac1ab30250a397df4592f860946bc64d65826cbed6c7fe05f44f0177ac61c74b", produced_by: scripts/compute_timing_costs.py, describes: "timing, tokens, cost"}
@@ -43,4 +43,11 @@ derived:
 
 exploratory_post_freeze: []
 
-refreeze_log: []
+refreeze_log:
+  - date: "2026-10-09"
+    artifact: analysis/semantic_and_meta_results.json
+    change: >
+      Added n_estimates_ci_excludes_null per run, needed by the supplement's meta-analytic
+      inputs table (k_sig), which until now had no reproducible source. Every pre-existing
+      value is unchanged (checked field by field); the definition reproduces the k_sig
+      ranges previously reported for the five original stacks and the T=1.0 Claude arm.
