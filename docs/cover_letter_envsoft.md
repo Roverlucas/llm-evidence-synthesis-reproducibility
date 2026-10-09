@@ -22,11 +22,11 @@ Five results:
 
 2. **The same model, served differently, behaves differently.** Llama 3 8B Instruct reproduced exactly on the local stack and varied across runs when served through a cloud endpoint. The two arms also differ in weight precision and request construction, which the paper states, so the result shows that small model size does not confer determinism; it does not isolate the serving layer.
 
-3. **Constraining the output shape is not a fix.** Against a run-count-matched baseline, a fixed-slot prompt degraded reproducibility on one stack, improved it on another and left the third unchanged.
+3. **Constraining the output shape is not a fix.** Against a run-count- and identity-matched baseline, fixed-slot EMR was lower on one stack and not distinguishably different on the other two; constraining the output shape did not remove the variation.
 
 4. **Schema conformance is a separate axis from reproducibility.** The local stacks reproduce perfectly while returning schema-valid extraction output on 38–43% of calls; one cloud stack conforms on 2.6%. Determinism and usability are different properties, and measuring only the first hides the second.
 
-5. **Returning the distribution does not remove the variation.** The decision model reached a screening Exact Match Rate of 0.956, inside the range of the generative API stacks, and the probability it assigned to the same option moved between identical calls for most abstracts. What the distribution adds is visibility: an abstract whose probabilities move can be routed to a human reader.
+5. **Returning the distribution does not remove the variation.** The decision model reached a screening Exact Match Rate of 0.956, inside the range of the generative API stacks, and the probability it assigned to the same option moved between identical calls for most abstracts. What the distribution adds is visibility: an abstract whose probabilities move between runs can be identified from the output.
 
 ## Why EMS
 
@@ -54,13 +54,13 @@ Code: https://github.com/Roverlucas/llm-evidence-synthesis-reproducibility (MIT)
 
 We would rather you meet these here than find them in the manuscript.
 
-**The human reference standard missed its target.** Two blinded raters working from the pre-registered protocol reached κ = 0.529 against a pre-specified 0.80. We report the shortfall as measured, trace it to one under-specified inclusion criterion, and carry the standard forward as asymmetrically valid — firm on specificity, a lower bound on sensitivity — rather than recomputing a coefficient that would clear the threshold with no evidential content behind it.
+**The human reference standard missed its target.** Two blinded raters working from the pre-registered protocol reached κ = 0.529 against a pre-specified 0.80. We report the shortfall as measured, trace it to one under-specified inclusion criterion, and carry the standard forward as asymmetrically valid — firm on specificity, uninterpretable on sensitivity — rather than recomputing a coefficient that would clear the threshold with no evidential content behind it.
 
 **One of our own clients did not transmit the configuration we declared.** It attached the temperature field to the request body only when the value exceeded zero, so 6,000 Claude calls requesting zero were sent without it and ran at the provider default of 1.0. The run cards recorded 0.0 regardless, because the provenance hash was computed over the requested parameters rather than the transmitted payload. We found this by reading the client, not by instrument. The Claude stack reported in the paper was run at zero in October 2026 with the same snapshot and the transmitted value recorded per call; the execution at 1.0 is reported in the Supplement as a temperature contrast. The cost is that the Claude stack is eight months younger than the others and ran on a snapshot now announced for retirement; we state both in the paper. The defect is the paper's own recommendation arrived at the hard way: provenance must record what was transmitted, not what was requested.
 
 ## Declarations
 
-The work is original, is not under consideration elsewhere, and all authors have approved the submission. We declare no competing interests. AI-based tools were used for code development and language editing, as declared in the manuscript. A related manuscript describing the provenance protocol (Rover et al., Nature Communications, in press) is cited in the text; the present study applies that protocol to a two-stage environmental evidence pipeline and reports no data from it.
+The work is original, is not under consideration elsewhere, and all authors have approved the submission. We declare no competing interests. AI-based tools were used for code development and language editing, as declared in the manuscript. A related manuscript describing the provenance protocol (Rover et al., Nature Communications, accepted) is cited in the text; the present study applies that protocol to a two-stage environmental evidence pipeline and cites one of its results.
 
 Thank you for considering our work.
 

@@ -3,8 +3,9 @@
 > Can LLM non-determinism alter the conclusions of environmental health meta-analyses?
 
 **Status:** manuscript prepared for *Environmental Modelling & Software*. All LLM
-experiments are complete, and every number the manuscript cites is listed with its
-SHA-256 in `FREEZE.yaml`. Stage A of the dual-human validation is complete and reported;
+experiments are complete, and every analysis artefact the manuscript cites is listed
+with its SHA-256 in `FREEZE.yaml`; the dual-labeling statistics come from
+`data/dual_labeling/results/`. Stage A of the dual-human validation is complete and reported;
 no dual-human extraction reference was built for this study.
 
 | Deposit | DOI |

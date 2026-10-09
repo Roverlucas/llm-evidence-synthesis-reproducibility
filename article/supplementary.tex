@@ -484,7 +484,7 @@ This is provided so that future reviewers and replicators can verify (a)~exactly
 
 \begin{table}[htbp]
 \centering
-\caption{Official documentation references for the six deployment stacks evaluated and the same-weights cloud route. URLs and access dates are recorded so that replication studies can pin to the documented behaviour rather than to current docs that may drift.}
+\caption{Official documentation references for the six deployment stacks evaluated and the same-checkpoint cloud route. URLs and access dates are recorded so that replication studies can pin to the documented behaviour rather than to current docs that may drift.}
 \label{tab:apidocs}
 \small
 \begin{tabular}{p{2.6cm}p{2.8cm}p{6.2cm}p{1.6cm}}
@@ -495,7 +495,7 @@ Anthropic   & Claude Sonnet~4.5 / Messages API v1            & \url{https://docs
 Google      & Gemini~2.5 Pro / generateContent (v1beta)          & \url{https://ai.google.dev/api/rest}              & 2026-02-11 \\
 OpenAI      & GPT-4.1 / Chat Completions v1                  & \url{https://platform.openai.com/docs/api-reference/chat} & 2026-02-11 \\
 Ollama (local) & LLaMA~3 8B / Mistral~7B / Gemma~2 9B (v0.15.5) & \url{https://github.com/ollama/ollama/blob/main/docs/api.md} & 2026-02-11 \\
-OpenRouter $\rightarrow$ DeepInfra & \texttt{meta-llama/llama-3-8b-instruct} (same-weights route) & \url{https://openrouter.ai/docs} & 2026-04-23 \\
+OpenRouter $\rightarrow$ DeepInfra & \texttt{meta-llama/llama-3-8b-instruct} (same-checkpoint route) & \url{https://openrouter.ai/docs} & 2026-04-23 \\
 Vercel AI Gateway & \texttt{typesafe-ai/jev} / \texttt{POST /v1/evaluate} & \url{https://vercel.com/docs/ai-gateway} & 2026-10-08 \\
 \bottomrule
 \end{tabular}
@@ -710,14 +710,14 @@ GPT-4.1           & 0.150 & 0.444 & \textbf{$+0.294$} & \textbf{$+196.3\%$} & 0.
 \end{table}
 
 % ============================================================
-\section{Same-Weights Comparison: Details}
+\section{Same-Checkpoint Comparison: Details}
 \label{sec:desconfound_supp}
 
-The same-weights comparison (main text, Section~\ref{main-sec:desconfound}) serves the Llama~3 8B Instruct checkpoint via cloud and compares it with the local Ollama deployment, which serves a 4-bit (Q4\_0) quantization of that checkpoint. In the deposited call records of the cloud arm the provider field reads \texttt{groq}, a fixed string left in the script; the run cards record the route actually used (OpenRouter to DeepInfra), and no reported number reads the provider field (\texttt{analysis/blindage/samemodel\_payload.json}).
+The same-checkpoint comparison (main text, Section~\ref{main-sec:desconfound}) serves the Llama~3 8B Instruct checkpoint via cloud and compares it with the local Ollama deployment, which serves a 4-bit (Q4\_0) quantization of that checkpoint. In the deposited call records of the cloud arm the provider field reads \texttt{groq}, a fixed string left in the script; the run cards record the route actually used (OpenRouter to DeepInfra), and no reported number reads the provider field (\texttt{analysis/blindage/samemodel\_payload.json}).
 
 \begin{table}[htbp]
 \centering
-\caption{Same-weights comparison: configuration. Both deployments use the same checkpoint (4-bit locally, undisclosed precision in the cloud), prompt source file, seed${=}$42 and temperature${=}$0; the request payloads are not byte-identical (main text, Section~\ref{main-sec:desconfound}).}
+\caption{Same-checkpoint comparison: configuration. Both deployments use the same checkpoint (4-bit locally, undisclosed precision in the cloud), prompt source file, seed${=}$42 and temperature${=}$0; the request payloads are not byte-identical (main text, Section~\ref{main-sec:desconfound}).}
 \label{tab:desconfound_supp}
 \begin{tabular}{lll}
 \toprule
@@ -1234,7 +1234,7 @@ Ambiguous          & 300   & Primary test set (borderline cases) \\
 
 \begin{table}[htbp]
 \centering
-\caption{Mapping of candidate non-determinism mechanisms onto the deployment stacks evaluated in this study. \checkmark{}~= documented in public materials (e.g., provider engineering blog, vendor docs, or directly observable from API behaviour); \emph{likely}~= strongly consistent with public information about the stack but not directly attested per request; \emph{possible}~= compatible with public information but unconfirmed; ---~= precluded by the stack's design (e.g., single-replica local inference cannot use multi-GPU all-reduce). Attribution for the three API-served stacks is inferential; for the three local Ollama/M4 stacks, the absence of every listed mechanism follows directly from the single-device, single-execution-thread serving configuration. The two Together-AI / DeepInfra cloud columns refer to the same-weights desconfound stack (Section~\ref{main-sec:desconfound}).}
+\caption{Mapping of candidate non-determinism mechanisms onto the deployment stacks evaluated in this study. \checkmark{}~= documented in public materials (e.g., provider engineering blog, vendor docs, or directly observable from API behaviour); \emph{likely}~= strongly consistent with public information about the stack but not directly attested per request; \emph{possible}~= compatible with public information but unconfirmed; ---~= precluded by the stack's design (e.g., single-replica local inference cannot use multi-GPU all-reduce). Attribution for the three API-served stacks is inferential; for the three local Ollama/M4 stacks, the absence of every listed mechanism follows directly from the single-device, single-execution-thread serving configuration. The two Together-AI / DeepInfra cloud columns refer to the same-checkpoint desconfound stack (Section~\ref{main-sec:desconfound}).}
 \label{tab:mechanisms}
 \footnotesize
 \begin{tabular}{p{4.8cm}cccccc}
