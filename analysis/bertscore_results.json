@@ -1,13 +1,13 @@
 {
-  "claude-sonnet-4-5": {
+  "claude-sonnet-4-5-t0": {
     "max_f1": 1.0,
-    "mean_f1": 0.99711,
-    "min_f1": 0.931469,
+    "mean_f1": 0.999448,
+    "min_f1": 0.959667,
     "n_articles": 100,
     "n_pairs": 4500,
-    "prop_ge_0.95": 0.996667,
-    "prop_ge_0.99": 0.900222,
-    "std_f1": 0.008931
+    "prop_ge_0.95": 1.0,
+    "prop_ge_0.99": 0.986222,
+    "std_f1": 0.004225
   },
   "gemini-2.5-pro": {
     "max_f1": 1.0,

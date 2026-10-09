@@ -6,7 +6,7 @@
     "num_runs": 10,
     "rescale_with_baseline": "Both raw and rescaled F1 computed in parallel (rescaled uses bert_score package's roberta-large baseline; reported per RSM P1.a audit).",
     "seed": 42,
-    "sha256_self": "30ffffa1d0cf906188584cc537df36fbffb664aeba00df88d7ca0497663cbfb6",
+    "sha256_self": "fbdf52c9a3bba1485426998a34079246da8b5286448e8127cb4b009634e212a2",
     "text_fields": [
       "study_design",
       "study_location",
@@ -16,26 +16,26 @@
     ]
   },
   "models": {
-    "claude-sonnet-4-5": {
+    "claude-sonnet-4-5-t0": {
       "n_articles": 100,
       "n_pairs": 4500,
       "raw_f1": {
         "max": 1.0,
-        "mean": 0.99711,
-        "min": 0.931469,
+        "mean": 0.999448,
+        "min": 0.959667,
         "n": 4500,
-        "prop_ge_0.95": 0.996667,
-        "prop_ge_0.99": 0.900222,
-        "std": 0.008931
+        "prop_ge_0.95": 1.0,
+        "prop_ge_0.99": 0.986222,
+        "std": 0.004225
       },
       "rescaled_f1": {
         "max": 1.000001,
-        "mean": 0.982877,
-        "min": 0.593947,
+        "mean": 0.996726,
+        "min": 0.761023,
         "n": 4500,
-        "prop_ge_0.95": 0.887111,
-        "prop_ge_0.99": 0.868889,
-        "std": 0.052919
+        "prop_ge_0.95": 0.982667,
+        "prop_ge_0.99": 0.977111,
+        "std": 0.025036
       }
     },
     "gemini-2.5-pro": {
