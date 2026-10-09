@@ -1,0 +1,46 @@
+# FREEZE — results frozen before the manuscript is rewritten (gate SA-QG-020).
+# From this commit on, prose may cite only values present in the artifacts below.
+
+freeze:
+  declared_by: "Lucas Rover"
+  date: "2026-10-09"
+  commit: "1d1a189"
+  reason: >
+    Claude arm re-run at temperature 0 (decision 41) and Jev arm added (decision 42),
+    both wired into every analysis (decision 43). The T=1.0 Claude arm becomes a
+    supplement contrast.
+  scope_lock: null   # no scope-lock.md exists for this paper; scope is set by decisions 41-43
+  sap: "docs/decisions/decision-log.md (decisions 41 and 42, fixed before any output existed)"
+
+artifacts:
+  - {path: analysis/reproducibility_results.json, hash: "sha256:b5f7fe1ed6e6004f7912604b46aa299cfabab1804090166d1fc7c0689ecc5237", produced_by: run_analysis.py, describes: "headline EMR, CIs, accuracy, field EMR (6 stacks)"}
+  - {path: analysis/supplementary_arms_results.json, hash: "sha256:1ad366cac5f10eec6deefefabb8d1e997bea8fc9f259bd8f896d7f85cc2c8a6d", produced_by: run_analysis.py, describes: "Claude T=1.0 contrast and Jev screening"}
+  - {path: analysis/bootstrap/bootstrap_cis.json, hash: "sha256:a57240c769511e9eef54ac44bdca31f82f9b3161afc0933b17d4e5480b537bba", produced_by: run_analysis.py, describes: "bootstrap CIs, 10k resamples, seed 42"}
+  - {path: analysis/semantic_and_meta_results.json, hash: "sha256:ab39f6f1c6a27af9e347dc7c2482773fdab9c2dd96ada5b7da4a1c53be432a49", produced_by: analysis/run_semantic_and_meta.py, describes: "semantic tiers and meta-analytic propagation"}
+  - {path: analysis/fleiss_kappa.json, hash: "sha256:bb7cc06cdc6dbd93e5ed7772e389d73a952d9540914ae8682d4855a1f9563fd2", produced_by: analysis/compute_fleiss_kappa.py, describes: "inter-run Fleiss kappa"}
+  - {path: analysis/bertscore_results.json, hash: "sha256:aec36fc5049fa458c419bbcc8833225eac5725ca3835761ac4d128a7774f85d5", produced_by: analysis/compute_bertscore.py, describes: "BERTScore F1 all-pairs"}
+  - {path: analysis/timing_and_costs.json, hash: "sha256:ac1ab30250a397df4592f860946bc64d65826cbed6c7fe05f44f0177ac61c74b", produced_by: scripts/compute_timing_costs.py, describes: "timing, tokens, cost"}
+  - {path: analysis/blindage/fixedslot_paired.json, hash: "sha256:24588d672a91fb16a998aa122a8440c53b1d52313fe1e5005a96eb32a3dcad75", produced_by: scripts/blindage/fixedslot_paired_baseline.py, describes: "fixed-slot vs run-count-matched baseline, incl. T=1.0 pair"}
+  - {path: analysis/blindage/jev_screening.json, hash: "sha256:a331ba932895569505f89f1166cd828134b54a499a26686dc7d76e9be9ccd90b", produced_by: scripts/blindage/jev_screening_profile.py, describes: "Jev probability spread across runs"}
+  - {path: analysis/blindage/schema_conformance.json, hash: "sha256:7ddfba8e729ef8cfb2bf169a7ba88f6253a3866675d1d8f75ac05933f8787e4d", produced_by: scripts/blindage/schema_conformance.py, describes: "schema conformance per stack"}
+  - {path: analysis/blindage/seed_effect.json, hash: "sha256:f5d3972e7c73188a23ffac3d73d042db107f51bd60fe6e405c81d1a8b8087f2a", produced_by: scripts/blindage/seed_effect_analysis.py, describes: "seeded vs unseeded API stacks"}
+  - {path: analysis/blindage/small_literature_sim.json, hash: "sha256:07d668fda7b8b06c5ef5ae16698ff17d59901033882c8227333303457410b3a0", produced_by: scripts/blindage/small_literature_simulation.py, describes: "small-literature simulation, per-stack generator"}
+  - {path: analysis/blindage/multiple_comparison.json, hash: "sha256:0fefa463d0ef57301d5b7ab9844daac188add23fb8ea8b6cd49dfdfd46061760", produced_by: scripts/blindage/multiple_comparison_correction.py, describes: "paired contrasts with Holm/BH"}
+  - {path: analysis/blindage/pairwise_disagreement.json, hash: "sha256:06089bc5ebc5e927cfa5f6fa169163a4395071c1ada330a2d0ba0f3229a21b5e", produced_by: scripts/blindage/pairwise_disagreement.py, describes: "pairwise disagreement"}
+  - {path: analysis/blindage/per_run_accuracy_multi.json, hash: "sha256:536f39daf1717244c0fd269c891db5dd1028b05c642dc9156d5a95c15f7bbcc6", produced_by: scripts/blindage/per_run_accuracy_multi_source.py, describes: "per-run accuracy vs silver/human"}
+  - {path: analysis/blindage/random_effects_per_run.json, hash: "sha256:1fc02fc0919c1a8cc1e59b2d3abc37f7c5165cc088257509742c9f83a4d3c92e", produced_by: scripts/blindage/rule_of_three_and_random_effects.py, describes: "random effects per run"}
+  - {path: analysis/blindage/rule_of_three.json, hash: "sha256:a61cb60020b15ceeb84f99d2711cd03f8238a2e7279a096b882fa1b08533841f", produced_by: scripts/blindage/rule_of_three_and_random_effects.py, describes: "rule-of-three bounds"}
+  - {path: analysis/blindage/rationale_similarity.json, hash: "sha256:7a8ad2faef308d072d76e07968c0990646085a09ed323510f02ada8ecc556f53", produced_by: scripts/blindage/rationale_similarity.py, describes: "rationale similarity"}
+  - {path: analysis/blindage/retry_quantification.json, hash: "sha256:690be9736df656609d3ead06e0d6cca481c38af30780fe0c0ead089e0519a278", produced_by: scripts/blindage/retry_quantification.py, describes: "retries"}
+  - {path: analysis/blindage/silver_standard_internal.json, hash: "sha256:e7188c875609144cd4fbfb611845abc5e26a877c158493918b427cc5c712de05", produced_by: scripts/blindage/silver_standard_majority_vote.py, describes: "silver internal"}
+  - {path: analysis/blindage/silver_cross_validation.json, hash: "sha256:658275293da9abda587c84204a2e21b717b74f8b44837feee9ad9512cabce50d", produced_by: scripts/blindage/cross_validate_silvers.py, describes: "silver cross-validation"}
+  - {path: analysis/blindage/work_saved.json, hash: "sha256:15404d39be809351953478bc03b907a246ee88a0d919afedb7e6650f8f5c10b0", produced_by: scripts/blindage/work_saved_metric.py, describes: "work saved"}
+  - {path: analysis/blindage/fixed_slot_comparison.json, hash: "sha256:3ce5d6844b5a6d111c6c3ceab8c0a41f4a1914afb4c8d4dcf1a5a2037cb3c375", produced_by: scripts/blindage/analyze_fixed_slot_results.py, describes: "fixed-slot vs 10-run baseline"}
+
+derived:
+  - {artifact: analysis/figures/emr_comparison.pdf, from: analysis/reproducibility_results.json, regenerated_after_freeze: true}
+  - {artifact: analysis/figures/field_emr_heatmap.pdf, from: analysis/reproducibility_results.json, regenerated_after_freeze: true}
+
+exploratory_post_freeze: []
+
+refreeze_log: []
