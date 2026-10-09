@@ -60,7 +60,7 @@ We would rather you meet these here than find them in the manuscript.
 
 ## Declarations
 
-The work is original, is not under consideration elsewhere, and all authors have approved the submission. We declare no competing interests. AI-based tools were used for code development and language editing, as declared in the manuscript. A related manuscript describing the provenance protocol (Rover et al., Nature Communications, accepted) is cited in the text; the present study applies that protocol to a two-stage environmental evidence pipeline and cites one of its results.
+The work is original, is not under consideration elsewhere, and all authors have approved the submission. We declare no competing interests. AI-based tools were used for code development and language editing, as declared in the manuscript. A related manuscript describing the provenance protocol (Rover et al., Nature Communications, in press) is cited in the text; the present study applies that protocol to a two-stage environmental evidence pipeline and cites one of its results.
 
 Thank you for considering our work.
 

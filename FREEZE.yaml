@@ -43,6 +43,8 @@ artifacts:
 derived:
   - {artifact: analysis/figures/emr_comparison.pdf, from: analysis/reproducibility_results.json, regenerated_after_freeze: true}
   - {artifact: analysis/figures/field_emr_heatmap.pdf, from: analysis/reproducibility_results.json, regenerated_after_freeze: true}
+  - {artifact: article/graphical_abstract.pdf, from: analysis/reproducibility_results.json, produced_by: scripts/graphical_abstract.py, regenerated_after_freeze: true}
+  - {artifact: article/figures/Figure_1.pdf..Figure_3.pdf, from: analysis/figures/, produced_by: article/sync_figures.sh, note: "byte copies under the journal's file names"}
 
 exploratory_post_freeze: []
 

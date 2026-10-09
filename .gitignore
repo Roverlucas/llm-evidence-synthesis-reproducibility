@@ -53,3 +53,6 @@ analysis/bootstrap/*.json
 !analysis/figures/.gitkeep
 !analysis/tables/.gitkeep
 !analysis/bootstrap/.gitkeep
+
+# Editorial Manager upload package, rebuilt by article/build_submission.sh
+article/submission_envsoft/
