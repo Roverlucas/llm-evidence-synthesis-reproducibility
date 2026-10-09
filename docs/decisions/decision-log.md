@@ -760,6 +760,14 @@ Under rule 5 it was excluded and re-run in full (500/500 valid, all `request_tem
 US$ 3.50). The partial run is archived in `data/aborted_runs/`, outside the analysed outputs.
 Script: `scripts/redo_claude_t0_screening_run6.sh`. Total spend of the arm: US$ 50.99.
 
+Addendum 2 (2026-10-08, author decision taken after the runs existed). Screening run 7 has
+498/500 valid: two calls failed on the network (DNS error on ABS-0001, read timeout on
+ABS-0002) and returned no output, so their records carry no `request_temperature`. Every
+call that returned an output carries 0.0. The author kept run 7 and reads rule 5 as applying
+to calls that returned an output; the two failures are reported as failed calls, as for the
+other stacks. This reading was fixed after the outputs existed and is disclosed as such in
+the supplement.
+
 ## 42 — 2026-10-08 · Jev added as a seventh stack, screening only, fixed before any output exists
 **Why.** The author authorised (2026-10-08) a decision-model arm: TypeSafe Jev returns a choice
 plus the probability of every option instead of sampling text. It is a third family next to
