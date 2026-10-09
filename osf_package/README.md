@@ -4,9 +4,9 @@
 
 **Short Title**: LLM Evidence Synthesis Reproducibility
 
-**Status**: Manuscript under review at *Research Synthesis Methods* (Cambridge University Press, IF 6.1)
+**Status**: Manuscript in preparation for *Environmental Modelling & Software* (Elsevier)
 
-**Last updated**: 2026-05-11
+**Last updated**: 2026-10-08
 
 ---
 
@@ -29,7 +29,8 @@ We measure whether large language model (LLM) non-determinism propagates through
 
 - **Domain**: PM2.5 and respiratory hospitalizations (time-series studies)
 - **Corpus**: 500 PubMed abstracts (100 include / 100 exclude / 300 ambiguous)
-- **Deployment stacks evaluated**: 6 (3 local Ollama + 3 cloud APIs) + 1 quasi-isolation probe (DeepInfra hosting LLaMA 3 8B)
+- **Deployment stacks evaluated**: 6 (3 local Ollama + 3 cloud APIs) + 1 quasi-isolation probe (DeepInfra hosting LLaMA 3 8B) + 1 decision model on screening only (TypeSafe Jev, October 2026)
+- **Claude stack**: executed at temperature 0 in October 2026 (`data/raw_outputs/claude-sonnet-4-5-t0/`); the February 2026 execution, which ran at the provider default of 1.0 because the client omitted the field, is kept in `data/raw_outputs/claude-sonnet-4-5/` and reported as a temperature contrast (decision log, decisions 41–43)
 - **Repetitions**: 10 runs per stack per stage
 - **Total LLM calls**: ~36,000 across 120 experiment runs (plus extensions)
 - **Silver standard**: DeepSeek-R1 (independent provider/architecture/decoding paradigm) — 5 runs
@@ -56,8 +57,9 @@ This top-level project contains the following components, each with its own DOI:
 - Frozen commit at time of OSF deposit: `38873a2`
 - All randomness seeded with `seed = 42`
 - SHA-256 provenance hashes embedded in every JSON output
-- Tests: 108/108 passing
-- Manuscript compiles cleanly: main 29 pp, supplementary 19 pp
+- Tests: 157/157 passing
+- Manuscript compiles cleanly: main 83 pp, supplementary 30 pp
+- Results frozen before the manuscript text: `FREEZE.yaml` (hashes of every cited analysis artefact)
 
 ## Companion Paper
 

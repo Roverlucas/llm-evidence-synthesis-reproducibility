@@ -343,28 +343,48 @@ To illustrate the nature of extraction non-determinism, we present two represent
 
 \subsection{Example 1: Exact Match (Local Model -- Gemma 2 9B)}
 
-All 10 runs produced identical output (EMR = 1.000):
+Article \texttt{ABS-0079} (PMID in \texttt{data/corpus/corpus\_500.json}). All 10 runs returned this output byte for byte (\texttt{data/raw\_outputs/gemma2-9b/extraction/run\_001/results.json}):
 
-\begin{lstlisting}[language={},caption={Gemma 2 9B extraction output (identical across all 10 runs)}]
+\begin{lstlisting}[language={},caption={Gemma 2 9B extraction output for ABS-0079, identical across all 10 runs}]
 {
-  "study_id": "chen_2017",
-  "study_location": "Shanghai, China",
-  "study_period": "2013-2015",
-  "study_design": "time_series",
+  "study_id": "null",
+  "study_location": "Taipei, Taiwan",
+  "study_period": "2006-2010",
+  "study_design": "case_crossover",
   "population": "general",
   "sample_size": null,
   "estimates": [
     {
       "effect_measure": "RR",
-      "effect_estimate": 1.023,
-      "ci_lower": 1.005,
-      "ci_upper": 1.042,
+      "effect_estimate": 1.12,
+      "ci_lower": 1.16,
+      "ci_upper": 1.13,
       "ci_level": 95,
-      "exposure_increment": "per 10 ug/m3",
-      "lag": "lag0-1",
-      "outcome_specific": "all_respiratory",
-      "covariates": ["temperature", "humidity", "day_of_week",
-                     "long_term_trend", "seasonality"]
+      "exposure_increment": "per IQR",
+      "lag": "null",
+      "outcome_specific": "pneumonia",
+      "covariates": [
+        "temperature",
+        "day of the week",
+        "seasonality",
+        "long-term time trends"
+      ]
+    },
+    {
+      "effect_measure": "RR",
+      "effect_estimate": 1.04,
+      "ci_lower": 1.03,
+      "ci_upper": 1.06,
+      "ci_level": 95,
+      "exposure_increment": "per IQR",
+      "lag": "null",
+      "outcome_specific": "pneumonia",
+      "covariates": [
+        "temperature",
+        "day of the week",
+        "seasonality",
+        "long-term time trends"
+      ]
     }
   ]
 }
@@ -372,48 +392,64 @@ All 10 runs produced identical output (EMR = 1.000):
 
 \subsection{Example 2: Near-Miss (Cloud API -- Claude Sonnet 4.5)}
 
-Runs 1--8 and 10 produced one output; Run 9 differed in the \texttt{estimates} array:
+Same article. Nine of the ten runs returned the output below (\texttt{data/raw\_outputs/claude-sonnet-4-5-t0/extraction/run\_001/results.json}); run~5 returned the same object except for one string, repeated in both estimates:
 
-\begin{lstlisting}[language={},caption={Claude Sonnet 4.5 -- Run 9 extracted 2 estimates instead of 1}]
+\begin{lstlisting}[language={},caption={Claude Sonnet 4.5 extraction output for ABS-0079, runs 1--4 and 6--10}]
 {
-  "study_id": "chen_2017",
-  "study_location": "Shanghai, China",
-  "study_period": "2013-2015",
-  "study_design": "time_series",
+  "study_id": "taipei_2006",
+  "study_location": "Taipei, Taiwan",
+  "study_period": "2006-2010",
+  "study_design": "case_crossover",
   "population": "general",
   "sample_size": null,
   "estimates": [
     {
       "effect_measure": "RR",
-      "effect_estimate": 1.023,
-      "ci_lower": 1.005,
-      "ci_upper": 1.042,
+      "effect_estimate": 1.12,
+      "ci_lower": 1.13,
+      "ci_upper": 1.16,
       "ci_level": 95,
-      "exposure_increment": "per 10 ug/m3",
-      "lag": "lag0-1",
-      "outcome_specific": "all_respiratory",
-      "covariates": ["temperature", "humidity", "day_of_week",
-                     "long_term_trend", "seasonality"]
+      "exposure_increment": "per IQR",
+      "lag": null,
+      "outcome_specific": "pneumonia",
+      "subgroup": "warm days (>23\u00b0C)",
+      "model": "single-pollutant",
+      "covariates": [
+        "temperature",
+        "day of week",
+        "seasonality",
+        "long-term time trends"
+      ]
     },
     {
       "effect_measure": "RR",
-      "effect_estimate": 1.031,
-      "ci_lower": 1.008,
-      "ci_upper": 1.054,
+      "effect_estimate": 1.04,
+      "ci_lower": 1.03,
+      "ci_upper": 1.06,
       "ci_level": 95,
-      "exposure_increment": "per 10 ug/m3",
-      "lag": "lag2",
+      "exposure_increment": "per IQR",
+      "lag": null,
       "outcome_specific": "pneumonia",
-      "covariates": ["temperature", "humidity", "day_of_week"]
+      "subgroup": "cool days (<23\u00b0C)",
+      "model": "single-pollutant",
+      "covariates": [
+        "temperature",
+        "day of week",
+        "seasonality",
+        "long-term time trends"
+      ]
     }
   ]
 }
 \end{lstlisting}
 
-\noindent \textbf{Key observation:} The metadata fields (\texttt{study\_id}, \texttt{study\_location}, \texttt{study\_design}) are identical across all 10 runs (consistent with BERTScore $F_1 = 0.997$).
-The variation lies in the \texttt{estimates} array---Run 9 extracted an additional sub-group estimate (pneumonia at lag 2) that the other 9 runs did not.
-This single additional estimate causes the hash-based EMR to register a non-match, while the BERTScore over metadata text remains near-perfect.
-This exemplifies the ``semantic paradox'' reported in Section 4.5 of the main paper.
+\begin{lstlisting}[language={},caption={The only difference in run 5, in both elements of \texttt{estimates}}]
+- "long-term time trends"
++ "long-term trend"
+\end{lstlisting}
+
+\noindent \textbf{Key observations.} The metadata fields are identical across all ten Claude runs, and the divergence sits inside the \texttt{estimates} array: run~5 shortened one covariate label. That single string is enough for the hash-based EMR to register a non-match, while a metadata-level or embedding-level comparison would register agreement; this is the pattern described in the semantic equivalence analysis of the main text.
+The pair also illustrates that reproducibility is not correctness. Both stacks reproduce a confidence interval that cannot be right for the first estimate: Gemma returns \texttt{ci\_lower} 1.16 above \texttt{ci\_upper} 1.13 in every run, and Claude returns a point estimate (1.12) below its own lower bound (1.13). A perfectly reproducible extraction can carry the same error into every run.
 
 % ============================================================
 \section{Model Configurations}
@@ -421,21 +457,24 @@ This exemplifies the ``semantic paradox'' reported in Section 4.5 of the main pa
 
 \begin{table}[htbp]
 \centering
-\caption{Complete model configurations for all six LLMs.}
+\caption{Complete configurations for the six deployment stacks and the screening-only decision-model stack, as set in \texttt{run\_experiment.py} and the runner modules.}
 \small
 \begin{tabular}{llccccl}
 \toprule
 \textbf{Model} & \textbf{Provider} & \textbf{Temp.} & \textbf{Seed} & \textbf{Max Tokens} & \textbf{Timeout} & \textbf{Version} \\
 \midrule
-LLaMA 3 8B     & Ollama   & 0.0 & 42   & 4096  & 600s & \texttt{llama3:8b} \\
-Mistral 7B     & Ollama   & 0.0 & 42   & 4096  & 600s & \texttt{mistral:7b} \\
-Gemma 2 9B     & Ollama   & 0.0 & 42   & 4096  & 600s & \texttt{gemma2:9b} \\
+LLaMA 3 8B     & Ollama   & 0.0 & 42   & 2048  & 600s & \texttt{llama3:8b} \\
+Mistral 7B     & Ollama   & 0.0 & 42   & 2048  & 600s & \texttt{mistral:7b} \\
+Gemma 2 9B     & Ollama   & 0.0 & 42   & 2048  & 600s & \texttt{gemma2:9b} \\
 \midrule
-Claude Sonnet 4.5 & Anthropic & 0.0 & --- & 4096 & 90s & \texttt{claude-sonnet-4-5-20250929} \\
+Claude Sonnet 4.5 & Anthropic & 0.0$^\ddagger$ & --- & 2048 & 60s & \texttt{claude-sonnet-4-5-20250929} \\
 Gemini 2.5 Pro & Google   & 0.0 & 42   & 8192$^\dagger$ & 90s & \texttt{gemini-2.5-pro} \\
-GPT-4.1        & OpenAI   & 0.0 & 42   & 4096  & 90s & \texttt{gpt-4.1} \\
+GPT-4.1        & OpenAI   & 0.0 & 42   & 2048  & 90s & \texttt{gpt-4.1} \\
+\midrule
+Jev (screening only) & TypeSafe via Vercel AI Gateway & n/a & n/a & n/a & 60s & \texttt{typesafe-ai/jev} \\
 \bottomrule
-\multicolumn{7}{l}{\footnotesize $^\dagger$Gemini requires higher \texttt{maxOutputTokens} because thinking tokens consume the output budget.}
+\multicolumn{7}{l}{\footnotesize $^\dagger$Gemini requires higher \texttt{maxOutputTokens} because thinking tokens consume the output budget.}\\
+\multicolumn{7}{p{0.95\textwidth}}{\footnotesize $^\ddagger$Transmitted on every call of the October~2026 execution; the February~2026 execution omitted the field and ran at the provider default of~1.0 (Section~\ref{sec:temp_contrast}).}
 \end{tabular}
 \end{table}
 
@@ -454,11 +493,12 @@ This is provided so that future reviewers and replicators can verify (a)~exactly
 \toprule
 \textbf{Provider} & \textbf{Stack / Endpoint} & \textbf{Documentation URL} & \textbf{Access date} \\
 \midrule
-Anthropic   & Claude Sonnet~4.5 / Messages API v1            & \url{https://docs.anthropic.com/en/api/messages} & 2026-02-11 \\
+Anthropic   & Claude Sonnet~4.5 / Messages API v1            & \url{https://docs.anthropic.com/en/api/messages} & 2026-02-11; 2026-10-08 \\
 Google      & Gemini~2.5 Pro / generateContent (v1)          & \url{https://ai.google.dev/api/rest}              & 2026-02-11 \\
 OpenAI      & GPT-4.1 / Chat Completions v1                  & \url{https://platform.openai.com/docs/api-reference/chat} & 2026-02-11 \\
 Ollama (local) & LLaMA~3 8B / Mistral~7B / Gemma~2 9B (v0.15.5) & \url{https://github.com/ollama/ollama/blob/main/docs/api.md} & 2026-02-11 \\
 OpenRouter $\rightarrow$ DeepInfra & \texttt{meta-llama/llama-3-8b-instruct} (desconfound route) & \url{https://openrouter.ai/docs} & 2026-04-23 \\
+Vercel AI Gateway & \texttt{typesafe-ai/jev} / \texttt{POST /v1/evaluate} & \url{https://vercel.com/docs/ai-gateway} & 2026-10-08 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -547,7 +587,7 @@ Ambiguous & 300 (60\%) \\
 \section{Experimental Timeline}
 \label{sec:timeline}
 
-All 120 experimental runs were conducted within a 3-week window to minimize the risk of silent API model updates:
+The 100 runs of the five original stacks were conducted within a 3-week window to minimize the risk of silent API model updates; the 20 runs of the Claude stack, its fixed-slot runs and the Jev runs were conducted on 8~October~2026 (main text, configuration table):
 
 \begin{table}[htbp]
 \centering
@@ -559,7 +599,7 @@ All 120 experimental runs were conducted within a 3-week window to minimize the 
 LLaMA 3 8B      & Feb 11--12 & Feb 12--13 & $\sim$91h \\
 Mistral 7B       & Feb 13--15 & Feb 15--16 & $\sim$77h \\
 Gemma 2 9B       & Feb 16--17 & Feb 17     & $\sim$46h \\
-Claude Sonnet 4.5 & Feb 18    & Feb 18--19 & $\sim$12h \\
+Claude Sonnet 4.5 & Oct 8 (2026) & Oct 8 (2026) & $\sim$9h \\
 Gemini 2.5 Pro   & Feb 20    & Feb 20--21 & $\sim$8h \\
 GPT-4.1          & Feb 22    & Feb 22--Mar 2 & $\sim$6h \\
 \bottomrule
@@ -576,7 +616,7 @@ GPT-4.1          & Feb 22    & Feb 22--Mar 2 & $\sim$6h \\
   \item \textbf{Ollama}: v0.15.5 (local model serving)
   \item \textbf{Key dependencies}: numpy $\geq$ 1.26, pandas $\geq$ 2.1, scipy $\geq$ 1.12, jsonschema $\geq$ 4.20, bert-score $\geq$ 0.3.13, transformers $\geq$ 4.36
   \item \textbf{No external SDKs}: All API calls use Python's \texttt{urllib.request} to ensure uniform request handling
-  \item \textbf{Test suite}: 45 tests (pytest $\geq$ 8.0), 100\% pass rate
+  \item \textbf{Test suite}: 157 tests (pytest $\geq$ 8.0), 100\% pass rate
   \item \textbf{License}: MIT
   \item \textbf{Repository}: \url{https://github.com/Roverlucas/llm-evidence-synthesis-reproducibility}
 \end{itemize}
@@ -603,8 +643,8 @@ Mistral 7B        & Extraction & 1.000 & [1.000, 1.000]$^*$ & 100 \\
 Gemma 2 9B        & Screening  & 1.000 & [1.000, 1.000]$^*$ & 500 \\
 Gemma 2 9B        & Extraction & 1.000 & [1.000, 1.000]$^*$ & 100 \\
 \midrule
-Claude Sonnet 4.5 & Screening  & 0.974 & [0.960, 0.986] & 500 \\
-Claude Sonnet 4.5 & Extraction & 0.050 & [0.010, 0.090] & 100 \\
+Claude Sonnet 4.5 & Screening  & 0.990 & [0.980, 0.998] & 500 \\
+Claude Sonnet 4.5 & Extraction & 0.470 & [0.370, 0.570] & 100 \\
 Gemini 2.5 Pro    & Screening  & 0.936 & [0.914, 0.956] & 500 \\
 Gemini 2.5 Pro    & Extraction & 0.200 & [0.120, 0.280] & 100 \\
 GPT-4.1           & Screening  & 0.970 & [0.954, 0.984] & 500 \\
@@ -658,15 +698,15 @@ Abstract: {abstract}
 
 \begin{table}[htbp]
 \centering
-\caption{Fixed-slot extraction sensitivity analysis: 3 cloud models $\times$ 3 runs $\times$ 100 INCLUDE articles. Variable-length baseline from main Table~3 (10 runs). Provider pinned per call: Claude Sonnet~4.5 via Anthropic API; Gemini~2.5~Pro via Google API; GPT-4.1 via OpenAI API.}
+\caption{Fixed-slot extraction sensitivity analysis: 3 cloud models $\times$ 3 runs $\times$ 100 INCLUDE articles. Variable-length baseline from the main extraction table (10 runs), i.e.\ the unmatched comparison; the run-count-matched comparison is in the main text. Here EMR and pairwise disagreement are computed over schema-valid outputs only (\texttt{scripts/blindage/analyze\_fixed\_slot\_results.py}), so Gemini's fixed-slot EMR rests on 92 articles and differs slightly from the main-text value, which counts every returned output. Provider pinned per call: Claude Sonnet~4.5 via Anthropic API; Gemini~2.5~Pro via Google API; GPT-4.1 via OpenAI API.}
 \label{tab:fixedslot_supp}
 \begin{tabular}{lccccc}
 \toprule
 \textbf{Model} & \textbf{Var-len EMR} & \textbf{Fixed-slot EMR} & \textbf{$\Delta$ abs} & \textbf{$\Delta$ rel} & \textbf{Pairwise dis.} \\
 \midrule
-Claude Sonnet 4.5 & 0.050 & 0.030 & $-0.020$ & $-40.0\%$ & 0.78 \\
-Gemini 2.5 Pro    & 0.200 & 0.185 & $-0.015$ & $-7.6\%$  & 0.49 \\
-GPT-4.1           & 0.150 & \textbf{0.444} & \textbf{$+0.294$} & \textbf{$+196.3\%$} & 0.36 \\
+Claude Sonnet 4.5 & 0.470 & \textbf{0.640} & $+0.170$ & $+36.2\%$ & 0.26 \\
+Gemini 2.5 Pro    & 0.200 & 0.185 & $-0.015$ & $-7.6\%$  & 0.63 \\
+GPT-4.1           & 0.150 & 0.444 & \textbf{$+0.294$} & \textbf{$+196.3\%$} & 0.46 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -816,19 +856,19 @@ Mistral 7B & extraction & 1.000 & 0.0000 & 0.00\% \\
 Gemma 2 9B & screening  & 1.000 & 0.0000 & 0.00\% \\
 Gemma 2 9B & extraction & 1.000 & 0.0000 & 0.00\% \\
 \midrule
-Claude Sonnet 4.5 & screening  & 0.974 & 0.0096 & 2.60\% \\
-Claude Sonnet 4.5 & extraction & 0.050 & \textbf{0.8180} & \textbf{95.00\%} \\
+Claude Sonnet 4.5 & screening  & 0.990 & 0.0035 & 1.00\% \\
+Claude Sonnet 4.5 & extraction & 0.470 & 0.2413 & 53.00\% \\
 Gemini 2.5 Pro    & screening  & 0.936 & 0.0198 & 6.40\% \\
-Gemini 2.5 Pro    & extraction & 0.200 & 0.4927 & 80.00\% \\
+Gemini 2.5 Pro    & extraction & 0.200 & \textbf{0.4927} & 80.00\% \\
 GPT-4.1           & screening  & 0.970 & 0.0137 & 3.00\% \\
-GPT-4.1           & extraction & 0.150 & 0.4858 & 85.00\% \\
+GPT-4.1           & extraction & 0.150 & 0.4858 & \textbf{85.00\%} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \begin{table}[htbp]
 \centering
-\caption{Token-bigram Jaccard similarity on screening rationale (free-form text) vs.\ metadata (categorical concatenation). Computed across all $\binom{10}{2}{=}45$ run-pairs per item, averaged over 500 abstracts. Demonstrates that BERTScore $F_1{\geq}0.997$ on metadata is a saturation artifact: in non-saturating text (rationale), Claude exhibits only 0.378 mean similarity.}
+\caption{Token-bigram Jaccard similarity on screening rationale (free-form text) vs.\ metadata (categorical concatenation). Computed across all $\binom{10}{2}{=}45$ run-pairs per item, averaged over 500 abstracts. Demonstrates that BERTScore $F_1{\geq}0.997$ on metadata is a saturation artifact: in non-saturating text (rationale), mean similarity falls to 0.623 (Gemini), 0.725 (GPT-4.1) and 0.804 (Claude).}
 \label{tab:rationale}
 \begin{tabular}{lcccc}
 \toprule
@@ -838,8 +878,8 @@ LLaMA 3 8B    & 1.000 & 1.000 & 0.000 \\
 Mistral 7B    & 1.000 & 1.000 & 0.000 \\
 Gemma 2 9B    & 1.000 & 1.000 & 0.000 \\
 \midrule
-Claude Sonnet 4.5 & 0.978 & \textbf{0.378} & 0.600 \\
-Gemini 2.5 Pro    & 0.978 & 0.623 & 0.355 \\
+Claude Sonnet 4.5 & 0.989 & 0.804 & 0.185 \\
+Gemini 2.5 Pro    & 0.978 & \textbf{0.623} & 0.355 \\
 GPT-4.1           & 0.984 & 0.725 & 0.259 \\
 \bottomrule
 \end{tabular}
@@ -865,7 +905,7 @@ LLaMA 3 8B / Ollama / M4       & 1.000 & 1.000 & 100.0\% & 1.000 & 1.000 & 100.0
 Mistral 7B / Ollama / M4       & 1.000 & 1.000 & 100.0\% & 1.000 & 1.000 & 100.0\% \\
 Gemma 2 9B / Ollama / M4       & 1.000 & 1.000 & 100.0\% & 1.000 & 1.000 & 100.0\% \\
 \midrule
-Claude Sonnet 4.5 / Anthropic  & 0.997 & 0.931 & 99.7\%  & 0.983 & \phantom{$-$}0.594 & 88.7\% \\
+Claude Sonnet 4.5 / Anthropic  & 0.999 & 0.960 & 100.0\% & 0.997 & \phantom{$-$}0.761 & 98.3\% \\
 Gemini 2.5 Pro / Google        & 0.997 & 0.754 & 98.5\%  & 0.979 & $-0.458$ & 93.4\% \\
 GPT-4.1 / OpenAI               & 1.000 & 0.956 & 100.0\% & 0.998 & \phantom{$-$}0.740 & 98.9\% \\
 \bottomrule
@@ -880,7 +920,7 @@ GPT-4.1 / OpenAI               & 1.000 & 0.956 & 100.0\% & 0.998 & \phantom{$-$}
 
 The original two-proportion $z$-test was replaced with McNemar's test because the contrasts compare \emph{paired} per-item consistency outcomes on the same 100 articles (or 500 abstracts) across cloud APIs.
 We compute, for each model $M$ and field $F$, the article-level binary indicator $b_i^{M,F}{=}1$ if all 10 runs of $M$ produced an identical value for $F$ on article $i$, $0$ otherwise; the paired contrasts are then evaluated by McNemar's test on the $2{\times}2$ discordance table of $(b_i^{M_1,F}, b_i^{M_2,F})$, using the exact mid-$p$ binomial when discordants $b{+}c{\leq}25$ and the chi-square with continuity correction otherwise (\texttt{statsmodels.stats.contingency\_tables.mcnemar}).
-Holm-Bonferroni (FWER) and Benjamini-Hochberg (FDR) corrections are applied to the 21 paired contrasts (5 metadata fields plus overall extraction and screening EMR; 3 pairwise comparisons each). Of 21 contrasts: 7 are significant at raw $p{<}0.05$, 4 survive Holm correction, and 5 survive BH-FDR.
+Holm-Bonferroni (FWER) and Benjamini-Hochberg (FDR) corrections are applied to the 21 paired contrasts (5 metadata fields plus overall extraction and screening EMR; 3 pairwise comparisons each). Of 21 contrasts: 6 are significant at raw $p{<}0.05$, 4 survive Holm correction, and 4 survive BH-FDR.
 
 \begin{table}[htbp]
 \centering
@@ -890,17 +930,15 @@ Holm-Bonferroni (FWER) and Benjamini-Hochberg (FDR) corrections are applied to t
 \toprule
 \textbf{Field} & \textbf{Models} & \textbf{$\Delta$ EMR} & \textbf{$b/c$} & \textbf{Raw $p$} & \textbf{Holm $p$} & \textbf{BH-FDR $p$} \\
 \midrule
-study\_location           & Claude vs.\ GPT-4.1   & $-0.220$ & $0/22$  & $<\!0.0001$    & $\mathbf{<\!0.0001}$ & $\mathbf{<\!0.0001}$ \\
-study\_location           & Gemini vs.\ GPT-4.1   & $-0.104$ & $0/10$  & $0.0020$       & $\mathbf{0.0391}$    & $\mathbf{0.0136}$ \\
-extraction\_overall\_EMR  & Claude vs.\ Gemini    & $-0.150$ & $4/19$  & $0.0026$       & $\mathbf{0.0468}$    & $\mathbf{0.0136}$ \\
-screening\_overall\_EMR   & Claude vs.\ Gemini    & $+0.038$ & $27/8$  & $0.0023$       & $\mathbf{0.0446}$    & $\mathbf{0.0136}$ \\
-study\_location           & Claude vs.\ Gemini    & $-0.115$ & $2/13$  & $0.0074$       & $0.1255$             & $\mathbf{0.0310}$ \\
+extraction\_overall\_EMR  & Claude vs.\ GPT-4.1   & $+0.320$ & $42/10$ & $<\!0.0001$    & $\mathbf{0.0003}$    & $\mathbf{0.0002}$ \\
+screening\_overall\_EMR   & Claude vs.\ Gemini    & $+0.054$ & $31/4$  & $<\!0.0001$    & $\mathbf{0.0002}$    & $\mathbf{0.0002}$ \\
+extraction\_overall\_EMR  & Claude vs.\ Gemini    & $+0.270$ & $38/11$ & $0.0002$       & $\mathbf{0.0039}$    & $\mathbf{0.0014}$ \\
+study\_location           & Gemini vs.\ GPT-4.1   & $-0.104$ & $0/10$  & $0.0020$       & $\mathbf{0.0352}$    & $\mathbf{0.0103}$ \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\noindent The remaining 16 contrasts (population, sample\_size, study\_design, study\_period; some screening/extraction overall pairs) are not statistically robust after FWER correction; the original ``distinct instability profiles'' claim (main text Finding~3) is therefore tightened to: \emph{differences are robust for study\_location, overall extraction EMR (Claude vs.\ Gemini), and overall screening EMR (Claude vs.\ Gemini), but not for other categorical fields}.
-Replacing the original two-proportion $z$-test with McNemar slightly increases the number of contrasts surviving Holm correction (from~3 to~4), as McNemar conditions on the discordant pairs and gains power when within-pair concordance is high.
+\noindent The remaining 17 contrasts (population, sample\_size, study\_design, study\_period, the other study\_location pairs, and the screening pairs Claude vs.\ GPT-4.1 and Gemini vs.\ GPT-4.1, which reach raw $p{<}0.05$ but not after correction) are not statistically robust. The ``distinct instability profiles'' claim (main text Finding~3) therefore rests on: overall extraction EMR (Claude against each of the other API stacks), overall screening EMR (Claude vs.\ Gemini), and study\_location (Gemini vs.\ GPT-4.1); differences in the other categorical fields are not robust.
 
 % ============================================================
 \section{Fleiss' Kappa for Inter-Run Agreement}
@@ -910,7 +948,7 @@ We report Fleiss' $\kappa$ for inter-run agreement on screening decisions and ex
 
 Two caveats govern how the table below should be read, and we state them before the numbers.
 
-\emph{First, the chance correction is inert for the whole-output hash column.} Treating each distinct output hash as a category yields 667 categories over 100 items for Claude, 265 for Gemini and 298 for GPT-4.1. With categories that numerous and that sparsely populated, the expected agreement $p_e$ falls to ${\approx}0.003$--$0.005$, so $\kappa{=}(p_o{-}p_e)/(1{-}p_e)$ collapses onto $p_o$ and reproduces the pairwise concordance already reported in Table~\ref{main-tab:extraction} rather than adding chance-corrected information. We keep the column because the ordering across stacks is informative, and we do not interpret it against the Landis--Koch bands, which presuppose a meaningful chance baseline. The per-field columns, where categories number in the single digits, are not affected.
+\emph{First, the chance correction is inert for the whole-output hash column.} Treating each distinct output hash as a category yields 182 categories over 100 items for Claude, 265 for Gemini and 298 for GPT-4.1. With categories that numerous and that sparsely populated, the expected agreement $p_e$ falls to ${\approx}0.006$--$0.008$, so $\kappa{=}(p_o{-}p_e)/(1{-}p_e)$ collapses onto $p_o$ and reproduces the pairwise concordance already reported in Table~\ref{main-tab:extraction} rather than adding chance-corrected information. We keep the column because the ordering across stacks is informative, and we do not interpret it against the Landis--Koch bands, which presuppose a meaningful chance baseline. The per-field columns, where categories number in the single digits, are not affected.
 
 \emph{Second, the intervals are bootstrap, not closed-form.} The classical variance of Fleiss (1971, eq.~13) depends only on the marginal proportions and is the asymptotic variance \emph{under $H_0$: $\kappa{=}0$}, appropriate for testing that null and not for placing an interval around an estimated $\kappa$. Applied to these data it returned upper limits above 1.000 in 18 of 24 cells and assigned different standard errors to stacks whose $\kappa$ was exactly 1.000. We therefore report percentile bootstrap intervals resampling items (10,000 resamples, seed 42). Where every resample returns $\kappa{=}1.000$ the interval is degenerate and is shown as $[1.000, 1.000]$; the informative statement for those cells is the rule-of-three bound on the non-match rate, as used for the $\textrm{EMR}{=}1.000$ cells in the main text.
 
@@ -926,15 +964,15 @@ LLaMA 3 8B / Ollama / M4       & $1.000^{\dagger}$ & $1.000^{\dagger}$ & $1.000^
 Mistral 7B / Ollama / M4       & $1.000^{\dagger}$ & $1.000^{\dagger}$ & $1.000^{\dagger}$ & $1.000^{\dagger}$ \\
 Gemma 2 9B / Ollama / M4       & $1.000^{\dagger}$ & $1.000^{\dagger}$ & $1.000^{\dagger}$ & $1.000^{\dagger}$ \\
 \midrule
-Claude Sonnet 4.5 / Anthropic  & $0.981\,[0.970, 0.991]$ & $\mathbf{0.180\,[0.133, 0.226]}$ & $0.985\,[0.952, 1.000]$ & $0.974\,[0.944, 0.996]$ \\
+Claude Sonnet 4.5 / Anthropic  & $0.995\,[0.988, 1.000]$ & $\mathbf{0.757\,[0.703, 0.806]}$ & $1.000^{\dagger}$ & $0.994\,[0.980, 1.000]$ \\
 Gemini 2.5 Pro / Google        & $0.975\,[0.961, 0.987]$ & $\mathbf{0.505\,[0.445, 0.559]}$ & $1.000^{\dagger}$ & $0.979\,[0.956, 0.997]$ \\
 GPT-4.1 / OpenAI               & $0.974\,[0.960, 0.986]$ & $\mathbf{0.511\,[0.453, 0.564]}$ & $0.990\,[0.970, 1.000]$ & $0.997\,[0.989, 1.000]$ \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\noindent For screening decisions, all three local stacks attain the trivial upper bound $\kappa{=}1.000$ and the three cloud APIs fall in the ``almost perfect'' band ($\kappa{\in}[0.974, 0.981]$). We deliberately avoid the shorthand that the stacks therefore ``reach the Cochrane guideline'': inter-run Fleiss' $\kappa$ measures one stack reproducing itself across repetitions, whereas the Cochrane $\kappa{\geq}0.80$ guideline concerns agreement between two independent human reviewers. On this corpus our own two human raters reached $\kappa{=}0.529$ (Section~\ref{sec:dualhuman}), and Mistral-7B attains perfect self-consistency at a specificity of $0.240$, which together show that the two quantities cannot be substituted for one another.
-For \emph{whole-output} extraction hashes, the coefficient falls to $0.180$ (Claude), $0.505$ (Gemini) and $0.511$ (GPT-4.1). Because the chance baseline is inert at this granularity, these figures should be read as the observed whole-output concordance rather than as chance-corrected agreement, and we do not attach Landis--Koch labels or compare them to the Cochrane $\kappa{\geq}0.80$ threshold. The ordering is nonetheless the substantive point, and it matches the EMR ranking: Claude's 10 runs reproduce a whole extraction output far less often than either other cloud stack, and none of the three approaches the local stacks. Per-field $\kappa$ on categorical extraction fields (study\_design, population) remains in the ``almost perfect'' band for all stacks, isolating the source of low whole-output $\kappa$ to the variable-length \texttt{estimates} array (already documented in Section~\ref{main-sec:fieldlevel} of the main text).
+\noindent For screening decisions, all three local stacks attain the trivial upper bound $\kappa{=}1.000$ and the three cloud APIs fall in the ``almost perfect'' band ($\kappa{\in}[0.974, 0.995]$). We deliberately avoid the shorthand that the stacks therefore ``reach the Cochrane guideline'': inter-run Fleiss' $\kappa$ measures one stack reproducing itself across repetitions, whereas the Cochrane $\kappa{\geq}0.80$ guideline concerns agreement between two independent human reviewers. On this corpus our own two human raters reached $\kappa{=}0.529$ (Section~\ref{sec:dualhuman}), and Mistral-7B attains perfect self-consistency at a specificity of $0.240$, which together show that the two quantities cannot be substituted for one another.
+For \emph{whole-output} extraction hashes, the coefficient falls to $0.757$ (Claude), $0.505$ (Gemini) and $0.511$ (GPT-4.1). Because the chance baseline is inert at this granularity, these figures should be read as the observed whole-output concordance rather than as chance-corrected agreement, and we do not attach Landis--Koch labels or compare them to the Cochrane $\kappa{\geq}0.80$ threshold. The ordering is nonetheless the substantive point, and it matches the EMR ranking: Claude's 10 runs reproduce a whole extraction output more often than either other cloud stack, and none of the three approaches the local stacks. Per-field $\kappa$ on categorical extraction fields (study\_design, population) remains in the ``almost perfect'' band for all stacks, isolating the source of low whole-output $\kappa$ to the variable-length \texttt{estimates} array (already documented in Section~\ref{main-sec:fieldlevel} of the main text).
 
 \section{Meta-Analytic Propagation: Full Analysis}
 \label{sec:metaprop_supp}
@@ -953,7 +991,7 @@ LLaMA 3 8B / Ollama / M4       & 246--246 & 0  & 188--188 & 0  & 0/100 (0\%) \\
 Mistral 7B / Ollama / M4       & 229--229 & 0  & 186--186 & 0  & 0/100 (0\%) \\
 Gemma 2 9B / Ollama / M4       & 203--203 & 0  & 157--157 & 0  & 0/100 (0\%) \\
 \midrule
-Claude Sonnet 4.5 / Anthropic  & 186--209 & 23 & 152--175 & 23 & 21/100 (21\%) \\
+Claude Sonnet 4.5 / Anthropic  & 195--197 & 2  & 163--163 & 0  & 1/100 (1\%) \\
 Gemini 2.5 Pro / Google        & 154--171 & 17 & 133--150 & 17 & 20/100 (20\%) \\
 GPT-4.1 / OpenAI               & 176--180 & 4  & 150--154 & 4  & 5/100 (5\%) \\
 \bottomrule
@@ -964,32 +1002,32 @@ GPT-4.1 / OpenAI               & 176--180 & 4  & 150--154 & 4  & 5/100 (5\%) \\
 \textbf{First}, all three local models produced identical estimate sets across all runs: LLaMA extracted 246~estimates, Mistral 229, and Gemma 203 per run, with zero variation---confirming that deterministic inference extends to the structural composition of extractions, not just field-level content.
 
 \textbf{Second}, the three API models showed varying degrees of structural instability.
-Claude's per-run estimate count varied from 186 to 209 (a 12.4\% swing, 21\% of articles affected), Gemini's from 154 to 171 (11.0\%, 20\% of articles), and GPT-4.1's from 176 to 180 (2.3\%, 5\% of articles).
-GPT-4.1 was the most structurally stable API model, with only 5~articles producing a different number of estimates across runs---compared to 20--21 for Claude and Gemini.
+Gemini's per-run estimate count varied from 154 to 171 (an 11.0\% swing, 20\% of articles affected), GPT-4.1's from 176 to 180 (2.3\%, 5\% of articles), and Claude's from 195 to 197 (1.0\%, 1\% of articles).
+Claude was the most structurally stable API model, with a single article producing a different number of estimates across runs---compared to 5 for GPT-4.1 and 20 for Gemini.
 
 \textbf{Third}, the variation in estimate counts directly mirrors the variation in significant estimates.
-For Claude, the number of significant estimates ranged from 152 to 175 (a swing of 23), meaning that \textbf{up to 23~study-level effect estimates---each representing a distinct epidemiological finding---appear or disappear from the evidence base depending solely on which run of the LLM was used}.
-GPT-4.1's significant estimates ranged from 150 to 154 (a swing of 4), while Gemini's ranged from 133 to 150 (a swing of 17).
+For Gemini, the number of significant estimates ranged from 133 to 150 (a swing of 17), meaning that \textbf{up to 17~study-level effect estimates---each representing a distinct epidemiological finding---appear or disappear from the evidence base depending solely on which run of the LLM was used}.
+GPT-4.1's significant estimates ranged from 150 to 154 (a swing of 4), while Claude's stayed at 163 in every run.
 
 While the overall pooled effect in our corpus remained stable across runs for all models (because the aggregate signal is strong and $k$ is large), the instability of the underlying evidence composition is concerning.
-In domains with smaller literatures or marginal effects, even GPT-4.1's relatively modest variation ($\Delta k{=}4$) could plausibly shift pooled conclusions, while Claude's and Gemini's larger swings pose a more direct threat to meta-analytic reproducibility.
+In domains with smaller literatures or marginal effects, even the modest variation of Claude ($\Delta k{=}2$) and GPT-4.1 ($\Delta k{=}4$) could plausibly shift pooled conclusions, while Gemini's larger swing poses a more direct threat to meta-analytic reproducibility.
 
 \medskip
 \noindent\textbf{Random-effects re-analysis and small-literature simulation.}
 We re-ran the propagation analysis using DerSimonian--Laird random-effects pooling on log(RR), one pooled estimate per model${\times}$run combination over the INCLUDE set.
 The number of articles actually entering each pool is smaller than the 100 INCLUDE articles and varies by stack, because an article contributes only when the run returned an effect estimate and a usable interval: $k$ ranges from 39 (Gemini) to 63 (LLaMA) across the 60~combinations, and this variation in $k$ is itself a consequence of extraction non-determinism rather than a property of the corpus.
-Across all 60~combinations, the pooled RR ranged from 1.012 to 1.038 (mean 1.026); the within-model range across runs was small in absolute terms (Claude 0.0057, Gemini 0.0058, GPT-4.1 0.0059) and remained within the bootstrap CI of any single run.
-Heterogeneity was high and stable throughout: $I^2$ ranged from 90.97\% to 94.71\% and $\tau^2$ from $1.4{\times}10^{-5}$ to $2.9{\times}10^{-4}$ across the 60~combinations, so the random-effects specification is the appropriate one and the pooled estimate should be read as an average effect across a heterogeneous set rather than as a common effect.
+Across all 60~combinations, the pooled RR ranged from 1.015 to 1.038 (mean 1.026); the within-model range across runs was small in absolute terms (Gemini 0.0058, GPT-4.1 0.0059, and zero for Claude, whose first usable estimate per article was identical in every run) and remained within the bootstrap CI of any single run.
+Heterogeneity was high and stable throughout: $I^2$ ranged from 90.97\% to 94.71\% and $\tau^2$ from $2.5{\times}10^{-5}$ to $2.9{\times}10^{-4}$ across the 60~combinations, so the random-effects specification is the appropriate one and the pooled estimate should be read as an average effect across a heterogeneous set rather than as a common effect.
 \textbf{No run-pair within any model produced a 95\% random-effects CI that crossed the null} in the full-corpus pooling, confirming that, in a well-powered, large-$k$ meta-analysis with a strong aggregate signal, LLM non-determinism does not flip the meta-analytic conclusion.
 
 This robustness, however, depends critically on $k$.
-We subsampled the corpus to plausible small-literature scenarios ($k\in\{10,15,20,30\}$, $N{=}200$ random subsamples per $k$, seed${=}$42) and computed random-effects pooled estimates for each of the 10 LLM runs.
-For $k{=}10$~subsamples, \textbf{0.5\% of Claude and Gemini subsamples} (1 of 200 each) produced \emph{unstable null-crossing} under the DerSimonian-Laird Wald-$z$ formulation: the pooled 95\% CI crossed RR${=}$1 in some runs but not others, meaning that the meta-analytic conclusion (significantly above null vs.\ not significant) \textbf{changed depending on which LLM run generated the inputs}.
+We subsampled the corpus to plausible small-literature scenarios ($k\in\{10,15,20,30\}$, $N{=}200$ random subsamples per $k$, one generator per stack seeded from 42 and the stack identifier) and computed random-effects pooled estimates for each of the 10 LLM runs.
+For $k{=}10$~subsamples, \textbf{2.0\% of Gemini subsamples} (4 of 200) produced \emph{unstable null-crossing} under the DerSimonian-Laird Wald-$z$ formulation: the pooled 95\% CI crossed RR${=}$1 in some runs but not others, meaning that the meta-analytic conclusion (significantly above null vs.\ not significant) \textbf{changed depending on which LLM run generated the inputs}.
 For $k{\geq}15$, no subsample exhibited unstable null-crossing across runs in any model under DL.
 This demonstrates a concrete, plausible scenario where LLM non-determinism affects the downstream conclusion: emerging literatures with $k{\sim}10$~articles (small reviews of new exposures, rare outcomes, or recent topics) are susceptible to run-dependent reversals, even when the underlying signal is detectable.
 
 Because DerSimonian-Laird is known to be liberal in small-$k$ settings, we re-ran the simulation with the Hartung-Knapp-Sidik-Jonkman (HKSJ) variance correction (Cochrane Handbook 6.5+ recommendation for $k{<}10$).
-Under HKSJ at $k{=}10$, the unstable-null-crossing rate rises to \textbf{31.5\% (Claude), 48.5\% (Gemini), and 20.0\% (GPT-4.1)}, with non-trivial rates persisting up to $k{=}20$ for Claude and Gemini (16.5\% and 10.5\%, respectively) before vanishing at $k{=}30$.
+Under HKSJ at $k{=}10$, the unstable-null-crossing rate rises to \textbf{45.0\% (Gemini) and 21.5\% (GPT-4.1)}, with non-trivial rates persisting up to $k{=}20$ for Gemini (7.0\%) before vanishing at $k{=}30$; Claude shows no unstable subsample at any $k$ under either estimator.
 The qualitative conclusion is robust to the variance estimator (run-dependent reversals affect only small literatures); the magnitude is substantially amplified under the more conservative HKSJ formulation appropriate for $k{<}10$.
 Full DL-vs.-HKSJ comparison appears in Supplementary Section~\ref{sec:hksj_supp} and Table~\ref{tab:smalllit}.
 
@@ -1012,7 +1050,7 @@ LLaMA 3 8B        & 1.0377 & $[1.031, 1.045]$ & $[1.019, 1.057]$ & $2.65\times$ 
 Mistral 7B        & 1.0317 & $[1.025, 1.038]$ & $[1.016, 1.048]$ & $2.51\times$ & 0\% (DL) / 0\% (HKSJ) \\
 Gemma 2 9B        & 1.0253 & $[1.020, 1.031]$ & $[1.012, 1.039]$ & $2.51\times$ & 0\% (DL) / 0\% (HKSJ) \\
 \midrule
-Claude Sonnet 4.5 & 1.0148 & $[1.013, 1.017]$ & $[1.009, 1.021]$ & $2.70\times$ & 0\% (DL) / 0\% (HKSJ) \\
+Claude Sonnet 4.5 & 1.0151 & $[1.013, 1.018]$ & $[1.009, 1.022]$ & $2.73\times$ & 0\% (DL) / 0\% (HKSJ) \\
 Gemini 2.5 Pro    & 1.0213 & $[1.018, 1.025]$ & $[1.012, 1.031]$ & $2.54\times$ & 0\% (DL) / 0\% (HKSJ) \\
 GPT-4.1           & 1.0236 & $[1.019, 1.028]$ & $[1.013, 1.034]$ & $2.22\times$ & 0\% (DL) / 0\% (HKSJ) \\
 \bottomrule
@@ -1027,24 +1065,24 @@ GPT-4.1           & 1.0236 & $[1.019, 1.028]$ & $[1.013, 1.034]$ & $2.22\times$ 
 
 \begin{table}[htbp]
 \centering
-\caption{Random-effects pooled RR variation across 200 random subsamples per $k$, seed=42, computed independently for each of 10 LLM runs. ``Unstable null-crossing'' = subsamples where the pooled 95\% CI crosses RR=1 in some runs but not others (i.e., the meta-analytic conclusion changes depending on the LLM run). Both DerSimonian-Laird (DL, Wald-z) and Hartung-Knapp-Sidik-Jonkman (HKSJ, $t_{k{-}1}$) variances are reported; HKSJ is recommended by Cochrane Handbook 6.5+ for $k{<}10$.}
+\caption{Random-effects pooled RR variation across 200 random subsamples per $k$ (one generator per stack, seeded from 42 and the stack identifier), computed independently for each of 10 LLM runs. ``Unstable null-crossing'' = subsamples where the pooled 95\% CI crosses RR=1 in some runs but not others (i.e., the meta-analytic conclusion changes depending on the LLM run). Both DerSimonian-Laird (DL, Wald-z) and Hartung-Knapp-Sidik-Jonkman (HKSJ, $t_{k{-}1}$) variances are reported; HKSJ is recommended by Cochrane Handbook 6.5+ for $k{<}10$.}
 \label{tab:smalllit}
 \begin{tabular}{lccccc}
 \toprule
 \textbf{Model} & \textbf{$k$} & \textbf{Mean range} & \textbf{P95 range} & \textbf{\% unstable (DL)} & \textbf{\% unstable (HKSJ)} \\
 \midrule
-Claude Sonnet 4.5 & 10 & 0.0082 & 0.0292 & \textbf{0.50\%} & \textbf{31.50\%} \\
-Claude Sonnet 4.5 & 15 & 0.0081 & 0.0237 & 0.00\% & \textbf{16.50\%} \\
-Claude Sonnet 4.5 & 20 & 0.0078 & 0.0197 & 0.00\% & \textbf{16.50\%} \\
-Claude Sonnet 4.5 & 30 & 0.0073 & 0.0150 & 0.00\% & 0.00\% \\
-Gemini 2.5 Pro    & 10 & 0.0167 & 0.0471 & \textbf{0.50\%} & \textbf{48.50\%} \\
-Gemini 2.5 Pro    & 15 & 0.0131 & 0.0350 & 0.00\% & \textbf{28.50\%} \\
-Gemini 2.5 Pro    & 20 & 0.0110 & 0.0227 & 0.00\% & \textbf{10.50\%} \\
-Gemini 2.5 Pro    & 30 & 0.0089 & 0.0151 & 0.00\% & 0.00\% \\
-GPT-4.1           & 10 & 0.0063 & 0.0263 & 0.00\% & \textbf{20.00\%} \\
-GPT-4.1           & 15 & 0.0054 & 0.0150 & 0.00\% & 5.00\% \\
-GPT-4.1           & 20 & 0.0065 & 0.0149 & 0.00\% & 0.50\% \\
-GPT-4.1           & 30 & 0.0060 & 0.0114 & 0.00\% & 0.00\% \\
+Claude Sonnet 4.5 & 10 & 0.0000 & 0.0000 & 0.00\% & 0.00\% \\
+Claude Sonnet 4.5 & 15 & 0.0000 & 0.0000 & 0.00\% & 0.00\% \\
+Claude Sonnet 4.5 & 20 & 0.0000 & 0.0000 & 0.00\% & 0.00\% \\
+Claude Sonnet 4.5 & 30 & 0.0000 & 0.0000 & 0.00\% & 0.00\% \\
+Gemini 2.5 Pro    & 10 & 0.0155 & 0.0453 & \textbf{2.00\%} & \textbf{45.00\%} \\
+Gemini 2.5 Pro    & 15 & 0.0121 & 0.0307 & 0.00\% & \textbf{20.00\%} \\
+Gemini 2.5 Pro    & 20 & 0.0111 & 0.0256 & 0.00\% & \textbf{7.00\%} \\
+Gemini 2.5 Pro    & 30 & 0.0082 & 0.0162 & 0.00\% & 0.00\% \\
+GPT-4.1           & 10 & 0.0065 & 0.0251 & 0.00\% & \textbf{21.50\%} \\
+GPT-4.1           & 15 & 0.0056 & 0.0148 & 0.00\% & 6.00\% \\
+GPT-4.1           & 20 & 0.0059 & 0.0137 & 0.00\% & 0.50\% \\
+GPT-4.1           & 30 & 0.0059 & 0.0105 & 0.00\% & 0.00\% \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -1053,7 +1091,7 @@ GPT-4.1           & 30 & 0.0060 & 0.0114 & 0.00\% & 0.00\% \\
 we re-ran the small-literature simulation with the Hartung-Knapp-Sidik-Jonkman (HKSJ) variance correction alongside the original DL/Wald-z formulation.
 HKSJ uses the same method-of-moments $\tau^2$ estimator as DL but inflates the standard error to $\sqrt{q^{\ast}/\sum w_i^{\ast}}$, where $q^{\ast}{=}\frac{1}{k{-}1}\sum w_i^{\ast}(y_i{-}\hat\theta_{\text{RE}})^2$, and replaces the $z_{0.975}$ Wald critical value with $t_{0.975,\,k{-}1}$.
 Because $t$-percentiles inflate as $k{\to}2$, and because the HKSJ variance-inflation factor satisfies $q^{\ast}{\geq}1$ whenever the observed dispersion exceeds what the fixed weights predict, HKSJ produces substantially wider CIs in small literatures.
-The unstable-null-crossing rate under HKSJ is markedly higher: at $k{=}10$, $\mathbf{31.5\%}$ of Claude subsamples, $\mathbf{48.5\%}$ of Gemini subsamples, and $\mathbf{20.0\%}$ of GPT-4.1 subsamples produce run-dependent reversals of the meta-analytic conclusion (versus 0.5\%, 0.5\%, and 0.0\% under DL).
+The unstable-null-crossing rate under HKSJ is markedly higher: at $k{=}10$, $\mathbf{45.0\%}$ of Gemini subsamples and $\mathbf{21.5\%}$ of GPT-4.1 subsamples produce run-dependent reversals of the meta-analytic conclusion (versus 2.0\% and 0.0\% under DL); Claude produces none under either estimator.
 The qualitative conclusion of the main text---\emph{LLM non-determinism propagates into the downstream conclusion only in small literatures}---is robust to the choice of variance estimator; the magnitude of the effect is substantially amplified under HKSJ, which Cochrane Handbook 6.5+ recommends precisely for $k{<}10$.
 
 % ============================================================
@@ -1064,18 +1102,18 @@ The journal's guidance for GenAI submissions requires authors to document specif
 
 \begin{table}[htbp]
 \centering
-\caption{Reproducibility by seed availability and deployment paradigm. Cloud stacks: Claude Sonnet~4.5 (exposes no seed parameter, and---see the configuration table in the main text---ran at the provider's default temperature rather than at~0), Gemini~2.5~Pro and GPT-4.1 (seed=42, temperature=0 verified as transmitted). Local stacks all use seed=42 at temperature=0. The rows are descriptive: the ``no seed'' row differs from the ``seed=42'' row in provider, infrastructure, API layer and temperature simultaneously, so their difference is not an estimate of a seed effect.}
+\caption{Reproducibility by seed availability and deployment paradigm. Cloud stacks: Claude Sonnet~4.5 (exposes no seed parameter; temperature=0 verified as transmitted), Gemini~2.5~Pro and GPT-4.1 (seed=42, temperature=0 verified as transmitted). Local stacks all use seed=42 at temperature=0. The rows are descriptive: the ``no seed'' row differs from the ``seed=42'' row in provider, infrastructure and API layer simultaneously, so their difference is not an estimate of a seed effect.}
 \label{tab:seed}
 \begin{tabular}{lccc}
 \toprule
 \textbf{Group} & \textbf{Stage} & \textbf{Mean EMR} & \textbf{Mean pairwise dis.} \\
 \midrule
 Cloud, seed=42       & screening  & 0.953 & 0.017 \\
-Cloud, no seed       & screening  & 0.974 & 0.010 \\
+Cloud, no seed       & screening  & 0.990 & 0.004 \\
 Local, seed=42       & screening  & 1.000 & 0.000 \\
 \midrule
 Cloud, seed=42       & extraction & 0.175 & 0.489 \\
-Cloud, no seed       & extraction & 0.050 & 0.818 \\
+Cloud, no seed       & extraction & 0.470 & 0.241 \\
 Local, seed=42       & extraction & 1.000 & 0.000 \\
 \bottomrule
 \end{tabular}
@@ -1083,9 +1121,66 @@ Local, seed=42       & extraction & 1.000 & 0.000 \\
 
 \noindent The comparison that this table supports is the deployment one: local stacks at seed=42 and temperature=0 reach $\textrm{EMR}{=}1.000$ for extraction, while cloud stacks holding the same nominal settings reach $0.175$ on average---a difference of $+0.825$ EMR between paradigms whose declared configuration is identical.
 
-\noindent The comparison it does \emph{not} support is a seed effect. The $+0.125$ EMR separating the seeded cloud row from the unseeded one was previously reported as such, and we withdraw that reading: those rows differ in provider, infrastructure, API layer and transmitted temperature at the same time, which is precisely the confound our unit-of-analysis framing exists to prevent. Isolating the seed requires a within-stack ablation---one provider, one infrastructure, run with and without the seed---which we did not perform.
+\noindent The comparison it does \emph{not} support is a seed effect. The unseeded cloud stack is the more reproducible one on extraction ($0.470$ against $0.175$), but the rows differ in provider, infrastructure and API layer at the same time, which is precisely the confound our unit-of-analysis framing exists to prevent. What the ordering does rule out is the seed being what separates reproducible from non-reproducible API stacks. Isolating the seed's own contribution requires a within-stack ablation---one provider, one infrastructure, run with and without the seed---which we did not perform.
 
 \noindent The conclusion that survives is narrower and rests only on the seeded stacks: Gemini and GPT-4.1 transmitted seed=42 and temperature=0 on every call and still returned extraction EMR of $0.200$ and $0.150$. Where a seed parameter exists, is accepted, and is verifiably sent, it does not make an API-served extraction pipeline reproducible.
+
+% ============================================================
+\section{Claude Stack: Temperature Contrast Between the Two Executions}
+\label{sec:temp_contrast}
+
+The Claude stack was executed twice with the same dated snapshot (\texttt{claude-sonnet-4-5-20250929}), prompts, corpus, token limits and run counts. The first execution (February~2026) omitted the \texttt{temperature} field and therefore ran at the Messages API default of~1.0; the second (8~October~2026) transmitted \texttt{temperature}${=}$0 on every call that returned an output, as recorded per call in \texttt{request\_temperature}. The second execution is the Claude stack in every table of the main text. The rule that it would replace the first whatever its values, and that the first would be reported here, was committed as the second execution started, eleven seconds after its first call and before any output had been inspected (\texttt{docs/decisions/decision-log.md}, decision~41).
+
+\begin{table}[htbp]
+\centering
+\caption{Claude Sonnet~4.5 at the provider default temperature (1.0, February~2026) and at temperature~0 (October~2026). Same metrics and code as the main tables (\texttt{analysis/supplementary\_arms\_results.json}, \texttt{analysis/reproducibility\_results.json}, \texttt{analysis/blindage/fixedslot\_paired.json}). The two executions are eight months apart, so the difference combines the temperature change with any provider-side change in that interval.}
+\label{tab:temp_contrast}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Quantity} & \textbf{Temperature 1.0} & \textbf{Temperature 0} \\
+\midrule
+Screening EMR [95\% CI]            & 0.974 [0.960, 0.986] & 0.990 [0.980, 0.998] \\
+Screening accuracy / sensitivity / specificity & 0.931 / 0.862 / 1.000 & 0.935 / 0.868 / 1.000 \\
+Extraction EMR [95\% CI]           & 0.050 [0.010, 0.090] & 0.470 [0.370, 0.570] \\
+Estimate count stability           & 0.880 & 0.978 \\
+Study location field EMR           & 0.780 & 0.960 \\
+Fixed-slot EMR (3 runs) / matched baseline & 0.030 / 0.101 & 0.640 / 0.660 \\
+Fixed-slot relative change (matched) & $-70.2\%$ & $-3.0\%$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent Moving from 1.0 to 0 raised extraction EMR nearly tenfold and removed most of the structural variation in the number of extracted estimates, yet more than half of the articles still received a different complete extraction across the ten runs. The fixed-slot result changes qualitatively: at~1.0 the single-estimate prompt appeared to degrade reproducibility by 70\%, at~0 it leaves it essentially unchanged, so that earlier reading was a property of sampling at the top of the temperature range rather than of the prompt.
+
+% ============================================================
+\section{Decision-Model Stack (Jev): Details}
+\label{sec:jev_supp}
+
+The Jev arm (\texttt{typesafe-ai/jev}, Vercel AI Gateway \texttt{POST /v1/evaluate}, provider pinned to \texttt{typesafe-ai}, no fallback) ran 10 times over the 500 screening abstracts on 8~October~2026, for a total cost of US\$0.21. Every call that returned an answer was served by \texttt{typesafe-ai}; two calls failed (a server error on \texttt{ABS-0011} in run~8 and a dropped connection on \texttt{ABS-0077} in run~10) and were not repeated, as for the other stacks. The request carried the title-and-abstract string used by every stack and one \texttt{choice} question whose instructions are the inclusion and exclusion sections of \texttt{configs/prompts/screening.txt}, verbatim (\texttt{src/models/jev\_runner.py}).
+
+\begin{table}[htbp]
+\centering
+\caption{Jev screening across 10 runs (\texttt{analysis/supplementary\_arms\_results.json}; probability spread from \texttt{analysis/blindage/jev\_screening.json}). Ranges are max minus min across the ten runs for the same abstract and option.}
+\label{tab:jev}
+\begin{tabular}{lc}
+\toprule
+\textbf{Quantity} & \textbf{Value} \\
+\midrule
+Calls returning an answer          & 4{,}998 / 5{,}000 \\
+Screening EMR [95\% CI]            & 0.956 [0.938, 0.972] \\
+Abstracts with a decision change   & 20 (plus 2 with a failed call) \\
+Accuracy / sensitivity / specificity & 0.888 / 0.776 / 1.000 \\
+Decisions: include / exclude / uncertain & 2{,}420 / 2{,}558 / 20 \\
+Probability range, \emph{include}: mean / max & 0.037 / 0.19 \\
+Probability range, \emph{exclude}: mean / max & 0.038 / 0.20 \\
+Abstracts with identical \emph{include} probability in all runs & 31.4\% \\
+Mean probability of the modal option & 0.865 \\
+Abstracts whose modal option has probability $<0.5$ & 4.4\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent No calibration statistic is reported: the human-labelled subset ($n{=}100$) is too small to estimate one, and this was fixed before the arm ran (decision~42).
 
 % ============================================================
 \section{Pre-Registration Disclosure}
@@ -1102,6 +1197,8 @@ Key commit timestamps (publicly auditable at \url{https://github.com/Roverlucas/
   \item \textbf{2026-03-11} (\texttt{646c6a3}): first complete manuscript draft
   \item \textbf{2026-03-20} (\texttt{7935445}): submission-hardening revision
   \item \textbf{2026-04-23 to 2026-04-28}: post-revision blindage analyses committed
+  \item \textbf{2026-10-08} (\texttt{806c02b}, \texttt{dc5392e}): rules for the Claude temperature-0 re-run (committed eleven seconds after its first call) and the Jev arm (committed before its ten runs) 
+  \item \textbf{2026-10-08} (\texttt{c6638c2}): results of both arms frozen (\texttt{FREEZE.yaml}) before any text reporting them
 \end{itemize}
 
 We acknowledge the absence of formal pre-registration for the exploratory core as a limitation and recommend that future LLM-in-SR studies pre-register analyses on OSF before data collection.
@@ -1134,7 +1231,7 @@ Ambiguous          & 300   & Primary test set (borderline cases) \\
 
 \begin{table}[htbp]
 \centering
-\caption{Mapping of candidate non-determinism mechanisms onto the deployment stacks evaluated in this study. \checkmark{}~= documented in public materials (e.g., provider engineering blog, vendor docs, or directly observable from API behaviour); \emph{likely}~= strongly consistent with public information about the stack but not directly attested per request; \emph{possible}~= compatible with public information but unconfirmed; ---~= precluded by the stack's design (e.g., single-replica local inference cannot use multi-GPU all-reduce). Attribution for the three API-served stacks is inferential; for the three local Ollama/M4 stacks, the absence of every listed mechanism follows directly from the single-device, single-execution-thread serving configuration. The two Together-AI / DeepInfra cloud columns refer to the same-weights desconfound stack (Section~\ref{sec:desconfound}).}
+\caption{Mapping of candidate non-determinism mechanisms onto the deployment stacks evaluated in this study. \checkmark{}~= documented in public materials (e.g., provider engineering blog, vendor docs, or directly observable from API behaviour); \emph{likely}~= strongly consistent with public information about the stack but not directly attested per request; \emph{possible}~= compatible with public information but unconfirmed; ---~= precluded by the stack's design (e.g., single-replica local inference cannot use multi-GPU all-reduce). Attribution for the three API-served stacks is inferential; for the three local Ollama/M4 stacks, the absence of every listed mechanism follows directly from the single-device, single-execution-thread serving configuration. The two Together-AI / DeepInfra cloud columns refer to the same-weights desconfound stack (Section~\ref{main-sec:desconfound}).}
 \label{tab:mechanisms}
 \footnotesize
 \begin{tabular}{p{4.8cm}cccccc}
@@ -1169,11 +1266,11 @@ LLaMA 3 8B / Ollama / M4       & Local  & 52.1  & 8.7  & 32.5  & 0.08 \\
 Mistral 7B / Ollama / M4       & Local  & 76.4  & 10.6 & 46.1  & 0.11 \\
 Gemma 2 9B / Ollama / M4       & Local  & 45.6  & 9.0  & 27.7  & 0.07 \\
 \midrule
-Claude Sonnet 4.5 / Anthropic  & API & 7.9   & 9.9  & 4.7   & 46.11 \\
+Claude Sonnet 4.5 / Anthropic  & API & 7.3   & 9.9  & 4.4   & 46.09 \\
 Gemini 2.5 Pro / Google        & API & 20.3  & 9.0  & 12.2  & 0.00$^{*}$ \\
 GPT-4.1 / OpenAI               & API & 5.0   & 8.6  & 3.0   & 23.29 \\
 \midrule
-\textbf{Total}    &        & \textbf{207.2} & \textbf{55.8} & --- & \textbf{69.66} \\
+\textbf{Total}    &        & \textbf{206.5} & \textbf{55.8} & --- & \textbf{69.64} \\
 \bottomrule
 \multicolumn{6}{l}{\footnotesize $^{*}$Gemini was used under the free tier (rate-limited).}
 \end{tabular}
@@ -1191,13 +1288,13 @@ GPT-4.1 / OpenAI               & API & 5.0   & 8.6  & 3.0   & 23.29 \\
 \toprule
 \textbf{Field} & \textbf{LLaMA} & \textbf{Mistral} & \textbf{Gemma} & \textbf{Claude} & \textbf{Gemini} & \textbf{GPT-4.1} \\
 \midrule
-Study design    & 1.000 & 1.000 & 1.000 & 0.990 & 1.000 & 0.990 \\
-Study period    & 1.000 & 1.000 & 1.000 & 0.990 & 1.000 & 0.990 \\
-Sample size     & 1.000 & 1.000 & 1.000 & 0.970 & 1.000 & 0.980 \\
-Population      & 1.000 & 1.000 & 1.000 & 0.960 & 0.948 & 0.990 \\
-Study location  & 1.000 & 1.000 & 1.000 & 0.780 & 0.896 & 1.000 \\
+Study design    & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 & 0.990 \\
+Study period    & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 & 0.990 \\
+Sample size     & 1.000 & 1.000 & 1.000 & 1.000 & 1.000 & 0.980 \\
+Population      & 1.000 & 1.000 & 1.000 & 0.990 & 0.948 & 0.990 \\
+Study location  & 1.000 & 1.000 & 1.000 & 0.960 & 0.896 & 1.000 \\
 \midrule
-\textbf{Est.\ stability} & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} & \textbf{0.880} & \textbf{0.735} & \textbf{0.922} \\
+\textbf{Est.\ stability} & \textbf{1.000} & \textbf{1.000} & \textbf{1.000} & \textbf{0.978} & \textbf{0.735} & \textbf{0.922} \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -1208,7 +1305,7 @@ Study location  & 1.000 & 1.000 & 1.000 & 0.780 & 0.896 & 1.000 \\
 
 \begin{table}[htbp]
 \centering
-\caption{Semantic equivalence under progressively relaxed criteria ($n\!=\!100$ articles, 10~runs). Columns 2--4 report whole-output EMR over the five metadata fields plus estimate count stability. BERTScore F1 (\texttt{roberta-large}) reports the mean $\pm$ SD across all $\binom{10}{2}{=}45$ unique run pairs per article (4,500~pairs per model). Raw F1 is reported here; rescaled F1 (against the package's random-pair English baseline) is shown in Supp.~Table~\ref{supp-tab:bertscore_rescaled}. Hash-based EMR (from Table~\ref{tab:extraction}) additionally requires identical numeric estimates. The gap between high BERTScore (${\geq}0.997$) and low hash-based EMR (${\leq}0.200$) demonstrates that even near-identical metadata co-occurs with divergent numeric extractions.}
+\caption{Semantic equivalence under progressively relaxed criteria ($n\!=\!100$ articles, 10~runs). Columns 2--4 report whole-output EMR over the five metadata fields plus estimate count stability. BERTScore F1 (\texttt{roberta-large}) reports the mean $\pm$ SD across all $\binom{10}{2}{=}45$ unique run pairs per article (4,500~pairs per model). Raw F1 is reported here; rescaled F1 (against the package's random-pair English baseline) is shown in Supp.~Table~\ref{tab:bertscore_rescaled}. Hash-based EMR (from main Table~\ref{main-tab:extraction}) additionally requires identical numeric estimates. The gap between high BERTScore (${\geq}0.997$) and low hash-based EMR (${\leq}0.470$) demonstrates that even near-identical metadata co-occurs with divergent numeric extractions.}
 \label{tab:semantic}
 \begin{tabular}{lccclc}
 \toprule
@@ -1218,12 +1315,12 @@ LLaMA 3 8B / Ollama / M4       & 1.000 & 1.000 & 1.000 & $1.000 \pm 0.000$ & 1.0
 Mistral 7B / Ollama / M4       & 1.000 & 1.000 & 1.000 & $1.000 \pm 0.000$ & 1.000 \\
 Gemma 2 9B / Ollama / M4       & 1.000 & 1.000 & 1.000 & $1.000 \pm 0.000$ & 1.000 \\
 \midrule
-Claude Sonnet 4.5 / Anthropic  & 0.640 & 0.680 & 0.690 & $0.997 \pm 0.009$ & 0.050 \\
+Claude Sonnet 4.5 / Anthropic  & 0.930 & 0.930 & 0.930 & $0.999 \pm 0.004$ & 0.470 \\
 Gemini 2.5 Pro / Google        & 0.620 & 0.620 & 0.630 & $0.997 \pm 0.022$ & 0.200 \\
 GPT-4.1 / OpenAI               & 0.880 & 0.880 & 0.880 & $1.000 \pm 0.004$ & 0.150 \\
 \bottomrule
-\multicolumn{6}{l}{\footnotesize $^{*}$From Table~\ref{tab:extraction}; includes all fields and numeric estimates.}\\
-\multicolumn{6}{l}{\footnotesize $^{\dagger}$Raw F1 reported; rescaled F1 (against random-pair baseline) shown in Supp.~Table~\ref{supp-tab:bertscore_rescaled}.}
+\multicolumn{6}{l}{\footnotesize $^{*}$From main Table~\ref{main-tab:extraction}; includes all fields and numeric estimates.}\\
+\multicolumn{6}{l}{\footnotesize $^{\dagger}$Raw F1 reported; rescaled F1 (against random-pair baseline) shown in Supp.~Table~\ref{tab:bertscore_rescaled}.}
 \end{tabular}
 \end{table}
 

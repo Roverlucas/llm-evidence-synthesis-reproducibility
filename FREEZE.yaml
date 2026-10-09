@@ -3,7 +3,7 @@
 
 freeze:
   declared_by: "Lucas Rover"
-  date: "2026-10-09"
+  date: "2026-10-08"
   commit: "1d1a189"
   reason: >
     Claude arm re-run at temperature 0 (decision 41) and Jev arm added (decision 42),
