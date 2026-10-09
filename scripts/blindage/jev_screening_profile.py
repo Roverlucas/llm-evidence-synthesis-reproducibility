@@ -28,6 +28,7 @@ OPTIONS = ["include", "exclude", "uncertain"]
 def main() -> None:
     probs = defaultdict(lambda: defaultdict(list))   # cid -> option -> [p per run]
     choices = defaultdict(list)                      # cid -> [choice per run]
+    chosen_p = defaultdict(list)                     # cid -> [p of the option chosen, per run]
     n_calls = n_failed = 0
     for run_dir in sorted(RAW.glob("run_*")):
         for r in json.loads((run_dir / "results.json").read_text()):
@@ -37,6 +38,7 @@ def main() -> None:
                 continue
             out = r["output"]
             choices[r["corpus_id"]].append(out["decision"])
+            chosen_p[r["corpus_id"]].append(out["probabilities"][out["decision"]])
             for opt in OPTIONS:
                 probs[r["corpus_id"]][opt].append(out["probabilities"][opt])
 
@@ -58,7 +60,16 @@ def main() -> None:
     flipped = [cid for cid, cs in choices.items() if len(set(cs)) > 1]
     flip_range = [max(probs[c][o]) - min(probs[c][o]) for c in flipped for o in OPTIONS]
 
+    # Decision 42, rule 1: spread of the probability of the chosen option, max - min per item.
+    chosen_range = [max(v) - min(v) for v in chosen_p.values()]
+
     payload = {
+        "chosen_option_probability_range": {
+            "mean": round(statistics.mean(chosen_range), 4),
+            "median": round(statistics.median(chosen_range), 4),
+            "max": round(max(chosen_range), 4),
+            "share_zero": round(sum(v == 0 for v in chosen_range) / len(chosen_range), 4),
+        },
         "n_calls": n_calls,
         "n_failed_calls": n_failed,
         "n_abstracts": len(choices),

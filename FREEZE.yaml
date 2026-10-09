@@ -21,7 +21,7 @@ artifacts:
   - {path: analysis/bertscore_results.json, hash: "sha256:aec36fc5049fa458c419bbcc8833225eac5725ca3835761ac4d128a7774f85d5", produced_by: analysis/compute_bertscore.py, describes: "BERTScore F1 all-pairs"}
   - {path: analysis/timing_and_costs.json, hash: "sha256:ac1ab30250a397df4592f860946bc64d65826cbed6c7fe05f44f0177ac61c74b", produced_by: scripts/compute_timing_costs.py, describes: "timing, tokens, cost"}
   - {path: analysis/blindage/fixedslot_paired.json, hash: "sha256:24588d672a91fb16a998aa122a8440c53b1d52313fe1e5005a96eb32a3dcad75", produced_by: scripts/blindage/fixedslot_paired_baseline.py, describes: "fixed-slot vs run-count-matched baseline, incl. T=1.0 pair"}
-  - {path: analysis/blindage/jev_screening.json, hash: "sha256:a331ba932895569505f89f1166cd828134b54a499a26686dc7d76e9be9ccd90b", produced_by: scripts/blindage/jev_screening_profile.py, describes: "Jev probability spread across runs"}
+  - {path: analysis/blindage/jev_screening.json, hash: "sha256:baad03329e9568c1b5d26150812098e3ecb5224581cbe2669a3d623fffacbcab", produced_by: scripts/blindage/jev_screening_profile.py, describes: "Jev probability spread across runs"}
   - {path: analysis/blindage/schema_conformance.json, hash: "sha256:7ddfba8e729ef8cfb2bf169a7ba88f6253a3866675d1d8f75ac05933f8787e4d", produced_by: scripts/blindage/schema_conformance.py, describes: "schema conformance per stack"}
   - {path: analysis/blindage/seed_effect.json, hash: "sha256:f5d3972e7c73188a23ffac3d73d042db107f51bd60fe6e405c81d1a8b8087f2a", produced_by: scripts/blindage/seed_effect_analysis.py, describes: "seeded vs unseeded API stacks"}
   - {path: analysis/blindage/small_literature_sim.json, hash: "sha256:07d668fda7b8b06c5ef5ae16698ff17d59901033882c8227333303457410b3a0", produced_by: scripts/blindage/small_literature_simulation.py, describes: "small-literature simulation, per-stack generator"}
@@ -51,3 +51,10 @@ refreeze_log:
       inputs table (k_sig), which until now had no reproducible source. Every pre-existing
       value is unchanged (checked field by field); the definition reproduces the k_sig
       ranges previously reported for the five original stacks and the T=1.0 Claude arm.
+  - date: "2026-10-09"
+    artifact: analysis/blindage/jev_screening.json
+    change: >
+      Added chosen_option_probability_range, the metric decision 42 fixed before the arm ran
+      (spread of the probability of the chosen option, max - min per abstract). The first
+      version of the script reported per-option spreads instead; those values are unchanged.
+      Gap found by the independent sa-veritas review.

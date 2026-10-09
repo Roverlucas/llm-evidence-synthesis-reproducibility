@@ -1,4 +1,10 @@
 {
+  "chosen_option_probability_range": {
+    "max": 0.2,
+    "mean": 0.0391,
+    "median": 0.02,
+    "share_zero": 0.298
+  },
   "decision_counts": {
     "exclude": 2558,
     "include": 2420,
@@ -40,5 +46,5 @@
     "include": 0.0113,
     "uncertain": 0.0041
   },
-  "sha256_self": "001e5f88951e7e5c6d2af8959ba7dba662b5a8c5b94cb982143590027d9d183b"
+  "sha256_self": "fcbeb255f5ed400ff23f6878a042cd383505b49366ddc1dcfc64216ad8edb397"
 }
