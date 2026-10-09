@@ -1,0 +1,24 @@
+{
+  "cloud": {
+    "call_record_provider": {
+      "groq": 4266
+    },
+    "mean_input_tokens": 842.3,
+    "n_calls_with_tokens": 4266,
+    "run_card_provider": {
+      "openrouter:DeepInfra": 10
+    }
+  },
+  "input_token_difference_pct_of_local": 34.2,
+  "local": {
+    "call_record_provider": {
+      "ollama": 5000
+    },
+    "mean_input_tokens": 1279.3,
+    "n_calls_with_tokens": 5000,
+    "run_card_provider": {
+      "ollama": 10
+    }
+  },
+  "sha256_self": "3e936a0a2e6e49422965c2f9ee024482ef0312bf71f48c7670ea4569d7728343"
+}

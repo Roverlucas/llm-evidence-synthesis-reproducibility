@@ -58,6 +58,8 @@ STAGES = {
 }
 
 
+PROVIDER_LABEL = "openrouter:DeepInfra"
+
 def canonical_hash(prompt: str, input_text: str, model: str, temperature: float, seed: int | None) -> str:
     fields = {
         "prompt": prompt,
@@ -180,7 +182,9 @@ def run_one(stage: str, run_id: int) -> dict:
                 "stage": stage,
                 "run_id": run_id,
                 "model_id": MODEL_NAME,
-                "provider": "groq",
+                # Must match the route in the run card; the deposited records say "groq",
+                # a stale label from an earlier provider (see analysis/blindage/samemodel_payload.json).
+                "provider": PROVIDER_LABEL,
                 "call_hash": ch,
                 "output_hash": oh,
                 "timestamp": datetime.now(timezone.utc).isoformat(),
@@ -207,7 +211,7 @@ def run_one(stage: str, run_id: int) -> dict:
     t_end = datetime.now(timezone.utc)
     run_card = {
         "model_id": MODEL_NAME,
-        "provider": "openrouter:DeepInfra",
+        "provider": PROVIDER_LABEL,
         "underlying_model": CLOUD_MODEL,
         "stage": stage,
         "run_id": run_id,

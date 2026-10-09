@@ -1,50 +1,74 @@
 {
   "method": "Baseline EMR averaged over all C(10,3)=120 three-run subsets of the variable-length condition, matching the 3-run fixed-slot condition. EMR is monotonically non-increasing in run count, so the 10-run baseline previously used is not comparable to a 3-run condition.",
-  "sha256_self": "4a07237e63591c0e81a45da58d7e233faae9891853155af8a345112b2d4fb6ad",
+  "sha256_self": "899941c4f0b9082c576654ae448c235e8e356a351514504f843c68cdae828550",
   "stacks": {
     "claude-sonnet-4-5": {
       "baseline_emr_10run": 0.05,
       "baseline_emr_3run_paired": 0.1007,
+      "baseline_emr_3run_paired_parsed_identity": 0.1074,
       "baseline_n_articles_10run": 100,
       "baseline_n_triples": 120,
       "fixed_slot_emr": 0.03,
+      "fixed_slot_emr_wilson95": [
+        0.0103,
+        0.0845
+      ],
       "fixed_slot_n_articles": 100,
       "fixed_slot_n_runs": 3,
       "relative_change_vs_10run_baseline_pct": -40.0,
-      "relative_change_vs_paired_baseline_pct": -70.2
+      "relative_change_vs_paired_baseline_pct": -70.2,
+      "relative_change_vs_paired_parsed_identity_pct": -72.1
     },
     "claude-sonnet-4-5-t0": {
       "baseline_emr_10run": 0.47,
       "baseline_emr_3run_paired": 0.6599,
+      "baseline_emr_3run_paired_parsed_identity": 0.6778,
       "baseline_n_articles_10run": 100,
       "baseline_n_triples": 120,
       "fixed_slot_emr": 0.64,
+      "fixed_slot_emr_wilson95": [
+        0.5424,
+        0.7273
+      ],
       "fixed_slot_n_articles": 100,
       "fixed_slot_n_runs": 3,
       "relative_change_vs_10run_baseline_pct": 36.2,
-      "relative_change_vs_paired_baseline_pct": -3.0
+      "relative_change_vs_paired_baseline_pct": -3.0,
+      "relative_change_vs_paired_parsed_identity_pct": -5.6
     },
     "gemini-2.5-pro": {
       "baseline_emr_10run": 0.2,
       "baseline_emr_3run_paired": 0.349,
+      "baseline_emr_3run_paired_parsed_identity": 0.4062,
       "baseline_n_articles_10run": 100,
       "baseline_n_triples": 120,
       "fixed_slot_emr": 0.1818,
+      "fixed_slot_emr_wilson95": [
+        0.1182,
+        0.2692
+      ],
       "fixed_slot_n_articles": 99,
       "fixed_slot_n_runs": 3,
       "relative_change_vs_10run_baseline_pct": -9.1,
-      "relative_change_vs_paired_baseline_pct": -47.9
+      "relative_change_vs_paired_baseline_pct": -47.9,
+      "relative_change_vs_paired_parsed_identity_pct": -55.2
     },
     "gpt-4.1": {
       "baseline_emr_10run": 0.15,
       "baseline_emr_3run_paired": 0.3589,
+      "baseline_emr_3run_paired_parsed_identity": 0.361,
       "baseline_n_articles_10run": 100,
       "baseline_n_triples": 120,
       "fixed_slot_emr": 0.4444,
+      "fixed_slot_emr_wilson95": [
+        0.3505,
+        0.5426
+      ],
       "fixed_slot_n_articles": 99,
       "fixed_slot_n_runs": 3,
       "relative_change_vs_10run_baseline_pct": 196.3,
-      "relative_change_vs_paired_baseline_pct": 23.8
+      "relative_change_vs_paired_baseline_pct": 23.8,
+      "relative_change_vs_paired_parsed_identity_pct": 23.1
     }
   }
 }

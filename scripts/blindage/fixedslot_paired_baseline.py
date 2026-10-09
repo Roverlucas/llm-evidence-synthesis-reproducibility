@@ -37,8 +37,27 @@ STACKS = {
 }
 
 
-def load_runs(stack_dir: Path) -> dict[int, dict[str, str]]:
-    """Map run_id -> {corpus_id: output_hash} for the extraction stage."""
+def parsed_hash(output) -> str:
+    """Hash of the parsed output re-serialised with sorted keys.
+
+    This is how the fixed-slot script defines output identity; applying it to the
+    baseline gives an identity-matched comparison (the stored baseline hash is of
+    the raw response text, which also differs on whitespace and key order).
+    """
+    return hashlib.sha256(json.dumps(output, sort_keys=True, ensure_ascii=True).encode()).hexdigest()
+
+
+def wilson(k: int, n: int, z: float = 1.959964) -> tuple[float, float]:
+    """Wilson 95% interval for a proportion k/n."""
+    p = k / n
+    d = 1 + z * z / n
+    c = (p + z * z / (2 * n)) / d
+    h = z * ((p * (1 - p) / n + z * z / (4 * n * n)) ** 0.5) / d
+    return c - h, c + h
+
+
+def load_runs(stack_dir: Path, identity: str = "stored") -> dict[int, dict[str, str]]:
+    """Map run_id -> {corpus_id: output identity} for the extraction stage."""
     runs: dict[int, dict[str, str]] = {}
     for run_path in sorted((stack_dir / "extraction").glob("run_*")):
         results = run_path / "results.json"
@@ -46,7 +65,7 @@ def load_runs(stack_dir: Path) -> dict[int, dict[str, str]]:
             continue
         run_id = int(run_path.name.split("_")[1])
         runs[run_id] = {
-            r["corpus_id"]: r.get("output_hash")
+            r["corpus_id"]: (parsed_hash(r.get("output")) if identity == "parsed" else r.get("output_hash"))
             for r in json.load(open(results))
             if r.get("output_hash")
         }
@@ -100,6 +119,11 @@ def main() -> None:
         paired = [v for v, _ in vals if v == v]
         base_paired = sum(paired) / len(paired)
 
+        parsed_runs = load_runs(RAW / stack, identity="parsed")
+        vals_p = [emr(parsed_runs, t) for t in triples]
+        paired_p = [v for v, _ in vals_p if v == v]
+        base_paired_parsed = sum(paired_p) / len(paired_p)
+
         def pct(new: float, old: float) -> float | None:
             return None if old == 0 else round(100.0 * (new - old) / old, 1)
 
@@ -113,6 +137,9 @@ def main() -> None:
             "baseline_n_triples": len(triples),
             "relative_change_vs_10run_baseline_pct": pct(fixed_emr, base_full),
             "relative_change_vs_paired_baseline_pct": pct(fixed_emr, base_paired),
+            "baseline_emr_3run_paired_parsed_identity": round(base_paired_parsed, 4),
+            "fixed_slot_emr_wilson95": [round(x, 4) for x in wilson(round(fixed_emr * fixed_n), fixed_n)],
+            "relative_change_vs_paired_parsed_identity_pct": pct(fixed_emr, base_paired_parsed),
         }
 
     body = json.dumps(payload, indent=2, sort_keys=True).encode()

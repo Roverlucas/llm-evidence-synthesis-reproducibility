@@ -20,7 +20,7 @@ artifacts:
   - {path: analysis/fleiss_kappa.json, hash: "sha256:bb7cc06cdc6dbd93e5ed7772e389d73a952d9540914ae8682d4855a1f9563fd2", produced_by: analysis/compute_fleiss_kappa.py, describes: "inter-run Fleiss kappa"}
   - {path: analysis/bertscore_results.json, hash: "sha256:aec36fc5049fa458c419bbcc8833225eac5725ca3835761ac4d128a7774f85d5", produced_by: analysis/compute_bertscore.py, describes: "BERTScore F1 all-pairs"}
   - {path: analysis/timing_and_costs.json, hash: "sha256:ac1ab30250a397df4592f860946bc64d65826cbed6c7fe05f44f0177ac61c74b", produced_by: scripts/compute_timing_costs.py, describes: "timing, tokens, cost"}
-  - {path: analysis/blindage/fixedslot_paired.json, hash: "sha256:24588d672a91fb16a998aa122a8440c53b1d52313fe1e5005a96eb32a3dcad75", produced_by: scripts/blindage/fixedslot_paired_baseline.py, describes: "fixed-slot vs run-count-matched baseline, incl. T=1.0 pair"}
+  - {path: analysis/blindage/fixedslot_paired.json, hash: "sha256:9325f1e3fd72987c6d92bdeb075198a28cd54fef035ba8fefe05c7127fa10c41", produced_by: scripts/blindage/fixedslot_paired_baseline.py, describes: "fixed-slot vs run-count-matched baseline, incl. T=1.0 pair"}
   - {path: analysis/blindage/jev_screening.json, hash: "sha256:baad03329e9568c1b5d26150812098e3ecb5224581cbe2669a3d623fffacbcab", produced_by: scripts/blindage/jev_screening_profile.py, describes: "Jev probability spread across runs"}
   - {path: analysis/blindage/schema_conformance.json, hash: "sha256:7ddfba8e729ef8cfb2bf169a7ba88f6253a3866675d1d8f75ac05933f8787e4d", produced_by: scripts/blindage/schema_conformance.py, describes: "schema conformance per stack"}
   - {path: analysis/blindage/seed_effect.json, hash: "sha256:f5d3972e7c73188a23ffac3d73d042db107f51bd60fe6e405c81d1a8b8087f2a", produced_by: scripts/blindage/seed_effect_analysis.py, describes: "seeded vs unseeded API stacks"}
@@ -38,6 +38,8 @@ artifacts:
   - {path: analysis/blindage/fixed_slot_comparison.json, hash: "sha256:3ce5d6844b5a6d111c6c3ceab8c0a41f4a1914afb4c8d4dcf1a5a2037cb3c375", produced_by: scripts/blindage/analyze_fixed_slot_results.py, describes: "fixed-slot vs 10-run baseline"}
 
   - {path: analysis/blindage/llama_cloud_desconfound.json, hash: "sha256:713e3933cd7a2932a26abb78ca13ff55ea0f1138bc98164844859f15ad46037d", produced_by: scripts/blindage/analyze_llama_cloud_vs_local.py, describes: "same-weights local vs cloud comparison (unchanged since April 2026; added to the freeze list on 2026-10-09)"}
+  - {path: analysis/blindage/nonmatch_decomposition.json, hash: "sha256:9cc1e80a36b533365a9cf1593e3221dfa1fc7c9eb311bf1e119012236d0871db", produced_by: scripts/blindage/nonmatch_decomposition.py, describes: "EMR non-matches split into failed-call items and changes among returned outputs"}
+  - {path: analysis/blindage/samemodel_payload.json, hash: "sha256:5d72127ce4d16728359335eb04acf2fb1374bdd125a75a6ab1825b3884e74e93", produced_by: scripts/blindage/samemodel_payload.py, describes: "request size and recorded provider in the same-weights comparison"}
 derived:
   - {artifact: analysis/figures/emr_comparison.pdf, from: analysis/reproducibility_results.json, regenerated_after_freeze: true}
   - {artifact: analysis/figures/field_emr_heatmap.pdf, from: analysis/reproducibility_results.json, regenerated_after_freeze: true}
@@ -59,3 +61,14 @@ refreeze_log:
       (spread of the probability of the chosen option, max - min per abstract). The first
       version of the script reported per-option spreads instead; those values are unchanged.
       Gap found by the independent sa-veritas review.
+  - date: "2026-10-09"
+    artifact: analysis/blindage/fixedslot_paired.json
+    change: >
+      Added an identity-matched baseline (baseline outputs hashed as parsed JSON with sorted
+      keys, as the fixed-slot arm is) and Wilson 95% intervals for the fixed-slot EMR.
+      Existing values unchanged.
+  - date: "2026-10-09"
+    artifact: [analysis/blindage/nonmatch_decomposition.json, analysis/blindage/samemodel_payload.json]
+    change: >
+      New artefacts giving a reproducible source to figures the text already used or needs
+      (failed-call share of non-matches; 1279.3 vs 842.3 mean input tokens; provider labels).

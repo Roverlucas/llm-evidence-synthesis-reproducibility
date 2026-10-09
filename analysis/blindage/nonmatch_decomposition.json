@@ -1,0 +1,154 @@
+{
+  "definition": "Split each stack's EMR non-matches into failed-call items and genuine changes.",
+  "sha256_self": "fe9a811866a55712a22ebd1d5ce7033aac655e8017434f022397726955a397c9",
+  "stacks": {
+    "claude-sonnet-4-5-t0": {
+      "extraction": {
+        "items_with_failed_call": [],
+        "n_items": 100,
+        "n_nonmatch": 53,
+        "n_nonmatch_all_runs_returned": 53,
+        "n_nonmatch_with_failed_call": 0,
+        "n_runs": 10
+      },
+      "screening": {
+        "items_with_failed_call": [
+          "ABS-0001",
+          "ABS-0002"
+        ],
+        "n_items": 500,
+        "n_nonmatch": 5,
+        "n_nonmatch_all_runs_returned": 3,
+        "n_nonmatch_with_failed_call": 2,
+        "n_runs": 10
+      }
+    },
+    "gemini-2.5-pro": {
+      "extraction": {
+        "items_with_failed_call": [
+          "ABS-0019",
+          "ABS-0039",
+          "ABS-0044",
+          "ABS-0046"
+        ],
+        "n_items": 100,
+        "n_nonmatch": 80,
+        "n_nonmatch_all_runs_returned": 76,
+        "n_nonmatch_with_failed_call": 4,
+        "n_runs": 10
+      },
+      "screening": {
+        "items_with_failed_call": [
+          "ABS-0484",
+          "ABS-0485",
+          "ABS-0486",
+          "ABS-0487",
+          "ABS-0488",
+          "ABS-0489",
+          "ABS-0490",
+          "ABS-0491",
+          "ABS-0492",
+          "ABS-0493",
+          "ABS-0494",
+          "ABS-0495",
+          "ABS-0496",
+          "ABS-0497",
+          "ABS-0498",
+          "ABS-0499",
+          "ABS-0500"
+        ],
+        "n_items": 500,
+        "n_nonmatch": 32,
+        "n_nonmatch_all_runs_returned": 15,
+        "n_nonmatch_with_failed_call": 17,
+        "n_runs": 10
+      }
+    },
+    "gemma2-9b": {
+      "extraction": {
+        "items_with_failed_call": [],
+        "n_items": 100,
+        "n_nonmatch": 0,
+        "n_nonmatch_all_runs_returned": 0,
+        "n_nonmatch_with_failed_call": 0,
+        "n_runs": 10
+      },
+      "screening": {
+        "items_with_failed_call": [],
+        "n_items": 500,
+        "n_nonmatch": 0,
+        "n_nonmatch_all_runs_returned": 0,
+        "n_nonmatch_with_failed_call": 0,
+        "n_runs": 10
+      }
+    },
+    "gpt-4.1": {
+      "extraction": {
+        "items_with_failed_call": [],
+        "n_items": 100,
+        "n_nonmatch": 85,
+        "n_nonmatch_all_runs_returned": 85,
+        "n_nonmatch_with_failed_call": 0,
+        "n_runs": 10
+      },
+      "screening": {
+        "items_with_failed_call": [],
+        "n_items": 500,
+        "n_nonmatch": 15,
+        "n_nonmatch_all_runs_returned": 15,
+        "n_nonmatch_with_failed_call": 0,
+        "n_runs": 10
+      }
+    },
+    "jev": {
+      "extraction": null,
+      "screening": {
+        "items_with_failed_call": [
+          "ABS-0011",
+          "ABS-0077"
+        ],
+        "n_items": 500,
+        "n_nonmatch": 22,
+        "n_nonmatch_all_runs_returned": 20,
+        "n_nonmatch_with_failed_call": 2,
+        "n_runs": 10
+      }
+    },
+    "llama3-8b": {
+      "extraction": {
+        "items_with_failed_call": [],
+        "n_items": 100,
+        "n_nonmatch": 0,
+        "n_nonmatch_all_runs_returned": 0,
+        "n_nonmatch_with_failed_call": 0,
+        "n_runs": 10
+      },
+      "screening": {
+        "items_with_failed_call": [],
+        "n_items": 500,
+        "n_nonmatch": 0,
+        "n_nonmatch_all_runs_returned": 0,
+        "n_nonmatch_with_failed_call": 0,
+        "n_runs": 10
+      }
+    },
+    "mistral-7b": {
+      "extraction": {
+        "items_with_failed_call": [],
+        "n_items": 100,
+        "n_nonmatch": 0,
+        "n_nonmatch_all_runs_returned": 0,
+        "n_nonmatch_with_failed_call": 0,
+        "n_runs": 10
+      },
+      "screening": {
+        "items_with_failed_call": [],
+        "n_items": 500,
+        "n_nonmatch": 0,
+        "n_nonmatch_all_runs_returned": 0,
+        "n_nonmatch_with_failed_call": 0,
+        "n_runs": 10
+      }
+    }
+  }
+}
