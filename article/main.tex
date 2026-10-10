@@ -54,6 +54,9 @@
 
 \author[utfpr]{Lucas Rover\corref{cor1}}
 \ead{lucasrover@alunos.utfpr.edu.br}
+\author{Luiza Iltchechen\pending{full name, affiliation, ORCID}}
+\author{Isabelle\pending{surname, affiliation, ORCID}}
+\author{Ricardo Godoy\pending{full name, affiliation, ORCID; author order for all five}}
 \author[utfpr]{Yara de Souza Tadano}
 \cortext[cor1]{Corresponding author.}
 
@@ -326,7 +329,7 @@ We also record what this stratum is and is not. Of its 300 abstracts, 260 carry 
 
 We additionally conducted a \textbf{dual-independent human-labeling validation} on a stratified subset of 100~abstracts (25~clear-include + 25~clear-exclude + 50~ambiguous, stratified by heuristic category $\times$ year-tertile, seed${=}$42).
 The labeling protocol, screening templates, and agreement script were pre-registered on the Open Science Framework \emph{before} any label was collected (\url{https://doi.org/10.17605/OSF.IO/FGN3E}, frozen 2026-05-12; the two label sets were returned on 2026-07-15 and 2026-07-29).
-Two reviewers, each blinded to the other's decisions, independently classified every abstract via the protocol in Supplementary Section~S4; we computed Cohen's $\kappa$ on the 3-class outcome (include/exclude/uncertain) and on the binary include-vs.-exclude collapse.
+Two reviewers, each blinded to the other's decisions and to every LLM output (the files they labeled carry only the bibliographic record and the abstract), independently classified every abstract via the protocol in Supplementary Section~S4; we computed Cohen's $\kappa$ on the 3-class outcome (include/exclude/uncertain) and on the binary include-vs.-exclude collapse.
 Agreement fell \textbf{below the pre-specified target} of $\kappa{\geq}0.80$: $\kappa{=}0.529$ (SE${=}0.074$, 95\%~CI \ci{0.383}{0.674}) on the 3-class outcome and $\kappa{=}0.556$ (95\%~CI \ci{0.400}{0.712}) on the binary collapse, with 75\% raw agreement and 25~discordant abstracts (confusion matrix and full agreement statistics in Supplementary Section~S4).
 The shortfall against the target is itself statistically decisive ($z{=}-3.65$, $p{=}1.3{\times}10^{-4}$), whereas $n{=}100$ is not sufficient to place $\kappa$ within a single descriptive band---the interval spans ``fair'' through ``substantial''---so we report the value against the threshold rather than assigning it a label.
 Two objections can be foreclosed immediately. The low coefficient is not an artefact of skewed marginals: the prevalence index is 0.189 and PABAK (0.558 on the binary collapse) is nearly identical to $\kappa$, so the ``kappa paradox'' is not operating here. Nor is it an artefact of the three-class scale: linearly and quadratically weighted $\kappa$ (0.541 and 0.548, computed on the ordinal ordering include--uncertain--exclude) move the estimate by less than 0.02.
@@ -338,7 +341,7 @@ The v1.1 decision table compounded this by specifying outcomes for failure in tw
 Neither rater departed from the protocol; the protocol was underspecified.
 Protocol v1.2 therefore splits criterion~5 into three levels: values present (criterion satisfied), the effect stated but its values absent (\emph{uncertain}, since abstract-only screening cannot verify what the abstract omits), and no estimate or mention at all (\emph{exclude}, since total absence is reasonable evidence that no extractable estimate exists).
 The amendment also separates structural criteria (original study, PM\textsubscript{2.5} exposure, respiratory hospitalization, English), where a single clear failure excludes, from conditional ones (design, effect reporting), where a single failure yields \emph{uncertain} unless the information is absent rather than merely unreported.
-The pre-registered protocol routes the 25~discordant items to a blinded recalibration, a consensus meeting and a tie-break by the senior author; no label from that sequence enters any number reported here, and $\kappa{=}0.529$ is the study's agreement estimate. Showing that the amended criterion repairs the ambiguity requires a fresh independent sample, not a re-rating of the same items; these data do not show it.
+The pre-registered protocol routes the 25~discordant items to a blinded recalibration, a consensus meeting, with the senior author (Y.d.S.T.) as tie-breaker; no label from that sequence enters any number reported here, and $\kappa{=}0.529$ is the study's agreement estimate. Showing that the amended criterion repairs the ambiguity requires a fresh independent sample, not a re-rating of the same items; these data do not show it.
 
 Stratifying agreement exposes something the pooled coefficient hides, and it bears directly on how our accuracy numbers should be read.
 On the 25~clear-\emph{exclude} abstracts the two raters agreed unanimously (25/25, PABAK${=}1.00$; $\kappa$ is undefined there because expected agreement equals one---a degenerate-marginals case that is precisely why we report PABAK alongside).
@@ -1014,6 +1017,9 @@ Frameworks that assess computational reproducibility process by process \citep{z
 
 \section*{CRediT authorship contribution statement}
 \textbf{Lucas Rover:} Conceptualization, Methodology, Software, Investigation, Formal analysis, Writing -- original draft.
+\textbf{Luiza Iltchechen:} Investigation, Data curation, Writing -- review \& editing.
+\textbf{Isabelle\pending{surname}:} Investigation, Data curation, Writing -- review \& editing.
+\textbf{Ricardo Godoy\pending{full name}:} Supervision, Validation, Writing -- review \& editing.
 \textbf{Yara de Souza Tadano:} Supervision, Methodology, Writing -- review \& editing.
 
 \section*{Declaration of competing interest}
@@ -1028,12 +1034,9 @@ API costs for the Claude, Gemini, GPT-4.1 and Jev experiments were funded by the
 
 \section*{Data Availability Statement}
 All code, data, prompts, schemas, raw outputs, and run provenance records are publicly available at \url{https://github.com/Roverlucas/llm-evidence-synthesis-reproducibility} and archived at the Open Science Framework (\url{https://doi.org/10.17605/OSF.IO/VR934}).
-The dual-human labeling protocol is deposited separately as a frozen OSF registration (\url{https://doi.org/10.17605/OSF.IO/FGN3E}, 2026-05-12), which pre-dates label collection; the returned labels, agreement statistics, and the v1.2 protocol amendment are in the repository under \texttt{data/dual\_labeling/} (\pending{repository tag for the submitted version}).
+The dual-human labeling protocol is deposited separately as a frozen OSF registration (\url{https://doi.org/10.17605/OSF.IO/FGN3E}, 2026-05-12), which pre-dates label collection; the returned labels, agreement statistics, and the v1.2 protocol amendment are in the repository under \texttt{data/dual\_labeling/} (release \texttt{v2.0-envsoft-submission}).
 API keys are excluded from the repository.
 The 500 PubMed abstract identifiers, rule and human labels, and complete analysis scripts are included to enable full reproduction of the reported results.
-
-\section*{Acknowledgements}
-The authors thank the two independent raters who labeled the validation subset \pending{names, or removal of this sentence if both raters are listed as co-authors}.
 
 \bibliographystyle{elsarticle-harv}
 \bibliography{references}

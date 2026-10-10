@@ -14,7 +14,6 @@ TEX=$(ls -d ~/Library/TinyTeX/bin/*/ 2>/dev/null | head -1)
 bash ../scripts/check_pending.sh
 
 ./sync_figures.sh
-../.venv/bin/python ../scripts/graphical_abstract.py
 
 pdflatex -interaction=nonstopmode main.tex >/dev/null
 bibtex main >/dev/null
@@ -30,7 +29,7 @@ cp main.tex references.bib main.bbl main.pdf "$OUT/"
 # Editorial Manager may flatten folders, so figures go next to main.tex (\graphicspath also finds them there).
 cp figures/Figure_1.pdf figures/Figure_2.pdf figures/Figure_3.pdf "$OUT/"
 cp highlights.txt "$OUT/highlights.txt"
-cp graphical_abstract.pdf graphical_abstract.png "$OUT/"
+# Graphical abstract left out until the authors approve it (article/graphical_abstract.*).
 cp supplementary.pdf "$OUT/Supplementary_material.pdf"
 pandoc ../docs/cover_letter_envsoft.md -o "$OUT/cover_letter.docx"
 

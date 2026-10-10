@@ -25,8 +25,8 @@ report() {  # report <label> <pattern> <files...>
 }
 
 MANUSCRIPT=(article/main.tex article/supplementary.tex)
-SUBMISSION=(article/main.tex article/supplementary.tex docs/cover_letter_rsm.md
-            osf_package/CITATIONS.md)
+SUBMISSION=(article/main.tex article/supplementary.tex docs/cover_letter_envsoft.md
+            article/highlights.txt osf_package/CITATIONS.md)
 
 echo "== placeholders that must never ship =="
 report "\\pending{} markers in the manuscript" '\\pending\{' "${MANUSCRIPT[@]}"
