@@ -1,0 +1,801 @@
+{
+  "metadata": {
+    "protocol_version": "1.2",
+    "labeler1": "Isabelle",
+    "labeler2": "Luiza Iltchechen",
+    "tiebreaker": "Yara de Souza Tadano (as pre-registered in OSF fgn3e)",
+    "n_abstracts": 100,
+    "n_unresolved": 0,
+    "unresolved_ids": []
+  },
+  "agreement": {
+    "study_estimate_round1": "kappa = 0.5287 (3-class), 0.5562 (binary); see results/kappa_report.json and results/kappa_statistics.json",
+    "reconciliation_convergence_rate": 0.56,
+    "reconciliation_n_items": 25,
+    "note": "reconciliation_convergence_rate is NOT a kappa and must not be reported as one. Its denominator is the set of items that disagreed in round 1, so it is descriptive and conditional on that selected subset. No post-recalibration coefficient is emitted, because re-rating only the discordant items would raise a recomputed full-corpus kappa by construction."
+  },
+  "resolution_sources": {
+    "agreement_round1": 75,
+    "agreement_round2": 14,
+    "tiebreak": 11
+  },
+  "decisions": {
+    "EXCLUDE": 50,
+    "INCLUDE": 32,
+    "UNCERTAIN": 18
+  },
+  "items": [
+    {
+      "labeling_id": "LBL-001",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-002",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-003",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "labeler1_round2": "EXCLUDE",
+      "labeler2_round2": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round2"
+    },
+    {
+      "labeling_id": "LBL-004",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-005",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-006",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-007",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-008",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-009",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "labeler1_round2": "UNCERTAIN",
+      "labeler2_round2": "UNCERTAIN",
+      "decision": "UNCERTAIN",
+      "resolution_source": "agreement_round2"
+    },
+    {
+      "labeling_id": "LBL-010",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-011",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "labeler1_round2": "EXCLUDE",
+      "labeler2_round2": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round2"
+    },
+    {
+      "labeling_id": "LBL-012",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-013",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-014",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-015",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-016",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-017",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-018",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-019",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-020",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-021",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-022",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "labeler1_round2": "EXCLUDE",
+      "labeler2_round2": "UNCERTAIN",
+      "decision": "UNCERTAIN",
+      "resolution_source": "tiebreak",
+      "tiebreak_criterion": "5b",
+      "tiebreak_rationale": "cita que calculou RR, mas não apresenta valores no resumo. No artigo com certeza terá."
+    },
+    {
+      "labeling_id": "LBL-023",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-024",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-025",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-026",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-027",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-028",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-029",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-030",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "labeler1_round2": "EXCLUDE",
+      "labeler2_round2": "UNCERTAIN",
+      "decision": "UNCERTAIN",
+      "resolution_source": "tiebreak",
+      "tiebreak_criterion": "5b",
+      "tiebreak_rationale": "Diz claramente que calculou rate ratio, diz que usou dados de saúde de asma (doença respiratória) e também de PM2.5, porém não apresenta valores no resumo."
+    },
+    {
+      "labeling_id": "LBL-031",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-032",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-033",
+      "labeler1_round1": "UNCERTAIN",
+      "labeler2_round1": "INCLUDE",
+      "labeler1_round2": "UNCERTAIN",
+      "labeler2_round2": "UNCERTAIN",
+      "decision": "UNCERTAIN",
+      "resolution_source": "agreement_round2"
+    },
+    {
+      "labeling_id": "LBL-034",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "labeler1_round2": "EXCLUDE",
+      "labeler2_round2": "UNCERTAIN",
+      "decision": "UNCERTAIN",
+      "resolution_source": "tiebreak",
+      "tiebreak_criterion": "5b",
+      "tiebreak_rationale": "Diz claramente que calculou impacto, inclusive apresenta valor com IC95%, porém o valor apresentado não é para doença respiratória. Mas menciona doenças respiratórias no resumo, então o artigo com certeza terá os valores para PM2.5 x doenças respiratórias."
+    },
+    {
+      "labeling_id": "LBL-035",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-036",
+      "labeler1_round1": "UNCERTAIN",
+      "labeler2_round1": "INCLUDE",
+      "labeler1_round2": "UNCERTAIN",
+      "labeler2_round2": "UNCERTAIN",
+      "decision": "UNCERTAIN",
+      "resolution_source": "agreement_round2"
+    },
+    {
+      "labeling_id": "LBL-037",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-038",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "labeler1_round2": "EXCLUDE",
+      "labeler2_round2": "UNCERTAIN",
+      "decision": "UNCERTAIN",
+      "resolution_source": "tiebreak",
+      "tiebreak_criterion": "5b",
+      "tiebreak_rationale": "CITA QUE CALCULOU EFEITO, INCLUINDO IC95%, PORÉM NÃO FOI PARA MP2.5, PROVAVELMENTE POR NÃO TER SIDO O POLUENTE COM MAIOR IMPACTO. Mas como menciona o uso de MP2.5, com certeza foi calculado e estará no artigo, porém não cita no resumo."
+    },
+    {
+      "labeling_id": "LBL-039",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "labeler1_round2": "UNCERTAIN",
+      "labeler2_round2": "UNCERTAIN",
+      "decision": "UNCERTAIN",
+      "resolution_source": "agreement_round2"
+    },
+    {
+      "labeling_id": "LBL-040",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-041",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-042",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-043",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-044",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-045",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-046",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-047",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "labeler1_round2": "EXCLUDE",
+      "labeler2_round2": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "tiebreak",
+      "tiebreak_criterion": "5a",
+      "tiebreak_rationale": "Apresenta RR com IC95%"
+    },
+    {
+      "labeling_id": "LBL-048",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-049",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-050",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-051",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "UNCERTAIN",
+      "labeler1_round2": "EXCLUDE",
+      "labeler2_round2": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round2"
+    },
+    {
+      "labeling_id": "LBL-052",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-053",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-054",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-055",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-056",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "labeler1_round2": "INCLUDE",
+      "labeler2_round2": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round2"
+    },
+    {
+      "labeling_id": "LBL-057",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-058",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-059",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "labeler1_round2": "UNCERTAIN",
+      "labeler2_round2": "UNCERTAIN",
+      "decision": "UNCERTAIN",
+      "resolution_source": "agreement_round2"
+    },
+    {
+      "labeling_id": "LBL-060",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-061",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "labeler1_round2": "EXCLUDE",
+      "labeler2_round2": "UNCERTAIN",
+      "decision": "UNCERTAIN",
+      "resolution_source": "tiebreak",
+      "tiebreak_criterion": "5b",
+      "tiebreak_rationale": "Apresenta RR com IC95% [REVISED by the tie-breaker by e-mail after the coordinator flagged a conflict with protocol v1.2 (relayed by the first author, 2026-11-03); spreadsheet decision was INCLUDE 5a.]"
+    },
+    {
+      "labeling_id": "LBL-062",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-063",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-064",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "labeler1_round2": "EXCLUDE",
+      "labeler2_round2": "UNCERTAIN",
+      "decision": "UNCERTAIN",
+      "resolution_source": "tiebreak",
+      "tiebreak_criterion": "5b",
+      "tiebreak_rationale": "Menciona RR com IC95% porém apenas para doenças circulatórias. Com certeza a informação para doenças respiratórias estará no artigo, pois deixam claro que avaliaram isso. Não citaram no resumo, provavelmente por não ter sido o que apresentou maior impacto."
+    },
+    {
+      "labeling_id": "LBL-065",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-066",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-067",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-068",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "labeler1_round2": "UNCERTAIN",
+      "labeler2_round2": "UNCERTAIN",
+      "decision": "UNCERTAIN",
+      "resolution_source": "agreement_round2"
+    },
+    {
+      "labeling_id": "LBL-069",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "labeler1_round2": "EXCLUDE",
+      "labeler2_round2": "UNCERTAIN",
+      "decision": "INCLUDE",
+      "resolution_source": "tiebreak",
+      "tiebreak_criterion": "5a",
+      "tiebreak_rationale": "Ele apresenta valores para risco em % para doenças respiratórias devido à PM2.5, só não apresenta IC95%. [Coordinator flag 2026-11-03: abstract gives attributable % for PM2.5 but no 95% CI, so strict 5a is not met; tie-breaker confirmed INCLUDE by e-mail. Kept as decided.]"
+    },
+    {
+      "labeling_id": "LBL-070",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-071",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-072",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-073",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-074",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-075",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-076",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "UNCERTAIN",
+      "labeler1_round2": "EXCLUDE",
+      "labeler2_round2": "UNCERTAIN",
+      "decision": "UNCERTAIN",
+      "resolution_source": "tiebreak",
+      "tiebreak_criterion": "5b",
+      "tiebreak_rationale": "Apresenta RR com IC95%, mas para all cause mortality, morbidity. Mas menciona que também fizeram análise de doenças respiratórias em crianças, então é muito provável que tenham estes valores no artigo."
+    },
+    {
+      "labeling_id": "LBL-077",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-078",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-079",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-080",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-081",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-082",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "labeler1_round2": "UNCERTAIN",
+      "labeler2_round2": "UNCERTAIN",
+      "decision": "UNCERTAIN",
+      "resolution_source": "agreement_round2"
+    },
+    {
+      "labeling_id": "LBL-083",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-084",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-085",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-086",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-087",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "labeler1_round2": "INCLUDE",
+      "labeler2_round2": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round2"
+    },
+    {
+      "labeling_id": "LBL-088",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-089",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-090",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-091",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "labeler1_round2": "INCLUDE",
+      "labeler2_round2": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "tiebreak",
+      "tiebreak_criterion": "6",
+      "tiebreak_rationale": "Pensando no critério de apresentar ou não valores de impacto de PM2.5 e doenças respiratórias, ele deve ser incluída. Mas se o idioma era um quesito para exclusão e o artigo está em chinês, pode se optar por excluir. Com a possibilidade de ferramentas de tradução, eu ainda incluiria o artigo na análise. [REVISED by the tie-breaker by e-mail after the coordinator flagged a conflict with protocol v1.2 (relayed by the first author, 2026-11-03); spreadsheet decision was INCLUDE 5a.]"
+    },
+    {
+      "labeling_id": "LBL-092",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-093",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "EXCLUDE",
+      "decision": "EXCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-094",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "labeler1_round2": "UNCERTAIN",
+      "labeler2_round2": "UNCERTAIN",
+      "decision": "UNCERTAIN",
+      "resolution_source": "agreement_round2"
+    },
+    {
+      "labeling_id": "LBL-095",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-096",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-097",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "labeler1_round2": "EXCLUDE",
+      "labeler2_round2": "UNCERTAIN",
+      "decision": "UNCERTAIN",
+      "resolution_source": "tiebreak",
+      "tiebreak_criterion": "5b",
+      "tiebreak_rationale": "Apresenta RR IC95%, mas não para PM2.5. Com certeza no artigo terá esse valor, não foi mencionado no resumo, por não ter sido o poluente que apresentou maior impacto à saúde."
+    },
+    {
+      "labeling_id": "LBL-098",
+      "labeler1_round1": "UNCERTAIN",
+      "labeler2_round1": "UNCERTAIN",
+      "decision": "UNCERTAIN",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-099",
+      "labeler1_round1": "INCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "decision": "INCLUDE",
+      "resolution_source": "agreement_round1"
+    },
+    {
+      "labeling_id": "LBL-100",
+      "labeler1_round1": "EXCLUDE",
+      "labeler2_round1": "INCLUDE",
+      "labeler1_round2": "UNCERTAIN",
+      "labeler2_round2": "UNCERTAIN",
+      "decision": "UNCERTAIN",
+      "resolution_source": "agreement_round2"
+    }
+  ]
+}
