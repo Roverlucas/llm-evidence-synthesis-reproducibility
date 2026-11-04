@@ -19,7 +19,7 @@ artifacts:
   - {path: analysis/semantic_and_meta_results.json, hash: "sha256:2d9d009cbe34d0ae4464b9eab073fb31e0b63a4a885cad5005af87669c17b044", produced_by: analysis/run_semantic_and_meta.py, describes: "semantic tiers and meta-analytic propagation"}
   - {path: analysis/fleiss_kappa.json, hash: "sha256:bb7cc06cdc6dbd93e5ed7772e389d73a952d9540914ae8682d4855a1f9563fd2", produced_by: analysis/compute_fleiss_kappa.py, describes: "inter-run Fleiss kappa"}
   - {path: analysis/bertscore_results.json, hash: "sha256:aec36fc5049fa458c419bbcc8833225eac5725ca3835761ac4d128a7774f85d5", produced_by: analysis/compute_bertscore.py, describes: "BERTScore F1 all-pairs"}
-  - {path: analysis/timing_and_costs.json, hash: "sha256:ac1ab30250a397df4592f860946bc64d65826cbed6c7fe05f44f0177ac61c74b", produced_by: scripts/compute_timing_costs.py, describes: "timing, tokens, cost"}
+  - {path: analysis/timing_and_costs.json, hash: "sha256:12bed27ad6b13d9f6ad1dfb0a7fce270bb4ed8eac78b194b89f065bb61b0d55b", produced_by: scripts/compute_timing_costs.py, describes: "timing, tokens, cost"}
   - {path: analysis/blindage/fixedslot_paired.json, hash: "sha256:9325f1e3fd72987c6d92bdeb075198a28cd54fef035ba8fefe05c7127fa10c41", produced_by: scripts/blindage/fixedslot_paired_baseline.py, describes: "fixed-slot vs run-count-matched baseline, incl. T=1.0 pair"}
   - {path: analysis/blindage/jev_screening.json, hash: "sha256:baad03329e9568c1b5d26150812098e3ecb5224581cbe2669a3d623fffacbcab", produced_by: scripts/blindage/jev_screening_profile.py, describes: "Jev probability spread across runs"}
   - {path: analysis/blindage/schema_conformance.json, hash: "sha256:7ddfba8e729ef8cfb2bf169a7ba88f6253a3866675d1d8f75ac05933f8787e4d", produced_by: scripts/blindage/schema_conformance.py, describes: "schema conformance per stack"}
@@ -35,7 +35,7 @@ artifacts:
   - {path: analysis/blindage/silver_standard_internal.json, hash: "sha256:e7188c875609144cd4fbfb611845abc5e26a877c158493918b427cc5c712de05", produced_by: scripts/blindage/silver_standard_majority_vote.py, describes: "silver internal"}
   - {path: analysis/blindage/silver_cross_validation.json, hash: "sha256:658275293da9abda587c84204a2e21b717b74f8b44837feee9ad9512cabce50d", produced_by: scripts/blindage/cross_validate_silvers.py, describes: "silver cross-validation"}
   - {path: analysis/blindage/work_saved.json, hash: "sha256:15404d39be809351953478bc03b907a246ee88a0d919afedb7e6650f8f5c10b0", produced_by: scripts/blindage/work_saved_metric.py, describes: "work saved"}
-  - {path: analysis/blindage/fixed_slot_comparison.json, hash: "sha256:3ce5d6844b5a6d111c6c3ceab8c0a41f4a1914afb4c8d4dcf1a5a2037cb3c375", produced_by: scripts/blindage/analyze_fixed_slot_results.py, describes: "fixed-slot vs 10-run baseline"}
+  - {path: analysis/blindage/fixed_slot_comparison.json, hash: "sha256:3ce5d6844b5a6d111c6c3ceab8c0a41f4a1914afb4c8d4dcf1a5a2037cb3c375", produced_by: scripts/blindage/analyze_fixed_slot_results.py, describes: "SUPERSEDED by analysis/blindage/fixedslot_paired.json (2026-11-04); kept for the record, cited nowhere. Its baseline is not run-count matched, and its Claude T=0 row compares against the T=1.0 baseline"}
 
   - {path: analysis/blindage/llama_cloud_desconfound.json, hash: "sha256:713e3933cd7a2932a26abb78ca13ff55ea0f1138bc98164844859f15ad46037d", produced_by: scripts/blindage/analyze_llama_cloud_vs_local.py, describes: "same-weights local vs cloud comparison (unchanged since April 2026; added to the freeze list on 2026-10-09)"}
   - {path: analysis/blindage/nonmatch_decomposition.json, hash: "sha256:9cc1e80a36b533365a9cf1593e3221dfa1fc7c9eb311bf1e119012236d0871db", produced_by: scripts/blindage/nonmatch_decomposition.py, describes: "EMR non-matches split into failed-call items and changes among returned outputs"}
@@ -74,3 +74,16 @@ refreeze_log:
     change: >
       New artefacts giving a reproducible source to figures the text already used or needs
       (failed-call share of non-matches; 1279.3 vs 842.3 mean input tokens; provider labels).
+  - date: "2026-11-04"
+    artifact: analysis/timing_and_costs.json
+    change: >
+      metadata.design corrected from "6 models x 2 stages x 10 runs x 500 calls = 60,000"
+      to "6 models x 10 runs x (500 screening + 100 extraction calls) = 36,000", the design
+      actually run. Regenerated with scripts/compute_timing_costs.py; every other value is
+      unchanged (checked by sorted-key diff; only design and generated_at differ).
+  - date: "2026-11-04"
+    artifact: analysis/blindage/fixed_slot_comparison.json
+    change: >
+      Marked as superseded by fixedslot_paired.json. File and hash unchanged. Its Gemini row
+      (EMR 0.1848, n=92) and its Claude T=0 label ("fixed-slot reduces non-determinism",
+      0.64 vs 0.47) contradict the run-count-matched comparison and are not reported.

@@ -99,7 +99,7 @@ def kappa_block(c1: np.ndarray, c2: np.ndarray, categories: list[str]) -> dict:
     # Brennan-Prediger / PABAK generalised to k categories: (k*po - 1)/(k - 1).
     # The familiar 2*po-1 is the k=2 special case; applying it to a 3-class table
     # understates the coefficient (0.500 instead of 0.625 at po=0.75).
-    _k = len(CATEGORIES)
+    _k = k  # the block's own category count: 3 for the full table, 2 for the binary collapse
     out["pabak"] = float((_k * out["percent_agreement"] - 1) / (_k - 1))
     out["pabak_n_categories"] = _k
 

@@ -271,7 +271,7 @@ def main():
             "stages": STAGES,
             "runs_per_condition": 10,
             "calls_per_run": 500,
-            "design": "6 models x 2 stages x 10 runs x 500 calls = 60,000 LLM calls",
+            "design": "6 models x 10 runs x (500 screening + 100 extraction calls) = 36,000 LLM calls",
             "cost_assumptions": {
                 "gpt-4.1": "$2.00/1M input, $8.00/1M output",
                 CLAUDE: "$3.00/1M input, $15.00/1M output",

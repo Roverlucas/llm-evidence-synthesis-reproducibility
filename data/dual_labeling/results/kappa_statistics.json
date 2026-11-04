@@ -80,8 +80,8 @@
         46
       ]
     ],
-    "pabak": 0.668421052631579,
-    "pabak_n_categories": 3,
+    "pabak": 0.5578947368421052,
+    "pabak_n_categories": 2,
     "test_vs_cochrane": {
       "target": 0.8,
       "z": -3.057175620399609,

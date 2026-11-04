@@ -62,7 +62,7 @@ three-class scale.
 
 The disagreement is directional rather than diffuse. Binary discordant cells are 2
 versus 19 (exact McNemar p = 2.2×10⁻⁴); marginal homogeneity is rejected on the
-3-class table (Stuart–Maxwell χ²(2) = 15.4, p = 4.6×10⁻⁴); bias index 0.179. Rater 2
+3-class table (Stuart–Maxwell χ²(2) = 16.4, p = 2.7×10⁻⁴; corrected 2026-11-04, see Erratum); bias index 0.179. Rater 2
 returned 49 INCLUDE decisions against rater 1's 30.
 
 Of the 25 discordances, 19 run in that same direction, and **17 of those 19 turn on
@@ -203,3 +203,10 @@ All artefacts are in the project repository under `data/dual_labeling/`: both re
 label sets with their raw sources and SHA-256 hashes, the agreement statistics, the 25
 discordances, the v1.2 protocol, the blinded recalibration sheets, and the analysis
 scripts.
+
+## Erratum (2026-11-04)
+
+The version of this update posted to OSF component 8z6fy reported the Stuart–Maxwell test as
+χ²(2) = 15.4, p = 4.6×10⁻⁴. The value computed from the deposited labels
+(`data/dual_labeling/results/kappa_statistics.json`) is χ²(2) = 16.4, p = 2.7×10⁻⁴, which is what
+the manuscript reports. The conclusion (marginal homogeneity rejected) is unchanged.

@@ -18,7 +18,7 @@ We audit that property across the screening and extraction stages of an evidence
 
 Five results:
 
-1. **Local stacks returned bit-identical output across all ten runs; API-served stacks reached an extraction Exact Match Rate of 0.150 to 0.470** at temperature zero, verified in the client code. The most reproducible of the three is the one that accepts no seed.
+1. **Local stacks returned bit-identical output across all ten runs; API-served stacks reached an extraction Exact Match Rate of 0.150 to 0.470** at temperature zero, verified in the client code. The most reproducible of the three accepts no seed, so seed support did not separate the more reproducible stacks from the less reproducible ones; the design has no within-stack seed ablation, so this is not an estimate of what the seed contributes.
 
 2. **The same model, served differently, behaves differently.** Llama 3 8B Instruct reproduced exactly on the local stack and varied across runs when served through a cloud endpoint. The two arms also differ in weight precision and request construction, which the paper states, so the result shows that small model size does not confer determinism; it does not isolate the serving layer.
 

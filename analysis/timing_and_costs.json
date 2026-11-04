@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-10-09T02:31:20.306529+00:00",
+    "generated_at": "2026-11-04T11:47:45.009048+00:00",
     "project": "LLM Evidence Synthesis Reproducibility",
     "base_dir": "/Users/lucasrover/pesquisa/ativos/llm-evidence-synthesis-reproducibility",
     "models": [
@@ -17,7 +17,7 @@
     ],
     "runs_per_condition": 10,
     "calls_per_run": 500,
-    "design": "6 models x 2 stages x 10 runs x 500 calls = 60,000 LLM calls",
+    "design": "6 models x 10 runs x (500 screening + 100 extraction calls) = 36,000 LLM calls",
     "cost_assumptions": {
       "gpt-4.1": "$2.00/1M input, $8.00/1M output",
       "claude-sonnet-4-5-t0": "$3.00/1M input, $15.00/1M output",

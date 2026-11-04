@@ -61,7 +61,7 @@ CLAIMS: list[tuple[str, float, list[str], list[Path]]] = [
     ("bias index", byrt["bias_index"], ["0.179"], [MAIN, SUPP, UPDATE]),
     ("weighted kappa linear", three["kappa_weighted_linear"], ["0.541"], [MAIN, SUPP, UPDATE]),
     ("weighted kappa quadratic", three["kappa_weighted_quadratic"], ["0.548"], [MAIN, SUPP, UPDATE]),
-    ("Stuart-Maxwell statistic", marginal["stuart_maxwell_3class"]["statistic"], ["15.4"], [MAIN, SUPP, UPDATE]),
+    ("Stuart-Maxwell statistic", marginal["stuart_maxwell_3class"]["statistic"], ["16.4"], [MAIN, SUPP, UPDATE]),
     ("bootstrap percentile lower", boot["percentile_ci95"][0], ["0.383"], [SUPP]),
     ("bootstrap BCa lower", boot["bca_ci95"][0], ["0.382"], [SUPP]),
     ("clear-include agreement", strata["include"]["percent_agreement"], ["0.680"], [MAIN, SUPP, UPDATE]),

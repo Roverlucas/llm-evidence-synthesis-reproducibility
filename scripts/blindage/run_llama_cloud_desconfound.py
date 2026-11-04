@@ -1,20 +1,23 @@
-"""P0.1 — LLaMA cloud desconfound experiment (Editor blocker #1).
+"""P0.1 — LLaMA cloud same-checkpoint comparison (Editor blocker #1).
 
-Runs LLaMA 3.1 8B Instant via Groq cloud with the SAME prompt, seed, temperature
-as the local LLaMA 3 8B via Ollama. Any EMR difference vs local is attributable
-to DEPLOYMENT infrastructure (not model/prompt).
+Runs Llama 3 8B Instruct (meta-llama/llama-3-8b-instruct) through OpenRouter,
+pinned to the DeepInfra provider, with the same prompt source file, seed and
+temperature as the local llama3:8b via Ollama (4-bit Q4_0).
+
+The two arms are NOT a clean isolation of infrastructure: weight precision
+differs (Q4_0 locally, undisclosed in the cloud) and the request payloads are not
+byte-identical (see analysis/blindage/samemodel_payload.json).
+
+Provenance note: an earlier version of this script targeted Groq
+(llama-3.1-8b-instant) and wrote the fixed string "groq" in every call record.
+The deposited records of runs executed in April 2026 still carry that label; the
+route actually used is OpenRouter -> DeepInfra, as the run cards record. The raw
+records are left as deposited; no reported number reads the provider field.
 
 Design:
-    - Model: llama-3.1-8b-instant (Groq)
-    - Local counterpart: llama3:8b (Ollama) — achieved EMR=1.000 with seed=42
-    - Stages: screening (500 × 10) + extraction (100 × 10) = 6000 calls
-    - Seed: 42 (same as local)
-    - Temperature: 0.0 (same as local)
-
-Rate limits: Groq free tier limits llama-3.1-8b-instant to:
-    - 30 requests/minute
-    - 14,400 requests/day
-We pace at 2s between calls (30 rpm) plus retry with backoff on 429.
+    - Model: meta-llama/llama-3-8b-instruct via OpenRouter -> DeepInfra
+    - Local counterpart: llama3:8b (Ollama) — EMR=1.000 with seed=42
+    - Seed: 42; temperature: 0.0 (same as local)
 
 Outputs:
     data/raw_outputs/llama3-8b-cloud/{screening,extraction}/run_NNN/
