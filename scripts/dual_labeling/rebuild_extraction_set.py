@@ -54,7 +54,7 @@ def main() -> None:
     no_ci = df[~df["abstract"].map(has_numeric_ci)]["labeling_id"].tolist()
 
     args.out.mkdir(parents=True, exist_ok=True)
-    for prefix, name in [("labeler1", "Isabelle"), ("labeler2", "Luiza")]:
+    for prefix, name in [("labeler1", "Rater 1"), ("labeler2", "Rater 2")]:
         out_df = df.copy()
         for field in EXTRACTION_FIELDS:
             out_df[f"{prefix}_{field}"] = ""

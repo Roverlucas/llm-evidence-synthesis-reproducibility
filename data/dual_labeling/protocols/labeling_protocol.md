@@ -175,7 +175,7 @@ a falha**.
 
 ### Opção B — Google Sheets (fallback)
 
-1. Abrir o arquivo correspondente: `subset_100_labeler1.csv` (Isabelle) ou `subset_100_labeler2.csv` (Luiza)
+1. Abrir o arquivo correspondente: `subset_100_labeler1.csv` (Rater 1) ou `subset_100_labeler2.csv` (Rater 2)
 2. Importar em Google Sheets (File → Import → Upload)
 3. Preencher as colunas **sem ver a planilha do outro labeler**:
    - `{labeler}_decision`: INCLUDE / EXCLUDE / UNCERTAIN
@@ -264,8 +264,8 @@ quantitativa.
 > material que humanos rejeitam.
 
 ### Arquivos
-- `extraction_labeler1.csv` (Isabelle)
-- `extraction_labeler2.csv` (Luiza)
+- `extraction_labeler1.csv` (Rater 1)
+- `extraction_labeler2.csv` (Rater 2)
 
 ### Campos a extrair (do abstract)
 | Campo | Exemplo | Regra |
@@ -301,8 +301,8 @@ quantitativa.
 
 ## 10. Resolução de discordâncias
 
-**Atribuição de papéis (atualizada 2026-07-29):** labeler1 = Isabelle, labeler2 =
-Luiza Iltchechen, tie-breaker = **Profa. Yara Tadano (Y.d.S.T.)** — o mesmo papel
+**Atribuição de papéis (atualizada 2026-07-29):** labeler1 = Rater 1, labeler2 =
+Rater 2, tie-breaker = **Profa. Yara Tadano (Y.d.S.T.)** — o mesmo papel
 previsto na v1.1 e registrado no pré-registro OSF `fgn3e`.
 
 Houve uma consideração de transferir o tie-break para Lucas Rover em 2026-07-29; a

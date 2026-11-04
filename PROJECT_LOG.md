@@ -116,8 +116,8 @@
 
 ### Sessão 2026-07-29 — Fechamento do Stage A e correções de integridade
 
-**Marco:** a validação dual-humana Stage A fechou. Isabelle (labeler1) entregou os
-100/100 restantes; Luiza (labeler2) havia entregue em 2026-07-15.
+**Marco:** a validação dual-humana Stage A fechou. labeler1 (Rater 1) entregou os
+100/100 restantes; labeler2 (Rater 2) havia entregue em 2026-07-15.
 
 **Resultado:** κ de Cohen = **0.529** (95% CI [0.383, 0.674]), binário 0.556
 [0.400, 0.712], concordância bruta 75%, 25 discordâncias. **Abaixo do alvo Cochrane

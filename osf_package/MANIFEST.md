@@ -74,8 +74,8 @@ Produced after registration (the evidence layer, for the sub-registration update
 
 | File | Path in repo | Notes |
 |------|-------------|-------|
-| subset_100_labeler1_RETURNED.csv | `data/dual_labeling/returned/` | Isabelle, 2026-07-29 (+ raw `.xlsx` source) |
-| subset_100_labeler2_RETURNED.csv | `data/dual_labeling/returned/` | Luiza, 2026-07-15 |
+| subset_100_labeler1_RETURNED.csv | `data/dual_labeling/returned/` | Rater 1, 2026-07-29 (+ raw `.xlsx` source) |
+| subset_100_labeler2_RETURNED.csv | `data/dual_labeling/returned/` | Rater 2, 2026-07-15 |
 | kappa_report.json, kappa_statistics.json | `data/dual_labeling/results/` | κ, intervals, PABAK, marginal-homogeneity tests, per-stratum |
 | discordances.csv, confusion_matrix.csv | `data/dual_labeling/results/` | The 25 discordant items |
 | labeling_protocol.md | `data/dual_labeling/protocols/` | **v1.2** — the registered contingency (c) |

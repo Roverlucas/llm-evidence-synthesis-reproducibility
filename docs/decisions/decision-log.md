@@ -125,7 +125,7 @@ Stage-B subset substitution (entry 19), the post-hoc statistics, and the tie-bre
 reconsideration that was reverted (entries 18 and 22).
 
 ## 25 — 2026-08-19 · Labeler1 recalibration ingested; movement is one-directional
-Isabelle returned the blinded v1.2 sheet three days before the deadline. All 25 items
+Rater 1 returned the blinded v1.2 sheet three days before the deadline. All 25 items
 complete, ids and abstracts byte-identical to what was sent, no column from the other
 labeler present. Archived at
 `data/dual_labeling/reconciliation/returned/recalibration_labeler1_RETURNED{.csv,_SOURCE.xlsx}`,
@@ -522,7 +522,7 @@ tests pass. `check_pending.sh` still blocks on the three `\pending` markers awai
 three reviewer emails — open work, not defects.
 
 ## 36 — 2026-08-22 · Round 2 complete: labeler2 returned; 56% converged, 11 unresolved
-Luiza returned on the deadline. The ingestor **rejected** the file on arrival: 15 of 25 items
+Rater 2 returned on the deadline. The ingestor **rejected** the file on arrival: 15 of 25 items
 carried a bare `5` where v1.2 requires 5b or 5c, plus a `0` for "no criterion failed" and an
 `E` that was the Portuguese conjunction in "3, 4 E 5". The rejection was correct behaviour —
 that ambiguity is what produced κ=0.529, and guessing the level would have hidden its return.

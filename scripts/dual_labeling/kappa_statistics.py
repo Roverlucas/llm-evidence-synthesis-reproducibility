@@ -281,7 +281,7 @@ def main() -> None:
 
     payload = {
         "metadata": {
-            "labeler1": "Isabelle", "labeler2": "Luiza Iltchechen",
+            "labeler1": "Rater 1", "labeler2": "Rater 2",
             "protocol_version_at_labeling": "1.1",
             "seed": SEED, "n_bootstrap": N_BOOT,
             "sources": {"labeler1": str(args.labeler1), "labeler2": str(args.labeler2)},

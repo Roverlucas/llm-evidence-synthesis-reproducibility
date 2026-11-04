@@ -26,7 +26,7 @@ discordant items, so a recomputed coefficient rises by construction — see
 
 Usage:
     python scripts/dual_labeling/ingest_recalibration_xlsx.py \
-        --xlsx ~/Downloads/recalibracao_labeler1_Isabelle-2.xlsx \
+        --xlsx ~/Downloads/recalibracao_labeler1.xlsx \
         --template data/dual_labeling/reconciliation/recalibration_labeler1.csv \
         --round1 data/dual_labeling/returned/subset_100_labeler1_RETURNED.csv \
         --prefix labeler1 \

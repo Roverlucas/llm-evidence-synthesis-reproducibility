@@ -192,7 +192,7 @@ substantially contest and is read as a lower bound. Relatedly, the automated rul
 
 ### 8. Raters
 
-Stage A was labeled by Isabelle (rater 1, returned 2026-07-29) and Luiza Iltchechen
+Stage A was labeled by Rater 1 (rater 1, returned 2026-07-29) and Rater 2
 (rater 2, returned 2026-07-15). Each was blinded to the other throughout. Their credit
 in the manuscript — co-authorship or acknowledgment — is being settled and will be
 stated in the submitted version.

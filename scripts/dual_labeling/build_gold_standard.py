@@ -149,8 +149,8 @@ def main() -> None:
     payload = {
         "metadata": {
             "protocol_version": "1.2",
-            "labeler1": "Isabelle",
-            "labeler2": "Luiza Iltchechen",
+            "labeler1": "Rater 1",
+            "labeler2": "Rater 2",
             "tiebreaker": "Yara de Souza Tadano (as pre-registered in OSF fgn3e)",
             "n_abstracts": len(gold),
             "n_unresolved": len(unresolved),

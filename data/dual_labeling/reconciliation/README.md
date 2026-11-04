@@ -1,7 +1,7 @@
 # Rodada de recalibração v1.2 — instruções
 
 **Data:** 2026-07-29
-**Para:** Isabelle (labeler1) e Luiza Iltchechen (labeler2)
+**Para:** labeler1 (Rater 1) e labeler2 (Rater 2)
 **Tempo estimado:** ~15 min de leitura + ~30-40 min de reavaliação (25 abstracts)
 
 ---
@@ -57,8 +57,8 @@ caso não coberto que produziu a discordância da primeira rodada.
 ## O que fazer
 
 1. Abrir **apenas o seu arquivo** (vem em `.xlsx` e `.csv` — use o que preferir):
-   - Isabelle → `recalibracao_labeler1_Isabelle`
-   - Luiza → `recalibracao_labeler2_Luiza`
+   - Rater 1 → `recalibracao_labeler1`
+   - Rater 2 → `recalibracao_labeler2`
 2. São os **25 abstracts em que houve discordância**. Os 75 concordantes não são
    reabertos.
 3. Reavaliar cada um **sob a v1.2**, preenchendo as colunas `*_v12`
@@ -93,3 +93,14 @@ por pesquisadores treinados ainda assim produziu 25% de discordância na primeir
 rodada. Num artigo sobre reprodutibilidade de triagem, isso é dado, não constrangimento
 — é a linha de base humana contra a qual os LLMs estão sendo medidos, e ela só existe
 porque vocês duas rotularam de forma genuinamente independente.
+
+## Anonimização (2026-11-04)
+
+Por decisão do primeiro autor, as avaliadoras aparecem no repositório só como Rater 1
+(labeler1) e Rater 2 (labeler2). As planilhas `returned/*_RETURNED_SOURCE.xlsx` foram
+anonimizadas no conteúdo e no metadado de autor; as decisões, critérios e justificativas
+não mudaram. SHA-256 dos arquivos originais, guardados fora do repositório:
+
+- recalibration_labeler1_RETURNED_SOURCE.xlsx: `23d3ea9290215fde0bc78f7078feca7cae1f2bd4fd7d022bcfa98d113e966725`
+- recalibration_labeler2_RETURNED_SOURCE.xlsx: `ab874b092f855633e762a8e57059b1f96d02b600a27ff9480f05d3f377711af4`
+- tiebreak_Yara_RETURNED_SOURCE.xlsx: `c7b6227d793ca37154dee08ff2913605e8522c2ba7f4f7364b1845f1b58a4ff8`

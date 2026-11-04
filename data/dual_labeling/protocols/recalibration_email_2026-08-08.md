@@ -4,14 +4,14 @@
 **Pacote:** `~/Downloads/recalibracao_v12_2026-08-08/`
 **Prazo:** 22 de agosto de 2026 (sábado)
 
-Envio **conjunto**, decidido pelo Lucas: uma única mensagem para Isabelle e Luiza, com a
+Envio **conjunto**, decidido pelo Lucas: uma única mensagem para Rater 1 e Rater 2, com a
 Profa. Yara em cópia.
 
 | Campo | Conteúdo |
 |-------|----------|
-| Para | Isabelle, Luiza |
+| Para | Rater 1, Rater 2 |
 | Cc | Profa. Yara Tadano |
-| Anexos | `recalibracao_labeler1_Isabelle.xlsx`, `recalibracao_labeler2_Luiza.xlsx`, `LEIA-ME_instrucoes.md`, `protocolo_v1.2.md` |
+| Anexos | `recalibracao_labeler1.xlsx`, `recalibracao_labeler2.xlsx`, `LEIA-ME_instrucoes.md`, `protocolo_v1.2.md` |
 
 Os dois anexos vão na mesma mensagem, então o corpo abre com a tabela dizendo qual arquivo
 é de quem, e os nomes estão no arquivo, no cabeçalho da planilha e na aba `instrucoes`. A
@@ -25,7 +25,7 @@ terminar. As planilhas em si continuam cegas e não revelam nada.
 
 **Assunto:** Rodada de recalibração (25 abstracts) e o resultado da primeira rodada
 
-Oi, Isabelle e Luiza, tudo bem?
+Oi, Rater 1 e Rater 2, tudo bem?
 
 Segue a segunda etapa da triagem. Peço desculpa pelo intervalo: o material está pronto
 desde o fim de julho e a demora em mandar foi minha. Profa. Yara em cópia.
@@ -34,8 +34,8 @@ Cada uma tem a sua planilha, e elas não são intercambiáveis:
 
 | Quem | Arquivo |
 |------|---------|
-| Isabelle | `recalibracao_labeler1_Isabelle.xlsx` |
-| Luiza | `recalibracao_labeler2_Luiza.xlsx` |
+| Rater 1 | `recalibracao_labeler1.xlsx` |
+| Rater 2 | `recalibracao_labeler2.xlsx` |
 
 Antes de tudo, o resultado da rodada que vocês fecharam. As duas triagens chegaram
 completas e íntegras, com concordância bruta de 75%. O κ de Cohen ficou em 0,529, abaixo

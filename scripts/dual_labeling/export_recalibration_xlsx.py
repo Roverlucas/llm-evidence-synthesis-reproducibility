@@ -13,7 +13,7 @@ Usage:
     python scripts/dual_labeling/export_recalibration_xlsx.py \
         --source data/dual_labeling/reconciliation/ \
         --out ~/Downloads/recalibracao_v12_<date>/ \
-        --labeler1-name Isabelle --labeler2-name Luiza
+        --labeler1-name Rater 1 --labeler2-name Rater 2
 """
 from __future__ import annotations
 

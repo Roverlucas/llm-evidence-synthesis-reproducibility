@@ -1,4 +1,4 @@
-"""Ingest the labeler1 (Isabelle) Stage-A screening return from XLSX.
+"""Ingest the labeler1 (Rater 1) Stage-A screening return from XLSX.
 
 The labeler received the ``subset_100_labeler2.csv`` template by mistake, so the
 delivered workbook carries ``labeler2_*`` column names. This script archives the
@@ -6,7 +6,7 @@ raw workbook, validates it against the sent template, normalises the
 ``criteria_failed`` separator, and writes a canonical ``labeler1_*`` CSV that
 ``compute_kappa.py`` can consume.
 
-Validation mirrors what was done for labeler2 (Luiza) on arrival:
+Validation mirrors what was done for labeler2 (Rater 2) on arrival:
     - all four decision columns complete (criteria_failed only where applicable)
     - labeling_id identical and in the same order as the sent template
     - abstracts and titles byte-identical (no accidental edits)
@@ -14,7 +14,7 @@ Validation mirrors what was done for labeler2 (Luiza) on arrival:
 
 Usage:
     python scripts/dual_labeling/ingest_labeler1_xlsx.py \
-        --xlsx ~/Downloads/subset_100_labeler2_Isabelle.xlsx \
+        --xlsx ~/Downloads/subset_100_labeler2.xlsx \
         --template data/dual_labeling/exports/subset_100_labeler2.csv \
         --out data/dual_labeling/returned/subset_100_labeler1_RETURNED.csv
 """
